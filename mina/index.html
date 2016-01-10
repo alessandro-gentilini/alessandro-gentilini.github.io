@@ -55,7 +55,7 @@ d3_request.requestCsv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   x.domain(d3_array.extent(data, function(d) { return d.time; })).nice(d3_time.utcDay);
-  y.domain([0, d3_arrays.max(data, function(d) { return d.count; })]);
+  y.domain([0, d3_array.max(data, function(d) { return d.count; })]);
 
   context.globalAlpha = 0.5;
   context.lineWidth = 1;
