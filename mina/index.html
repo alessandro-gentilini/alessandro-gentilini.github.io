@@ -54,7 +54,7 @@ context.translate(margin.left, margin.top);
 d3_request.requestCsv("data.csv", type, function(error, data) {
   if (error) throw error;
 
-  x.domain(d3_arrays.extent(data, function(d) { return d.time; })).nice(d3_time.utcDay);
+  x.domain(d3_array.extent(data, function(d) { return d.time; })).nice(d3_time.utcDay);
   y.domain([0, d3_arrays.max(data, function(d) { return d.count; })]);
 
   context.globalAlpha = 0.5;
