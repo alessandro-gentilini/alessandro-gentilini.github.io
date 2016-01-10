@@ -25,7 +25,7 @@
 <script src="https://d3js.org/d3-request.v0.3.min.js"></script>
 <script>
 
-var parseTime = d3_time_format.utcFormat("%H:%M");
+var parseTime = d3_time_format.utcFormat("%Y-%m-%d");
 
 var canvas = document.querySelector("canvas"),
     context = canvas.getContext("2d");
@@ -44,8 +44,8 @@ var symbol = d3_shape.symbol()
     .context(context);
 
 var line = d3_shape.line()
-    .x(function(d) { return x(d.time); })
-    .y(function(d) { return y(d.count); })
+    .x(function(d) { return x(d.Date); })
+    .y(function(d) { return y(d.Weight); })
     .curve(kernelSmooth, 50, 100)
     .context(context);
 
@@ -54,15 +54,15 @@ context.translate(margin.left, margin.top);
 d3_request.requestCsv("data.csv", type, function(error, data) {
   if (error) throw error;
 
-  x.domain(d3_array.extent(data, function(d) { return d.time; })).nice(d3_time.utcDay);
-  y.domain([0, d3_array.max(data, function(d) { return d.count; })]);
+  x.domain(d3_array.extent(data, function(d) { return d.Date; })).nice(d3_time.utcDay);
+  y.domain([0, d3_array.max(data, function(d) { return d.Weight; })]);
 
   context.globalAlpha = 0.5;
   context.lineWidth = 1;
   context.strokeStyle = "steelblue";
   data.forEach(function(d) {
     context.save();
-    context.translate(x(d.time), y(d.count));
+    context.translate(x(d.Date), y(d.Weight));
     context.beginPath();
     symbol(d);
     context.stroke();
@@ -78,8 +78,8 @@ d3_request.requestCsv("data.csv", type, function(error, data) {
 });
 
 function type(d) {
-  d.time = parseTime(d.time);
-  d.count = +d.count;
+  d.Date = parseTime(d.Date);
+  d.Weight = +d.Weight;
   return d;
 }
 
@@ -87,7 +87,7 @@ function epanechnikov(u) {
   return (u *= u) <= 1 ? 0.75 * (1 - u) : 0;
 }
 
-function kernelSmooth(context, bandwidth, count) {
+function kernelSmooth(context, bandwidth, Weight) {
   var linear = d3_shape.curveLinear(context), x0 = Infinity, x1 = -x0, xv, yv;
   return {
     lineStart: function() {
@@ -95,7 +95,7 @@ function kernelSmooth(context, bandwidth, count) {
     },
     lineEnd: function() {
       linear.lineStart();
-      for (var x = x0, dx = (x1 - x0) / count; x <= x1; x += dx) {
+      for (var x = x0, dx = (x1 - x0) / Weight; x <= x1; x += dx) {
         for (var j = 0, yi = 0, wi = 0, m = xv.length; j < m; ++j) {
           var wji = epanechnikov((xv[j] - x) / bandwidth);
           wi += wji, yi += yv[j] * wji;
