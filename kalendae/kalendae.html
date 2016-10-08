@@ -24,14 +24,8 @@ http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/
 // documentazione della classe "data" disponibile.
 var dow_enum = {"su":0, "mo": 1, "tu": 2, "we": 3, "th": 4, "fr": 5, "sa": 6};
 
-var seven_day_indexes = new Array;
-seven_day_indexes.push(dow_enum.su);
-seven_day_indexes.push(dow_enum.mo);
-seven_day_indexes.push(dow_enum.tu);
-seven_day_indexes.push(dow_enum.we);
-seven_day_indexes.push(dow_enum.th);
-seven_day_indexes.push(dow_enum.fr);
-seven_day_indexes.push(dow_enum.sa);
+var seven_day_indexes = [dow_enum.su, dow_enum.mo, dow_enum.tu,
+dow_enum.we, dow_enum.th, dow_enum.fr, dow_enum.sa];
 
 // "Enumerativo" per il mese dell'anno.
 // Questa corrispondenza deve essere stabilita secondo quanto definito nella
