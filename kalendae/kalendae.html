@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-preso inizialmente da qui:
+Preso inizialmente da qui:
 http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/
 -->
 <html>
@@ -24,6 +24,22 @@ http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/
       var h = canvas.height;
 
       var context = canvas.getContext('2d');
+
+      // Fonte: http://stackoverflow.com/a/9880302/15485
+      var canvasLeft = canvas.offsetLeft;
+      var canvasTop = canvas.offsetTop;
+      canvas.addEventListener('click', function(event) {
+        var x = event.pageX - canvasLeft;
+        var y = event.pageY - canvasTop;
+
+        // Collision detection between clicked offset and element.
+        elements.forEach(function(element) {
+            if (y > element.top && y < element.top + element.height 
+                && x > element.left && x < element.left + element.width) {
+                alert('clicked on '+element.d);
+            }
+        });
+      }, false);      
 
       var days_in_a_week = 7;
       var max_weeks_in_a_month = 6;
