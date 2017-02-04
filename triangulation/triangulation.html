@@ -731,6 +731,51 @@ var r7 = [
 ];
 var polyline = L.polyline(r7, {color: 'red'}).addTo(map);
    
+// http://stackoverflow.com/a/18489394/15485
+function pinv(A) 
+{
+return numeric.dot(numeric.inv(numeric.dot(numeric.transpose(A),A)),numeric.transpose(A));
+}
+
+// See formula https://en.wikipedia.org/wiki/Linear_equation#Two-point_form and
+// apply x=lat, y=lon
+function x_coeff(p1,p2)
+{
+return p2.lon-p1.lon;
+}
+
+// See formula https://en.wikipedia.org/wiki/Linear_equation#Two-point_form and
+// apply x=lat, y=lon
+function y_coeff(p1,p2)
+{
+return p1.lat-p2.lat;
+}
+
+// See formula https://en.wikipedia.org/wiki/Linear_equation#Two-point_form and
+// apply x=lat, y=lon
+function known(p1,p2)
+{
+return p1.lat*p2.lon-p2.lat*p1.lon;
+}
+
+var A = [
+[x_coeff(p4,p4_end),y_coeff(p4,p4_end)],
+[x_coeff(p5,p5_end),y_coeff(p5,p5_end)],
+[x_coeff(p6,p6_end),y_coeff(p6,p6_end)],
+[x_coeff(p7,p7_end),y_coeff(p7,p7_end)],
+];
+
+var b = [
+known(p4,p4_end),
+known(p5,p5_end),
+known(p6,p6_end),
+known(p7,p7_end),
+];
+
+var best_intersection = numeric.dot(pinv(A),b);
+
+L.marker(best_intersection).addTo(map)
+    .bindPopup('Least squares solution.');   
 
 
 
