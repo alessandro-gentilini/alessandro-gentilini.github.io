@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
+\usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -49,6 +50,25 @@ geometric transformations
 applied to digital images must preserve this high position accuracy.
 This demand goes
 far beyond the fact that no distortions are visible in the transformed images.
+\end{quotation}
+
+In \cite{halcon}
+\begin{quotation}
+HALCON’s 3D calibration supports both area and line scan cameras and
+permits, for example, subpixel-accurate measurements up to \SI{1}{\micro\metre} in a field of
+view of 10 mm.
+\end{quotation}
+
+In \cite{Heikkila:2000:GCC:354167.354171}
+\begin{quotation}
+Modern CCD cameras are usually capable of a spatial accuracy greater than 1/50 of the pixel
+size. However, such accuracy is not easily attained due to various error sources that can affect
+the image formation process.
+\end{quotation}
+
+In \cite{Fisher}
+\begin{quotation}
+A commonly quoted rule of thumb is 0.1 pixel, but lower is achievable, e.g. about 0.02 pixel is shown for stripe position detection in [1]\footnote{As \cite{doi:10.1117/12.55947}.}.
 \end{quotation}
 
 \printbibliography
