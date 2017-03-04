@@ -27,9 +27,7 @@
 Some notes about subpixel accuracy.
 \end{abstract} 
 
-\section{A bibliography for the problem of non-terminating game of 
-Beggar-My-Neighbour}
-
+\section{Some statements found in literature}
 In \cite[section 8.2, p.270]{Jahne:2004:PHI:983100}:
 \begin{quotation}
 In order to transform images back from pixel coordinates to world coordinates,
@@ -68,36 +66,51 @@ the image formation process.
 
 In \cite{Fisher}
 \begin{quotation}
-A commonly quoted rule of thumb is 0.1 pixel, but lower is achievable, e.g. about 0.02 pixel is shown for stripe position detection in [1]\footnote{As \cite{doi:10.1117/12.55947}.}.
+A commonly quoted rule of thumb is 0.1 pixel, but lower is achievable, e.g. about 0.02 pixel is shown for stripe position detection in [1]\footnote{Cited here as \cite{doi:10.1117/12.55947}.}.
 \end{quotation}
 
 In \cite{Davies:2012:CMV:2341317}
 \begin{quotation}
 20.3.3 Differing Requirements for Size Measurement
+
 Size measurement is important both in the food industry and in the automotive
 and small-parts industry. However, the problems in the two cases are often rather
 different. For example, the diameter of a biscuit can vary within quite wide limits
-(B5%) without giving rise to undue problems, but when it gets outside this range,
+($\sim$5\%) without giving rise to undue problems, but when it gets outside this range,
 there is a serious risk of jamming the packing machine, and the situation must be
 monitored carefully. In contrast, for mechanical parts, the required precision can
-vary from 1% for objects such as O-rings to 0.01% for piston heads. This variation
+vary from 1\% for objects such as O-rings to 0.01\% for piston heads. This variation
 clearly makes it difficult to design a truly general-purpose inspection system.
 However, the manufacturing process often permits little variation in size from one
 item to the next. Hence, it may be adequate to have a system that is capable of
-measuring to an accuracy of rather better than 1%, so long as it is capable of
+measuring to an accuracy of rather better than 1\%, so long as it is capable of
 checking all the characteristics mentioned in Table 20.1.
 For cases where high precision is vital, it is important that accuracy of measurement
 is proportional to the resolution of the input image. Currently, images of
-up to 512 3 512 pixels are common, so accuracy of measurement is basically of
-the order of 0.2%. Fortunately, grayscale images provide a means of obtaining
+up to 512 $\times$ 512 pixels are common, so accuracy of measurement is basically of
+the order of 0.2\%. Fortunately, grayscale images provide a means of obtaining
 significantly greater accuracy than indicated by the above arguments, since the
 exact transition from dark to light at the boundary of an object can be estimated
 more closely. In addition, averaging techniques (e.g., along the side of a rectangular
-block of metal) permit accuracies to be increased even further—by a factor ffiffiffiffi
-N p if
-N pixel measurements are made. These factors permit measurements to be made to
+block of metal) permit accuracies to be increased even further--by a factor $\sqrt{N}$
+if
+$N$ pixel measurements are made. These factors permit measurements to be made to
 subpixel resolution, sometimes even down to 0.1 pixels, the limit often being set by
 variations in illumination rather than by the vision algorithms themselves.
+\end{quotation}
+
+In \cite{oulu}
+\begin{quotation}
+Modern CCD cameras are usually capable of a spatial accuracy greater than 1/50 of the pixel size. However, such accuracy is not easily attained due to various error sources that can affect the image formation process. Current calibration methods typically assume that the observations are unbiased, the only error is the zero-mean independent and identically distributed random noise in the observed image coordinates, and the camera model completely explains the mapping between the 3D coordinates and the image coordinates. In general, these conditions are not met, causing the calibration results to be less accurate than expected.
+\end{quotation}
+
+In \cite{eren2014measurement}
+\begin{quotation}
+In special circumstances, measurements to subpixel accuracy can be achieved by
+interpolation between pixel values, and Reference 3\footnote{Cited here as \cite{knives}.} describes the measurement of a knife edge to about
+0.1 pixel accuracy. As a rule of thumb, however, for size measurement applications, the sensor should
+have a number of pixels at least equal to twice the ratio of the largest to smallest object sizes of interest
+[4]\footnote{Cited here as \cite{hopwood1980design}.}, and a lens is then selected to provide the required magnification and working distance.
 \end{quotation}
 
 \printbibliography
