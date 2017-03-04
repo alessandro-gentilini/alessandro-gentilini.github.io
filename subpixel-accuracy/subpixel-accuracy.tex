@@ -24,7 +24,7 @@
 \maketitle
 
 \begin{abstract}
-A bibliography for the problem of non-terminating game of Beggar-My-Neighbour.
+Some notes about subpixel accuracy.
 \end{abstract} 
 
 \section{A bibliography for the problem of non-terminating game of 
@@ -69,6 +69,35 @@ the image formation process.
 In \cite{Fisher}
 \begin{quotation}
 A commonly quoted rule of thumb is 0.1 pixel, but lower is achievable, e.g. about 0.02 pixel is shown for stripe position detection in [1]\footnote{As \cite{doi:10.1117/12.55947}.}.
+\end{quotation}
+
+In \cite{Davies:2012:CMV:2341317}
+\begin{quotation}
+20.3.3 Differing Requirements for Size Measurement
+Size measurement is important both in the food industry and in the automotive
+and small-parts industry. However, the problems in the two cases are often rather
+different. For example, the diameter of a biscuit can vary within quite wide limits
+(B5%) without giving rise to undue problems, but when it gets outside this range,
+there is a serious risk of jamming the packing machine, and the situation must be
+monitored carefully. In contrast, for mechanical parts, the required precision can
+vary from 1% for objects such as O-rings to 0.01% for piston heads. This variation
+clearly makes it difficult to design a truly general-purpose inspection system.
+However, the manufacturing process often permits little variation in size from one
+item to the next. Hence, it may be adequate to have a system that is capable of
+measuring to an accuracy of rather better than 1%, so long as it is capable of
+checking all the characteristics mentioned in Table 20.1.
+For cases where high precision is vital, it is important that accuracy of measurement
+is proportional to the resolution of the input image. Currently, images of
+up to 512 3 512 pixels are common, so accuracy of measurement is basically of
+the order of 0.2%. Fortunately, grayscale images provide a means of obtaining
+significantly greater accuracy than indicated by the above arguments, since the
+exact transition from dark to light at the boundary of an object can be estimated
+more closely. In addition, averaging techniques (e.g., along the side of a rectangular
+block of metal) permit accuracies to be increased even further—by a factor ffiffiffiffi
+N p if
+N pixel measurements are made. These factors permit measurements to be made to
+subpixel resolution, sometimes even down to 0.1 pixels, the limit often being set by
+variations in illumination rather than by the vision algorithms themselves.
 \end{quotation}
 
 \printbibliography
