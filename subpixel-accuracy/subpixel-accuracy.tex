@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
+\usepackage[backend=bibtex]{biblatex}
+\bibliography{bibliography.bib}
+
+
+
+\title{Some notes about subpixel accuracy}
+\author{Alessandro Gentilini\thanks{alessandro.gentilini@gmail.com}}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A bibliography for the problem of non-terminating game of Beggar-My-Neighbour.
+\end{abstract} 
+
+\section{A bibliography for the problem of non-terminating game of 
+Beggar-My-Neighbour}
+
+In \cite[section 8.2, p.270]{Jahne:2004:PHI:983100}:
+\begin{quotation}
+In order to transform images back from pixel coordinates to world coordinates,
+various transformations are required. In the simplest case, this
+includes only scaling,
+translation (shifting), and rotation of images. More general are
+affine (Section 8.3.1b)
+and perspective (Section 8.3.1c) transformations. For precise
+geometric measurements,
+it is also required to correct for the residual geometric distortion
+introduced by even
+well-corrected optical systems. Modern imaging solid-state sensors are
+geometrically
+very precise and stable. Therefore, the potential of a position
+accuracy of better than
+1/100 pixel distance is there. To maintain this accuracy, all
+geometric transformations
+applied to digital images must preserve this high position accuracy.
+This demand goes
+far beyond the fact that no distortions are visible in the transformed images.
+\end{quotation}
+
+\printbibliography
+\end{document}
