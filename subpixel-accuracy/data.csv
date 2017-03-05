@@ -1,0 +1,12 @@
+reference,num,den,value,year
+Jahne:2004:PHI:983100,1,100,,2004
+halcon,1e-6,10e-3,,2010
+Heikkila:2000:GCC:354167.354171,1,50,,2000
+Fisher,,,0.1,2014
+Fisher,,,0.02,2014
+Davies:2012:CMV:2341317,,,0.1,2012
+oulu,1,50,,2000
+eren2014measurement,,,0.1,2014
+MIKHAIL198463,,,0.03,1984
+MIKHAIL198463,,,0.05,1984
+632986,,,0.045,1997
