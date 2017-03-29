@@ -7,6 +7,8 @@ Search results for a book with the keyord **FORTRAN** in the title and the publi
 
 [Plumb, Stephen C.. *A program for self-instruction: introduction to Fortran* New York, International Businnes Machines Corporation, 1961.](http://id.sbn.it/bid/UTO1011663)
 
-![alt text](plumb_1.png "Logo Title Text 1")
+![A program for self-instruction: introduction to Fortran](plumb_1.png "A program for self-instruction: introduction to Fortran")
+![A program for self-instruction: introduction to Fortran](plumb_1.png "A program for self-instruction: introduction to Fortran")
+![A program for self-instruction: introduction to Fortran](plumb_3.png "A program for self-instruction: introduction to Fortran")
 
 
