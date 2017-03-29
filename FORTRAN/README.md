@@ -6,6 +6,8 @@ Search results for a book with the keyord **FORTRAN** in the title and the publi
 [McCracken, Daniel D.. *A guide to Fortran programming* New York, John Wiley, 1961.](http://id.sbn.it/bid/SBL0212971)
 
 [Plumb, Stephen C.. *A program for self-instruction: introduction to Fortran* New York, International Businnes Machines Corporation, 1961.](http://id.sbn.it/bid/UTO1011663)
+
+Some low quality cover pictures:
 ![A program for self-instruction: introduction to Fortran](plumb_1.png "A program for self-instruction: introduction to Fortran")
 ![A program for self-instruction: introduction to Fortran](plumb_2.png "A program for self-instruction: introduction to Fortran")
 ![A program for self-instruction: introduction to Fortran](plumb_3.png "A program for self-instruction: introduction to Fortran")
