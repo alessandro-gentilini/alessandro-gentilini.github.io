@@ -1,5 +1,4 @@
 The FORTRAN book in the **Hidden Figures** movie
 
-McCracken, Daniel D. *A guide to Fortran programming* New York, John Wiley, 1961.
-http://id.sbn.it/bid/SBL0212971
+[McCracken, Daniel D. *A guide to Fortran programming* New York, John Wiley, 1961.](http://id.sbn.it/bid/SBL0212971)
 
