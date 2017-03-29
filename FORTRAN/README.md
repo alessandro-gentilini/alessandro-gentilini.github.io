@@ -19,4 +19,5 @@ Some low quality cover pictures:
 ![A program for self-instruction: introduction to Fortran](plumb_2.png "A program for self-instruction: introduction to Fortran")
 ![A program for self-instruction: introduction to Fortran](plumb_3.png "A program for self-instruction: introduction to Fortran")
 
-
+## In the USA Library of Congress
+The Library of Congress has in its catalog the McCracken's book but the [publishing year of the Plumb's book is 1964](https://lccn.loc.gov/64022199) and not 1961 as stated in the Italian catalog.
