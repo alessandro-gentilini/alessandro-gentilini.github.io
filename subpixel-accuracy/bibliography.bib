@@ -183,4 +183,34 @@ doi={10.1109/34.632986},
 ISSN={0162-8828}, 
 month={Nov},}
 
+@ARTICLE{7885103, 
+author={Z. Tang and R. Grompone von Gioi and P. Monasse and J. M. Morel}, 
+journal={IEEE Transactions on Image Processing}, 
+title={A Precision Analysis of Camera Distortion Models}, 
+year={2017}, 
+volume={26}, 
+number={6}, 
+pages={2694-2704}, 
+abstract={This paper addresses the question of identifying the right camera direct or inverse distortion model, permitting a high subpixel precision to fit to real camera distortion. Five classic camera distortion models are reviewed and their precision is compared for direct or inverse distortion. By definition, the three radially symmetric models can only model a distortion radially symmetric around some distortion center. They can be extended to deal with non-radially symmetric distortions by adding tangential distortion components, but still may be too simple for very accurate modeling of real cameras. The polynomial and the rational models instead miss a physical or optical interpretation, but can cope equally with radially and non-radially symmetric distortions. Indeed, they do not require the evaluation of a distortion center. When requiring high precisions, we found that the distortion modeling must also be evaluated primarily as a numerical problem. Indeed, all models except the polynomial involve a non-linear minimization, which increases the numerical risk. The estimation of a polynomial distortion model leads instead to a linear problem, which is secure and much faster. We concluded by extensive numerical experiments that, although high degree polynomials were required to reach a high precision of 1/100 pixels, such polynomials were easily estimated and produced a precise distortion modeling without overfitting. Our conclusion is validated by three independent experimental setups: the models were compared first on the lens distortion database of the Lensfun library by their distortion simulation and inversion power; second by fitting real camera distortions estimated by a non parametric algorithm; and finally by the absolute correction measurement provided by the photographs of tightly stretched strings, warranting a high straightness.}, 
+keywords={Cameras;Lenses;Nonlinear distortion;Numerical models;Optical distortion;Predistortion;Distortion measurement;camera calibration}, 
+doi={10.1109/TIP.2017.2686001}, 
+ISSN={1057-7149}, 
+month={June},}
+
+@article{Tang:12,
+author = {Zhongwei Tang and Rafael Grompone von Gioi and Pascal Monasse and Jean-Michel Morel},
+journal = {J. Opt. Soc. Am. A},
+keywords = {Calibration ; Image recognition, algorithms and filters},
+number = {10},
+pages = {2134--2143},
+publisher = {OSA},
+title = {High-precision camera distortion measurements with a ``calibration harp''},
+volume = {29},
+month = {Oct},
+year = {2012},
+url = {http://josaa.osa.org/abstract.cfm?URI=josaa-29-10-2134},
+doi = {10.1364/JOSAA.29.002134},
+abstract = {This paper addresses the high-precision measurement of the distortion of a digital camera from photographs. Traditionally, this distortion is measured from photographs of a flat pattern that contains aligned elements. Nevertheless, it is nearly impossible to fabricate a very flat pattern and to validate its flatness. This fact limits the attainable measurable precisions. In contrast, it is much easier to obtain physically very precise straight lines by tightly stretching good quality strings on a frame. Taking literally \&\#x201C;plumb-line methods,\&\#x201D; we built a \&\#x201C;calibration harp\&\#x201D; instead of the classic flat patterns to obtain a high-precision measurement tool, demonstrably reaching 2/100 pixel precisions. The harp is complemented with the algorithms computing automatically from harp photographs two different and complementary lens distortion measurements. The precision of the method is evaluated on images corrected by state-of-the-art distortion correction algorithms, and by popular software. Three applications are shown: first an objective and reliable measurement of the result of any distortion correction. Second, the harp permits us to control state-of-the art global camera calibration algorithms: it permits us to select the right distortion model, thus avoiding internal compensation errors inherent to these methods. Third, the method replaces manual procedures in other distortion correction methods, makes them fully automatic, and increases their reliability and precision.},
+}
+
 
