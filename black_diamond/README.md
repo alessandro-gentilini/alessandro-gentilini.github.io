@@ -10,6 +10,6 @@ In questo QC Lab, il direttore Kolin Powick (alias KP) di BLACK DIAMOND scava ne
 
 Sono un tipo vecchia scuola. Uso direttamente i rinvii per assicurarmi quando pulisco un ancoraggio su una via sportiva, non indosso il casco quando sono in arrampicata sportiva, e uso solo la corda facendo un nodo barcaiolo per legarmi all'ancoraggio quando arrivo a una sosta in una salita multi-tiro. Quando scendo da una via in corda doppia utilizzo un paio di anelli di fettuccia per legarmi ad ogni ancoraggio. La mia filosofia personale è che mi piace avere il minor numero possibile di cose su di me, e la realtà è che ho la corda, e ho gli anelli di fettuccia, quindi perché non usarli?
 
-https://eu.blackdiamondequipment.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dwa8f02f04/images/Experience/QC_Lab/personal_anchor_system/PAS.1.jpg
+![Images: Andy Earl](https://eu.blackdiamondequipment.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dwa8f02f04/images/Experience/QC_Lab/personal_anchor_system/PAS.1.jpg)
 
 
