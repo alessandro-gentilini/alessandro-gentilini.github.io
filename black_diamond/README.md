@@ -1,6 +1,8 @@
 A translation from the English to the Italian of the following article:
 https://eu.blackdiamondequipment.com/en/experience-story?cid=qc-lab-personal-anchor-systems-explained
 
+**AVVERTIMENTO**
+Questa traduzione non è stata approvata e non è stata controllata da Black Diamond.
 
 LABORATORIO CONTROLLO QUALITA`: I SISTEMI DI ANCORAGGIO PERSONALI SPIEGATI
 
