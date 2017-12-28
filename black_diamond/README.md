@@ -16,6 +16,5 @@ Sono un tipo vecchia scuola. Uso direttamente i rinvii per assicurarmi quando pu
 
 Storicamente la gente ha usato le daisy chain (erroneamente) come anelli. I singoli anelli nelle daisy chain sono in genere abbastanza deboli, tra i 2 e i 5 kN, e il rischio di agganciare male una daisy chain (attraverso il tack) è reale:
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/Q0J9dB0AKlU/0.jpg)](https://www.youtube.com/watch?v=Q0J9dB0AKlU "Everything Is AWESOME")
+[![Daisy Chain](https://img.youtube.com/vi/Q0J9dB0AKlU/0.jpg)](https://www.youtube.com/watch?v=Q0J9dB0AKlU "Daisy Chain")
 
-<iframe width="450" height="300" src="https://www.youtube.com/embed/Q0J9dB0AKlU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
