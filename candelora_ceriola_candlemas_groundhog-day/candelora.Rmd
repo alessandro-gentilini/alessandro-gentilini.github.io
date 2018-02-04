@@ -50,6 +50,12 @@ Dati per l'aeroporto di Bologna:
 knitr::kable(get_result("LIPE",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
 ```
 
+Dati per Punta Marina (Ravenna):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::kable(get_result("LIVM",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+```
+
 Dati forniti da Iowa State University, Department of Agronomy - Iowa Environmental Mesonet.
 
 
