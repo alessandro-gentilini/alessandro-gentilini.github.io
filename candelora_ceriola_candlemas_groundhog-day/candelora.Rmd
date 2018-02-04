@@ -1,0 +1,55 @@
+---
+title: "Affidabilità della previsione della Candelora"
+author: "Alessandro Gentilini"
+date: "4 febbraio 2018"
+output: html_document
+---
+
+Analisi delle condizioni meteo del 2 febbraio e del mese seguente.
+
+Con *Bel tempo* si intende visibilità superiore a 10 km, assenza di nuvole sotto a 1500 metri,
+assenza di cumulonembi e di cumulus congestus, assenza di fenomeni meteorologici significativi (sezione 15.10 *Code word CAVOK* in WMO-No. 306).
+
+Con *Brutto tempo* si intende quello che non è *Bel tempo*.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Get the data from https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS
+df <- read.csv('asos.txt',header = TRUE,sep=',',skip = 5,na.strings = "M")
+df$timestamp <- strptime(df$valid,"%Y-%m-%d %H:%M")
+
+require(lubridate)
+
+get_result <- function(station,data)
+{
+  years <- c()
+  candelora_CAVOK_percentage <- c()
+  following_month_CAVOK_percentage <-c()
+  for(y in min(year(df$timestamp)):max(year(df$timestamp))){
+    candelora <- df[df$station==station & month(df$timestamp)==2 & day(df$timestamp)==2 & year(df$timestamp)==y,]
+    following_month <- df[df$station==station & ymd(sprintf("%d0203",y))<df$timestamp & df$timestamp<ymd(sprintf("%d0303",y)),]
+    #print(sprintf("%d %d %s",y,nrow(following_month),max(following_month$timestamp)))
+    if(nrow(following_month)>0 & max(following_month$timestamp)>=ymd(sprintf("%d0302",y))){
+      years <- c(years,y)
+      candelora_CAVOK_percentage <- c(candelora_CAVOK_percentage, 100*sum(grepl('CAVOK',candelora$metar))/nrow(candelora))
+      following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, 100*sum(grepl('CAVOK',following_month$metar))/nrow(following_month))
+    }
+  }
+  result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=100-following_month_CAVOK_percentage)  
+}
+```
+
+Dati per l'aeroporto di Forlì:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::kable(get_result("LIPK",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+```
+
+Dati per l'aeroporto di Bologna:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::kable(get_result("LIPE",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+```
+
+Dati forniti da Iowa State University, Department of Agronomy - Iowa Environmental Mesonet.
+
+
