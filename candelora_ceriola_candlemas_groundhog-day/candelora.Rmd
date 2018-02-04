@@ -5,7 +5,7 @@ date: "4 febbraio 2018"
 output: html_document
 ---
 
-Analisi delle condizioni meteo del 2 febbraio e del mese seguente.
+Analisi delle condizioni meteo del 2 febbraio e dei 30 giorni successivi.
 
 Con *Bel tempo* si intende visibilità superiore a 10 km, assenza di nuvole sotto a 1500 metri,
 assenza di cumulonembi e di cumulus congestus, assenza di fenomeni meteorologici significativi (sezione 15.10 *Code word CAVOK* in WMO-No. 306).
@@ -56,6 +56,6 @@ Dati per Punta Marina (Ravenna):
 knitr::kable(get_result("LIVM",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
 ```
 
-Dati forniti da Iowa State University, Department of Agronomy - Iowa Environmental Mesonet.
+Dati forniti da [Iowa State University, Department of Agronomy - Iowa Environmental Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS).
 
 
