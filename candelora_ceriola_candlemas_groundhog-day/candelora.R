@@ -3,18 +3,23 @@ df <- read.csv('asos.txt',header = TRUE,sep=',',skip = 5,na.strings = "M")
 df$timestamp <- strptime(df$valid,"%Y-%m-%d %H:%M")
 
 require(lubridate)
-years <- c()
-candelora_CAVOK_percentage <- c()
-following_month_CAVOK_percentage <-c()
-station <- c()
-for(y in min(year(df$timestamp)):max(year(df$timestamp))){
-  years <- c(years,y)
-  id<-"LIPE"
-  station <- c(station,id)
-  candelora <- df[df$station==id & month(df$timestamp)==2 & day(df$timestamp)==2 & year(df$timestamp)==y,]
-  following_month <- df[df$station==id & ymd(sprintf("%d0203",y))<df$timestamp & df$timestamp<ymd(sprintf("%d0303",y)),]
-  candelora_CAVOK_percentage <- c(candelora_CAVOK_percentage, 100*sum(grepl('CAVOK',candelora$metar))/nrow(candelora))
-  following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, 100*sum(grepl('CAVOK',following_month$metar))/nrow(following_month))
+
+
+get_result <- function(station,data)
+{
+  years <- c()
+  candelora_CAVOK_percentage <- c()
+  following_month_CAVOK_percentage <-c()
+  for(y in min(year(df$timestamp)):max(year(df$timestamp))){
+    years <- c(years,y)
+    candelora <- df[df$station==station & month(df$timestamp)==2 & day(df$timestamp)==2 & year(df$timestamp)==y,]
+    following_month <- df[df$station==station & ymd(sprintf("%d0203",y))<df$timestamp & df$timestamp<ymd(sprintf("%d0303",y)),]
+    candelora_CAVOK_percentage <- c(candelora_CAVOK_percentage, 100*sum(grepl('CAVOK',candelora$metar))/nrow(candelora))
+    following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, 100*sum(grepl('CAVOK',following_month$metar))/nrow(following_month))
+  }
+  result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=following_month_CAVOK_percentage)  
 }
-result <- data.frame(station=station,year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=following_month_CAVOK_percentage)
+
+print(get_result("LIPE",df))
+print(get_result("LIPK",df))
 
