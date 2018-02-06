@@ -56,6 +56,6 @@ Dati per Punta Marina (Ravenna):
 knitr::kable(get_result("LIVM",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
 ```
 
-Dati forniti da [Iowa State University, Department of Agronomy - Iowa Environmental Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS).
+Dati forniti da [Iowa State University, Department of Agronomy - Iowa Environmental Mesonet is copyright by Iowa State University](https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS).
 
 
