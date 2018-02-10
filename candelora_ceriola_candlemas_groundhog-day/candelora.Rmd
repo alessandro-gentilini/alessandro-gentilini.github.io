@@ -39,7 +39,7 @@ get_result <- function(station,data)
   }
   result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=100-following_month_CAVOK_percentage)  
 }
-options(knitr.kable.NA = 'Dati mancanti')
+options(knitr.kable.NA = 'dati mancanti')
 ```
 
 Dati per l'aeroporto di Forlì:
