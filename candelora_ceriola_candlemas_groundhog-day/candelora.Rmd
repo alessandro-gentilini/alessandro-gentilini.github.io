@@ -28,14 +28,18 @@ get_result <- function(station,data)
     candelora <- df[df$station==station & month(df$timestamp)==2 & day(df$timestamp)==2 & year(df$timestamp)==y,]
     following_month <- df[df$station==station & ymd(sprintf("%d0203",y))<df$timestamp & df$timestamp<ymd(sprintf("%d0303",y)),]
     #print(sprintf("%d %d %s",y,nrow(following_month),max(following_month$timestamp)))
+    years <- c(years,y)
     if(nrow(following_month)>0 & max(following_month$timestamp)>=ymd(sprintf("%d0302",y))){
-      years <- c(years,y)
       candelora_CAVOK_percentage <- c(candelora_CAVOK_percentage, 100*sum(grepl('CAVOK',candelora$metar))/nrow(candelora))
       following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, 100*sum(grepl('CAVOK',following_month$metar))/nrow(following_month))
+    } else {
+      candelora_CAVOK_percentage <- c(candelora_CAVOK_percentage, NA)
+      following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, NA)
     }
   }
   result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=100-following_month_CAVOK_percentage)  
 }
+options(knitr.kable.NA = 'Dati mancanti')
 ```
 
 Dati per l'aeroporto di Forlì:
