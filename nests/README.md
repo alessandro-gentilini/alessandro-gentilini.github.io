@@ -11,7 +11,7 @@ All the trees was to the South of the highway; the minimum distance between high
 
 Heights of nests above the ground range between approximately 2 meters to 15 meters.
 
-On some branches near nests I observed (*Pica pica*)[http://www.inaturalist.org/taxa/144106-Pica-pica] (Gazza Ladra in Italian).
+On some branches near nests I observed [*Pica pica*](http://www.inaturalist.org/taxa/144106-Pica-pica) (Gazza Ladra in Italian).
 
 175 nests were counted at 44° 35' 22.9" North, 10° 57' 7.3" East, see the following image:
 ![44° 35' 22.9" North, 10° 57' 7.3" East](WP_20170316_002.jpg)
