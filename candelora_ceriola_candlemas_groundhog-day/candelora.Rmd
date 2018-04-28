@@ -1,7 +1,7 @@
 ---
 title: "Affidabilità della previsione della Candelora in Romagna"
 author: "Alessandro Gentilini"
-date: "4 febbraio 2018"
+date: "28 aprile 2018"
 output: html_document
 ---
 
@@ -14,7 +14,17 @@ Con *Brutto tempo* si intende quello che non è *Bel tempo*.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Get the data from https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS
-df <- read.csv('asos.txt',header = TRUE,sep=',',skip = 5,na.strings = "M")
+
+con <- file('asos.txt','r')
+first_line <- readLines(con,n=1)
+close(con)
+
+skip_lines = 0
+if(grepl('#DEBUG',first_line)){
+skip_lines = 5  
+}
+
+df <- read.csv('asos.txt',header = TRUE,sep=',',skip = skip_lines,na.strings = "M")
 df$timestamp <- strptime(df$valid,"%Y-%m-%d %H:%M")
 
 require(lubridate)
