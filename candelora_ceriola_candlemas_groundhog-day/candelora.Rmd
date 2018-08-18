@@ -15,6 +15,7 @@ Con *Brutto tempo* si intende quello che non è *Bel tempo*.
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Get the data from https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS
 
+unzip('asos.zip','asos.txt')
 con <- file('asos.txt','r')
 first_line <- readLines(con,n=1)
 close(con)
@@ -50,39 +51,41 @@ get_result <- function(station,data)
       following_month_CAVOK_percentage <- c(following_month_CAVOK_percentage, NA)
     }
   }
-  result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=100-following_month_CAVOK_percentage)  
+  
+  result <- data.frame(year=years,candelora_CAVOK_percentage=candelora_CAVOK_percentage,following_month_CAVOK_percentage=100-following_month_CAVOK_percentage,forecast_is_ok=ifelse((candelora_CAVOK_percentage>50) == (following_month_CAVOK_percentage<50),"sì","no"))  
 }
 options(knitr.kable.NA = 'dati mancanti')
+column_names <- c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi","previsione corretta")
 ```
 
 Dati per l'aeroporto di Forlì:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::kable(get_result("LIPK",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+knitr::kable(get_result("LIPK",df), digits=0,col.names=column_names)
 ```
 
 Dati per Rimini:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::kable(get_result("LIPR",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+knitr::kable(get_result("LIPR",df), digits=0,col.names=column_names)
 ```
 
 Dati per Cervia:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::kable(get_result("LIPC",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+knitr::kable(get_result("LIPC",df), digits=0,col.names=column_names)
 ```
 
 Dati per Punta Marina (Ravenna):
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::kable(get_result("LIVM",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+knitr::kable(get_result("LIVM",df), digits=0,col.names=column_names)
 ```
 
 Dati per l'aeroporto di Bologna:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::kable(get_result("LIPE",df), digits=0,col.names=c("anno","% osservazioni bel tempo il 2 febbraio","% osservazioni brutto tempo nei 30 giorni successivi"))
+knitr::kable(get_result("LIPE",df), digits=0,col.names=column_names)
 ```
 
 Dati forniti da [Iowa State University, Department of Agronomy - Iowa Environmental Mesonet is copyright by Iowa State University](https://mesonet.agron.iastate.edu/request/download.phtml?network=IT__ASOS).
