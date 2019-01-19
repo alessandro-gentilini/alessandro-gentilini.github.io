@@ -1,0 +1,10 @@
+f=1;
+T=1/f;
+f_s=20*f;
+T_s=1/f_s;
+t=0:T_s:T;
+samples=sin(2*pi*f*t);
+t1=0:.0001:1.5*T;
+y=interp_WSK(samples,T_s,t1);
+figure
+plot(t1,y,t1,sin(2*pi*f*t1))
