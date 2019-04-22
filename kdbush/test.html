@@ -6,7 +6,7 @@
 <body>
 <h1>A solution to <i>Fixed-radius near neighbors</i> problem based on code by Vladimir Agafonkin</h1>
 <p>The <i>Fixed-radius near neighbors</i> problem is solved using code from <a href="https://github.com/mourner/kdbush">kdbush, a fast static index for 2D points</a>.</p>
-	<p><pre>
+<p><pre>
 ISC License
 
 Copyright (c) 2018, Vladimir Agafonkin
@@ -22,11 +22,12 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
 OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
-	</pre</p>
+</pre</p>
 <button onclick="test()">test!</button>
 <p id="result">Result</p>
 
 <script>
+// See https://github.com/mourner/kdbush/blob/master/src/within.js
 function within(ids, coords, qx, qy, r, nodeSize) {
     var stack = [0, ids.length - 1, 0];
     var result = [];
@@ -76,6 +77,7 @@ function sqDist(ax, ay, bx, by) {
     return dx * dx + dy * dy;
 }
 
+// See https://github.com/mourner/kdbush/blob/master/src/sort.js
 function sortKD(ids, coords, nodeSize, left, right, axis) {
     if (right - left <= nodeSize) return;
 
@@ -144,6 +146,7 @@ function swap(arr, i, j) {
     arr[j] = tmp;
 }
 
+// See https://github.com/mourner/kdbush/blob/master/src/index.js
 function KDBush(points, nodeSize) {
         this.nodeSize = nodeSize;
         this.points = points;
