@@ -198,6 +198,14 @@ var points = [
     for(var i = 0; i < result.length; i++){
     	str+=result[i]+" ";
     }
+	
+    str += " - "
+    var r2 = r*r;
+    for(var i = 0; i < points.length; i++){
+	    if(sqDist(qp[0],qp[1],points[i][0],points[i][1])<=r2){
+		str+=i+" ";    
+	    }
+    }
     document.getElementById("result").innerHTML = str;
 }
 
