@@ -42,7 +42,7 @@ function within(ids, coords, qx, qy, r, nodeSize) {
 
         // if we reached "tree node", search linearly
         if (right - left <= nodeSize) {
-            for (let i = left; i <= right; i++) {
+            for (var i = left; i <= right; i++) {
                 if (sqDist(coords[2 * i], coords[2 * i + 1], qx, qy) <= r2) result.push(ids[i]);
             }
             continue;
@@ -110,8 +110,8 @@ function select(ids, coords, k, left, right, axis) {
         }
 
         var t = coords[2 * k + axis];
-        let i = left;
-        let j = right;
+        var i = left;
+        var j = right;
 
         swapItem(ids, coords, left, k);
         if (coords[2 * right + axis] > t) swapItem(ids, coords, left, right);
@@ -156,7 +156,7 @@ function KDBush(points, nodeSize) {
         var ids = this.ids = new Array(points.length);
         var coords = this.coords = new Array(points.length * 2);
 
-        for (let i = 0; i < points.length; i++) {
+        for (var i = 0; i < points.length; i++) {
             ids[i] = i;
             coords[2 * i] = points[i][0];
             coords[2 * i + 1] = points[i][1];
