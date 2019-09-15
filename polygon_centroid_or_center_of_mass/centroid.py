@@ -45,16 +45,17 @@ def centroid(lstP):
 	
 D = 0
 P = [0,0]
-for i in xrange(1,len(hull.vertices)):
+N = len(hull.vertices)
+for i in xrange(1,N+1):
 	p1 = points[hull.vertices[i-1]]
-	p2 = points[hull.vertices[i]]
+	p2 = points[hull.vertices[i%N]]
 	d = dist(p1,p2)
 	D = D + d
 	p3 = d*(p1+p2)
 	P = P + p3
 	#print(i,d,p1+p2,p3)
 	plt.plot(p3[0], p3[1], '+')
-	plt.text(p3[0], p3[1], str(i-1)+str(i))
+	plt.text(p3[0], p3[1], str(i-1)+str(i%N))
 	O = [0,0]
 	A = p1+p2
 	L = [O,A]
@@ -62,19 +63,19 @@ for i in xrange(1,len(hull.vertices)):
 	plt.gca().add_collection(lc)
 	#print(i,points[hull.vertices[i]],points[hull.vertices[i]][0],points[hull.vertices[i]][1])
 
-perimetral_centroid = .5*P/D
+perimeter_centroid = .5*P/D
 
-print('perimetral_centroid: '+str(perimetral_centroid))
+print('perimeter_centroid: '+str(perimeter_centroid))
 
 #print(hull_pts)
 
 barycenter = centroid(hull_pts)
 
-print('barycenter: '+str(barycenter))
+print('wikipedia: '+str(barycenter))
 
 P = Polygon(hull_pts)
 
 print('shapely: '+str(P.centroid))
 
-plt.plot(perimetral_centroid[0],perimetral_centroid[1],'x')
+plt.plot(perimeter_centroid[0],perimeter_centroid[1],'x')
 plt.show()
