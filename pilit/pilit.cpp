@@ -8,15 +8,16 @@
 #include <sstream>
 #include <string>
 #include <fstream>
+#include <algorithm>
 
 int T[] = {3, 1, 4, 3, 1};
-int P[] = {3, 1, 4, 1, 5};
+int P[] = {3,1,4,1,5,9,2,6,5,3,5,8,9};
 
-std::pair<int, int> f(int t, int Tsz, int p, int Psz)
+std::pair<int, int> f(int t, int Tsz, int p, int Psz, const std::vector<int>& sizes)
 {
-    if (T[t] == P[p] && t + 1 <= Tsz && p + 1 <= Psz)
+    if (sizes[t] == P[p] && t + 1 <= Tsz && p + 1 <= Psz)
     {
-        f(t + 1, Tsz, p + 1, Psz);
+        f(t + 1, Tsz, p + 1, Psz, sizes);
     }
     else
     {
@@ -56,9 +57,28 @@ int main() {
     std::ifstream bible("pg10.txt");
     bible.imbue(std::locale(std::locale(), new digits_only));
 
+    std::vector<std::string> words;
     std::copy(std::istream_iterator<std::string>(bible),
               std::istream_iterator<std::string>(),
-              std::ostream_iterator<std::string>(std::cout, " "));
+              std::back_inserter(words));
+              
+    std::vector<int> sizes;
+    std::transform(words.begin(), words.end(), std::back_inserter(sizes),
+                   [](const std::string& s) -> std::size_t { return s.length(); });
+
+    for(size_t i = 0; i < sizes.size(); i++){
+        auto r = f(i,sizes.size(),0,std::extent<decltype(P)>::value,sizes);
+         if (r.second != 0 && r.second>=5)
+         {
+             auto loc = r.first - r.second;
+             auto len = r.second;
+             std::cout << "loc=" << loc << " len=" << len << " ";
+             for(size_t j = loc; j < loc+len; j++ ){
+                 std::cout << words[j] << " ";
+             }
+             std::cout << "\n";
+         }
+    }
 
     return 0;
 }
