@@ -1,5 +1,11 @@
 # pilit - Pi in literature
 
+_Now I have a rhyme assisting my feeble brain its chore resisting._
+
+_Tra i rari e grigi formulari di scuola  
+resta una serie numerica  
+sfuggente eretici orizzonti._
+
 ## 3.141592
 
 ### 2 Kings 10:19
@@ -24,3 +30,8 @@ Forasmuch then as God gave them the like gift as he did unto us, who believed on
     loc=441404 len=5 and a fool s voice
     loc=443895 len=5 but a fool s heart
     loc=706085 len=6 was I that I could withstand
+
+
+http://mathworld.wolfram.com/PiWordplay.html
+
+http://www.elegio.it/doc/pi/piph95.htm
