@@ -1,3 +1,6 @@
+// For build see http://userguide.icu-project.org/howtouseicu
+// c++ -o pilit pilit.cpp `pkg-config --libs --cflags icu-uc icu-io`
+
 #include <iostream>
 #include <utility>
 #include <type_traits>
@@ -9,6 +12,28 @@
 #include <string>
 #include <fstream>
 #include <algorithm>
+
+#include <unicode/utypes.h>
+#include <unicode/unistr.h>
+#include <unicode/translit.h>
+
+std::string desaxUTF8(const std::string& str) {
+    // UTF-8 std::string -> UTF-16 UnicodeString
+    UnicodeString source = UnicodeString::fromUTF8(StringPiece(str));
+
+    // Transliterate UTF-16 UnicodeString
+    UErrorCode status = U_ZERO_ERROR;
+    Transliterator *accentsConverter = Transliterator::createInstance(
+        "NFD; [:M:] Remove; NFC", UTRANS_FORWARD, status);
+    accentsConverter->transliterate(source);
+    // TODO: handle errors with status
+
+    // UTF-16 UnicodeString -> UTF-8 std::string
+    std::string result;
+    source.toUTF8String(result);
+
+    return result;
+}
 
 int P[] = {3,1,4,1,5,9,2,6,5,3,5,8,9};
 
@@ -41,6 +66,7 @@ struct digits_only: std::ctype<char> {
 
 int main(int argc, char** argv) 
 {
+    if(argc<=1) std::cout << argv[0] << " text\n";
     std::ifstream bible(argv[1]);
     bible.imbue(std::locale(std::locale(), new digits_only));
 
