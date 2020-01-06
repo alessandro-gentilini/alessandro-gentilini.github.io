@@ -17,6 +17,7 @@
 #include <unicode/unistr.h>
 #include <unicode/translit.h>
 
+// https://stackoverflow.com/a/13071166
 std::string desaxUTF8(const std::string& str) {
     // UTF-8 std::string -> UTF-16 UnicodeString
     UnicodeString source = UnicodeString::fromUTF8(StringPiece(str));
