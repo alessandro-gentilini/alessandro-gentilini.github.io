@@ -41,7 +41,7 @@ struct digits_only: std::ctype<char> {
 
 int main(int argc, char** argv) 
 {
-    if(argc<=1) std::cout << argv[0] << " file\n";
+    if(argc<=2){ std::cout << argv[0] << " file min_len\n"; return 1;}
     std::ifstream bible(argv[1]);
     bible.imbue(std::locale(std::locale(), new digits_only));
 
@@ -56,7 +56,7 @@ int main(int argc, char** argv)
 
     for(size_t i = 0; i < sizes.size(); i++){
         auto r = f(i,sizes.size(),0,std::extent<decltype(P)>::value,sizes);
-         if (r.second != 0 && r.second>=4)
+         if (r.second != 0 && r.second>=atoi(argv[2]))
          {
              auto loc = r.first - r.second;
              auto len = r.second;
