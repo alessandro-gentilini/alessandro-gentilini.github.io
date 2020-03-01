@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Interactive comparison charts for estimating percentage of particles</title>
 	<script>
         // https://rosettacode.org/wiki/Sutherland-Hodgman_polygon_clipping#JavaScript
         function clip (subjectPolygon, clipPolygon) {
@@ -78,6 +79,7 @@
             return [[0,0],[b,0],[b,h],[0,h]]
         }
 
+        // Algorithm P in section 3.4.1 of Knuth's TAOCP (volume 2).
         function gaussian(mean, stddev) {
             return function() {
                 var V1
@@ -125,15 +127,16 @@
             }
             return Math.abs(A/2)
         }
- 
-        window.onload = function () {
+
+        function main(freq)
+        {
 	        var context = document.getElementById('canvas').getContext('2d');
            
             var base_dist = gaussian(100,5)
             var height_dist = gaussian(10,10/20)
             var rotation_dist = gaussian(0,Math.PI/90)
-            var limit_x = 1000
-            var limit_y = 1000
+            var limit_x = 700
+            var limit_y = 700
             var radius = 300
             var circle_center = [limit_x/2, limit_y/2]
 
@@ -169,14 +172,34 @@
                         rr.push(r)
                     }
                 }
-            }while(100*particle_area/approx_circle_area<20)
+            }while(100*particle_area/approx_circle_area<freq)
+            
+            context.font = (radius/10).toFixed(0)+"px Arial";
+            var W = limit_x
+            var H = (limit_y-2*radius)/2
+            context.clearRect(0,0,W,H)
+            context.fillText((100*particle_area/approx_circle_area).toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)
 
+            
+        }
 
-            document.getElementById("text").innerHTML="frequency="+(100*particle_area/approx_circle_area).toFixed(0)+"%"
-    	}
+        function frequency_oninput()
+        {
+            var freq = document.getElementById("frequency").value
+            if(freq<=0||freq>50) return
+            if(freq > 40){
+                document.getElementById("text").innerHTML="Warning: it may be slow!"
+            } else {
+                document.getElementById("text").innerHTML=""
+            }
+            main(freq)
+        }
         </script>
-    <body>
+    <body onload="main(5)">
+        <h1>Interactive comparison charts for estimating percentage of particles</h1>
+        <label>Frequency in %:</label>
+        <input type="number" id="frequency" oninput="frequency_oninput()" value="5">
         <div id="text"></div>
-        <canvas id='canvas' width='1000' height='1000' style="border:1px solid #000000;"></canvas>
+        <canvas id='canvas' width='700' height='700' style="border:1px solid #000000;"></canvas>
     </body>
 </html>
