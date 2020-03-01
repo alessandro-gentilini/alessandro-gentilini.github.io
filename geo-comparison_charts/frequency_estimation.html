@@ -156,14 +156,17 @@
                 if(is_outside(r,circle_center,radius)) continue
                 var overlap = false
                 for(var i = 0; i < rr.length; i++){
-                    clipped = clip(r,rr[i])
+                    var clipped = clip(r,rr[i])
                     if(clipped.length){
                         overlap = true
                     }
                 }
                 if(!overlap){
-                    drawPolygon(context,r,'#888','#fff')
-                    rr.push(r)
+                    var clipped = clip(r,approx_circle)
+                    if(clipped.length){
+                        drawPolygon(context,clipped,'#888','#fff')
+                        rr.push(r)
+                    }
                 }
             }while(rr.length<20)
 
