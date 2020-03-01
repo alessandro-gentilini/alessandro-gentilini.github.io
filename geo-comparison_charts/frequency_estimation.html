@@ -104,11 +104,6 @@
 
             var retval = mean + stdev * y1;
             return retval
-            /*
-            if(retval > 0) 
-                return retval;
-            return -retval;
-            */
         }
         }        
 
@@ -139,6 +134,17 @@
             var radius = 300
             var circle_center = [limit_x/2, limit_y/2]
 
+            var approx_circle = []
+            var N = 50
+            for(var i = 0; i < N; i++ ){
+                var theta = i/N*2*Math.PI
+                var x = circle_center[0]+radius*Math.cos(theta)
+                var y = circle_center[0]+radius*Math.sin(theta)
+                approx_circle.push([x,y])
+            }
+
+            drawPolygon(context,approx_circle,'#888','#fff')
+
             context.beginPath();
             context.arc(circle_center[0], circle_center[1], radius, 0, 2 * Math.PI);
             context.stroke();
@@ -160,14 +166,6 @@
                     rr.push(r)
                 }
             }while(rr.length<20)
-
-
-	        //drawPolygon(context, clipPolygon, '#888','#88f');
-            //drawPolygon(context, rect(100,10), '#888','#88f');
-            //drawPolygon(context, rect(10,100), '#888','#88f');
-	        //drawPolygon(context, subjectPolygon, '#888','#8f8');
-            //drawPolygon(context, translate(subjectPolygon,[20,20]), '#888','#8f8');
-            //drawPolygon(context, translate(rotate_r(subjectPolygon,Math.PI/4),[40,40]), '#888','#8f8');
 
 
             //document.getElementById("text").innerHTML=angles
