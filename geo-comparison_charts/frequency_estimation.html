@@ -73,16 +73,22 @@
             var d = rotate(rect[3],theta)
             return [a,b,c,d]
         }
+
+        function rect(b,h){
+            return [[0,0],[b,0],[b,h],[0,h]]
+        }
  
         window.onload = function () {
 	        var context = document.getElementById('canvas').getContext('2d');
-	        var subjectPolygon = [[0, 0], [20, 0], [20, 20], [0, 20]],
-	            clipPolygon = [[100, 100], [300, 100], [300, 300], [100, 300]];
+	        var subjectPolygon = [[0, 0], [20, 0], [20, 20], [0, 20]]
+	        var clipPolygon = [[100, 100], [300, 100], [300, 300], [100, 300]]
 	        var clippedPolygon = clip(subjectPolygon, clipPolygon);
 	        drawPolygon(context, clipPolygon, '#888','#88f');
-	        drawPolygon(context, subjectPolygon, '#888','#8f8');
-            drawPolygon(context, translate(subjectPolygon,[20,20]), '#888','#8f8');
-            drawPolygon(context, translate(rotate_r(subjectPolygon,Math.PI/4),[40,40]), '#888','#8f8');
+            drawPolygon(context, rect(100,10), '#888','#88f');
+            drawPolygon(context, rect(10,100), '#888','#88f');
+	        //drawPolygon(context, subjectPolygon, '#888','#8f8');
+            //drawPolygon(context, translate(subjectPolygon,[20,20]), '#888','#8f8');
+            //drawPolygon(context, translate(rotate_r(subjectPolygon,Math.PI/4),[40,40]), '#888','#8f8');
             if(clippedPolygon.length){
                 drawPolygon(context, clippedPolygon, '#000','#0ff');
             }
