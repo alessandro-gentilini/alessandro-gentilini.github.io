@@ -119,13 +119,28 @@
             distance(rect[2],circle_center)>circle_radius &&
             distance(rect[3],circle_center)>circle_radius 
         }
+
+        function determinant(p1,p2){
+            var x1 = p1[0]
+            var y1 = p1[1]
+            var x2 = p2[0]
+            var y2 = p2[1]
+            return x1*y2-x2*y1
+        }
+
+        // http://mathworld.wolfram.com/PolygonArea.html
+        function polygon_area(p){
+            var A = 0
+            var sz = p.length
+            for(var i = 0; i < sz; i++){
+                A += determinant(p[i],p[(i+1)%sz])
+            }
+            return Math.abs(A/2)
+        }
  
         window.onload = function () {
 	        var context = document.getElementById('canvas').getContext('2d');
-	        var subjectPolygon = [[0, 0], [20, 0], [20, 20], [0, 20]]
-	        var clipPolygon = [[100, 100], [300, 100], [300, 300], [100, 300]]
-	        var clippedPolygon = clip(subjectPolygon, clipPolygon);
-            
+           
             var base_dist = gaussian(100,5)
             var height_dist = gaussian(10,10/20)
             var rotation_dist = gaussian(0,Math.PI/90)
@@ -144,13 +159,10 @@
             }
 
             drawPolygon(context,approx_circle,'#888','#fff')
-
-            context.beginPath();
-            context.arc(circle_center[0], circle_center[1], radius, 0, 2 * Math.PI);
-            context.stroke();
-            context.closePath();
+            var approx_circle_area = polygon_area(approx_circle)
 
             var rr = []
+            var particle_area = 0
             do{
                 r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
                 if(is_outside(r,circle_center,radius)) continue
@@ -164,18 +176,19 @@
                 if(!overlap){
                     var clipped = clip(r,approx_circle)
                     if(clipped.length){
-                        drawPolygon(context,clipped,'#888','#fff')
+                        drawPolygon(context,clipped,'#000','#000')
+                        particle_area += polygon_area(clipped)
                         rr.push(r)
                     }
                 }
-            }while(rr.length<20)
+            }while(100*particle_area/approx_circle_area<20)
 
 
-            //document.getElementById("text").innerHTML=angles
+            document.getElementById("text").innerHTML="frequency="+(100*particle_area/approx_circle_area).toFixed(0)+"%"
     	}
         </script>
     <body>
-        <canvas id='canvas' width='1000' height='1000' style="border:1px solid #000000;"></canvas>
         <div id="text"></div>
+        <canvas id='canvas' width='1000' height='1000' style="border:1px solid #000000;"></canvas>
     </body>
 </html>
