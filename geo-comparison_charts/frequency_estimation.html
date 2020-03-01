@@ -114,20 +114,27 @@
 	        var subjectPolygon = [[0, 0], [20, 0], [20, 20], [0, 20]]
 	        var clipPolygon = [[100, 100], [300, 100], [300, 300], [100, 300]]
 	        var clippedPolygon = clip(subjectPolygon, clipPolygon);
-	        drawPolygon(context, clipPolygon, '#888','#88f');
-            drawPolygon(context, rect(100,10), '#888','#88f');
-            drawPolygon(context, rect(10,100), '#888','#88f');
+            
+            var base_dist = gaussian(100,5)
+            var height_dist = gaussian(10,10/20)
+            var rotation_dist = gaussian(0,Math.PI/180)
+
+            for(var i = 0; i < 20; i++){
+                drawPolygon(context,translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[500*Math.random(),500*Math.random()]))
+            }
+
+	        //drawPolygon(context, clipPolygon, '#888','#88f');
+            //drawPolygon(context, rect(100,10), '#888','#88f');
+            //drawPolygon(context, rect(10,100), '#888','#88f');
 	        //drawPolygon(context, subjectPolygon, '#888','#8f8');
             //drawPolygon(context, translate(subjectPolygon,[20,20]), '#888','#8f8');
             //drawPolygon(context, translate(rotate_r(subjectPolygon,Math.PI/4),[40,40]), '#888','#8f8');
             if(clippedPolygon.length){
                 drawPolygon(context, clippedPolygon, '#000','#0ff');
             }
-            var standard = gaussian(0, 1);
-            alert(standard())
     	}
         </script>
     <body>
-    	<canvas id='canvas' width='400' height='400'></canvas>
+    	<canvas id='canvas' width='1000' height='1000'></canvas>
     </body>
 </html>
