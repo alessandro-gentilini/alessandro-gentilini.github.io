@@ -111,6 +111,19 @@
             */
         }
         }        
+
+        function distance(p1,p2)
+        {
+            return Math.sqrt(Math.pow(p1[0]-p2[0],2)+Math.pow(p1[1]-p2[1],2))
+        }
+
+        function is_outside(rect,circle_center,circle_radius)
+        {
+            return distance(rect[0],circle_center)>circle_radius &&
+            distance(rect[1],circle_center)>circle_radius &&
+            distance(rect[2],circle_center)>circle_radius &&
+            distance(rect[3],circle_center)>circle_radius 
+        }
  
         window.onload = function () {
 	        var context = document.getElementById('canvas').getContext('2d');
@@ -123,12 +136,18 @@
             var rotation_dist = gaussian(0,Math.PI/90)
             var limit_x = 1000
             var limit_y = 1000
+            var radius = 300
+            var circle_center = [limit_x/2, limit_y/2]
 
-            var r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
-            drawPolygon(context,r,'#888','#fff')
-            var rr = [r]
+            context.beginPath();
+            context.arc(circle_center[0], circle_center[1], radius, 0, 2 * Math.PI);
+            context.stroke();
+            context.closePath();
+
+            var rr = []
             do{
                 r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
+                if(is_outside(r,circle_center,radius)) continue
                 var overlap = false
                 for(var i = 0; i < rr.length; i++){
                     clipped = clip(r,rr[i])
@@ -140,7 +159,7 @@
                     drawPolygon(context,r,'#888','#fff')
                     rr.push(r)
                 }
-            }while(rr.length<100)
+            }while(rr.length<20)
 
 
 	        //drawPolygon(context, clipPolygon, '#888','#88f');
