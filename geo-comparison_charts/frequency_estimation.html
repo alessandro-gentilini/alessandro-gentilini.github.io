@@ -128,13 +128,13 @@
             return Math.abs(A/2)
         }
 
-        function main(freq)
+        function main(freq,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
         {
 	        var context = document.getElementById('canvas').getContext('2d');
            
-            var base_dist = gaussian(100,5)
-            var height_dist = gaussian(10,10/20)
-            var rotation_dist = gaussian(0,Math.PI/90)
+            var base_dist = gaussian(mean_W,stddev_W)
+            var height_dist = gaussian(mean_H,stddev_H)
+            var rotation_dist = gaussian(mean_theta,stddev_theta)
             var limit_x = 700
             var limit_y = 700
             var radius = 300
@@ -167,7 +167,7 @@
                 if(!overlap){
                     var clipped = clip(r,approx_circle)
                     if(clipped.length){
-                        drawPolygon(context,clipped,'#000','#000')
+                        drawPolygon(context,clipped,'#888','#fff')
                         particle_area += polygon_area(clipped)
                         rr.push(r)
                     }
@@ -179,26 +179,50 @@
             var H = (limit_y-2*radius)/2
             context.clearRect(0,0,W,H)
             context.fillText((100*particle_area/approx_circle_area).toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)
-
-            
         }
 
         function frequency_oninput()
         {
-            var freq = document.getElementById("frequency").value
+            var freq = parseFloat(document.getElementById("frequency").value)
+            var mean_H = parseFloat(document.getElementById("mean_H").value)
+            var mean_W = parseFloat(document.getElementById("mean_W").value)
+            var stddev_H = parseFloat(document.getElementById("stddev_H").value)            
+            var stddev_W = parseFloat(document.getElementById("stddev_W").value)
+            var mean_theta = parseFloat(document.getElementById("mean_theta").value)*Math.PI/180
+            var stddev_theta = parseFloat(document.getElementById("stddev_theta").value)*Math.PI/180    
             if(freq<=0||freq>50) return
             if(freq > 40){
                 document.getElementById("text").innerHTML="Warning: it may be slow!"
             } else {
                 document.getElementById("text").innerHTML=""
             }
-            main(freq)
+            main(freq,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
         }
         </script>
-    <body onload="main(5)">
+    <body onload="main(5,10,.5,100,5,0,2*Math.PI/180)">
         <h1>Interactive comparison charts for estimating percentage of particles</h1>
-        <label>Frequency in %:</label>
+        <p>
+        <label for="frequency">Frequency in %:</label>
         <input type="number" id="frequency" oninput="frequency_oninput()" value="5">
+        </p>
+        <p>
+        <label for="mean_H">Average particle height in px:</label>
+        <input type="number" id="mean_H" oninput="frequency_oninput()" value="10">    
+        <label for="stddev_H">Standard deviation for particle height in px:</label>
+        <input type="number" id="stddev_H" oninput="frequency_oninput()" value=".5">        
+        </p>
+        <p>
+        <label for="mean_W">Average particle width in px:</label>
+        <input type="number" id="mean_W" oninput="frequency_oninput()" value="100">    
+        <label for="stddev_W">Standard deviation for particle height in px:</label>
+        <input type="number" id="stddev_W" oninput="frequency_oninput()" value="5">        
+        </p>
+        <p>
+        <label for="mean_theta">Average angle in degree:</label>
+        <input type="number" id="mean_theta" oninput="frequency_oninput()" value="0">    
+        <label for="stddev_theta">Standard deviation for angle in degree:</label>
+        <input type="number" id="stddev_theta" oninput="frequency_oninput()" value="2">        
+        </p>             
         <div id="text"></div>
         <canvas id='canvas' width='700' height='700' style="border:1px solid #000000;"></canvas>
     </body>
