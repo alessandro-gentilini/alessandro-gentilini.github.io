@@ -121,14 +121,14 @@
             var base_dist = gaussian(100,5)
             var height_dist = gaussian(10,10/20)
             var rotation_dist = gaussian(0,Math.PI/90)
-            var center_x = 500
-            var center_y = 500
+            var limit_x = 1000
+            var limit_y = 1000
 
-            var r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[center_x*Math.random(),center_y*Math.random()])
-            drawPolygon(context,r)
+            var r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
+            drawPolygon(context,r,'#888','#fff')
             var rr = [r]
             do{
-                r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[center_x*Math.random(),center_y*Math.random()])
+                r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
                 var overlap = false
                 for(var i = 0; i < rr.length; i++){
                     clipped = clip(r,rr[i])
@@ -137,10 +137,10 @@
                     }
                 }
                 if(!overlap){
-                    drawPolygon(context,r)
+                    drawPolygon(context,r,'#888','#fff')
                     rr.push(r)
                 }
-            }while(rr.length<20)
+            }while(rr.length<100)
 
 
 	        //drawPolygon(context, clipPolygon, '#888','#88f');
@@ -149,15 +149,13 @@
 	        //drawPolygon(context, subjectPolygon, '#888','#8f8');
             //drawPolygon(context, translate(subjectPolygon,[20,20]), '#888','#8f8');
             //drawPolygon(context, translate(rotate_r(subjectPolygon,Math.PI/4),[40,40]), '#888','#8f8');
-            if(clippedPolygon.length){
-                drawPolygon(context, clippedPolygon, '#000','#0ff');
-            }
+
 
             //document.getElementById("text").innerHTML=angles
     	}
         </script>
     <body>
-        <canvas id='canvas' width='1000' height='1000'></canvas>
+        <canvas id='canvas' width='1000' height='1000' style="border:1px solid #000000;"></canvas>
         <div id="text"></div>
     </body>
 </html>
