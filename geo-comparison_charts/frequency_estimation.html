@@ -121,13 +121,27 @@
             var base_dist = gaussian(100,5)
             var height_dist = gaussian(10,10/20)
             var rotation_dist = gaussian(0,Math.PI/90)
+            var center_x = 500
+            var center_y = 500
 
-            var angles=""
-            for(var i = 0; i < 20; i++){
-                var a = rotation_dist()
-                angles += a.toFixed(3) +"\n"
-                drawPolygon(context,translate(rotate_r(rect(base_dist(),height_dist()),a),[500*Math.random(),500*Math.random()]))
-            }
+            var r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[center_x*Math.random(),center_y*Math.random()])
+            drawPolygon(context,r)
+            var rr = [r]
+            do{
+                r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[center_x*Math.random(),center_y*Math.random()])
+                var overlap = false
+                for(var i = 0; i < rr.length; i++){
+                    clipped = clip(r,rr[i])
+                    if(clipped.length){
+                        overlap = true
+                    }
+                }
+                if(!overlap){
+                    drawPolygon(context,r)
+                    rr.push(r)
+                }
+            }while(rr.length<20)
+
 
 	        //drawPolygon(context, clipPolygon, '#888','#88f');
             //drawPolygon(context, rect(100,10), '#888','#88f');
@@ -139,7 +153,7 @@
                 drawPolygon(context, clippedPolygon, '#000','#0ff');
             }
 
-            document.getElementById("text").innerHTML=angles
+            //document.getElementById("text").innerHTML=angles
     	}
         </script>
     <body>
