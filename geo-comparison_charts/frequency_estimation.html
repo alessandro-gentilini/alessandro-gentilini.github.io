@@ -78,33 +78,21 @@
             return [[0,0],[b,0],[b,h],[0,h]]
         }
 
-        // https://stackoverflow.com/a/35599181
-        // returns a gaussian random function with the given mean and stdev.
-        function gaussian(mean, stdev) {
-            var y2;
-            var use_last = false;
+        function gaussian(mean, stddev) {
             return function() {
-                var y1;
-                if(use_last) {
-                y1 = y2;
-                use_last = false;
-                }
-                else {
-                    var x1, x2, w;
-                    do {
-                        x1 = 2.0 * Math.random() - 1.0;
-                        x2 = 2.0 * Math.random() - 1.0;
-                        w  = x1 * x1 + x2 * x2;               
-                    } while( w >= 1.0);
-                    w = Math.sqrt((-2.0 * Math.log(w))/w);
-                    y1 = x1 * w;
-                    y2 = x2 * w;
-                    use_last = true;
+                var V1
+                var V2
+                var S
+                do{
+                    var U1 = Math.random()
+                    var U2 = Math.random()
+                    V1 = 2*U1-1
+                    V2 = 2*U2-1
+                    S = V1*V1+V2*V2
+                }while(S >= 1)
+                if(S===0) return 0
+                return mean+stddev*(V1*Math.sqrt(-2*Math.log(S)/S))
             }
-
-            var retval = mean + stdev * y1;
-            return retval
-        }
         }        
 
         function distance(p1,p2)
