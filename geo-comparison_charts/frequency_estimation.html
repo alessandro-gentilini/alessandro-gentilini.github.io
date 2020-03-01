@@ -103,9 +103,12 @@
             }
 
             var retval = mean + stdev * y1;
+            return retval
+            /*
             if(retval > 0) 
                 return retval;
             return -retval;
+            */
         }
         }        
  
@@ -117,10 +120,13 @@
             
             var base_dist = gaussian(100,5)
             var height_dist = gaussian(10,10/20)
-            var rotation_dist = gaussian(0,Math.PI/180)
+            var rotation_dist = gaussian(0,Math.PI/90)
 
+            var angles=""
             for(var i = 0; i < 20; i++){
-                drawPolygon(context,translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[500*Math.random(),500*Math.random()]))
+                var a = rotation_dist()
+                angles += a.toFixed(3) +"\n"
+                drawPolygon(context,translate(rotate_r(rect(base_dist(),height_dist()),a),[500*Math.random(),500*Math.random()]))
             }
 
 	        //drawPolygon(context, clipPolygon, '#888','#88f');
@@ -132,9 +138,12 @@
             if(clippedPolygon.length){
                 drawPolygon(context, clippedPolygon, '#000','#0ff');
             }
+
+            document.getElementById("text").innerHTML=angles
     	}
         </script>
     <body>
-    	<canvas id='canvas' width='1000' height='1000'></canvas>
+        <canvas id='canvas' width='1000' height='1000'></canvas>
+        <div id="text"></div>
     </body>
 </html>
