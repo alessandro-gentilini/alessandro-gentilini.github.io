@@ -82,7 +82,7 @@
         // Algorithm P in section 3.4.1 of Knuth's TAOCP (volume 2).
         function gaussian(mean, stddev) {
             return function() {
-                if(stddev<=0) throw new Error("stddev must be > 0")
+                if(stddev<=0) throw new Error("stddev must be positive")
                 var V1
                 var V2
                 var S
@@ -131,13 +131,16 @@
 
         function main(freq,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
         {
+            var limit_x = 700
+            var limit_y = 700
+
 	        var context = document.getElementById('canvas').getContext('2d');
+            context.clearRect(0,0,limit_x,limit_y,W,H)
            
             var base_dist = gaussian(mean_W,stddev_W)
             var height_dist = gaussian(mean_H,stddev_H)
             var rotation_dist = gaussian(mean_theta,stddev_theta)
-            var limit_x = 700
-            var limit_y = 700
+
             var radius = 300
             var circle_center = [limit_x/2, limit_y/2]
 
@@ -154,7 +157,9 @@
             var approx_circle_area = polygon_area(approx_circle)
 
             var rr = []
+            var idx = 0
             var particle_area = 0
+            var dbg_msg = ""
             do{
                 r = translate(rotate_r(rect(base_dist(),height_dist()),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
                 if(is_outside(r,circle_center,radius)) continue
@@ -168,18 +173,25 @@
                 if(!overlap){
                     var clipped = clip(r,approx_circle)
                     if(clipped.length){
-                        drawPolygon(context,clipped,'#888','#fff')
+                        context.font = "20px Arial"
+                        context.fillStyle = '#000'
+                        dbg_msg+=idx+"="+r+"<br>"
+                        context.fillText(idx,r[0][0],r[0][1])
+                        idx++
+                        drawPolygon(context,clipped,'#888','rgba(255, 255, 255, 0.5)')
                         particle_area += polygon_area(clipped)
                         rr.push(r)
                     }
                 }
             }while(100*particle_area/approx_circle_area<freq)
             
-            context.font = (radius/10).toFixed(0)+"px Arial";
+            context.font = (radius/10).toFixed(0)+"px Arial"
             var W = limit_x
             var H = (limit_y-2*radius)/2
             context.clearRect(0,0,W,H)
             context.fillText((100*particle_area/approx_circle_area).toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)
+
+            document.getElementById("dbg").innerHTML=dbg_msg
         }
 
         function frequency_oninput()
@@ -226,5 +238,6 @@
         </p>             
         <div id="text"></div>
         <canvas id='canvas' width='700' height='700' style="border:1px solid #000000;"></canvas>
+        <div id="dbg"></div>
     </body>
 </html>
