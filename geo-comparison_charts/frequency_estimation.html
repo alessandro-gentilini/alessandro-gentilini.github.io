@@ -43,6 +43,8 @@
         }
  
         function drawPolygon(context, polygon, strokeStyle, fillStyle) {
+            var old_stroke = context.strokeStyle
+            var old_fill = context.fillStyle
             context.strokeStyle = strokeStyle;
             context.fillStyle = fillStyle;
             context.beginPath();
@@ -53,6 +55,8 @@
             context.fill();
             context.stroke();
             context.closePath();
+            context.strokeStyle = old_stroke;
+            context.fillStyle = old_fill;            
         }
 
         function translate(rect,t){
@@ -135,19 +139,22 @@
             return a.length>0 || b.length>0
         }        
 
-        function main(freq,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
+        function main(target_frequency,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
         {
             var limit_x = 700
             var limit_y = 700
+            var radius = 300
 
-	        var context = document.getElementById('canvas').getContext('2d');
-            context.clearRect(0,0,limit_x,limit_y,W,H)
+            var W = limit_x
+            var H = (limit_y-2*radius)/2            
+
+	        var context_sparite = document.getElementById('sparite_canvas').getContext('2d');
+            var context_micrite = document.getElementById('micrite_canvas').getContext('2d');
            
             var width_dist = gaussian(mean_W,stddev_W)
             var height_dist = gaussian(mean_H,stddev_H)
             var rotation_dist = gaussian(mean_theta,stddev_theta)
-
-            var radius = 300
+            
             var circle_center = [limit_x/2, limit_y/2]
 
             var approx_circle = []
@@ -159,7 +166,8 @@
                 approx_circle.push([x,y])
             }
 
-            drawPolygon(context,approx_circle,'#888','#fff')
+            drawPolygon(context_sparite,approx_circle,'#888','#fff')
+            drawPolygon(context_micrite,approx_circle,'#888','#000')
             var approx_circle_area = polygon_area(approx_circle)
 
             var rr = []
@@ -168,6 +176,7 @@
             var dbg_msg = ""
             var w
             var h
+            var frequency = 0
             do{
                 w=width_dist()
                 h=height_dist()
@@ -182,24 +191,33 @@
                     var clipped = clip(r,approx_circle)
                     if(clipped.length){
                         if(dbg_msg.length){
-                            context.font = "20px Arial"
-                            context.fillStyle = '#000'
+                            context_sparite.font = "20px Arial"
+                            context_sparite.fillStyle = '#000'
                             dbg_msg+=idx+"="+r+"<br>"
-                            context.fillText(idx,r[0][0],r[0][1])
+                            context_sparite.fillText(idx,r[0][0],r[0][1])
                         }
                         idx++
-                        drawPolygon(context,clipped,'#888','rgba(255, 255, 255, 0.5)')
+                        var fill_color = dbg_msg.length?'rgba(255, 255, 255, 0.5)':'#000'
+                        drawPolygon(context_sparite,clipped,'#000',fill_color)
+                        drawPolygon(context_micrite,clipped,'#fff','#fff')
                         particle_area += polygon_area(clipped)
                         rr.push(r)
                     }
                 }
-            }while(100*particle_area/approx_circle_area<freq)
-            
-            context.font = (radius/10).toFixed(0)+"px Arial"
-            var W = limit_x
-            var H = (limit_y-2*radius)/2
-            context.clearRect(0,0,W,H)
-            context.fillText((100*particle_area/approx_circle_area).toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)
+                frequency = 100*particle_area/approx_circle_area
+            }while(frequency<target_frequency)
+
+
+            if(!isNaN(frequency)){
+                context_sparite.font = (radius/10).toFixed(0)+"px serif"
+                context_sparite.clearRect(0,0,W,H)
+                context_sparite.fillText(frequency.toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)
+
+                context_micrite.font = (radius/10).toFixed(0)+"px serif"
+                context_micrite.clearRect(0,0,W,H)
+                context_micrite.fillStyle = '#000'
+                context_micrite.fillText(frequency.toFixed(0)+"%",circle_center[0],circle_center[1]-1.01*radius)            
+            }
 
             document.getElementById("dbg").innerHTML=dbg_msg
         }
@@ -230,13 +248,13 @@
         </p>
         <p>
         <label for="mean_H">Average particle height in px:</label>
-        <input type="number" min="1" max="100" id="mean_H" oninput="frequency_oninput()" value="10">    
+        <input type="number" min="1" max="120" id="mean_H" oninput="frequency_oninput()" value="10">    
         <label for="stddev_H">Standard deviation for particle height in px:</label>
         <input type="number" min="0.1" max="20" id="stddev_H" oninput="frequency_oninput()" value=".5">        
         </p>
         <p>
         <label for="mean_W">Average particle width in px:</label>
-        <input type="number" min="1" max="100" id="mean_W" oninput="frequency_oninput()" value="100">    
+        <input type="number" min="1" max="120" id="mean_W" oninput="frequency_oninput()" value="100">    
         <label for="stddev_W">Standard deviation for particle height in px:</label>
         <input type="number" min="0.1" max="20" id="stddev_W" oninput="frequency_oninput()" value="5">        
         </p>
@@ -247,7 +265,13 @@
         <input type="number" min="0.1" max="180" id="stddev_theta" oninput="frequency_oninput()" value="2">        
         </p>             
         <div id="text"></div>
-        <canvas id='canvas' width='700' height='700' style="border:1px solid #000000;"></canvas>
+        <table>
+            <!--tr><td>Sparite</td><td>Micrite</td></tr-->
+            <tr>
+                <td><canvas id='sparite_canvas' width='700' height='700' style="border:1px solid #000000;"></canvas></td>
+                <td><canvas id='micrite_canvas' width='700' height='700' style="border:1px solid #000000;"></canvas></td>
+            </tr>
+        </table>
         <div id="dbg"></div>
     </body>
 </html>
