@@ -165,7 +165,7 @@
             var rr = []
             var idx = 0
             var particle_area = 0
-            var dbg_msg = ""
+            var dbg_msg = "Debug<br>"
             var w
             var h
             do{
@@ -181,10 +181,12 @@
                 if(!overlap){
                     var clipped = clip(r,approx_circle)
                     if(clipped.length){
-                        context.font = "20px Arial"
-                        context.fillStyle = '#000'
-                        dbg_msg+=idx+"="+r+"<br>"
-                        context.fillText(idx,r[0][0],r[0][1])
+                        if(dbg_msg.length){
+                            context.font = "20px Arial"
+                            context.fillStyle = '#000'
+                            dbg_msg+=idx+"="+r+"<br>"
+                            context.fillText(idx,r[0][0],r[0][1])
+                        }
                         idx++
                         drawPolygon(context,clipped,'#888','rgba(255, 255, 255, 0.5)')
                         particle_area += polygon_area(clipped)
