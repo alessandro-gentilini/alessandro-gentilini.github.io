@@ -129,6 +129,12 @@
             return Math.abs(A/2)
         }
 
+        function are_overlapped(r1,r2){
+            var a = clip(r1,r2)
+            var b = clip(r2,r1)
+            return a.length>0 || b.length>0
+        }        
+
         function main(freq,mean_H,stddev_H,mean_W,stddev_W,mean_theta,stddev_theta)
         {
             var limit_x = 700
@@ -169,11 +175,8 @@
                 r = translate(rotate_r(rect(w,h),rotation_dist()),[limit_x*Math.random(),limit_y*Math.random()])
                 if(is_outside(r,circle_center,radius)) continue
                 var overlap = false
-                for(var i = 0; i < rr.length; i++){
-                    var clipped = clip(r,rr[i])
-                    if(clipped.length){
-                        overlap = true
-                    }
+                for(var i = 0; i < rr.length && !overlap; i++){
+                    overlap = are_overlapped(r,rr[i])
                 }
                 if(!overlap){
                     var clipped = clip(r,approx_circle)
