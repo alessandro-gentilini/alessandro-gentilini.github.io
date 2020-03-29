@@ -1,5 +1,6 @@
 https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10010
 timestamp,delta_positive_yesterday,delta_death_yesterday,recovered
+2020-03-29,0,1,5
 2020-03-28,11,1,5
 2020-03-27,9,2,4
 2020-03-26,11,0,4
