@@ -16,5 +16,6 @@ df2.index = df.index
 
 
 df2.plot()
+plt.savefig('COVID-19.png')
 
 plt.show()
