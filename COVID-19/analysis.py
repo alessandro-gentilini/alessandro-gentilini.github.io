@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("data.txt", index_col=0, parse_dates=True,skiprows=1)
+df = pd.read_csv("data.txt", index_col=0, parse_dates=True,skiprows=1,na_values=999999999)
 df.sort_values(by=['timestamp'],inplace=True,ascending=True)
 
 df.plot()
