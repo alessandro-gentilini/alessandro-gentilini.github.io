@@ -1,0 +1,190 @@
+{
+  "Circondario Imolese": [
+    {
+      "date": "2020-03-04",
+      "confirmed": 1,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-05",
+      "confirmed": 17,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-06",
+      "confirmed": 17,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-07",
+      "confirmed": 17,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-08",
+      "confirmed": 20,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-09",
+      "confirmed": 35,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-10",
+      "confirmed": 37,
+      "deaths": 2,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-11",
+      "confirmed": 42,
+      "deaths": 3,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-12",
+      "confirmed": 42,
+      "deaths": 3,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-13",
+      "confirmed": 47,
+      "deaths": 6,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-14",
+      "confirmed": 63,
+      "deaths": 9,
+      "recovered": 0
+    },
+    {
+      "date": "2020-03-15",
+      "confirmed": 72,
+      "deaths": 10,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-16",
+      "confirmed": 90,
+      "deaths": 10,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-17",
+      "confirmed": 100,
+      "deaths": 12,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-18",
+      "confirmed": 113,
+      "deaths": 13,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-19",
+      "confirmed": 124,
+      "deaths": 13,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-20",
+      "confirmed": 144,
+      "deaths": 15,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-21",
+      "confirmed": 163,
+      "deaths": 16,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-22",
+      "confirmed": 178,
+      "deaths": 17,
+      "recovered": 2
+    },
+    {
+      "date": "2020-03-23",
+      "confirmed": 181,
+      "deaths": 17,
+      "recovered": 3
+    },
+    {
+      "date": "2020-03-24",
+      "confirmed": 192,
+      "deaths": 17,
+      "recovered": 3
+    },
+    {
+      "date": "2020-03-25",
+      "confirmed": 208,
+      "deaths": 19,
+      "recovered": 4
+    },
+    {
+      "date": "2020-03-26",
+      "confirmed": 219,
+      "deaths": 19,
+      "recovered": 4
+    },
+    {
+      "date": "2020-03-27",
+      "confirmed": 228,
+      "deaths": 21,
+      "recovered": 4
+    },
+    {
+      "date": "2020-03-28",
+      "confirmed": 239,
+      "deaths": 22,
+      "recovered": 5
+    },
+    {
+      "date": "2020-03-29",
+      "confirmed": 239,
+      "deaths": 23,
+      "recovered": 5
+    },
+    {
+      "date": "2020-03-30",
+      "confirmed": 253,
+      "deaths": 23,
+      "recovered": 6
+    },
+    {
+      "date": "2020-03-31",
+      "confirmed": 260,
+      "deaths": 24,
+      "recovered": 8
+    },
+    {
+      "date": "2020-04-01",
+      "confirmed": 271,
+      "deaths": 25,
+      "recovered": 8
+    },
+    {
+      "date": "2020-04-02",
+      "confirmed": 283,
+      "deaths": 27,
+      "recovered": 8
+    },
+    {
+      "date": "2020-04-03",
+      "confirmed": 298,
+      "deaths": 27,
+      "recovered": 9
+    }
+  ]
+}
