@@ -1,4 +1,9 @@
 timestamp,delta_positive_from_yesterday,town
+2020-04-05,6,Medicina
+2020-04-05,3,Imola
+2020-04-05,1,Castel San Pietro Terme
+2020-04-05,1,Mordano
+2020-04-05,1,Fuori dal territorio
 2020-04-03,8,Imola
 2020-04-03,2,Medicina
 2020-04-03,2,Castel San Pietro Terme

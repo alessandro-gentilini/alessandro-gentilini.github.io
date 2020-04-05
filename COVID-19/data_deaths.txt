@@ -1,4 +1,6 @@
 timestamp,sex,town,age,note
+2020-04-05,M,Medicina,77,NA
+2020-04-05,F,Medicina,75,NA
 2020-04-02,F,Medicina,78,NA
 2020-04-02,M,Dozza,73,severe previous pathology
 2020-04-01,M,Medicina,53,NA
