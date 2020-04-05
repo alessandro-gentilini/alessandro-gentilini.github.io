@@ -10,6 +10,7 @@ df.set_index('timestamp',inplace=True)
 fig, ax = plt.subplots(1)
 df.plot.bar(y='delta_positive_from_yesterday',ax=ax)
 ax.set_xlabel('')
+ax.set_ylabel('persone/giorno (person/day)')
 ax.legend(['nuovi positivi ogni giorno (new positive every day)'])
 ax.figure.savefig('COVID-19-daily_delta_positive.png',bbox_inches='tight')
 
@@ -23,6 +24,7 @@ fig, ax2 = plt.subplots(1)
 df2 = df[['positive','dead','total_recovered']]
 df2.plot(ax=ax2)
 ax2.set_xlabel('')
+ax2.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
 ax2.legend(['totale positivi (confirmed)','totale deceduti (deaths)','totale guariti (recovered)'])
 ax2.figure.savefig('COVID-19-cumulative.png',bbox_inches='tight')
@@ -44,6 +46,7 @@ df5=pd.DataFrame(cumulative_data,columns=df4.iloc[:,0])
 
 fig, ax5 = plt.subplots(1)
 df5.boxplot(ax=ax5,rot=90,grid=False)
+ax5.set_ylabel('persone/giorno (person/day)')
 ax5.set_title('Boxplot per i nuovi positivi ogni giorno\n(boxplots for new positive every day)')
 ax5.figure.savefig('COVID-19-daily_positive_boxplot.png',bbox_inches='tight')
 
