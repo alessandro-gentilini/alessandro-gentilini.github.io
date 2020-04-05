@@ -1,0 +1,7 @@
+timestamp,sex,age,town
+2020-04-04,NA,NA,Medicina
+2020-03-31,NA,NA,NA
+2020-03-31,NA,NA,NA
+2020-03-30,NA,NA,Medicina
+2020-03-28,F,NA,Imola
+2020-03-23,M,NA,Imola

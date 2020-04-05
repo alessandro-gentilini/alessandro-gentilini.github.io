@@ -1,0 +1,18 @@
+timestamp,sex,town,age,note
+2020-04-02,F,Medicina,78,NA
+2020-04-02,M,Dozza,73,severe previous pathology
+2020-04-01,M,Medicina,53,NA
+2020-03-31,M,Medicina,81,NA
+2020-03-29,M,Castel San Pietro Terme,81,NA
+2020-03-28,F,Medicina,62,NA
+2020-03-27,F,Medicina,88,NA
+2020-03-27,M,Medicina,79,NA
+2020-03-25,M,Imola,75,previous multiple pathologies
+2020-03-25,M,Imola,92,previous multiple pathologies
+2020-03-22,M,Medicina,85,NA
+2020-03-21,M,Medicina,80,NA
+2020-03-20,M,Medicina,80,NA
+2020-03-20,F,Imola,90,NA
+2020-03-18,NA,Medicina,79,hospitalized in Bologna
+2020-03-17,M,Medicina,87,hospitalized in Imola in COVID19 ward at fourth floor
+2020-03-17,M,Medicina,88,hospitalized in Imola in COVID19 ward at fourth floor
