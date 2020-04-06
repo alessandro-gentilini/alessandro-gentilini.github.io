@@ -20,6 +20,7 @@ ax.figure.savefig('COVID-19-daily_delta_positive.png',bbox_inches='tight')
 df['positive'] = df['delta_positive_from_yesterday'].cumsum()
 df['dead'] = df['delta_death_from_yesterday'].cumsum()
 
+# can be interesting https://stackoverflow.com/a/13674286
 fig, ax2 = plt.subplots(1)
 df2 = df[['positive','dead','total_recovered']]
 df2.plot(drawstyle='steps-mid',ax=ax2)
