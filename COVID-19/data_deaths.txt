@@ -1,4 +1,4 @@
-timestamp,sex,town,age,note
+timestamp,sex,town,age,notes
 2020-04-05,M,Medicina,77,NA
 2020-04-05,F,Medicina,75,NA
 2020-04-02,F,Medicina,78,NA
@@ -18,3 +18,13 @@ timestamp,sex,town,age,note
 2020-03-18,NA,Medicina,79,hospitalized in Bologna
 2020-03-17,M,Medicina,87,hospitalized in Imola in COVID19 ward at fourth floor
 2020-03-17,M,Medicina,88,hospitalized in Imola in COVID19 ward at fourth floor
+2020-03-15,M,Medicina,79,previous multiple pathologies dead in ICU at Imola Hospital
+2020-03-14,M,Medicina,65,NA
+2020-03-14,M,Medicina,69,NA
+2020-03-14,M,Medicina,70,NA
+2020-03-13,NA,Medicina,79,NA
+2020-03-13,NA,Medicina,81,NA
+2020-03-13,NA,Castel San Pietro Terme,82,NA
+2020-03-11,NA,Medicina,82,hospitalized in Bologna
+2020-03-10,NA,Medicina,87,hospitalized in Bologna
+2020-03-10,NA,Medicina,77,hospitalized in Bologna
