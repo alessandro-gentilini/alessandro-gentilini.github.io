@@ -22,7 +22,7 @@ df['dead'] = df['delta_death_from_yesterday'].cumsum()
 
 fig, ax2 = plt.subplots(1)
 df2 = df[['positive','dead','total_recovered']]
-df2.plot(drawstyle="steps",ax=ax2)
+df2.plot(drawstyle="steps-mid",ax=ax2)
 ax2.set_xlabel('')
 ax2.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
