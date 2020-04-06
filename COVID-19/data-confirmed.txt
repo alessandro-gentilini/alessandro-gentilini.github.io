@@ -4,6 +4,7 @@ timestamp,delta_positive_from_yesterday,town,notes
 2020-04-05,1,Castel San Pietro Terme,NA
 2020-04-05,1,Mordano,NA
 2020-04-05,1,Fuori dal territorio,NA
+2020-04-04,4,NA,The number of four persons is inferred from the total of 302
 2020-04-03,8,Imola,NA
 2020-04-03,2,Medicina,NA
 2020-04-03,2,Castel San Pietro Terme,NA
@@ -25,6 +26,7 @@ timestamp,delta_positive_from_yesterday,town,notes
 2020-03-30,6,Medicina,NA
 2020-03-30,4,Imola,NA
 2020-03-30,4,Castel San Pietro Terme,NA
+2020-03-29,0,NA,NA
 2020-03-28,4,Medicina,NA
 2020-03-28,4,Imola,NA
 2020-03-28,2,Castel San Pietro Terme,NA
@@ -86,10 +88,10 @@ timestamp,delta_positive_from_yesterday,town,notes
 2020-03-11,1,Imola,He has an epidemiologic link to Medicina outbreak
 2020-03-10,1,Castel San Pietro Terme,NA
 2020-03-10,1,Medicina,NA
+2020-03-09,15,NA,NA
 2020-03-08,2,Medicina,They are two Men
 2020-03-08,1,Medicina,She is a woman
 2020-03-07,999999999,NA,NA
 2020-03-06,0,NA,Report for March the 6th is exactly equal to the report for March the 5th so maybe it is a copy and paste error
 2020-03-05,16,Medicina,Fifteen of them were patrons of a Centro Sociale and one of them was close contact of a positive person
 2020-03-05,1,Imola,NA
-2020-03-04,1,Medicina,He was hospitalized in infective diseases ward at Sant Orsola hospital in Bologna
