@@ -8,7 +8,7 @@ df.set_index('timestamp',inplace=True)
 
 # Daily graph
 fig, ax = plt.subplots(1)
-df.plot.bar(y='delta_positive_from_yesterday',ax=ax)
+df.plot(drawstyle='steps-mid',y='delta_positive_from_yesterday',ax=ax)
 ax.set_xlabel('')
 ax.set_ylabel('persone/giorno (person/day)')
 ax.legend(['nuovi positivi ogni giorno (new positive every day)'])
@@ -22,7 +22,7 @@ df['dead'] = df['delta_death_from_yesterday'].cumsum()
 
 fig, ax2 = plt.subplots(1)
 df2 = df[['positive','dead','total_recovered']]
-df2.plot(drawstyle="steps-mid",ax=ax2)
+df2.plot(drawstyle='steps-mid',ax=ax2)
 ax2.set_xlabel('')
 ax2.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
