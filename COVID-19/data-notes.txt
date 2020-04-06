@@ -1,0 +1,2 @@
+timestamp,note
+2020-03-04,"I contatti del paziente positivo, qualora asintomatici, saranno posti in isolamento domiciliare e solo coloro che presentassero eventuali sintomi sospetti (febbre,tosse e difficoltà respiratoria) saranno sottoposti a tampone"

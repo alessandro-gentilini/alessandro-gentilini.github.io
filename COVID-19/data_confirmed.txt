@@ -83,6 +83,7 @@ timestamp,delta_positive_from_yesterday,town,notes
 2020-03-13,1,Imola,NA
 2020-03-12,0,NA,NA
 2020-03-11,4,Medicina,NA
-2020-03-11,1,Imola,epidemiologic link to Medicina outbreak
+2020-03-11,1,Imola,He has an epidemiologic link to Medicina outbreak
 2020-03-10,1,Castel San Pietro Terme,NA
 2020-03-10,1,Medicina,NA
+2020-03-04,1,Medicina,He was hospitalized in infective disease ward at Sant Orsola hospital in Bologna
