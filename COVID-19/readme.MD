@@ -1,5 +1,7 @@
 ![COVID-19 cumulative graph](COVID-19-cumulative.png)
 
+![COVID-19 cumulative graph with formula](COVID-19-cumulative-formula.png)
+
 ![COVID-19 daily positive graph](COVID-19-daily_delta_positive.png)
 
 ![Boxplot for daily positive graph](COVID-19-daily_positive_boxplot.png)

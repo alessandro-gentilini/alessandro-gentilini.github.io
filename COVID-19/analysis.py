@@ -30,6 +30,16 @@ ax2.set_ylabel('persone (person)')
 ax2.legend(['totale positivi (confirmed)','totale deceduti (deaths)','totale guariti (recovered)'])
 ax2.figure.savefig('COVID-19-cumulative.png',bbox_inches='tight')
 
+fig, ax3 = plt.subplots(1)
+df3 = df[['positive','dead','total_recovered']]
+df3 = df3.assign(positive_minus_dead_minus_recovered=df['positive']-df['dead']-df['total_recovered'])
+df3.plot(drawstyle='steps-mid',ax=ax3)
+ax3.set_xlabel('')
+ax3.set_ylabel('persone (person)')
+# translation according to https://github.com/pomber/covid19
+ax3.legend(['$c=$totale positivi (confirmed)','$d$=totale deceduti (deaths)','$r$=totale guariti (recovered)','$c-d-r$'])
+ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
+
 
 
 # Daily boxplot graph
