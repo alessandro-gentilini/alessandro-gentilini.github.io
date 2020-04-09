@@ -1,4 +1,5 @@
 timestamp,sex,town,age,notes
+2020-04-09,M,Medicina,75,Hospitalized since several weeks in ICU at Imola
 2020-04-05,M,Medicina,77,NA
 2020-04-05,F,Medicina,75,NA
 2020-04-02,F,Medicina,78,NA
