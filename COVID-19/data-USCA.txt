@@ -1,4 +1,5 @@
 timestamp,telephone_triage,in_house_visit,therapy,swab,ECG,infective_lab_evaluation
+2020-04-10,643,283,179,206,22,147
 2020-04-09,606,261,167,187,17,120
 2020-04-08,573,242,161,171,16,108
 2020-04-07,525,220,150,154,15,100
@@ -7,4 +8,3 @@ timestamp,telephone_triage,in_house_visit,therapy,swab,ECG,infective_lab_evaluat
 2020-04-04,432,164,97,104,11,64
 2020-04-03,396,139,80,85,10,44
 2020-04-02,351,112,62,60,999999999,17
-2020-04-01,
