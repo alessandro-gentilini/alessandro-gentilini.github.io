@@ -81,3 +81,33 @@ df_for_json['date'] = df_for_json['date'].dt.strftime("%Y-%m-%d")
 json_str = json.dumps(json.loads('{"Circondario Imolese": '+df_for_json.to_json(orient='records')+"}"),indent=2)
 with open("data.json", "w") as text_file:
     text_file.write(json_str)
+
+def min_max_normalization(df):
+    return (df-df.min())/(df.max()-df.min())
+
+pc = pd.read_csv("dpc-covid19-ita-regioni.csv", parse_dates=['data'])
+pc.rename(columns={"data": "timestamp"},inplace=True)
+pc['timestamp'] = pc['timestamp'].dt.floor('D')
+pc.set_index('timestamp',inplace=True)
+swabs = pc.loc[pc['denominazione_regione']=='Emilia-Romagna']['tamponi']
+normalized_swabs = min_max_normalization(swabs)
+print(normalized_swabs)
+
+confirmed = df3[['positive']]
+normalized_confirmed = min_max_normalization(confirmed)
+print(normalized_confirmed)
+
+usca = pd.read_csv('data-USCA.txt',parse_dates=['timestamp'])
+usca.set_index('timestamp',inplace=True)
+usca_swab = usca['swab']
+normalized_usca_swabs = min_max_normalization(usca_swab)
+
+
+result = pd.concat([normalized_swabs, normalized_confirmed,normalized_usca_swabs], axis=1)
+print(result)
+fig, ax6 = plt.subplots(1)
+result.plot(drawstyle='steps-mid',ax=ax6,colormap='Accent')
+ax6.set_xlabel('')
+ax6.set_ylabel('Conteggi normalizzati (normalized counts) $min\\rightarrow 0$, $max\\rightarrow 1$')
+ax6.legend(['Tamponi in Emilia Romagna (swabs)','Totale positivi (confirmed)','Tamponi USCA Circ. Imolese'])
+ax6.figure.savefig('COVID-19-swabs.png',bbox_inches='tight')
