@@ -1,4 +1,7 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-04-11,2,Imola,NA
+2020-04-11,1,Medicina,NA
+2020-04-11,1,Fuori del circondario
 2020-04-10,5,Imola,NA
 2020-04-10,1,Medicina,NA
 2020-04-10,1,Fuori dal territorio,NA

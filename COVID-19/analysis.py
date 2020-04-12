@@ -91,11 +91,11 @@ pc['timestamp'] = pc['timestamp'].dt.floor('D')
 pc.set_index('timestamp',inplace=True)
 swabs = pc.loc[pc['denominazione_regione']=='Emilia-Romagna']['tamponi']
 normalized_swabs = min_max_normalization(swabs)
-print(normalized_swabs)
+
 
 confirmed = df3[['positive']]
 normalized_confirmed = min_max_normalization(confirmed)
-print(normalized_confirmed)
+
 
 usca = pd.read_csv('data-USCA.txt',parse_dates=['timestamp'])
 usca.set_index('timestamp',inplace=True)
