@@ -6,29 +6,21 @@
 
 ![Boxplot for daily positive graph](COVID-19-daily_positive_boxplot.png)
 
-Nel grafico seguente sono presenti tre curve, ogni curva è costruita
-come segue: i valori sono normalizzati riscalandoli linearmente 
-in modo che il minimo corrisponda a 0 ed il massimo ad 1.
+Si assume che il numero di tamponi *N* fatto nella regione Emilia Romagna sia
+uniformemente distribuito su tutta la regione e quindi che il numero di 
+tamponi fatto nel Circondario Imolese si possa stimare moltiplicando
+il numero *N* per la frazione che ha come numeratore la popolazione
+del Circondario Imolese (133374 persone) e come denominatore la popolazione
+dell'intera regione Emilia Romagna (4469568 persone).
 
-*Tamponi in Emilia Romagna (swabs)* è il numero di tamponi
-complessivamente fatti dalla regione Emilia Romagna; questa curva
-dovrebbe essere per definizione monotona non decrescente ma non lo è perché
-per esempio decresce il 30 marzo.
+Il seguente grafico si legge cosi`: il 9 Aprile il numero di tamponi
+che si stima sia stato fatto nel Circondario Imolese era 100 volte
+il numero dei positivi rilevati nello stesso giorno.
 
-*Totale positivi (confirmed)* è il numero complessivo di positivi
-nel Circondario Imolese; questa curva
-dovrebbe essere per definizione monotona non decrescente.
-
-*Tamponi USCA Circ. Imolese* è il numero di tamponi complessivamente
-fatti dal Circondario Imolese; questa curva
-dovrebbe essere per definizione monotona non decrescente.
-
-Il 28 e 29 marzo il numero dei totali positivi non è aumentato e la 
-domanda è: non c'è stato aumento perché il contagio è in regressione
-oppure non c'è stato aumento perché non sono stati fatti tamponi?
-Dal grafico sembra che la risposta sia la seconda.
-
-
+Se le curve sono maggior di 1 allora significa che il numero di tamponi
+e` superiore al numero di positivi, per esempio 5 Marzo la curva della stima
+dei campioni fatti nel Circondario Imolese e` inferiore ad 1 e quindi
+indica un caso anomalo in cui i positivi sono maggiori dei tamponi.
 
 ![COVID-19 cumulative graph and swabs data](COVID-19-swabs.png)
 

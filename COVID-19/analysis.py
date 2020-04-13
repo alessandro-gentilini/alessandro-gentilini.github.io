@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+from matplotlib.ticker import ScalarFormatter
 
 df = pd.read_csv("data.txt", parse_dates=['timestamp'],skiprows=1,na_values=999999999)
 df.set_index('timestamp',inplace=True)
@@ -82,32 +83,54 @@ json_str = json.dumps(json.loads('{"Circondario Imolese": '+df_for_json.to_json(
 with open("data.json", "w") as text_file:
     text_file.write(json_str)
 
-def min_max_normalization(df):
-    return (df-df.min())/(df.max()-df.min())
+
+# Population size is from http://dati.istat.it/Index.aspx?QueryId=18964
+emilia_romagna_end_november_2019 = 4469568
+# According to http://www.nuovocircondarioimolese.it/
+# these are the towns in the Circondario Imolese:
+borgo_tossignano_end_november_2019 = 3264
+casalfiumanese_end_november_2019 = 3460
+castel_del_rio_end_november_2019 = 1213
+castel_guelfo_end_november_2019 = 4563
+cspt_end_november_2019 = 21026
+dozza_end_november_2019 = 6582
+fontanelice_end_november_2019 = 1960
+imola_end_november_2019 = 69864
+medicina_end_november_2019 = 16780
+mordano_end_november_2019 = 4662
+
+circondario = borgo_tossignano_end_november_2019+casalfiumanese_end_november_2019+castel_del_rio_end_november_2019+castel_guelfo_end_november_2019+cspt_end_november_2019+dozza_end_november_2019+fontanelice_end_november_2019+imola_end_november_2019+medicina_end_november_2019+mordano_end_november_2019
+print(circondario)
 
 pc = pd.read_csv("dpc-covid19-ita-regioni.csv", parse_dates=['data'])
 pc.rename(columns={"data": "timestamp"},inplace=True)
 pc['timestamp'] = pc['timestamp'].dt.floor('D')
 pc.set_index('timestamp',inplace=True)
 swabs = pc.loc[pc['denominazione_regione']=='Emilia-Romagna']['tamponi']
-normalized_swabs = min_max_normalization(swabs)
+swabs = swabs*circondario/emilia_romagna_end_november_2019
+swabs = swabs.diff()
+# Assign to negative delta the NaN value. A negative delta should be 
+# considered as an error here because the 'tamponi' should be monotone non decreasing.
+swabs.mask(swabs < 0,inplace=True)
 
-
-confirmed = df3[['positive']]
-normalized_confirmed = min_max_normalization(confirmed)
-
+confirmed = df[['delta_positive_from_yesterday']]
 
 usca = pd.read_csv('data-USCA.txt',parse_dates=['timestamp'])
 usca.set_index('timestamp',inplace=True)
-usca_swab = usca['swab']
-normalized_usca_swabs = min_max_normalization(usca_swab)
+usca_swab = usca['swab'].diff()
 
-
-result = pd.concat([normalized_swabs, normalized_confirmed,normalized_usca_swabs], axis=1)
+result = pd.concat([swabs, confirmed, usca_swab], axis=1)
 print(result)
+result2 = pd.DataFrame()
+result2 = result2.assign(a=result['tamponi']/result['delta_positive_from_yesterday'],b=result['swab']/result['delta_positive_from_yesterday'])
+print(result2)
 fig, ax6 = plt.subplots(1)
-result.plot(drawstyle='steps-mid',ax=ax6,colormap='Accent')
+result2.plot(ax=ax6,logy=True,colormap='PuOr')
 ax6.set_xlabel('')
-ax6.set_ylabel('Conteggi normalizzati (normalized counts) $min\\rightarrow 0$, $max\\rightarrow 1$')
-ax6.legend(['Tamponi in Emilia Romagna (swabs)','Totale positivi (confirmed)','Tamponi USCA Circ. Imolese'])
+ax6.set_ylabel('')
+ax6.yaxis.set_major_formatter(ScalarFormatter())
+ax6.set_yticks([1, 2, 3, 10, 100])
+ax6.yaxis.grid()
+ax6.set_title('Rapporto tra tamponi e positivi giornalieri\n$a$=tamponi giornalieri in Emilia Romagna riscalati sulla popolazione del Circ. Imolese\n$b$=tamponi giornalieri USCA Circ. Imolese\n$p$=positivi giornalieri Circ. Imolese')
+ax6.legend(['$a/p$','$b/p$'])
 ax6.figure.savefig('COVID-19-swabs.png',bbox_inches='tight')
