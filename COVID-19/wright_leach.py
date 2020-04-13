@@ -14,6 +14,7 @@
 # https://link.springer.com/content/pdf/bbm%3A978-1-4612-3140-0%2F1.pdf
 
 from scipy.stats import hypergeom
+import sys
 
 # PROBHYPR Function
 # http://documentation.sas.com/?docsetId=casfedsql&docsetTarget=n0h6p8jhzwlk2jn1gvhzslxsopws.htm&docsetVersion=3.1&locale=en
@@ -29,7 +30,7 @@ def wrigth_leach(NN,N,A,CF):
     X1 = A-1
     for KL in range(1,NN):
         if(KL%1000==0):
-            print(KL)
+            print(KL,file=sys.stderr)
         if X1 < 0:
             DONEL = True
         GOTO_NEXT = False
@@ -70,8 +71,13 @@ def wrigth_leach(NN,N,A,CF):
 
 # Statement: select probhypr(200,50,10,2);
 # Results: 0.5236734081
-print(SAS_PROBHYPR(200,50,10,2))  
+expected_result = "0.5236734081"
+sig_figures = len(expected_result)
+assert str(SAS_PROBHYPR(200,50,10,2))[0:sig_figures] == expected_result
 
-print(wrigth_leach(1200,120,3,.95))    
-print(wrigth_leach(3300,300,49,.99))
-#print(wrigth_leach(8902600,1544,5,.95))
+assert wrigth_leach(46,1,0,.95) == [0,43]
+assert wrigth_leach(185,53,3,.95) == [4,23]
+assert wrigth_leach(2000,200,40,.975) == [299,518]
+
+assert wrigth_leach(1200,120,3,.95) == [9,73]
+assert wrigth_leach(3300,300,49,.99) == [393,714]
