@@ -19,8 +19,8 @@ il numero dei positivi rilevati nello stesso giorno.
 
 Se le curve sono maggior di 1 allora significa che il numero di tamponi
  è superiore al numero di positivi, per esempio 5 Marzo la curva della stima
-dei campioni fatti nel Circondario Imolese  è inferiore ad 1 e quindi
-indica un caso anomalo in cui i positivi sono maggiori dei tamponi.
+dei campioni fatti nel Circondario Imolese è inferiore ad 1 e quindi
+indica un caso in cui i positivi sono maggiori dei tamponi e questo è una evidenza del fatto che la stima suddetta non è del tutto corretta.
 
 ![COVID-19 cumulative graph and swabs data](COVID-19-swabs.png)
 
