@@ -13,13 +13,13 @@ il numero *N* per la frazione che ha come numeratore la popolazione
 del Circondario Imolese (133374 persone) e come denominatore la popolazione
 dell'intera regione Emilia Romagna (4469568 persone).
 
-Il seguente grafico si legge cosi`: il 9 Aprile il numero di tamponi
+Il seguente grafico si legge così: il 9 Aprile il numero di tamponi
 che si stima sia stato fatto nel Circondario Imolese era 100 volte
 il numero dei positivi rilevati nello stesso giorno.
 
 Se le curve sono maggior di 1 allora significa che il numero di tamponi
-e` superiore al numero di positivi, per esempio 5 Marzo la curva della stima
-dei campioni fatti nel Circondario Imolese e` inferiore ad 1 e quindi
+ è superiore al numero di positivi, per esempio 5 Marzo la curva della stima
+dei campioni fatti nel Circondario Imolese  è inferiore ad 1 e quindi
 indica un caso anomalo in cui i positivi sono maggiori dei tamponi.
 
 ![COVID-19 cumulative graph and swabs data](COVID-19-swabs.png)
