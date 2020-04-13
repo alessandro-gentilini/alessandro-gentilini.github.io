@@ -1,4 +1,8 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-04-12,2,Imola,NA
+2020-04-12,2,Medicina,NA
+2020-04-12,1,Castel Guelfo di Bologna,NA
+2020-04-12,1,Fuori del circondario
 2020-04-11,2,Imola,NA
 2020-04-11,1,Medicina,NA
 2020-04-11,1,Fuori del circondario
