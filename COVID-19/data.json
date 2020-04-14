@@ -245,6 +245,12 @@
       "confirmed": 345,
       "deaths": 31,
       "recovered": 45
+    },
+    {
+      "date": "2020-04-14",
+      "confirmed": 345,
+      "deaths": 32,
+      "recovered": 46
     }
   ]
 }
