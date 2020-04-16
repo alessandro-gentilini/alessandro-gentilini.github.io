@@ -250,13 +250,19 @@
       "date": "2020-04-14",
       "confirmed": 345,
       "deaths": 32,
-      "recovered": 46
+      "recovered": 47
     },
     {
       "date": "2020-04-15",
       "confirmed": 345,
       "deaths": 32,
-      "recovered": 71
+      "recovered": 72
+    },
+    {
+      "date": "2020-04-16",
+      "confirmed": 348,
+      "deaths": 33,
+      "recovered": 79
     }
   ]
 }

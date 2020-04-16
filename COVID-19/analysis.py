@@ -107,11 +107,9 @@ pc.rename(columns={"data": "timestamp"},inplace=True)
 pc['timestamp'] = pc['timestamp'].dt.floor('D')
 pc.set_index('timestamp',inplace=True)
 swabs = pc.loc[pc['denominazione_regione']=='Emilia-Romagna']['tamponi']
-swabs = swabs*circondario/emilia_romagna_end_november_2019
+swabs = round(swabs*circondario/emilia_romagna_end_november_2019)
 swabs = swabs.diff()
-# Assign to negative delta the NaN value. A negative delta should be 
-# considered as an error here because the 'tamponi' should be monotone non decreasing.
-swabs.mask(swabs < 0,inplace=True)
+
 
 confirmed = df[['delta_positive_from_yesterday']]
 
@@ -125,7 +123,7 @@ result2 = pd.DataFrame()
 result2 = result2.assign(a=result['tamponi']-result['delta_positive_from_yesterday'],b=result['swab']-result['delta_positive_from_yesterday'])
 print(result2)
 fig, ax6 = plt.subplots(1)
-result2.plot(ax=ax6,logy=True,colormap='PuOr')
+result2.plot(ax=ax6,logy=True,colormap='PuOr',drawstyle='steps-mid')
 ax6.set_xlabel('')
 ax6.set_ylabel('')
 ax6.yaxis.set_major_formatter(ScalarFormatter())
