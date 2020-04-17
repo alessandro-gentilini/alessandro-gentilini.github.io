@@ -1,4 +1,10 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-04-17,1,Borgo Tossignano,NA
+2020-04-17,1,Mordano,NA
+2020-04-17,2,Imola,NA
+2020-04-16,1,Medicina,NA
+2020-04-16,1,Castel Guelfo,NA
+2020-04-16,1,Fuori dal circondario
 2020-04-13,2,Imola,NA
 2020-04-12,2,Imola,NA
 2020-04-12,2,Medicina,NA
