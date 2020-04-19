@@ -108,20 +108,23 @@ pc['timestamp'] = pc['timestamp'].dt.floor('D')
 pc.set_index('timestamp',inplace=True)
 swabs = pc.loc[pc['denominazione_regione']=='Emilia-Romagna']['tamponi']
 swabs = round(swabs*circondario/emilia_romagna_end_november_2019)
+cumulative_swabs_inferredfrom_EmiRo_as_simple_proportion = swabs.copy()
 swabs = swabs.diff()
+
+
 
 
 confirmed = df[['delta_positive_from_yesterday']]
 
-usca = pd.read_csv('data-USCA.txt',parse_dates=['timestamp'])
+usca = pd.read_csv('data-USCA.txt',parse_dates=['timestamp'],na_values=999999999)
 usca.set_index('timestamp',inplace=True)
 usca_swab = usca['swab'].diff()
 
 result = pd.concat([swabs, confirmed, usca_swab], axis=1)
-print(result)
+
 result2 = pd.DataFrame()
 result2 = result2.assign(a=result['tamponi']-result['delta_positive_from_yesterday'],b=result['swab']-result['delta_positive_from_yesterday'])
-print(result2)
+
 fig, ax6 = plt.subplots(1)
 result2.plot(ax=ax6,logy=True,colormap='PuOr',drawstyle='steps-mid')
 ax6.set_xlabel('')
@@ -133,3 +136,11 @@ ax6.yaxis.grid()
 ax6.set_title('Differenza tra tamponi e positivi giornalieri\n$a$=tamponi giornalieri in Emilia Romagna riscalati sulla popolazione del Circ. Imolese\n$b$=tamponi giornalieri USCA Circ. Imolese\n$p$=positivi giornalieri Circ. Imolese')
 ax6.legend(['$a-p$','$b-p$'])
 ax6.figure.savefig('COVID-19-swabs.png',bbox_inches='tight')
+
+swabs_declared_by_AUSL = pd.read_csv('data-swabs_AUSL.txt',parse_dates=['timestamp'],na_values=999999999)
+swabs_declared_by_AUSL.set_index('timestamp',inplace=True)
+
+cumulative_swabs = pd.concat([cumulative_swabs_inferredfrom_EmiRo_as_simple_proportion,swabs_declared_by_AUSL],axis=1)
+fig, ax7 = plt.subplots(1)
+cumulative_swabs.plot(ax=ax7,drawstyle='steps-mid')
+ax7.figure.savefig('COVID-19-cumulative_swabs.png',bbox_inches='tight')

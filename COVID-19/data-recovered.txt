@@ -1,4 +1,6 @@
 timestamp,sex,age,town
+2020-04-19,NA,NA,Castel San Pietro Terme
+2020-04-19,NA,NA,Castel San Pietro Terme
 2020-04-18,NA,NA,Imola
 2020-04-18,NA,NA,Imola
 2020-04-18,NA,NA,Imola
