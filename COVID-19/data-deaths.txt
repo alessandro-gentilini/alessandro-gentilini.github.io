@@ -1,4 +1,6 @@
 timestamp,sex,town,age,notes
+2020-04-21,M,Fuori regione,68,NA,severe previous pathologies
+2020-04-21,M,Imola,73,NA
 2020-04-18,F,Imola,64,previous pathologies
 2020-04-16,F,Medicina,84,Hospitalized since several weeks in ECU
 2020-04-14,M,Medicina,88,Hospitalized in COVID ward of Imola Hospital since some weeks
