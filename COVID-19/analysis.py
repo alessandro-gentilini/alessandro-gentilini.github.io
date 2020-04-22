@@ -121,6 +121,7 @@ usca.set_index('timestamp',inplace=True)
 usca_swab = usca['swab'].diff()
 
 result = pd.concat([swabs, confirmed, usca_swab], axis=1)
+print(result)
 
 result2 = pd.DataFrame()
 result2 = result2.assign(a=result['tamponi']-result['delta_positive_from_yesterday'],b=result['swab']-result['delta_positive_from_yesterday'])

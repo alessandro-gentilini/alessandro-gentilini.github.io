@@ -1,4 +1,27 @@
 timestamp,sex,age,town
+2020-04-22,NA,NA,Mordano
+2020-04-22,NA,NA,Borgo Tossignano
+2020-04-22,NA,NA,Dozza
+2020-04-22,NA,NA,Dozza
+2020-04-22,NA,NA,Castel San Pietro Terme
+2020-04-22,NA,NA,Castel San Pietro Terme
+2020-04-22,NA,NA,Castel San Pietro Terme
+2020-04-22,NA,NA,Castel San Pietro Terme
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
+2020-04-22,NA,NA,Imola
 2020-04-21,NA,NA,Castelguelfo
 2020-04-21,NA,NA,Imola
 2020-04-21,NA,NA,Medicina
