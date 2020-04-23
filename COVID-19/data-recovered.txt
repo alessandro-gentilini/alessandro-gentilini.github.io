@@ -1,4 +1,10 @@
 timestamp,sex,age,town
+2020-04-23,NA,NA,Casalfiumanese
+2020-04-23,NA,NA,Imola
+2020-04-23,NA,NA,Imola
+2020-04-23,NA,NA,Medicina
+2020-04-23,NA,NA,Medicina
+2020-04-23,NA,NA,Medicina
 2020-04-22,NA,NA,Mordano
 2020-04-22,NA,NA,Borgo Tossignano
 2020-04-22,NA,NA,Dozza
