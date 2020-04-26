@@ -5,6 +5,18 @@ from graphviz import Digraph
 
 df = pd.read_excel('2020.04.17.20053157-2.xlsx',sheet_name='anonymised_dataset')
 
+def is_in_header_row(df,v):
+    return v in df.columns
+
+def is_in_id_column(df,v):
+    return (df['id']==v).any()
+
+def print_info(df,v):
+    print(v,' header=',is_in_header_row(df,v),' id=',is_in_id_column(df,v))
+
+print_info(df,'IBMvALIH')
+print_info(df,'0db03881')
+print_info(df,'nbcshCCy')
 
 # Each column represents a positive subjetc. 
 # Numbers in cells identify the type of contact occurred with the corresponding subjects in rows: 
@@ -17,25 +29,38 @@ last_positive_column_id = 103
 selector = df.iloc[:,first_positive_column_id:last_positive_column_id+1].notna()
 valids = df[selector.any(axis='columns')]
 
+print_info(valids,'IBMvALIH')
+print_info(valids,'0db03881')
+print_info(valids,'nbcshCCy')
+
 #print(df['0db03881'].value_counts())
 
 #print(df.iloc[:,first_positive_column_id].value_counts())
-#print(df.iloc[300,:].value_counts())
+#for q in df[df['id']=='IBMvALIH']:
+    #print(q)
+
+#q = df[df['id']=='IBMvALIH'].iloc[0,first_positive_column_id:last_positive_column_id+1]
+#for i in q:
+    #print(i)
 
 nodes = []
-for c in range(first_positive_column_id,last_positive_column_id+1):
-    nodes.append({'id':str(df.columns[c]),'group':'positive'})
-
 links=[]
+id_index = 0
 dot = Digraph(comment='Vo Euganeo',engine='neato')
 for r in range(0,len(valids)):    
     for c in range(first_positive_column_id,last_positive_column_id+1):
         #if df.columns[c] != '0db03881' and df.columns[c] != '297bbbdc':
             if valids.iloc[r,c] == 1:
-                dot.edge(str(df.columns[c]),str(df.iloc[r,0]))
-                links.append({'source':str(df.columns[c]),'target':str(df.iloc[r,0])})
-                if not {'id':str(df.iloc[r,0])} in nodes:
-                    nodes.append({'id':str(df.iloc[r,0]),'group':'subject'})
+                positive = df.columns[c]
+                subject = df.iloc[r,id_index]
+                dot.edge(positive,subject)
+                links.append({'source':positive,'target':subject})
+                node = {'id':positive,'group':'positive'}
+                if not node in nodes:
+                    nodes.append(node)
+                node = {'id':subject,'group':'subject'}
+                if not node in nodes:
+                    nodes.append(node)                    
 dot.attr(overlap='false')                    
 dot.render('./gv/vo.gv')
 
@@ -55,7 +80,7 @@ for c in range(first_positive_column_id,last_positive_column_id+1):
             dot.edge(str(df.columns[c]),str(df.iloc[r,0]))
             contacts = contacts+1
     if save_it:
-        print(df.columns[c],contacts)
+        #print(df.columns[c],contacts)
         dot.attr(overlap='false')
         dot.render('./gv/'+df.columns[c]+'.gv')
 #print(valids)
