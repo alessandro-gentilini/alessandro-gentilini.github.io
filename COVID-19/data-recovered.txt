@@ -1,4 +1,5 @@
 timestamp,sex,age,town
+2020-04-26,NA,NA,Fuori dal territorio
 2020-04-25,NA,NA,Castelguelfo
 2020-04-25,NA,NA,Mordano
 2020-04-25,NA,NA,Mordano
