@@ -55,12 +55,12 @@ for r in range(0,len(valids)):
                 subject = valids.iloc[r,id_index]
                 dot.edge(positive,subject)
                 links.append({'source':positive,'target':subject})
-                node = {'id':positive,'group':'positive'}
-                if not node in nodes:
-                    nodes.append(node)
-                node = {'id':subject,'group':'subject'}
-                if not node in nodes:
-                    nodes.append(node)                    
+                node1 = {'id':positive,'group':'positive'}
+                if not node1 in nodes:
+                    nodes.append(node1)
+                node2 = {'id':subject,'group':'subject'}
+                if not node2 in nodes:
+                    nodes.append(node2)                    
 dot.attr(overlap='false')                    
 dot.render('./gv/vo.gv')
 
