@@ -1,7 +1,6 @@
 # https://www.medrxiv.org/highwire/filestream/77015/field_highwire_adjunct_files/1/2020.04.17.20053157-2.xlsx
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 from graphviz import Digraph
 
 df = pd.read_excel('2020.04.17.20053157-2.xlsx',sheet_name='anonymised_dataset')
@@ -39,7 +38,7 @@ for r in range(0,len(valids)):
                 dot.edge(str(df.columns[c]),str(df.iloc[r,0]))
                 links.append({'source':str(df.columns[c]),'target':str(df.iloc[r,0])})
                 if not {'id':str(df.iloc[r,0])} in nodes:
-                    nodes.append({'id':str(df.iloc[r,0])})
+                    nodes.append({'id':str(df.iloc[r,0]),'group':'subject'})
 dot.render('./gv/vo.gv')
 
 data = {"nodes":nodes,"links":links}
