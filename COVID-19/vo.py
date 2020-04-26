@@ -51,8 +51,8 @@ for r in range(0,len(valids)):
     for c in range(first_positive_column_id,last_positive_column_id+1):
         #if df.columns[c] != '0db03881' and df.columns[c] != '297bbbdc':
             if valids.iloc[r,c] == 1:
-                positive = df.columns[c]
-                subject = df.iloc[r,id_index]
+                positive = valids.columns[c]
+                subject = valids.iloc[r,id_index]
                 dot.edge(positive,subject)
                 links.append({'source':positive,'target':subject})
                 node = {'id':positive,'group':'positive'}
