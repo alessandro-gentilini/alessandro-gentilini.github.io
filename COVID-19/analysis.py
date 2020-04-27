@@ -4,6 +4,24 @@ import numpy as np
 import json
 from matplotlib.ticker import ScalarFormatter
 
+# Population size is from http://dati.istat.it/Index.aspx?QueryId=18964
+emilia_romagna_end_november_2019 = 4469568
+# According to http://www.nuovocircondarioimolese.it/
+# these are the towns in the Circondario Imolese:
+borgo_tossignano_end_november_2019 = 3264
+casalfiumanese_end_november_2019 = 3460
+castel_del_rio_end_november_2019 = 1213
+castel_guelfo_end_november_2019 = 4563
+cspt_end_november_2019 = 21026
+dozza_end_november_2019 = 6582
+fontanelice_end_november_2019 = 1960
+imola_end_november_2019 = 69864
+medicina_end_november_2019 = 16780
+mordano_end_november_2019 = 4662
+
+circondario = borgo_tossignano_end_november_2019+casalfiumanese_end_november_2019+castel_del_rio_end_november_2019+castel_guelfo_end_november_2019+cspt_end_november_2019+dozza_end_november_2019+fontanelice_end_november_2019+imola_end_november_2019+medicina_end_november_2019+mordano_end_november_2019
+print(circondario)
+
 df = pd.read_csv("data.txt", parse_dates=['timestamp'],skiprows=1,na_values=999999999)
 df.set_index('timestamp',inplace=True)
 
@@ -31,7 +49,21 @@ ax2.set_ylabel('persone (person)')
 ax2.legend(['totale positivi (confirmed)','totale deceduti (deaths)','totale guariti (recovered)'])
 ax2.figure.savefig('COVID-19-cumulative.png',bbox_inches='tight')
 
+def compute_percentage(temp):
+    return 100*temp/circondario
+
+def circ_imolese_percentage(ax_f):
+    """
+    Update second axis according with first axis.
+    """
+    y1, y2 = ax_f.get_ylim()
+    ax3_right.set_ylim(compute_percentage(y1), compute_percentage(y2))
+    ax3_right.figure.canvas.draw()
+
 fig, ax3 = plt.subplots(1)
+ax3_right = ax3.twinx()
+# https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/fahrenheit_celsius_scales.html
+ax3.callbacks.connect("ylim_changed", circ_imolese_percentage)
 df3 = df[['positive','dead','total_recovered']]
 df3 = df3.assign(positive_minus_dead_minus_recovered=df['positive']-df['dead']-df['total_recovered'])
 df3.plot(drawstyle='steps-mid',ax=ax3)
@@ -39,7 +71,9 @@ ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
 ax3.legend(['$c=$totale positivi (confirmed)','$d$=totale deceduti (deaths)','$r$=totale guariti (recovered)','$c-d-r$'])
+ax3_right.set_ylabel('% pop. Circondario Imolese (% of Circondario Imolese population)')
 ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
+
 
 
 
@@ -84,23 +118,7 @@ with open("data.json", "w") as text_file:
     text_file.write(json_str)
 
 
-# Population size is from http://dati.istat.it/Index.aspx?QueryId=18964
-emilia_romagna_end_november_2019 = 4469568
-# According to http://www.nuovocircondarioimolese.it/
-# these are the towns in the Circondario Imolese:
-borgo_tossignano_end_november_2019 = 3264
-casalfiumanese_end_november_2019 = 3460
-castel_del_rio_end_november_2019 = 1213
-castel_guelfo_end_november_2019 = 4563
-cspt_end_november_2019 = 21026
-dozza_end_november_2019 = 6582
-fontanelice_end_november_2019 = 1960
-imola_end_november_2019 = 69864
-medicina_end_november_2019 = 16780
-mordano_end_november_2019 = 4662
 
-circondario = borgo_tossignano_end_november_2019+casalfiumanese_end_november_2019+castel_del_rio_end_november_2019+castel_guelfo_end_november_2019+cspt_end_november_2019+dozza_end_november_2019+fontanelice_end_november_2019+imola_end_november_2019+medicina_end_november_2019+mordano_end_november_2019
-print(circondario)
 
 pc = pd.read_csv("dpc-covid19-ita-regioni.csv", parse_dates=['data'])
 pc.rename(columns={"data": "timestamp"},inplace=True)
