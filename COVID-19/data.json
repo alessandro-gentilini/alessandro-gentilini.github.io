@@ -329,6 +329,12 @@
       "confirmed": 364,
       "deaths": 37,
       "recovered": 194
+    },
+    {
+      "date": "2020-04-28",
+      "confirmed": 366,
+      "deaths": 37,
+      "recovered": 196
     }
   ]
 }
