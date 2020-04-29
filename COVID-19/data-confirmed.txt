@@ -1,7 +1,8 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-04-29,1,Medicina,NA
+2020-04-29,8,Imola,NA
 2020-04-27,1,Castel San Pietro Terme,NA
-2020-04-26,1,Imola,NA
-2020-04-26,1,Imola,NA
+2020-04-26,2,Imola,NA
 2020-04-26,1,Dozza,NA
 2020-04-25,1,Imola,A man
 2020-04-22,1,Castel San Pietro Terme,NA

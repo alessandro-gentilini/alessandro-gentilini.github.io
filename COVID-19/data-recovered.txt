@@ -1,4 +1,7 @@
 timestamp,sex,age,town
+2020-04-29,NA,NA,Medicina
+2020-04-29,NA,NA,Medicina
+2020-04-29,NA,NA,Medicina
 2020-04-27,NA,NA,NA
 2020-04-27,NA,NA,NA
 2020-04-27,NA,NA,NA
