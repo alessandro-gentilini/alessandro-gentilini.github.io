@@ -1,4 +1,44 @@
 timestamp,sex,age,town
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Imola
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Medicina
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Castel San Pietro Terme
+2020-04-30,NA,NA,Dozza
+2020-04-30,NA,NA,Dozza
+2020-04-30,NA,NA,Castelguelfo
+2020-04-30,NA,NA,Casalfiumanese
 2020-04-29,NA,NA,Medicina
 2020-04-29,NA,NA,Medicina
 2020-04-29,NA,NA,Medicina
