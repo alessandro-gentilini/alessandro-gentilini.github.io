@@ -1,4 +1,6 @@
-# Exploratory Data Analysis for road traffic in Emilia Romagna during COVID-19 lockdown
+# BETA - Exploratory Data Analysis for road traffic in Emilia Romagna during COVID-19 lockdown
+
+Warning: this is a raw preview, maybe something could be wrong :-)
 
 Data source is *Flussi online* 
 https://servizissiir.regione.emilia-romagna.it/FlussiMTS/
