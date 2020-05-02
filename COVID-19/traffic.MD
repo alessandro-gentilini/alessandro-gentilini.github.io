@@ -11,4 +11,4 @@ https://servizissiir.regione.emilia-romagna.it/FlussiMTS/
 
 ![All MTS station in Emilia Romagna](Emilia_Romagna_all_stations.png)
 
-![All MTS station in Emilia Romagna, persistente diagram](persistence_diagram.png)
+![All MTS station in Emilia Romagna, persistence diagram](persistence-diagram.png)
