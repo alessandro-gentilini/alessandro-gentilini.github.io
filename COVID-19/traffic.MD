@@ -10,3 +10,5 @@ https://servizissiir.regione.emilia-romagna.it/FlussiMTS/
 ![MTS station 255 along Via Emilia, normalized](station_255_Via_Emilia_normalized.png)
 
 ![All MTS station in Emilia Romagna](Emilia_Romagna_all_stations.png)
+
+![All MTS station in Emilia Romagna, persistente diagram](persistence_diagram.png)
