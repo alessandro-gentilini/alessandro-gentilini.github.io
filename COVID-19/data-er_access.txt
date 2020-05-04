@@ -1,4 +1,5 @@
 timestamp,ER_access_from_12am_yesterday_to_12am_today,COVID_related_ER_access_from_12am_yesterday_to_12am_today,other_pathologies,notes
+2020-05-04,,2
 2020-05-03,,1
 2020-05-02,,6
 2020-05-01,,4
