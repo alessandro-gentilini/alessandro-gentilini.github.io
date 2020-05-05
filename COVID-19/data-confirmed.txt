@@ -1,4 +1,5 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-05-05,1,Imola,NA
 2020-05-03,1,Medicina,NA
 2020-05-03,2,Imola,NA
 2020-05-02,1,Medicina,NA
