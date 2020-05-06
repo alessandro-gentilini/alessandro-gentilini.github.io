@@ -63,3 +63,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-05-03,3,0,248
 2020-05-04,0,0,258
 2020-05-05,1,0,264
+2020-05-06,0,0,268
