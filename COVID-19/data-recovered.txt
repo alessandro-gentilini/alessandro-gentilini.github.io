@@ -1,4 +1,8 @@
 timestamp,sex,age,town
+2020-05-08,NA,NA,Medicina
+2020-05-08,NA,NA,Medicina
+2020-05-08,NA,NA,Imola
+2020-05-08,NA,NA,Dozza
 2020-05-07,NA,NA,Imola
 2020-05-07,NA,NA,Imola
 2020-05-06,NA,NA,Medicina
