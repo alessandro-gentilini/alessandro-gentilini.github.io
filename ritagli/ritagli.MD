@@ -1,3 +1,10 @@
+<!--['20200504T2120', 'https://www.npr.org/2020/04/01/824001085/tips-from-someone-with-50-years-of-social-distancing-experience']-->
+[**NPR Choice page**](https://www.npr.org/2020/04/01/824001085/tips-from-someone-with-50-years-of-social-distancing-experience)
+
+            By choosing “I agree” below, you agree that NPR’s sites use cookies, similar tracking and storage technologies, and information about the device you use to access our sites to enhance your viewing, listening and user experience, personalize content, personalize messages from NPR’s sponsors, provide social media features, and analyze NPR’s traffic. This information is shared with social media services, sponsorship, analytics and other third-party service providers.
+            See details.
+        
+
 <!--['20200508T0728', 'https://nhigham.com/2020/05/07/what-is-ieee-standard-arithmetic/']-->
 On 2020-05-07T11:46:00+00:00
 [**What Is IEEE Standard Arithmetic?**](https://nhigham.com/2020/05/07/what-is-ieee-standard-arithmetic/)
