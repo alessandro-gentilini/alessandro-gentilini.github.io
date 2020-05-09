@@ -38,5 +38,7 @@ An account of the two times I thought I have discovered new physics, but it was 
 
 <!--['20200430T1817', 'https://xkcd.com/2300/']-->
 [**Everyone's an Epidemiologist**](https://xkcd.com/2300/)
+
+
 <img alt='Everyone's an Epidemiologist' src='https://imgs.xkcd.com/comics/everyones_an_epidemiologist_2x.png' width='400'>
 
