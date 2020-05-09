@@ -92,3 +92,44 @@ All participants who complete the ch
 
 <img alt='Varusteleka&#x27;s Remote Military March 25.-26.4.2020' src='https://www.varusteleka.fi/pictures/thumbsfb/472595e8e268b060f4.jpg' width='400'>
 
+<!--['20200425T1232', 'https://riviste.unimi.it/index.php/RIPS/article/view/13222']-->
+[**
+		A PUTATIVE JUVENILE SPECIMEN OF   EUSAUROSPHARGIS DALSASSOI   FROM THE  ANISIAN (MIDDLE TRIASSIC) OF PIZ DA PERES (DOLOMITES, NORTHERN ITALY) 
+							| RIVISTA ITALIANA DI PALEONTOLOGIA E STRATIGRAFIA 
+			**](https://riviste.unimi.it/index.php/RIPS/article/view/13222)
+
+The partial skeleton of a small tetrapod, collected from the lower Buchenstein Formation (uppermost Illyrian, Anisian Middle Triassic) of Piz da Peres (Northern Dolomites, Italy) is described. Incomplete ossification of some bones indicate that the specimen is a juvenile. Its absolute size and proportions, along with several skeletal structures show striking similarities with a juvenile specimen of Eusaurosphargis dalsassoi from the slightly younger Prosanto Formation (Switzerland), a taxon known also from the Anisian/Ladinian Besano Formation (Italy and Switzerland). The finding may suggest that during the middle-late Anisian the basins of the Northern Dolomites, of the Besano Formation and Prosanto Formation shared not only several taxa of fishes but also the emerged lands nearby had a similar reptilian fauna.
+
+
+<!--['20200421T0711', 'https://www.science20.com/tommaso_dorigo/gemstone_classification_with_a_specific_gravity_scale-246997']-->
+[**Gemstone Classification With A Specific Gravity Scale**](https://www.science20.com/tommaso_dorigo/gemstone_classification_with_a_specific_gravity_scale-246997)
+
+The isolation that most of the civilized world has been subjected to, during the past few weeks, has produced a number of nasty effects, first and foremost on our economies, but it has also had a few positive ones. One of them is, at least in my case, an urge to use the extra time I have in my hands in a creative way.
+
+
+<!--['20200419T2055', 'http://www.draplin.com/2020/04/grocery_gratitude_honoring_eric_s_grocery_store_manager.html']-->
+[**Draplin Design Co.: GROCERY GRATITUDE: Honoring Eric S., Grocery Store Manager**](http://www.draplin.com/2020/04/grocery_gratitude_honoring_eric_s_grocery_store_manager.html)
+
+
+
+<!--['20200419T2041', 'https://xianblog.wordpress.com/2020/04/19/my-own-personal-hope-for-the-future-is-that-we-wont-have-to-build-any-more-random-number-generators/']-->
+On 2020-04-18T22:20:08+00:00
+[**my own personal hope for the future is that we won’t have to build any more random number generators…**](https://xianblog.wordpress.com/2020/04/19/my-own-personal-hope-for-the-future-is-that-we-wont-have-to-build-any-more-random-number-generators/)
+
+Came perchance upon this reminiscence about the generation of the 10⁶ random digits found in the book published by the RAND Corporation. It took them a month to produce half a million digits, explo…
+
+<img alt='my own personal hope for the future is that we won’t have to build any more random number generators…' src='https://upload.wikimedia.org/wikipedia/commons/d/d8/IBM1130CopyCard.agr.jpg' width='400'>
+
+<!--['20200417T2245', 'https://www.quantamagazine.org/computer-scientist-donald-knuth-cant-stop-telling-stories-20200416/']-->
+[**The Computer Scientist Who Can’t Stop Telling Stories**](https://www.quantamagazine.org/computer-scientist-donald-knuth-cant-stop-telling-stories-20200416/)
+
+
+<img alt='The Computer Scientist Who Can’t Stop Telling Stories' src='https://d2r55xnwy6nx47.cloudfront.net/uploads/2020/04/Donald-Knuth_1200_Social.jpg' width='400'>
+
+<!--['20200417T1344', 'https://www.youtube.com/watch?v=vJSvO64yz6w']-->
+[**Trioreno - 1988 - Segnali Stradali**](https://www.youtube.com/watch?v=vJSvO64yz6w)
+
+ 
+
+<img alt='Trioreno - 1988 - Segnali Stradali' src='https://i.ytimg.com/vi/vJSvO64yz6w/hqdefault.jpg' width='400'>
+
