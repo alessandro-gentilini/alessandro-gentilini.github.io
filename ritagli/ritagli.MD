@@ -3,6 +3,7 @@ On 2020-05-07T11:46:00+00:00
 [**What Is IEEE Standard Arithmetic?**](https://nhigham.com/2020/05/07/what-is-ieee-standard-arithmetic/)
 
 The IEEE Standard 754, published in 1985 and revised in 2008 and 2019, is a standard for binary and decimal floating-point arithmetic. The standard for decimal arithmetic (IEEE Standard 854) was se…
+
 <img alt='What Is IEEE Standard Arithmetic?' src='https://nickhigham.files.wordpress.com/2020/04/flpt_count.jpg' width='400'>
 
 
@@ -16,6 +17,7 @@ How to write complicated sums in LaTeX, how to simplify limits of summation, doi
 [**Willoughby: Life at a self-imposed solitary safe distance in the Rockies**](https://www.aspentimes.com/news/willoughby-life-at-a-self-imposed-solitary-safe-distance-in-the-rockies/)
 
 NPR reporter Rae Ellen Bichell recorded an interview with Billy Barr. He lives between Crested Butte and Ashcroft, at an abandoned mine in Gothic, at around 10,000 feet elevation.
+
 <img alt='Willoughby: Life at a self-imposed solitary safe distance in the Rockies' src='https://cdn.aspentimes.com/wp-content/uploads/sites/5/2020/04/willoughby-atd-041920-1024x682.jpg' width='400'>
 
 
