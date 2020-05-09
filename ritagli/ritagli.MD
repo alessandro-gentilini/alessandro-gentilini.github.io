@@ -63,3 +63,17 @@ Science News, Physics, Science, Philosophy, Philosophy of Science
 Ben Montet (UNSW) put up the bat symbol for a project to find outer Solar System objects using NASA TESS  data. It was the scale of problem ...
 
 
+<!--['20200428T2245', 'https://nhigham.com/2020/04/28/what-is-rounding/']-->
+On 2020-04-28T10:49:00+00:00
+[**What Is Rounding?**](https://nhigham.com/2020/04/28/what-is-rounding/)
+
+Rounding is the transformation of a number expressed in a particular base to a number with fewer digits. For example, in base 10 we might round the number $latex x = 7.146$ to $latex 7.15$, which c…
+
+<img alt='What Is Rounding?' src='https://nickhigham.files.wordpress.com/2020/04/rounding_fig-1.jpg' width='400'>
+
+<!--['20200428T2217', 'https://hoggresearch.blogspot.com/2020/04/wednesday.html']-->
+[**How many neighbors?**](https://hoggresearch.blogspot.com/2020/04/wednesday.html)
+
+By something of a coincidence, both Ana Bonaca (Harvard) and Adam Wheeler (Columbia) are performing data analyses that require finding and p...
+
+
