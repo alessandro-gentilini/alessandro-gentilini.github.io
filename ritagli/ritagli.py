@@ -4,7 +4,7 @@ from webpreview import OpenGraph
 
 lines = []
 with open('ritagli.MD') as ritagli:
-    lines = ritagli.readlines()
+     lines = ritagli.readlines()
 
 md = []
 with open('ritagli.csv') as csvfile:
@@ -27,7 +27,7 @@ with open('ritagli.csv') as csvfile:
         md.append('\n')
 
 with open("ritagli.MD", "w") as ritagli:
-    for r in md:
-        ritagli.write(r)
     for r in lines:
+        ritagli.write(r)    
+    for r in md:
         ritagli.write(r)
