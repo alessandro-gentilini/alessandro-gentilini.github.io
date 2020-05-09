@@ -13,10 +13,11 @@ with open('ritagli.csv') as csvfile:
         if og.published_time:
             md.append('On '+og.published_time)
         title,desc,img = web_preview(row[1])
-        md.append('[**'+title+'**]('+row[1]+')')
+        md.append('[**'+title+'**]('+row[1]+')\n')
         md.append(desc)
         if img:
             md.append("<img alt='"+title+"' src='"+img+"' width='400'>")
+        md.append('\n')
 
 with open("ritagli.MD", "w") as ritagli:
     for r in md:
