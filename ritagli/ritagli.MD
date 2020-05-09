@@ -133,3 +133,36 @@ Came perchance upon this reminiscence about the generation of the 10⁶ random d
 
 <img alt='Trioreno - 1988 - Segnali Stradali' src='https://i.ytimg.com/vi/vJSvO64yz6w/hqdefault.jpg' width='400'>
 
+<!--['20200416T1127', 'https://xianblog.wordpress.com/2020/04/16/computing-bayes-bayesian-computation-from-1763-to-the-21st-century/']-->
+On 2020-04-15T22:20:23+00:00
+[**Computing Bayes: Bayesian Computation from 1763 to the 21st Century**](https://xianblog.wordpress.com/2020/04/16/computing-bayes-bayesian-computation-from-1763-to-the-21st-century/)
+
+Last night, Gael Martin, David Frazier (from Monash U) and myself arXived a survey on the history of Bayesian computations. This project started when Gael presented a historical overview of Bayesia…
+
+<img alt='Computing Bayes: Bayesian Computation from 1763 to the 21st Century' src='https://image.slidesharecdn.com/bayes250-130719003521-phpapp02/95/bayes250-thomas-bayes-memorial-lecture-at-ems-2013-1-638.jpg' width='400'>
+
+<!--['20200414T1717', 'https://m.youtube.com/watch?v=9UfXrJ5KqlY']-->
+[**Howling Wolves | Wolf Pack Howl**](https://m.youtube.com/watch?v=9UfXrJ5KqlY)
+
+I was greeted by several packs of howling wolves opening morning for archery moose hunting. This was an unnerving few minutes to be sure. These wolf howls ar...
+
+<img alt='Howling Wolves | Wolf Pack Howl' src='https://i.ytimg.com/vi/9UfXrJ5KqlY/maxresdefault.jpg' width='400'>
+
+<!--['20200413T2030', 'https://xkcd.com/2293/']-->
+[**RIP John Conway**](https://xkcd.com/2293/)
+
+
+<img alt='RIP John Conway' src='https://imgs.xkcd.com/comics/rip_john_conway_2x.gif' width='400'>
+
+<!--['20200412T0806', 'https://www.66north.com/is/karlar/aukahlutir/aldrei-for-eg-sudur/']-->
+[**Aldrei fór ég suður Húfukolla | 66°Norður**](https://www.66north.com/is/karlar/aukahlutir/aldrei-for-eg-sudur/)
+
+Aldrei fór ég suður húfukolla sem var framleidd sérstaklega fyrir tónlistarhátíðina. Endurskin í stöfum. Efni: 100% Akrýl.
+
+<img alt='Aldrei fór ég suður Húfukolla | 66°Norður' src='https://www.66north.com/media/5677892/dsc00371-edit-no-background.jpg?width=1200&height=630&mode=fit' width='400'>
+
+<!--['20200411T1555', 'http://www.cma4ch.org/chemo/heritage/campionamento/cslide9.html']-->
+[**Pr. G. Visco; Il campionamento statistico (catalogazione del campione, il quaderno, l'oblio)**](http://www.cma4ch.org/chemo/heritage/campionamento/cslide9.html)
+
+
+
