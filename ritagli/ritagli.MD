@@ -77,3 +77,18 @@ Rounding is the transformation of a number expressed in a particular base to a n
 By something of a coincidence, both Ana Bonaca (Harvard) and Adam Wheeler (Columbia) are performing data analyses that require finding and p...
 
 
+<!--['20200425T1723', 'https://www.varusteleka.com/en/event/varustelekas-remote-military-march-25-26-4-2020/64245']-->
+[**Varusteleka's Remote Military March 25.-26.4.2020**](https://www.varusteleka.com/en/event/varustelekas-remote-military-march-25-26-4-2020/64245)
+
+
+
+
+
+
+
+Due to this current plague, all ruck marches, and field exercises have been canceled, at least here in Finland. So we decided to launch our very own Varustelekas Remote Military March (VRMM). See the event on Facebook. Plain and simple, each individual warrior executes their march according to our guidelines and shares the fun on social media. This way we can keep our rucking condition in top shape and bring some good vibes to these grim times.
+
+All participants who complete the ch
+
+<img alt='Varusteleka&#x27;s Remote Military March 25.-26.4.2020' src='https://www.varusteleka.fi/pictures/thumbsfb/472595e8e268b060f4.jpg' width='400'>
+
