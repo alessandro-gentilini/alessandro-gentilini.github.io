@@ -4,8 +4,8 @@ from webpreview import web_preview
 from webpreview import OpenGraph
 
 lines = []
-# with open('ritagli.MD') as ritagli:
-#     lines = ritagli.readlines()
+with open('ritagli.MD') as ritagli:
+     lines = ritagli.readlines()
 
 md = []
 with open('ritagli.csv') as csvfile:

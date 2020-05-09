@@ -42,3 +42,24 @@ An account of the two times I thought I have discovered new physics, but it was 
 
 <img alt='Everyone&#x27;s an Epidemiologist' src='https://imgs.xkcd.com/comics/everyones_an_epidemiologist_2x.png' width='400'>
 
+<!--['20200430T0735', 'https://xianblog.wordpress.com/2020/04/30/nature-on-simulations-driving-the-worlds-response-to-covid-19/']-->
+On 2020-04-29T22:20:12+00:00
+[**[Nature on] simulations driving the world’s response to COVID-19**](https://xianblog.wordpress.com/2020/04/30/nature-on-simulations-driving-the-worlds-response-to-covid-19/)
+
+Nature of 02 April 2020 has a special section on simulation methods used to assess and predict the pandemic evolution. Calling for caution as the models used therein, like the standard ODE S(E)IR m…
+
+<img alt='[Nature on] simulations driving the world’s response to COVID-19' src='https://media.nature.com/lw800/magazine-assets/d41586-020-01003-6/d41586-020-01003-6_17859622.jpg' width='400'>
+
+<!--['20200429T2128', 'https://backreaction.blogspot.com/2020/04/the-raven-paradox.html']-->
+[**The Raven Paradox**](https://backreaction.blogspot.com/2020/04/the-raven-paradox.html)
+
+Science News, Physics, Science, Philosophy, Philosophy of Science
+
+<img alt='The Raven Paradox' src='https://lh5.googleusercontent.com/proxy/H4rYGrDHCvjS5Sqi_c9_ZLLZu1-kg8KMFaocwmwEOekbDJrazO3FxZJKzhT4RohSZc4SZWii6VobImXHJCOwI-LSCT4=w1200-h630-n-k-no-nu' width='400'>
+
+<!--['20200429T1636', 'https://hoggresearch.blogspot.com/2020/04/finding-outer-solar-system-objects-in.html']-->
+[**finding outer Solar System objects in TESS**](https://hoggresearch.blogspot.com/2020/04/finding-outer-solar-system-objects-in.html)
+
+Ben Montet (UNSW) put up the bat symbol for a project to find outer Solar System objects using NASA TESS  data. It was the scale of problem ...
+
+
