@@ -36,3 +36,9 @@ An account of the two times I thought I have discovered new physics, but it was 
 
 <img alt='The two times I thought I discovered new physics but it was an error' src='https://disipio.files.wordpress.com/2020/05/mixed_event_166658_34533931_comments.png' width='400'>
 
+<!--['20200430T1817', 'https://xkcd.com/2300/']-->
+[**Everyone's an Epidemiologist**](https://xkcd.com/2300/)
+
+
+<img alt='Everyone's an Epidemiologist' src='https://imgs.xkcd.com/comics/everyones_an_epidemiologist_2x.png' width='400'>
+
