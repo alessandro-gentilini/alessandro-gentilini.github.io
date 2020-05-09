@@ -15,6 +15,7 @@ with open('ritagli.csv') as csvfile:
         id = "<!--"+str(row)+"-->\n"
         if id in lines:
             continue
+        print('Processing... '+id)
         md.append(id)
         og = OpenGraph(row[1],['article:author','article:published_time'])
         if og.published_time:
