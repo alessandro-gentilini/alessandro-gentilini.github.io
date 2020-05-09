@@ -16,7 +16,7 @@ with open('ritagli.csv') as csvfile:
         md.append('**'+title+'**')
         md.append(desc)
         if img:
-            md.append("<img alt='"+title+"' src='"+img+"'</img>")
+            md.append("<img alt='"+title+"' src='"+img+"' width='400'</img>")
 
 with open("ritagli.MD", "w") as ritagli:
     for r in md:
