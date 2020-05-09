@@ -40,5 +40,5 @@ An account of the two times I thought I have discovered new physics, but it was 
 [**Everyone's an Epidemiologist**](https://xkcd.com/2300/)
 
 
-<img alt='Everyone's an Epidemiologist' src='https://imgs.xkcd.com/comics/everyones_an_epidemiologist_2x.png' width='400'>
+<img alt="Everyone's an Epidemiologist" src='https://imgs.xkcd.com/comics/everyones_an_epidemiologist_2x.png' width='400'>
 
