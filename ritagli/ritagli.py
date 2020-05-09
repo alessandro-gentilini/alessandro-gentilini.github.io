@@ -3,8 +3,8 @@ from webpreview import web_preview
 from webpreview import OpenGraph
 
 lines = []
-with open('ritagli.MD') as ritagli:
-     lines = ritagli.readlines()
+# with open('ritagli.MD') as ritagli:
+#      lines = ritagli.readlines()
 
 md = []
 with open('ritagli.csv') as csvfile:
@@ -24,7 +24,7 @@ with open('ritagli.csv') as csvfile:
         md.append(desc+'\n')
         if img:
             md.append("\n<img alt='"+title+"' src='"+img+"' width='400'>")
-        md.append('\n')
+        md.append('\n\n')
 
 with open("ritagli.MD", "w") as ritagli:
     for r in lines:
