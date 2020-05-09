@@ -2,7 +2,7 @@
 On 2020-05-07T11:46:00+00:00
 **What Is IEEE Standard Arithmetic?**
 The IEEE Standard 754, published in 1985 and revised in 2008 and 2019, is a standard for binary and decimal floating-point arithmetic. The standard for decimal arithmetic (IEEE Standard 854) was se…
-<img alt="What Is IEEE Standard Arithmetic?" src="https://nickhigham.files.wordpress.com/2020/04/flpt_count.jpg" width="400"</img>
+<img alt="What Is IEEE Standard Arithmetic?" src="https://nickhigham.files.wordpress.com/2020/04/flpt_count.jpg" width="400">
 <!--['20200507T2259', 'https://www.johndcook.com/blog/2020/05/06/manipulating-sums/']-->
 **Manipulating sums: simplifying limits, change of variables**
 How to write complicated sums in LaTeX, how to simplify limits of summation, doing changes of variables, and a surprise appearance by Chebyshev.
