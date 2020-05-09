@@ -166,3 +166,50 @@ Aldrei fór ég suður húfukolla sem var framleidd sérstaklega fyrir tónlista
 
 
 
+<!--['20200411T1140', 'https://www.youtube.com/watch?v=_-QENSv7gIs']-->
+[**"Oh, gravity, thou art a heartless bitch." The Big Bang Theory quote S01E02 Sheldon**](https://www.youtube.com/watch?v=_-QENSv7gIs)
+
+Sheldon: Oh, gravity, thou art a heartless bitch. The Big Bang Theory The Big Bran Hypothesis Season 1 Episode 2 1 Oct. 2007
+
+<img alt='&quot;Oh, gravity, thou art a heartless bitch.&quot; The Big Bang Theory quote S01E02 Sheldon' src='https://i.ytimg.com/vi/_-QENSv7gIs/maxresdefault.jpg' width='400'>
+
+<!--['20200411T0838', 'https://xianblog.wordpress.com/2020/04/08/coronavirus-counts-do-not-count/']-->
+On 2020-04-08T12:18:07+00:00
+[**coronavirus counts do not count**](https://xianblog.wordpress.com/2020/04/08/coronavirus-counts-do-not-count/)
+
+Somewhat by chance I came across Nate Silver’s tribune on FiveThirtyEight about the meaninglessness of COVID-19 case counts. As it reflects on sampling efforts and available resources rather …
+
+<img alt='coronavirus counts do not count' src='https://xianblog.files.wordpress.com/2009/08/pict6998.jpg?w=450' width='400'>
+
+<!--['20200411T0837', 'https://xianblog.wordpress.com/2020/04/11/monsieur-le-president-reposted/']-->
+On 2020-04-10T22:20:53+00:00
+[**Monsieur le Président [reposted]**](https://xianblog.wordpress.com/2020/04/11/monsieur-le-president-reposted/)
+
+Let us carry out screening campaigns on representative samples of population! Mr President of the Republic, as you rightly indicated, we are at war and everything must be done to combat the spread …
+
+<img alt='Monsieur le Président [reposted]' src='https://secure.gravatar.com/blavatar/c1152fd99c26a547613cfba76091fd4f?s=200&ts=1589049591' width='400'>
+
+<!--['20200411T0811', 'https://xianblog.wordpress.com/2020/04/09/dorfmans-group-testing/']-->
+On 2020-04-09T12:18:04+00:00
+[**Dorfman’s group testing**](https://xianblog.wordpress.com/2020/04/09/dorfmans-group-testing/)
+
+A recent note by CREST researchers insists on using group testing to compensate for the shortage of test packages and testing personal, as done in several countries, towards deconfining individuals…
+
+<img alt='Dorfman’s group testing' src='https://xianblog.files.wordpress.com/2020/04/img_20200408_101321.jpg' width='400'>
+
+<!--['20200410T1556', 'https://xianblog.wordpress.com/2020/04/10/mea-culpa-2/']-->
+On 2020-04-09T22:20:36+00:00
+[**Mea Culpa**](https://xianblog.wordpress.com/2020/04/10/mea-culpa-2/)
+
+[A quote from Jaynes about improper priors that I had missed in his book, Probability Theory.] For many years, the present writer was caught in this error just as badly as anybody else, because Bay…
+
+<img alt='Mea Culpa' src='https://bayes.wustl.edu/etj/calg3.jpg' width='400'>
+
+<!--['20200407T2235', 'https://xianblog.wordpress.com/2020/04/07/totale-rispetto/']-->
+On 2020-04-07T18:00:28+00:00
+[**totale rispetto**](https://xianblog.wordpress.com/2020/04/07/totale-rispetto/)
+
+Visit the post for more.
+
+<img alt='totale rispetto' src='https://i.guim.co.uk/img/media/6c94c1256256ce2e0b846c301f553979e9be2bb0/0_0_12466_12466/master/12466.jpg' width='400'>
+
