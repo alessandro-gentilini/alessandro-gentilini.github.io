@@ -232,3 +232,31 @@ Visit the post for more.
 
 <img alt='uncertainty quantification unable to quantify coronavirus risks' src='https://xianblog.files.wordpress.com/2020/03/temp-3.png' width='400'>
 
+<!--['20200403T0737', 'https://backreaction.blogspot.com/2020/03/unpredictability-undecidability-and.html']-->
+[**Unpredictability, Undecidability, and Uncomputability**](https://backreaction.blogspot.com/2020/03/unpredictability-undecidability-and.html)
+
+Science News, Physics, Science, Philosophy, Philosophy of Science
+
+<img alt='Unpredictability, Undecidability, and Uncomputability' src='https://lh5.googleusercontent.com/proxy/WT06D5gUYKvWl5GwsdNPVk6AaJdnC93jJCSmmaVR8x9dgiLLWPZDZ2eVpndyYHWLU0s53u8B9EPdgaVKO-55eYw4ur4=w1200-h630-n-k-no-nu' width='400'>
+
+<!--['20200402T1727', 'https://arxiv.org/abs/1008.4686']-->
+[**Data analysis recipes: Fitting a model to data**](https://arxiv.org/abs/1008.4686)
+
+We go through the many considerations involved in fitting a model to data,
+using as an example the fit of a straight line to a set of points in a
+two-dimensional plane. Standard weighted least-squares fitting is only
+appropriate when there is a dimension along which the data points have
+negligible uncertainties, and another along which all the uncertainties can be
+described by Gaussians of known variance; these conditions are rarely met in
+practice. We consider cases of general, heterogeneous, and arbitrarily
+covariant two-dimensional uncertainties, and situations in which there are bad
+data (large outliers), unknown uncertainties, and unknown but expected
+intrinsic scatter in the linear relationship being fit. Above all we emphasize
+the importance of having a "generative model" for the data, even an approximate
+one. Once there is a generative model, the subsequent fitting is non-arbitrary
+because the model permits direct computation of the likelihood of the
+parameters or the posterior probability distribution. Construction of a
+posterior probability distribution is indispensible if there are "nuisance
+parameters" to marginalize away.
+
+
