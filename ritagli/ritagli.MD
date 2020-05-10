@@ -213,3 +213,22 @@ Visit the post for more.
 
 <img alt='totale rispetto' src='https://i.guim.co.uk/img/media/6c94c1256256ce2e0b846c301f553979e9be2bb0/0_0_12466_12466/master/12466.jpg' width='400'>
 
+<!--['20200407T1047', 'https://xkcd.com/2290/']-->
+[**Homemade Masks**](https://xkcd.com/2290/)
+
+
+<img alt='Homemade Masks' src='https://imgs.xkcd.com/comics/homemade_masks_2x.png' width='400'>
+
+<!--['20200406T1321', 'http://www.draplin.com/2020/04/now_shipping_ddc180_ass_pocket_handkerchief.html']-->
+[**Draplin Design Co.: NOW SHIPPING: DDC-180 "Ass Pocket Handkerchief"**](http://www.draplin.com/2020/04/now_shipping_ddc180_ass_pocket_handkerchief.html)
+
+
+
+<!--['20200404T0820', 'https://xianblog.wordpress.com/2020/03/08/uncertainty-quantification-unable-to-quantify-coronavirus-risks/']-->
+On 2020-03-08T13:18:37+00:00
+[**uncertainty quantification unable to quantify coronavirus risks**](https://xianblog.wordpress.com/2020/03/08/uncertainty-quantification-unable-to-quantify-coronavirus-risks/)
+
+Visit the post for more.
+
+<img alt='uncertainty quantification unable to quantify coronavirus risks' src='https://xianblog.files.wordpress.com/2020/03/temp-3.png' width='400'>
+
