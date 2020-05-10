@@ -401,6 +401,12 @@
       "confirmed": 388,
       "deaths": 38,
       "recovered": 279
+    },
+    {
+      "date": "2020-05-10",
+      "confirmed": 389,
+      "deaths": 38,
+      "recovered": 279
     }
   ]
 }
