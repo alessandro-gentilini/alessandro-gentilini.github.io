@@ -22,3 +22,4 @@ timestamp,cumulative_swabs_declared_by_AUSL
 2020-05-07,4960
 2020-05-08,5110
 2020-05-10,5277
+2020-05-11,5306
