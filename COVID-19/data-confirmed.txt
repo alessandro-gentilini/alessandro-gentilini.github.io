@@ -1,4 +1,5 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-05-11,1,Imola,NA
 2020-05-10,1,Imola,Si tratta di persona completamente asintomatica,  la cui positività è emersa dallo screening in corso sugli operatori dei servizi essenziali.  
 2020-05-07,1,Medicina,Un operatore dei servizi essenziali in isolamento domicialiare
 2020-05-05,1,Imola,NA
