@@ -1,4 +1,6 @@
 timestamp,sex,age,town
+2020-05-16,NA,NA,Medicina
+2020-05-16,NA,NA,Imola
 2020-05-15,NA,NA,Imola
 2020-05-14,NA,NA,Imola
 2020-05-14,NA,NA,Imola
