@@ -443,6 +443,12 @@
       "confirmed": 390,
       "deaths": 39,
       "recovered": 301
+    },
+    {
+      "date": "2020-05-17",
+      "confirmed": 391,
+      "deaths": 39,
+      "recovered": 302
     }
   ]
 }
