@@ -1,4 +1,12 @@
 timestamp,sex,age,town
+2020-05-18,NA,NA,Imola
+2020-05-18,NA,NA,Imola
+2020-05-18,NA,NA,Imola
+2020-05-18,NA,NA,Imola
+2020-05-18,NA,NA,Borgo Tossignano
+2020-05-18,NA,NA,Mordano
+2020-05-18,NA,NA,Castel San Pietro Terme
+2020-05-17,NA,NA,Imola
 2020-05-16,NA,NA,Medicina
 2020-05-16,NA,NA,Imola
 2020-05-15,NA,NA,Imola
