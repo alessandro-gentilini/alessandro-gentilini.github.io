@@ -1,4 +1,14 @@
 timestamp,sex,age,town
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Fuori territorio
+2020-05-21,NA,NA,Mordano
 2020-05-20,NA,NA,Imola
 2020-05-20,NA,NA,Imola
 2020-05-20,NA,NA,Imola
