@@ -1,4 +1,9 @@
 timestamp,sex,age,town
+2020-05-26,NA,NA,Medicina
+2020-05-26,NA,NA,Medicina
+2020-05-26,NA,NA,Imola
+2020-05-26,NA,NA,Castel San Pietro Terme
+2020-05-26,NA,NA,Castelguelfo
 2020-05-25,NA,NA,Medicina
 2020-05-22,NA,NA,Medicina
 2020-05-22,NA,NA,Medicina
