@@ -1,4 +1,5 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-05-28,1,Imola,Una persona asintomaticaa cui il Dipartimento di Sanità Pubblica ha eseguito il tampone a seguito di unreferto di positività al test sierologico eseguito privatamente e che è stataposta in isolamento domiciliare
 2020-05-26,1,Medicina,Persona completamente asintomatica individuata grazie al tracciamento dei contatti stretti di un caso positivo già certificato.
 2020-05-21,1,Medicina,Donna residente a Medicina in isolamento domiciliare con sintomi lievissimi di malattia, a cui è stato eseguito il tampone nell’ambito dell'azione di tracing del focolaio di Budrio.
 2020-05-17,1,Imola,Non residente nel circondario Imolese
