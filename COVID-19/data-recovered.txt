@@ -1,4 +1,5 @@
 timestamp,sex,age,town
+2020-05-29,NA,NA,Imola
 2020-05-28,NA,NA,Imola
 2020-05-28,NA,NA,Castelguelfo
 2020-05-26,NA,NA,Medicina
