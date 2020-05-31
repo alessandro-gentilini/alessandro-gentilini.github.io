@@ -1,4 +1,9 @@
 timestamp,sex,age,town
+2020-05-30,NA,NA,Imola
+2020-05-30,NA,NA,Imola
+2020-05-30,NA,NA,Imola
+2020-05-30,NA,NA,Imola
+2020-05-30,NA,NA,Fuori del territorio
 2020-05-29,NA,NA,Imola
 2020-05-28,NA,NA,Imola
 2020-05-28,NA,NA,Castelguelfo
