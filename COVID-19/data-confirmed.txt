@@ -1,4 +1,5 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-06-05,1,Medicina,NA
 2020-06-04,1,Medicina,NA
 2020-06-04,1,Dozza,NA
 2020-06-04,1,Fuori del circondario,NA
