@@ -71,7 +71,8 @@ df3.plot(drawstyle='steps-mid',ax=ax3)
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
-ax3.legend(['$c=$totale positivi (confirmed)','$d$=totale deceduti (deaths)','$r$=totale guariti (recovered)','$c-d-r$'])
+
+ax3.legend(['$c=$totale positivi (confirmed){:+.0f}'.format(df3.diff().iloc[-1,0]),'$d$=totale deceduti (deaths){:+.0f}'.format(df3.diff().iloc[-1,1]),'$r$=totale guariti (recovered){:+.0f}'.format(df3.diff().iloc[-1,2]),'$c-d-r$'],loc='upper left')
 ax3_right.set_ylabel('% pop. Circondario Imolese (% of Circondario Imolese population)')
 ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
 
