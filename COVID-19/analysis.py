@@ -184,3 +184,13 @@ cumulative_swabs = pd.concat([cumulative_swabs_inferredfrom_EmiRo_as_simple_prop
 fig, ax7 = plt.subplots(1)
 cumulative_swabs.plot(ax=ax7,drawstyle='steps-mid')
 ax7.figure.savefig('COVID-19-cumulative_swabs.png',bbox_inches='tight')
+
+# vedi mail da INFN
+# tentative_R = df[['positive','dead','total_recovered']]
+# tentative_R = tentative_R.assign(R=df['positive']/(df['dead']+df['total_recovered']))
+# del tentative_R['positive']
+# del tentative_R['dead']
+# del tentative_R['total_recovered']
+# fig, ax8 = plt.subplots(1)
+# tentative_R.plot(ax=ax8)
+# ax8.figure.savefig('COVID-19-R.png',bbox_inches='tight')
