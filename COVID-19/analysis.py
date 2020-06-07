@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 from matplotlib.ticker import ScalarFormatter
+from datetime import date
 
 # Population size is from http://dati.istat.it/Index.aspx?QueryId=18964
 emilia_romagna_end_november_2019 = 4469568
@@ -72,9 +73,20 @@ ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
 
-ax3.legend(['$c=$totale positivi (confirmed){:+.0f}'.format(df3.diff().iloc[-1,0]),'$d$=totale deceduti (deaths){:+.0f}'.format(df3.diff().iloc[-1,1]),'$r$=totale guariti (recovered){:+.0f}'.format(df3.diff().iloc[-1,2]),'$c-d-r$'],loc='upper left')
+def format_legend(s,v):
+    if v!=0:
+        return (s+' $\\Delta={:+.0f}$').format(v)
+    return s
+
+#ax3.legend(['$c=$totale positivi (confirmed){:+.0f}'.format(df3.diff().iloc[-1,0]),'$d$=totale deceduti (deaths){:+.0f}'.format(df3.diff().iloc[-1,1]),'$r$=totale guariti (recovered){:+.0f}'.format(df3.diff().iloc[-1,2]),'$c-d-r$'],loc='upper left')
+L0 = format_legend('$c=$totale positivi (confirmed)',df3.diff().iloc[-1,0])
+L1 = format_legend('$d$=totale deceduti (deaths)',df3.diff().iloc[-1,1])
+L2 = format_legend('$r$=totale guariti (recovered)',df3.diff().iloc[-1,2])
+ax3.legend([L0,L1,L2,'$c-d-r$'],loc='upper left')
+ax3.set_title('COVID-19 Circondario Imolese, '+date.today().isoformat())
 ax3_right.set_ylabel('% pop. Circondario Imolese (% of Circondario Imolese population)')
 ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
+
 
 
 
