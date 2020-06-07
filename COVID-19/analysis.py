@@ -21,7 +21,7 @@ medicina_end_november_2019 = 16780
 mordano_end_november_2019 = 4662
 
 circondario = borgo_tossignano_end_november_2019+casalfiumanese_end_november_2019+castel_del_rio_end_november_2019+castel_guelfo_end_november_2019+cspt_end_november_2019+dozza_end_november_2019+fontanelice_end_november_2019+imola_end_november_2019+medicina_end_november_2019+mordano_end_november_2019
-print(circondario)
+
 
 df = pd.read_csv("data.txt", parse_dates=['timestamp'],skiprows=1,na_values=999999999)
 df.set_index('timestamp',inplace=True)
@@ -76,14 +76,14 @@ ax3.set_ylabel('persone (person)')
 def format_legend(s,v):
     if v!=0:
         return (s+' $\\Delta={:+.0f}$').format(v)
-    return s
+    return s+' $\\Delta=0$'
 
 #ax3.legend(['$c=$totale positivi (confirmed){:+.0f}'.format(df3.diff().iloc[-1,0]),'$d$=totale deceduti (deaths){:+.0f}'.format(df3.diff().iloc[-1,1]),'$r$=totale guariti (recovered){:+.0f}'.format(df3.diff().iloc[-1,2]),'$c-d-r$'],loc='upper left')
 L0 = format_legend('$c=$totale positivi (confirmed)',df3.diff().iloc[-1,0])
 L1 = format_legend('$d$=totale deceduti (deaths)',df3.diff().iloc[-1,1])
 L2 = format_legend('$r$=totale guariti (recovered)',df3.diff().iloc[-1,2])
 ax3.legend([L0,L1,L2,'$c-d-r$'],loc='upper left')
-ax3.set_title('COVID-19 Circondario Imolese, '+date.today().isoformat())
+ax3.set_title('COVID-19 Circondario Imolese, '+date.today().isoformat()+', $N={0}$'.format(circondario)+'\nfonte dati (data source): www.ausl.imola.bo.it')
 ax3_right.set_ylabel('% pop. Circondario Imolese (% of Circondario Imolese population)')
 ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
 
