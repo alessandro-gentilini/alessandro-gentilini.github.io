@@ -1,4 +1,6 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-06-14,1,Castel San Pietro Terme
+2020-06-14,1,Imola
 2020-06-13,1,Imola,una persona asintintomatica a cui il tampone è stato eseguito nell'ambito dello screening dei pazienti che devono eseguire trattamenti ospedalieri per altre patologie
 2020-06-09,1,Imola,Si tratta di una persona di Imola completamente asintomatica, che ha eseguito privatamente il test sierologico ed essendo risultato positivo alle IgG ha poi eseguito un tampone effettuato dal Dipartimento di Sanità Pubblica
 2020-06-05,1,Medicina,NA
