@@ -72,6 +72,7 @@ df3.plot(drawstyle='steps-mid',ax=ax3)
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
+df3.to_csv('df3.txt')
 
 def format_legend(s,v):
     if v!=0:
