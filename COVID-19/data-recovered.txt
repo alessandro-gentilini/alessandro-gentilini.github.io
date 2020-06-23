@@ -1,4 +1,5 @@
 timestamp,sex,age,town
+2020-06-23,NA,NA,NA
 2020-06-18,NA,NA,Castel San Pietro Terme
 2020-06-16,NA,NA,Imola
 2020-06-15,NA,NA,Medicina

@@ -1,4 +1,5 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-06-23,1,Medicina,un nuovo caso a Medicina in persona con sierologico positivo eseguito privatamente e al seguito del quale il Dipartimento di Sanità Pubblica ha eseguito il tampone. La persona è del tutto asintomatica ed è stata posta in isolamento domiciliare.
 2020-06-14,1,Castel San Pietro Terme
 2020-06-14,1,Imola
 2020-06-13,1,Imola,una persona asintintomatica a cui il tampone è stato eseguito nell'ambito dello screening dei pazienti che devono eseguire trattamenti ospedalieri per altre patologie
