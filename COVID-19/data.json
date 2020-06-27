@@ -689,6 +689,12 @@
       "confirmed": 403,
       "deaths": 39,
       "recovered": 356
+    },
+    {
+      "date": "2020-06-27",
+      "confirmed": 404,
+      "deaths": 39,
+      "recovered": 358
     }
   ]
 }
