@@ -713,6 +713,18 @@
       "confirmed": 404,
       "deaths": 39,
       "recovered": 360
+    },
+    {
+      "date": "2020-07-01",
+      "confirmed": 404,
+      "deaths": 39,
+      "recovered": 360
+    },
+    {
+      "date": "2020-07-02",
+      "confirmed": 404,
+      "deaths": 39,
+      "recovered": 360
     }
   ]
 }
