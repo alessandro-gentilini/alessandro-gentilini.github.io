@@ -1,4 +1,5 @@
 timestamp,sex,age,town
+2020-07-03,NA,NA,Dozza,un guarito a Dozza che non ha più casi attivi
 2020-06-30,NA,NA,Imola
 2020-06-29,NA,NA,Medicina,a grande notizia di questa giornata è che Medicina è, in questo momento, libera dal virus.
 2020-06-27,NA,NA,Medicina
