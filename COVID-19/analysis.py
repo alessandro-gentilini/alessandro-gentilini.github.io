@@ -80,7 +80,7 @@ def format_legend(s,v):
     return s+' $\\Delta=0$'
 
 #ax3.legend(['$c=$totale positivi (confirmed){:+.0f}'.format(df3.diff().iloc[-1,0]),'$d$=totale deceduti (deaths){:+.0f}'.format(df3.diff().iloc[-1,1]),'$r$=totale guariti (recovered){:+.0f}'.format(df3.diff().iloc[-1,2]),'$c-d-r$'],loc='upper left')
-L0 = format_legend('$c=$totale positivi (confirmed)',df3.diff().iloc[-1,0])
+L0 = format_legend('$c$=totale positivi (confirmed)',df3.diff().iloc[-1,0])
 L1 = format_legend('$d$=totale deceduti (deaths)',df3.diff().iloc[-1,1])
 L2 = format_legend('$r$=totale guariti (recovered)',df3.diff().iloc[-1,2])
 ax3.legend([L0,L1,L2,'$c-d-r={:.0f}$'.format(df3.iloc[-1,0]-df3.iloc[-1,1]-df3.iloc[-1,2])],loc='upper left')
