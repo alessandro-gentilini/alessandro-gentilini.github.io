@@ -138,3 +138,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-07-17,0,0,361
 2020-07-18,0,0,361
 2020-07-19,1,0,361
+2020-07-20,0,0,361
