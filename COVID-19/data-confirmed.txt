@@ -1,4 +1,6 @@
 timestamp,delta_positive_from_yesterday,town,notes
+2020-07-22,1,Imola,1 persona straniera che vive all'estero, ma è solita trascorrere qui le proprie vacanze estive.
+2020-07-22,9,Imola,Si tratta di 9 persone residenti sul nostro territorio.
 2020-07-19,1,Imola,È una donna residente ad Imola, diagnosticata nel corso di uno screening su lavoratori dei servizi essenziali in ambito extra territoriale.
 2020-07-15,1,Imola,Dopo ben 17 giorni senza alcun referto di positività al Covid, oggiè pervenuto al Dipartimento di Sanità Pubblica dell'Ausl di Imola il referto positivo di una persona residente ad Imola, screenata perché contatto stretto di un positivo rilevato dall'Ausl di Bologna nell'ambito di uno dei focolai tenuti sotto stretto controllo. La persona ha eseguito ieri mattinail tampone di controllo e nel pomeriggio ha mostrato alcuni lievi sintomi della malattia. Poiché il domicilio non permetteva un efficace distanziamento dai conviventi, l'Ausl ha provveduto a garantirne l'isolamento protetto.
 2020-06-27,1,Imola,un nuovo caso positivo, ma ancora una volta del tutto asintomatico e sottoposto a tampone in quanto contatto stretto di una persona risultata positiva nell'ambito del focolaio della BRT di Bologna.
