@@ -143,4 +143,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-07-22,10,0,361
 2020-07-23,0,0,361
 2020-07-24,2,0,361
-2020-07-25,
+2020-07-25,3,0,361
