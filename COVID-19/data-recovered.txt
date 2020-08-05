@@ -1,4 +1,8 @@
 timestamp,sex,age,town
+2020-08-05,NA,NA,Imola
+2020-08-05,NA,NA,Imola
+2020-08-05,NA,NA,Imola
+2020-08-05,NA,NA,Mordano
 2020-08-04,NA,NA,Imola,1 persona residente ad Imola è risultata guarita con doppio tampone negativo.
 2020-07-31,NA,NA,Imola,una persona di Imola risulta invece guarita.
 2020-07-03,NA,NA,Dozza,un guarito a Dozza che non ha più casi attivi
