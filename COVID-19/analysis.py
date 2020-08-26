@@ -111,7 +111,7 @@ ax5.set_ylabel('persone/giorno (person/day)')
 ax5.set_title('Boxplot per i nuovi positivi ogni giorno\n(boxplots for new positive every day)')
 ax5.figure.savefig('COVID-19-daily_positive_boxplot.png',bbox_inches='tight')
 
-
+df2['active'] = df2['positive'] - df2['dead'] - df2['total_recovered']
 
 # Print report "bollettino"-like
 print(df2)
