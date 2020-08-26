@@ -1196,6 +1196,13 @@
       "deaths": 39,
       "recovered": 376,
       "active": 33.0
+    },
+    {
+      "date": "2020-08-22",
+      "confirmed": 456,
+      "deaths": 39,
+      "recovered": 379,
+      "active": 38.0
     }
   ]
 }
