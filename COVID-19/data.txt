@@ -160,3 +160,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-08-08,0,0,369
 2020-08-09,1,0,373
 2020-08-10,0,0,373
+2020-08-11,0,0,373
