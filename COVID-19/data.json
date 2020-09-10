@@ -1315,6 +1315,27 @@
       "deaths": 39,
       "recovered": 391,
       "active": 96.0
+    },
+    {
+      "date": "2020-09-08",
+      "confirmed": 526,
+      "deaths": 39,
+      "recovered": 391,
+      "active": 96.0
+    },
+    {
+      "date": "2020-09-09",
+      "confirmed": 527,
+      "deaths": 39,
+      "recovered": 391,
+      "active": 97.0
+    },
+    {
+      "date": "2020-09-10",
+      "confirmed": 528,
+      "deaths": 39,
+      "recovered": 391,
+      "active": 98.0
     }
   ]
 }

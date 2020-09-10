@@ -188,3 +188,6 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-09-05,5,0,388
 2020-09-06,2,0,391
 2020-09-07,4,0,391
+2020-09-08,0,0,391
+2020-09-09,1,0,391
+2020-09-10,1,0,391
