@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT( pmp )
+FIND_PACKAGE( OpenCV REQUIRED )
+ADD_EXECUTABLE( pmp pmp.cpp )
+TARGET_LINK_LIBRARIES( pmp ${OpenCV_LIBS} )
