@@ -4,6 +4,7 @@
 #include "opencv2/calib3d/calib3d.hpp"
 
 #include <iostream>
+#include <algorithm>
 
 
 void to_homogeneous(const std::vector< cv::Point2f >& non_homogeneous, std::vector< cv::Point3f >& homogeneous )
@@ -55,6 +56,41 @@ double measure_distance(const cv::Point2f& p1, const cv::Point2f& p2, const cv::
 
 int main(int, char**)
 {
+    printf("OpenCV: %s", cv::getBuildInformation().c_str());
+    char cal_name[] = "IMG_3721.jpg";
+
+    cv::Size patternsize(4,3); //number of centers
+    cv::Mat cal = cv::imread(cal_name);//, cv::IMREAD_GRAYSCALE);
+    std::vector<cv::Point2f> centers; //this will be filled by the detected centers
+
+    bool found = cv::findChessboardCorners( cal, patternsize, centers, cv::CALIB_CB_ADAPTIVE_THRESH );
+
+    double square_side_mm = 30;
+    std::vector<cv::Point2f> world_mm;
+
+    std::cout << found << "\n";
+    if(found){      
+        // I need the first corner at top-left
+        if(centers.front().y > centers.back().y){
+            std::cout << "Reverse order\n";
+            std::reverse(centers.begin(),centers.end());
+        }
+        for(size_t r=0;r<patternsize.height;r++){
+            for(size_t c=0;c<patternsize.width;c++){
+                world_mm.push_back(cv::Point2f(c*square_side_mm,r*square_side_mm));
+                draw_cross(cal,centers[r*patternsize.width+c],20,CV_RGB(255, 0, 0));
+                std::ostringstream oss;
+                oss << "("<<r<<","<<c<<")";
+                cv::putText(cal, oss.str(), centers[r*patternsize.width+c], cv::FONT_HERSHEY_PLAIN, 3, CV_RGB(0, 255, 0), 3);
+            }
+        }
+    }
+
+    cv::namedWindow( "Cal", cv::WINDOW_NORMAL );
+    cv::imshow( "Cal", cal );
+    cv::imwrite(std::string("Cal")+cal_name+".png", cal);
+    
+
     char img_name[] = "single-view-metrology.jpg";
     cv::Mat img = cv::imread(img_name);
     if(img.empty()){
