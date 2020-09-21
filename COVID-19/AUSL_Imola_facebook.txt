@@ -6,3 +6,6 @@
 2020-07-31,https://www.facebook.com/AziendaUslDiImola/posts/3473935679318730
 2020-08-01,https://www.facebook.com/AziendaUslDiImola/posts/3478866285492336
 2020-08-02,https://www.facebook.com/AziendaUslDiImola/posts/3478115975567367
+
+2020-09-19,https://www.facebook.com/AziendaUslDiImola/posts/3656199574425672
+2020-09-20,https://www.facebook.com/AziendaUslDiImola/posts/3659832617395701

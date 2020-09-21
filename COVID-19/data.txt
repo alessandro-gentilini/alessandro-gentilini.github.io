@@ -199,3 +199,6 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-09-16,6,0,407
 2020-09-17,1,0,407
 2020-09-18,0,0,412
+2020-09-19,5,0,412
+2020-09-20,3,0,412
+2020-09-21,1,0,420
