@@ -2,7 +2,11 @@ png()
 n<-c(10, 256, 202, 97)
 N <- seq(max(n),1e4,by=1)
 pars <- expand.grid(N=N)
-pars$N_prior <- dunif(pars$N,max(n),1e4)
+# The following prior knows about my data
+# pars$N_prior <- dunif(pars$N,max(n),1e4)
+
+# The following prior ignores my data
+pars$N_prior <- dunif(pars$N,0,1e4)
 pars$prior <- pars$N_prior
 for (i in 1:nrow(pars)) {
   likelihoods <- dunif(n,0,pars$N[i])
