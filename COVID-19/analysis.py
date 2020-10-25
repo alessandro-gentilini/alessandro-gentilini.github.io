@@ -164,6 +164,7 @@ result2 = pd.DataFrame()
 result2 = result2.assign(a=result['tamponi']-result['delta_positive_from_yesterday'],
 b=result['swab']-result['delta_positive_from_yesterday'],
 c=result['cumulative_swabs_declared_by_AUSL']-result['delta_positive_from_yesterday'],
+d=ausl['daily_swabs']-result['delta_positive_from_yesterday']
 )
 
 fig, ax6 = plt.subplots(1)
@@ -171,11 +172,11 @@ result2.plot(ax=ax6,logy=True,colormap='Dark2_r',drawstyle='steps-mid')
 ax6.set_xlabel('')
 ax6.set_ylabel('')
 ax6.yaxis.set_major_formatter(ScalarFormatter())
-ax6.set_yticks([.5, 1, 2, 3, 10, 100])
+ax6.set_yticks([.5, 1, 2, 3, 10, 100, 500])
 ax6.axhline(1)
 ax6.yaxis.grid()
-ax6.set_title('Differenza tra tamponi e positivi giornalieri\n$a$=tamponi giornalieri in Emilia Romagna riscalati sulla popolazione del Circ. Imolese\n$b$=tamponi giornalieri USCA Circ. Imolese\n$c$=tamponi giornalieri AUSL\n$p$=positivi giornalieri Circ. Imolese')
-ax6.legend(['$a-p$','$b-p$','$c-p$'])
+ax6.set_title('Differenza tra tamponi e positivi giornalieri\n$a$=tamponi giornalieri in Emilia Romagna riscalati sulla popolazione del Circ. Imolese\n$b$=tamponi giornalieri USCA Circ. Imolese\n$c,d$=tamponi giornalieri AUSL\n$p$=positivi giornalieri Circ. Imolese')
+ax6.legend(['$a-p$','$b-p$','$c-p$','$d-p$'])
 ax6.figure.savefig('COVID-19-swabs.png',bbox_inches='tight')
 
 swabs_declared_by_AUSL = pd.read_csv('data-swabs_AUSL.txt',parse_dates=['timestamp'],na_values=999999999)
