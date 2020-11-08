@@ -31,7 +31,7 @@ model{
     for ( i in 1:6 ) {
         mu[i] = t0[i] + sqrt((x[i] - x0)^2 + (y[i] - y0)^2)/v[i];
     }
-    t ~ normal( mu , 1 );
+    t ~ normal( mu , .1 );
 }'
 
 sm <- stan_model(model_code = model1)
