@@ -19,7 +19,7 @@ The figure made using [Stan](https://mc-stan.org/):
 
 ![My replication of Figure 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
 
-To the left the original problem with aun uncertainties of 0.1sec on the arrival time,
+To the left the original problem with an uncertainties of 0.1sec on the arrival time,
 to the right what happens when the uncertainties is 1sec: the epicentral cannot be
 located anymore.
 
