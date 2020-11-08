@@ -23,7 +23,7 @@ the property of interest: what can be said about the number of elements in the p
 with the property of interest?
 
 [Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
-![Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association](https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg) wrote in his 
+![Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association](https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg) wrote in his book
 [*Exact Confidence Bounds when Sampling from Small Finite Universes - 
 An Easy Reference Based on the Hypergeometric Distribution*](https://www.springer.com/gp/book/9780387975153)
 ![In spite of these recent computing developments, the existence of theory, and the ability to
@@ -38,13 +38,13 @@ to provide?*
 As we can see, the (frequentist) confidence interval at 95% is [1,38]
 ![Table at page 114 in Wright](Wright_pag114.jpg)
 
-I have tried two exercises with the Bayesian approach;
+I have tried [two exercises](proportion_from_a_finite_universe.R) with the Bayesian approach;
 in the first I use the knowledge that the likelihood is an hypergeometric random
-variable:
-![exact likelihood](proportion_from_a_finite_universe-1.png)
+variable.
 In the second I did not use that knowledge but even if I 
 ignore the math involving the hypergeometric I am anyway 
 able to simulate the data generation process:
-![simulated likelihood](proportion_from_a_finite_universe-2.png)
+
+![exact likelihood](proportion_from_a_finite_universe-1.png)![simulated likelihood](proportion_from_a_finite_universe-2.png)
 
 
