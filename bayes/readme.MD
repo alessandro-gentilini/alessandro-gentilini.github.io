@@ -15,3 +15,6 @@ The original figure:
 The figure made using [Stan](https://mc-stan.org/):
 
 ![My replication of Figure 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
+
+## A bayesian approach to the confidence bounds when sampling from small finite universes
+![Table at page 114 in Wright](Wright_pag114.jpg)
