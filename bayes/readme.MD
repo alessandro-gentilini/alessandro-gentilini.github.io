@@ -38,7 +38,7 @@ to provide?*
 As we can see, the (frequentist) confidence interval at 95% is [1,38]
 ![Table at page 114 in Wright](Wright_pag114.jpg)
 
-I have tried two exercises with the Bayesian approach;
+I have tried [two exercises](proportion_from_a_finite_universe.R) with the Bayesian approach;
 in the first I use the knowledge that the likelihood is an hypergeometric random
 variable.
 In the second I did not use that knowledge but even if I 
