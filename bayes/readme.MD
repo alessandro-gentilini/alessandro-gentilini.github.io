@@ -17,4 +17,16 @@ The figure made using [Stan](https://mc-stan.org/):
 ![My replication of Figure 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
 
 ## A bayesian approach to the confidence bounds when sampling from small finite universes
+We have a population of N=100 elements, some of the elements have a property of interest.
+We take a random sample of n=10 elements from the population and we find a=1 element with 
+the property of interest: what can be said about the number of elements in the population
+with the property of interest?
+[Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
+wrote
+
+*What is more beautiful than a simple and important
+question with a simple and exact answer that is easy
+to provide?*
+
+As we can see
 ![Table at page 114 in Wright](Wright_pag114.jpg)
