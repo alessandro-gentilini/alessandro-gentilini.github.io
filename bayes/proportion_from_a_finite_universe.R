@@ -32,7 +32,7 @@ print(q)
 
 hist(pars_sample,breaks=difettosi_nella_popolazione-.5,freq=TRUE,ylim=c(0,500),main=sprintf('Posterior, exact likelihood\nmean=%.2f sd=%.2f\n95%% interval=[%0.f,%0.f]  (Wright: [1,42])',mean(pars_sample),sd(pars_sample),q[1],q[2]))
 
-# con likelihood simulata, è forse questo un esempio di `modello generativo`?
+# se invece si e` ignoranti in matematica come lo sono io... con likelihood simulata, è forse questo un esempio di `modello generativo`?
 dimensione_della_popolazione <- 100
 dimensione_del_campione <- 10
 difettosi_nel_campione <-c(1)
