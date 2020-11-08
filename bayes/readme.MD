@@ -6,7 +6,7 @@ An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent c
 ![posterior density](posterior.png)
 
 ## Albert Tarantola's Estimation of the Epicentral Coordinates of a Seismic Event
-[Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). Society for Industrial and Applied Mathematics, 2005.![siam](https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg)
+[Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). [Society for Industrial and Applied Mathematics](https://epubs.siam.org/doi/book/10.1137/1.9780898717921), 2005.![siam](https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg)
 
 The original figure:
 
@@ -15,6 +15,9 @@ The original figure:
 The figure made using [Stan](https://mc-stan.org/):
 
 ![My replication of Figure 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
+
+![low uncertainties in arrival time](epicentral-low_uncertainties_in_time_of_arrival.png)
+![high uncertainties in arrival time](epicentral-high_uncertainties_in_time_of_arrival.png)
 
 ## A bayesian approach to the confidence bounds when sampling from small finite universes
 We have a population of N=100 elements, some of the elements have a property of interest.
