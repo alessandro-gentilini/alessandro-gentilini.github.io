@@ -44,6 +44,7 @@ variable.
 In the second I did not use that knowledge but even if I 
 ignore the math involving the hypergeometric I am anyway 
 able to simulate the data generation process:
+
 ![exact likelihood](proportion_from_a_finite_universe-1.png)![simulated likelihood](proportion_from_a_finite_universe-2.png)
 
 
