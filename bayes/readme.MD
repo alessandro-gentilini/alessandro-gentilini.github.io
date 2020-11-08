@@ -6,7 +6,7 @@ An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent c
 ![posterior density](posterior.png)
 
 ## Albert Tarantola's Estimation of the Epicentral Coordinates of a Seismic Event
-![](https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg|width=100)
+<img src='https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg' width='100'>
 [Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). [Society for Industrial and Applied Mathematics](https://epubs.siam.org/doi/book/10.1137/1.9780898717921), 2005.![siam](https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg)
 
 The original figure:
