@@ -23,9 +23,8 @@ the property of interest: what can be said about the number of elements in the p
 with the property of interest?
 
 [Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
-![Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association](https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg)
-
-wrote in his [*Exact Confidence Bounds when Sampling from Small Finite Universes - 
+![Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association](https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg) wrote in his 
+[*Exact Confidence Bounds when Sampling from Small Finite Universes - 
 An Easy Reference Based on the Hypergeometric Distribution*](https://www.springer.com/gp/book/9780387975153)
 ![In spite of these recent computing developments, the existence of theory, and the ability to
 produce exact confidence bounds for A, exact results are rarely given in practice. Why
