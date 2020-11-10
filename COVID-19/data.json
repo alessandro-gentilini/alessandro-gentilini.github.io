@@ -1749,6 +1749,13 @@
       "deaths": 42,
       "recovered": 649,
       "active": 691.0
+    },
+    {
+      "date": "2020-11-10",
+      "confirmed": 1497,
+      "deaths": 43,
+      "recovered": 722,
+      "active": 732.0
     }
   ]
 }
