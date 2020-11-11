@@ -3,13 +3,21 @@
 ##  Rasmus Bååth's beach party
 <img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='100'>
 
-An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by Rasmus Bååth.
+An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by [Rasmus Bååth](http://www.sumsar.net/about.html).
 
 ![posterior density](posterior.png)
 
 ## Albert Tarantola's Estimation of the Epicentral Coordinates of a Seismic Event
+<table>
+<tr>
+  <td>
 <img alt='Albert Tarantola' src='https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg' height='200'>
+  </td>
+  <td>
 <img alt='siam' src='https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg' height='200'>
+  </td>
+  </tr>
+</table>
 
 [Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). [Society for Industrial and Applied Mathematics](https://epubs.siam.org/doi/book/10.1137/1.9780898717921), 2005.
 
