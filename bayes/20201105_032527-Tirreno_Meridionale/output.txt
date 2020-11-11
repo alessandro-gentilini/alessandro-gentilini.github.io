@@ -1,0 +1,127 @@
+{'ACATE': 37.0239, 'EMCN': 37.7912, 'ECHR': 37.6863, 'JOPP': 38.6068, 'SCIAR': 37.9406, 'HVZN': 37.1783, 'T1573': 37.8628, 'ENIC': 37.6314, 'NOV': 38.0278, 'EVRN': 37.6892, 'CEL': 38.2603}
+{'ACATE': 14.5006, 'EMCN': 15.0336, 'ECHR': 14.9129, 'JOPP': 15.8856, 'SCIAR': 13.7492, 'HVZN': 14.7155, 'T1573': 12.93, 'ENIC': 15.0216, 'NOV': 15.1367, 'EVRN': 15.1356, 'CEL': 15.8939}
+{'ACATE': 210.0, 'EMCN': 1916.0, 'ECHR': 1171.0, 'JOPP': 500.0, 'SCIAR': 490.0, 'HVZN': 790.0, 'T1573': 183.0, 'ENIC': 886.0, 'NOV': 775.0, 'EVRN': 421.0, 'CEL': 702.0}
+(284227.3111192278, 3907670.486111103, 32, 'S')
+(298526.10358101886, 3907339.5592638245, 34, 'S')
+(319925.57922462677, 5218135.850944469, 32, 'T')
+(331856.2165947667, 5217785.768626878, 34, 'T')
+ACATE (455579.10735391837, 4097640.252185968, 33, 'S')
+CEL (578204.5600151112, 4235074.271463005, 33, 'S')
+EMCN (502958.33479414013, 4182649.169747034, 33, 'S')
+ENIC (501905.8749898655, 4164919.586958791, 33, 'S')
+EVRN (511955.38983853284, 4171340.6761954017, 33, 'S')
+HVZN (474745.5100673592, 4114689.9568572245, 33, 'S')
+JOPP (577108.9617892154, 4273516.085404736, 33, 'S')
+SCIAR (390092.43088551535, 4199962.178138338, 33, 'S')
+T1573 (317911.5955886139, 4192611.9369069543, 33, 'S')
+[455579.10735391837, 578204.5600151112, 502958.33479414013, 501905.8749898655, 511955.38983853284, 474745.5100673592, 577108.9617892154, 390092.43088551535, 317911.5955886139]
+[4097640.252185968, 4235074.271463005, 4182649.169747034, 4164919.586958791, 4171340.6761954017, 4114689.9568572245, 4273516.085404736, 4199962.178138338, 4192611.9369069543]
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_72b3a09bc615c6ea74f9c9e5313b62d6 NOW.
+
+Gradient evaluation took 3.6e-05 seconds
+1000 transitions using 10 leapfrog steps per transition would take 0.36 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:      1 / 1000000 [  0%]  (Warmup)
+
+Gradient evaluation took 4.7e-05 seconds
+1000 transitions using 10 leapfrog steps per transition would take 0.47 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:      1 / 1000000 [  0%]  (Warmup)
+
+Gradient evaluation took 3e-05 seconds
+1000 transitions using 10 leapfrog steps per transition would take 0.3 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:      1 / 1000000 [  0%]  (Warmup)
+
+Gradient evaluation took 2.3e-05 seconds
+1000 transitions using 10 leapfrog steps per transition would take 0.23 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:      1 / 1000000 [  0%]  (Warmup)
+Iteration: 100000 / 1000000 [ 10%]  (Warmup)
+Iteration: 100000 / 1000000 [ 10%]  (Warmup)
+Iteration: 100000 / 1000000 [ 10%]  (Warmup)
+Iteration: 100000 / 1000000 [ 10%]  (Warmup)
+Iteration: 200000 / 1000000 [ 20%]  (Warmup)
+Iteration: 200000 / 1000000 [ 20%]  (Warmup)
+Iteration: 200000 / 1000000 [ 20%]  (Warmup)
+Iteration: 200000 / 1000000 [ 20%]  (Warmup)
+Iteration: 300000 / 1000000 [ 30%]  (Warmup)
+Iteration: 300000 / 1000000 [ 30%]  (Warmup)
+Iteration: 300000 / 1000000 [ 30%]  (Warmup)
+Iteration: 300000 / 1000000 [ 30%]  (Warmup)
+Iteration: 400000 / 1000000 [ 40%]  (Warmup)
+Iteration: 400000 / 1000000 [ 40%]  (Warmup)
+Iteration: 400000 / 1000000 [ 40%]  (Warmup)
+Iteration: 400000 / 1000000 [ 40%]  (Warmup)
+Iteration: 500000 / 1000000 [ 50%]  (Warmup)
+Iteration: 500001 / 1000000 [ 50%]  (Sampling)
+Iteration: 500000 / 1000000 [ 50%]  (Warmup)
+Iteration: 500001 / 1000000 [ 50%]  (Sampling)
+Iteration: 500000 / 1000000 [ 50%]  (Warmup)
+Iteration: 500001 / 1000000 [ 50%]  (Sampling)
+Iteration: 500000 / 1000000 [ 50%]  (Warmup)
+Iteration: 500001 / 1000000 [ 50%]  (Sampling)
+Iteration: 600000 / 1000000 [ 60%]  (Sampling)
+Iteration: 600000 / 1000000 [ 60%]  (Sampling)
+Iteration: 600000 / 1000000 [ 60%]  (Sampling)
+Iteration: 600000 / 1000000 [ 60%]  (Sampling)
+Iteration: 700000 / 1000000 [ 70%]  (Sampling)
+Iteration: 700000 / 1000000 [ 70%]  (Sampling)
+Iteration: 700000 / 1000000 [ 70%]  (Sampling)
+Iteration: 700000 / 1000000 [ 70%]  (Sampling)
+Iteration: 800000 / 1000000 [ 80%]  (Sampling)
+Iteration: 800000 / 1000000 [ 80%]  (Sampling)
+Iteration: 800000 / 1000000 [ 80%]  (Sampling)
+Iteration: 800000 / 1000000 [ 80%]  (Sampling)
+Iteration: 900000 / 1000000 [ 90%]  (Sampling)
+Iteration: 900000 / 1000000 [ 90%]  (Sampling)
+Iteration: 900000 / 1000000 [ 90%]  (Sampling)
+Iteration: 1000000 / 1000000 [100%]  (Sampling)
+
+ Elapsed Time: 85.7965 seconds (Warm-up)
+               50.8442 seconds (Sampling)
+               136.641 seconds (Total)
+
+Iteration: 1000000 / 1000000 [100%]  (Sampling)
+
+ Elapsed Time: 84.9787 seconds (Warm-up)
+               55.711 seconds (Sampling)
+               140.69 seconds (Total)
+
+Iteration: 900000 / 1000000 [ 90%]  (Sampling)
+Iteration: 1000000 / 1000000 [100%]  (Sampling)
+
+ Elapsed Time: 84.5359 seconds (Warm-up)
+               59.9309 seconds (Sampling)
+               144.467 seconds (Total)
+
+Iteration: 1000000 / 1000000 [100%]  (Sampling)
+
+ Elapsed Time: 85.8988 seconds (Warm-up)
+               54.6239 seconds (Sampling)
+               140.523 seconds (Total)
+
+Inference for Stan model: anon_model_72b3a09bc615c6ea74f9c9e5313b62d6.
+4 chains, each with iter=1000000; warmup=500000; thin=1; 
+post-warmup draws per chain=500000, total post-warmup draws=2000000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+x0    4.0e5    0.16  91.71  4.0e5  4.0e5  4.0e5  4.0e5  4.0e5 330690    1.0
+y0    4.3e6    0.27 143.66  4.3e6  4.3e6  4.3e6  4.3e6  4.3e6 280062    1.0
+v    6819.5    0.01   5.21 6809.2 6816.0 6819.5 6823.0 6829.7 268469    1.0
+lp__ -1.0e5  1.8e-3   1.23 -1.0e5 -1.0e5 -1.0e5 -1.0e5 -1.0e5 470340    1.0
+
+Samples were drawn using NUTS at Wed Nov 11 15:27:56 2020.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+WARNING:pystan:Deprecation warning. PyStan plotting deprecated, use ArviZ library (Python 3.5+). `pip install arviz`; `arviz.plot_trace(fit)`)
+Ale:  (39.03878114462047, 13.820047603175466)
