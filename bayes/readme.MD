@@ -1,15 +1,17 @@
 # Exercises in Bayesian statistics
 
 ##  Rasmus Bååth's beach party
+<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='100'>
+
 An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by Rasmus Bååth.
 
 ![posterior density](posterior.png)
 
 ## Albert Tarantola's Estimation of the Epicentral Coordinates of a Seismic Event
+<img alt='Albert Tarantola' src='https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg' height='200'>
+<img alt='siam' src='https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg' height='200'>
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg' width='100'>
-
-[Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). [Society for Industrial and Applied Mathematics](https://epubs.siam.org/doi/book/10.1137/1.9780898717921), 2005.![siam](https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg)
+[Problem 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.R) in the book TARANTOLA, Albert. [*Inverse problem theory and methods for model parameter estimation*](http://www.ipgp.fr/~tarantola/Files/Professional/Books/InverseProblemTheory.pdf). [Society for Industrial and Applied Mathematics](https://epubs.siam.org/doi/book/10.1137/1.9780898717921), 2005.
 
 The original figure:
 
@@ -32,14 +34,22 @@ We take a random sample of n=10 elements from the population and we find a=1 ele
 the property of interest: what can be said about the number of elements in the population
 with the property of interest?
 
+<table>
+  <tr>
+    <td>
+<img alt='Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association'
+src='https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg'
+     height='200'></td>
+<td><img alt='In spite of these recent computing developments, the existence of theory, and the ability to produce exact confidence bounds for A, exact results are rarely given in practice. Why continue to use and teach approximations, including ones that yield bad results for certain cases, for such a common and simple problem when exact and simple methods can be used?'
+src='https://images.springer.com/sgw/books/medium/9780387975153.jpg'
+         height=200'></td>
+           </tr>
+</table>
+
 [Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
-![Tommy Wright pictures as it appears in the AMSTAT News, the membership magazine of the American Statistical Association](https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg) wrote in his book
+ wrote in his book
 [*Exact Confidence Bounds when Sampling from Small Finite Universes - 
 An Easy Reference Based on the Hypergeometric Distribution*](https://www.springer.com/gp/book/9780387975153)
-![In spite of these recent computing developments, the existence of theory, and the ability to
-produce exact confidence bounds for A, exact results are rarely given in practice. Why
-continue to use and teach approximations, including ones that yield bad results for certain
-cases, for such a common and simple problem when exact and simple methods can be used?](https://images.springer.com/sgw/books/medium/9780387975153.jpg)
 
 *What is more beautiful than a simple and important
 question with a simple and exact answer that is easy
