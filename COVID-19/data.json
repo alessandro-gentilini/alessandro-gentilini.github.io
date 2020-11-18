@@ -1770,6 +1770,48 @@
       "deaths": 45,
       "recovered": 722,
       "active": 1047.0
+    },
+    {
+      "date": "2020-11-13",
+      "confirmed": 1880,
+      "deaths": 46,
+      "recovered": 722,
+      "active": 1112.0
+    },
+    {
+      "date": "2020-11-14",
+      "confirmed": 1967,
+      "deaths": 46,
+      "recovered": 837,
+      "active": 1084.0
+    },
+    {
+      "date": "2020-11-15",
+      "confirmed": 2029,
+      "deaths": 47,
+      "recovered": 837,
+      "active": 1145.0
+    },
+    {
+      "date": "2020-11-16",
+      "confirmed": 2143,
+      "deaths": 47,
+      "recovered": 902,
+      "active": 1194.0
+    },
+    {
+      "date": "2020-11-17",
+      "confirmed": 2263,
+      "deaths": 51,
+      "recovered": 966,
+      "active": 1246.0
+    },
+    {
+      "date": "2020-11-18",
+      "confirmed": 2355,
+      "deaths": 51,
+      "recovered": 966,
+      "active": 1338.0
     }
   ]
 }
