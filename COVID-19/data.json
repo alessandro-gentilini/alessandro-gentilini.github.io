@@ -1812,6 +1812,13 @@
       "deaths": 51,
       "recovered": 966,
       "active": 1338.0
+    },
+    {
+      "date": "2020-11-19",
+      "confirmed": 2391,
+      "deaths": 51,
+      "recovered": 991,
+      "active": 1349.0
     }
   ]
 }
