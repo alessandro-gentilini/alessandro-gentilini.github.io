@@ -84,7 +84,7 @@ L0 = format_legend('$c$=totale positivi (confirmed)',df3.diff().iloc[-1,0])
 L1 = format_legend('$d$=totale deceduti (deaths)',df3.diff().iloc[-1,1])
 L2 = format_legend('$r$=totale guariti (recovered)',df3.diff().iloc[-1,2])
 ax3.legend([L0,L1,L2,'$c-d-r={:.0f}$'.format(df3.iloc[-1,0]-df3.iloc[-1,1]-df3.iloc[-1,2])],loc='upper left')
-ax3.set_title('COVID-19 Circondario Imolese, '+date.today().isoformat()+', $N={0}$'.format(circondario)+'\nfonte dati (data source): www.ausl.imola.bo.it')
+ax3.set_title('COVID-19 Circondario Imolese, '+date.today().isoformat()+', $N={0}$'.format(circondario)+'\nfonte dati (data source): ausl.imola.bo.it/covidnews')
 ax3_right.set_ylabel('% pop. Circondario Imolese (% of Circondario Imolese population)')
 ax3.figure.savefig('COVID-19-cumulative-formula.png',bbox_inches='tight')
 
