@@ -1854,6 +1854,13 @@
       "deaths": 58,
       "recovered": 1277,
       "active": 1523.0
+    },
+    {
+      "date": "2020-11-25",
+      "confirmed": 2965,
+      "deaths": 58,
+      "recovered": 1327,
+      "active": 1580.0
     }
   ]
 }
