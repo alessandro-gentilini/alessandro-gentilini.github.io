@@ -271,3 +271,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2020-11-28,143,10,1643
 2020-11-29,57,2,1709
 2020-11-30,118,3,1875
+2020-12-01,36,0,2005
