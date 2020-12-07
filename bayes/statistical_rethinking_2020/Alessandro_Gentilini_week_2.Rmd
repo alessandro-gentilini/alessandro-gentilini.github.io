@@ -1,7 +1,7 @@
 ---
 title: Statistical Rethinking Winter 2020 -- Homework Week 2
 author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
-date: December 6, 2020
+date: December 7, 2020
 output: pdf_document
 ---
 
@@ -91,8 +91,8 @@ And then I plot the simulated heights above all the recorded data:
 ```{r}
 x.min=min(c(d2$weight,answer$weight))
 x.max=max(c(d2$weight,answer$weight))
-y.min=min(c(d2$height,answer$height))
-y.max=max(c(d2$height,answer$height))
+y.min=min(c(d2$height,answer$height,answer$low))
+y.max=max(c(d2$height,answer$height,answer$high))
 plot(d2$weight,d2$height,type='p',col='grey',xlim=c(x.min,x.max),ylim=c(y.min,y.max))
 points(answer$weight,answer$expected.height,type='p',col='red')
 for(i in answer$individual){
@@ -157,11 +157,37 @@ shade( height.PI , log.weight.seq )
 
 **3**. Plot the prior predictive distribution for the polynomial regression model
 in Chapter 4. You can modify the the code that plots the linear regression
-prior predictive distribution. 20 or 30 parabolas from the prior should suffice to show where the prior probability resides. Can you modify the prior
-distributions of $\alpha$, $\beta_1$, and $\beta_2$ so that the prior predictions stay within the
+prior predictive distribution. 
+20 or 30 parabolas from the prior should suffice to show where the prior probability resides. 
+Can you modify the prior distributions of $\alpha$, $\beta_1$, and $\beta_2$ so that 
+the prior predictions stay within the
 biologically reasonable outcome space? That is to say: Do not try to fit the
 data by hand. But do try to keep the curves consistent with what you know
 about height and weight, before seeing these exact data.
 
 ***
 
+After some tinkering (including in my opinion an insuccess when I forced $\beta_2$ to be positive using for it a
+`rlnorm`) I found this solution that I like:
+
+```{r}
+## R code 4.38
+set.seed(2971)
+N <- 30                   # 30 parabolas
+a <- rnorm( N , 178 , 20 )
+b1 <- rlnorm( N , 0 , 1 )
+b2 <- rnorm( N , 0 , 1/4 )
+
+
+
+## R code 4.39
+plot( NULL , xlim=range(d2$weight) , ylim=c(-100,400) ,
+    xlab="weight" , ylab="height" )
+abline( h=0 , lty=2 )
+abline( h=272 , lty=1 , lwd=0.5 )
+mtext( "b1 ~ rlnorm( N , 0 , 1 ), b2 ~ rnorm( N , 0 , 1/4 )" )
+xbar <- mean(d2$weight)
+for ( i in 1:N ) curve( a[i] + b1[i]*(x - xbar) + b2[i]*(x-xbar)*(x-xbar),
+    from=min(d2$weight) , to=max(d2$weight) , add=TRUE ,
+    col=col.alpha("black",0.2) )
+``` 
