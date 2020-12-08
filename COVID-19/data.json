@@ -1938,6 +1938,20 @@
       "deaths": 86,
       "recovered": 2424,
       "active": 1487.0
+    },
+    {
+      "date": "2020-12-07",
+      "confirmed": 4056,
+      "deaths": 92,
+      "recovered": 2484,
+      "active": 1480.0
+    },
+    {
+      "date": "2020-12-08",
+      "confirmed": 4148,
+      "deaths": 94,
+      "recovered": 2528,
+      "active": 1526.0
     }
   ]
 }
