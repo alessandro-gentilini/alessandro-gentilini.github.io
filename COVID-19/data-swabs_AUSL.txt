@@ -82,3 +82,5 @@ timestamp,cumulative_swabs_declared_by_AUSL,daily_swabs
 2020-12-04,,660
 2020-12-05,,518
 2020-12-06,,465
+2020-12-07,,580
+2020-12-08,,692
