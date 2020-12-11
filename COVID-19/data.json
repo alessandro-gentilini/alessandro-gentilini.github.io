@@ -1952,6 +1952,27 @@
       "deaths": 94,
       "recovered": 2528,
       "active": 1526.0
+    },
+    {
+      "date": "2020-12-09",
+      "confirmed": 4188,
+      "deaths": 94,
+      "recovered": 2558,
+      "active": 1536.0
+    },
+    {
+      "date": "2020-12-10",
+      "confirmed": 4243,
+      "deaths": 96,
+      "recovered": 2741,
+      "active": 1406.0
+    },
+    {
+      "date": "2020-12-11",
+      "confirmed": 4304,
+      "deaths": 100,
+      "recovered": 2874,
+      "active": 1330.0
     }
   ]
 }
