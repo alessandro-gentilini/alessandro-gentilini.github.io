@@ -1,7 +1,7 @@
 # Exercises in Bayesian statistics
 
 ##  Rasmus Bååth's beach party
-<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='100'>
+<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='200'>
 
 An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by [Rasmus Bååth](http://www.sumsar.net/about.html).
 
