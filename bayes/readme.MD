@@ -76,3 +76,16 @@ able to simulate the data generation process:
 ![exact likelihood](proportion_from_a_finite_universe-1.png)![simulated likelihood](proportion_from_a_finite_universe-2.png)
 
 
+## Richard McElreath's Statistical Rethinking
+<table>
+  <tr>
+    <td>
+<img alt='Richard McElreath'
+src='https://xcelab.net/rm/wp-content/uploads/2020/03/Kjp6Lib_400x400-300x300.jpg'
+     height='200'></td>
+<td><img alt='Statistical Rethinking, Second Edition'
+src='https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.jpg'
+         height=200'></td>
+           </tr>
+</table>
+[Exercises](./bayes/statistical_rethinking_2020/readm.MD) for the [Statistical Rethinking Course Winter 2020/2021](https://github.com/rmcelreath/stat_rethinking_2020)
