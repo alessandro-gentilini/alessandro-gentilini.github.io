@@ -192,6 +192,7 @@ for ( i in 1:N ) curve( a[i] + b1[i]*(x - xbar) + b2[i]*(x-xbar)*(x-xbar),
     col=col.alpha("black",0.2) )
 ``` 
 
+<!-- 
 Se c'e` piu` di un parametro puo` diventare difficile capire che valori possono
 assumere i parametri perche' c'e` interazione (o correlazione?)
 Non e` ancora causal inference, e` per questo che il capitolo inizia con il modello geocentrico
@@ -199,3 +200,4 @@ che non e` corretto ma da` buone previsioni.
 
 Se fai una trasformazione che non distrugge informazione allora e` lecito, 
 la trasformazione deve quindi avere una inversa come per esempio log-exp.
+-->
