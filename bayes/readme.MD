@@ -88,4 +88,5 @@ src='https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.
          height=200'></td>
            </tr>
 </table>
-[Exercises](./bayes/statistical_rethinking_2020/readm.MD) for the [Statistical Rethinking Course Winter 2020/2021](https://github.com/rmcelreath/stat_rethinking_2020)
+  
+[Exercises](bayes/statistical_rethinking_2020/readm.MD) for the [Statistical Rethinking Course Winter 2020/2021](https://github.com/rmcelreath/stat_rethinking_2020)
