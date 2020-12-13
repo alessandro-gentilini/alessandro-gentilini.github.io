@@ -187,6 +187,18 @@ fig, ax7 = plt.subplots(1)
 cumulative_swabs.plot(ax=ax7,drawstyle='steps-mid')
 ax7.figure.savefig('COVID-19-cumulative_swabs.png',bbox_inches='tight')
 
+result3 = pd.DataFrame()
+result3 = result3.assign(
+p=100*result['delta_positive_from_yesterday']/ausl['daily_swabs']
+)
+
+fig, ax7 = plt.subplots(1)
+result3.plot(ax=ax7,drawstyle='steps-mid')
+ax7.set_title('$t$=tamponi giornalieri AUSL\n$p$=positivi giornalieri Circ. Imolese')
+ax7.legend(['$100\\frac{p}{t}$'])
+ax7.figure.savefig('COVID-19-positive_over_swabs.png',bbox_inches='tight')
+
+
 # vedi mail da INFN
 # tentative_R = df[['positive','dead','total_recovered']]
 # tentative_R = tentative_R.assign(R=df['positive']/(df['dead']+df['total_recovered']))
