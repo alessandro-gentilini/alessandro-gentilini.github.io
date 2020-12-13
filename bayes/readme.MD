@@ -1,7 +1,7 @@
 # Exercises in Bayesian statistics
 
 ##  Rasmus Bååth's beach party
-<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='100'>
+<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='200'>
 
 An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by [Rasmus Bååth](http://www.sumsar.net/about.html).
 
@@ -76,3 +76,17 @@ able to simulate the data generation process:
 ![exact likelihood](proportion_from_a_finite_universe-1.png)![simulated likelihood](proportion_from_a_finite_universe-2.png)
 
 
+## Richard McElreath's Statistical Rethinking
+<table>
+  <tr>
+    <td>
+<img alt='Richard McElreath'
+src='https://xcelab.net/rm/wp-content/uploads/2020/03/Kjp6Lib_400x400-300x300.jpg'
+     height='200'></td>
+<td><img alt='Statistical Rethinking, Second Edition'
+src='https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.jpg'
+         height=200'></td>
+           </tr>
+</table>
+  
+[Exercises](statistical_rethinking_2020/readme.MD) for the [Statistical Rethinking Course Winter 2020/2021](https://github.com/rmcelreath/stat_rethinking_2020)
