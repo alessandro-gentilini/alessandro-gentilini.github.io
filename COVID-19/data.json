@@ -1980,6 +1980,13 @@
       "deaths": 104,
       "recovered": 2970,
       "active": 1300.0
+    },
+    {
+      "date": "2020-12-13",
+      "confirmed": 4465,
+      "deaths": 108,
+      "recovered": 3021,
+      "active": 1336.0
     }
   ]
 }
