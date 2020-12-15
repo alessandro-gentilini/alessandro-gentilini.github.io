@@ -1987,6 +1987,20 @@
       "deaths": 108,
       "recovered": 3021,
       "active": 1336.0
+    },
+    {
+      "date": "2020-12-14",
+      "confirmed": 4551,
+      "deaths": 111,
+      "recovered": 3047,
+      "active": 1393.0
+    },
+    {
+      "date": "2020-12-15",
+      "confirmed": 4582,
+      "deaths": 113,
+      "recovered": 3122,
+      "active": 1347.0
     }
   ]
 }
