@@ -2008,6 +2008,13 @@
       "deaths": 117,
       "recovered": 3224,
       "active": 1278.0
+    },
+    {
+      "date": "2020-12-17",
+      "confirmed": 4750,
+      "deaths": 123,
+      "recovered": 3316,
+      "active": 1311.0
     }
   ]
 }
