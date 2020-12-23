@@ -2015,6 +2015,48 @@
       "deaths": 123,
       "recovered": 3316,
       "active": 1311.0
+    },
+    {
+      "date": "2020-12-18",
+      "confirmed": 4828,
+      "deaths": 130,
+      "recovered": 3404,
+      "active": 1294.0
+    },
+    {
+      "date": "2020-12-19",
+      "confirmed": 4862,
+      "deaths": 133,
+      "recovered": 3487,
+      "active": 1242.0
+    },
+    {
+      "date": "2020-12-20",
+      "confirmed": 4946,
+      "deaths": 136,
+      "recovered": 3540,
+      "active": 1270.0
+    },
+    {
+      "date": "2020-12-21",
+      "confirmed": 4994,
+      "deaths": 141,
+      "recovered": 3602,
+      "active": 1251.0
+    },
+    {
+      "date": "2020-12-22",
+      "confirmed": 5048,
+      "deaths": 141,
+      "recovered": 3691,
+      "active": 1216.0
+    },
+    {
+      "date": "2020-12-23",
+      "confirmed": 5087,
+      "deaths": 147,
+      "recovered": 3812,
+      "active": 1128.0
     }
   ]
 }
