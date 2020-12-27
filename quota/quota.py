@@ -39,9 +39,10 @@ fig.savefig('confini_imola.png',bbox_inches='tight')
 fig, ax = plt.subplots()
 show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
 peak_idx = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
-peak = dem_raster.xy(peak_idx[0],peak_idx[1])
-ax.plot(peak[0],peak[1],'*')
+peak_bb = dem_raster.xy(peak_idx[0],peak_idx[1])
+ax.plot(peak_bb[0],peak_bb[1],'*')
 fig.savefig('DEM_bounding_box_imola.png',bbox_inches='tight')
+print('Bounding box: '+str(peak_bb))
 
 out_image, out_transform = rasterio.mask.mask(dem_raster,imola.geometry,crop=True)
 out_meta = dem_raster.meta
@@ -61,3 +62,4 @@ peak_idx = np.unravel_index(dem_masked.read(1).argmax(),dem_masked.read(1).shape
 peak = dem_masked.xy(peak_idx[0],peak_idx[1])
 ax.plot(peak[0],peak[1],'*')
 fig.savefig('DEM_imola.png',bbox_inches='tight')
+print('Masked: '+str(peak))
