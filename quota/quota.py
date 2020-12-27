@@ -36,10 +36,11 @@ imola.plot(ax=ax)
 fig.savefig('confini_imola.png',bbox_inches='tight')
 
 fig, ax = plt.subplots()
-#ax.imshow(dem_raster.read(1)),cmap='pink')
 show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
+peak = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
+peak = dem_raster.xy(peak[0],peak[1])
+ax.plot(peak[0],peak[1],'*')
 fig.savefig('DEM_imola.png',bbox_inches='tight')
-#ax.plot(np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape),'*')
 
 
 
@@ -49,4 +50,3 @@ fig.savefig('DEM_imola.png',bbox_inches='tight')
 #src_transform = from_bounds(west, south, east, north, src_width, src_height)
 #source = dem_raster.read(1)
 
-plt.show()
