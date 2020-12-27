@@ -7,6 +7,7 @@ from rasterio.warp import reproject, Resampling
 import rasterio
 from rasterio.plot import show
 import numpy as np
+import rasterio.mask
 
 dem_path = '/Imola_DEM.tif'
 output = os.getcwd() + dem_path
@@ -37,16 +38,26 @@ fig.savefig('confini_imola.png',bbox_inches='tight')
 
 fig, ax = plt.subplots()
 show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
-peak = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
-peak = dem_raster.xy(peak[0],peak[1])
+peak_idx = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
+peak = dem_raster.xy(peak_idx[0],peak_idx[1])
+ax.plot(peak[0],peak[1],'*')
+fig.savefig('DEM_bounding_box_imola.png',bbox_inches='tight')
+
+out_image, out_transform = rasterio.mask.mask(dem_raster,imola.geometry,crop=True)
+out_meta = dem_raster.meta
+out_image[out_image==-32768]=0
+out_meta.update({"driver": "GTiff",
+                 "height": out_image.shape[1],
+                 "width": out_image.shape[2],
+                 "transform": out_transform})
+
+with rasterio.open("DEM_masked.tif", "w", **out_meta) as dest:
+    dest.write(out_image)
+
+dem_masked = rasterio.open("DEM_masked.tif")
+fig, ax = plt.subplots()
+show(source=dem_masked.read(1),ax=ax,cmap='pink',transform=dem_masked.transform)
+peak_idx = np.unravel_index(dem_masked.read(1).argmax(),dem_masked.read(1).shape)
+peak = dem_masked.xy(peak_idx[0],peak_idx[1])
 ax.plot(peak[0],peak[1],'*')
 fig.savefig('DEM_imola.png',bbox_inches='tight')
-
-
-
-
-
-#src_shape = src_height, src_width = dem_raster.shape
-#src_transform = from_bounds(west, south, east, north, src_width, src_height)
-#source = dem_raster.read(1)
-
