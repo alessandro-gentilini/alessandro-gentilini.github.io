@@ -2,12 +2,13 @@ import geopandas as gpd
 import elevation
 import matplotlib.pyplot as plt
 import os
-from rasterio.transform import from_bounds, from_origin
-from rasterio.warp import reproject, Resampling
 import rasterio
 from rasterio.plot import show
 import numpy as np
 import rasterio.mask
+
+def lon_lat(p):
+    return 'lon: '+ str(p[0]) + ' lat: '+ str(p[1])
 
 dem_path = '/Imola_DEM.tif'
 output = os.getcwd() + dem_path
@@ -42,7 +43,7 @@ peak_idx = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape
 peak_bb = dem_raster.xy(peak_idx[0],peak_idx[1])
 ax.plot(peak_bb[0],peak_bb[1],'*')
 fig.savefig('DEM_bounding_box_imola.png',bbox_inches='tight')
-print('Bounding box: '+str(peak_bb))
+print('Bounding box: '+lon_lat(peak_bb)+' elevation: '+str(dem_raster.read(1).max()))
 
 out_image, out_transform = rasterio.mask.mask(dem_raster,imola.geometry,crop=True)
 out_meta = dem_raster.meta
@@ -62,4 +63,4 @@ peak_idx = np.unravel_index(dem_masked.read(1).argmax(),dem_masked.read(1).shape
 peak = dem_masked.xy(peak_idx[0],peak_idx[1])
 ax.plot(peak[0],peak[1],'*')
 fig.savefig('DEM_imola.png',bbox_inches='tight')
-print('Masked: '+str(peak))
+print('Masked: '+lon_lat(peak)+ ' elevation: '+str(dem_masked.read(1).max()))
