@@ -18,7 +18,7 @@ output = os.getcwd() + dem_path
 
 print(output)
 
-com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/')
+com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
 imola = com.loc[com['COMUNE']=='Imola']
 
 bounds = imola.to_crs('WGS84').geometry.bounds
