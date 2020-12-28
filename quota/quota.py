@@ -1,5 +1,7 @@
 # coding=utf-8
 
+# https://www.istat.it/it/files//2018/10/Descrizione-dei-dati-geografici-2020-03-19.pdf
+
 # https://github.com/pandas-dev/pandas/issues/25287#issuecomment-494428308
 import sys
 reload(sys)
@@ -39,6 +41,14 @@ def quota_max(comune):
     obj['norm_name']=normalized_comune
 
     c = com.loc[com['COMUNE']==comune]
+    if len(c)<1:
+        logging.error(u'Comune not found: '+comune)
+        return obj
+
+    if len(c)>1:
+        logging.error(u'Duplicated comune: '+comune)
+        return obj
+
     obj['plate']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].Sigla_automobilistica.values[0]
 
     dem_path = '/'+normalized_comune+'_'+obj['plate']+'_DEM.tif'
@@ -164,3 +174,4 @@ pickle.dump( objs, open( "result.p", "wb" ) )
 # fonti
 # geojson
 # disegnare su DEM il confine del comune
+# toponimi IGM (scaricarli regione per regione)
