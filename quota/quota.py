@@ -38,8 +38,8 @@ def quota_max(comune):
     dem_path = '/'+normalized_comune+'_'+obj['plate']+'_DEM.tif'
     output = os.getcwd() + dem_path    
 
-    obj['COMUNE']=c.COMUNE
-    obj['COD_PROV']=c.COD_PROV
+    obj['COMUNE']=c.COMUNE.values[0]
+    obj['COD_PROV']=c.COD_PROV.values[0]
     obj['provincia']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_UTS.values[0]
 
     bounds = c.to_crs('WGS84').geometry.bounds
@@ -65,7 +65,7 @@ def quota_max(comune):
     location = geolocator.reverse(str(peak_bb[1])+' '+str(peak_bb[0]))
     obj['lon_bb']=peak_bb[0]
     obj['lat_bb']=peak_bb[1]
-    obj['elev_bb']=dem_raster.read(1).max()
+    obj['elev_bb']=np.float64(dem_raster.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
     obj['addr_bb']=location.address
     title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+location.address
     ax.set_title(title)
@@ -92,7 +92,7 @@ def quota_max(comune):
     location = geolocator.reverse(str(peak[1])+' '+str(peak[0]))
     obj['lon']=peak[0]
     obj['lat']=peak[1]
-    obj['elev']=dem_masked.read(1).max()
+    obj['elev']=np.float64(dem_masked.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
     obj['addr']=location.address     
     title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+location.address
     ax.set_title(title)
@@ -106,7 +106,7 @@ geolocator = Nominatim(user_agent="Alessandro")
 print('Load shp...')
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
 print('Load province...')
-prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=2,encoding='utf-8')
+prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=3,encoding='utf-8')
 
 
 objs = []
@@ -130,3 +130,9 @@ for c in campione.COMUNE:
     objs.append(o)
 
 print(objs)    
+
+# legenda quote
+# km
+# fonti
+# geojson
+# disegnare su DEM il confine del comune
