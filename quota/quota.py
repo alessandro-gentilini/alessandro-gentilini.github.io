@@ -84,6 +84,7 @@ def quota_max(comune):
     ax.set_title(title)
     fig.savefig(normalized_comune+'_DEM.png',bbox_inches='tight')
     print(title)
+    plt.close('all')
 
 geolocator = Nominatim(user_agent="Alessandro")    
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
@@ -92,3 +93,8 @@ quota_max(u'Imola')
 quota_max(u'Castel del Rio')
 quota_max(u'Malé')
 quota_max(u"Sant'Angelo in Vado")
+
+campione = com.sample(10,random_state=19760106)
+for c in campione.COMUNE:
+    print('Processing '+c)
+    quota_max(c)
