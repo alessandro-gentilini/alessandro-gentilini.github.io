@@ -91,4 +91,4 @@ com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com0101202
 quota_max(u'Imola')
 quota_max(u'Castel del Rio')
 quota_max(u'Malé')
-
+quota_max(u"Sant'Angelo in Vado")
