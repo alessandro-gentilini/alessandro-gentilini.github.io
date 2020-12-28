@@ -150,9 +150,12 @@ for c in campione.COMUNE:
     objs.append(o)
 
 i = 0
-sz = len(com)
+i_begin = int(sys.argv[1])
+i_end = int(sys.argv[2])
+sz = i_end-i_begin
 objs = []
-for c in com.COMUNE:
+for j in range(i_begin,i_end):
+    c = com.iloc[j].COMUNE
     print('\n\nProcessing '+c+' '+str(i)+' '+str((100.*i)/sz))
     o = {}
     try:
@@ -161,13 +164,16 @@ for c in com.COMUNE:
         logging.error(c)
         logging.error(traceback.format_exc())
     objs.append(o)
+    json_str = json.dumps(o,indent=2)
+    with open('result_{:04d}.json'.format(j), 'w') as text_file:
+        text_file.write(json_str)    
     i=i+1
 
 json_str = json.dumps(objs,indent=2)
-with open("result.json", "w") as text_file:
+with open('result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text_file:
     text_file.write(json_str)
 
-pickle.dump( objs, open( "result.p", "wb" ) )    
+pickle.dump( objs, open( 'result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb' ) )    
 
 # legenda quote
 # km
