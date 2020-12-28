@@ -32,10 +32,12 @@ def quota_max(comune):
     normalized_comune = normalize(comune)
     obj['norm_name']=normalized_comune
 
-    dem_path = '/'+normalized_comune+'_DEM.tif'
-    output = os.getcwd() + dem_path
-
     c = com.loc[com['COMUNE']==comune]
+    obj['plate']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].Sigla_automobilistica.values[0]
+
+    dem_path = '/'+normalized_comune+'_'+obj['plate']+'_DEM.tif'
+    output = os.getcwd() + dem_path    
+
     obj['COMUNE']=c.COMUNE
     obj['COD_PROV']=c.COD_PROV
     obj['provincia']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_UTS.values[0]
@@ -53,7 +55,7 @@ def quota_max(comune):
 
     fig, ax = plt.subplots()
     c.plot(ax=ax)
-    fig.savefig(normalized_comune+'_limits.png',bbox_inches='tight')
+    fig.savefig(normalized_comune+'_'+obj['plate']+'_limits.png',bbox_inches='tight')
 
     fig, ax = plt.subplots()
     show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
@@ -67,7 +69,7 @@ def quota_max(comune):
     obj['addr_bb']=location.address
     title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+location.address
     ax.set_title(title)
-    fig.savefig(normalized_comune+'_DEM_bb.png',bbox_inches='tight')
+    fig.savefig(normalized_comune+'_'+obj['plate']+'_DEM_bb.png',bbox_inches='tight')
 
     out_image, out_transform = rasterio.mask.mask(dem_raster,c.geometry,crop=True)
     out_meta = dem_raster.meta
@@ -77,7 +79,7 @@ def quota_max(comune):
                     "width": out_image.shape[2],
                     "transform": out_transform})
 
-    masked_tif = normalized_comune+'_DEM_masked.tif'
+    masked_tif = normalized_comune+'_'+obj['plate']+'_DEM_masked.tif'
     with rasterio.open(masked_tif, 'w', **out_meta) as dest:
         dest.write(out_image)
 
@@ -94,13 +96,16 @@ def quota_max(comune):
     obj['addr']=location.address     
     title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+location.address
     ax.set_title(title)
-    fig.savefig(normalized_comune+'_DEM.png',bbox_inches='tight')
+    fig.savefig(normalized_comune+'_'+obj['plate']+'_DEM.png',bbox_inches='tight')
 
     plt.close('all')
     return obj
 
+print('Create geolocator...')
 geolocator = Nominatim(user_agent="Alessandro")    
+print('Load shp...')
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
+print('Load province...')
 prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=2,encoding='utf-8')
 
 
