@@ -16,6 +16,12 @@ import rasterio.mask
 from geopy.geocoders import Nominatim
 import unicodedata
 import pandas as pd
+import traceback
+import logging
+import json
+import pickle
+
+
 
 def lon_lat(p):
     return 'lon: '+ str(p[0]) + ' lat: '+ str(p[1])
@@ -126,10 +132,32 @@ objs.append(o)
 campione = com.sample(10,random_state=19760106)
 for c in campione.COMUNE:
     print('\n\nProcessing '+c)
-    o = quota_max(c)
+    o = {}
+    try:
+        o = quota_max(c)
+    except Exception as e:
+        logging.error(traceback.format_exc())
     objs.append(o)
 
-print(objs)    
+i = 0
+sz = len(com)
+objs = []
+for c in com.COMUNE:
+    print('\n\nProcessing '+c+' '+str(i)+' '+str((100.*i)/sz))
+    o = {}
+    try:
+        o = quota_max(c)
+    except Exception as e:
+        logging.error(c)
+        logging.error(traceback.format_exc())
+    objs.append(o)
+    i=i+1
+
+json_str = json.dumps(objs,indent=2)
+with open("result.json", "w") as text_file:
+    text_file.write(json_str)
+
+pickle.dump( objs, open( "result.p", "wb" ) )    
 
 # legenda quote
 # km
