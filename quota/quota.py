@@ -1,3 +1,10 @@
+# coding=utf-8
+
+# https://github.com/pandas-dev/pandas/issues/25287#issuecomment-494428308
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 import geopandas as gpd
 import elevation
 import matplotlib.pyplot as plt
@@ -14,7 +21,7 @@ def lon_lat(p):
 
 def normalize(s):
     t = unicodedata.normalize('NFKD', s).encode('ASCII', 'ignore')
-    t = s.replace(' ','_')
+    t = t.replace(' ','_')
     t = t.replace("'",'')
     return t
 
@@ -83,3 +90,5 @@ com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com0101202
 
 quota_max(u'Imola')
 quota_max(u'Castel del Rio')
+quota_max(u'Malé')
+
