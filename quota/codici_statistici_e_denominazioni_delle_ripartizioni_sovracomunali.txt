@@ -1,4 +1,5 @@
-source: https://www.istat.it/it/files//2011/01/Tutti-i-file-1.zip
+source_1: https://www.istat.it/it/archivio/6789 
+source_2: https://www.istat.it/it/files//2011/01/Tutti-i-file-1.zip
 accessed: 20202812
 NUTS1_2010;NUTS1_2021;COD_RIP;DEN_RIP_Maiuscolo;DEN_RIP;NUTS2_2010;NUTS2_2021;COD_REG;DEN_REG_Maiuscolo;DEN_REG;TIPO_REG;NUTS3_2010;NUTS3_2021;COD_UTS_AM;COD_UTS_ST;DEN_UTS;note;TIPO_UTS;Sigla_automobilistica;COD_PROV_Storico
 ITC;ITC;1;NORD-OVEST;Nord-ovest;ITC1;ITC1;01;PIEMONTE;Piemonte;1;ITC11;ITC11;201;201;Torino;(b);Citta metropolitana;TO;001
