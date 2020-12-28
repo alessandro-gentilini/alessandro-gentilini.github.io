@@ -106,7 +106,7 @@ geolocator = Nominatim(user_agent="Alessandro")
 print('Load shp...')
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
 print('Load province...')
-prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=3,encoding='utf-8')
+prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=3,encoding='utf-8',keep_default_na=False,na_values=['_'])
 
 
 objs = []
