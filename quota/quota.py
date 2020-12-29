@@ -178,19 +178,19 @@ sz = i_end-i_begin
 objs = []
 for j in range(i_begin,i_end):
     c = com.iloc[j].COMUNE
-    print('\n\nProcessing '+c+' '+str(i)+' '+str((100.*i)/sz))
+    print('\n\nProcessing '+c+' '+str(j)+' '+str((100.*i)/sz))
     o = {}
     try:
         o = quota_max(c)
+        objs.append(o)
+        json_str = json.dumps(o,indent=2)
+        with open('./json/result_{:04d}.json'.format(j), 'w') as text_file:
+            text_file.write(json_str)        
         print('OK Processing '+c+'\n\n')
     except Exception as e:
         logging.error(c)
         logging.error(traceback.format_exc())
-        print('Error Processing '+c+' '+str(e)+'\n\n')
-    objs.append(o)
-    json_str = json.dumps(o,indent=2)
-    with open('./json/result_{:04d}.json'.format(j), 'w') as text_file:
-        text_file.write(json_str)    
+        print('Error Processing '+c+' '+str(j)+' '+str(e)+'\n\n')
     i=i+1
     pickle.dump(cache, open(cache_path, 'wb'))
 
