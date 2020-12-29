@@ -31,6 +31,7 @@ def query_geocoder_server(query):
 
 def get_address(query):
     if query not in cache:
+        print('****** Not in cache '+query)
         cache[query] = query_geocoder_server(query)
     return cache[query]
 
@@ -139,7 +140,7 @@ if Path(cache_path).exists():
     cache = pickle.load(open(cache_path, 'rb'))
 
 print('Create geolocator...')
-geolocator = Nominatim(user_agent="Alessandro")    
+geolocator = Nominatim(user_agent="https://github.com/alessandro-gentilini/alessandro-gentilini.github.io/blob/master/quota/quota.py")    
 print('Load shp...')
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
 print('Load province...')
@@ -148,27 +149,27 @@ prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovraco
 
 objs = []
 
-o = quota_max(u'Imola')
-objs.append(o)
+# o = quota_max(u'Imola')
+# objs.append(o)
 
-o = quota_max(u'Castel del Rio')
-objs.append(o)
+# o = quota_max(u'Castel del Rio')
+# objs.append(o)
 
-o = quota_max(u'Malé')
-objs.append(o)
+# o = quota_max(u'Malé')
+# objs.append(o)
 
-o = quota_max(u"Sant'Angelo in Vado")
-objs.append(o)
+# o = quota_max(u"Sant'Angelo in Vado")
+# objs.append(o)
 
-campione = com.sample(10,random_state=19760106)
-for c in campione.COMUNE:
-    print('\n\nProcessing '+c)
-    o = {}
-    try:
-        o = quota_max(c)
-    except Exception as e:
-        logging.error(traceback.format_exc())
-    objs.append(o)
+# campione = com.sample(10,random_state=19760106)
+# for c in campione.COMUNE:
+#     print('\n\nProcessing '+c)
+#     o = {}
+#     try:
+#         o = quota_max(c)
+#     except Exception as e:
+#         logging.error(traceback.format_exc())
+#     objs.append(o)
 
 i = 0
 i_begin = int(sys.argv[1])
