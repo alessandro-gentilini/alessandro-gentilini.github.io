@@ -22,8 +22,17 @@ import traceback
 import logging
 import json
 import pickle
+import time
+from pathlib import Path
 
+def query_geocoder_server(query):
+    time.sleep(1) # https://operations.osmfoundation.org/policies/nominatim/
+    return geolocator.reverse(query).address
 
+def get_address(query):
+    if query not in cache:
+        cache[query] = query_geocoder_server(query)
+    return cache[query]
 
 def lon_lat(p):
     return 'lon: '+ str(p[0]) + ' lat: '+ str(p[1])
@@ -50,13 +59,14 @@ def quota_max(comune):
         return obj
 
     obj['plate']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].Sigla_automobilistica.values[0]
-
-    dem_path = '/'+normalized_comune+'_'+obj['plate']+'_DEM.tif'
-    output = os.getcwd() + dem_path    
-
     obj['COMUNE']=c.COMUNE.values[0]
     obj['COD_PROV']=c.COD_PROV.values[0]
     obj['provincia']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_UTS.values[0]
+    obj['regione']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_REG.values[0][0:3].upper()
+
+    basename = obj['regione']+'-'+obj['plate']+'-'+obj['norm_name']
+    dem_path = '/'+basename+'-DEM.tif'
+    output = os.getcwd() + dem_path        
 
     bounds = c.to_crs('WGS84').geometry.bounds
     west = float(bounds.minx)
@@ -71,21 +81,23 @@ def quota_max(comune):
 
     fig, ax = plt.subplots()
     c.plot(ax=ax)
-    fig.savefig(normalized_comune+'_'+obj['plate']+'_limits.png',bbox_inches='tight')
+    fig.savefig(basename+'-limits.png',bbox_inches='tight')
 
     fig, ax = plt.subplots()
     show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
     peak_idx = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
     peak_bb = dem_raster.xy(peak_idx[0],peak_idx[1])
     ax.plot(peak_bb[0],peak_bb[1],'*')
-    location = geolocator.reverse(str(peak_bb[1])+' '+str(peak_bb[0]))
+    query = str(round(peak_bb[1],6))+' '+str(round(peak_bb[0],6))
+    print(query)
+    address = get_address(query)
     obj['lon_bb']=peak_bb[0]
     obj['lat_bb']=peak_bb[1]
     obj['elev_bb']=np.float64(dem_raster.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
-    obj['addr_bb']=location.address
-    title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+location.address
+    obj['addr_bb']=address
+    title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+obj['addr_bb']
     ax.set_title(title)
-    fig.savefig(normalized_comune+'_'+obj['plate']+'_DEM_bb.png',bbox_inches='tight')
+    fig.savefig(basename+'-DEM-bb.png',bbox_inches='tight')
 
     out_image, out_transform = rasterio.mask.mask(dem_raster,c.geometry,crop=True)
     out_meta = dem_raster.meta
@@ -95,7 +107,7 @@ def quota_max(comune):
                     "width": out_image.shape[2],
                     "transform": out_transform})
 
-    masked_tif = normalized_comune+'_'+obj['plate']+'_DEM_masked.tif'
+    masked_tif = basename+'-DEM-masked.tif'
     with rasterio.open(masked_tif, 'w', **out_meta) as dest:
         dest.write(out_image)
 
@@ -105,17 +117,26 @@ def quota_max(comune):
     peak_idx = np.unravel_index(dem_masked.read(1).argmax(),dem_masked.read(1).shape)
     peak = dem_masked.xy(peak_idx[0],peak_idx[1])
     ax.plot(peak[0],peak[1],'*')
-    location = geolocator.reverse(str(peak[1])+' '+str(peak[0]))
+    query = str(round(peak[1],6))+' '+str(round(peak[0],6))
+    print(query)
+    address = get_address(query)
     obj['lon']=peak[0]
     obj['lat']=peak[1]
     obj['elev']=np.float64(dem_masked.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
-    obj['addr']=location.address     
-    title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+location.address
+    obj['addr']=address     
+    title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+obj['addr']
     ax.set_title(title)
-    fig.savefig(normalized_comune+'_'+obj['plate']+'_DEM.png',bbox_inches='tight')
+    fig.savefig(basename+'-DEM.png',bbox_inches='tight')
 
     plt.close('all')
     return obj
+
+
+print('Load cache...')
+cache_path = 'cache.p'
+cache = dict()
+if Path(cache_path).exists():
+    cache = pickle.load(open(cache_path, 'rb'))
 
 print('Create geolocator...')
 geolocator = Nominatim(user_agent="Alessandro")    
@@ -174,6 +195,7 @@ with open('result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text_file:
     text_file.write(json_str)
 
 pickle.dump( objs, open( 'result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb' ) )    
+pickle.dump(cache, open(cache_path, 'wb'))
 
 # legenda quote
 # km
