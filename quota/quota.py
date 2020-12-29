@@ -182,14 +182,17 @@ for j in range(i_begin,i_end):
     o = {}
     try:
         o = quota_max(c)
+        print('OK Processing '+c+'\n\n')
     except Exception as e:
         logging.error(c)
         logging.error(traceback.format_exc())
+        print('Error Processing '+c+' '+str(e)+'\n\n')
     objs.append(o)
     json_str = json.dumps(o,indent=2)
     with open('./json/result_{:04d}.json'.format(j), 'w') as text_file:
         text_file.write(json_str)    
     i=i+1
+    pickle.dump(cache, open(cache_path, 'wb'))
 
 json_str = json.dumps(objs,indent=2)
 with open('./json/result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text_file:
