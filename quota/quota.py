@@ -26,7 +26,7 @@ import time
 from pathlib import Path
 
 def query_geocoder_server(query):
-    time.sleep(1) # https://operations.osmfoundation.org/policies/nominatim/
+    time.sleep(10) # https://operations.osmfoundation.org/policies/nominatim/
     return geolocator.reverse(query).address
 
 def get_address(query):
@@ -66,7 +66,7 @@ def quota_max(comune):
     obj['regione']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_REG.values[0][0:3].upper()
 
     basename = obj['regione']+'-'+obj['plate']+'-'+obj['norm_name']
-    dem_path = '/'+basename+'-DEM.tif'
+    dem_path = '/tif/'+basename+'-DEM.tif'
     output = os.getcwd() + dem_path        
 
     bounds = c.to_crs('WGS84').geometry.bounds
@@ -82,7 +82,7 @@ def quota_max(comune):
 
     fig, ax = plt.subplots()
     c.plot(ax=ax)
-    fig.savefig(basename+'-limits.png',bbox_inches='tight')
+    fig.savefig('./png/'+basename+'-limits.png',bbox_inches='tight')
 
     fig, ax = plt.subplots()
     show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
@@ -98,7 +98,7 @@ def quota_max(comune):
     obj['addr_bb']=address
     title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+obj['addr_bb']
     ax.set_title(title)
-    fig.savefig(basename+'-DEM-bb.png',bbox_inches='tight')
+    fig.savefig('./png/'+basename+'-DEM-bb.png',bbox_inches='tight')
 
     out_image, out_transform = rasterio.mask.mask(dem_raster,c.geometry,crop=True)
     out_meta = dem_raster.meta
@@ -108,7 +108,7 @@ def quota_max(comune):
                     "width": out_image.shape[2],
                     "transform": out_transform})
 
-    masked_tif = basename+'-DEM-masked.tif'
+    masked_tif = './tif/'+basename+'-DEM-masked.tif'
     with rasterio.open(masked_tif, 'w', **out_meta) as dest:
         dest.write(out_image)
 
@@ -127,7 +127,7 @@ def quota_max(comune):
     obj['addr']=address     
     title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+obj['addr']
     ax.set_title(title)
-    fig.savefig(basename+'-DEM.png',bbox_inches='tight')
+    fig.savefig('./png/'+basename+'-DEM.png',bbox_inches='tight')
 
     plt.close('all')
     return obj
@@ -187,15 +187,15 @@ for j in range(i_begin,i_end):
         logging.error(traceback.format_exc())
     objs.append(o)
     json_str = json.dumps(o,indent=2)
-    with open('result_{:04d}.json'.format(j), 'w') as text_file:
+    with open('./json/result_{:04d}.json'.format(j), 'w') as text_file:
         text_file.write(json_str)    
     i=i+1
 
 json_str = json.dumps(objs,indent=2)
-with open('result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text_file:
+with open('./json/result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text_file:
     text_file.write(json_str)
 
-pickle.dump( objs, open( 'result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb' ) )    
+pickle.dump(objs, open('./p/result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb'))    
 pickle.dump(cache, open(cache_path, 'wb'))
 
 # legenda quote
