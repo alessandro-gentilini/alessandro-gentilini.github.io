@@ -207,3 +207,5 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # geojson
 # disegnare su DEM il confine del comune
 # toponimi IGM (scaricarli regione per regione)
+# disegnare municipio
+# usare minimo locale e non zero
