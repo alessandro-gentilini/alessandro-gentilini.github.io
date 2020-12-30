@@ -25,6 +25,7 @@ import pickle
 import time
 from pathlib import Path
 
+# https://realpython.com/lru-cache-python/#implementing-a-cache-using-a-python-dictionary
 def query_geocoder_server(query):
     time.sleep(10) # https://operations.osmfoundation.org/policies/nominatim/
     return geolocator.reverse(query).address
@@ -85,7 +86,7 @@ def quota_max(comune):
     fig.savefig('./png/'+basename+'-limits.png',bbox_inches='tight')
 
     lowest_bb = dem_raster.read(1).min()
-    obj['lowest_bb'] = lowest_bb
+    obj['lowest_bb'] = np.float64(lowest_bb)
 
     fig, ax = plt.subplots()
     show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
@@ -143,7 +144,7 @@ if Path(cache_path).exists():
     cache = pickle.load(open(cache_path, 'rb'))
 
 print('Create geolocator...')
-geolocator = Nominatim(user_agent="https://github.com/alessandro-gentilini/alessandro-gentilini.github.io/blob/master/quota/quota.py")    
+geolocator = Nominatim(user_agent="I would like to make about 8k queries once, after that no more queries https://github.com/alessandro-gentilini/alessandro-gentilini.github.io/blob/master/quota/quota.py")    
 print('Load shp...')
 com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
 print('Load province...')
@@ -212,3 +213,4 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # toponimi IGM (scaricarli regione per regione)
 # disegnare municipio
 # usare minimo locale e non zero
+# disegnare il toponimo piu vicino
