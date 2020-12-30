@@ -32,8 +32,8 @@ monumento2= (11.6950927,44.3605792)
 
 one_km = distance.distance(kilometers=2.188484)
 piratello_hat = one_km.destination(point=monumento, bearing=292)
-print('piratello',piratello)
-print('stima',piratello_hat)
+#print('piratello',piratello)
+#print('stima',piratello_hat)
 #print(my_distance(piratello[0],piratello[1],piratello_hat[0],piratello_hat[1]))
 #print(distance.distance(piratello,piratello_hat))
 
@@ -43,7 +43,10 @@ print('stima',piratello_hat)
 #dem_raster = rasterio.open('./tif/LAZ-RM-Roma-DEM.tif')
 #dem_raster = rasterio.open('./tif/CAM-SA-Atrani-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-BO-Bologna-DEM.tif')
-dem_raster = rasterio.open('./tif/EMI-BO-Imola-DEM.tif')
+#dem_raster = rasterio.open('./tif/EMI-BO-Imola-DEM.tif')
+#dem_raster = rasterio.open('./tif/EMI-BO-Mordano-DEM.tif')
+#dem_raster = rasterio.open('./tif/EMI-RA-Brisighella-DEM.tif')
+dem_raster = rasterio.open('./tif/TRE-BZ-Stelvio-DEM.tif')
 #print(dem_raster.crs)
 
 nda = dem_raster.read(1)
@@ -98,32 +101,32 @@ dist = distance.distance(p0,p1).meters
 
 #ax.plot(peak_bb[0],peak_bb[1],'*')
 #ax.plot([L[0],R[0]],[L[1],R[1]], 'k-')                                
-ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'k-', linewidth=5)
-ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'w-', linewidth=2)
-ax.plot(tl[0],tl[1],'r*')
-ax.plot(tr[0],tr[1],'g*')
-ax.plot(bl[0],bl[1],'w*')
-ax.plot(br[0],br[1],'b*')
-ax.plot(piratello[1],piratello[0],'o')
-ax.plot(monumento[1],monumento[0],'o')
-ax.plot([piratello[1],monumento[1]],[piratello[0],monumento[0]], 'w-', linewidth=2)
+#ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'k-', linewidth=5)
+#ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'w-', linewidth=2)
+#ax.plot(tl[0],tl[1],'r*')
+#ax.plot(tr[0],tr[1],'g*')
+#ax.plot(bl[0],bl[1],'w*')
+#ax.plot(br[0],br[1],'b*')
+#ax.plot(piratello[1],piratello[0],'o')
+#ax.plot(monumento[1],monumento[0],'o')
+#ax.plot([piratello[1],monumento[1]],[piratello[0],monumento[0]], 'w-', linewidth=2)
 ax.plot([bl1[0],br1[0]],[bl1[1],br1[1]], 'k-', linewidth=3)
 ax.plot([bl1[0],br1[0]],[bl1[1],br1[1]], 'w-', linewidth=1)
-d2 = my_distance(piratello[0],piratello[1],monumento[0],monumento[1])
-d3 = my_distance(monumento[0],monumento[1],piratello[0],piratello[1])
+#d2 = my_distance(piratello[0],piratello[1],monumento[0],monumento[1])
+#d3 = my_distance(monumento[0],monumento[1],piratello[0],piratello[1])
 
-txt = ax.text(piratello[1],piratello[0],str(d2)+'m',
-        color='w',
-        horizontalalignment='center',
-        verticalalignment='bottom',
-        fontsize=15
-        )
-txt = ax.text((p0[0]+p1[0])/2,p1[1]*1.00005,str(int(round(dist)))+'m',
-        color='w',
-        horizontalalignment='center',
-        verticalalignment='bottom',
-        fontsize=15
-        )
+#txt = ax.text(piratello[1],piratello[0],str(d2)+'m',
+        #color='w',
+        #horizontalalignment='center',
+        #verticalalignment='bottom',
+        #fontsize=15
+        #)
+# txt = ax.text((p0[0]+p1[0])/2,p1[1]*1.00005,str(int(round(dist)))+'m',
+#         color='w',
+#         horizontalalignment='center',
+#         verticalalignment='bottom',
+#         fontsize=15
+#         )
 txt = ax.text((bl1[0]+br1[0])/2,bl1[1]*1.00005,scale_label,
         color='w',
         horizontalalignment='center',
