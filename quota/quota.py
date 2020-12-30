@@ -84,6 +84,9 @@ def quota_max(comune):
     c.plot(ax=ax)
     fig.savefig('./png/'+basename+'-limits.png',bbox_inches='tight')
 
+    lowest_bb = dem_raster.read(1).min()
+    obj['lowest_bb'] = lowest_bb
+
     fig, ax = plt.subplots()
     show(source=dem_raster.read(1),ax=ax,cmap='pink',transform=dem_raster.transform)
     peak_idx = np.unravel_index(dem_raster.read(1).argmax(),dem_raster.read(1).shape)
@@ -102,7 +105,7 @@ def quota_max(comune):
 
     out_image, out_transform = rasterio.mask.mask(dem_raster,c.geometry,crop=True)
     out_meta = dem_raster.meta
-    out_image[out_image==-32768]=0
+    out_image[out_image==-32768]=lowest_bb
     out_meta.update({"driver": "GTiff",
                     "height": out_image.shape[1],
                     "width": out_image.shape[2],
