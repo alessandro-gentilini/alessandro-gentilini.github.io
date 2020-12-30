@@ -70,7 +70,7 @@ txt = ax.text((p0[0]+p1[0])/2,p1[1]*1.00005,str(int(round(dist)))+'m',
         fontsize=15
         )
 txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
-plt.draw()
+
 
 # plot on the same axis with rio.plot.show
 image = show(nda,
