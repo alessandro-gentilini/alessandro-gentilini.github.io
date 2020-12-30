@@ -24,6 +24,14 @@ import json
 import pickle
 import time
 from pathlib import Path
+import pandas as pd
+import math 
+from sklearn.neighbors import NearestNeighbors
+
+def query_nga(lat,lon):
+    distance,index = nbrs.kneighbors([[math.pi*lat/180,math.pi*lon/180]])
+    # print(distance[0][0],nga.iloc[index[0][0]].FULL_NAME_RO,nga.iloc[index[0][0]].LAT,nga.iloc[index[0][0]].LONG)
+    return nga.iloc[index[0][0]].FULL_NAME_RO
 
 # https://realpython.com/lru-cache-python/#implementing-a-cache-using-a-python-dictionary
 def query_geocoder_server(query):
@@ -103,7 +111,8 @@ def quota_max(comune):
     obj['lat_bb']=peak_bb[1]
     obj['elev_bb']=np.float64(dem_raster.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
     obj['addr_bb']=address
-    title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\naddress: '+obj['addr_bb']
+    obj['nga_reverse_bb']=query_nga(peak_bb[1],peak_bb[0])
+    title = comune+' ('+obj['provincia']+')'+'\nBounding box: '+lon_lat(peak_bb)+' elevation: '+str(obj['elev_bb'])+'\nNominatim: '+obj['addr_bb']+'\nNGA: '+obj['nga_reverse_bb']
     ax.set_title(title)
     fig.savefig('./png/'+basename+'-DEM-bb.png',bbox_inches='tight')
 
@@ -131,8 +140,9 @@ def quota_max(comune):
     obj['lon']=peak[0]
     obj['lat']=peak[1]
     obj['elev']=np.float64(dem_masked.read(1).max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
-    obj['addr']=address     
-    title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\naddress: '+obj['addr']
+    obj['addr']=address
+    obj['nga_reverse']=query_nga(peak[1],peak[0])
+    title = comune+' ('+obj['provincia']+')'+'\nMasked: '+lon_lat(peak)+ ' elevation: '+str(obj['elev'])+'\nNominatim: '+obj['addr']+'\nNGA: '+obj['nga_reverse']
     ax.set_title(title)
     fig.savefig('./png/'+basename+'-DEM.png',bbox_inches='tight')
 
@@ -145,6 +155,13 @@ cache_path = 'cache.p'
 cache = dict()
 if Path(cache_path).exists():
     cache = pickle.load(open(cache_path, 'rb'))
+
+# https://geonames.nga.mil/gns/html/gis_countryfiles.html
+# https://geonames.nga.mil/gns/html/cntyfile/it.zip
+print('Load NGA data...')
+nga = pd.read_csv('it.txt',sep='\t',encoding='utf-8',dtype={'ADM1':str,'TRANSL_CD':str,'F_TERM_DT':str})
+X = math.pi*nga[['LAT','LONG']]/180
+nbrs = NearestNeighbors(n_neighbors=1, metric='haversine').fit(X)
 
 print('Create geolocator...')
 geolocator = Nominatim(user_agent="I would like to make about 8k queries once, after that no more queries https://github.com/alessandro-gentilini/alessandro-gentilini.github.io/blob/master/quota/quota.py")    
@@ -215,5 +232,6 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # disegnare su DEM il confine del comune
 # toponimi IGM (scaricarli regione per regione)
 # disegnare municipio
-# usare minimo locale e non zero
+# usare minimo locale e non zero, fatto
 # disegnare il toponimo piu vicino
+# Imola 2762

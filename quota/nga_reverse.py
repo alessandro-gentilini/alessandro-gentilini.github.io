@@ -2,7 +2,7 @@ import pandas as pd
 import math 
 from sklearn.neighbors import NearestNeighbors
 
-nga = pd.read_csv('it.txt',sep='\t',encoding='utf-8')
+nga = pd.read_csv('it.txt',sep='\t',encoding='utf-8',dtype={'ADM1':str,'TRANSL_CD':str,'F_TERM_DT':str})
 X = math.pi*nga[['LAT','LONG']]/180
 
 nbrs = NearestNeighbors(n_neighbors=1, metric='haversine').fit(X)
