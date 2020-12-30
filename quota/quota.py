@@ -28,13 +28,16 @@ from pathlib import Path
 # https://realpython.com/lru-cache-python/#implementing-a-cache-using-a-python-dictionary
 def query_geocoder_server(query):
     time.sleep(10) # https://operations.osmfoundation.org/policies/nominatim/
-    return geolocator.reverse(query).address
+    return geolocator.reverse(query)
 
 def get_address(query):
     if query not in cache:
         print('****** Not in cache '+query)
         cache[query] = query_geocoder_server(query)
-    return cache[query]
+    if hasattr(cache[query],'address'):
+        return cache[query].address
+    else:
+        return cache[query]
 
 def lon_lat(p):
     return 'lon: '+ str(p[0]) + ' lat: '+ str(p[1])
