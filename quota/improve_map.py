@@ -4,7 +4,14 @@ import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects
 from geopy import distance
 
-dem_raster = rasterio.open('./EMI-BO-Imola-DEM.tif')
+piratello = (44.3704275, 11.6713168)
+monumento = (44.3605792, 11.6950927)
+
+
+#dem_raster = rasterio.open('./tif/LAZ-RM-Roma-DEM.tif')
+#dem_raster = rasterio.open('./tif/CAM-SA-Atrani-DEM.tif')
+#dem_raster = rasterio.open('./tif/EMI-BO-Bologna-DEM.tif')
+dem_raster = rasterio.open('./tif/EMI-BO-Imola-DEM.tif')
 print(dem_raster.crs)
 
 nda = dem_raster.read(1)
@@ -29,20 +36,39 @@ print(p0)
 p1 = dem_raster.xy(x_1,y_1)
 print(p1)
 
+tl = dem_raster.xy(0,0)
+tr = dem_raster.xy(0,nda.shape[1])
+bl = dem_raster.xy(nda.shape[0],0)
+br = dem_raster.xy(nda.shape[0],nda.shape[1])
+
 dist = distance.distance(p0,p1).meters
 print('Distance: '+str(dist))
 
 
 #ax.plot(peak_bb[0],peak_bb[1],'*')
 #ax.plot([L[0],R[0]],[L[1],R[1]], 'k-')                                
-ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'k-', linewidth=5)      
-ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'w-', linewidth=2)   
+ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'k-', linewidth=5)
+ax.plot([p0[0],p1[0]],[p0[1],p1[1]], 'w-', linewidth=2)
+ax.plot(tl[0],tl[1],'r*')
+ax.plot(tr[0],tr[1],'g*')
+ax.plot(bl[0],bl[1],'w*')
+ax.plot(br[0],br[1],'b*')
+ax.plot(piratello[1],piratello[0],'o')
+ax.plot(monumento[1],monumento[0],'o')
+ax.plot([piratello[1],monumento[1]],[piratello[0],monumento[0]], 'w-', linewidth=2)
+d2 = distance.distance(piratello,monumento).meters
+txt = ax.text(piratello[1],piratello[0],str(d2)+'m',
+        color='w',
+        horizontalalignment='center',
+        verticalalignment='bottom',
+        fontsize=15
+        )
 txt = ax.text((p0[0]+p1[0])/2,p1[1]*1.00005,str(int(round(dist)))+'m',
         color='w',
         horizontalalignment='center',
         verticalalignment='bottom',
         fontsize=15
-        )                          
+        )
 txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
 plt.draw()
 
