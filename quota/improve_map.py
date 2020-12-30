@@ -41,25 +41,30 @@ piratello_hat = one_km.destination(point=monumento, bearing=292)
 
 
 #dem_raster = rasterio.open('./tif/LAZ-RM-Roma-DEM.tif')
+#dem_raster = rasterio.open('./tif/SIC-ME-Lipari-DEM.tif')
+#dem_raster = rasterio.open('./tif/EMI-RE-Boretto-DEM.tif')
+#dem_raster = rasterio.open('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
+dem_raster = rasterio.open('./tif/VAL-AO-Courmayeur-DEM.tif')
+#dem_raster = rasterio.open('./tif/VAL-AO-Valtournenche-DEM.tif')
 #dem_raster = rasterio.open('./tif/CAM-SA-Atrani-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-BO-Bologna-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-BO-Imola-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-BO-Mordano-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-RA-Brisighella-DEM.tif')
-dem_raster = rasterio.open('./tif/TRE-BZ-Stelvio-DEM.tif')
+#dem_raster = rasterio.open('./tif/TRE-BZ-Stelvio-DEM.tif')
 #print(dem_raster.crs)
 
 nda = dem_raster.read(1)
 
 fig, ax = plt.subplots()
-show(source=nda,ax=ax,cmap='pink',transform=dem_raster.transform)
+show(source=nda,ax=ax,cmap='gist_earth',transform=dem_raster.transform)
 
 
 # https://stackoverflow.com/a/63043659
 fig, ax = plt.subplots()
 # use imshow so that we have something to map the colorbar to
 image_hidden = ax.imshow(nda, 
-                         cmap='pink')
+                         cmap='gist_earth')
 
 x_0=nda.shape[0]/10
 x_1=x_0
@@ -140,7 +145,7 @@ txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
 image = show(nda,
              transform=dem_raster.transform, 
              ax=ax, 
-             cmap='pink')
+             cmap='gist_earth')
 
                
 

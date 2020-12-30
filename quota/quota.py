@@ -225,8 +225,8 @@ with open('./json/result_{:04d}-{:04d}.json'.format(i_begin,i_end), 'w') as text
 pickle.dump(objs, open('./p/result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb'))    
 pickle.dump(cache, open(cache_path, 'wb'))
 
-# legenda quote
-# km
+# legenda quote, da provare
+# km, da provare
 # fonti
 # geojson
 # disegnare su DEM il confine del comune
@@ -235,3 +235,4 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # usare minimo locale e non zero, fatto
 # disegnare il toponimo piu vicino
 # Imola 2762
+# colormap fisica blu verde marrone bianco
