@@ -2057,6 +2057,55 @@
       "deaths": 147,
       "recovered": 3812,
       "active": 1128.0
+    },
+    {
+      "date": "2020-12-24",
+      "confirmed": 5133,
+      "deaths": 150,
+      "recovered": 3868,
+      "active": 1115.0
+    },
+    {
+      "date": "2020-12-25",
+      "confirmed": 5209,
+      "deaths": 150,
+      "recovered": 3919,
+      "active": 1140.0
+    },
+    {
+      "date": "2020-12-26",
+      "confirmed": 5266,
+      "deaths": 150,
+      "recovered": 3919,
+      "active": 1197.0
+    },
+    {
+      "date": "2020-12-27",
+      "confirmed": 5338,
+      "deaths": 150,
+      "recovered": 3919,
+      "active": 1269.0
+    },
+    {
+      "date": "2020-12-28",
+      "confirmed": 5368,
+      "deaths": 150,
+      "recovered": 4042,
+      "active": 1176.0
+    },
+    {
+      "date": "2020-12-29",
+      "confirmed": 5404,
+      "deaths": 156,
+      "recovered": 4163,
+      "active": 1085.0
+    },
+    {
+      "date": "2020-12-30",
+      "confirmed": 5431,
+      "deaths": 161,
+      "recovered": 4211,
+      "active": 1059.0
     }
   ]
 }
