@@ -123,13 +123,19 @@ def analyze(comune):
     peak_lon = peak_lon_lat[0]
     peak_lat = peak_lon_lat[1]
 
+    obj['lon_bb']=peak_lon
+    obj['lat_bb']=peak_lat
+    obj['elev_bb']=np.float64(nda.max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
+
     nga_nearest = query_nga(peak_lat,peak_lon)
     
     query_decimals = 6
     query = str(round(peak_lat,query_decimals))+' '+str(round(peak_lon,query_decimals))
     nominatim_nearest = shorten(query_nominatim_cache(query),obj['provincia'],obj['regione_full'])
 
-    title = comune + ', ' + obj['provincia'] + ', ' + obj['regione_full']
+    title = u'■: ' +comune + ', ' + obj['provincia'] + ', ' + obj['regione_full']
+    title = title + '\n'
+    title = title + u'▲: quota ' + str(int(obj['elev_bb'])) + 'm lat: ' + str(round(obj['lat_bb'],6)) + ' lon: ' + str(round(obj['lon_bb'],6))
     title = title + '\n'
     title = title + 'NGA: ' + nga_nearest
     title = title + '\n'
@@ -295,23 +301,23 @@ with open('italy_geo.json') as f:
    comune_lat_lon = json.load(f)
 
 
-# analyze(u'Roma')
-# analyze(u'Lipari')
-# analyze(u'Boretto')
-# analyze(u'Isole Tremiti')
-# analyze(u'Courmayeur')
-# analyze(u'Valtournenche')
-# analyze(u'Atrani')
-# analyze(u'Bologna')
-# analyze(u'Imola')
-# analyze(u'Mordano')
-# analyze(u'Brisighella')
-# analyze(u'Stelvio')
-# analyze(u'Barbariga')
-# analyze(u'Castel del Rio')
+analyze(u'Roma')
+analyze(u'Lipari')
+analyze(u'Boretto')
+analyze(u'Isole Tremiti')
+analyze(u'Courmayeur')
+analyze(u'Valtournenche')
+analyze(u'Atrani')
+analyze(u'Bologna')
+analyze(u'Imola')
+analyze(u'Mordano')
+analyze(u'Brisighella')
+analyze(u'Stelvio')
+analyze(u'Barbariga')
+analyze(u'Castel del Rio')
 analyze(u'Malé')
 #analyze(u'Malè')
-analyze(u"Sant'Angelo in Vado")
+#analyze(u"Sant'Angelo in Vado")
 
 
 #plt.show()

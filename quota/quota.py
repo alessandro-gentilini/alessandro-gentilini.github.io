@@ -237,3 +237,4 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # Imola 2762
 # colormap fisica blu verde marrone bianco
 # griglia on sulle coordinate
+# confronto con dati ISPRA DEM
