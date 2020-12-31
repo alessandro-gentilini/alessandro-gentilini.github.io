@@ -8,6 +8,25 @@ from palettable.scientific.sequential import Oleron_20
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors
+import math
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+import geopandas as gpd
+from pathlib import Path
+import pickle
+
+def query_nga(lat,lon):
+    distance,index = nbrs.kneighbors([[math.pi*lat/180,math.pi*lon/180]])
+    # print(distance[0][0],nga.iloc[index[0][0]].FULL_NAME_RO,nga.iloc[index[0][0]].LAT,nga.iloc[index[0][0]].LONG)
+    return nga.iloc[index[0][0]].FULL_NAME_RO
+
+def query_nominatim_cache(query):
+    if query not in nominatim_cache:
+        return query
+    if hasattr(nominatim_cache[query],'address'):
+        return nominatim_cache[query].address
+    else:
+        return nominatim_cache[query]
 
 def my_distance(lat1,lon1,lat2,lon2):
     return distance.distance((lat1,lon1),(lat2,lon2)).meters
@@ -28,14 +47,36 @@ def nearest_scale(m):
     else:
         return 50000,'50km'
 
-def my_plot(tif):
+def analyze(tif):
     dem_raster = rasterio.open(tif)
+    
     nda = dem_raster.read(1)
 
     peak_idx = np.unravel_index(nda.argmax(),nda.shape)
-    peak_bb = dem_raster.xy(peak_idx[0],peak_idx[1])
+    peak_lon_lat = dem_raster.xy(peak_idx[0],peak_idx[1])
+    peak_lon = peak_lon_lat[0]
+    peak_lat = peak_lon_lat[1]
+
+    nga_nearest = query_nga(peak_lat,peak_lon)
+    
+    query_decimals = 6
+    query = str(round(peak_lat,query_decimals))+' '+str(round(peak_lon,query_decimals))
+    nominatim_nearest = query_nominatim_cache(query)
+
+    title = tif
+    title = title + '\n'
+    title = title + 'NGA: ' + nga_nearest
+    title = title + '\n'
+    title = title + 'Nominatim: ' + nominatim_nearest
+    my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat)
 
 
+
+
+def my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat):
+    H = nda.shape[0]
+    W = nda.shape[1]
+    dpi = 60.
 
     my_cmap = cut_terrain_map
 
@@ -51,7 +92,8 @@ def my_plot(tif):
 
 
     # https://stackoverflow.com/a/63043659
-    fig, ax = plt.subplots()
+    #fig, ax = plt.subplots(figsize=(W/dpi,H/dpi))
+    fig, ax = plt.subplots(figsize=(18,10))
     # use imshow so that we have something to map the colorbar to
     image_hidden = ax.imshow(nda, 
                             norm = norm,
@@ -63,8 +105,7 @@ def my_plot(tif):
     bl = dem_raster.xy(nda.shape[0],0)
     br = dem_raster.xy(nda.shape[0],nda.shape[1])
 
-    H = nda.shape[0]
-    W = nda.shape[1]
+
     bl1 = dem_raster.xy(.97*H,0.03*W)
     br1 = dem_raster.xy(.97*H,.97*W)
     H_meter = my_distance(bl[1],bl[0],br[1],br[0])
@@ -95,9 +136,9 @@ def my_plot(tif):
     txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
     # todo scegliere automaticamente il posto migliore per evitare che si sovrapponga ai punti notevoli
 
-    ax.plot(peak_bb[0],peak_bb[1],'^')
-    ax.axhline(peak_bb[1],color='w',linewidth=.5)
-    ax.axvline(peak_bb[0],color='w',linewidth=.5)
+    ax.plot(peak_lon,peak_lat,'^')
+    ax.axhline(peak_lat,color='w',linewidth=.5)
+    ax.axvline(peak_lon,color='w',linewidth=.5)
     
     # plot on the same axis with rio.plot.show
     image = show(nda,
@@ -113,7 +154,8 @@ def my_plot(tif):
 
     ax.set_xlabel('Longitude - EAST')
     ax.set_ylabel('Latitude - NORTH')
-    ax.set_title(tif)
+    ax.set_title(title)
+    fig.savefig(tif+'.png',bbox_inches='tight')
 
 # https://stackoverflow.com/a/40952872
 class FixPointNormalize(matplotlib.colors.Normalize):
@@ -152,17 +194,37 @@ cut_terrain_map = matplotlib.colors.LinearSegmentedColormap.from_list('cut_terra
 # todo https://doi.org/10.5066/F7PR7TFT
 
 
-my_plot('./tif/LAZ-RM-Roma-DEM.tif')
-my_plot('./tif/SIC-ME-Lipari-DEM.tif')
-my_plot('./tif/EMI-RE-Boretto-DEM.tif')
-my_plot('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
-my_plot('./tif/VAL-AO-Courmayeur-DEM.tif')
-my_plot('./tif/VAL-AO-Valtournenche-DEM.tif')
-my_plot('./tif/CAM-SA-Atrani-DEM.tif')
-my_plot('./tif/EMI-BO-Bologna-DEM.tif')
-my_plot('./tif/EMI-BO-Imola-DEM.tif')
-my_plot('./tif/EMI-BO-Mordano-DEM.tif')
-my_plot('./tif/EMI-RA-Brisighella-DEM.tif')
-my_plot('./tif/TRE-BZ-Stelvio-DEM.tif')
+print('Load cache...')
+cache_path = 'cache2.p'
+nominatim_cache = dict()
+if Path(cache_path).exists():
+    nominatim_cache = pickle.load(open(cache_path, 'rb'))
+
+print('Load NGA data...')
+nga = pd.read_csv('it.txt',sep='\t',encoding='utf-8',dtype={'ADM1':str,'TRANSL_CD':str,'F_TERM_DT':str})
+X = math.pi*nga[['LAT','LONG']]/180
+nbrs = NearestNeighbors(n_neighbors=1, metric='haversine').fit(X)
+
+print('Load shp...')
+com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com01012020/',encoding='utf-8')
+
+print('Load province...')
+prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=3,encoding='utf-8',keep_default_na=False,na_values=['_'])
+
+
+analyze('./tif/LAZ-RM-Roma-DEM.tif')
+analyze('./tif/SIC-ME-Lipari-DEM.tif')
+analyze('./tif/EMI-RE-Boretto-DEM.tif')
+analyze('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
+analyze('./tif/VAL-AO-Courmayeur-DEM.tif')
+analyze('./tif/VAL-AO-Valtournenche-DEM.tif')
+analyze('./tif/CAM-SA-Atrani-DEM.tif')
+analyze('./tif/EMI-BO-Bologna-DEM.tif')
+analyze('./tif/EMI-BO-Imola-DEM.tif')
+analyze('./tif/EMI-BO-Mordano-DEM.tif')
+analyze('./tif/EMI-RA-Brisighella-DEM.tif')
+analyze('./tif/TRE-BZ-Stelvio-DEM.tif')
+analyze('./tif/LOM-BS-Barbariga-DEM.tif')
+
 
 plt.show()

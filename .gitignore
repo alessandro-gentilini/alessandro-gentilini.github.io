@@ -27,3 +27,11 @@ quota/json/
 quota/png/
 quota/tif/
 quota/p/
+quota/stderr*.txt
+COVID-19/gv/
+COVID-19/RilevazioniPerCorsia*.csv
+COVID-19/RilevazioniPerPostazione*.csv
+bayes/_cache/
+pmp/CMakeCache.txt
+pmp/CMakeFiles/
+pmp/Makefile
