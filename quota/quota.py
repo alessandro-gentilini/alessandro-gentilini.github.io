@@ -233,6 +233,7 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # toponimi IGM (scaricarli regione per regione)
 # disegnare municipio
 # usare minimo locale e non zero, fatto
-# disegnare il toponimo piu vicino
+# disegnare il toponimo piu vicino (e sua distanza)
 # Imola 2762
 # colormap fisica blu verde marrone bianco
+# griglia on sulle coordinate
