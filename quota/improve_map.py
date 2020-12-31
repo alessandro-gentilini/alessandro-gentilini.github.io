@@ -1,3 +1,11 @@
+# coding=utf-8
+
+# trick per evitare errore
+# UnicodeEncodeError: 'ascii' codec can't encode character u'\xe9' in position 3: ordinal not in range(128)
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 import rasterio
 from rasterio.plot import show
 import matplotlib.pyplot as plt
@@ -14,6 +22,25 @@ from sklearn.neighbors import NearestNeighbors
 import geopandas as gpd
 from pathlib import Path
 import pickle
+import unicodedata
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
+import json
+
+def shorten(address,provincia,regione):
+    parts = address.split(',')
+    result = []
+    for p in parts:
+        if p.lstrip() not in (provincia,regione,'Italia'):
+            result.append(p)
+    return ','.join(result)
+
+
+
+def normalize(s):
+    t = unicodedata.normalize('NFKD', s).encode('ASCII', 'ignore')
+    t = t.replace(' ','_')
+    t = t.replace("'",'')
+    return t
 
 def query_nga(lat,lon):
     distance,index = nbrs.kneighbors([[math.pi*lat/180,math.pi*lon/180]])
@@ -47,8 +74,47 @@ def nearest_scale(m):
     else:
         return 50000,'50km'
 
-def analyze(tif):
-    dem_raster = rasterio.open(tif)
+def analyze(comune):
+    obj = {}
+   
+    
+    normalized_comune = normalize(comune)
+    obj['norm_name']=normalized_comune
+
+    c = com.loc[com['COMUNE']==comune]
+    if len(c)<1:
+        logging.error(u'Comune not found: '+comune)
+        return obj
+
+    if len(c)>1:
+        logging.error(u'Duplicated comune: '+comune)
+        return obj
+
+    obj['plate']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].Sigla_automobilistica.values[0]
+    obj['COMUNE']=c.COMUNE.values[0]
+    obj['COD_PROV']=c.COD_PROV.values[0]
+    obj['provincia']=prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_UTS.values[0]
+    obj['regione_full'] = prov[prov.COD_PROV_Storico==c.COD_PROV.values[0]].DEN_REG.values[0]
+    obj['regione']= obj['regione_full'][0:3].upper()
+    obj['PRO_COM_T'] = c.PRO_COM_T.values[0]
+
+    print(obj['PRO_COM_T'])
+
+    obj['comune_lat'] = None
+    obj['comune_lon'] = None
+
+    for x in comune_lat_lon:
+        if int(x[u'istat']) == int(obj['PRO_COM_T']):
+            lat = float(x[u'lat'])
+            lon = float(x[u'lng'])
+            obj['comune_lat'] = lat
+            obj['comune_lon'] = lon
+            break    
+
+    basename = obj['regione']+'-'+obj['plate']+'-'+obj['norm_name']
+    dem_path = '/tif/'+basename+'-DEM.tif'
+
+    dem_raster = rasterio.open('.'+dem_path)
     
     nda = dem_raster.read(1)
 
@@ -61,19 +127,19 @@ def analyze(tif):
     
     query_decimals = 6
     query = str(round(peak_lat,query_decimals))+' '+str(round(peak_lon,query_decimals))
-    nominatim_nearest = query_nominatim_cache(query)
+    nominatim_nearest = shorten(query_nominatim_cache(query),obj['provincia'],obj['regione_full'])
 
-    title = tif
+    title = comune + ', ' + obj['provincia'] + ', ' + obj['regione_full']
     title = title + '\n'
     title = title + 'NGA: ' + nga_nearest
     title = title + '\n'
     title = title + 'Nominatim: ' + nominatim_nearest
-    my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat)
+    my_plot(comune,dem_raster,nda,title,obj['comune_lon'],obj['comune_lat'],peak_lon,peak_lat)
 
 
 
 
-def my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat):
+def my_plot(comune,dem_raster,nda,title,comune_lon,comune_lat,peak_lon,peak_lat):
     H = nda.shape[0]
     W = nda.shape[1]
     dpi = 60.
@@ -137,6 +203,8 @@ def my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat):
     # todo scegliere automaticamente il posto migliore per evitare che si sovrapponga ai punti notevoli
 
     ax.plot(peak_lon,peak_lat,'^')
+    if comune_lat != None and comune_lon != None:
+        ax.plot(comune_lon,comune_lat,'s',color='red')
     ax.axhline(peak_lat,color='w',linewidth=.5)
     ax.axvline(peak_lon,color='w',linewidth=.5)
     
@@ -149,13 +217,21 @@ def my_plot(tif,dem_raster,nda,title,peak_lon,peak_lat):
 
 
     # add colorbar using the now hidden image
-    clb = fig.colorbar(image_hidden, ax=ax)
+    axins = inset_axes(ax,
+                   width="5%",  # width = 5% of parent_bbox width
+                   height="75%",  # height : 50%
+                   loc='lower left',
+                   bbox_to_anchor=(1.05, 0., 1, 1),
+                   bbox_transform=ax.transAxes,
+                   borderpad=0,
+                   )    
+    clb = fig.colorbar(image_hidden, ax=ax, cax=axins)
     clb.ax.set_title('meters\n(SRTM-1)')        
 
     ax.set_xlabel('Longitude - EAST')
     ax.set_ylabel('Latitude - NORTH')
     ax.set_title(title)
-    fig.savefig(tif+'.png',bbox_inches='tight')
+    fig.savefig(comune+'.png',bbox_inches='tight')
 
 # https://stackoverflow.com/a/40952872
 class FixPointNormalize(matplotlib.colors.Normalize):
@@ -192,6 +268,9 @@ cut_terrain_map = matplotlib.colors.LinearSegmentedColormap.from_list('cut_terra
 
 
 # todo https://doi.org/10.5066/F7PR7TFT
+# todo https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/Limiti01012020.zip https://www.istat.it/it/archivio/222527
+# todo https://www.istat.it/it/archivio/156224#AltitudinideicomunitramiteDEM-1
+# todo https://github.com/MatteoHenryChinaski/Comuni-Italiani-2018-Sql-Json-excel/blob/master/italy_geo.json ma anche descritto nel pdf https://www.istat.it/it/files//2018/10/Descrizione-dei-dati-geografici-2020-03-19.pdf
 
 
 print('Load cache...')
@@ -211,20 +290,28 @@ com = gpd.read_file('/home/ag/Downloads/Limiti01012020/Limiti01012020/Com0101202
 print('Load province...')
 prov = pd.read_csv('codici_statistici_e_denominazioni_delle_ripartizioni_sovracomunali.txt',sep=';',skiprows=3,encoding='utf-8',keep_default_na=False,na_values=['_'])
 
-
-analyze('./tif/LAZ-RM-Roma-DEM.tif')
-analyze('./tif/SIC-ME-Lipari-DEM.tif')
-analyze('./tif/EMI-RE-Boretto-DEM.tif')
-analyze('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
-analyze('./tif/VAL-AO-Courmayeur-DEM.tif')
-analyze('./tif/VAL-AO-Valtournenche-DEM.tif')
-analyze('./tif/CAM-SA-Atrani-DEM.tif')
-analyze('./tif/EMI-BO-Bologna-DEM.tif')
-analyze('./tif/EMI-BO-Imola-DEM.tif')
-analyze('./tif/EMI-BO-Mordano-DEM.tif')
-analyze('./tif/EMI-RA-Brisighella-DEM.tif')
-analyze('./tif/TRE-BZ-Stelvio-DEM.tif')
-analyze('./tif/LOM-BS-Barbariga-DEM.tif')
+print('Load comune lat lon...')
+with open('italy_geo.json') as f:
+   comune_lat_lon = json.load(f)
 
 
-plt.show()
+# analyze(u'Roma')
+# analyze(u'Lipari')
+# analyze(u'Boretto')
+# analyze(u'Isole Tremiti')
+# analyze(u'Courmayeur')
+# analyze(u'Valtournenche')
+# analyze(u'Atrani')
+# analyze(u'Bologna')
+# analyze(u'Imola')
+# analyze(u'Mordano')
+# analyze(u'Brisighella')
+# analyze(u'Stelvio')
+# analyze(u'Barbariga')
+# analyze(u'Castel del Rio')
+analyze(u'Malé')
+#analyze(u'Malè')
+analyze(u"Sant'Angelo in Vado")
+
+
+#plt.show()
