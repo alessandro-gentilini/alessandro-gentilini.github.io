@@ -32,6 +32,11 @@ def my_plot(tif):
     dem_raster = rasterio.open(tif)
     nda = dem_raster.read(1)
 
+    peak_idx = np.unravel_index(nda.argmax(),nda.shape)
+    peak_bb = dem_raster.xy(peak_idx[0],peak_idx[1])
+
+
+
     my_cmap = cut_terrain_map
 
     max_elev = nda.max()
@@ -90,7 +95,10 @@ def my_plot(tif):
     txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
     # todo scegliere automaticamente il posto migliore per evitare che si sovrapponga ai punti notevoli
 
-
+    ax.plot(peak_bb[0],peak_bb[1],'^')
+    ax.axhline(peak_bb[1],color='w',linewidth=.5)
+    ax.axvline(peak_bb[0],color='w',linewidth=.5)
+    
     # plot on the same axis with rio.plot.show
     image = show(nda,
                 transform=dem_raster.transform, 
