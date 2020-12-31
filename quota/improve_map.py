@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects
 from geopy import distance
 import geopy
+from palettable.scientific.sequential import Oleron_20
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors
 
 def my_distance(lat1,lon1,lat2,lon2):
     return distance.distance((lat1,lon1),(lat2,lon2)).meters
@@ -24,6 +28,36 @@ def nearest_scale(m):
     else:
         return 50000,'50km'
 
+# https://stackoverflow.com/a/40952872
+class FixPointNormalize(matplotlib.colors.Normalize):
+    """ 
+    Inspired by https://stackoverflow.com/questions/20144529/shifted-colorbar-matplotlib
+    Subclassing Normalize to obtain a colormap with a fixpoint 
+    somewhere in the middle of the colormap.
+
+    This may be useful for a `terrain` map, to set the "sea level" 
+    to a color in the blue/turquise range. 
+    """
+    def __init__(self, vmin=None, vmax=None, sealevel=0, col_val = 0.21875, clip=False):
+        # sealevel is the fix point of the colormap (in data units)
+        self.sealevel = sealevel
+        # col_val is the color value in the range [0,1] that should represent the sealevel.
+        self.col_val = col_val
+        matplotlib.colors.Normalize.__init__(self, vmin, vmax, clip)
+
+    def __call__(self, value, clip=None):
+        x, y = [self.vmin, self.sealevel, self.vmax], [0, self.col_val, 1]
+        return np.ma.masked_array(np.interp(value, x, y))        
+
+# Combine the lower and upper range of the terrain colormap with a gap in the middle
+# to let the coastline appear more prominently.
+# inspired by https://stackoverflow.com/questions/31051488/combining-two-matplotlib-colormaps
+colors_undersea = plt.cm.terrain(np.linspace(0, 0.17, 56))
+colors_land = plt.cm.terrain(np.linspace(0.25, 1, 200))
+# combine them and build a new colormap
+colors = np.vstack((colors_undersea, colors_land))
+cut_terrain_map = matplotlib.colors.LinearSegmentedColormap.from_list('cut_terrain', colors)        
+
 piratello = (44.3704275, 11.6713168)
 monumento = (44.3605792, 11.6950927)
 
@@ -43,8 +77,8 @@ piratello_hat = one_km.destination(point=monumento, bearing=292)
 #dem_raster = rasterio.open('./tif/LAZ-RM-Roma-DEM.tif')
 #dem_raster = rasterio.open('./tif/SIC-ME-Lipari-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-RE-Boretto-DEM.tif')
-#dem_raster = rasterio.open('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
-dem_raster = rasterio.open('./tif/VAL-AO-Courmayeur-DEM.tif')
+dem_raster = rasterio.open('./tif/PUG-FG-Isole_Tremiti-DEM.tif')
+#dem_raster = rasterio.open('./tif/VAL-AO-Courmayeur-DEM.tif')
 #dem_raster = rasterio.open('./tif/VAL-AO-Valtournenche-DEM.tif')
 #dem_raster = rasterio.open('./tif/CAM-SA-Atrani-DEM.tif')
 #dem_raster = rasterio.open('./tif/EMI-BO-Bologna-DEM.tif')
@@ -56,15 +90,25 @@ dem_raster = rasterio.open('./tif/VAL-AO-Courmayeur-DEM.tif')
 
 nda = dem_raster.read(1)
 
+my_cmap = Oleron_20.mpl_colormap
+#my_cmap = 'gist_earth'
+my_cmap = plt.cm.terrain
+my_cmap = cut_terrain_map
+
+norm = FixPointNormalize(sealevel=0, 
+vmin=nda.min(),
+vmax=nda.max())
+
 fig, ax = plt.subplots()
-show(source=nda,ax=ax,cmap='gist_earth',transform=dem_raster.transform)
+show(source=nda,ax=ax,cmap=my_cmap,transform=dem_raster.transform)
 
 
 # https://stackoverflow.com/a/63043659
 fig, ax = plt.subplots()
 # use imshow so that we have something to map the colorbar to
 image_hidden = ax.imshow(nda, 
-                         cmap='gist_earth')
+                         norm = norm,
+                         cmap=my_cmap)
 
 x_0=nda.shape[0]/10
 x_1=x_0
@@ -145,7 +189,8 @@ txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
 image = show(nda,
              transform=dem_raster.transform, 
              ax=ax, 
-             cmap='gist_earth')
+             norm = norm,
+             cmap=my_cmap)
 
                
 
