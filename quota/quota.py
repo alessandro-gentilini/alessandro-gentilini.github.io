@@ -238,3 +238,6 @@ pickle.dump(cache, open(cache_path, 'wb'))
 # colormap fisica blu verde marrone bianco
 # griglia on sulle coordinate
 # confronto con dati ISPRA DEM
+# griglia on
+# mettere scala x e y in gradi minuti secondi
+# aggiungere il tipo di info di NGA
