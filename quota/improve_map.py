@@ -25,6 +25,8 @@ import pickle
 import unicodedata
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 import json
+import pyproj
+
 
 def shorten(address,provincia,regione):
     parts = address.split(',')
@@ -45,18 +47,21 @@ def normalize(s):
 def query_nga(lat,lon):
     distance,index = nbrs.kneighbors([[math.pi*lat/180,math.pi*lon/180]])
     # print(distance[0][0],nga.iloc[index[0][0]].FULL_NAME_RO,nga.iloc[index[0][0]].LAT,nga.iloc[index[0][0]].LONG)
-    return nga.iloc[index[0][0]].FULL_NAME_RO
+    return {'name':nga.iloc[index[0][0]].FULL_NAME_RO,'lat':nga.iloc[index[0][0]].LAT,'lon':nga.iloc[index[0][0]].LONG}
 
 def query_nominatim_cache(query):
     if query not in nominatim_cache:
         return query
-    if hasattr(nominatim_cache[query],'address'):
-        return nominatim_cache[query].address
-    else:
-        return nominatim_cache[query]
+    return nominatim_cache[query]
 
 def my_distance(lat1,lon1,lat2,lon2):
     return distance.distance((lat1,lon1),(lat2,lon2)).meters
+
+def my_distance2(lat1,lon1,lat2,lon2,crs):
+    #geodesic = pyproj.Geod(ellps='WGS84')
+    geodesic = pyproj.Geod(ellps=crs.to_string())
+    fwd_azimuth,back_azimuth,distance = geodesic.inv(lat1, lon1, lat2, lon2)
+    return distance
 
 def nearest_scale(m):
     if m < 50:
@@ -127,25 +132,42 @@ def analyze(comune):
     obj['lat_bb']=peak_lat
     obj['elev_bb']=np.float64(nda.max()) # https://ellisvalentiner.com/post/serializing-numpyfloat32-json/
 
-    nga_nearest = query_nga(peak_lat,peak_lon)
+    nga_result = query_nga(peak_lat,peak_lon)
+    nga_nearest = nga_result['name']
+    nga_lon = nga_result['lon']
+    nga_lat = nga_result['lat']
     
     query_decimals = 6
     query = str(round(peak_lat,query_decimals))+' '+str(round(peak_lon,query_decimals))
-    nominatim_nearest = shorten(query_nominatim_cache(query),obj['provincia'],obj['regione_full'])
+    nominatim_result = query_nominatim_cache(query)
+    print(nominatim_result)
+    nominatim_address = None
+    if hasattr(nominatim_result,'address'):
+        nominatim_address = nominatim_result.address
+    else:
+        nominatim_address = nominatim_result
+    nominatim_nearest = shorten(nominatim_address,obj['provincia'],obj['regione_full'])
+    nominatim_lat = None
+    if hasattr(nominatim_result,'latitude'):
+        nominatim_lat = nominatim_result.latitude
+    nominatim_lon = None
+    if hasattr(nominatim_result,'longitude'):
+        nominatim_lon = nominatim_result.longitude
 
-    title = u'■: ' +comune + ', ' + obj['provincia'] + ', ' + obj['regione_full']
+
+    title = u'■: Sede del municipio di ' +comune + ' (' + obj['provincia'] + ', ' + obj['regione_full'] + ')'
     title = title + '\n'
     title = title + u'▲: quota ' + str(int(obj['elev_bb'])) + 'm lat: ' + str(round(obj['lat_bb'],6)) + ' lon: ' + str(round(obj['lon_bb'],6))
     title = title + '\n'
-    title = title + 'NGA: ' + nga_nearest
+    title = title + '1: ' + nga_nearest + ' (NGA data)'
     title = title + '\n'
-    title = title + 'Nominatim: ' + nominatim_nearest
-    my_plot(comune,dem_raster,nda,title,obj['comune_lon'],obj['comune_lat'],peak_lon,peak_lat)
+    title = title + '2: ' + nominatim_nearest + ' (Nominatim data)'
+    my_plot(comune,dem_raster,nda,title,obj['comune_lon'],obj['comune_lat'],peak_lon,peak_lat,nga_lon,nga_lat,nominatim_lon,nominatim_lat)
 
 
 
 
-def my_plot(comune,dem_raster,nda,title,comune_lon,comune_lat,peak_lon,peak_lat):
+def my_plot(comune,dem_raster,nda,title,comune_lon,comune_lat,peak_lon,peak_lat,nga_lon,nga_lat,nominatim_lon,nominatim_lat):
     H = nda.shape[0]
     W = nda.shape[1]
     dpi = 60.
@@ -182,7 +204,7 @@ def my_plot(comune,dem_raster,nda,title,comune_lon,comune_lat,peak_lon,peak_lat)
     br1 = dem_raster.xy(.97*H,.97*W)
     H_meter = my_distance(bl[1],bl[0],br[1],br[0])
     scale_L = H_meter/10
-    print(H_meter)
+    print(H_meter,my_distance2(bl[1],bl[0],br[1],br[0],dem_raster.crs))
     scale_value,scale_label = nearest_scale(scale_L)
 
 
@@ -208,11 +230,25 @@ def my_plot(comune,dem_raster,nda,title,comune_lon,comune_lat,peak_lon,peak_lat)
     txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
     # todo scegliere automaticamente il posto migliore per evitare che si sovrapponga ai punti notevoli
 
-    ax.plot(peak_lon,peak_lat,'^')
-    if comune_lat != None and comune_lon != None:
-        ax.plot(comune_lon,comune_lat,'s',color='red')
+    ax.plot(peak_lon,peak_lat,marker='^')
     ax.axhline(peak_lat,color='w',linewidth=.5)
     ax.axvline(peak_lon,color='w',linewidth=.5)
+
+    print('coords',peak_lon,peak_lat,nominatim_lon,nominatim_lat)    
+
+    if comune_lat != None and comune_lon != None:
+        ax.plot(comune_lon,comune_lat,marker='s',color='red')
+
+    # todo indicare nel titolo se il punto e` coincidente a meno di 100m con il picco 
+    # oppure se e` fuori mappa (e di quanto e in che direzione)
+    if nga_lat != None and nga_lon != None:
+        if my_distance(peak_lat,peak_lon,nga_lat,nga_lon) > 100:
+            ax.plot(nga_lon,nga_lat,marker='$1$',color='black')
+
+    if nominatim_lat != None and nominatim_lon != None:
+        if my_distance(peak_lat,peak_lon,nominatim_lat,nominatim_lon) > 100:
+            ax.plot(nominatim_lon,nominatim_lat,marker='$2$',color='black')        
+
     
     # plot on the same axis with rio.plot.show
     image = show(nda,
@@ -288,6 +324,7 @@ if Path(cache_path).exists():
 print('Load NGA data...')
 nga = pd.read_csv('it.txt',sep='\t',encoding='utf-8',dtype={'ADM1':str,'TRANSL_CD':str,'F_TERM_DT':str})
 X = math.pi*nga[['LAT','LONG']]/180
+# todo fidarsi di piu` di pyproj piuttosto che di scikit?
 nbrs = NearestNeighbors(n_neighbors=1, metric='haversine').fit(X)
 
 print('Load shp...')
@@ -301,15 +338,17 @@ with open('italy_geo.json') as f:
    comune_lat_lon = json.load(f)
 
 
+analyze(u'Imola')
+analyze(u'Valtournenche')
 analyze(u'Roma')
 analyze(u'Lipari')
 analyze(u'Boretto')
 analyze(u'Isole Tremiti')
 analyze(u'Courmayeur')
-analyze(u'Valtournenche')
+
 analyze(u'Atrani')
 analyze(u'Bologna')
-analyze(u'Imola')
+
 analyze(u'Mordano')
 analyze(u'Brisighella')
 analyze(u'Stelvio')
@@ -322,8 +361,9 @@ analyze(u'Austis')
 analyze(u'Malcesine')
 analyze(u'Dozza')
 analyze(u'Conselice')
+analyze(u'Monte Argentario')
 #analyze(u'Malè')
 #analyze(u"Sant'Angelo in Vado")
 
 
-#plt.show()
+plt.show()

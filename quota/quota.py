@@ -226,7 +226,7 @@ pickle.dump(objs, open('./p/result_{:04d}-{:04d}.p'.format(i_begin,i_end), 'wb')
 pickle.dump(cache, open(cache_path, 'wb'))
 
 # legenda quote, da provare
-# km, da provare
+# km, fare meglio, deve avere dimensione costante circa 1/20 della W
 # fonti
 # geojson
 # disegnare su DEM il confine del comune
