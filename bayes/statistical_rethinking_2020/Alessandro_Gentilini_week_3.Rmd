@@ -1,0 +1,100 @@
+---
+title: Statistical Rethinking Winter 2020 -- Homework Week 3
+author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
+date: January 3, 2021
+output: pdf_document
+---
+
+```{r eval=TRUE, echo=FALSE}
+rm(list = ls())
+setwd('~/projects/alessandro-gentilini.github.io/bayes/statistical_rethinking_2020/')
+```
+
+```{r}
+library(rethinking)
+```
+
+```{r}
+library(dagitty)
+dag <- dagitty( "dag {
+    area -> avgfood
+    avgfood -> groupsize
+    avgfood -> weight
+    groupsize -> weight
+}")
+coordinates(dag) <- list(
+    x=c(avgfood=-1, groupsize=1, area=0, weight=0),
+    y=c(avgfood=0, groupsize=0, area=-1, weight=1)
+)
+drawdag(dag)
+adjustmentSets( dag, exposure="area" , outcome="weight" )
+```
+
+```{r}
+data(foxes)
+foxes$A <- standardize(foxes$area)
+foxes$W <- standardize(foxes$weight)
+plot(foxes$A,foxes$W)
+```
+
+```{r}
+## R code 4.38
+set.seed(2971)
+N <- 100                   # 100 lines
+a <- rnorm( N , 0 , 1 )
+b_A <- rnorm( N , 0 , 1 )
+
+## R code 4.39
+plot( NULL , xlim=range(foxes$A) , ylim=c(-3,3) ,
+    xlab="A=standardized Area" , ylab="W=standardized Weight" )
+#abline( h=0 , lty=2 )
+#abline( h=272 , lty=1 , lwd=0.5 )
+#mtext( "b ~ dnorm(0,10)" )
+#xbar <- mean(d2$weight)
+for ( i in 1:N ) curve( a[i] + b_A[i]*x ,
+    from=min(foxes$A) , to=max(foxes$A) , add=TRUE ,
+    col=col.alpha("black",0.2) )
+```
+
+```{r}
+m1 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A,
+        a ~ dnorm( 0 , 1 ),
+        b_A ~ dnorm( 0 , 1 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m1)
+```
+
+```{r}
+adjustmentSets( dag, exposure="avgfood" , outcome="weight" )
+```
+
+```{r}
+foxes$F <- standardize(foxes$avgfood)
+m2 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A + b_F*F,
+        a ~ dnorm( 0 , 1 ),
+        b_A ~ dnorm( 0 , 1 ),
+        b_F ~ dnorm( 0 , 1 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m2)
+```
+
+```{r}
+foxes$F <- standardize(foxes$avgfood)
+m3 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_F*F,
+        a ~ dnorm( 0 , 1 ),
+        b_F ~ dnorm( 0 , 1 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m3)
+```
