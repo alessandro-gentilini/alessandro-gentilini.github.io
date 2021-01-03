@@ -41,8 +41,8 @@ plot(foxes$A,foxes$W)
 ## R code 4.38
 set.seed(2971)
 N <- 100                   # 100 lines
-a <- rnorm( N , 0 , 1 )
-b_A <- rnorm( N , 0 , 1 )
+a <- rnorm( N , 0 , .2 )
+b_A <- rnorm( N , 0 , .5 )
 
 ## R code 4.39
 plot( NULL , xlim=range(foxes$A) , ylim=c(-3,3) ,
@@ -61,8 +61,8 @@ m1 <- quap(
     alist(
         W ~ dnorm( mu , sigma ),
         mu <- a + b_A*A,
-        a ~ dnorm( 0 , 1 ),
-        b_A ~ dnorm( 0 , 1 ),
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
         sigma ~ dexp( 1 )
     ), data=foxes )
 precis(m1)
@@ -78,9 +78,9 @@ m2 <- quap(
     alist(
         W ~ dnorm( mu , sigma ),
         mu <- a + b_A*A + b_F*F,
-        a ~ dnorm( 0 , 1 ),
-        b_A ~ dnorm( 0 , 1 ),
-        b_F ~ dnorm( 0 , 1 ),
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_F ~ dnorm( 0 , .5 ),
         sigma ~ dexp( 1 )
     ), data=foxes )
 precis(m2)
@@ -92,8 +92,8 @@ m3 <- quap(
     alist(
         W ~ dnorm( mu , sigma ),
         mu <- a + b_F*F,
-        a ~ dnorm( 0 , 1 ),
-        b_F ~ dnorm( 0 , 1 ),
+        a ~ dnorm( 0 , .2 ),
+        b_F ~ dnorm( 0 , .5 ),
         sigma ~ dexp( 1 )
     ), data=foxes )
 precis(m3)
