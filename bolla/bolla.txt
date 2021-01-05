@@ -1,0 +1,13 @@
+R:=8.31
+T:=293
+M:=28.97/1000
+g:=9.8
+h:=-10
+solution=NDSolve[{y''[t]==-g-(R*T)/(M*y[t]),y[0]==h,y'[0]==0},y,{t,0,10}]
+
+Plot[Evaluate[y[t]/. solution],{t,0,0.04}]
+
+Plot[Evaluate[CubeRoot[-1/(y[t]/. solution)]],{t,0,0.04}]
+
+Manipulate[Graphics[{Circle[{0,(y[t]/.solution)[[1]]},CubeRoot[-1/(y[t]/. solution)][[1]]]},PlotRange->{{-1,1},{-11,0}}],{t,0,0.04}]
+
