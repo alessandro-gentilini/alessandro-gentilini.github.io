@@ -1,7 +1,7 @@
 ---
 title: Statistical Rethinking Winter 2020 -- Homework Week 3
 author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
-date: January 3, 2021
+date: January 6, 2021
 output: pdf_document
 ---
 
@@ -34,6 +34,8 @@ adjustmentSets( dag, exposure="area" , outcome="weight" )
 data(foxes)
 foxes$A <- standardize(foxes$area)
 foxes$W <- standardize(foxes$weight)
+foxes$F <- standardize(foxes$avgfood)
+foxes$G <- standardize(foxes$groupsize)
 plot(foxes$A,foxes$W)
 ```
 
@@ -98,3 +100,126 @@ m3 <- quap(
     ), data=foxes )
 precis(m3)
 ```
+
+I am clueless... it seems to me that `W` is not caused by `F` or `A`.
+I did not grasped the chapter 6 and so I have no idea on how to proceed.
+I feel a lack of definitions, for example I did not understand what *conditioning* means.
+
+The worst thing I can do: enumerate all the possibilities and try all the models.
+There are seven possible linear models:
+
+
+    AFG
+    001
+    010
+    011
+    100
+    101
+    110
+    111
+
+The problems with this method are:
+
+1. It's a black-box approach with no insights by myself.
+
+2. Its doesn't scale well with a lot of features.
+
+3. It does not leverage on chapter 6!
+
+```{r}
+m001 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m001)
+```
+
+```{r}
+m010 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_F*F,
+        a ~ dnorm( 0 , .2 ),
+        b_F ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m010)
+```
+
+```{r}
+m011 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_F*F+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_F ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m011)
+```
+
+```{r}
+m100 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m100)
+```
+
+```{r}
+m101 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m101)
+```
+
+```{r}
+m110 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A+b_F*F,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_F ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m110)
+```
+
+```{r}
+m111 <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A+b_F*F+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_F ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+precis(m111)
+```
+And now I look at the graphical summary:
+
+```{r}
+plot( coeftab( m001 , m010 , m011, m100, m101, m110, m111 ) , pars=c("b_A","b_F","b_G") )
+```
+
+So `b_G` is consistently negative across all the models: smaller group gives weightier foxes.
+`b_A` is consistently positive accross all the models: larger area gives weightier foxes.
+But `b_F` seems not so influential on the weight!
