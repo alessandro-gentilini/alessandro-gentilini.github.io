@@ -2150,11 +2150,18 @@
       "active": 1067.0
     },
     {
-      "date": "2020-01-06",
+      "date": "2021-01-06",
       "confirmed": 5826,
       "deaths": 174,
       "recovered": 4586,
       "active": 1066.0
+    },
+    {
+      "date": "2021-01-07",
+      "confirmed": 5929,
+      "deaths": 174,
+      "recovered": 4627,
+      "active": 1128.0
     }
   ]
 }
