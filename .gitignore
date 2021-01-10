@@ -35,3 +35,4 @@ bayes/_cache/
 pmp/CMakeCache.txt
 pmp/CMakeFiles/
 pmp/Makefile
+quota/.vscode/settings.json
