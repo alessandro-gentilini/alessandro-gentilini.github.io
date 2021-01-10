@@ -58,8 +58,10 @@ def my_distance(lat1,lon1,lat2,lon2):
     return distance.distance((lat1,lon1),(lat2,lon2)).meters
 
 def my_distance2(lat1,lon1,lat2,lon2,crs):
-    #geodesic = pyproj.Geod(ellps='WGS84')
-    geodesic = pyproj.Geod(ellps=crs.to_string())
+    geodesic = pyproj.Geod(ellps='WGS84')
+    # todo estrarre il nome dell'ellissoide da crs!
+    # questa qui sotto fallisce
+    #geodesic = pyproj.Geod(ellps=crs.to_string())
     fwd_azimuth,back_azimuth,distance = geodesic.inv(lat1, lon1, lat2, lon2)
     return distance
 
@@ -339,31 +341,32 @@ with open('italy_geo.json') as f:
 
 
 analyze(u'Imola')
-analyze(u'Valtournenche')
-analyze(u'Roma')
-analyze(u'Lipari')
-analyze(u'Boretto')
-analyze(u'Isole Tremiti')
-analyze(u'Courmayeur')
+# analyze(u'Valtournenche')
+# analyze(u'Roma')
+# analyze(u'Lipari')
+# analyze(u'Boretto')
+# analyze(u'Isole Tremiti')
+# analyze(u'Courmayeur')
 
-analyze(u'Atrani')
-analyze(u'Bologna')
+# analyze(u'Atrani')
+# analyze(u'Bologna')
 
-analyze(u'Mordano')
-analyze(u'Brisighella')
-analyze(u'Stelvio')
-analyze(u'Barbariga')
-analyze(u'Castel del Rio')
-analyze(u'Malé')
+# analyze(u'Mordano')
+# analyze(u'Brisighella')
+# analyze(u'Stelvio')
+# analyze(u'Barbariga')
+# analyze(u'Castel del Rio')
+# analyze(u'Malé')
 analyze(u'Lugo')
 analyze(u'Riolo Terme')
-analyze(u'Austis')
-analyze(u'Malcesine')
-analyze(u'Dozza')
-analyze(u'Conselice')
-analyze(u'Monte Argentario')
+# analyze(u'Austis')
+# analyze(u'Malcesine')
+# analyze(u'Dozza')
+# analyze(u'Conselice')
+# analyze(u'Monte Argentario')
 #analyze(u'Malè')
 #analyze(u"Sant'Angelo in Vado")
+analyze(u'Sovicille')
 
 
 plt.show()
