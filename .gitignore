@@ -40,3 +40,5 @@ quota/cache2.p
 quota/cache2.p
 quota/it.txt
 quota/italy_geo.json
+bayes/.RData
+bayes/.Rhistory
