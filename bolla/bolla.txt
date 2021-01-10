@@ -13,3 +13,5 @@ Plot[Evaluate[CubeRoot[-1/(y[t]/. solution)]],{t,0,0.04}]
 https://mathematica.stackexchange.com/a/17205
 Manipulate[Graphics[{Circle[{0,(y[t]/.solution)[[1]]},CubeRoot[-1/(y[t]/. solution)][[1]]]},PlotRange->{{-1,1},{-11,0}}],{t,0,0.04}]
 
+https://groups.google.com/g/sci.math/c/Hs_7iIU9tq8/m/m_hO_IXLH2MJ
+
