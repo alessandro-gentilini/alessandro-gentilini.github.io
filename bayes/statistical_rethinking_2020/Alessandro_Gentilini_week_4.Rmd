@@ -1,0 +1,164 @@
+---
+title: Statistical Rethinking Winter 2020 -- Homework Week 4
+author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
+date: January 9, 2021
+output: pdf_document
+---
+
+**1.** Consider three fictional Polynesian islands. On each there is a Royal Ornithologist charged by the king with surveying the birb population. They
+have each found the following proportions of 5 important birb species:
+
+              Birb A   Birb B   Birb C   Birb D   Birb E
+    Island 1    0.2      0.2      0.2     0.2      0.2
+    Island 2    0.8      0.1      0.05    0.025    0.025
+    Island 3    0.05     0.15     0.7     0.05     0.05
+
+Notice that each row sums to 1, all the birbs. This problem has two parts. It
+is not computationally complicated. But it is conceptually tricky.
+First, compute the entropy of each island’s birb distribution. Interpret
+these entropy values.
+Second, use each island’s birb distribution to predict the other two. This
+means to compute the K-L Divergence of each island from the others, treating each island as if it were a statistical model of the other islands. You should
+end up with 6 different K-L Divergence values. Which island predicts the
+others best? Why?
+
+***
+
+```{r eval=TRUE, echo=FALSE}
+rm(list = ls())
+setwd('~/projects/alessandro-gentilini.github.io/bayes/statistical_rethinking_2020/')
+```
+
+```{r}
+d <- matrix(c(.2,.2,.2,.2,.2,
+.8,.1,.05,.025,.025,
+.05,.15,.7,.05,.05)
+,nrow=3,ncol=5,byrow=TRUE)
+d
+```
+
+```{r}
+H <- function (p)
+{
+    return(-sum(p*log(p)))
+}
+```
+Each rows has the proportions and that's mean that they
+can be thought as frequencies and so probabilities.
+
+```{r}
+H(d[1,])
+H(d[2,])
+H(d[3,])
+```
+
+Since in Island 1 the five birds are equally distributed 
+we have that the entropy for the first island is the highest
+because we are quite uncertain about what bird we will see
+when we arrive for the first time on the Island 1.
+Island 2 has the lowest entropy because I would bet the first
+bird I will see is a Birb A since its proportion is quite
+high, namely 80%.
+
+```{r}
+D_KL <- function(p,q)
+{
+    return(sum(p*(log(p)-log(q))))
+}
+```
+
+Prior to compute the divergences I would say that Island 1 will
+be the best predictor because it has the five species
+equally distributed and so no surprise will appears when we
+will see a lot of Birb A on Island 2 or a lot of Birb C on
+island 3. 
+On the other hand Island 2 will perform bad with respect to
+Island 3 because Birb A are rare on Island 3 and
+very common on Island 2.
+Island 3 will perform bad with respect to
+Island 2 because Birb C are very common on Island 3 and
+rare on Island 2.
+
+Use Island 1 to predict 2 and 3:
+```{r}
+D_KL(d[2,],d[1,])
+D_KL(d[3,],d[1,])
+```
+
+Use Island 2 to predict 1 and 3:
+```{r}
+D_KL(d[1,],d[2,])
+D_KL(d[3,],d[2,])
+```
+
+Use Island 3 to predict 1 and 2:
+```{r}
+D_KL(d[1,],d[3,])
+D_KL(d[2,],d[3,])
+```
+
+Actually both the divergences associated with Island 1 are the lowest ones.
+
+
+**2.** Recall the marriage, age, and happiness collider bias example from Chapter 6. Run models m6.9 and m6.10 again. Compare these two models using
+WAIC (or LOO, they will produce identical results). Which model is expected to make better predictions? Which model provides the correct causal
+inference about the influence of age on happiness? Can you explain why the
+answers to these two questions disagree?
+
+***
+
+```{r}
+## R code 6.21
+library(rethinking)
+d <- sim_happiness( seed=1977 , N_years=1000 )
+
+
+## R code 6.22
+d2 <- d[ d$age>17 , ] # only adults
+d2$A <- ( d2$age - 18 ) / ( 65 - 18 )
+
+## R code 6.23
+d2$mid <- d2$married + 1
+m6.9 <- quap(
+    alist(
+        happiness ~ dnorm( mu , sigma ),
+        mu <- a[mid] + bA*A,
+        a[mid] ~ dnorm( 0 , 1 ),
+        bA ~ dnorm( 0 , 2 ),
+        sigma ~ dexp(1)
+    ) , data=d2 )
+m6.9
+
+## R code 6.24
+m6.10 <- quap(
+    alist(
+        happiness ~ dnorm( mu , sigma ),
+        mu <- a + bA*A,
+        a ~ dnorm( 0 , 1 ),
+        bA ~ dnorm( 0 , 2 ),
+        sigma ~ dexp(1)
+    ) , data=d2 )
+m6.10
+```
+
+```{r}
+WAIC(m6.9)
+WAIC(m6.10)
+compare(m6.9,m6.10,func=WAIC)
+```
+
+***
+
+**3.** Reconsider the urban fox analysis from last week’s homework. Use WAIC
+or LOO based model comparison on five different models, each using weight
+as the outcome, and containing these sets of predictor variables:
+
+    (1) avgfood + groupsize + area
+    (2) avgfood + groupsize
+    (3) groupsize + area
+    (4) avgfood
+    (5) area
+
+Can you explain the relative differences in WAIC scores, using the fox DAG
+from last week’s homework? Be sure to pay attention to the standard error
+of the score differences (dSE).
