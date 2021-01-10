@@ -81,13 +81,17 @@ def quota_max(comune):
     dem_path = '/tif/'+basename+'-DEM.tif'
     output = os.getcwd() + dem_path        
 
+    
+        
+
     bounds = c.to_crs('WGS84').geometry.bounds
     west = float(bounds.minx)
     east = float(bounds.maxx)
     north = float(bounds.maxy)
     south = float(bounds.miny)
 
-    elevation.clip(bounds=(west,south,east,north), output=output, product='SRTM1') #SRTM3 does not work
+    if not Path(output).exists():
+        elevation.clip(bounds=(west,south,east,north), output=output, product='SRTM1') #SRTM3 does not work
     dem_raster = rasterio.open('.' + dem_path)
 
     c = c.to_crs(dem_raster.crs)
@@ -196,19 +200,25 @@ objs = []
 #     objs.append(o)
 
 i = 0
+json_basename = './json/result_{:04d}.json'
 i_begin = int(sys.argv[1])
 i_end = int(sys.argv[2])
 sz = i_end-i_begin
 objs = []
 for j in range(i_begin,i_end):
     c = com.iloc[j].COMUNE
+
+    if Path(json_basename.format(j)).exists():
+        print('\n\nSkip '+c+'\n\n')
+        continue
+    
     print('\n\nProcessing '+c+' '+str(j)+' '+str((100.*i)/sz))
     o = {}
     try:
         o = quota_max(c)
         objs.append(o)
         json_str = json.dumps(o,indent=2)
-        with open('./json/result_{:04d}.json'.format(j), 'w') as text_file:
+        with open(json_basename.format(j), 'w') as text_file:
             text_file.write(json_str)        
         print('OK Processing '+c+'\n\n')
     except Exception as e:
