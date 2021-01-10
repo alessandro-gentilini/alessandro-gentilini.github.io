@@ -99,6 +99,7 @@ D_KL(d[2,],d[3,])
 
 Actually both the divergences associated with Island 1 are the lowest ones.
 
+***
 
 **2.** Recall the marriage, age, and happiness collider bias example from Chapter 6. 
 Run models m6.9 and m6.10 again. Compare these two models using
@@ -175,3 +176,71 @@ as the outcome, and containing these sets of predictor variables:
 Can you explain the relative differences in WAIC scores, using the fox DAG
 from last week’s homework? Be sure to pay attention to the standard error
 of the score differences (dSE).
+
+***
+
+```{r}
+data(foxes)
+foxes$A <- standardize(foxes$area)
+foxes$W <- standardize(foxes$weight)
+foxes$F <- standardize(foxes$avgfood)
+foxes$G <- standardize(foxes$groupsize)
+```
+
+```{r}
+mFGA <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A+b_F*F+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_F ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+
+mFG <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_F*F+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_F ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+
+mGA <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A+b_G*G,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        b_G ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+
+mF <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_F*F,
+        a ~ dnorm( 0 , .2 ),
+        b_F ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )
+
+mA <- quap(
+    alist(
+        W ~ dnorm( mu , sigma ),
+        mu <- a + b_A*A,
+        a ~ dnorm( 0 , .2 ),
+        b_A ~ dnorm( 0 , .5 ),
+        sigma ~ dexp( 1 )
+    ), data=foxes )                
+```
+
+```{r}
+result = compare(mFGA,mFG,mGA,mF,mA,func=WAIC)
+result
+plot(result)
+result@dSE
+```
