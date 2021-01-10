@@ -100,10 +100,12 @@ D_KL(d[2,],d[3,])
 Actually both the divergences associated with Island 1 are the lowest ones.
 
 
-**2.** Recall the marriage, age, and happiness collider bias example from Chapter 6. Run models m6.9 and m6.10 again. Compare these two models using
-WAIC (or LOO, they will produce identical results). Which model is expected to make better predictions? Which model provides the correct causal
-inference about the influence of age on happiness? Can you explain why the
-answers to these two questions disagree?
+**2.** Recall the marriage, age, and happiness collider bias example from Chapter 6. 
+Run models m6.9 and m6.10 again. Compare these two models using
+WAIC (or LOO, they will produce identical results).
+Which model is expected to make better predictions? 
+Which model provides the correct causal inference about the influence of age on happiness?
+Can you explain why the answers to these two questions disagree?
 
 ***
 
@@ -119,7 +121,7 @@ d2$A <- ( d2$age - 18 ) / ( 65 - 18 )
 
 ## R code 6.23
 d2$mid <- d2$married + 1
-m6.9 <- quap(
+m6.9_M <- quap(
     alist(
         happiness ~ dnorm( mu , sigma ),
         mu <- a[mid] + bA*A,
@@ -127,10 +129,10 @@ m6.9 <- quap(
         bA ~ dnorm( 0 , 2 ),
         sigma ~ dexp(1)
     ) , data=d2 )
-m6.9
+m6.9_M
 
 ## R code 6.24
-m6.10 <- quap(
+m6.10_no_M <- quap(
     alist(
         happiness ~ dnorm( mu , sigma ),
         mu <- a + bA*A,
@@ -138,14 +140,25 @@ m6.10 <- quap(
         bA ~ dnorm( 0 , 2 ),
         sigma ~ dexp(1)
     ) , data=d2 )
-m6.10
+m6.10_no_M
 ```
 
 ```{r}
-WAIC(m6.9)
-WAIC(m6.10)
-compare(m6.9,m6.10,func=WAIC)
+WAIC(m6.9_M)
+WAIC(m6.10_no_M)
+compare(m6.9_M,m6.10_no_M,func=WAIC)
+plot(compare(m6.9_M,m6.10_no_M,func=WAIC))
 ```
+
+`m6.9_M` is the model that make better predictions.
+
+`m6.10_no_M` is the model that provides the correct causal inference about the influence of age on happiness.
+
+The answers to these two questions disagree because the statistical association between age and happiness in
+married couples (the older the sadder) it is not a causal association so it gives good prediction (and so
+`m6.9_M` has lower WAIC) but it does not give hints about the causal relationship between age and happiness.
+
+
 
 ***
 
