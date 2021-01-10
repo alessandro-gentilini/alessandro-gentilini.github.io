@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  bolla
+ </title>
+ <link href="HTMLFiles/bolla.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="font-size: Floor[160. Inherited]%;">
+
+<p class="Title">
+ A naive model for the vertical motion of an air bubble in water
+</p>
+
+
+
+<p class="Author">
+ Alessandro Gentilini (5th January 2021)
+</p>
+
+
+
+<p class="Section">
+ Introduction
+</p>
+
+
+
+<p class="Text">
+ I attended courses in free and SCUBA diving and they explained us the basic gas laws, during a lesson I was asking myself: what is the motion of an air bubble generated as some depth in the sea?
+</p>
+
+
+
+<p class="Section">
+ A naive model
+</p>
+
+
+
+<p class="Text">
+ The motion equation in one dimension is<br /> <span class="EquationInline"><span class="EquationInline"><span><img src="HTMLFiles/bolla_1.png" alt="bolla_1.png" width="96" height="54" style="vertical-align:middle" /></span></span></span><span class="EquationInline">&nbsp;&nbsp;</span><br /> where <span><em>t</em></span> is time, <span><em>y</em></span> is the depth in the water and <span><em>F</em></span> sums all the relevant forces applied to the bubble. <span><em>y</em><em>=</em><em>0</em></span> is the water level and <span><em>y</em><em>&lt;</em><em>0</em></span> is below the water.<br /><span><em>F</em></span> is the sum of just two component: <br /><span><span>F=-m g + A </span></span> <br />where <span><em>m</em></span> is the mass of the bubble, <span><em>g</em></span> is the gravity acceleration and <span><em>A</em></span> is the Archimede&rsquo;s force. The Archimede&rsquo;s force is the product of the density <span><em>&rho;</em></span> of the water, the volume <span><em>V</em></span> of the bubble and the the gravity acceleration: <span><span>A=&rho; V g</span></span>.<br />But the volume of the air bubble depends on the pressure <span><em>p</em></span> according to the perfect gas law: <span><span>p V = n R T</span></span> where <span><em>n</em></span> is the number of moles of air, <span><em>R</em></span> is the gas constant and <span><em>T</em></span> is the temperature.<br />The pressure <span><em>p</em></span> at depth <span><em>y</em></span> is due to the water column (so called hydrostatic pressure): <span><span>p=&rho; g {y{</span></span> (it&rsquo;s valid only when <span><em>y</em><em>&lt;</em><em>0</em></span>).<br />The number of moles <span><em>n</em></span> is related to the molar mass of the air <span><em>M</em></span> and the bubble mass <span><em>m</em></span> through <span><span><img src="HTMLFiles/bolla_2.png" alt="bolla_2.png" width="61" height="52" style="vertical-align:middle" /></span></span>.<br />So<br /> <span><span><img src="HTMLFiles/bolla_3.png" alt="bolla_3.png" width="237" height="62" style="vertical-align:middle" /></span></span><br /> and<br /> <span><span>F=-m g + &rho; V g</span></span><br /> Substituting <span><em>V</em></span> in <span><em>F</em></span> I get<br /> <span><span><img src="HTMLFiles/bolla_4.png" alt="bolla_4.png" width="289" height="62" style="vertical-align:middle" /></span></span><br /> and I can simplify <span><em>&rho;</em><em> </em><em>g</em></span> (so this model is valid for any fluid? Uhmmm... first doubt about my naive model) to get<br />&nbsp;&nbsp;<span><span><img src="HTMLFiles/bolla_5.png" alt="bolla_5.png" width="205" height="61" style="vertical-align:middle" /></span></span><br /> Now the sum of forces must be balanced by the product of the mass of the bubble and its acceleration:<br />&nbsp;&nbsp;<span><span><img src="HTMLFiles/bolla_6.png" alt="bolla_6.png" width="259" height="66" style="vertical-align:middle" /></span></span>&nbsp;&nbsp;<br /> I can simplify the mass of the bubble (uhm... second doubt about this model):<br />&nbsp;&nbsp;&nbsp;&nbsp;<span><span><img src="HTMLFiles/bolla_7.png" alt="bolla_7.png" width="229" height="66" style="vertical-align:middle" /></span></span>&nbsp;&nbsp;<br /> So let&rsquo;s try to solve it symbolically!&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+
+
+<p class="Section">
+ Solution of the differential equation
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_8.png" alt="bolla_8.png" width="595" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/bolla_9.png" alt="bolla_9.png" width="725" height="67" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ OK, it seems it cannot be solved... so I look for a numerical solution; first of all I set some values (in SI units):
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_10.gif" alt="bolla_10.gif" width="176" height="159" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ And then solve it numerically:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_11.png" alt="bolla_11.png" width="1053" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Message">
+ <img src="HTMLFiles/bolla_12.png" alt="bolla_12.png" width="1002" height="21" style="vertical-align:middle;" usemap="#map_12" />
+<map name="map_12">
+<area shape="rect" coords="0,20,28,3" title="Dynamic[RawBoxes[FEPrivate`FrontEndResource[FEStrings, messageMenuTooltip]]]" nohref="" />
+</map>
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/bolla_13.gif" alt="bolla_13.gif" width="557" height="70" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ I would say the problem is the <span style='font-style: italic;'>singularity</span> (even because I do not know what a <span style='font-style: italic;'>stiff system</span> is :-)).<br />This is the plot of&nbsp;&nbsp;the depth <span><em>y</em></span> vs time <span><em>t</em></span>:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_14.png" alt="bolla_14.png" width="529" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/bolla_15.gif" alt="bolla_15.gif" width="576" height="362" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ And this is the plot of the bubble radius multiplied by a constant <span><em>k</em></span>:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_16.gif" alt="bolla_16.gif" width="642" height="60" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/bolla_17.gif" alt="bolla_17.gif" width="576" height="369" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now I would like to draw the bubble in ten equispaced time instants (copied from https://mathematica.stackexchange.com/a/207586 )
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_18.gif" alt="bolla_18.gif" width="532" height="60" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_19.png" alt="bolla_19.png" width="718" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/bolla_20.gif" alt="bolla_20.gif" width="80" height="447" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ An animation
+</p>
+
+
+
+<p class="Text">
+ An animation (copied from https://mathematica.stackexchange.com/a/17205 ):
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/bolla_21.png" alt="bolla_21.png" width="1183" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+<script type="text/javascript">
+var cdf = new cdfplugin();
+cdf.embed('HTMLFiles/bolla_22.cdf', 0, 0);
+</script>
+</p>
+
+<p class="Section">
+ What&rsquo;s wrong with this model?
+</p>
+
+
+
+<p class="Text">
+ The main problem I can see, based on my limited experience in observing bubbles, is that it neglects the &ldquo;friction&rdquo; of the water acting on the moving bubble: I remember that I saw bubbles starting as sphere but then deforming into mushroom-like shapes.<br />Then I have doubts about the mass of my bubble.<br /><br />I think this model will make physicists laughing (and numerical analysts too)... but I am not able to grasp the 1917 formulation by Lord Rayleigh and my Mathematica trial license is soon expiring! If I had had more time I would have tried to solve the Lord Rayleigh&rsquo;s equation.
+</p>
+
+
+
+<p class="Section">
+ Further readings
+</p>
+
+
+
+<p class="Text">
+ Lord Rayleigh O.M. F.R.S. (1917) VIII. <span style='font-style: italic;'>On the pressure developed in a liquid during the collapse of a spherical cavity</span>, The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 34:200, 94-98, DOI: 10.1080/14786440808635681&#8232;<br /><br /><br />
+</p>
+
+
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>
