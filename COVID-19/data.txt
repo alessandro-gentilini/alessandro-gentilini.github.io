@@ -315,3 +315,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2021-01-11,56,0,4877
 2021-01-12,31,3,4882
 2021-01-13,32,2,4969
+2021-01-14,30,2,5039
