@@ -2218,6 +2218,13 @@
       "deaths": 195,
       "recovered": 5078,
       "active": 1019.0
+    },
+    {
+      "date": "2021-01-16",
+      "confirmed": 6350,
+      "deaths": 197,
+      "recovered": 5150,
+      "active": 1003.0
     }
   ]
 }
