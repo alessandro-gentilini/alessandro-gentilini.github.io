@@ -1,0 +1,89 @@
+---
+title: Statistical Rethinking Winter 2020 -- Homework Week 5
+author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
+date: January 9, 2021
+output: pdf_document
+---
+
+**1.** Consider the `data(Wines2012)` data table. These data are expert ratings
+of 20 different French and American wines by 9 different French and American judges. 
+Your goal is to model `score`, the subjective rating assigned by
+each judge to each wine. I recommend standardizing it.
+
+In this first problem, consider only variation among judges and wines.
+Construct index variables of `judge` and `wine` and then use these index variables to 
+construct a linear regression model. Justify your priors. You should
+end up with 9 judge parameters and 20 wine parameters. Use `ulam` instead
+of quap to build this model, and be sure to check the chains for convergence.
+If you'd rather build the model directly in Stan or PyMC3 or Julia (Turing is
+a good choice!), go ahead. I just want you to use MCMC instead of quadratic
+approximation.
+
+How do you interpret the variation among individual judges and individual wines?
+
+Do you notice any patterns, just by plotting the differences?
+
+Which judges gave the highest/lowest ratings? 
+
+Which wines were rated worst/best on average?
+
+***
+
+```{r eval=TRUE, echo=FALSE}
+rm(list = ls())
+setwd('~/projects/alessandro-gentilini.github.io/bayes/statistical_rethinking_2020/')
+```
+
+```{r}
+library(rethinking)
+data(Wines2012)
+Wines2012$score_std <- (Wines2012$score-mean(Wines2012$score))/sd(Wines2012$score)
+Wines2012$w_id <- as.integer(Wines2012$wine)
+Wines2012$j_id <- as.integer(Wines2012$judge)
+
+# fix stan parser error:
+names(Wines2012)[names(Wines2012) == "wine.amer"] <- "wine_amer"
+names(Wines2012)[names(Wines2012) == "judge.amer"] <- "judge_amer"
+```
+
+
+```{r}
+m1 <- ulam(
+    alist(
+        score_std ~ dnorm( mu , sigma ),
+        mu <- w[w_id]+j[j_id],
+        w[w_id] ~ dnorm( 0 , 0.5 ),
+        j[j_id] ~ dnorm( 0 , 0.5 ),
+        sigma ~ dexp( 1 )
+    ) , data=Wines2012, chains=1 )
+```
+
+I plot the scores following the section 5.3.2 of the book:
+
+```{r}
+labels <- paste( "a[" , 1:9 , "]:" , levels(Wines2012$judge) , sep="" )
+plot( precis( m1 , depth=2 , pars="j" ) , labels=labels ,
+    xlab="score (std)" )
+
+labels <- paste( "a[" , 1:20 , "]:" , levels(Wines2012$wine) , sep="" )
+plot( precis( m1 , depth=2 , pars="w" ) , labels=labels ,
+    xlab="score (std)" )    
+```
+
+The variation among individual judges is due to the fact that judging
+a wine is not a purely objective task and I think that the personal
+preferences (or the personal tastes) sneak in; I suspect the 20 wines
+are not uniformly distributed accross all the relevant dimensions in
+wine tasting (white-red; still-sparkling; sweet-dry; etc.) and, let's say,
+if there is a prevalence of sparkling wine and a judge has the sparkling
+wine as his favorites then maybe he will find difficult to give low scores 
+and be impartial.
+
+The variation among individual wines are less large: wines **are** different
+and so it is expected a variation among individual wine.
+
+I do not understand what does *plotting the differences* mean.
+
+John Foy gives the highest scores while Robert Hodgson gives the lowest scores.
+
+B2 on average gets the highest score while I2 get the lowest score.
