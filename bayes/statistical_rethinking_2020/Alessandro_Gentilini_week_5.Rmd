@@ -61,11 +61,11 @@ m1 <- ulam(
 I plot the scores following the section 5.3.2 of the book:
 
 ```{r}
-labels <- paste( "a[" , 1:9 , "]:" , levels(Wines2012$judge) , sep="" )
+labels <- paste( "j[" , 1:9 , "]:" , levels(Wines2012$judge) , sep="" )
 plot( precis( m1 , depth=2 , pars="j" ) , labels=labels ,
     xlab="score (std)" )
 
-labels <- paste( "a[" , 1:20 , "]:" , levels(Wines2012$wine) , sep="" )
+labels <- paste( "w[" , 1:20 , "]:" , levels(Wines2012$wine) , sep="" )
 plot( precis( m1 , depth=2 , pars="w" ) , labels=labels ,
     xlab="score (std)" )    
 ```
@@ -87,3 +87,79 @@ I do not understand what does *plotting the differences* mean.
 John Foy gives the highest scores while Robert Hodgson gives the lowest scores.
 
 B2 on average gets the highest score while I2 get the lowest score.
+
+***
+
+**2.** Now consider three features of the wines and judges:
+
+    (1) `flight`: Whether the wine is red or white.
+    (2) `wine.amer`: Indicator variable for American wines.
+    (3) `judge.amer`: Indicator variable for American judges.
+
+Use indicator or index variables to model the influence of these features on
+the scores. Omit the individual judge and wine index variables from Problem
+1. Do not include interaction effects yet. Again use `ulam`, justify your priors,
+and be sure to check the chains.
+
+What do you conclude about the differences among the wines and judges?
+
+Try to relate the results to the inferences in Problem 1.
+
+```{r}
+Wines2012$f_id <- as.integer(Wines2012$flight)
+
+Wines2012$wine_amer <- as.factor(Wines2012$wine_amer)
+Wines2012$judge_amer <- as.factor(Wines2012$judge_amer)
+
+Wines2012$wa_id <- as.integer(Wines2012$wine_amer)
+Wines2012$ja_id <- as.integer(Wines2012$judge_amer)
+```
+
+
+```{r}
+m2 <- ulam(
+    alist(
+        score_std ~ dnorm( mu , sigma ),
+        mu <- f[f_id]+wa[wa_id]+ja[ja_id],
+        f[f_id] ~ dnorm( 0 , 0.5 ),
+        wa[wa_id] ~ dnorm( 0 , 0.5 ),
+        ja[ja_id] ~ dnorm( 0 , 0.5 ),
+        sigma ~ dexp( 1 )
+    ) , data=Wines2012, chains=1 )
+```
+
+I plot the scores following the section 5.3.2 of the book:
+
+```{r}
+labels <- paste( "f[" , 1:2 , "]:" , levels(Wines2012$flight) , sep="" )
+plot( precis( m2 , depth=2 , pars="f" ) , labels=labels ,
+    xlab="score (std)" )
+
+labels <- paste( "wa[" , 1:2 , "]:" , levels(Wines2012$wine_amer) , sep="" )
+plot( precis( m2 , depth=2 , pars="wa" ) , labels=labels ,
+    xlab="score (std)" )    
+
+labels <- paste( "ja[" , 1:2 , "]:" , levels(Wines2012$judge_amer) , sep="" )
+plot( precis( m2 , depth=2 , pars="ja" ) , labels=labels ,
+    xlab="score (std)" )    
+```
+
+***
+
+**3.** Now consider two-way interactions among the three features. You should
+end up with three different interaction terms in your model. These will be
+easier to build, if you use indicator variables. Again use `ulam`, justify your
+priors, and be sure to check the chains. 
+
+Explain what each interaction means.
+
+Be sure to interpret the model's predictions on the outcome scale (`mu`, the
+expected score), not on the scale of individual parameters. You can use `link`
+to help with this, or just use your knowledge of the linear model instead.
+
+What do you conclude about the features and the scores?
+
+Can you relate the results of your model(s) to the individual judge and wine 
+inferences from Problem 1?
+
+***
