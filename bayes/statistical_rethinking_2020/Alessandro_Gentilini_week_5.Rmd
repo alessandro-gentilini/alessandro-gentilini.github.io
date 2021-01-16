@@ -163,3 +163,39 @@ Can you relate the results of your model(s) to the individual judge and wine
 inferences from Problem 1?
 
 ***
+
+Reset the dataset:
+```{r}
+data(Wines2012)
+Wines2012$score_std <- (Wines2012$score-mean(Wines2012$score))/sd(Wines2012$score)
+
+# fix stan parser error:
+names(Wines2012)[names(Wines2012) == "wine.amer"] <- "wine_amer"
+names(Wines2012)[names(Wines2012) == "judge.amer"] <- "judge_amer"
+Wines2012$f_id <- as.integer(Wines2012$flight)
+
+Wines2012$wa_id <- as.integer(as.factor(Wines2012$wine_amer))
+Wines2012$ja_id <- as.integer(as.factor(Wines2012$judge_amer))
+```
+
+Create the indicator variables:
+```{r}
+Wines2012$is_red <- ifelse(Wines2012$flight=="red",1,0)
+```
+
+
+```{r}
+m3 <- ulam(
+    alist(
+        score_std ~ dnorm( mu , sigma ),
+        mu <- f[f_id] + wa[wa_id] + ja[ja_id] + fw*is_red*wine_amer + fj*is_red*judge_amer + wj*wine_amer*judge_amer,
+        f[f_id] ~ dnorm( 0 , 0.5 ),
+        wa[wa_id] ~ dnorm( 0 , 0.5 ),
+        ja[ja_id] ~ dnorm( 0 , 0.5 ),
+        fw ~ dnorm( 0 , 0.5 ),
+        fj ~ dnorm( 0 , 0.5 ),
+        wj ~ dnorm( 0 , 0.5 ),
+        sigma ~ dexp( 1 )
+    ) , data=Wines2012, chains=1 )
+precis(m3,depth=2)    
+```
