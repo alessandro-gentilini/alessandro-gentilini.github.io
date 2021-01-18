@@ -2225,6 +2225,20 @@
       "deaths": 197,
       "recovered": 5150,
       "active": 1003.0
+    },
+    {
+      "date": "2021-01-17",
+      "confirmed": 6408,
+      "deaths": 197,
+      "recovered": 5214,
+      "active": 997.0
+    },
+    {
+      "date": "2021-01-18",
+      "confirmed": 6440,
+      "deaths": 197,
+      "recovered": 5282,
+      "active": 961.0
     }
   ]
 }
