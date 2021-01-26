@@ -1,0 +1,681 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdftitle={Statistical Rethinking Winter 2020 -- Homework Week 6},
+            pdfauthor={Alessandro Gentilini  (just auditing)},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\title{Statistical Rethinking Winter 2020 -- Homework Week 6}
+\author{Alessandro Gentilini \texttt{.@gmail} (just auditing)}
+\date{January 24, 2021}
+
+\begin{document}
+\maketitle
+
+\textbf{1.} The data in data(NWOGrants) are outcomes for scientific
+funding applications for the Netherlands Organization for Scientific
+Research (NWO) from 2010--2012 (see van der Lee and Ellemers
+\url{doi:10.1073/pnas.1510159112}). These data have a very similar
+structure to the UCBAdmit data discussed in Chapter 11. I want you to
+consider a similar question: What are the total and indirect causal
+effects of gender on grant awards? Consider a mediation path (a pipe)
+through discipline. Draw the corresponding DAG and then use one or more
+binomial GLMs to answer the question. What is your causal
+interpretation? If NWO's goal is to equalize rates of funding between
+the genders, what type of intervention would be most effective?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(rethinking)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: rstan
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: StanHeaders
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## rstan (Version 2.21.2, GitRev: 2e1f913d3ca3)
+\end{verbatim}
+
+\begin{verbatim}
+## For execution on a local, multicore CPU with excess RAM we recommend calling
+## options(mc.cores = parallel::detectCores()).
+## To avoid recompilation of unchanged Stan programs, we recommend calling
+## rstan_options(auto_write = TRUE)
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: parallel
+\end{verbatim}
+
+\begin{verbatim}
+## rethinking (Version 2.13)
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'rethinking'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:stats':
+## 
+##     rstudent
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{data}\NormalTok{(NWOGrants)}
+\NormalTok{d<-NWOGrants}
+\NormalTok{d}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             discipline gender applications awards
+## 1    Chemical sciences      m           83     22
+## 2    Chemical sciences      f           39     10
+## 3    Physical sciences      m          135     26
+## 4    Physical sciences      f           39      9
+## 5              Physics      m           67     18
+## 6              Physics      f            9      2
+## 7           Humanities      m          230     33
+## 8           Humanities      f          166     32
+## 9   Technical sciences      m          189     30
+## 10  Technical sciences      f           62     13
+## 11   Interdisciplinary      m          105     12
+## 12   Interdisciplinary      f           78     17
+## 13 Earth/life sciences      m          156     38
+## 14 Earth/life sciences      f          126     18
+## 15     Social sciences      m          425     65
+## 16     Social sciences      f          409     47
+## 17    Medical sciences      m          245     46
+## 18    Medical sciences      f          260     29
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dagitty)}
+\NormalTok{dag <-}\StringTok{ }\KeywordTok{dagitty}\NormalTok{( }\StringTok{"dag \{}
+\StringTok{    G -> D}
+\StringTok{    D -> A}
+\StringTok{\}"}\NormalTok{)}
+\KeywordTok{coordinates}\NormalTok{(dag) <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}
+    \DataTypeTok{x=}\KeywordTok{c}\NormalTok{(}\DataTypeTok{G=}\NormalTok{-}\DecValTok{1}\NormalTok{, }\DataTypeTok{D=}\DecValTok{0}\NormalTok{, }\DataTypeTok{A=}\DecValTok{1}\NormalTok{),}
+    \DataTypeTok{y=}\KeywordTok{c}\NormalTok{(}\DataTypeTok{G=}\DecValTok{0}\NormalTok{, }\DataTypeTok{D=}\DecValTok{0}\NormalTok{, }\DataTypeTok{A=}\DecValTok{0}\NormalTok{)}
+\NormalTok{)}
+\KeywordTok{drawdag}\NormalTok{(dag)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Alessandro_Gentilini_week_6_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{adjustmentSets}\NormalTok{( dag, }\DataTypeTok{exposure=}\StringTok{"G"} \NormalTok{, }\DataTypeTok{outcome=}\StringTok{"A"} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  {}
+\end{verbatim}
+
+For the above DAG, as \texttt{dagitty.net/dags.html} says \emph{No
+adjustment is necessary to estimate the total effect of G on A.} So for
+the total effect the following model is fine:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.29}
+\NormalTok{dat_list <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}
+    \DataTypeTok{admit =} \NormalTok{d$awards,}
+    \DataTypeTok{applications =} \NormalTok{d$applications,}
+    \DataTypeTok{gid =} \KeywordTok{ifelse}\NormalTok{( d$gender==}\StringTok{"m"} \NormalTok{, }\DecValTok{1} \NormalTok{, }\DecValTok{2} \NormalTok{)}
+\NormalTok{)}
+\NormalTok{m11}\FloatTok{.7} \NormalTok{<-}\StringTok{ }\KeywordTok{ulam}\NormalTok{(}
+    \KeywordTok{alist}\NormalTok{(}
+        \NormalTok{admit ~}\StringTok{ }\KeywordTok{dbinom}\NormalTok{( applications , p ) ,}
+        \KeywordTok{logit}\NormalTok{(p) <-}\StringTok{ }\NormalTok{a[gid] ,}
+        \NormalTok{a[gid] ~}\StringTok{ }\KeywordTok{dnorm}\NormalTok{( }\DecValTok{0} \NormalTok{, }\FloatTok{1.5} \NormalTok{)}
+    \NormalTok{) , }\DataTypeTok{data=}\NormalTok{dat_list , }\DataTypeTok{chains=}\DecValTok{4} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## SAMPLING FOR MODEL '1c8fe12824d87b1e9ee4f9e6659968f2' NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 1: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 300 / 1000 [ 30%]  (Warmup)
+## Chain 1: Iteration: 400 / 1000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 500 / 1000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 501 / 1000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.012841 seconds (Warm-up)
+## Chain 1:                0.0109 seconds (Sampling)
+## Chain 1:                0.023741 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL '1c8fe12824d87b1e9ee4f9e6659968f2' NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 5e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 2: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 300 / 1000 [ 30%]  (Warmup)
+## Chain 2: Iteration: 400 / 1000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 500 / 1000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 501 / 1000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.012678 seconds (Warm-up)
+## Chain 2:                0.010706 seconds (Sampling)
+## Chain 2:                0.023384 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL '1c8fe12824d87b1e9ee4f9e6659968f2' NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 3: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 3: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 3: Iteration: 300 / 1000 [ 30%]  (Warmup)
+## Chain 3: Iteration: 400 / 1000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 500 / 1000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 501 / 1000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.011809 seconds (Warm-up)
+## Chain 3:                0.010228 seconds (Sampling)
+## Chain 3:                0.022037 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL '1c8fe12824d87b1e9ee4f9e6659968f2' NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 5e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 4: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 4: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 4: Iteration: 300 / 1000 [ 30%]  (Warmup)
+## Chain 4: Iteration: 400 / 1000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 500 / 1000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 501 / 1000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.011518 seconds (Warm-up)
+## Chain 4:                0.011537 seconds (Sampling)
+## Chain 4:                0.023055 seconds (Total)
+## Chain 4:
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{precis}\NormalTok{( m11}\FloatTok{.7} \NormalTok{, }\DataTypeTok{depth=}\DecValTok{2} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           mean         sd      5.5%     94.5%    n_eff    Rhat4
+## a[1] -1.532826 0.06306236 -1.633500 -1.434373 1449.122 1.000007
+## a[2] -1.741701 0.08263538 -1.880907 -1.611456 1274.537 1.000023
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.30}
+\NormalTok{post <-}\StringTok{ }\KeywordTok{extract.samples}\NormalTok{(m11}\FloatTok{.7}\NormalTok{)}
+\NormalTok{diff_a <-}\StringTok{ }\NormalTok{post$a[,}\DecValTok{1}\NormalTok{] -}\StringTok{ }\NormalTok{post$a[,}\DecValTok{2}\NormalTok{]}
+\NormalTok{diff_p <-}\StringTok{ }\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]) -}\StringTok{ }\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{])}
+\KeywordTok{precis}\NormalTok{(}\KeywordTok{list}\NormalTok{( }\DataTypeTok{diff_a=}\NormalTok{diff_a , }\DataTypeTok{diff_p=}\NormalTok{diff_p ), }\DataTypeTok{hist=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              mean         sd        5.5%      94.5%
+## diff_a 0.20887494 0.10149684 0.051961646 0.37490569
+## diff_p 0.02836733 0.01359734 0.007053351 0.05033435
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.31}
+\KeywordTok{postcheck}\NormalTok{( m11}\FloatTok{.7} \NormalTok{)}
+\CommentTok{# draw lines connecting points from same dept}
+\NormalTok{labels <-}\StringTok{ }\KeywordTok{abbreviate}\NormalTok{(d$discipline)}
+\NormalTok{for ( i in }\DecValTok{1}\NormalTok{:}\DecValTok{9} \NormalTok{) \{}
+    \NormalTok{x <-}\StringTok{ }\DecValTok{1} \NormalTok{+}\StringTok{ }\DecValTok{2}\NormalTok{*(i}\DecValTok{-1}\NormalTok{)}
+    \NormalTok{y1 <-}\StringTok{ }\NormalTok{d$awards[x]/d$applications[x]}
+    \NormalTok{y2 <-}\StringTok{ }\NormalTok{d$awards[x}\DecValTok{+1}\NormalTok{]/d$applications[x}\DecValTok{+1}\NormalTok{]}
+    \KeywordTok{lines}\NormalTok{( }\KeywordTok{c}\NormalTok{(x,x}\DecValTok{+1}\NormalTok{) , }\KeywordTok{c}\NormalTok{(y1,y2) , }\DataTypeTok{col=}\NormalTok{rangi2 , }\DataTypeTok{lwd=}\DecValTok{2} \NormalTok{)}
+    \KeywordTok{text}\NormalTok{( x}\FloatTok{+0.5} \NormalTok{, (y1+y2)/}\DecValTok{2} \NormalTok{+}\StringTok{ }\FloatTok{0.05} \NormalTok{, labels[x] , }\DataTypeTok{cex=}\FloatTok{0.8} \NormalTok{, }\DataTypeTok{col=}\NormalTok{rangi2 )}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Alessandro_Gentilini_week_6_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+So the total effect is that: probability difference between male (1) and
+female (2) is between 0.6\% and 5\%, so positive, so male advantage.
+
+Instead, the \emph{Minimal sufficient adjustment sets for estimating the
+direct effect of G on A:} is the set with just one element: D; so the
+following model adjusts for D:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.32}
+\NormalTok{dat_list$dept_id <-}\StringTok{ }\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\NormalTok{:}\DecValTok{9}\NormalTok{,}\DataTypeTok{each=}\DecValTok{2}\NormalTok{)}
+\NormalTok{m11}\FloatTok{.8} \NormalTok{<-}\StringTok{ }\KeywordTok{ulam}\NormalTok{(}
+    \KeywordTok{alist}\NormalTok{(}
+        \NormalTok{admit ~}\StringTok{ }\KeywordTok{dbinom}\NormalTok{( applications , p ) ,}
+        \KeywordTok{logit}\NormalTok{(p) <-}\StringTok{ }\NormalTok{a[gid] +}\StringTok{ }\NormalTok{delta[dept_id] ,}
+        \NormalTok{a[gid] ~}\StringTok{ }\KeywordTok{dnorm}\NormalTok{( }\DecValTok{0} \NormalTok{, }\FloatTok{1.5} \NormalTok{) ,}
+        \NormalTok{delta[dept_id] ~}\StringTok{ }\KeywordTok{dnorm}\NormalTok{( }\DecValTok{0} \NormalTok{, }\FloatTok{1.5} \NormalTok{)}
+    \NormalTok{) , }\DataTypeTok{data=}\NormalTok{dat_list , }\DataTypeTok{chains=}\DecValTok{4} \NormalTok{, }\DataTypeTok{iter=}\DecValTok{4000} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## SAMPLING FOR MODEL 'a7a7a4ab228c37095f791eebea8cb75b' NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.3e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 4000 [  0%]  (Warmup)
+## Chain 1: Iteration:  400 / 4000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  800 / 4000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1200 / 4000 [ 30%]  (Warmup)
+## Chain 1: Iteration: 1600 / 4000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 2000 / 4000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 2001 / 4000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 2400 / 4000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 2800 / 4000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 3200 / 4000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 3600 / 4000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 4000 / 4000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.213343 seconds (Warm-up)
+## Chain 1:                0.205405 seconds (Sampling)
+## Chain 1:                0.418748 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL 'a7a7a4ab228c37095f791eebea8cb75b' NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 7e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 4000 [  0%]  (Warmup)
+## Chain 2: Iteration:  400 / 4000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  800 / 4000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1200 / 4000 [ 30%]  (Warmup)
+## Chain 2: Iteration: 1600 / 4000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 2000 / 4000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 2001 / 4000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 2400 / 4000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 2800 / 4000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 3200 / 4000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 3600 / 4000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 4000 / 4000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.208938 seconds (Warm-up)
+## Chain 2:                0.261439 seconds (Sampling)
+## Chain 2:                0.470377 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL 'a7a7a4ab228c37095f791eebea8cb75b' NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 8e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 4000 [  0%]  (Warmup)
+## Chain 3: Iteration:  400 / 4000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  800 / 4000 [ 20%]  (Warmup)
+## Chain 3: Iteration: 1200 / 4000 [ 30%]  (Warmup)
+## Chain 3: Iteration: 1600 / 4000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 2000 / 4000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 2001 / 4000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 2400 / 4000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 2800 / 4000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 3200 / 4000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 3600 / 4000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 4000 / 4000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.219173 seconds (Warm-up)
+## Chain 3:                0.209723 seconds (Sampling)
+## Chain 3:                0.428896 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL 'a7a7a4ab228c37095f791eebea8cb75b' NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 7e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 4000 [  0%]  (Warmup)
+## Chain 4: Iteration:  400 / 4000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  800 / 4000 [ 20%]  (Warmup)
+## Chain 4: Iteration: 1200 / 4000 [ 30%]  (Warmup)
+## Chain 4: Iteration: 1600 / 4000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 2000 / 4000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 2001 / 4000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 2400 / 4000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 2800 / 4000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 3200 / 4000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 3600 / 4000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 4000 / 4000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.231071 seconds (Warm-up)
+## Chain 4:                0.206615 seconds (Sampling)
+## Chain 4:                0.437686 seconds (Total)
+## Chain 4:
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{precis}\NormalTok{( m11}\FloatTok{.8} \NormalTok{, }\DataTypeTok{depth=}\DecValTok{2}\NormalTok{, }\DataTypeTok{hist=}\OtherTok{FALSE} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                mean        sd       5.5%      94.5%    n_eff    Rhat4
+## a[1]     -1.1647170 0.4611962 -1.9188611 -0.4363120 572.6181 1.011093
+## a[2]     -1.3043185 0.4654153 -2.0658172 -0.5752468 593.9365 1.011407
+## delta[1]  0.1596236 0.4940071 -0.6353889  0.9514392 698.5384 1.009627
+## delta[2] -0.1901229 0.4923442 -0.9726938  0.6127794 662.0331 1.008596
+## delta[3]  0.1312309 0.5180979 -0.6930659  0.9708584 670.9712 1.008724
+## delta[4] -0.4103184 0.4751251 -1.1640281  0.3557799 593.1543 1.011068
+## delta[5] -0.3834015 0.4835695 -1.1411669  0.4029864 621.6438 1.010272
+## delta[6] -0.4546402 0.4961238 -1.2436059  0.3527262 642.6444 1.010703
+## delta[7] -0.1742378 0.4788320 -0.9257869  0.6015359 631.4054 1.010879
+## delta[8] -0.6338491 0.4694052 -1.3647921  0.1346001 607.6529 1.010973
+## delta[9] -0.5113635 0.4741191 -1.2603768  0.2544113 629.2081 1.010435
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.33}
+\NormalTok{post <-}\StringTok{ }\KeywordTok{extract.samples}\NormalTok{(m11}\FloatTok{.8}\NormalTok{)}
+\NormalTok{diff_a <-}\StringTok{ }\NormalTok{post$a[,}\DecValTok{1}\NormalTok{] -}\StringTok{ }\NormalTok{post$a[,}\DecValTok{2}\NormalTok{]}
+\NormalTok{diff_p <-}\StringTok{ }\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]) -}\StringTok{ }\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{])}
+\KeywordTok{precis}\NormalTok{( }\KeywordTok{list}\NormalTok{( }\DataTypeTok{diff_a=}\NormalTok{diff_a , }\DataTypeTok{diff_p=}\NormalTok{diff_p ), }\DataTypeTok{hist=}\OtherTok{FALSE} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              mean         sd         5.5%      94.5%
+## diff_a 0.13960157 0.10804397 -0.034582192 0.31348753
+## diff_p 0.02404058 0.01983573 -0.005742004 0.05729233
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## R code 11.34}
+\NormalTok{pg <-}\StringTok{ }\KeywordTok{with}\NormalTok{( dat_list , }\KeywordTok{sapply}\NormalTok{( }\DecValTok{1}\NormalTok{:}\DecValTok{9} \NormalTok{, function(k)}
+    \NormalTok{applications[dept_id==k]/}\KeywordTok{sum}\NormalTok{(applications[dept_id==k]) ) )}
+\KeywordTok{rownames}\NormalTok{(pg) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"male"}\NormalTok{,}\StringTok{"female"}\NormalTok{)}
+\KeywordTok{colnames}\NormalTok{(pg) <-}\StringTok{ }\KeywordTok{abbreviate}\NormalTok{(}\KeywordTok{unique}\NormalTok{(d$discipline))}
+\KeywordTok{round}\NormalTok{( pg , }\DecValTok{2} \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        Chms Physs Physc Hmnt Tchs Intr Er/s Scls Mdcs
+## male   0.68  0.78  0.88 0.58 0.75 0.57 0.55 0.51 0.49
+## female 0.32  0.22  0.12 0.42 0.25 0.43 0.45 0.49 0.51
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{chem<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{1}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{1}\NormalTok{])}
+\NormalTok{physical<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{2}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{2}\NormalTok{])}
+\NormalTok{phys<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{3}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{3}\NormalTok{])}
+\NormalTok{hum<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{4}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{4}\NormalTok{])}
+\NormalTok{tech<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{5}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{5}\NormalTok{])}
+\NormalTok{inter<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{6}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{6}\NormalTok{])}
+\NormalTok{earth<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{7}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{7}\NormalTok{])}
+\NormalTok{soc<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{8}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{8}\NormalTok{])}
+\NormalTok{med<-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{1}\NormalTok{]+post$delta[,}\DecValTok{9}\NormalTok{])-}\KeywordTok{inv_logit}\NormalTok{(post$a[,}\DecValTok{2}\NormalTok{]+post$delta[,}\DecValTok{9}\NormalTok{])}
+
+\NormalTok{diff_in_prob<-}\KeywordTok{data.frame}\NormalTok{(}
+    \DataTypeTok{chem=}\NormalTok{chem,}\DataTypeTok{physical=}\NormalTok{physical,}\DataTypeTok{phys=}\NormalTok{phys,}\DataTypeTok{hum=}\NormalTok{hum,}
+    \DataTypeTok{tech=}\NormalTok{tech,}\DataTypeTok{inter=}\NormalTok{inter,}\DataTypeTok{earth=}\NormalTok{earth,}\DataTypeTok{soc=}\NormalTok{soc,}\DataTypeTok{med=}\NormalTok{med}
+\NormalTok{)}
+
+\KeywordTok{precis}\NormalTok{(diff_in_prob,}\DataTypeTok{digits=}\DecValTok{2}\NormalTok{,}\DataTypeTok{hist=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                mean         sd         5.5%      94.5%
+## chem     0.02619304 0.02039163 -0.006681406 0.05944984
+## physical 0.02154122 0.01682400 -0.005606293 0.04842818
+## phys     0.02558290 0.01994136 -0.006573151 0.05769370
+## hum      0.01885006 0.01466350 -0.004748447 0.04230427
+## tech     0.01903306 0.01483153 -0.004856489 0.04247251
+## inter    0.01836182 0.01450882 -0.004532632 0.04180141
+## earth    0.02197135 0.01710622 -0.005501680 0.04943987
+## soc      0.01615988 0.01257840 -0.004072040 0.03632964
+## med      0.01770080 0.01384270 -0.004434915 0.04009827
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(diff_in_prob,}\DataTypeTok{main=}\StringTok{'Difference in prob. of award between men and women, within disciplines'}\NormalTok{,}
+\DataTypeTok{ylab=}\StringTok{'difference in probability'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Alessandro_Gentilini_week_6_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+There is a slightly advantage for men: on average it is about 2.5\%, so
+the most effective intervention is the following: when you have to
+choose between a man grant and a woman grant that have the same value
+then pick a random number \(n\) between \(0\) and \(1\) and give the
+award to the woman if \(n<0.525\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2.} Suppose that the NWO Grants sample has an unobserved
+confound that influ- ences both choice of discipline and the probability
+of an award. One example of such a confound could be the career stage of
+each applicant. Suppose that in some disciplines, junior scholars apply
+for most of the grants. In other disciplines, schol- ars from all career
+stages compete. As a result, career stage influences discipline as well
+as the probability of being awarded a grant. Add these influences to
+your DAG from Problem 1. What happens now when you condition on
+discipline? Does it provide an un-confounded estimate of the direct path
+from gender to an award? Why or why not? Justify your answer with the
+back-door criterion. Hint: This is structurally a lot like the
+grandparents-parents- children-neighborhoods example from a previous
+week. If you have trouble thinking this though, try simulating fake
+data, assuming your DAG is true. Then analyze it using the model from
+Problem 1. What do you con- clude? Is it possible for gender to have a
+real direct causal influence but for a regres- sion conditioning on both
+gender and discipline to suggest zero influence?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Using \texttt{dagitty.net/dags.html}, if Career Stage can be observed
+then:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  No adjustment is necessary to estimate the \textbf{total} effect of G
+  on A.
+\item
+  The Minimal sufficient adjustment sets for estimating the
+  \textbf{direct} effect of G on A is the set \{Career Stage, D\};
+  adjusting just for the Career Stage is fine (white node is adjusted)
+  while adjusting just for the discipline introduces a biasing path.
+  Adjusting for both D and Career Stage is fine.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{./week6_adjust_just_for_career.png}
+\caption{Adjusting just for career is fine.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{./week_6_biasing_path.png}
+\caption{Biasing path (in magenta) appears when adjusting just for
+Discipline.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{week6_adjust_both_career_and_discipline.png}
+\caption{Adjusting for both does not introduce a biasing path.}
+\end{figure}
+
+\end{document}
