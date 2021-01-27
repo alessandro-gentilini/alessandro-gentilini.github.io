@@ -1,0 +1,219 @@
+---
+title: Statistical Rethinking Winter 2020 -- Homework Week 6
+author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
+date: January 24, 2021
+output: pdf_document
+---
+
+**1.** The data in data(NWOGrants) are outcomes for scientific funding applications
+for the Netherlands Organization for Scientific Research (NWO) from 2010–2012
+(see van der Lee and Ellemers doi:10.1073/pnas.1510159112). These data have a
+very similar structure to the UCBAdmit data discussed in Chapter 11.
+I want you to consider a similar question: What are the total and indirect causal
+effects of gender on grant awards? Consider a mediation path (a pipe) through
+discipline. Draw the corresponding DAG and then use one or more binomial
+GLMs to answer the question.
+What is your causal interpretation? If NWO’s goal is to equalize rates of funding
+between the genders, what type of intervention would be most effective?
+
+***
+
+```{r eval=TRUE, echo=FALSE}
+rm(list = ls())
+setwd('~/projects/alessandro-gentilini.github.io/bayes/statistical_rethinking_2020/')
+```
+
+```{r}
+library(rethinking)
+data(NWOGrants)
+d<-NWOGrants
+d
+```
+
+```{r}
+library(dagitty)
+dag <- dagitty( "dag {
+    G -> D
+    D -> A
+}")
+coordinates(dag) <- list(
+    x=c(G=-1, D=0, A=1),
+    y=c(G=0, D=0, A=0)
+)
+drawdag(dag)
+adjustmentSets( dag, exposure="G" , outcome="A" )
+```
+
+For the above DAG, as `dagitty.net/dags.html` says *No adjustment is necessary to estimate the total effect of G on A.*
+So for the total effect the following model is fine:
+
+```{r}
+## R code 11.29
+dat_list <- list(
+    admit = d$awards,
+    applications = d$applications,
+    gid = ifelse( d$gender=="m" , 1 , 2 )
+)
+m11.7 <- ulam(
+    alist(
+        admit ~ dbinom( applications , p ) ,
+        logit(p) <- a[gid] ,
+        a[gid] ~ dnorm( 0 , 1.5 )
+    ) , data=dat_list , chains=4 )
+precis( m11.7 , depth=2 )
+```
+
+```{r}
+## R code 11.30
+post <- extract.samples(m11.7)
+diff_a <- post$a[,1] - post$a[,2]
+diff_p <- inv_logit(post$a[,1]) - inv_logit(post$a[,2])
+precis(list( diff_a=diff_a , diff_p=diff_p ), hist=FALSE)
+
+## R code 11.31
+postcheck( m11.7 )
+# draw lines connecting points from same dept
+labels <- abbreviate(d$discipline)
+for ( i in 1:9 ) {
+    x <- 1 + 2*(i-1)
+    y1 <- d$awards[x]/d$applications[x]
+    y2 <- d$awards[x+1]/d$applications[x+1]
+    lines( c(x,x+1) , c(y1,y2) , col=rangi2 , lwd=2 )
+    text( x+0.5 , (y1+y2)/2 + 0.05 , labels[x] , cex=0.8 , col=rangi2 )
+}
+```
+
+So the total effect is that: probability difference between male (1) and female (2) is between 0.6%  and 5%, so positive,
+so male advantage.
+
+Instead, the *Minimal sufficient adjustment sets for estimating the direct effect of G on A:* 
+is the set with just one element: D; so the following model adjusts for D:
+
+```{r}
+## R code 11.32
+dat_list$dept_id <- rep(1:9,each=2)
+m11.8 <- ulam(
+    alist(
+        admit ~ dbinom( applications , p ) ,
+        logit(p) <- a[gid] + delta[dept_id] ,
+        a[gid] ~ dnorm( 0 , 1.5 ) ,
+        delta[dept_id] ~ dnorm( 0 , 1.5 )
+    ) , data=dat_list , chains=4 , iter=4000 )
+precis( m11.8 , depth=2, hist=FALSE )
+
+## R code 11.33
+post <- extract.samples(m11.8)
+diff_a <- post$a[,1] - post$a[,2]
+diff_p <- inv_logit(post$a[,1]) - inv_logit(post$a[,2])
+precis( list( diff_a=diff_a , diff_p=diff_p ), hist=FALSE )
+
+## R code 11.34
+pg <- with( dat_list , sapply( 1:9 , function(k)
+    applications[dept_id==k]/sum(applications[dept_id==k]) ) )
+rownames(pg) <- c("male","female")
+colnames(pg) <- abbreviate(unique(d$discipline))
+round( pg , 2 )
+```
+
+
+
+```{r}
+chem<-inv_logit(post$a[,1]+post$delta[,1])-inv_logit(post$a[,2]+post$delta[,1])
+physical<-inv_logit(post$a[,1]+post$delta[,2])-inv_logit(post$a[,2]+post$delta[,2])
+phys<-inv_logit(post$a[,1]+post$delta[,3])-inv_logit(post$a[,2]+post$delta[,3])
+hum<-inv_logit(post$a[,1]+post$delta[,4])-inv_logit(post$a[,2]+post$delta[,4])
+tech<-inv_logit(post$a[,1]+post$delta[,5])-inv_logit(post$a[,2]+post$delta[,5])
+inter<-inv_logit(post$a[,1]+post$delta[,6])-inv_logit(post$a[,2]+post$delta[,6])
+earth<-inv_logit(post$a[,1]+post$delta[,7])-inv_logit(post$a[,2]+post$delta[,7])
+soc<-inv_logit(post$a[,1]+post$delta[,8])-inv_logit(post$a[,2]+post$delta[,8])
+med<-inv_logit(post$a[,1]+post$delta[,9])-inv_logit(post$a[,2]+post$delta[,9])
+
+diff_in_prob<-data.frame(
+    chem=chem,physical=physical,phys=phys,hum=hum,
+    tech=tech,inter=inter,earth=earth,soc=soc,med=med
+)
+
+precis(diff_in_prob,digits=2,hist=FALSE)
+boxplot(diff_in_prob,main='Difference in prob. of award between men and women, within disciplines',
+ylab='difference in probability')
+```
+
+There is a slightly advantage for men: on average it is about 2.5%, so the most effective
+intervention is the following: when you have to choose between a man grant and a woman
+grant that have the same value then pick a random number $n$ between $0$ and $1$ and give the award to
+the woman if $n<0.525$.
+
+***
+
+**2.** Suppose that the NWO Grants sample has an unobserved confound that influ-
+ences both choice of discipline and the probability of an award. One example of
+such a confound could be the career stage of each applicant. Suppose that in some
+disciplines, junior scholars apply for most of the grants. In other disciplines, schol-
+ars from all career stages compete. As a result, career stage influences discipline as
+well as the probability of being awarded a grant.
+Add these influences to your DAG from Problem 1. What happens now when you
+condition on discipline? Does it provide an un-confounded estimate of the direct
+path from gender to an award? Why or why not? Justify your answer with the
+back-door criterion. Hint: This is structurally a lot like the grandparents-parents-
+children-neighborhoods example from a previous week.
+If you have trouble thinking this though, try simulating fake data, assuming your
+DAG is true. Then analyze it using the model from Problem 1. What do you con-
+clude? Is it possible for gender to have a real direct causal influence but for a regres-
+sion conditioning on both gender and discipline to suggest zero influence?
+
+***
+
+Using `dagitty.net/dags.html`, if Career Stage can be observed then:
+
+1. No adjustment is necessary to estimate the **total** effect of G on A.
+
+2. The Minimal sufficient adjustment sets for estimating the **direct** effect of G on A
+ is the set {Career Stage, D}; adjusting just for the Career Stage is fine (white node
+ is adjusted) while adjusting just for the discipline introduces a biasing path.
+ Adjusting for both D and Career Stage is fine.
+
+![Adjusting just for career is fine.](./week6_adjust_just_for_career.png)
+
+![Biasing path (in magenta) appears when adjusting just for Discipline.](./week_6_biasing_path.png)
+
+![Adjusting for both does not introduce a biasing path.](week6_adjust_both_career_and_discipline.png)
+
+***
+
+**3.** The data contained in library(MASS);data(eagles) are records of salmon
+pirating attempts by Bald Eagles in Washington State. See ?eagles for details.
+While one eagle feeds, sometimes another will swoop in and try to steal the salmon
+from it. Call the feeding eagle the “victim” and the thief the “pirate.” Use the avail-
+able data to build one or more binomial GLMs of successful pirating attempts, using
+size and age as predictors. Consider any relevant interactions.
+
+***
+
+```{r}
+edag1 <- dagitty('dag {
+A [exposure,pos="-0.401,0.293"]
+P [exposure,pos="0.147,-0.141"]
+V [exposure,pos="-1.264,0.054"]
+n [pos="-0.944,-1.075"]
+y [outcome,pos="-0.866,-0.622"]
+A -> P
+A -> y
+P -> y
+V -> y
+}
+')
+drawdag(edag1)
+
+edag2 <- dagitty('dag {
+A [exposure,pos="-0.401,0.293"]
+P [exposure,pos="0.147,-0.141"]
+V [exposure,pos="-1.264,0.054"]
+n [pos="-0.944,-1.075"]
+y [outcome,pos="-0.866,-0.622"]
+A -> y
+P -> y
+V -> y
+}
+')
+drawdag(edag2)
+```
