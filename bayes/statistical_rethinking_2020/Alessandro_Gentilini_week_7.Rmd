@@ -1,0 +1,168 @@
+---
+title: Statistical Rethinking Winter 2020 -- Homework Week 7
+author: Alessandro Gentilini \texttt{.@gmail} (just auditing)
+date: January 31, 2021
+output: pdf_document
+---
+
+There are only two problems this week, because the models take a little while to run.
+Be sure to run the models from the relevant part of Chapter 12 first. That will give
+you almost all of the model structure you need.
+
+**1.** In the Trolley data—data(Trolley)—we saw how education level (modeled as
+an ordered category) is associated with responses. Is this association causal? One
+plausible confound is that education is also associated with age, through a causal
+process: People are older when they finish school than when they begin it.
+Reconsider the Trolley data in this light. 
+Draw a DAG that represents hypothetical causal relationships 
+among response, education, and age.
+Which statical model or models do you need to evaluate the causal influence 
+of education on responses?
+Fit these models to the trolley data. What do you conclude about the causal 
+relationships among these three variables?
+
+***
+
+![DAG for question 1.](./week_7_exercise_1.png)
+
+```{r eval=TRUE, echo=FALSE}
+rm(list = ls())
+setwd('~/projects/alessandro-gentilini.github.io/bayes/statistical_rethinking_2020/')
+```
+
+```{r}
+## R code 12.30
+library(rethinking)
+data(Trolley)
+d <- Trolley
+levels(d$edu)
+
+## R code 12.31
+edu_levels <- c( 6 , 1 , 8 , 4 , 7 , 2 , 5 , 3 )
+d$edu_new <- edu_levels[ d$edu ]
+
+## R code 12.32
+library(gtools)
+set.seed(1805)
+delta <- rdirichlet( 10 , alpha=rep(2,7) )
+str(delta)
+
+## R code 12.33
+h <- 3
+plot( NULL , xlim=c(1,7) , ylim=c(0,0.4) , xlab="index" , ylab="probability" )
+for ( i in 1:nrow(delta) ) lines( 1:7 , delta[i,] , type="b" ,
+    pch=ifelse(i==h,16,1) , lwd=ifelse(i==h,4,1.5) ,
+    col=ifelse(i==h,"black",col.alpha("black",0.7)) )
+
+# ## R code 12.34
+ dat <- list(
+     R = d$response ,
+     action = d$action,
+     intention = d$intention,
+     contact = d$contact,
+     E = as.integer( d$edu_new ),   # edu_new as an index
+     alpha = rep( 2 , 7 ) )      # delta prior
+
+ m12.6 <- ulam(
+     alist(
+         R ~ ordered_logistic( phi , kappa ),
+         phi <- bE*sum( delta_j[1:E] ) + bA*action + bI*intention + bC*contact,
+         kappa ~ normal( 0 , 1.5 ),
+         c(bA,bI,bC,bE) ~ normal( 0 , 1 ),
+         vector[8]: delta_j <<- append_row( 0 , delta ),
+         simplex[7]: delta ~ dirichlet( alpha )
+     ), data=dat , chains=4 , cores=4 )
+
+# ## R code 12.35
+precis( m12.6 , depth=2 , omit="kappa" )
+
+# ## R code 12.36
+delta_labels <- c("Elem","MidSch","SHS","HSG","SCol","Bach","Mast","Grad")
+pairs( m12.6 , pars="delta" , labels=delta_labels )
+```
+
+I add `age` to the model as an ordinary continuous variable:
+
+```{r}
+ dat2 <- list(
+     R = d$response ,
+     action = d$action,
+     intention = d$intention,
+     contact = d$contact,
+     E = as.integer( d$edu_new ),   # edu_new as an index
+     age=d$age,
+     alpha = rep( 2 , 7 ) )      # delta prior
+
+ m12.6_2 <- ulam(
+     alist(
+         R ~ ordered_logistic( phi , kappa ),
+         phi <- bE*sum( delta_j[1:E] )+ bAge*age + bA*action + bI*intention + bC*contact,
+         kappa ~ normal( 0 , 1.5 ),
+         c(bA,bI,bC,bE,bAge) ~ normal( 0 , 1 ),
+         vector[8]: delta_j <<- append_row( 0 , delta ),
+         simplex[7]: delta ~ dirichlet( alpha )
+     ), data=dat2 , chains=4 , cores=4 )
+
+# ## R code 12.35
+precis( m12.6_2 , depth=2 , omit="kappa" )
+
+# ## R code 12.36
+delta_labels <- c("Elem","MidSch","SHS","HSG","SCol","Bach","Mast","Grad")
+pairs( m12.6_2 , pars="delta" , labels=delta_labels )
+```
+
+Age seems to be not influential, but after adding it to the model, the overall
+association of education `bE` is now positive; I cannot explain this result.
+
+***
+
+**2.** Consider one more variable in the Trolley data: Gender. Suppose that gender
+might influence education as well as response directly. Draw the DAG now that
+includes response, education, age, and gender.
+Using only the DAG, is it possible that the inferences from Problem 1 are confounded 
+by gender? If so, define any additional models you need to infer the causal
+influence of education on response. What do you conclude?
+
+***
+
+![DAG for question 2.](./week_7_exercise_2.png)
+
+I would say that it is possible that the inferences from Problem 1 are confounded 
+by gender, but I have not a logical exaplanation to that since I did not still fully grasped
+the causal inference and the DAGs.
+
+I will add an index variable `sex` and then education `bE` and age `bAge` 
+coefficients will get indexed by `sex`.
+
+```{r}
+d$sex <- ifelse(d$male==1,2,1)
+dat3 <- list(
+    R = d$response ,
+    sex = d$sex,
+    action = d$action,
+    intention = d$intention,
+    contact = d$contact,
+    E = as.integer( d$edu_new ),   # edu_new as an index
+    age=d$age,
+    alpha = rep( 2 , 7 ) )      # delta prior
+
+m12.6_3 <- ulam(
+    alist(
+        R ~ ordered_logistic( phi , kappa ),
+        phi <- bE[sex]*sum( delta_j[1:E] )+ bAge[sex]*age + bA*action + bI*intention + bC*contact,
+        bE[sex] ~ normal( 0 , 1 ),
+        bAge[sex] ~ normal( 0 , 1 ),
+        kappa ~ normal( 0 , 1.5 ),
+        c(bA,bI,bC) ~ normal( 0 , 1 ),
+        vector[8]: delta_j <<- append_row( 0 , delta ),
+        simplex[7]: delta ~ dirichlet( alpha )
+    ), data=dat3 , chains=4 , cores=4 )
+
+## R code 12.35
+precis( m12.6_3 , depth=2 , omit="kappa" )
+```
+
+Age is still not influential and now there is a positive association of education
+for men and a negative association of education for women.
+
+
