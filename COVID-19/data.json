@@ -2267,6 +2267,76 @@
       "deaths": 205,
       "recovered": 5495,
       "active": 853.0
+    },
+    {
+      "date": "2021-01-23",
+      "confirmed": 6579,
+      "deaths": 206,
+      "recovered": 5541,
+      "active": 832.0
+    },
+    {
+      "date": "2021-01-24",
+      "confirmed": 6612,
+      "deaths": 206,
+      "recovered": 5571,
+      "active": 835.0
+    },
+    {
+      "date": "2021-01-25",
+      "confirmed": 6673,
+      "deaths": 208,
+      "recovered": 5672,
+      "active": 793.0
+    },
+    {
+      "date": "2021-01-26",
+      "confirmed": 6690,
+      "deaths": 213,
+      "recovered": 5684,
+      "active": 793.0
+    },
+    {
+      "date": "2021-01-27",
+      "confirmed": 6750,
+      "deaths": 213,
+      "recovered": 5742,
+      "active": 795.0
+    },
+    {
+      "date": "2021-01-28",
+      "confirmed": 6788,
+      "deaths": 214,
+      "recovered": 5759,
+      "active": 815.0
+    },
+    {
+      "date": "2021-01-29",
+      "confirmed": 6837,
+      "deaths": 215,
+      "recovered": 5805,
+      "active": 817.0
+    },
+    {
+      "date": "2021-01-30",
+      "confirmed": 6886,
+      "deaths": 215,
+      "recovered": 5849,
+      "active": 822.0
+    },
+    {
+      "date": "2021-01-31",
+      "confirmed": 6966,
+      "deaths": 215,
+      "recovered": 5894,
+      "active": 857.0
+    },
+    {
+      "date": "2021-02-01",
+      "confirmed": 7012,
+      "deaths": 215,
+      "recovered": 5972,
+      "active": 825.0
     }
   ]
 }
