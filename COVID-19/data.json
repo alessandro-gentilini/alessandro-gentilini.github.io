@@ -2351,6 +2351,13 @@
       "deaths": 219,
       "recovered": 6018,
       "active": 825.0
+    },
+    {
+      "date": "2021-02-04",
+      "confirmed": 7130,
+      "deaths": 220,
+      "recovered": 6040,
+      "active": 870.0
     }
   ]
 }
