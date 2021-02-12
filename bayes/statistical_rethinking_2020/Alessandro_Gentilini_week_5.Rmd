@@ -199,3 +199,10 @@ m3 <- ulam(
     ) , data=Wines2012, chains=1 )
 precis(m3,depth=2)    
 ```
+
+     eagles.glm <- glm(cbind(y, n - y) ~ P*A + V, data = eagles,
+                       family = binomial)
+     dropterm(eagles.glm)
+     prof <- profile(eagles.glm)
+     plot(prof)
+     pairs(prof)
