@@ -68,7 +68,7 @@ ax3.callbacks.connect("ylim_changed", circ_imolese_percentage)
 df3 = df[['positive','dead','total_recovered']]
 df3 = df3.assign(positive_minus_dead_minus_recovered=df['positive']-df['dead']-df['total_recovered'])
 df3.plot(drawstyle='steps-mid',ax=ax3)
-ax3.axvline('2021-02-01')
+ax3.axvline('2021-02-01',ls='--',color='gray')
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
