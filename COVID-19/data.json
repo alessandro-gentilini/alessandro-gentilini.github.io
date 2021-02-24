@@ -2449,6 +2449,48 @@
       "deaths": 227,
       "recovered": 6558,
       "active": 1290.0
+    },
+    {
+      "date": "2021-02-18",
+      "confirmed": 8191,
+      "deaths": 227,
+      "recovered": 6644,
+      "active": 1320.0
+    },
+    {
+      "date": "2021-02-19",
+      "confirmed": 8300,
+      "deaths": 228,
+      "recovered": 6664,
+      "active": 1408.0
+    },
+    {
+      "date": "2021-02-20",
+      "confirmed": 8409,
+      "deaths": 234,
+      "recovered": 6744,
+      "active": 1431.0
+    },
+    {
+      "date": "2021-02-21",
+      "confirmed": 8516,
+      "deaths": 234,
+      "recovered": 6836,
+      "active": 1446.0
+    },
+    {
+      "date": "2021-02-22",
+      "confirmed": 8641,
+      "deaths": 234,
+      "recovered": 6927,
+      "active": 1480.0
+    },
+    {
+      "date": "2021-02-23",
+      "confirmed": 8719,
+      "deaths": 234,
+      "recovered": 6949,
+      "active": 1536.0
     }
   ]
 }
