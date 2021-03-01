@@ -68,7 +68,13 @@ ax3.callbacks.connect("ylim_changed", circ_imolese_percentage)
 df3 = df[['positive','dead','total_recovered']]
 df3 = df3.assign(positive_minus_dead_minus_recovered=df['positive']-df['dead']-df['total_recovered'])
 df3.plot(drawstyle='steps-mid',ax=ax3)
-ax3.axvline('2021-02-01',ls='--',color='gray')
+# https://github.com/imcatta/restrizioni_regionali_covid
+#ax3.axvline('2021-02-01',ls='--',color='gray')#->giallo
+#ax3.axvline('2021-02-21',ls='--',color='gray')#->arancio
+#ax3.axvline('2021-02-25',ls='--',color='gray')#->arancio scuro
+ax3.axvspan('2021-02-01', '2021-02-21', alpha=0.5, color='yellow')
+ax3.axvspan('2021-02-21', '2021-02-25', alpha=0.5, color='orange')
+ax3.axvspan('2021-02-25', '2021-03-01', alpha=0.5, color='saddlebrown')
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
