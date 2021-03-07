@@ -74,7 +74,8 @@ df3.plot(drawstyle='steps-mid',ax=ax3)
 #ax3.axvline('2021-02-25',ls='--',color='gray')#->arancio scuro
 ax3.axvspan('2021-02-01', '2021-02-21', alpha=0.5, color='yellow')
 ax3.axvspan('2021-02-21', '2021-02-25', alpha=0.5, color='orange')
-ax3.axvspan('2021-02-25', '2021-03-01', alpha=0.5, color='saddlebrown')
+ax3.axvspan('2021-02-25', '2021-03-04', alpha=0.5, color='saddlebrown')
+ax3.axvspan('2021-03-04', '2021-03-07', alpha=0.5, color='red')
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19
