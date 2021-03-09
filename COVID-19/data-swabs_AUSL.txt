@@ -174,3 +174,4 @@ timestamp,cumulative_swabs_declared_by_AUSL,daily_swabs
 2021-03-06,,1207
 2021-03-07,,773
 2021-03-08,,710
+2021-03-09,,559
