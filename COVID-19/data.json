@@ -2603,6 +2603,27 @@
       "deaths": 263,
       "recovered": 7551,
       "active": 2534.0
+    },
+    {
+      "date": "2021-03-12",
+      "confirmed": 10447,
+      "deaths": 266,
+      "recovered": 7674,
+      "active": 2507.0
+    },
+    {
+      "date": "2021-03-13",
+      "confirmed": 10543,
+      "deaths": 266,
+      "recovered": 7754,
+      "active": 2523.0
+    },
+    {
+      "date": "2021-03-14",
+      "confirmed": 10636,
+      "deaths": 266,
+      "recovered": 7801,
+      "active": 2569.0
     }
   ]
 }
