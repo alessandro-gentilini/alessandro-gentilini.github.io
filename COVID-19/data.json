@@ -2715,6 +2715,104 @@
       "deaths": 293,
       "recovered": 9567,
       "active": 1561.0
+    },
+    {
+      "date": "2021-03-28",
+      "confirmed": 11482,
+      "deaths": 294,
+      "recovered": 9602,
+      "active": 1586.0
+    },
+    {
+      "date": "2021-03-29",
+      "confirmed": 11539,
+      "deaths": 294,
+      "recovered": 9759,
+      "active": 1486.0
+    },
+    {
+      "date": "2021-03-30",
+      "confirmed": 11556,
+      "deaths": 303,
+      "recovered": 9828,
+      "active": 1425.0
+    },
+    {
+      "date": "2021-03-31",
+      "confirmed": 11581,
+      "deaths": 304,
+      "recovered": 9900,
+      "active": 1377.0
+    },
+    {
+      "date": "2021-04-01",
+      "confirmed": 11624,
+      "deaths": 304,
+      "recovered": 9976,
+      "active": 1344.0
+    },
+    {
+      "date": "2021-04-02",
+      "confirmed": 11664,
+      "deaths": 304,
+      "recovered": 10046,
+      "active": 1314.0
+    },
+    {
+      "date": "2021-04-03",
+      "confirmed": 11704,
+      "deaths": 305,
+      "recovered": 10144,
+      "active": 1255.0
+    },
+    {
+      "date": "2021-04-04",
+      "confirmed": 11726,
+      "deaths": 306,
+      "recovered": 10209,
+      "active": 1211.0
+    },
+    {
+      "date": "2021-04-05",
+      "confirmed": 11774,
+      "deaths": 306,
+      "recovered": 10251,
+      "active": 1217.0
+    },
+    {
+      "date": "2021-04-06",
+      "confirmed": 11780,
+      "deaths": 306,
+      "recovered": 10387,
+      "active": 1087.0
+    },
+    {
+      "date": "2021-04-07",
+      "confirmed": 11805,
+      "deaths": 308,
+      "recovered": 10448,
+      "active": 1049.0
+    },
+    {
+      "date": "2021-04-08",
+      "confirmed": 11835,
+      "deaths": 309,
+      "recovered": 10580,
+      "active": 946.0
+    },
+    {
+      "date": "2021-04-09",
+      "confirmed": 11870,
+      "deaths": 309,
+      "recovered": 10616,
+      "active": 945.0
+    },
+    {
+      "date": "2021-04-10",
+      "confirmed": 11895,
+      "deaths": 313,
+      "recovered": 10656,
+      "active": 926.0
     }
   ]
 }
