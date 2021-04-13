@@ -2813,6 +2813,27 @@
       "deaths": 313,
       "recovered": 10656,
       "active": 926.0
+    },
+    {
+      "date": "2021-04-11",
+      "confirmed": 11930,
+      "deaths": 313,
+      "recovered": 10729,
+      "active": 888.0
+    },
+    {
+      "date": "2021-04-12",
+      "confirmed": 11954,
+      "deaths": 313,
+      "recovered": 10803,
+      "active": 838.0
+    },
+    {
+      "date": "2021-04-13",
+      "confirmed": 11976,
+      "deaths": 314,
+      "recovered": 10828,
+      "active": 834.0
     }
   ]
 }
