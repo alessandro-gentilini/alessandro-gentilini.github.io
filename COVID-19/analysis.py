@@ -77,7 +77,7 @@ ax3.axvspan('2021-02-21', '2021-02-25', alpha=0.5, color='orange')
 ax3.axvspan('2021-02-25', '2021-03-04', alpha=0.5, color='saddlebrown')
 ax3.axvspan('2021-03-04', '2021-04-11', alpha=0.5, color='red')
 ax3.axvspan('2021-04-11', '2021-04-25', alpha=0.5, color='orange')
-ax3.axvspan('2021-04-26', '2021-05-02', alpha=0.5, color='yellow')
+ax3.axvspan('2021-04-26', '2021-05-10', alpha=0.5, color='yellow')
 ax3.set_xlabel('')
 ax3.set_ylabel('persone (person)')
 # translation according to https://github.com/pomber/covid19

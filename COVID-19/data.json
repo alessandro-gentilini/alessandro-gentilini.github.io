@@ -2967,6 +2967,62 @@
       "deaths": 331,
       "recovered": 11461,
       "active": 534.0
+    },
+    {
+      "date": "2021-05-03",
+      "confirmed": 12335,
+      "deaths": 331,
+      "recovered": 11465,
+      "active": 539.0
+    },
+    {
+      "date": "2021-05-04",
+      "confirmed": 12348,
+      "deaths": 331,
+      "recovered": 11497,
+      "active": 520.0
+    },
+    {
+      "date": "2021-05-05",
+      "confirmed": 12358,
+      "deaths": 331,
+      "recovered": 11499,
+      "active": 528.0
+    },
+    {
+      "date": "2021-05-06",
+      "confirmed": 12384,
+      "deaths": 331,
+      "recovered": 11543,
+      "active": 510.0
+    },
+    {
+      "date": "2021-05-07",
+      "confirmed": 12393,
+      "deaths": 331,
+      "recovered": 11553,
+      "active": 509.0
+    },
+    {
+      "date": "2021-05-08",
+      "confirmed": 12408,
+      "deaths": 332,
+      "recovered": 11581,
+      "active": 495.0
+    },
+    {
+      "date": "2021-05-09",
+      "confirmed": 12419,
+      "deaths": 332,
+      "recovered": 11599,
+      "active": 488.0
+    },
+    {
+      "date": "2021-05-10",
+      "confirmed": 12437,
+      "deaths": 332,
+      "recovered": 11625,
+      "active": 480.0
     }
   ]
 }
