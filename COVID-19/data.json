@@ -3163,6 +3163,20 @@
       "deaths": 338,
       "recovered": 11895,
       "active": 341.0
+    },
+    {
+      "date": "2021-05-31",
+      "confirmed": 12581,
+      "deaths": 338,
+      "recovered": 11902,
+      "active": 341.0
+    },
+    {
+      "date": "2021-06-01",
+      "confirmed": 12584,
+      "deaths": 338,
+      "recovered": 11916,
+      "active": 330.0
     }
   ]
 }
