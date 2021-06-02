@@ -452,3 +452,4 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2021-05-28,6,0,11882
 2021-05-29,3,0,11889
 2021-05-30,4,0,11895
+2021-05-31,7,0,11902
