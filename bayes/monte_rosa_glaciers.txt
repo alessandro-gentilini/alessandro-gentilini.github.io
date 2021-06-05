@@ -1,0 +1,11 @@
+Name,Surface/square km,Max Elevation/m,Terminus Elevation/m,Length/km,Estimated water reservoir/million of cubic meter
+Lys,11.8,4527,2350,5.6,596
+Indren,1.4,4130,3055,2.4,28
+Netscho,0.3,3090,2850,0.5,1.3
+Bors,1.3,3750,3025,1.8,26
+Piode,2.6,4436,2470,2.7,69
+Sesia,2,4300,2620,2.6,49
+Grande di Verra,7.3,4220,2540,5.1,308
+Piccolo di Verra,2.4,4175,2795,3.1,63
+Belvedere o di Macugnaga,5.6,4520,1760,6,206
+Loccie Nord,2.2,3490,2210,2.4,54
