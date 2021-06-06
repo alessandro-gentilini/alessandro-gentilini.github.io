@@ -101,6 +101,9 @@ Geophysical Research*, 102(B9),
 20355–20362.
   
   V=0.032 S<sup>1.36</sup>
+
+A power law fitted to the estimates is
   
-The estimates   
+  V=0.018 S<sup>1.41</sup>
+  
 ![Volume of glaciers in Monte Rosa range](monte_rosa_glaciers.png)
