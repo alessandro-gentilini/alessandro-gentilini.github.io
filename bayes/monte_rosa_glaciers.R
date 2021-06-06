@@ -8,10 +8,20 @@ family='serif'
 )
 par(family = "serif")
 x=seq(0,10,.1)
-lines(x,.032*x^1.36)
-legend('bottomright',
-legend=c('Mercalli et al., 1991','Formula in Bahr et al., 1997'),
-lty=c(NA,1),
-pch=c(1,NA)
-)
+lines(x,.032*x^1.36,lty=2)
 
+
+y <- df$km3
+x <- df$Surface.square.km
+m <- nls(y~a*x^b,start=c(a=1,b=1))
+print(m)
+
+a <- coef(m)[1]
+b <- coef(m)[2]
+
+lines(x,a*x^b,type='l')
+legend('bottomright',
+legend=c('Data from Mercalli et al., 1991','Power law fitted to data','Formula in Bahr et al., 1997'),
+lty=c(NA,1,2),
+pch=c(1,NA,NA)
+)
