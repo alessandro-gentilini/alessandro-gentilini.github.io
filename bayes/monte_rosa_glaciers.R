@@ -25,3 +25,4 @@ legend=c('Data from Mercalli et al., 1991','Power law fitted to data','Formula i
 lty=c(NA,1,2),
 pch=c(1,NA,NA)
 )
+text(x=1.75*df$Surface.square.km[3],y=df$km3[3],labels='Netscho IT4L01502005')
