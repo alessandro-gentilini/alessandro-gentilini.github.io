@@ -93,9 +93,14 @@ src='https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.
 
 ## Glaciers of Monte Rosa
 Glaciers data is from the book [La montagna di ghiaccio](http://www.glaciologia.it/wp-content/uploads/vari/La%20Montagna%20di%20Ghiaccio.pdf).
+  
 Formula is from Bahr, D. B., Meier, M. F., and Peckham, S. D.
 (1997). The physical basis of glacier
 volume-area scaling. *Journal of
 Geophysical Research*, 102(B9),
 20355–20362.
+  
+  V=0.032 S<sup>1.36</sup>
+  
+The estimates   
 ![Volume of glaciers in Monte Rosa range](monte_rosa_glaciers.png)
