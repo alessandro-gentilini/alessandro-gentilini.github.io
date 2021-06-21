@@ -105,5 +105,6 @@ Geophysical Research*, 102(B9),
 A power law fitted to the estimates is
   
   V=0.018 S<sup>1.41</sup>
-  
+
+The Netscho glacier (World Glacier Inventory code is IT4L01502005) is an outlier.
 ![Volume of glaciers in Monte Rosa range](monte_rosa_glaciers.png)
