@@ -3310,6 +3310,27 @@
       "deaths": 339,
       "recovered": 12054,
       "active": 251.0
+    },
+    {
+      "date": "2021-06-21",
+      "confirmed": 12649,
+      "deaths": 339,
+      "recovered": 12060,
+      "active": 250.0
+    },
+    {
+      "date": "2021-06-22",
+      "confirmed": 12649,
+      "deaths": 339,
+      "recovered": 12060,
+      "active": 250.0
+    },
+    {
+      "date": "2021-06-23",
+      "confirmed": 12654,
+      "deaths": 339,
+      "recovered": 12067,
+      "active": 248.0
     }
   ]
 }

@@ -473,3 +473,6 @@ timestamp,delta_positive_from_yesterday,delta_death_from_yesterday,total_recover
 2021-06-18,4,0,12054
 2021-06-19,,,
 2021-06-20,,,
+2021-06-21,5,0,12060
+2021-06-22,0,0,12060
+2021-06-23,5,0,12067
