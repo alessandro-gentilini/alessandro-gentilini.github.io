@@ -3331,6 +3331,55 @@
       "deaths": 339,
       "recovered": 12067,
       "active": 248.0
+    },
+    {
+      "date": "2021-06-24",
+      "confirmed": 12657,
+      "deaths": 339,
+      "recovered": 12076,
+      "active": 242.0
+    },
+    {
+      "date": "2021-06-25",
+      "confirmed": 12659,
+      "deaths": 339,
+      "recovered": 12081,
+      "active": 239.0
+    },
+    {
+      "date": "2021-06-26",
+      "confirmed": 12659,
+      "deaths": 339,
+      "recovered": 12081,
+      "active": 239.0
+    },
+    {
+      "date": "2021-06-27",
+      "confirmed": 12659,
+      "deaths": 339,
+      "recovered": 12081,
+      "active": 239.0
+    },
+    {
+      "date": "2021-06-28",
+      "confirmed": 12664,
+      "deaths": 339,
+      "recovered": 12091,
+      "active": 234.0
+    },
+    {
+      "date": "2021-06-29",
+      "confirmed": 12664,
+      "deaths": 339,
+      "recovered": 12093,
+      "active": 232.0
+    },
+    {
+      "date": "2021-06-30",
+      "confirmed": 12664,
+      "deaths": 339,
+      "recovered": 12095,
+      "active": 230.0
     }
   ]
 }
