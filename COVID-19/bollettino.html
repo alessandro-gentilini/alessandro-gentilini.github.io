@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"206927188",accountID:"3012220",trustKey:"3012220",xpid:"VwYGU1RRCBACVFdbBQYGV1w=",licenseKey:"NRJS-4808e7ac96b10222cb7",applicationID:"206927118"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(29),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(30),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(10),b=t(11),E=t(8),R=t(6),O=t(13),S=t(7),N=t(14),M=t(9),P=t("ee"),T=P.get("tracer");t(16),y.features.spa=!0;var C,L=0;P.on(u,r),b.on(p,r),M.on(p,r),P.on(d,o),b.on(l,o),M.on(l,o),P.buffer([u,d,"xhr-done","xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),N.buffer([u,"new-xhr","send-xhr"+s]),S.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),T.buffer([u,"no-"+u]),M.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(N,"send-xhr"+s),a(P,"xhr-resolved"),a(P,"xhr-done"),a(S,m+s),a(S,m+"-done"),a(M,"new-jsonp"),a(M,"jsonp-end"),a(M,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");if(!y.disabled){y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(30),a=t(29);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(29),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(26),h=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function o(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(17),f=t(15).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(22),m=t(21),v=t(18),w=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(14),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof w?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof w&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime])})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(21);e.exports=r},{}],19:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(29),s=t(30),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],20:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],21:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],22:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],23:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(31);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],24:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),v=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),p=t("loader"),l=t(28),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,!1)})}l(s)}},{}],26:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],27:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],28:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[o]?"hidden":"visible")}"addEventListener"in document&&i&&document.addEventListener(i,e,!1)}e.exports=r;var o,i,a;"undefined"!=typeof document.hidden?(o="hidden",i="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",i="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",i="webkitvisibilitychange",a="webkitVisibilityState")},{}],29:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],30:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],31:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(29),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(23),s=t("handle"),c=t(29),f=t("ee"),u=t(27),d=t(24),p=t(20),l=p.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1210.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(19),t(25),m[v]?(m[v]("DOMContentLoaded",i,!1),h[v]("load",r,!1)):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(30),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,16,5,3,4]);</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- START INDEX --><title>AGGIORNAMENTI LOCALI COVID - giugno</title><!-- STOP INDEX -->
+	<!-- START INDEX --><title>AGGIORNAMENTI LOCALI COVID</title><!-- STOP INDEX -->
 
 	<!-- Bootstrap -->
 	<link href="https://www.ausl.imola.bo.it/flex/TemplatesUSR/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,129 +55,29 @@
 <style type='text/css'>
 
 
-			#blobTable-10 {
+			#blobTable-18 {
 				width: 100%;
 				border-collapse: collapse;
 				border-top: 1px solid #000000;
 				border-left: 1px solid #000000;
 			}
 
-			#blobTable-10 th, #blobTable-10 td {
+			#blobTable-18 th, #blobTable-18 td {
 				padding: 4px;
 				border-bottom: 1px solid #000000;
 				border-right: 1px solid #000000;
 			}
 
-			#blobTable-10 tr.even th, #blobTable-10 tr.even td {
+			#blobTable-18 tr.even th, #blobTable-18 tr.even td {
 				background-color: #ffffff;
 			}
 
-			#blobTable-10 tr.odd th, #blobTable-10 tr.odd td {
-				background-color: #ffffff;
-			}
-		
-</style>
-<style type='text/css'>
-
-
-			#blobTable-22 {
-				width: 100%;
-				border-collapse: collapse;
-				border-top: 1px solid #000000;
-				border-left: 1px solid #000000;
-			}
-
-			#blobTable-22 th, #blobTable-22 td {
-				padding: 4px;
-				border-bottom: 1px solid #000000;
-				border-right: 1px solid #000000;
-			}
-
-			#blobTable-22 tr.even th, #blobTable-22 tr.even td {
-				background-color: #ffffff;
-			}
-
-			#blobTable-22 tr.odd th, #blobTable-22 tr.odd td {
+			#blobTable-18 tr.odd th, #blobTable-18 tr.odd td {
 				background-color: #ffffff;
 			}
 		
 </style>
-<style type='text/css'>
-
-
-			#blobTable-34 {
-				width: 100%;
-				border-collapse: collapse;
-				border-top: 1px solid #000000;
-				border-left: 1px solid #000000;
-			}
-
-			#blobTable-34 th, #blobTable-34 td {
-				padding: 4px;
-				border-bottom: 1px solid #000000;
-				border-right: 1px solid #000000;
-			}
-
-			#blobTable-34 tr.even th, #blobTable-34 tr.even td {
-				background-color: #ffffff;
-			}
-
-			#blobTable-34 tr.odd th, #blobTable-34 tr.odd td {
-				background-color: #ffffff;
-			}
-		
-</style>
-<style type='text/css'>
-
-
-			#blobTable-46 {
-				width: 100%;
-				border-collapse: collapse;
-				border-top: 1px solid #000000;
-				border-left: 1px solid #000000;
-			}
-
-			#blobTable-46 th, #blobTable-46 td {
-				padding: 4px;
-				border-bottom: 1px solid #000000;
-				border-right: 1px solid #000000;
-			}
-
-			#blobTable-46 tr.even th, #blobTable-46 tr.even td {
-				background-color: #ffffff;
-			}
-
-			#blobTable-46 tr.odd th, #blobTable-46 tr.odd td {
-				background-color: #ffffff;
-			}
-		
-</style>
-<style type='text/css'>
-
-
-			#blobTable-56 {
-				width: 100%;
-				border-collapse: collapse;
-				border-top: 1px solid #000000;
-				border-left: 1px solid #000000;
-			}
-
-			#blobTable-56 th, #blobTable-56 td {
-				padding: 4px;
-				border-bottom: 1px solid #000000;
-				border-right: 1px solid #000000;
-			}
-
-			#blobTable-56 tr.even th, #blobTable-56 tr.even td {
-				background-color: #ffffff;
-			}
-
-			#blobTable-56 tr.odd th, #blobTable-56 tr.odd td {
-				background-color: #ffffff;
-			}
-		
-</style>
-<link rel='alternate' href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10391' hreflang='it' />
+<link rel='alternate' href='https://www.ausl.imola.bo.it/covidnews' hreflang='it' />
 <style type='text/css'>
 
 	#eu-privacy {
@@ -196,17 +96,17 @@
 	#eu-privacy-inner { margin: 10px 30px; }
 			
 </style>
-<meta property="og:title" content="AGGIORNAMENTI LOCALI COVID - giugno" />
+<meta property="og:title" content="AGGIORNAMENTI LOCALI COVID" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10391" />
+<meta property="og:url" content="https://www.ausl.imola.bo.it/covidnews" />
 <meta property="og:site_name" content="www.ausl.imola.bo.it" />
-<meta property="og:description" content="Nessun  positivo e nessun decesso per il secondo giorno consecutivo.  Sono 107.410 le vaccinazioni totali da inizio campagna." />
+<meta property="og:description" content="Nessun nuovo contagio. 126.809 le vaccinazioni totali da inizio campagna" />
 <meta property="og:image" content="https://www.ausl.imola.bo.it/flex/images/1/f/b/D.0f26852e5331bd3d350b/aggiornamenti_locali.jpg" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="www.ausl.imola.bo.it" />
 <meta name="twitter:creator" content="FlexCMP" />
-<meta name="twitter:title" content="AGGIORNAMENTI LOCALI COVID - giugno" />
-<meta name="twitter:description" content="Nessun  positivo e nessun decesso per il secondo giorno consecutivo.  Sono 107.410 le vaccinazioni totali da inizio campagna." />
+<meta name="twitter:title" content="AGGIORNAMENTI LOCALI COVID" />
+<meta name="twitter:description" content="Nessun nuovo contagio. 126.809 le vaccinazioni totali da inizio campagna" />
 <meta name="twitter:image:src" content="https://www.ausl.imola.bo.it/flex/images/1/f/b/D.0f26852e5331bd3d350b/aggiornamenti_locali.jpg" />
 
 </head>
@@ -881,7 +781,19 @@
                     <ul class="breadcrumb">
 
 	
-	<li class="active">AGGIORNAMENTI LOCALI COVID - giugno</li>
+	<li><a href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/81">In Evidenza</a> <span class="divider">/</span></li>
+	
+	
+	<li><a href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5">News ed eventi</a> <span class="divider">/</span></li>
+	
+	
+	<li><a href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5/YY/2021">2021</a> <span class="divider">/</span></li>
+	
+	
+	<li><a href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5/YY/2021/MM/7">Luglio</a> <span class="divider">/</span></li>
+	
+	
+	<li class="active">AGGIORNAMENTI LOCALI COVID</li>
 	
 
 	<!-- -->
@@ -910,7 +822,7 @@
                                    
 <ol>
 <li><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/81' title='' ><span>In Evidenza</span></a><ol>
-<li><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5' title='' ><span>News ed eventi</span></a></li>
+<li class='LISel'><strong><a class='Sel' href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5' title='' ><span>News ed eventi</span></a></strong></li>
 <li><a href='https://www.ausl.imola.bo.it/donazioni' title='' ><span>Donazioni</span></a></li>
 <li><a href='https://www.ausl.imola.bo.it/comunicati-stampa' title='' ><span>Comunicati Stampa</span></a></li>
 <li><a href='https://www.ausl.imola.bo.it/albo-online' title='Albo online' ><span>Albo online</span></a></li>
@@ -936,7 +848,7 @@
                             
 <ol>
 <li><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/81' title='' ><span>In Evidenza</span></a><ol>
-<li><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5' title='' ><span>News ed eventi</span></a></li>
+<li class='LISel'><strong><a class='Sel' href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5' title='' ><span>News ed eventi</span></a></strong></li>
 <li><a href='https://www.ausl.imola.bo.it/donazioni' title='' ><span>Donazioni</span></a></li>
 <li><a href='https://www.ausl.imola.bo.it/comunicati-stampa' title='' ><span>Comunicati Stampa</span></a></li>
 <li><a href='https://www.ausl.imola.bo.it/albo-online' title='Albo online' ><span>Albo online</span></a></li>
@@ -969,419 +881,102 @@
                             <a class='GoAway' name="Contenuto" id="Contenuto">Contenuto della pagina</a>
                             
 <!-- Begin BLOB Content -->
-<div class='viewLineBreak'>&nbsp;</div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.regione.emilia-romagna.it/' class='viewLink'  title='REGIONE EMILIA-ROMAGNA: TUTTI GLI AGGIORNAMENTI CORONAVIRUS'>REGIONE EMILIA-ROMAGNA: TUTTI GLI AGGIORNAMENTI CORONAVIRUS</a><span class='BLOBHidden'>.</span></div><div class='viewLineBreak'>&nbsp;</div><div><hr class='viewHR BLOBAlignLeft' /></div><h1 class="viewTitolo">AGGIORNAMENTI QUOTIDIANI SULL&#039;EPIDEMIA DI COVID-19 NEL TERRITORIO DEL CIRCONDARIO IMOLESE</h1><h2 class="viewSottotitolo">30 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 107.410 vaccinazioni totali da inizio campagna.<strong class='userFormat1'><br /></strong><strong class='userFormat1'><strong class='userFormat1'>Situazione epidemiologica</strong></strong><br />Per il secondo giorno consecutivo si registrano 0 casi positivi su 150 test molecolari e 161 antigenici. Nessun decesso.<br />2 i guariti, 58 i casi attivi mentre rimangono invariati i casi totali (12.661) da inizio pandemia.<br /></p></div>
-<h2 class="viewSottotitolo">29 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 106.263 vaccinazioni totali da inizio campagna.<strong class='userFormat1'><br />Situazione epidemiologica</strong><br />Su 98 test molecolari e 257 antigenici, si registrano 0 nuovi positivi. Nessun decesso.<br />2 i guariti, 60 i casi attivi mentre rimangono invariati i casi totali (12.661) da inizio pandemia</p></div>
-<table id='blobTable-10' summary='casi attivi per comune di residenza al 31 maggio ' class='viewTable viewExtendedTable'>
+<div class='viewLineBreak'>&nbsp;</div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.regione.emilia-romagna.it/' class='viewLink'  title='REGIONE EMILIA-ROMAGNA: TUTTI GLI AGGIORNAMENTI CORONAVIRUS'>REGIONE EMILIA-ROMAGNA: TUTTI GLI AGGIORNAMENTI CORONAVIRUS</a><span class='BLOBHidden'>.</span></div><div class='viewLineBreak'>&nbsp;</div><div><hr class='viewHR BLOBAlignLeft' /></div><h1 class="viewTitolo">AGGIORNAMENTI QUOTIDIANI SULL&#039;EPIDEMIA DI COVID-19 NEL TERRITORIO DEL CIRCONDARIO IMOLESE</h1><h2 class="viewSottotitolo">13 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><span class='userFormat1'><strong class='userFormat1'>Vaccinazioni</strong></span><br />126.809 le vaccinazioni totali da inizio campagna<br /><span class='userFormat1'><strong class='userFormat1'>Situazione epidemiologica</strong></span><br /><span class='Object'>Oggi</span>&nbsp;non si registrano nuovi contagi su 266 antigenici rapidi e 52 tamponi molecolari effettuati<br />Restano 22 i casi attivi e 12.677 quelli totali da inizio pandemia</p></div>
+<h2 class="viewSottotitolo">10-11-12 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><span class='userFormat1'><strong class='userFormat1'>Vaccinazioni</strong></span><br />125.643 le vaccinazioni totali da inizio campagna<br /><span class='userFormat1'><strong class='userFormat1'>Situazione epidemiologica</strong></span><br />Su 774&nbsp;antigenici rapidi test e 664 molecolari, tra&nbsp;<span class='Object'>sabato</span>&nbsp;10 e lunedì 12 si sono registrati 6 nuovi casi positivi, tutti sintomatici (1 importato da altra regione italiana): 1 nella fascia d’età 15-24, 2 in quella 25-44 anni, 3 nella fascia d’età 45-64 ed 1 tra i 65 ed i 79 anni.&nbsp;<br />22 i casi attivi mentre i casi totali sono 12.677 da inizio pandemia</p></div>
+<h2 class="viewSottotitolo">9 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ierisono 122.745 le vaccinazioni totali da inizio campagna<br /><strong class='userFormat1'>Situazione epidemiologica</strong> <br />Su&nbsp;254 test molecolari e 312 antigenici, si registrano 4 nuovi positivi: 1 nella fascia d’età 15-24 e 3 nella fascia d’età 45-64. Tutti sintomatici, nessuno riferibile a focolaio già individuato.<br />28 i casi attivi mentre i casi totali sono 12.671 da inizio pandemia<br /></p></div>
+<h2 class="viewSottotitolo">8 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ierisono 121.697 le vaccinazioni totali da inizio campagna (è stato aggiornato il conteggio delle dosi somministrate dai medici di medicina generale).<br /><strong class='userFormat1'>Situazione epidemiologica</strong> <br />Nella giornata di oggiil nostro territorio registra 1 caso positivo (fascia di età 15-24) su 346&nbsp;test molecolari e 159 antigenici. 24 i casi attivi mentre i casi totali sono 12.667 da inizio pandemia<br /></p></div>
+<h2 class="viewSottotitolo">7 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 116.868 le vaccinazioni totali da inizio campagna.<br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Nessun caso positivo registrato nel nostro territorio su 166&nbsp;test molecolari e 182 antigenici.&nbsp;2 i guariti, 23 i casi attivi mentre rimangono invariati i casi totali (12.666) da inizio pandemia.<br /></p></div>
+<h2 class="viewSottotitolo">6 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 113.947 vaccinazioni totali da inizio campagna.<br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Oggi il nostro territorio registra 0 casi positivi su 57&nbsp;testmolecolari e 206 antigenici. Nessun decesso.<br />10 i guariti, 25 i casi attivi mentre rimangono invariati i casi totali (12.666)da inizio pandemia.<br /></p></div>
+<table id='blobTable-18' summary='This table contains Data.' class='viewTable viewExtendedTable'>
 <tr class="even">
 		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >&nbsp;</div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Casi</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Pop.</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Tasso x 1000</strong><br /></div></td>
+		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >Casi</div></td>
+		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >Pop.</div></td>
+		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >Tasso x 1000</div></td>
 	</tr>
 <tr class="odd">
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Imola</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >27<br /></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20</div></td>
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >70142</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,4<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >12<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20973</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,6<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Medicina</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >14<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,8<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,2</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,6</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >2<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,6<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA<br /></strong><br /><br /><br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>60<br /></strong><br /><br />NB oltre ad 2 casi refertato di residente fuori territorio per un totale di 62<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>133799</strong></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>0,4</strong></div></td>
-	</tr>
-</table>
-<div class='blob-element-download BLOBAlignLeft'><a title='Sintesi Settimanale  (820.5 KB)' href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F9%252F2%252FD.4a794b5819b3e8a22288/P/BLOB%3AID%3D10391/E/ppt"  class="viewLink  ">Sintesi Settimanale<span class='BLOBDownloadSize'> (820.5 KB)</span></a><span class='BLOBHidden'>.</span></div><h2 class="viewSottotitolo">28 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong><br />Con la giornata di ierisono 105.139 vaccinazioni totali da inizio campagna.<strong class='userFormat1'><br /></strong><strong class='userFormat1'>Situazione epidemiologica</strong><br />Su&nbsp;469 test molecolari e 755 antigenici refertati nei giorni 26-27-28 giugno, si registrano 5 nuovi positivi: 3 il 26 giugno, 1 il 27 giugno, 1 il 28 giugnonelle seguenti fasce di età: 3 tra i 25-44, 2 tra i 45-64. Tutti sintomatici, 3 riferibili a focolaio già individuato. 3 persone era già isolate al momento della diagnosi. Nessun decesso.<br />10 i guariti, 62 i casi attivi&nbsp;e 12.661 i casi totali da inizio pandemia. Nessun cittadino del Circondario è in Terapia Intensiva<br /></p></div>
-<h2 class="viewSottotitolo">25 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ierisono 102.442 vaccinazioni totali da inizio campagna.<br /><strong class='userFormat1'>Situazione epidemiologica</strong><strong class='userFormat1'><br /></strong>Su&nbsp;225 test molecolari e 240 antigenici, si registrano 2 nuovi positivi: 1 nella fascia d’età 25-44, 1 nella fascia d’età 45-64. Entrambi sintomatici, nessuno riferibile a focolaio già individuato. 1 persona era già isolata al momento della diagnosi. Nessun decesso.<br />5 i guariti, 67 i casi attivi&nbsp;e 12.656 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna<br /></p></div>
-<h2 class="viewSottotitolo">24 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazionie prenotazioni</strong> <br />Con la giornata di ieri sono 101.113 vaccinazioni totali da inizio campagna.<strong class='userFormat1'><br />Situazione epidemiologica</strong> <br />Su&nbsp;131 test molecolari e 229 antigenici, si registrano 3 nuovi positivi: 2nella fascia d’età 15-24, 1 ha dai 65 anni in su. 1 asintomatico e individuatotramite tracciamento, due riferibili a focolaio già individuato. 2 personeerano già isolate al momento della diagnosi. Nessun decesso. 9 i guariti, 70 i casi attivi&nbsp;e 12.654 i casi totali da inizio pandemia. Unsolo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">23 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />Con la giornata di ierisono state superate le 100.000 vaccinazioni (per la precisione 100.039) totali da inizio campagna. Un grande risultato raggiunto grazie a tutte le componenti che operano nel nostro territorio: i centri vaccinali , i medici di medicina generale&nbsp;e l’hub Medical Centre Autodromo SACMI-CEFLA che, come detto ieri, riprenderà l'attività a metà luglio per le seconde dosi.<br /><strong class='userFormat1'>Situazione epidemiologica</strong> <br />Su&nbsp;162 test molecolari e 222 antigenici, si registrano 5 nuovi positivi: 1 nella fascia d’età 15-24, 4 nella fascia d’età 45-64. Tre asintomatici e individuati tramite tracciamento, nessuno riferibile a focolaio già individuato 1 persona erano già isolata al momento della diagnosi. Nessun decesso. 7 i guariti, 76 i casi attivi&nbsp;e 12.651 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">22 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazionie prenotazioni</strong> <br />98.939 sono le vaccinazioni totali da inizio campagna: 92.448 nei centrivaccinali (ieri 896), 4.312 eseguite dai medici di medicina generale (ieri 47), 2.179 all’hub Medical Centre Autodromo SACMI-CEFLA (concluse le prime dosi, l’hubtornerà attivo a metà luglio per le seconde dosi e la conclusione del ciclovaccinale).<strong class='userFormat1'><br />Situazione epidemiologica</strong> <br />Per il secondo giorno consecutivo non si registrano positivi (106 testmolecolari e 260 antigenici). Nessun decesso. Invariati i casi attivi&nbsp;(78) e i casi totali da inizio pandemia (12.646).Un solo cittadino del Circondario in Terapia Intensiva a Bologna<br /></p></div>
-<table id='blobTable-22' summary='casi attivi per comune di residenza al 31 maggio ' class='viewTable viewExtendedTable'>
-<tr class="even">
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >&nbsp;</div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Casi</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Pop.</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Tasso x 1000</strong><br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Imola</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >28<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >70142</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,4<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >18</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20973</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,9<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Medicina</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,2<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,2</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,9</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3,2<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA<br /></strong><br /><br /><br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>77<br /></strong><br /><br />NB oltre ad 1 caso refertato di residente fuori territorio per un totale di 78<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>133799</strong></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>0,6</strong></div></td>
-	</tr>
-</table>
-<div class='blob-element-download BLOBAlignLeft'><a title='Sintesi Settimanale  (665 KB)' href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252Fc%252F2%252FD.c03e47c80b26040a2a7c/P/BLOB%3AID%3D10391/E/ppt"  class="viewLink  ">Sintesi Settimanale<span class='BLOBDownloadSize'> (665 KB)</span></a><span class='BLOBHidden'>.</span></div><h2 class="viewSottotitolo">21 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />97.996 sono le vaccinazioni totali da inizio campagna: 91.552 nei centrivaccinali, 4.265 eseguite dai medici di medicina generale, 2.179 all’hub Medical Centre Autodromo SACMI-CEFLA.<strong class='userFormat1'><br />Situazione epidemiologica odierna</strong><br /> Su&nbsp;499 test molecolari e 1034 antigenici refertati nei giorni 19-20-21 giugno, sono stati in tutto 5 nuovi positivi: 1 il 19 giugno, 4 il 20 giugno, 0 il 21 giugno. Nelle seguenti fasce d’età 1 nella fascia d’età 15-24, 1 nella fascia d’età 25-44, 2 nella fascia d’età 45-64, 1 con più di 65 anni. 1 asintomatico individuato tramite tracciamento, 1 isolato, nessuno riferibile a focolaio già individuato. Nessun decesso. <br />6 guariti, 78 i casi attivi&nbsp;e 12.646 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna<br /></p></div>
-<h2 class="viewSottotitolo">18 giugno 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />94.728 sono le vaccinazioni totali da inizio campagna: 88.735 nei centri vaccinali (ieri 962), 3.815 eseguite dai medici di medicina generale (ieri 116), 2.178 all’hub Medical Centre Autodromo SACMI-CEFLA (ieri 150).<strong class='userFormat1'><br />Situazione epidemiologica odierna</strong><br /> Su&nbsp;248 test molecolari e 261 antigenici, si registrano 4 nuovi positivi: 1 nella fascia d’età15-24, 1 nella fascia d’età 25-44, 2 nella fascia d’età 45-64. Tutti asintomatici e individuati tramite tracciamento, nessuno riferibile a focolaio già individuato. Nessun decesso.<br />6 guariti, 79 i casi attivi&nbsp;e 12.641 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna</p></div>
-<h2 class="viewSottotitolo">17 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />93.500 sono le vaccinazioni totali da inizio campagna: 87.773 nei centri vaccinali (ieri 656), 3.699 eseguite dai medici di medicina generale (ieri 122), 2.028 all’hub Medical Centre Autodromo SACMI-CEFLA (ieri 246).<strong class='userFormat1'><br />Situazione epidemiologica odierna</strong><br /> Su&nbsp;208 test molecolari e 261 antigenici, si registrano 2 nuovi positivi: 2 nellafascia d’età 45-64, asintomatici, individuati tramite tracciamento e nessuno riferibilea focolai già individuati. Nessun decesso.<br />2 guariti, 81 i casi attivi&nbsp;e 12.637 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">16 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />92.476 sono le vaccinazioni totali da inizio campagna: 87.117 nei centri vaccinali ( ieri603), 3.577 eseguite dai medici di medicina generale ( ieri164), 1.782 all’hub Medical Centre Autodromo SACMI-CEFLA ( ieri282).<br />A partire da&nbsp; oggi&nbsp;sono aperte aprono le prenotazioni presso i consueti canali prenotativi (Cuptel, Farmacie e parafarmacie abilitate, Sportelli aziendali, Fascicolo Sanitario e CupWeb) per&nbsp;la classe di età 20-24 anni con lapossibilità di prenotarsi che resterà sempre aperta a partire dalla data di sblocco delle finestre,&nbsp; per consentire a tutti coloro che lo vorranno di ricevere il vaccino. Alle ore 13 le prenotazioni nel nostro territorio erano&nbsp; 1.308.<br /><strong class='userFormat1'>Situazione epidemiologica odierna</strong><br />Su 119 test molecolari e 269 antigenici, si registrano 3 nuovi positivi: 2 nella fascia d’età 45-64, 1 di età compresa tra i 65 ed i 79 anni.Un asintomatico, individuato tramite tracciamento riferibile a 1 focolaio già individuato.<br />Nessun decesso. 1 guarito, 81 i casi attivi&nbsp;e 12.635 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">15 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />91.427 sono le vaccinazioni totali da inizio campagna: 86.514 nei centri vaccinali ( ieri&nbsp;801), 3.413 eseguite dai medici di medicina generale ( ieri&nbsp;150), 1.500 all’hub Medical Centre Autodromo SACMI-CEFLA ( ieri&nbsp;300).<br /><strong class='userFormat1'>Situazione epidemiologica</strong> <br />Nessun caso e nessun decesso registrati&nbsp; ieri&nbsp;dall’Azienda Usl di Imola:&nbsp;148 i test molecolari e&nbsp;35&nbsp;gli&nbsp;antigenici rapidi refertati.<br />Rimangono 79 i casi attivi&nbsp;e&nbsp;12.632 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna<br /></p></div>
-<table id='blobTable-34' summary='casi attivi per comune di residenza al 31 maggio ' class='viewTable viewExtendedTable'>
-<tr class="even">
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >&nbsp;</div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Casi</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Pop.</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Tasso x 1000</strong><br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Imola</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >32<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >70142</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,5<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20973</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,8<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Medicina</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >18<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,1<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,2</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >7<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,1</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3,2<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA<br /></strong><br /><br /><br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>78<br /></strong><br /><br />NB oltre ad 1 caso refertato di residente fuori territorio per un totale di 79<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>133799</strong></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>0,6</strong></div></td>
-	</tr>
-</table>
-<div class='blob-element-download BLOBAlignLeft'><a title='Sintesi Settimanale  (649 KB)' href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F3%252F3%252FD.b1596b2ac38821aca571/P/BLOB%3AID%3D10391/E/ppt"  class="viewLink  ">Sintesi Settimanale<span class='BLOBDownloadSize'> (649 KB)</span></a><span class='BLOBHidden'>.</span></div><h2 class="viewSottotitolo">14 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br /> Superate le 90.000 vaccinazioni nel nostro territorio. Per la precisione 90.176 inoculazioni così suddivise: 85.713 nei centri vaccinali, 3.263 eseguite dai medici di medicina generale e 1.200 dall’hub Medical Centre Autodromo SACMI-CEFLA.<br />Procede nel migliore dei modi la campagna vaccinale con grande impegno di tutti.<br />Da oggi sono partite le prenotazioni per i 25-29enni tramite i consueti canali prenotativi (Cuptel, Farmacie e parafarmacie abilitate, Sportelli aziendali, Fascicolo Sanitario e CupWeb): alle ore 13 si erano prenotate 1289 persone<br />Si tratta del penultimo scaglione anagrafico fissato dai 40 anni in giù: mercoledì 16<strong class='userFormat1'>,</strong>infatti, si apriranno le agende per i 20/24enni , con la possibilità di prenotarsi che resterà sempre aperta a partire dalla data di sblocco delle finestre, per consentire a tutti coloro che lo vorranno di ricevere il vaccino.<br /><strong class='userFormat1'>Situazione epidemiologica</strong> <br /> Su 501 test molecolari e 789 antigenici rapidi refertati nei giorni 12-13-14 giugno, sono stati in tutto 18 i nuovi positivi registrati, di cui 3 il 12 giugno, 10 il 13 giugno e 5lunedì 14 giugno: 2 hanno meno di 14 anni, 6 sono nella fascia d’età 15-24, 2 nella fascia d’età 25-44, 8 nella fascia 45-64 anni. 13 asintomatici individuati tramite tracciamento, 8 casi sono riferibili a focolai già individuati. 3 persone erano già isolate al momento della diagnosi. Nessun decesso.<br /> Sono 31 i guariti, 79 i casi attivi e 12.632 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">11 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Prenotazioni e Vaccinazioni</strong> <br />1221 le vaccinazioni eseguite ieri, per un totale di 82.344 da avvio campagna, di cui 56.185 prime dosi e 26.159 seconde dosi.<br />L’hub Medical Centre Autodromo SACMI-CEFLA procede spedito nel suo compito, anche ieri300 le vaccinazioni effettuate.Mentre sono state 373 le inoculazioni realizzate dai medici di medicina generale. Continuano, intanto,<strong class='userFormat1'>le prenotazioni</strong>presso i consueti canali prenotativi (Cuptel, Farmacie e parafarmacie abilitate, Sportelli aziendali, Fascicolo Sanitario e CupWeb) per <strong class='userFormat1'>la classe di età 30-34 anni</strong>, oltre 6700 persone di cui più di 1000 hanno già avviato il loro ciclo vaccinale. Alle 13 di oggierano  1.350 le prenotazioni<br /><strong class='userFormat1'><strong class='userFormat1'>Situazione epidemiologica odierna</strong></strong><br />Su 377 test molecolari e 90 antigenici, si registrano 4 nuovi positivi: 2 nella fascia d’età 15-24, 1 nella fascia d’età 25-44 e 1 nella fascia d’età 45-64. Due gli asintomatici: 1 individuato tramite tracciamento e 1 tramite test pre ricovero. Nessuno è riferibile a focolaio già individuato. Nessun decesso.<br />Sono 9 i guariti, 87 i casi attivi e 12.614 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">10 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Prenotazioni e Vaccinazioni</strong><br />Superata quota 81.000 vaccinazione eseguite da inizio campagna nei soli siti vaccinali aziendali: per la precisione 81.123, di cui 55.161 prime dosi e 25.962 seconde dosi. 1.230 le vaccinazioni eseguite  ieri dai centri vaccinali aziendali.<br />In questi giorni però un ulteriore cospicuo numero di vaccinazioni vengono eseguite anche dall'hub Medical Centre Autodromo SACMI-CEFLA, circa 300 vaccinazioni al giorno e dai medici di medicina generale, che sono partiti con l'attività vaccinale sui 50-54enni lunedì scorso e che, con grande impegno e capacità organizzativa hanno già vaccinato ben 2075 assistiti, circa la metà del target prenotato presso di loro.<br />1930 i cittadini tra i 35-39 anni che si sono già prenotati su un target di 7455 persone (di cui però circa 1300 hanno già ricevuto almeno la prima dose perché inseriti in altre categorie per patologia o professione).<br />A partire da  domani <strong class='userFormat1'>aprono le prenotazioni</strong> presso i consueti canali prenotativi (Cuptel, Farmacie e parafarmacie abilitate, Sportelli aziendali, Fascicolo Sanitario e CupWeb) per <strong class='userFormat1'>la classe di età 30-34 anni</strong>, oltre 6700 persone di cui 1039 hanno già avviato il loro ciclo vaccinale.<br />Sono circa 120 gli operatori dei centri estivi che si sono prenotati alle 12 di oggi.<br /><strong class='userFormat1'>Situazione epidemiologica odierna</strong><br />Su 387 test molecolari e 276 antigenici, si registrano solo 2 nuovi positivi: 1 nella fascia d’età 45-64 e 1 di età compresa tra i 65 ed i 79 anni. Entrambi sintomatici e non riferibili a focolaio già individuato. Nessun decesso.<br /> Sono 3 i guariti, 92 i casi attivi e 12.610 i casi totali da inizio pandemia. Un solo cittadino del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">9 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />1060 vaccinazioni eseguite ieri, per un totale di 79.893 da avvio campagna, di cui 54.121 prime dosi e 25.772 seconde dosi.<br />Alle 13 di oggierano 1373 i cittadini tra 35 e 39 anni di età che si sono prenotati per la vaccinazione (794 da FSE, 443 in Farmacia, 83 al CUPtel e i restanti agli sportelli aziendali)<br /><strong class='userFormat1'>Situazione epidemiologica odierna</strong><br /> Su 192 test molecolari e 317 antigenici, si registrano solo 2 nuovi positivi: 1 nella fascia d’età 15-24 e 1 nella fascia di età 45-64 anni. Un asintomatico, individuato tramite tracciamento, isolato e non riferibile a focolaio già individuato. Nessun decesso.<br /> Sono 4 i guariti, 93 i casi attivi e 12.608 i casi totali da inizio pandemia. Sono 2 i cittadini del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">8 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />1076 vaccinazioni eseguite  ieri, per un totale di 78.833 da avvio campagna, di cui 53.398 prime dosi e 25.435 seconde dosi.<br />Domani saranno aperte le prenotazioni CUP per tutti i cittadini della fascia di età 35-39 anni, attraverso i consueti canali prenotativi (CUPtel  800 040 606, Fascicolo Sanitario Elettronico, Sportelli CUP aziendali, Farmacie e Parafarmacie abilitate)<br />Sempre  domani saranno anche aperte le prenotazioni per gli operatori dei centri estivi.<br />Come da accordi intercorsi con gli Uffici Scuola dei Comuni del Circondario Imolese e con i Gestori, gli operatori dei Centri Estivi potranno prenotarsi presso gli Sportelli CUP aziendali o le farmacie del territorio (non attraverso i canali telefonici e web) mostrando agli sportelli la dichiarazione del datore di lavoro/gestore del centro, stampato su carta intestata dello stesso e/o debitamente  timbrato, come da facsimile pubblicato sul sito Ausl di Imola al link  <a href='https://www.ausl.imola.bo.it/VACCINI_CENTRI_ESTIVI'>https://www.ausl.imola.bo.it/VACCINI_CENTRI_ESTIVI</a><br /> La dichiarazione prevede che l'operatore svolga almeno 15 giorni di attività presso il centro estivo nel corso dell'estate.<br /> Le sedute vaccinali per gli operatori dei centri estivi saranno prenotati su sedute dedicate nelle giornate del  <a href=''''>14 - 15 - 16</a>  giugnopresso il Centro Sociale La Tozzona di Imola. Le agende saranno attivate progressivamente fino ad esaurimento degli aventi diritto.<br /><strong class='userFormat1'>Situazione epidemiologica odierna</strong><br /> Su 110 test molecolari e 360 antigenici, si registra 1 solo nuovo positivo nella fascia di età 45-64 anni. Asintomatico, individuato tramite tracciamento, isolato e non riferibile a focolaio già individuato. Nessun decesso.<br />Sono 8 i guariti, 95 i casi attivi e 12.606 i casi totali da inizio pandemia.<br />Scendono a 2 i cittadini del Circondario in Terapia Intensiva a Bologna.<br /></p></div>
-<table id='blobTable-46' summary='casi attivi per comune di residenza al 31 maggio ' class='viewTable viewExtendedTable'>
-<tr class="even">
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >&nbsp;</div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Casi</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Pop.</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Tasso x 1000</strong><br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Imola</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >43<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >70142</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,6<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >14</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20973</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,7<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Medicina</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,9<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >2<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,4</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,9<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >8<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,2</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,3</div></td>
 	</tr>
 <tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >2<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,0<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,3<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >7<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >5,7<br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA<br /></strong><br /><br /><br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>98<br /></strong><br /><br />NB oltre a 4 casi refertati di residenti fuori territorio per un totale di 102<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>133799</strong></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>0,7</strong></div></td>
-	</tr>
-</table>
-<div class='blob-element-download BLOBAlignLeft'><a title='Sintesi Settimanale  (628.5 KB)' href="https://www.ausl.imola.bo.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252Fd%252F2%252FD.33b7cd690b67c341b559/P/BLOB%3AID%3D10391/E/ppt"  class="viewLink  ">Sintesi Settimanale<span class='BLOBDownloadSize'> (628.5 KB)</span></a><span class='BLOBHidden'>.</span></div><h2 class="viewSottotitolo">7 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />3364 vaccinazioni eseguite tra il 4 ed il 6 giugno, per un totale di 77.757 da avvio campagna, di cui 52.653 prime dosi e 25104 seconde dosi.<br />I cittadini tra i 40 ed i 49 anni che hanno già un appuntamento per la vaccinazione sono oltre 8.300.  Da  oggi, 7 giugno, si sono aperte le prenotazioni per la fascia 12-19 anni: alle ore 13 erano 2951 i prenotati su un totale di 10176 cittadini target<br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Su 533 test molecolari e 794 antigenici rapidi refertati il 4-5-6 giugno, sono stati in tutto 17 i nuovi positivi registrati, di cui 3 sabato 5 giugno, 10 domenica 6 giugno e 4lunedì 7 giugno.<br />3 positivi hanno meno di 14 anni, 3 sono nella fascia 15-24, 3 nella fascia 25-44, 8 nella fascia 45-64 anni. 4 erano asintomatici individuati tramite tracciamento, nessun caso è riferibile a focolaio già individuato. 11 persone erano già isolate al momento della diagnosi. Nessun decesso<br />Sono 18 i guariti, 102 i casi attivi e  12.605i casi totali da inizio pandemia.<br />Da sabato scorso il Santa Maria della Scaletta è Covid free. Nel corso della seconda e terza ondata pandemica (da novembre 2020a maggio 2021) il reparto Covid internistico del 3° piano ha ricoverato 709 pazienti.<br />Attualmente sono 3 i cittadini del Circondario in Terapia Intensiva a Bologna e 2 quelli centralizzati alle Malattie Infettive del Policlinico di S. Orsola.<br /></p></div>
-<h2 class="viewSottotitolo">4 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />1146 vaccinazioni eseguite il 3 giugno, per un totale di 74.392 da avvio campagna, di cui 49.766 prime dosi e 24.625 seconde dosi.<br />I cittadini tra i 40 ed i 49 anni che hanno già un appuntamento per la vaccinazione sono 7900.  Da  oggi, 4 giugno, tutti i cittadini di questa fascia possono prenotare la vaccinazione anche tramite i consueti canali  CUP .Circa 250 ragazzi estremamente vulnerabili o disabili gravi tra i 12 ed i 15 anni hanno già ricevuto  ieri la chiamata automatica seguita da SMS che permette la prenotazione prioritaria presso gli sportelli CUP, il CUPTel o le farmacie. Il 7 ed 8 giugno si apriranno le agende per i giovani tra 12-19 anni, il 9-10 giugno potranno prenotarsi anche i 35-39 anni; l'11, 12 e 13  giugno i 30-34 anni; il 14 e 15  giugno i 25 -29 anni e il 16-17-18  giugno i 20-24 anni. Per informazioni sulla prenotazione è possibile scrivere a  info.vaccinazionecovid19@ausl.imola.bo.it o trovare informazioni sul sito alla pagina  <a href='https://www.ausl.imola.bo.it/Campagna_Vaccinale'>https://www.ausl.imola.bo.it/Campagna_Vaccinale</a> <br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Su 251 test molecolari e 44 antigenici rapidi refertati, sono 3 i nuovi positivi registrati oggi:  1 tra i 25 e i 44, 1 nella fascia 45-64 anni, 1 di età compresa tra i 65 ed i 79 anni. 2 sono asintomatici individuati tramite tracciamento, nessun caso è riferibile a focolaio già individuato. 2 persone erano già isolate al momento della diagnosi. Purtroppo oggi dobbiamo segnalare il decesso di una donna di 86 anni residente a Castel San Pietro Terme, alla cui famiglia vanno le condoglianze dell'Azienda <abbr title='Unità Sanitaria Locale' lang='it'>USL</abbr> di Imola. Sono 43 i guariti, 103 i casi attivi e 12.588 i casi totali da inizio pandemia. Solo 1 ricoverato nel reparto Covid del Santa Maria della Scaletta, 3 le persone in terapia intensiva a Bologna.<br /></p></div>
-<h2 class="viewSottotitolo">3 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong><br />2038 vaccinazioni eseguite tra l'1 ed il 2 giugno, per un totale di 73.246 da avvio campagna, di cui 48.853 prime dosi e 24.393 seconde dosi.<br />Nel corso della giornata odierna tutti i cittadini tra i 40 ed i 49 anni che si erano registrati al form regionale nei giorni scorsi (7800 circa) saranno raggiunti da una mail che comunica data e luogo del loro appuntamento vaccinale.  Da domani, venerdì 4 giugno, potranno prenotarsi tramite consueti canali  CUP anche i 40-49enni che non si erano preiscritti al form.<br />Nel pomeriggio sono inoltre partite tutte le chiamate automatiche per i ragazzi estremamente vulnerabili o disabili gravi tra i 12 ed i 15 anni. Rispondendo alla chiamata automatica di identificazione, viene inviato un SMS che da diritto alla prenotazione prioritaria presso gli sportelli CUP, il CUPTel o le farmacie. Quindi, il 7 ed 8 giugno si apriranno le agende per i giovani tra 12-19 anni, il 9-10 giugno potranno prenotarsi anche i 35-39 anni; l'11, 12 e 13 giugno i 30-34 anni; il 14 e 15 giugno i 25 -29 anni e il 16-17-18 giugno i 20-24 anni<br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Su 234 test molecolari e 306 antigenici rapidi refertati, sono 4 i nuovi positivi registrati oggi (0 nella giornata di ieri):  2 tra i 15 ed i 24 anni, 1 tra i 25 e i 44, 1 nella fascia 45-64 anni. 2 sono sintomatici e 2 gli asintomatici individuati per tracciamento, mentre nessun caso è riferibile a focolaio già individuato. 2 persone erano già isolate al momento della diagnosi. Non ci sono decessiSono 13 i guariti, 144 i casi attivi e 12.585 i casi totali da inizio pandemia.<br /><strong class='userFormat1'>Situazione ospedaliera</strong><br />3 le persone in ricovero internistico ad Imola e 3 in Terapia Intensiva a Bologna. Dal 1 giugno scorso i cittadini positivi del Circondario che necessitano di un ricovero internistico sono traferiti direttamente dal Pronto Soccorso di Imola all'Unità Operativa di Malattie infettive del Policlinico di S. Orsola a Bologna. Considerando l'esiguo numero di persone che attualmente necessitano di ricovero Covid (2 negli ultimi 12 giorni), la loro centralizzazione presso un unico reparto garantisce un più efficiente utilizzo delle risorse del sistema metropolitano, come peraltro avvenuto al termine della prima ondata epidemica. Un'organizzazione che si inserisce nell'ambito della costante e proficua collaborazione interaziendale metropolitana, per cui il S. Maria della Scaletta potrà accogliere al bisogno eventuali pazienti non Covid provenienti dal S. Orsola. Resterà comunque attiva l'area dedicata ai sospetti in attesa di referto del tampone.<br /></p></div>
-<h2 class="viewSottotitolo">1 GIUGNO 2021</h2>
-<div class='viewPar BLOBAlignJustify'><p >929 vaccinazioni eseguite  ieri, per un totale di 71.190 da avvio campagna, di cui 46.958 prime dosi e 24.232 seconde dosi Su 138 test molecolari e  85 antigenici rapidi refertati, sono 3 i nuovi positivi:  1 tra i 15 ed i 24 anni, 1 tra i 25 e i 44, 1 nella fascia 45-64 anni. Tutti sintomatici, nessun caso è riferibile a focolaio già individuato. Non ci sono decessi<br />Sono 14 i guariti, 157 i casi attivi e 12.581 i casi totali da inizio pandemia. <br />Sono 3 le persone in ricovero internistico, 4 in Terapia Intensiva a Bologna</p></div>
-<table id='blobTable-56' summary='casi attivi per comune di residenza al 31 maggio ' class='viewTable viewExtendedTable'>
-<tr class="even">
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' >&nbsp;</div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Casi</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Pop.</strong></div></td>
-		<td valign='top'  class='viewTableTD BLOBWidthTDN4'><div class='viewTableCellText' ><strong class='userFormat1'>Tasso x 1000</strong><br /></div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Imola</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >74</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >70142</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,1<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >24</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel San Pietro</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6</div></td>
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >20973</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,1<br /></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,3</div></td>
 	</tr>
 <tr class="odd">
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Medicina</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >21</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,2<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >5</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,1</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >10<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >2,2<br /></div></td>
-	</tr>
-<tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >9</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,4</div></td>
-	</tr>
-<tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >16862</div></td>
 		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,3</div></td>
 	</tr>
 <tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1,5<br /></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Mordano</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4754</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
 	</tr>
 <tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >2<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,6<br /></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel Guelfo</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4543</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
 	</tr>
 <tr class="even">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >4,9<br /></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Dozza</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >6626</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,5</div></td>
 	</tr>
 <tr class="odd">
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA<br /></strong><br /><br /><br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>155<br /></strong><br /><br />NB oltre a 13 casi refertati di residenti fuori territorio per un totale di 168<br /></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>133799</strong></div></td>
-		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><strong class='userFormat1'>1,2</strong></div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Casalfiumanese</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3428</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
+	</tr>
+<tr class="even">
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Fontanelice</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1956</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,0</div></td>
+	</tr>
+<tr class="odd">
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Borgo Tossignano</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >3283</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0.0</div></td>
+	</tr>
+<tr class="even">
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >Castel del Rio</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >1232</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0.0</div></td>
+	</tr>
+<tr class="odd">
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' ><acronym title='Azienda Unità Sanitaria Locale' lang='it'>AUSL</acronym> IMOLA</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >34<br />
+<br />
+<br />
+NB oltre ad 1 caso refertato residente fuori territorio per un totale di 35</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >133799</div></td>
+		<td valign='top'  class='viewTableTD'><div class='viewTableCellText' >0,3</div></td>
 	</tr>
 </table>
-<div><hr class='viewHR BLOBAlignLeft' /></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10451' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MAGGIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MAGGIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10419' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di APRILE 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di APRILE 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10364' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MARZO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MARZO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/feb21' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di FEBBRAIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di FEBBRAIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/covidgen' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di GENNAIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di GENNAIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10313' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di DICEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di DICEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10285' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di NOVEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di NOVEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10271' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di OTTOBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di OTTOBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10205' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di SETTEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di SETTEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10181' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di  AGOSTO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di  AGOSTO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10153' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di  LUGLIO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di  LUGLIO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10119' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 dal 16 al 30 GIUGNO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 dal 16 al 30 GIUGNO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10107' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 dall&#039;1 al 15 GIUGNO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 dall'1 al 15 GIUGNO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10096' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MAGGIO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MAGGIO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10069' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di APRILE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di APRILE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10045' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MARZO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MARZO 2020</a><span class='BLOBHidden'>.</span></div>
+<h2 class="viewSottotitolo">5 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 112.452 le vaccinazioni totali da inizio campagna.<br /><strong class='userFormat1'>Situazione epidemiologica</strong><br />Su&nbsp;583 test molecolari e 803 antigenici refertati nei giorni 3-4-5 luglio, si registrano 5 nuovi positivi: 3 il 3 luglio, 0 il 4 luglio, 2 il 5 luglio nelle seguenti fasce di età: 3 tra i 15-24, 2 tra i 25-44.<br />2 sintomatici, nessuno riferibile a focolaio già individuato 1 persona era già isolata al momento della diagnosi, 1 proveniente da altra regione, 1 proveniente dall’estero. Nessun decesso.<br />11 i guariti, 35 i casi attivi&nbsp;e 12.666 i casi totali da inizio pandemia.<br /></p></div>
+<h2 class="viewSottotitolo">2 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni e prenotazioni</strong> <br />Con la giornata di ierisono 109.689 vaccinazioni totali da inizio campagna. Per velocizzare la copertura vaccinale completa dei cittadini con più di 60 anni, candidati alla vaccinazione con vaccino a vettore virale, in questi giorni l'Ausl di Imola ha anticipato telefonicamente circa 400 appuntamenti&nbsp;per prima dose prenotati&nbsp;tra luglioed agostoper cui le vaccinazioni saranno eseguite con vaccino monodose Johnson&Johnson. Chi preferisce mantenere la data dell'appuntamento prevista potrà chiaramente farlo eseguendo la vaccinazione nella giornata già prevista con due dosi di vaccino Astra Zeneca presso&nbsp;l'Hub Osservanza di Imola. In questi giorni sono stati inviati ed inseriti oltre 6000&nbsp; appuntamenti per il completamento del ciclo vaccinale. Restano meno di 200 gli appuntamenti per seconda dose non ancora inseriti che lo saranno nell'arco della prossima settimana.<br /><strong class='userFormat1'><strong class='userFormat1'>Situazione epidemiologica</strong></strong><br />Per il quarto giorno consecutivo si registrano 0 casi positivi su 282 test molecolari e 263 antigenici. Nessun decesso.<br />5 i guariti, 41 i casi attivi mentre rimangono invariati i casi totali (12.661) da inizio pandemia.<br /></p></div>
+<h2 class="viewSottotitolo">1 luglio 2021</h2>
+<div class='viewPar BLOBAlignJustify'><p ><strong class='userFormat1'>Vaccinazioni</strong> <br />Con la giornata di ieri sono 108.505 vaccinazioni totali da inizio campagna.<strong class='userFormat1'><br /><strong class='userFormat1'>Situazione epidemiologica</strong></strong><br />Per il terzo giorno consecutivo si registrano 0 casi positivi su 276&nbsp; testmolecolari e 275 antigenici. Nessun decesso.<br />12 i guariti, 46 i casi attivi mentre rimangono invariati i casi totali (12.661) da inizio pandemia.<br /></p></div>
+<div><hr class='viewHR BLOBAlignLeft' /></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10391' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di GIUGNO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di GIUGNO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10451' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MAGGIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MAGGIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10419' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di APRILE 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di APRILE 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10364' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MARZO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MARZO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/feb21' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di FEBBRAIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di FEBBRAIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/covidgen' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di GENNAIO 2021'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di GENNAIO 2021</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10313' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di DICEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di DICEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10285' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di NOVEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di NOVEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10271' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di OTTOBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di OTTOBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10205' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di SETTEMBRE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di SETTEMBRE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10181' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di  AGOSTO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di  AGOSTO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10153' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di  LUGLIO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di  LUGLIO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10119' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 dal 16 al 30 GIUGNO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 dal 16 al 30 GIUGNO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10107' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 dall&#039;1 al 15 GIUGNO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 dall'1 al 15 GIUGNO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10096' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MAGGIO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MAGGIO 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10069' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di APRILE 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di APRILE 2020</a><span class='BLOBHidden'>.</span></div><div class='BLOBAlignLeft viewLinkOnlyTextContainer'><a href='https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/10045' class='viewLink'  title='Trovi qui gli aggiornamenti quotidiani sull&#039;emergenza COVID19 del mese di MARZO 2020'>Trovi qui gli aggiornamenti quotidiani sull'emergenza COVID19 del mese di MARZO 2020</a><span class='BLOBHidden'>.</span></div>
 <!-- End BLOB Content -->
 
                         </div>
@@ -1999,5 +1594,5 @@ $('.MenuVBIG').on('click', 'li', function() {
     
 });</script>
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-4808e7ac96b10222cb7","applicationID":"206927118","transactionName":"MhBSZQoZWUFXWhZdCQtaZUMRVxhEV0tNQxESWkZZFwtDQRlOFUNIBABDXVYRWl1aWExWCUscRB4eFFJKGVoPGxYEElVCVytSQEBcIHgpJ1tAWQg=","queueTime":0,"applicationTime":319,"atts":"HldRE0IDSk8=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-4808e7ac96b10222cb7","applicationID":"206927118","transactionName":"MhBSZQoZWUFXWhZdCQtaZUMRVxhEV0tNQxESWkZZFwtDQRlOFUNIBABDXVYRWl1aWExWCUscRB4eFFJKGVoPGxYEElVCVytSQEBcIHgpJ1tAWQg=","queueTime":0,"applicationTime":212,"atts":"HldRE0IDSk8=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
 </html>
