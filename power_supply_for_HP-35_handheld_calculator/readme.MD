@@ -2,8 +2,8 @@
 
 ## How to identify the GND contact
 I tested with a multimeter the continuity between the central
-pin (labelled with an `A` in the following picture) and the upper contact
-(labelled with a `B`): the multimeeter beeped and so `A` is connected with `B`.
+pin (labelled with `A` in the following picture) and the upper contact
+(labelled with `B`): the multimeter beeped and so `A` is connected with `B`.
 
 According to Figure 1 in ["Making New Battery Packs for the HP-35 Calculator"](http://homepage.divms.uiowa.edu/~jones/hp/battery/) by Douglas W. Jones, `A` is `GND` and so `B` is GND too.
 
