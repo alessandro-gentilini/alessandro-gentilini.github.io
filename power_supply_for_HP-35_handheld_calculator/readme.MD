@@ -9,7 +9,7 @@ According to Figure 1 in ["Making New Battery Packs for the HP-35 Calculator"](h
 
 ![Inside of the HP-35 handheld calculator, picture courtesy of Kees van der Sanden](HP35_1143A33130_inside_01.jpg)
 
-(Picture is at https://www.keesvandersanden.nl/calculators/hp35_inside.php)
+(Picture is at https://www.keesvandersanden.nl/calculators/hp35_inside.php, labels are mine)
 
 ## What power supply do I use?
 ![Back label of the HP-35 handheld calculator, picture courtesy of Kees van der Sanden](HP35_1302S48386_backlabel.jpg)
