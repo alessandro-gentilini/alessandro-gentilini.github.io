@@ -21,10 +21,14 @@ The border follows  partially the watershed as can be seen in the following figu
 ![Border details](border_details.png)
 
 # References
-The numeric code is the field `MAIN_BAS` in the HydroSHEDS data, the distance is the field `DIST_MAIN`.
+This is the [Python script](confine.py) to generate the map.
 
-HydroSHEDS is described in:
+The HydroBASIN data were used; HydroBASIN is part of HydroSHDEDS project described in
 
 Lehner, B., Verdin, K., Jarvis, A. (2008): New global hydrography derived from spaceborne elevation data. Eos, Transactions, AGU, 89(10): 93-94.
 
-This Wikipedia page [Sella di Dobbiaco](https://it.wikipedia.org/wiki/Sella_di_Dobbiaco) has some information about the border.
+The numeric code is the field `MAIN_BAS` in the HydroSHEDS data, the distance is the field `DIST_MAIN`.
+
+The Wikipedia page [Sella di Dobbiaco](https://it.wikipedia.org/wiki/Sella_di_Dobbiaco) has some information about the border.
+
+I learnt about the border from the book *Bel paese brutta gente* by Claus Gatterer.
