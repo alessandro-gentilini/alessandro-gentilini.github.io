@@ -13,10 +13,11 @@ or outlet is that of the larger basin (to which smaller endorheic sub-basins may
 virtually connected), i.e. either the outlet at the ocean, or the final sink of a large
 endorheic watershed which forms its own basin.
 
-So San Candido/Innichen and Sesto/Sexten are in the drainage basin of the Danube river while Dobbiaco/Toblach is in the drainage basin of the Piave river.
-The border follow  partially the watershed
-
 ![Drainage basins between Austria and Italy](austria_italy_drainage_basins.png)
+
+So San Candido/Innichen and Sesto/Sexten are in the drainage basin of the Danube river while Dobbiaco/Toblach is in the drainage basin of the Piave river.
+The border follow  partially the watershed as can be seen in the following figure:
+![Border details](border_details.png)
 
 The numeric code is the field `MAIN_BAS` in the HydroSHEDS data, the distance is the field `DIST_MAIN`.
 
