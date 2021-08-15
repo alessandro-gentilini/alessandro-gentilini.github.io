@@ -16,11 +16,15 @@ endorheic watershed which forms its own basin.
 ![Drainage basins between Austria and Italy](austria_italy_drainage_basins.png)
 
 So San Candido/Innichen and Sesto/Sexten are in the drainage basin of the Danube river while Dobbiaco/Toblach is in the drainage basin of the Piave river.
-The border follow  partially the watershed as can be seen in the following figure:
+The border follows  partially the watershed as can be seen in the following figure:
+
 ![Border details](border_details.png)
 
+# References
 The numeric code is the field `MAIN_BAS` in the HydroSHEDS data, the distance is the field `DIST_MAIN`.
+
+HydroSHEDS is described in:
 
 Lehner, B., Verdin, K., Jarvis, A. (2008): New global hydrography derived from spaceborne elevation data. Eos, Transactions, AGU, 89(10): 93-94.
 
-The Wikipedia page https://it.wikipedia.org/wiki/Sella_di_Dobbiaco
+This Wikipedia page [Sella di Dobbiaco](https://it.wikipedia.org/wiki/Sella_di_Dobbiaco) has some information about the border.
