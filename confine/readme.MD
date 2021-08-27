@@ -36,9 +36,14 @@ I learnt about the border from the book *Bel paese brutta gente* by Claus Gatter
 Do not trust the data from HydroSHEDS? You can use the data from the Provincia Autonoma di Bolzano http://geokatalog.buergernetz.bz.it/geokatalog/#!home
 
 Some useful links:
+
 https://salem.readthedocs.io/en/v0.3.4/auto_examples/plot_hydrosheds.html#sphx-glr-auto-examples-plot-hydrosheds-py
+
 https://gis.stackexchange.com/questions/380448/how-to-create-a-raster-delineating-all-drainage-basins-using-pysheds-python
+
 https://hatarilabs.com/ih-en/elevation-model-conditioning-and-stream-network-delimitation-with-python-and-pysheds-tutorial
+
 https://geopandas.org/getting_started/introduction.html
+
 https://geopandas.org/gallery/plotting_basemap_background.html
 
