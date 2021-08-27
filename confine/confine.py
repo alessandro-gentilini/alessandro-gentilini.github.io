@@ -3,11 +3,12 @@ from shapely.geometry import Polygon, LineString, Point
 import matplotlib.pyplot as plt
 import contextily as ctx
 from geopy.geocoders import Nominatim
+import time
 
 
 gdf = gpd.read_file('hybas_eu_lev00_v1c.shp')
 
-
+#Monte_Bianco = Point(6.867222,45.833333)
 Dobbiaco = Point(12.216667,46.733333)
 #Dobbiaco = Point(287350,5179294)
 
@@ -50,6 +51,7 @@ info = ''
 for i in range(0,len(sinks)):
     s = sinks.iloc[i]
     info += str(mb.iloc[i].HYBAS_ID) + ': ' +str(geolocator.reverse((s.y,s.x))) + '\n'
+    time.sleep(3)
 
 ax.set_title(info)
 plt.show()
