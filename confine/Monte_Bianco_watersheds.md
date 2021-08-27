@@ -12,3 +12,12 @@ virtually connected), i.e. either the outlet at the ocean, or the final sink of 
 endorheic watershed which forms its own basin.
 
 ![Drainage basins in the Monte Bianco area](monte_bianco_whatersheds.png)
+
+# References
+This is the [Python script](confine.py) to generate the map.
+
+The HydroBASIN data were used; HydroBASIN is part of HydroSHEDS project described in
+
+Lehner, B., Verdin, K., Jarvis, A. (2008): New global hydrography derived from spaceborne elevation data. Eos, Transactions, AGU, 89(10): 93-94.
+
+The numeric code is the field `MAIN_BAS` in the HydroSHEDS data, the distance is the field `DIST_MAIN`.
