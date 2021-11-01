@@ -45,6 +45,13 @@
 
 [Chapman, capitolo 8]
 
+> The generation of a global magnetic field requires a rotating, electrically conducting
+> shell within a planet as well as fluid motion, i.e. convection, within that shell.
+> In the terrestrial planets and satellites this region is believed to be the iron-rich
+> fluid core.
+
+[Rossi, paragrafo 10.3.1 Dynamo Generation]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -82,4 +89,10 @@ Richard E. CHAPMAN,
 Physics for Geologists,
 Second Edition,
 Routledge, 2002.
+
+[Rossi]
+Angelo Pio ROSSI, Stephan VAN GASSELT,
+Planetary Geology,
+Springer 2018.
+
 
