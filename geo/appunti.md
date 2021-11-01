@@ -68,6 +68,16 @@
 
 [Lanza, paragrafo 1.4 Essentials on the Origin of the Earth's Magnetic Field]
 
+> Put starkly, there are just two possibilities for the
+> occurrence of any magnetic field observed in an astrophysical body: 
+> either it is a slowly decaying "fossil field,"
+> trapped in the body at its formation, or, alternatively, 
+> it is maintained by the inductive motions of the
+> plasma within the body. The latter process is known
+> as a *magnetohydrodynamic dynamo*.
+
+[PCAM, IV.29 Magnetohydrodynamics]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -121,3 +131,7 @@ Roberto LANZA, Antonio MELONI,
 _The Earth's Magnetism: An Introduction for Geologists_,
 Springer, 2006.
 
+[PCAM]
+Nicholas J. HIGHAM,
+_The Princeton Companion to Applied Mathematics_,
+Princeton University Press, 2015.
