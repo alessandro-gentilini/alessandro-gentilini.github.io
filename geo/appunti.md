@@ -45,6 +45,7 @@
 
 [Chapman, capitolo 8]
 
+### Bibliografia
 [HR]
 Jearl WALKER,
 _Fundamentals of Physics Halliday & Resnick_,
