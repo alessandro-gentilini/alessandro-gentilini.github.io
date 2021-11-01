@@ -58,6 +58,16 @@
 
 [TY, capitolo 2]
 
+> The present magnetic field could not be a remnant of an ancient process, a dynamo continuously
+> operating is necessary. Briefly this dynamo can be assumed to operate through a distortion 
+> and amplification of an initial magnetic field due to a magnetohydrodynamic
+> interaction with the motions of the plasma constituting the fluid Earth's core. 
+> The field so generated decays with time, owing to ohmic dissipation in the conductor. 
+> For its maintenance it is then necessary to hypothesize its continuous regeneration 
+> to the detriment of some other forms of energy.
+
+[Lanza, paragrafo 1.4 Essentials on the Origin of the Earth's Magnetic Field]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -102,8 +112,12 @@ _Planetary Geology_,
 Springer 2018.
 
 [TY]
-David ROTHERY
-_Geology: A Complete Introduction_
+David ROTHERY,
+_Geology: A Complete Introduction_,
 Hodder Education, 2015.
 
+[Lanza]
+Roberto LANZA, Antonio MELONI,
+_The Earth's Magnetism: An Introduction for Geologists_,
+Springer, 2006.
 
