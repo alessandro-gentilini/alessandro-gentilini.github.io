@@ -78,6 +78,13 @@
 
 [PCAM, IV.29 Magnetohydrodynamics]
 
+> According to the dynamo hypothesis motions within
+> the outer liquid-iron core of the Earth can amplify
+> a magnetic field from arbitrarily small amplitudes and
+> sustain it at the observed finite strength against Ohmic dissipation.
+
+[Gupta, GEOMAGNETIC FIELD, THEORY]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -135,3 +142,10 @@ Springer, 2006.
 Nicholas J. HIGHAM,
 _The Princeton Companion to Applied Mathematics_,
 Princeton University Press, 2015.
+
+[Gupta]
+Harsh K. GUPTA,
+_Encyclopedia of solid Earth geophysics_,
+Springer, 2011.
+
+
