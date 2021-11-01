@@ -85,6 +85,29 @@
 
 [Gupta, GEOMAGNETIC FIELD, THEORY]
 
+> Perché la dinamo di autoeccitazione possa funzionare
+>  devono essere soddisfatte due condizioni:
+>  - deve esserci un campo magnetico esterno all'inizio 
+>  perché il processo possa innescarsi;
+>  - il disco deve sempre essere mantenuto in rotazione
+>  da forze esterne altrimenti viene rallentato 
+>  e quindi fermato da forze elettriche.
+>  
+>  Queste due condizioni sembra proprio che siano 
+>  soddisfatte nel caso della Terra e del suo campo
+>  magnetico:
+>  - il campo magnetico iniziale che ha innescato
+>  il processo di autoeccitazione sembra sia stato
+>  quello solare;
+>  - l'energia cinetica necessaria ai moti convettivi 
+>  nel nucleo esterno è garantita dall'energia
+>  termica e dalla rotazione terrestre; i complessi
+>  movimenti del materiale conduttore nel nucleo
+>  esterno sarebbero i responsabili delle 
+>  caratteristiche e delle variazioni secolari del campo.
+
+[Bosellini]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -147,5 +170,10 @@ Princeton University Press, 2015.
 Harsh K. GUPTA,
 _Encyclopedia of solid Earth geophysics_,
 Springer, 2011.
+
+[Bosellini]
+Alfonso BOSELLINI,
+_Le scienze della Terra - Tettonica delle placche e storia geologica dell'Italia_,
+Italo Bovolenta editore, 2013.
 
 
