@@ -1,6 +1,6 @@
 ## Il campo magnetico terrestre
 
-*In fact, the mechanism that produces Earth's magnetic field is only vaguely understood.* [HR, paragrafo _32-4 MAGNETS_]
+*In fact, the mechanism that produces Earth's magnetic field is only vaguely understood.* [HR, paragrafo *32-4 MAGNETS*]
 
 *Earth's Magnetic Field: Earth's magnetic field is generated in the outer core: 
 convective circulation within the conductive liquid iron and nickel outer core, 
@@ -9,7 +9,7 @@ of our planet through what is sometimes called a geodynamo.
 Most geophysicists think that for such a geodynamo to work, the presence of an 
 initial weak magnetic ield was needed, most likely coming from the Sun.* [App, capitolo 13]
 
-(b) Origin of the main field. Spherical harmonic 
+*(b) Origin of the main field. Spherical harmonic 
 analysis of the observed magnetic field shows that 
 over 99% is due to sources inside the Earth. The 
 present theory is that the main field is caused by 
@@ -26,7 +26,10 @@ Earth's spin axis, implying that the convective motion
 is coupled to the Earth's spin. Recent exploration 
 of the magnetic fields of other planets and 
 their satellites provide fascinating comparisons with 
-the Earth's field. [Telford, paragrafo 3.3.2 The Main Field]
+the Earth's field.* [Telford, paragrafo 3.3.2 *The Main Field*]
+
+*In fact, the way in which the Earth's magnetic field is generated 
+is only qualitatively understood.* [Turcotte, paragrafo *1.8 Paleomagnetism and the Motion of the Plates*]
 
 [HR]
 Jearl WALKER,
@@ -46,3 +49,9 @@ W.M. TELFORD, L.P. GELDART, R. E. SHERIFF,
 _Applied Geophysics_,
 Second Edition,
 Cambridge University Press, 1990.
+
+[Turcotte]
+Donald L. TURCOTTE, Gerald SCHUBERT,
+_Geodynamics_,
+Second Edition,
+Cambridge University Press
