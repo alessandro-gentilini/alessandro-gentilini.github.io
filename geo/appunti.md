@@ -29,7 +29,8 @@ their satellites provide fascinating comparisons with
 the Earth's field.* [Telford, paragrafo 3.3.2 *The Main Field*]
 
 *In fact, the way in which the Earth's magnetic field is generated 
-is only qualitatively understood.* [Turcotte, paragrafo *1.8 Paleomagnetism and the Motion of the Plates*]
+is only qualitatively understood.* [Turcotte-2nd, paragrafo *1.8 Paleomagnetism and the Motion of the Plates*] e anche
+[Turcotte-3rd, paragrafo *1.8 Paleomagnetism and the Motion of the Plates*]
 
 [HR]
 Jearl WALKER,
@@ -50,8 +51,14 @@ _Applied Geophysics_,
 Second Edition,
 Cambridge University Press, 1990.
 
-[Turcotte]
+[Turcotte-2nd]
 Donald L. TURCOTTE, Gerald SCHUBERT,
 _Geodynamics_,
 Second Edition,
-Cambridge University Press
+Cambridge University Press, 2002.
+
+[Turcotte-3rd]
+Donald L. TURCOTTE, Gerald SCHUBERT,
+_Geodynamics_,
+Third Edition,
+Cambridge University Press, 2014.
