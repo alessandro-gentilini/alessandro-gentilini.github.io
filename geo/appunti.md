@@ -108,6 +108,17 @@
 
 [Bosellini]
 
+> Scientists consider it more likely that the true source of the Earth's
+> magnetic field is convection currents in the Earth's core. Charged ions or electrons
+> circulating in the liquid interior could produce a magnetic field just as a current loop
+> does. There is also strong evidence that the magnitude of a planet's magnetic field is
+> related to the planet's rate of rotation. For example, Jupiter rotates faster than the
+> Earth, and space probes indicate that Jupiter's magnetic field is stronger than ours.
+> Venus, on the other hand, rotates more slowly than the Earth, and its magnetic field is
+> found to be weaker. Investigation into the cause of the Earth's magnetism is ongoing.
+
+[Serway, paragrafo 30.9 The Magnetic Field of the Earth]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -175,5 +186,12 @@ Springer, 2011.
 Alfonso BOSELLINI,
 _Le scienze della Terra - Tettonica delle placche e storia geologica dell'Italia_,
 Italo Bovolenta editore, 2013.
+
+[Serway]
+Raymond A. SERWAY, John W. JEWETT,
+_Physics for Scientists and Engineers_,
+6th Edition,
+Thomson Brooks/Cole, 2004.
+
 
 
