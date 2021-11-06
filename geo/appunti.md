@@ -119,6 +119,20 @@
 
 [Serway, paragrafo 30.9 The Magnetic Field of the Earth]
 
+> Chi scrive si è sempre trovato a disagio di fronte alle richieste
+> di una spiegazione sull'origine del campo magnetico
+> terrestre: o si cerca di cavarsela con poche parole ("si tratta di correnti
+> elettriche indotte nell'interno della Terra") che possono forse 
+> accontentare chi non si occupa in modo particolare di problemi scientifici
+> ma non possono soddisfare un fisico, oppure ci si sente obbligati a
+> tentare faticosamente di approfondire, sia per capirli personalmente
+> che per poterli poi spiegare agli altri, argomenti e ragionamenti che
+> sono in realtà accessibili solo a un fisico teorico ben preparato. 
+> Apparentemente non esiste una via di mezzo, come del resto in molti altri
+> campi della fisica contemporanea.
+
+[Molina]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -192,6 +206,12 @@ Raymond A. SERWAY, John W. JEWETT,
 _Physics for Scientists and Engineers_,
 6th Edition,
 Thomson Brooks/Cole, 2004.
+
+[Molina]
+Franco MOLINA,
+_IL CAMPO GEOMAGNETICO_
+Annals of Geophysics. 1972. Vol. 25, no. 3 Sup.
+
 
 
 
