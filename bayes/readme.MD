@@ -54,7 +54,7 @@ src='https://media.springernature.com/w306/springer-static/cover-hires/book/978-
            </tr>
 </table>
 
-[Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
+[Tommy Wright](https://www.niss.org/people/tommy-wright)
  wrote in his book
 [*Exact Confidence Bounds when Sampling from Small Finite Universes - 
 An Easy Reference Based on the Hypergeometric Distribution*](https://www.springer.com/gp/book/9780387975153)
