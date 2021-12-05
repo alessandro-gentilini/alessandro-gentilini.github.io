@@ -133,6 +133,15 @@
 
 [Molina]
 
+> Alcune ipotesi e teorie, tra le quali alcune piuttosto recenti sono
+> abbastanza soddisfacenti, inducono a ricercare le cause del magnetismo
+> terrestre nei fenomeni del nucleo terrestre fluido ove per effetto
+> dinamo si produrrebbero delle intense correnti elettriche da cui
+> deriverebbe anche il campo magnetico che si ossserva in superficie
+> ed intorno alla Terra.
+
+[Giorgi]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -211,6 +220,13 @@ Thomson Brooks/Cole, 2004.
 Franco MOLINA,
 _IL CAMPO GEOMAGNETICO_
 Annals of Geophysics. 1972. Vol. 25, no. 3 Sup.
+
+[Giorgi]
+Maurizio GIORGI,
+_Il campo magnetico terrestre_,
+_L'agenda nautica 1972_,
+Istituto Idrografico della Marina, 1972.
+
 
 
 

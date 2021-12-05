@@ -49,12 +49,12 @@ with the property of interest?
 src='https://magazine.amstat.org/wp-content/uploads/2020/02/Wright_Tommy.jpg'
      height='200'></td>
 <td><img alt='In spite of these recent computing developments, the existence of theory, and the ability to produce exact confidence bounds for A, exact results are rarely given in practice. Why continue to use and teach approximations, including ones that yield bad results for certain cases, for such a common and simple problem when exact and simple methods can be used?'
-src='https://images.springer.com/sgw/books/medium/9780387975153.jpg'
+src='https://media.springernature.com/w306/springer-static/cover-hires/book/978-1-4612-3140-0'
          height=200'></td>
            </tr>
 </table>
 
-[Tommy Wright](https://www.census.gov/research/researchers/profile.php?cv_sub=div&cv_profile=3743)
+[Tommy Wright](https://www.niss.org/people/tommy-wright)
  wrote in his book
 [*Exact Confidence Bounds when Sampling from Small Finite Universes - 
 An Easy Reference Based on the Hypergeometric Distribution*](https://www.springer.com/gp/book/9780387975153)
