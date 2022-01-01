@@ -8,6 +8,7 @@ import math
 # Table 12.1 at page 291.
 df=pd.read_csv('table_12.1.csv')
 
+# Point where to estimate V, it is written in Table 12.1 at page 291.
 X_0=65
 Y_0=137
 
