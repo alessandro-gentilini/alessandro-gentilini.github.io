@@ -162,10 +162,12 @@ int main(int argc, char** argv)
 
     std::normal_distribution<> a_d{0,2};
 
+    std::cout << "[\n";
     std::cout << rect2JSON(std::vector<point2D>(clipPolygon,clipPolygon+clipPolygonSize));
-    std::cout << "\n";
+    std::cout << ",\n";
     std::cout << rect2JSON(rotate_r(std::vector<point2D>(clipPolygon,clipPolygon+clipPolygonSize),M_PI_4));
     std::cout << "\n";
+    std::cout << "]\n";
 
     
  

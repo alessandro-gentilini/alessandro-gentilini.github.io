@@ -1,15 +1,21 @@
 from matplotlib.patches import Polygon
 import matplotlib.pyplot as plt
 import json
+import sys
 
-polygon  = []
-p1 = json.loads('[[100,100],[300,100],[300,300],[100,300]]')
-#p1 = json.loads('[[0,141.421],[141.421,282.843],[0,424.264],[-141.421,282.843]]')
-for p in p1:
-    polygon.append((p[0],p[1]))
+pp = json.loads(sys.stdin.read())
+
+def to_polygon(vector_of_vector):
+    polygon = []
+    for p in vector_of_vector:
+        polygon.append((p[0],p[1]))
+    return polygon
 
 fig, ax = plt.subplots(1,1)
-ax.add_patch(Polygon(polygon))
+
+for p in pp:
+    ax.add_patch(Polygon(to_polygon(p)))
+
 plt.xlim(-500,500)
 plt.ylim(-500,500)
 plt.axis('square')
