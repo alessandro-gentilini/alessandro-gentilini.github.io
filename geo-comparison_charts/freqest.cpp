@@ -243,7 +243,7 @@ int main(int argc, char **argv)
     std::cerr << "idx,freq\n";
     do
     {
-        std::cerr << idx++ << "," << frequency << "\n";
+        //std::cerr << idx++ << "," << frequency << "\n";
         w = w_d(dre);
         h = h_d(dre);
         if (w <= 0 || h <= 0)
@@ -253,24 +253,25 @@ int main(int argc, char **argv)
             continue;
 
         bool overlap = false;
-        for (size_t i = 0; i < rr.size() && !overlap; i++)
-        {
-            overlap = are_overlapped(r, rr[i]);
-        }
-
-        // if (!rr.empty())
+        // for (size_t i = 0; i < rr.size() && !overlap; i++)
         // {
-        //     auto it = std::lower_bound(rr.begin(), rr.end(), r, customLess);
-        //     size_t start = std::distance(rr.begin(), it - 5);
-        //     size_t stop = std::distance(rr.begin(), it + 5);
-        //     if(start>stop) continue;
-        //     std::vector<std::vector<point2D>> subset(&rr[std::max(size_t(0), start)], &rr[std::min(rr.size(), stop)]);
-
-        //     for (size_t i = 0; i < subset.size() && !overlap; i++)
-        //     {
-        //         overlap = are_overlapped(r, subset[i]);
-        //     }
+        //     overlap = are_overlapped(r, rr[i]);
         // }
+
+        if (!rr.empty())
+        {
+            auto it = std::lower_bound(rr.begin(), rr.end(), r, customLess);
+            size_t start = std::distance(rr.begin(), it - 1);
+            size_t stop = std::distance(rr.begin(), it + 1);
+            if(start>stop) continue;
+
+            std::vector<std::vector<point2D>> subset(&rr[std::max(size_t(0), start)], &rr[std::min(rr.size(), stop)]);
+
+            for (size_t i = 0; i < subset.size() && !overlap; i++)
+            {
+                overlap = are_overlapped(r, subset[i]);
+            }
+        }
 
         if (!overlap)
         {
