@@ -2,6 +2,7 @@
 #include <sstream>
 #include <random>
 #include <algorithm>
+#include <fstream>
 
 // https://rosettacode.org/wiki/Sutherland-Hodgman_polygon_clipping#C.2B.2B
 using namespace std;
@@ -253,25 +254,66 @@ int main(int argc, char **argv)
             continue;
 
         bool overlap = false;
-        for (size_t i = 0; i < rr.size() && !overlap; i++)
-        {
-            overlap = are_overlapped(r, rr[i]);
-        }
-
-        // if (!rr.empty())
+        // for (size_t i = 0; i < rr.size() && !overlap; i++)
         // {
-        //     auto it = std::lower_bound(rr.begin(), rr.end(), r, customLess);
-        //     size_t start = std::distance(rr.begin(), it - 1);
-        //     size_t stop = std::distance(rr.begin(), it + 1);
-        //     if(start>stop) continue;
-
-        //     std::vector<std::vector<point2D>> subset(&rr[std::max(size_t(0), start)], &rr[std::min(rr.size(), stop)]);
-
-        //     for (size_t i = 0; i < subset.size() && !overlap; i++)
-        //     {
-        //         overlap = are_overlapped(r, subset[i]);
-        //     }
+        //     overlap = are_overlapped(r, rr[i]);
         // }
+
+        if (!rr.empty())
+        {
+            auto it = std::lower_bound(rr.begin(), rr.end(), r, customLess);
+            size_t start = std::distance(rr.begin(), it - 1);
+            size_t stop = std::distance(rr.begin(), it + 1);
+            if (start > stop)
+                continue;
+
+            std::vector<std::vector<point2D>> subset(&rr[std::max(size_t(0), start)], &rr[std::min(rr.size(), stop)]);
+
+            for (size_t i = 0; i < subset.size() && !overlap; i++)
+            {
+                overlap = are_overlapped(r, subset[i]);
+            }
+
+            std::ofstream ofs("dbg.json");
+            ofs << "{";
+
+            ofs << "\"candidate\":" << polygon_to_JSON(r) << ",";
+
+            ofs << "\"full\":[\n";
+            for (size_t i = 0; i < rr.size(); i++)
+            {
+                ofs << polygon_to_JSON(rr[i]);
+                if (i != rr.size() - 1)
+                {
+                    ofs << ",\n";
+                }
+            }
+            ofs << "\n]\n";
+
+            if (subset.empty())
+            {
+                ofs << "}";
+            }
+            else
+            {
+                ofs << ",";
+                ofs << "\"subset\":[\n";
+                for (size_t i = 0; i < subset.size(); i++)
+                {
+                    ofs << polygon_to_JSON(subset[i]);
+                    if (i != subset.size() - 1)
+                    {
+                        ofs << ",\n";
+                    }
+                }
+                ofs << "\n]}\n";
+            }
+
+            ofs.close();
+
+            char c;
+            std::cin >> c;
+        }
 
         if (!overlap)
         {
