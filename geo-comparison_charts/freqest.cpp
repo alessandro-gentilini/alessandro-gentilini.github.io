@@ -188,8 +188,7 @@ bool are_overlapped(const std::vector<point2D> &r1, const std::vector<point2D> &
 
 int main(int argc, char **argv)
 {
-    std::random_device rd{};
-    std::mt19937 gen{rd()};
+    std::default_random_engine dre; 
 
     // values near the mean are the most likely
     // standard deviation affects the dispersion of generated values from the mean
@@ -235,11 +234,11 @@ int main(int argc, char **argv)
     do
     {
         std::cerr << idx++ << "," << frequency << "\n";
-        w = w_d(gen);
-        h = h_d(gen);
+        w = w_d(dre);
+        h = h_d(dre);
         if (w <= 0 || h <= 0)
             continue;
-        r = translate(rotate_r(rect(w, h), a_d(gen)), {float(ux_d(gen)), float(uy_d(gen))});
+        r = translate(rotate_r(rect(w, h), a_d(dre)), {float(ux_d(dre)), float(uy_d(dre))});
         if (is_outside(r, circle_center, radius))
             continue;
         bool overlap = false;
