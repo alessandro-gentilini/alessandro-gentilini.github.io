@@ -32,7 +32,7 @@ point2D intersection(point2D cp1, point2D cp2, point2D s, point2D e)
 }
 
 // Sutherland-Hodgman clipping
-void SutherlandHodgman(point2D *subjectPolygon, int &subjectPolygonSize, point2D *clipPolygon, int &clipPolygonSize, point2D (&newPolygon)[N], int &newPolygonSize)
+void SutherlandHodgman(const point2D *subjectPolygon, const size_t &subjectPolygonSize, const point2D *clipPolygon, const size_t &clipPolygonSize, point2D (&newPolygon)[N], int &newPolygonSize)
 {
     point2D cp1, cp2, s, e, inputPolygon[N];
 
@@ -124,9 +124,11 @@ std::string polygon_to_JSON(const std::vector<point2D> &p)
 {
     std::ostringstream oss;
     oss << "[";
-    for (size_t i = 0; i < p.size(); i++){
+    for (size_t i = 0; i < p.size(); i++)
+    {
         oss << "[" << p[i].x << "," << p[i].y << "]";
-        if(i!=p.size()-1){
+        if (i != p.size() - 1)
+        {
             oss << ",";
         }
     }
@@ -134,40 +136,67 @@ std::string polygon_to_JSON(const std::vector<point2D> &p)
     return oss.str();
 }
 
-int main(int argc, char **argv)
+float distance(const point2D &p1, const point2D &p2)
 {
-    // subject polygon
-    point2D subjectPolygon[] = {
-        {50, 150}, {200, 50}, {350, 150}, {350, 300}, {250, 300}, {200, 250}, {150, 350}, {100, 250}, {100, 200}};
-    int subjectPolygonSize = sizeof(subjectPolygon) / sizeof(subjectPolygon[0]);
+    return hypot(p1.x - p2.x, p1.y - p2.y);
+}
 
-    // clipping polygon
-    point2D clipPolygon[] = {{100, 100}, {300, 100}, {300, 300}, {100, 300}};
-    int clipPolygonSize = sizeof(clipPolygon) / sizeof(clipPolygon[0]);
+bool is_outside(const std::vector<point2D> &rect, const point2D &circle_center, float circle_radius)
+{
+    return distance(rect[0], circle_center) > circle_radius &&
+           distance(rect[1], circle_center) > circle_radius &&
+           distance(rect[2], circle_center) > circle_radius &&
+           distance(rect[3], circle_center) > circle_radius;
+}
 
+float determinant(const point2D &p1, const point2D &p2)
+{
+    float x1 = p1.x;
+    float y1 = p1.y;
+    float x2 = p2.x;
+    float y2 = p2.y;
+    return x1 * y2 - x2 * y1;
+}
+
+// http://mathworld.wolfram.com/PolygonArea.html
+float polygon_area(const std::vector<point2D> &p)
+{
+    float A = 0;
+    size_t sz = p.size();
+    for (size_t i = 0; i < sz; i++)
+    {
+        A += determinant(p[i], p[(i + 1) % sz]);
+    }
+    return std::abs(A / 2);
+}
+
+bool are_overlapped(const std::vector<point2D> &r1, const std::vector<point2D> &r2)
+{
     // define the new clipped polygon (empty)
-    int newPolygonSize = 0;
-    point2D newPolygon[N] = {0};
+    int newPolygonSize_a = 0;
+    point2D newPolygon_a[N] = {0};
+
+    int newPolygonSize_b = 0;
+    point2D newPolygon_b[N] = {0};
 
     // apply clipping
-    SutherlandHodgman(subjectPolygon, subjectPolygonSize, clipPolygon, clipPolygonSize, newPolygon, newPolygonSize);
+    SutherlandHodgman(&r1[0], r1.size(), &r2[0], r2.size(), newPolygon_a, newPolygonSize_a);
+    SutherlandHodgman(&r2[0], r2.size(), &r1[0], r1.size(), newPolygon_b, newPolygonSize_b);
 
-    // print clipped polygon points
-    //cout << "Clipped polygon points:" << endl;
-    for (int i = 0; i < newPolygonSize; i++)
-    {
-        //cout << "(" << newPolygon[i].x << ", " << newPolygon[i].y << ")" << endl;
-    }
+    return newPolygonSize_a > 0 || newPolygonSize_b > 0;
+}
 
+int main(int argc, char **argv)
+{
     std::random_device rd{};
     std::mt19937 gen{rd()};
 
     // values near the mean are the most likely
     // standard deviation affects the dispersion of generated values from the mean
-    std::normal_distribution<> w_d{5, 2};
-    std::normal_distribution<> h_d{5, 2};
+    std::normal_distribution<float> w_d{15, 2};
+    std::normal_distribution<float> h_d{10, 2};
 
-    std::normal_distribution<> a_d{0, 2};
+    std::normal_distribution<float> a_d{0, .1};
 
     const float limit_x = 700;
     const float limit_y = 700;
@@ -179,23 +208,64 @@ int main(int argc, char **argv)
     point2D circle_center = {limit_x / 2, limit_y / 2};
 
     std::vector<point2D> approx_circle;
-    size_t N = 50;
-    for (size_t i = 0; i < N; i++)
+    size_t NN = 50;
+    for (size_t i = 0; i < NN; i++)
     {
-        float theta = float(i) / N * 2 * M_PI;
+        float theta = float(i) / NN * 2 * M_PI;
         float x = circle_center.x + radius * cos(theta);
         float y = circle_center.y + radius * sin(theta);
         approx_circle.push_back({x, y});
     }
 
-    std::cout << "[\n";
-    std::cout << polygon_to_JSON(approx_circle);
-    std::cout << ",\n";
-    std::cout << polygon_to_JSON(std::vector<point2D>(clipPolygon, clipPolygon + clipPolygonSize));
-    std::cout << ",\n";
-    std::cout << polygon_to_JSON(rotate_r(std::vector<point2D>(clipPolygon, clipPolygon + clipPolygonSize), M_PI_4));
-    std::cout << "\n";
-    std::cout << "]\n";
+    float approx_circle_area = polygon_area(approx_circle);
+
+    std::vector<std::vector<point2D>> rr;
+    float particle_area = 0;
+    float w;
+    float h;
+    float frequency = 0;
+    float target_frequency = 10;
+    std::vector<point2D> r;
+    do
+    {
+        w = w_d(gen);
+        h = h_d(gen);
+        if (w <= 0 || h <= 0)
+            continue;
+        r = translate(rotate_r(rect(w, h), a_d(gen)), {limit_x * rand() / RAND_MAX, limit_y * rand() / RAND_MAX});
+        if (is_outside(r, circle_center, radius))
+            continue;
+        bool overlap = false;
+        for (size_t i = 0; i < rr.size() && !overlap; i++)
+        {
+            overlap = are_overlapped(r, rr[i]);
+        }
+        if (!overlap)
+        {
+            // define the new clipped polygon (empty)
+            int clippedSize = 0;
+            point2D clipped[N] = {0};
+
+            // apply clipping
+            SutherlandHodgman(&r[0], r.size(), &approx_circle[0], approx_circle.size(), clipped, clippedSize);
+            if (clippedSize)
+            {
+                particle_area += polygon_area(std::vector<point2D>(clipped,clipped+clippedSize));
+                rr.push_back(r);
+            }
+        }
+        frequency = 100 * particle_area / approx_circle_area;
+    } while (frequency < target_frequency);
+
+    std::cout << "[\n";        
+    for (size_t i = 0; i < rr.size(); i++){
+        std::cout << polygon_to_JSON(rr[i]);
+        if(i!=rr.size()-1){
+            std::cout << ",\n";
+        }
+
+    }
+    std::cout << "\n]\n";    
 
     return 0;
 }
