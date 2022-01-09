@@ -187,18 +187,19 @@ bool are_overlapped(const std::vector<point2D> &r1, const std::vector<point2D> &
     return newPolygonSize_a > 0 || newPolygonSize_b > 0;
 }
 
-struct {
-    bool operator()(const std::vector<point2D> &a, const std::vector<point2D> &b) const 
-    { 
-        std::vector aa{a[0].x,a[0].y};
-        std::vector bb{b[0].x,b[0].y};
-        return std::lexicographical_compare(aa.begin(),aa.end(),bb.begin(),bb.end());
+struct
+{
+    bool operator()(const std::vector<point2D> &a, const std::vector<point2D> &b) const
+    {
+        std::vector aa{a[0].x, a[0].y};
+        std::vector bb{b[0].x, b[0].y};
+        return std::lexicographical_compare(aa.begin(), aa.end(), bb.begin(), bb.end());
     }
 } customLess;
 
 int main(int argc, char **argv)
 {
-    std::default_random_engine dre; 
+    std::default_random_engine dre;
 
     // values near the mean are the most likely
     // standard deviation affects the dispersion of generated values from the mean
@@ -207,13 +208,12 @@ int main(int argc, char **argv)
 
     std::normal_distribution<float> a_d{0, .1};
 
-
     const float limit_x = 700;
     const float limit_y = 700;
     const float radius = 300;
 
-    std::uniform_int_distribution<> ux_d(0,limit_x);
-    std::uniform_int_distribution<> uy_d(0,limit_y);
+    std::uniform_int_distribution<> ux_d(0, limit_x);
+    std::uniform_int_distribution<> uy_d(0, limit_y);
 
     const float W = limit_x;
     const float H = (limit_y - 2 * radius) / 2;
@@ -240,7 +240,7 @@ int main(int argc, char **argv)
     float target_frequency = 50;
     size_t idx = 0;
     std::vector<point2D> r;
-    std::cerr << "idx,freq\n";    
+    std::cerr << "idx,freq\n";
     do
     {
         std::cerr << idx++ << "," << frequency << "\n";
@@ -251,11 +251,27 @@ int main(int argc, char **argv)
         r = translate(rotate_r(rect(w, h), a_d(dre)), {float(ux_d(dre)), float(uy_d(dre))});
         if (is_outside(r, circle_center, radius))
             continue;
+
         bool overlap = false;
         for (size_t i = 0; i < rr.size() && !overlap; i++)
         {
             overlap = are_overlapped(r, rr[i]);
         }
+
+        // if (!rr.empty())
+        // {
+        //     auto it = std::lower_bound(rr.begin(), rr.end(), r, customLess);
+        //     size_t start = std::distance(rr.begin(), it - 5);
+        //     size_t stop = std::distance(rr.begin(), it + 5);
+        //     if(start>stop) continue;
+        //     std::vector<std::vector<point2D>> subset(&rr[std::max(size_t(0), start)], &rr[std::min(rr.size(), stop)]);
+
+        //     for (size_t i = 0; i < subset.size() && !overlap; i++)
+        //     {
+        //         overlap = are_overlapped(r, subset[i]);
+        //     }
+        // }
+
         if (!overlap)
         {
             // define the new clipped polygon (empty)
@@ -266,23 +282,24 @@ int main(int argc, char **argv)
             SutherlandHodgman(&r[0], r.size(), &approx_circle[0], approx_circle.size(), clipped, clippedSize);
             if (clippedSize)
             {
-                particle_area += polygon_area(std::vector<point2D>(clipped,clipped+clippedSize));
+                particle_area += polygon_area(std::vector<point2D>(clipped, clipped + clippedSize));
                 rr.push_back(r);
-                std::sort(rr.begin(),rr.end(),customLess);
+                std::sort(rr.begin(), rr.end(), customLess);
             }
         }
         frequency = 100 * particle_area / approx_circle_area;
     } while (frequency < target_frequency);
 
-    std::cout << "[\n";        
-    for (size_t i = 0; i < rr.size(); i++){
+    std::cout << "[\n";
+    for (size_t i = 0; i < rr.size(); i++)
+    {
         std::cout << polygon_to_JSON(rr[i]);
-        if(i!=rr.size()-1){
+        if (i != rr.size() - 1)
+        {
             std::cout << ",\n";
         }
-
     }
-    std::cout << "\n]\n";    
+    std::cout << "\n]\n";
 
     return 0;
 }
