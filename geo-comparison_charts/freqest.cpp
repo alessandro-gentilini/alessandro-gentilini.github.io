@@ -224,10 +224,13 @@ int main(int argc, char **argv)
     float w;
     float h;
     float frequency = 0;
-    float target_frequency = 10;
+    float target_frequency = 50;
+    size_t idx = 0;
     std::vector<point2D> r;
+    std::cerr << "idx,freq\n";    
     do
     {
+        std::cerr << idx++ << "," << frequency << "\n";
         w = w_d(gen);
         h = h_d(gen);
         if (w <= 0 || h <= 0)
