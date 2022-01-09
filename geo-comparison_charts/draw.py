@@ -32,4 +32,5 @@ ax.set_xlim(min_x,max_x)
 ax.set_ylim(min_y,max_y)
 ax.axis('square')
 ax.figure.savefig('chart.png',bbox_inches='tight')
+plt.show()
 
