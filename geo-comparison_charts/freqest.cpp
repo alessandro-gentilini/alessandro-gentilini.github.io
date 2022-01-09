@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <random>
+#include <algorithm>
 
 // https://rosettacode.org/wiki/Sutherland-Hodgman_polygon_clipping#C.2B.2B
 using namespace std;
@@ -186,6 +187,15 @@ bool are_overlapped(const std::vector<point2D> &r1, const std::vector<point2D> &
     return newPolygonSize_a > 0 || newPolygonSize_b > 0;
 }
 
+struct {
+    bool operator()(const std::vector<point2D> &a, const std::vector<point2D> &b) const 
+    { 
+        std::vector aa{a[0].x,a[0].y};
+        std::vector bb{b[0].x,b[0].y};
+        return std::lexicographical_compare(aa.begin(),aa.end(),bb.begin(),bb.end());
+    }
+} customLess;
+
 int main(int argc, char **argv)
 {
     std::default_random_engine dre; 
@@ -258,6 +268,7 @@ int main(int argc, char **argv)
             {
                 particle_area += polygon_area(std::vector<point2D>(clipped,clipped+clippedSize));
                 rr.push_back(r);
+                std::sort(rr.begin(),rr.end(),customLess);
             }
         }
         frequency = 100 * particle_area / approx_circle_area;
