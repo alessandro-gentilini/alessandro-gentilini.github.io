@@ -28,8 +28,8 @@ fig, ax = plt.subplots(1,1)
 for p in pp:
     ax.add_patch(Polygon(to_polygon(p)))
 
-plt.xlim(min_x,max_x)
-plt.ylim(min_y,max_y)
-plt.axis('square')
+ax.set_xlim(min_x,max_x)
+ax.set_ylim(min_y,max_y)
+ax.axis('square')
+ax.figure.savefig('freq.png',bbox_inches='tight')
 
-plt.show()
