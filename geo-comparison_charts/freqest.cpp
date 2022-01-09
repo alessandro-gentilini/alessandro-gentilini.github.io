@@ -182,13 +182,15 @@ int main(int argc, char **argv)
     size_t N = 50;
     for (size_t i = 0; i < N; i++)
     {
-        float theta = i / N * 2 * M_PI;
+        float theta = float(i) / N * 2 * M_PI;
         float x = circle_center.x + radius * cos(theta);
         float y = circle_center.y + radius * sin(theta);
         approx_circle.push_back({x, y});
     }
 
     std::cout << "[\n";
+    std::cout << polygon_to_JSON(approx_circle);
+    std::cout << ",\n";
     std::cout << polygon_to_JSON(std::vector<point2D>(clipPolygon, clipPolygon + clipPolygonSize));
     std::cout << ",\n";
     std::cout << polygon_to_JSON(rotate_r(std::vector<point2D>(clipPolygon, clipPolygon + clipPolygonSize), M_PI_4));
