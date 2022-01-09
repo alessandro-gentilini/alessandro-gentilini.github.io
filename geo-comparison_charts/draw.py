@@ -31,5 +31,5 @@ for p in pp:
 ax.set_xlim(min_x,max_x)
 ax.set_ylim(min_y,max_y)
 ax.axis('square')
-ax.figure.savefig('freq.png',bbox_inches='tight')
+ax.figure.savefig('chart.png',bbox_inches='tight')
 
