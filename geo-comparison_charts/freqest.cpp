@@ -198,9 +198,13 @@ int main(int argc, char **argv)
 
     std::normal_distribution<float> a_d{0, .1};
 
+
     const float limit_x = 700;
     const float limit_y = 700;
     const float radius = 300;
+
+    std::uniform_int_distribution<> ux_d(0,limit_x);
+    std::uniform_int_distribution<> uy_d(0,limit_y);
 
     const float W = limit_x;
     const float H = (limit_y - 2 * radius) / 2;
@@ -235,7 +239,7 @@ int main(int argc, char **argv)
         h = h_d(gen);
         if (w <= 0 || h <= 0)
             continue;
-        r = translate(rotate_r(rect(w, h), a_d(gen)), {limit_x * rand() / RAND_MAX, limit_y * rand() / RAND_MAX});
+        r = translate(rotate_r(rect(w, h), a_d(gen)), {float(ux_d(gen)), float(uy_d(gen))});
         if (is_outside(r, circle_center, radius))
             continue;
         bool overlap = false;
