@@ -15,6 +15,9 @@
 \author{Alessandro Gentilini}
 \maketitle
 
+Tratto dalla \textit{Piccola Enciclopedia Treccani}, 1995.
+
+
 \textbf{onda} Con riferimento a un dato mezzo fisico (acqua, aria ecc.), perturbazione determinatasi in un punto del mezzo che si propaga nello spazio trasportando energia ma non materia. 
 
 \section{Propagazione per onde}
@@ -37,16 +40,18 @@ Numerosi sono i fenomeni fisici con carattere ondoso, e dalla natura di ciascuno
 Si consideri un filo elastico (corda elastica) omogeneo, preliminarmente disposto secondo la retta x, soggetto a una tensione costante, che a un certo istante prenda a vibrare, per l'intervento di opportune sollecitazioni, in modo che i suoi elementi compiano piccole oscillazioni in un determinato piano $\alpha$ (fig. 1) individuato dalla retta x (che si assume come asse delle ascisse, fissando su essa un'origine e un verso positivo di percorrenza) e da una direzione n ortogonale a essa. Se x è l'ascissa del generico elemento della corda nella sua originaria configurazione rettilinea, e t è il tempo, lo spostamento trasversale s che istante per istante subisce l'elemento suddetto è una funzione di x e t, che, come si dimostra a partire dalla seconda legge della dinamica, deve soddisfare l'equazione alle derivate parziali del secondo ordine
 
 (dove le costanti $\rho$ e $\tau$ rappresentano rispettivamente la massa per unità di lunghezza, o densità lineica, della corda e la tensione), nonché a determinare condizioni al contorno, variabili da caso a caso (corda fissata rigidamente a un solo estremo, fissata elasticamente ai due estremi ecc.), e a determinate condizioni iniziali (posizione e velocità iniziale dei singoli punti della corda). Per soddisfare la [1], s dovrà risultare, per ogni elementino (o particella), piccolo di fronte alla lunghezza l della corda, ciò che si può tradurre nella condizione che il rapporto s/l sia abbastanza piccolo perché se ne possano trascurare le potenze superiori alla prima. La [1] è nota come equazione delle corde vibranti o equazione di d'Alembert; la più generale soluzione di essa è della forma (integrale di d'Alembert) 
-
-$s(x,t)=s_1(x-vt)+s_2(x+vt)$
-
+\begin{equation}
+s(x,t)=s_1(x-vt)+s_2(x+vt)
+\end{equation}
 dove s1 e s2 sono funzioni, a priori arbitrarie, degli argomenti x-vt e x+vt, e v è una costante, avente le dimensioni di una velocità, legata a $\tau$ e $\rho$ dalla relazione 
-
-$v=\sqrt{\frac{\tau}{\rho}}$
+\begin{equation}
+v=\sqrt{\frac{\tau}{\rho}}
+\end{equation}
 
 Da quest'ultima relazione segue che la [1] può anche essere scritta nella forma: 
-
-$\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}$
+\begin{equation}
+\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}
+\end{equation}
 
 \subsection{Onde progressive}
 Vediamo ora di renderci conto del significato delle due funzioni s1 e s2 che compaiono nella [2]. Consideriamo la prima di esse, s1. Si tratta di una funzione il cui argomento è x-vt; questo argomento non si altera se si dà a t un qualunque incremento dt e al tempo stesso si incrementa x della quantità dx=vdt: infatti è (x + v dt) - v(t + dt) = x - vt.
@@ -55,162 +60,193 @@ Se quindi a un dato istante $\bar{t}$ lo spostamento s1 ha un certo valore $\bar
 
 \subsection{Onde armoniche}
 Particolarmente semplice e importante è il caso delle o. armoniche o \textit{sinusoidali}, caratterizzate dal fatto che la configurazione della corda, o, come si dice, il profilo d'o., è una sinusoide: 
+\begin{equation}
+s_1=a\sin [b(x-vt)+\phi]
+\end{equation},
 
-$s_1=a\sin [b(x-vt)+\phi]$,
-
-dove $a$, $b$, $\phi$ sono opportune costanti, delle quali a, che rappresenta lo spostamento massimo del generico elementino della corda dalla sua posizione d’equilibrio, ha il nome di ampiezza dell’onda. La quantità che costituisce l’argomento del seno, cioè $b(x-vt)+ \phi$, da misurarsi in radianti, si chiama fase dell’o. nel punto di ascissa x e all’istante t; pertanto $\phi$ è la fase all’istante iniziale (t=0) nell’origine delle ascisse (x=0). Convenendo di indicare con $\lambda$ l’intervallo di ascisse percorrendo il quale la fase dell’o. varia di $2\pi$ rad, si ha $b=\frac{2\pi}{\lambda}$, di modo che la [4] può porsi nella forma: 
-
-$s_1=a\sin [\frac{2\pi}{\lambda}(x-vt)+\phi]$
+dove $a$, $b$, $\phi$ sono opportune costanti, delle quali a, che rappresenta lo spostamento massimo del generico elementino della corda dalla sua posizione d'equilibrio, ha il nome di ampiezza dell'onda. La quantità che costituisce l'argomento del seno, cioè $b(x-vt)+ \phi$, da misurarsi in radianti, si chiama fase dell'o. nel punto di ascissa x e all'istante t; pertanto $\phi$ è la fase all'istante iniziale (t=0) nell'origine delle ascisse (x=0). Convenendo di indicare con $\lambda$ l'intervallo di ascisse percorrendo il quale la fase dell'o. varia di $2\pi$ rad, si ha $b=\frac{2\pi}{\lambda}$, di modo che la [4] può porsi nella forma: 
+\begin{equation}
+s_1=a\sin [\frac{2\pi}{\lambda}(x-vt)+\phi]
+\end{equation}
 
 ovvero, ponendo ulteriormente 
-
-$T=\frac{\lambda}{v}$
+\begin{equation}
+T=\frac{\lambda}{v}
+\end{equation}
 
 nella forma equivalente 
+\begin{equation}
+s_1=a\sin [2\pi(\frac{x}{\lambda}-\frac{t}{T})+\phi]
+\end{equation}
 
-$s_1=a\sin [2\pi(\frac{x}{\lambda}-\frac{t}{T})+\phi]$
-
-Dal fatto che la funzione seno è periodica con periodo $2\pi$ rad, segue che s1 è funzione periodica con periodo 1 della variabile $(\frac{x}{\lambda}-\frac{t}{T})$, cioè che essa è funzione periodica tanto di x quanto di t, rispettivamente con i periodi $\lambda$ e T. Ciò significa che, se si fissa l’attenzione su un determinato valore di x, per la vibrazione trasversale del corrispondente elementino della corda si ha nel tempo un andamento sinusoidale (fig. 2A), con periodo T, che si chiama perciò periodo del moto ondoso in esame: si ha cioè uno stesso valore, $\bar{s_1}$, per lo spostamento relativo a due istanti $\bar{t}$ e $\bar{t} + nT$ (con n intero non nullo) che differiscono tra loro di T o di multipli interi di T. Se invece si fissa l’attenzione su un determinato istante, l’andamento in quell’istante degli spostamenti trasversali delle varie particelle della corda, cioè il profilo dell’o., è anch’esso sinusoidale, con il periodo $\lambda$, che si chiama lunghezza d’o., in quanto se ci si muove lungo x di un tratto pari a $\lambda$ o a un multiplo intero di $\lambda$ (per es., da $\bar{x}$ a $\bar{x}+\lambda$; fig. 2B), gli spostamenti si riproducono identicamente. Com’è chiaro, a norma della [6] e della definizione data per $\lambda$, il periodo T rappresenta l’intervallo di tempo in cui l’o. percorre un tratto pari alla sua lunghezza d’o. $\lambda$ e in cui la fase dell’o. varia di $2\pi$ rad; all’inverso del periodo, $\nu$, si dà il nome di frequenza dell’o.: 
-
-$\nu=\frac{1}{T}=\frac{v}{\lambda}$
+Dal fatto che la funzione seno è periodica con periodo $2\pi$ rad, segue che s1 è funzione periodica con periodo 1 della variabile $(\frac{x}{\lambda}-\frac{t}{T})$, cioè che essa è funzione periodica tanto di x quanto di t, rispettivamente con i periodi $\lambda$ e T. Ciò significa che, se si fissa l'attenzione su un determinato valore di x, per la vibrazione trasversale del corrispondente elementino della corda si ha nel tempo un andamento sinusoidale (fig. 2A), con periodo T, che si chiama perciò periodo del moto ondoso in esame: si ha cioè uno stesso valore, $\bar{s_1}$, per lo spostamento relativo a due istanti $\bar{t}$ e $\bar{t} + nT$ (con n intero non nullo) che differiscono tra loro di T o di multipli interi di T. Se invece si fissa l'attenzione su un determinato istante, l'andamento in quell'istante degli spostamenti trasversali delle varie particelle della corda, cioè il profilo dell'o., è anch'esso sinusoidale, con il periodo $\lambda$, che si chiama lunghezza d'o., in quanto se ci si muove lungo x di un tratto pari a $\lambda$ o a un multiplo intero di $\lambda$ (per es., da $\bar{x}$ a $\bar{x}+\lambda$; fig. 2B), gli spostamenti si riproducono identicamente. Com'è chiaro, a norma della [6] e della definizione data per $\lambda$, il periodo T rappresenta l'intervallo di tempo in cui l'o. percorre un tratto pari alla sua lunghezza d'o. $\lambda$ e in cui la fase dell'o. varia di $2\pi$ rad; all'inverso del periodo, $\nu$, si dà il nome di frequenza dell'o.: 
+\begin{equation}
+\nu=\frac{1}{T}=\frac{v}{\lambda}
+\end{equation}
 
 alla quantità
+\begin{equation}
+\omega=\frac{2\pi}{T}=2\pi\nu
+\end{equation}
 
-$\omega=\frac{2\pi}{T}=2\pi\nu$
+che rappresenta, in rad/s, la variazione della fase dell'o. nell'unità di tempo, si dà il nome di pulsazione dell'o.; infine, l'inverso, k, della lunghezza d'o., 
+\begin{equation}
+k=\frac{1}{\lambda}=\frac{1}{vT}=\frac{\nu}{v}
+\end{equation}
 
-che rappresenta, in rad/s, la variazione della fase dell’o. nell’unità di tempo, si dà il nome di pulsazione dell’o.; infine, l’inverso, k, della lunghezza d’o., 
+che rappresenta il numero (generalmente non intero) di lunghezze d'o. compreso nell'unità di lunghezza, si chiama numero di onde. Grazie alle grandezze ora introdotte, per rappresentare l'o. che si propaga lungo la corda nel verso positivo dell'asse x si possono usare le seguenti espressioni, equivalenti tra loro ed equivalenti alle [5], [7]: 
+\begin{equation}
+s_1=a\sin[2\pi(\frac{x}{\lambda}-\nu t)+\phi]
+s_1=a\sin(\frac{2\pi x}{\lambda}-\omega t+\phi)
+s_1=a\sin[2\pi(kx-\nu t)+\phi]
+\end{equation}
 
-$k=\frac{1}{\lambda}=\frac{1}{vT}=\frac{\nu}{v}$
-
-che rappresenta il numero (generalmente non intero) di lunghezze d’o. compreso nell’unità di lunghezza, si chiama numero di onde. Grazie alle grandezze ora introdotte, per rappresentare l’o. che si propaga lungo la corda nel verso positivo dell’asse x si possono usare le seguenti espressioni, equivalenti tra loro ed equivalenti alle [5], [7]: 
-
-$s_1=a\sin[2\pi(\frac{x}{\lambda}-\nu t)+\phi]$,
-$s_1=a\sin(\frac{2\pi x}{\lambda}-\omega t+\phi)$,
-$s_1=a\sin[2\pi(kx-\nu t)+\phi]$
-
-È da notare che con una conveniente scelta dell’istante dal quale si comincia a misurare lo scorrere del tempo, $\phi$ può assumere un qualsivoglia valore: in particolare, si può ottenere che sia $\phi=0$, oppure che la funzione seno venga sostituita dalla funzione coseno o che muti il segno dell’argomento. In certe questioni risulta poi comoda la rappresentazione complessa del moto ondoso, basata sull’osservazione che una qualunque delle espressioni prima date per s1 può essere considerata, in virtù della formula di Eulero, come la parte reale di un’opportuna funzione complessa. Per es., alla [10] corrisponde la parte reale della funzione 
-
-$s_1=a\exp\{i[2\pi(kx-\nu t)+\phi-\frac{pi}{2}]\}$,
+È da notare che con una conveniente scelta dell'istante dal quale si comincia a misurare lo scorrere del tempo, $\phi$ può assumere un qualsivoglia valore: in particolare, si può ottenere che sia $\phi=0$, oppure che la funzione seno venga sostituita dalla funzione coseno o che muti il segno dell'argomento. In certe questioni risulta poi comoda la rappresentazione complessa del moto ondoso, basata sull'osservazione che una qualunque delle espressioni prima date per s1 può essere considerata, in virtù della formula di Eulero, come la parte reale di un'opportuna funzione complessa. Per es., alla [10] corrisponde la parte reale della funzione 
+\begin{equation}
+s_1=a\exp\{i[2\pi(kx-\nu t)+\phi-\frac{pi}{2}]\},
+\end{equation},
 
 essendo $i^2=-1$; si può allora scrivere:
+\begin{equation}
+\{s_1=A\exp[2\pi i(kx-\nu t)]
+A=a\exp[i(\phi-\frac{pi}{2})]
+\end{equation}.
 
-$\{s_1=A\exp[2\pi i(kx-\nu t)]$
-$A=a\exp[i(\phi-\frac{pi}{2})]$.
-
-A è detta ampiezza complessa dell’o.: il suo modulo è l’ampiezza a dell’o., mentre il suo argomento cambiato di segno è la fase iniziale nell’origine. L’importanza delle o. armoniche deriva dal fatto che a esse ci si può in definitiva ricondurre in ogni caso. Per un teorema di Fourier, infatti, la funzione s che compare nella [2], anche se non periodica, può sempre scriversi come una sovrapposizione di funzioni sinusoidali, di modo che un’o. qualunque può sempre pensarsi come risultante dalla sovrapposizione di o. armoniche. 
+A è detta ampiezza complessa dell'o.: il suo modulo è l'ampiezza a dell'o., mentre il suo argomento cambiato di segno è la fase iniziale nell'origine. L'importanza delle o. armoniche deriva dal fatto che a esse ci si può in definitiva ricondurre in ogni caso. Per un teorema di Fourier, infatti, la funzione s che compare nella [2], anche se non periodica, può sempre scriversi come una sovrapposizione di funzioni sinusoidali, di modo che un'o. qualunque può sempre pensarsi come risultante dalla sovrapposizione di o. armoniche. 
 
 \subsection{Onde retrograde}
-Le stesse considerazioni sin qui svolte a proposito della funzione s1(x-vt) possono essere ripetute a proposito della funzione s2(x+vt), salvo che quest’ultima rappresenta un’o. che si propaga nel verso delle x decrescenti, cioè un’o. retrograda; anche per s2 valgono, nel caso di o. armoniche, le espressioni date per s1, salvo il segno contrario per il termine contenente la variabile temporale (+t/T in luogo di -t/T; $+\nu t$ in luogo di $-\nu t$; ecc.). La presenza contemporanea nella [2] di una funzione rappresentante un’o. progressiva e di una funzione rappresentante un’o. retrograda è cosa che non deve stupire, dipendendo essa dalle particolari condizioni in cui si opera, ovvero, in termini analitici, dalle condizioni iniziali e al contorno da imporre nei vari casi all’equazione [1]. 
+Le stesse considerazioni sin qui svolte a proposito della funzione s1(x-vt) possono essere ripetute a proposito della funzione s2(x+vt), salvo che quest'ultima rappresenta un'o. che si propaga nel verso delle x decrescenti, cioè un'o. retrograda; anche per s2 valgono, nel caso di o. armoniche, le espressioni date per s1, salvo il segno contrario per il termine contenente la variabile temporale (+t/T in luogo di -t/T; $+\nu t$ in luogo di $-\nu t$; ecc.). La presenza contemporanea nella [2] di una funzione rappresentante un'o. progressiva e di una funzione rappresentante un'o. retrograda è cosa che non deve stupire, dipendendo essa dalle particolari condizioni in cui si opera, ovvero, in termini analitici, dalle condizioni iniziali e al contorno da imporre nei vari casi all'equazione [1]. 
 
 \subsection{Onde stazionarie}
-Un caso notevole di sovrapposizione dell’o. progressiva e dell’o. retrograda è quello che dà luogo alla formazione di o. stazionarie, caratterizzate dalla circostanza che certi punti della corda, detti nodi di vibrazione, in posizione fissa, restano in quiete, mentre in altri punti, detti ventri di vibrazione, anch’essi corrispondenti a particolari valori dell’ascissa x, l’ampiezza di vibrazione è massima: il profilo d’o. è quindi immobile. Il fenomeno si produce, per es., in corde di lunghezza finita, fissate agli estremi. Il corrispondente problema analitico consiste nel risolvere la [3] sotto la duplice condizione che sia, per qualunque valore di t, s=0 per x=0 e per x=l, convenendo di assumere l’origine delle x in un estremo e di indicare con l la lunghezza della corda nella sua configurazione d’equilibrio, rappresentata dall’asse x; una soluzione particolare è: s=asenpx sen(pvt+q), in cui a, p, q sono costanti da determinare in base alle condizioni al contorno (per x) e iniziali (per t). Imponendo le condizioni prima precisate per x si ha per la soluzione generale: 
+Un caso notevole di sovrapposizione dell'o. progressiva e dell'o. retrograda è quello che dà luogo alla formazione di o. stazionarie, caratterizzate dalla circostanza che certi punti della corda, detti nodi di vibrazione, in posizione fissa, restano in quiete, mentre in altri punti, detti ventri di vibrazione, anch'essi corrispondenti a particolari valori dell'ascissa x, l'ampiezza di vibrazione è massima: il profilo d'o. è quindi immobile. Il fenomeno si produce, per es., in corde di lunghezza finita, fissate agli estremi. Il corrispondente problema analitico consiste nel risolvere la [3] sotto la duplice condizione che sia, per qualunque valore di t, s=0 per x=0 e per x=l, convenendo di assumere l'origine delle x in un estremo e di indicare con l la lunghezza della corda nella sua configurazione d'equilibrio, rappresentata dall'asse x; una soluzione particolare è: s=asenpx sen(pvt+q), in cui a, p, q sono costanti da determinare in base alle condizioni al contorno (per x) e iniziali (per t). Imponendo le condizioni prima precisate per x si ha per la soluzione generale: 
+\begin{equation}
+s=\sum_{r=1}^{+\infty}a_r\sin\frac{r\pi x}{l}\cos(\frac{r\pi vt}{l}+phi_r)
+\end{equation},
 
-$s=\sum_{r=1}^{+\infty}a_r\sin\frac{r\pi x}{l}\cos(\frac{r\pi vt}{l}+phi_r)$,
-
-in cui r è un intero positivo, non nullo. Tale relazione mostra come nella corda si possano destare infinite o. stazionarie, ciascuna corrispondente a un valore di r, che hanno il nome di modi di vibrazione; ar e $\phi_r$, ampiezza e fase iniziale del modo r-esimo, risultano determinate in base alle condizioni iniziali, le quali per di più determinano anche quali sono i modi di vibrazione che effettivamente si destano nella corda. Che ciascun termine della [11] sia un’o. stazionaria risulta chiaramente dal fatto che nei punti la cui ascissa x vale nl/r, con n=0, 1,..., r, l’ampiezza è nulla, cioè si hanno nodi, mentre nei punti di ascissa x=(2n+1) l/(2r), con n=0, 1,..., r-1, l’ampiezza è massima e pari ad ar, cioè si hanno ventri. Si ricava per la pulsazione del modo r-esimo il valore $\omega r=\frac{r\pi v}{l}$, e quindi per la frequenza il valore $\nu r=\frac{rv}{2l}$ e per la lunghezza d’o. il valore $\lambda r=\frac{2l}{r}$. 
-Risulta così che per r=1 la frequenza ha il valore più basso possibile e la lunghezza d’o. è la massima possibile: è l’o. fondamentale, o prima armonica, corrispondente al fatto che la corda contiene una semilunghezza d’o., e che il punto di mezzo della corda è l’unico ventre (M in fig. 3A). Per r=2, 3,... si hanno o. di frequenza doppia, tripla, ... rispetto a quella dell’o. fondamentale (seconda armonica, terza armonica, ...), di cui la corda contiene 2, 3,... semilunghezze; per valori pari di r nel punto di mezzo M della corda cade un nodo (fig. 3 B), mentre per r dispari in M cade un ventre (fig. 3 C). La soluzione adatta al caso che si sta studiando si ottiene imponendo alla [11] le condizioni iniziali, cioè le condizioni che danno conto della posizione iniziale e della velocità iniziale di ogni punto della corda. Queste grandezze dipendono essenzialmente dal modo con cui la corda viene eccitata a vibrare. Per es., se la corda viene eccitata nel suo punto di mezzo, ar risulta nulla per r pari, e inversamente proporzionale a r2 per r dispari: la corda vibra essenzialmente sulla frequenza fondamentale. Il fatto che si possano determinare vibrazioni più o meno ricche di armoniche viene utilizzato in musica per gli strumenti a corda. 
+in cui r è un intero positivo, non nullo. Tale relazione mostra come nella corda si possano destare infinite o. stazionarie, ciascuna corrispondente a un valore di r, che hanno il nome di modi di vibrazione; ar e $\phi_r$, ampiezza e fase iniziale del modo r-esimo, risultano determinate in base alle condizioni iniziali, le quali per di più determinano anche quali sono i modi di vibrazione che effettivamente si destano nella corda. Che ciascun termine della [11] sia un'o. stazionaria risulta chiaramente dal fatto che nei punti la cui ascissa x vale nl/r, con n=0, 1,..., r, l'ampiezza è nulla, cioè si hanno nodi, mentre nei punti di ascissa x=(2n+1) l/(2r), con n=0, 1,..., r-1, l'ampiezza è massima e pari ad ar, cioè si hanno ventri. Si ricava per la pulsazione del modo r-esimo il valore $\omega r=\frac{r\pi v}{l}$, e quindi per la frequenza il valore $\nu r=\frac{rv}{2l}$ e per la lunghezza d'o. il valore $\lambda r=\frac{2l}{r}$. 
+Risulta così che per r=1 la frequenza ha il valore più basso possibile e la lunghezza d'o. è la massima possibile: è l'o. fondamentale, o prima armonica, corrispondente al fatto che la corda contiene una semilunghezza d'o., e che il punto di mezzo della corda è l'unico ventre (M in fig. 3A). Per r=2, 3,... si hanno o. di frequenza doppia, tripla, ... rispetto a quella dell'o. fondamentale (seconda armonica, terza armonica, ...), di cui la corda contiene 2, 3,... semilunghezze; per valori pari di r nel punto di mezzo M della corda cade un nodo (fig. 3 B), mentre per r dispari in M cade un ventre (fig. 3 C). La soluzione adatta al caso che si sta studiando si ottiene imponendo alla [11] le condizioni iniziali, cioè le condizioni che danno conto della posizione iniziale e della velocità iniziale di ogni punto della corda. Queste grandezze dipendono essenzialmente dal modo con cui la corda viene eccitata a vibrare. Per es., se la corda viene eccitata nel suo punto di mezzo, ar risulta nulla per r pari, e inversamente proporzionale a r2 per r dispari: la corda vibra essenzialmente sulla frequenza fondamentale. Il fatto che si possano determinare vibrazioni più o meno ricche di armoniche viene utilizzato in musica per gli strumenti a corda. 
 
 \subsection{Onde smorzate} 
-Abbiamo sin qui considerato o. di ampiezza costante, ma in realtà la presenza di inevitabili resistenze passive (se non altro, la resistenza offerta dall’aria in cui la corda vibra) fa sì che le vibrazioni siano in genere smorzate. Come si sa dalla meccanica, ciò comporta la presenza di un termine contenente la derivata prima $\frac{\partial s}{\partial t}$ nella [3], la quale assume la forma: 
+Abbiamo sin qui considerato o. di ampiezza costante, ma in realtà la presenza di inevitabili resistenze passive (se non altro, la resistenza offerta dall'aria in cui la corda vibra) fa sì che le vibrazioni siano in genere smorzate. Come si sa dalla meccanica, ciò comporta la presenza di un termine contenente la derivata prima $\frac{\partial s}{\partial t}$ nella [3], la quale assume la forma: 
+\begin{equation}
+\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}(\frac{\partial^2 s}{\partial t^2}+\alpha\frac{\partial s}{\partial t})
+\end{equation}
 
-$\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}(\frac{\partial^2 s}{\partial t^2}+\alpha\frac{\partial s}{\partial t})$
-
-Come si dimostra, per un’o. armonica progressiva la soluzione è del tipo:
-
-$s = a \exp(- \alpha \frac{t}{2})\sin[b (x - vt) +\phi]$,
+Come si dimostra, per un'o. armonica progressiva la soluzione è del tipo:
+\begin{equation}
+s = a \exp(- \alpha \frac{t}{2})\sin[b (x - vt) +\phi]
+\end{equation},
 
 dove a, b, $\phi$ sono costanti da determinare e $\frac{2}{\alpha}$ è la costante di tempo dello smorzamento della vibrazione. 
 
 \section{Onde in un generico mezzo elastico}
-Come in una corda elastica, così in un generico mezzo elastico si possono determinare fenomeni ondosi. Precisamente, se in un punto di un sistema elastico (solido, liquido o aeriforme) si determina, per una causa qualsiasi, una perturbazione di preesistenti condizioni di equilibrio, generalmente tale perturbazione non si limita all’elemento in cui ha avuto origine, ma si trasmette agli elementi immediatamente vicini. Ciascuno di questi a sua volta lo trasmette agli elementi circostanti: la perturbazione si propaga così da un punto all’altro del sistema, in tutte le direzioni accessibili, con più o meno grande velocità. Il problema dinamico che si pone, in relazione alla propagazione di tale perturbazione, è ancora quello di determinare in funzione del tempo t lo spostamento (vettoriale) s del generico elementino del sistema, quando siano note le forze e assegnate le condizioni al contorno e iniziali (posizione e velocità) di ciascun elementino. Il problema si traduce in un sistema di tre equazioni differenziali alle derivate parziali del second’ordine nelle componenti cartesiane sx, sy, sz di s, equazioni che subito si ottengono da quelle della statica elastica sostituendo, a norma del principio di d’Alembert, alle forze attive le forze perdute.
+Come in una corda elastica, così in un generico mezzo elastico si possono determinare fenomeni ondosi. Precisamente, se in un punto di un sistema elastico (solido, liquido o aeriforme) si determina, per una causa qualsiasi, una perturbazione di preesistenti condizioni di equilibrio, generalmente tale perturbazione non si limita all'elemento in cui ha avuto origine, ma si trasmette agli elementi immediatamente vicini. Ciascuno di questi a sua volta lo trasmette agli elementi circostanti: la perturbazione si propaga così da un punto all'altro del sistema, in tutte le direzioni accessibili, con più o meno grande velocità. Il problema dinamico che si pone, in relazione alla propagazione di tale perturbazione, è ancora quello di determinare in funzione del tempo t lo spostamento (vettoriale) s del generico elementino del sistema, quando siano note le forze e assegnate le condizioni al contorno e iniziali (posizione e velocità) di ciascun elementino. Il problema si traduce in un sistema di tre equazioni differenziali alle derivate parziali del second'ordine nelle componenti cartesiane sx, sy, sz di s, equazioni che subito si ottengono da quelle della statica elastica sostituendo, a norma del principio di d'Alembert, alle forze attive le forze perdute.
 
 \subsection{Onde elastiche irrotazionali}
-Nel caso delle o. elastiche irrotazionali, che si ha quando lo spostamento s è un vettore irrotazionale, ossia è rots=0, oppure, in termini equivalenti, s deriva da un potenziale $\phi$, se si trascurano le resistenze passive, il moto è retto da un’equazione scalare che si può porre nella forma 
-
-$\nabla^2\phi=\frac{1}{v^2}\frac{\partial^2 \phi}{\partial t^2}$
+Nel caso delle o. elastiche irrotazionali, che si ha quando lo spostamento s è un vettore irrotazionale, ossia è rots=0, oppure, in termini equivalenti, s deriva da un potenziale $\phi$, se si trascurano le resistenze passive, il moto è retto da un'equazione scalare che si può porre nella forma 
+\begin{equation}
+\nabla^2\phi=\frac{1}{v^2}\frac{\partial^2 \phi}{\partial t^2}
+\end{equation}
 
 dove $\nabla^2$ è il laplaciano e v è la velocità di propagazione, legata alle costanti di Lamé, $\lambda$ e $\mu$, e alla densità $\rho$ del mezzo (supposto omogeneo e isotropo) dalla relazione 
+\begin{equation}
+v=\sqrt{\frac{\lambda+2\mu}{\rho}}
+\end{equation}
 
-$v=\sqrt{\frac{\lambda+2\mu}{\rho}}$
-
-La [13] è dello stesso tipo della [1], e ad analoghe equazioni soddisfano le componenti dello spostamento s; quest’ultimo si ottiene, ovviamente, calcolando il gradiente di $\phi$. Se $\phi$ dipende, oltre che dal tempo, da una soltanto delle tre coordinate spaziali, per es. dalla x, si ha:
-
-$\frac{\partial^2 s_x}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s_x}{\partial t^2}$,
+La [13] è dello stesso tipo della [1], e ad analoghe equazioni soddisfano le componenti dello spostamento s; quest'ultimo si ottiene, ovviamente, calcolando il gradiente di $\phi$. Se $\phi$ dipende, oltre che dal tempo, da una soltanto delle tre coordinate spaziali, per es. dalla x, si ha:
+\begin{equation}
+\frac{\partial^2 s_x}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s_x}{\partial t^2}
+\end{equation},
 
 mentre le altre due componenti sy e sz di s risultano identicamente nulle. La soluzione generale della [15] è, naturalmente, dello stesso tipo della [2]
+\begin{equation}
+sx = sx1(x - vt) + sx2(x + vt)
+\end{equation},
 
-[16] sx = sx1(x - vt) + sx2(x + vt),
+dove sx1, sx2 sono funzioni determinabili in base alle condizioni al contorno e iniziali. Le superfici (o fronti) d'o., ognuna delle quali è il luogo dei punti in cui l'argomento della funzione rappresentante l'o. progressiva, x-vt, ha uno stesso valore (e analogamente per la funzione rappresentante l'o. retrograda), sono piani normali a x, in ciascuno dei quali lo spostamento, parallelo a x, ha ovviamente lo stesso valore: la [16] rappresenta o. irrotazionali piane longitudinali, la qualifica di piane riferendosi alla forma della superficie d'o. e quella di longitudinali al fatto che la vibrazione del generico elementino del mezzo avviene lungo la direzione di propagazione, x. Può anche darsi il caso che le superfici d'o. non siano piane.
 
-dove sx1, sx2 sono funzioni determinabili in base alle condizioni al contorno e iniziali. Le superfici (o fronti) d’o., ognuna delle quali è il luogo dei punti in cui l’argomento della funzione rappresentante l’o. progressiva, x-vt, ha uno stesso valore (e analogamente per la funzione rappresentante l’o. retrograda), sono piani normali a x, in ciascuno dei quali lo spostamento, parallelo a x, ha ovviamente lo stesso valore: la [16] rappresenta o. irrotazionali piane longitudinali, la qualifica di piane riferendosi alla forma della superficie d’o. e quella di longitudinali al fatto che la vibrazione del generico elementino del mezzo avviene lungo la direzione di propagazione, x. Può anche darsi il caso che le superfici d’o. non siano piane.
-
-Tra le o. non piane, particolare importanza hanno le o. sferiche, che si considerano quando la propagazione ondosa abbia simmetria sferica rispetto a un punto O: caso che effettivamente si ha quando la sorgente della perturbazione è puntiforme e il mezzo è omogeneo e isotropo. Il gradiente di $\phi$ dà lo spostamento s, e la divergenza di quest’ultimo dà la dilatazione (o compressione) volumica $\gamma$ del mezzo; si ha dunque $\gamma=div s=div grad \phi=\nabla^2 \phi$, e ciò significa che $\gamma$ varia nello stesso modo con cui varia lo spostamento: corrispondentemente a spostamenti del generico elementino del mezzo da una parte e dall’altra rispetto alla posizione d’equilibrio, il mezzo si addensa e si rarefà, cioè nel mezzo medesimo si propagano o. di compressione e di dilatazione. 
+Tra le o. non piane, particolare importanza hanno le o. sferiche, che si considerano quando la propagazione ondosa abbia simmetria sferica rispetto a un punto O: caso che effettivamente si ha quando la sorgente della perturbazione è puntiforme e il mezzo è omogeneo e isotropo. Il gradiente di $\phi$ dà lo spostamento s, e la divergenza di quest'ultimo dà la dilatazione (o compressione) volumica $\gamma$ del mezzo; si ha dunque $\gamma=div s=div grad \phi=\nabla^2 \phi$, e ciò significa che $\gamma$ varia nello stesso modo con cui varia lo spostamento: corrispondentemente a spostamenti del generico elementino del mezzo da una parte e dall'altra rispetto alla posizione d'equilibrio, il mezzo si addensa e si rarefà, cioè nel mezzo medesimo si propagano o. di compressione e di dilatazione. 
 
 \subsection{Onde elastiche rotazionali}
 Sono o. che si producono in un mezzo elastico incomprimibile, in cui cioè si abbia $\gamma=div s=0$, essendo $\gamma$ la dilatazione cubica e s lo spostamento del generico elementino del mezzo. Ponendo 
+\begin{equation}
+v=\sqrt{\frac{\mu}{\rho}}
+\end{equation}
 
-$v=\sqrt{\frac{\mu}{\rho}}$
+ove i simboli hanno il significato precedentemente indicato, si riconosce che lo spostamento deve soddisfare all'equazione vettoriale 
+\begin{equation}
+\nabla^2 s =\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}
+\end{equation}
 
-ove i simboli hanno il significato precedentemente indicato, si riconosce che lo spostamento deve soddisfare all’equazione vettoriale 
-
-$\nabla^2 s =\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}$
-
-che, proiettata sugli assi, dà luogo a tre equazioni formalmente analoghe a quelle che si hanno nel caso delle o. irrotazionali, ma rappresentanti un fenomeno di propagazione ondosa del tutto diverso. Lo spostamento, infatti, che nelle o. irrotazionali avviene lungo la direzione di propagazione, avviene ora perpendicolarmente a tale direzione: di qui la qualifica di o. trasversali. Inoltre, la velocità di propagazione, data dalla [17], è, a parità di ogni altra condizione, minore di quella delle o. irrotazionali, data dalla [14]. Analogamente al caso delle o. irrotazionali, può accadere che il fronte d’o. sia piano (o. piane trasversali) oppure sferico (o. sferiche trasversali); se in particolare la direzione di propagazione coincide con l’asse x del sistema cartesiano di riferimento, il caso delle o. piane corrisponde alla circostanza che s ha identicamente nulla la componente sx (s è normale a x), mentre le componenti sy e sz dipendono unicamente da x e dal tempo t. In particolari condizioni può accadere che il rapporto $sx/sy=tg \theta$ sia costante; ciò significa che s giace sempre nel piano (detto piano di vibrazione) contenente l’asse x e inclinato dell’angolo $\theta$ rispetto al piano xy: l’o. si dice polarizzata rettilineamente, e si chiama piano di polarizzazione di essa il piano contenente l’asse x e perpendicolare al piano di vibrazione. Se $\theta=0$, sz è identicamente nulla (il piano di vibrazione è il piano xy), mentre se $\theta=\frac{\pi}{2}$, è identicamente nulla sy (il piano di vibrazione è il piano xz). Il fenomeno della polarizzazione è esclusivo delle o. trasversali: esso cioè non può verificarsi per le o. longitudinali. 
+che, proiettata sugli assi, dà luogo a tre equazioni formalmente analoghe a quelle che si hanno nel caso delle o. irrotazionali, ma rappresentanti un fenomeno di propagazione ondosa del tutto diverso. Lo spostamento, infatti, che nelle o. irrotazionali avviene lungo la direzione di propagazione, avviene ora perpendicolarmente a tale direzione: di qui la qualifica di o. trasversali. Inoltre, la velocità di propagazione, data dalla [17], è, a parità di ogni altra condizione, minore di quella delle o. irrotazionali, data dalla [14]. Analogamente al caso delle o. irrotazionali, può accadere che il fronte d'o. sia piano (o. piane trasversali) oppure sferico (o. sferiche trasversali); se in particolare la direzione di propagazione coincide con l'asse x del sistema cartesiano di riferimento, il caso delle o. piane corrisponde alla circostanza che s ha identicamente nulla la componente sx (s è normale a x), mentre le componenti sy e sz dipendono unicamente da x e dal tempo t. In particolari condizioni può accadere che il rapporto $sx/sy=tg \theta$ sia costante; ciò significa che s giace sempre nel piano (detto piano di vibrazione) contenente l'asse x e inclinato dell'angolo $\theta$ rispetto al piano xy: l'o. si dice polarizzata rettilineamente, e si chiama piano di polarizzazione di essa il piano contenente l'asse x e perpendicolare al piano di vibrazione. Se $\theta=0$, sz è identicamente nulla (il piano di vibrazione è il piano xy), mentre se $\theta=\frac{\pi}{2}$, è identicamente nulla sy (il piano di vibrazione è il piano xz). Il fenomeno della polarizzazione è esclusivo delle o. trasversali: esso cioè non può verificarsi per le o. longitudinali. 
 
 \subsection{Onde elastiche di tipo generale}
-Una generica o. elastica si può sempre considerare come dovuta alla combinazione di un’o. irrotazionale e di un’o. rotazionale; quel che v’è di importante è che essa, se permanente, è sempre rappresentata dall’equazione 
+Una generica o. elastica si può sempre considerare come dovuta alla combinazione di un'o. irrotazionale e di un'o. rotazionale; quel che v'è di importante è che essa, se permanente, è sempre rappresentata dall'equazione 
+\begin{equation}
+\nabla^2 K = \frac{1}{v^2}\frac{\partial^2 K}{\partial t^2}
+\end{equation}
 
-$\nabla^2 K = \frac{1}{v^2}\frac{\partial^2 K}{\partial t^2}$
-
-di cui in precedenza sono state esaminate varie forme particolari; a seconda delle circostanze, K può essere una grandezza scalare oppure una grandezza vettoriale, come pure, a seconda delle circostanze, variano le condizioni al contorno e iniziali, le quali in particolare determinano il ‘carattere’ dell’o., che può risultare progressiva o retrograda, oppure una combinazione di questi due tipi e in particolare stazionaria, e inoltre può risultare un’o. a una dimensione (com’è, per es., nel caso delle corde vibranti), a due dimensioni (per es., nel caso di membrane vibranti), a tre dimensioni (per es., o. longitudinali nell’aria); in quest’ultimo caso poi, in relazione alla forma del fronte d’o. si possono avere vari tipi di onde. La [18] si presta a descrivere onde di qualunque natura, anche non elastiche; per tale sua proprietà è denominata equazione delle o., o equazione del moto ondoso o equazione della propagazione per onde. In realtà, la [18] non rappresenta con piena generalità la propagazione per o.: essa si riferisce, come abbiamo a suo tempo precisato, a moti ondosi permanenti, non smorzati. A rigore, come equazione generale del moto ondoso va assunta la seguente:
-
-$\nabla^2 K=\frac{1}{v^2}(\frac{\partial^2 K}{\partial t}+\alpha\frac{\partial K}{\partial t})$
+di cui in precedenza sono state esaminate varie forme particolari; a seconda delle circostanze, K può essere una grandezza scalare oppure una grandezza vettoriale, come pure, a seconda delle circostanze, variano le condizioni al contorno e iniziali, le quali in particolare determinano il ‘carattere' dell'o., che può risultare progressiva o retrograda, oppure una combinazione di questi due tipi e in particolare stazionaria, e inoltre può risultare un'o. a una dimensione (com'è, per es., nel caso delle corde vibranti), a due dimensioni (per es., nel caso di membrane vibranti), a tre dimensioni (per es., o. longitudinali nell'aria); in quest'ultimo caso poi, in relazione alla forma del fronte d'o. si possono avere vari tipi di onde. La [18] si presta a descrivere onde di qualunque natura, anche non elastiche; per tale sua proprietà è denominata equazione delle o., o equazione del moto ondoso o equazione della propagazione per onde. In realtà, la [18] non rappresenta con piena generalità la propagazione per o.: essa si riferisce, come abbiamo a suo tempo precisato, a moti ondosi permanenti, non smorzati. A rigore, come equazione generale del moto ondoso va assunta la seguente:
+\begin{equation}
+\nabla^2 K=\frac{1}{v^2}(\frac{\partial^2 K}{\partial t}+\alpha\frac{\partial K}{\partial t})
+\end{equation}
 
 che, mediante il termine $\alpha\frac{\partial K}{\partial t})$, dà conto di un eventuale smorzamento del moto e di cui la [12] costituisce la particolarizzazione nel caso delle corde elastiche vibranti.
 
-È stato ricordato come un caso notevole di propagazione per o. sia costituito dalle o. armoniche, rappresentabili mediante funzioni sinusoidali. In effetti si tratta però di un caso piuttosto particolare, dato che in genere il profilo di un’o. non è sinusoidale, e l’o. medesima è rappresentabile come combinazione lineare di più o. armoniche, con ampiezza, frequenza e fase iniziale opportune. Poiché le grandezze da cui dipende la velocità di propagazione v non sono in genere indipendenti dalla frequenza, le varie componenti armoniche di un’o. non armonica si propagano con velocità diversa l’una dall’altra (fenomeno della dispersione) e il profilo dell’o. cambia di forma via via che l’o. avanza. Si deve allora distinguere tra la velocità v di propagazione di ogni componente dell’o., che chiameremo velocità di fase di quella componente, e la velocità u con cui procede l’o. nel suo insieme, che chiameremo velocità di gruppo; la velocità di fase di una componente è la velocità con cui avanza ogni fronte d’o. di quella componente, mentre u è la velocità di propagazione dell’energia associata all’o. (si tratta di un’energia ripartita tra le varie componenti). La relazione generale tra le due velocità è piuttosto complessa. Nel caso che le componenti siano di frequenza non molto diversa, vale la relazione (formula di Rayleigh): 
+È stato ricordato come un caso notevole di propagazione per o. sia costituito dalle o. armoniche, rappresentabili mediante funzioni sinusoidali. In effetti si tratta però di un caso piuttosto particolare, dato che in genere il profilo di un'o. non è sinusoidale, e l'o. medesima è rappresentabile come combinazione lineare di più o. armoniche, con ampiezza, frequenza e fase iniziale opportune. Poiché le grandezze da cui dipende la velocità di propagazione v non sono in genere indipendenti dalla frequenza, le varie componenti armoniche di un'o. non armonica si propagano con velocità diversa l'una dall'altra (fenomeno della dispersione) e il profilo dell'o. cambia di forma via via che l'o. avanza. Si deve allora distinguere tra la velocità v di propagazione di ogni componente dell'o., che chiameremo velocità di fase di quella componente, e la velocità u con cui procede l'o. nel suo insieme, che chiameremo velocità di gruppo; la velocità di fase di una componente è la velocità con cui avanza ogni fronte d'o. di quella componente, mentre u è la velocità di propagazione dell'energia associata all'o. (si tratta di un'energia ripartita tra le varie componenti). La relazione generale tra le due velocità è piuttosto complessa. Nel caso che le componenti siano di frequenza non molto diversa, vale la relazione (formula di Rayleigh): 
+\begin{equation}
+u=v-\lambda \frac{dv}{d\lambda}
+\end{equation}
 
-$u=v-\lambda \frac{dv}{d\lambda}$
-
-in cui v è la velocità di fase dell’o. la lunghezza della quale è $\lambda$. 
+in cui v è la velocità di fase dell'o. la lunghezza della quale è $\lambda$. 
 
 \subsection{Onde elastiche nei gas}
-In seno a un gas possono generarsi e propagarsi o. elastiche longitudinali. La trattazione di tali o. può farsi con riferimento allo spostamento s del generico elementino del mezzo oppure con riferimento al potenziale dello spostamento o della velocità di spostamento. Se ci si riferisce allo spostamento e si assume l’asse x coincidente con la direzione di propagazione, potremo considerare lo spostamento come una funzione scalare, s, di x e del tempo t, che deve soddisfare all’equazione 
-
-$v^2=\frac{dp}{d\rho}$
+In seno a un gas possono generarsi e propagarsi o. elastiche longitudinali. La trattazione di tali o. può farsi con riferimento allo spostamento s del generico elementino del mezzo oppure con riferimento al potenziale dello spostamento o della velocità di spostamento. Se ci si riferisce allo spostamento e si assume l'asse x coincidente con la direzione di propagazione, potremo considerare lo spostamento come una funzione scalare, s, di x e del tempo t, che deve soddisfare all'equazione 
+\begin{equation}
+v^2=\frac{dp}{d\rho}
+\end{equation}
 
 essendo p la pressione e $\rho$ la densità. Queste due grandezze non sono indipendenti tra loro; precisamente, se il gas può essere assimilato a un gas perfetto e la frequenza delle o. è relativamente piccola, di modo che le compressioni e le dilatazioni del gas avvengano lentamente e siano assimilabili a trasformazioni isoterme, si ha 
-
-$p=k\rho$
-$v=sqrt{\frac{p}{\rho}}$
+\begin{equation}
+p=k\rho
+\end{equation}
+\begin{equation}
+v=sqrt{\frac{p}{\rho}}
+\end{equation}
 
 essendo k una costante caratteristica del gas in questione. Se invece la frequenza, come accade nella maggior parte dei casi, è relativamente grande, si può ritenere di essere in presenza di trasformazioni adiabatiche e si può scrivere: 
-
-$p=k'\rho \gamma$
-$v=\sqrt{\frac{p\gamma}{\rho}}$
+\begin{equation}
+p=k'\rho \gamma
+v=\sqrt{\frac{p\gamma}{\rho}}
+\end{equation}
 
 essendo $\gamma$ il rapporto tra il calore specifico a pressione costante e il calore specifico a volume costante.
 
 \section{Onde elastiche nei liquidi}
-Anche nei liquidi, come è ben noto, si possono generare delle o., per azione del vento, di correnti, di corpi immersi ecc. Si può aggiungere anzi che, storicamente, sono state proprio queste o. (e in special modo quelle marine) a fornire modelli, immagini e nomi per la descrizione e lo studio degli altri fenomeni ondulatori. Si tratta generalmente di o. delle quali non è facile dare soddisfacenti ed esaurienti schematizzazioni matematiche, poiché la semplicità di queste mal si presta a riprodurre la complessità del fenomeno fisico: possono infatti aversi sia o. longitudinali e trasversali, interessanti l’intero volume liquido, sia o. quasi superficiali. Tra le o. suscettibili d’una semplice schematizzazione sono le cosiddette o. progressive permanenti: si tratta in sostanza di quei moti dei liquidi nei quali la forma della superficie libera, o pelo libero, si sposta senza subire modificazioni con una certa velocità di propagazione v costante. È, per es., il caso che si verifica in un canale, a fondo orizzontale e a pareti verticali, di lunghezza molto grande (teoricamente infinita), quando, essendo trascurabile rispetto all’accelerazione di gravità l’accelerazione verticale dei singoli elementini (o particelle) del liquido, ciascuno di essi compie, al progredire dell’o., piccole oscillazioni. Le o. progressive permanenti, se si esclude il caso dell’o. solitaria, sono periodiche, cioè il pelo libero è costituito da archi di curva uguali riproducentisi periodicamente a distanza costante $\lambda$ (lunghezza d’o.); e fra esse vanno particolarmente ricordate le o. trocoidali di F.J. von Gerstner e le o. semplici o sinusoidali di G.B. Airy. Tali denominazioni derivano dalla forma del profilo del pelo libero, che è appunto una trocoide (o, più esattamente, una cicloide accorciata), in un caso, una sinusoide nell’altro. Altre sostanziali differenze tra i due tipi di o. sono: a) si hanno o. di Airy se la profondità h del liquido è molto minore di $\lambda$ (di qui l’altra denominazione di o. di acqua bassa) e o. di Gerstner invece, se $h>>\lambda$ (o. di acqua alta o profonda); b) nelle o. di Airy la perturbazione ondosa interessa tutta la sezione del liquido, mentre nelle o. di Gerstner la perturbazione non si estende molto al di sotto del pelo libero (o. superficiali). Per quanto riguarda le o. di Airy, se si indica con s (fig. 4), lo spostamento del generico elementino (o particella) del pelo libero dalla sua posizione d’equilibrio, assumendosi quest’ultima giacente nel piano xy e l’asse x normale alla sezione del canale, si trova che s deve soddisfare all’equazione
-
-$\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}$
+Anche nei liquidi, come è ben noto, si possono generare delle o., per azione del vento, di correnti, di corpi immersi ecc. Si può aggiungere anzi che, storicamente, sono state proprio queste o. (e in special modo quelle marine) a fornire modelli, immagini e nomi per la descrizione e lo studio degli altri fenomeni ondulatori. Si tratta generalmente di o. delle quali non è facile dare soddisfacenti ed esaurienti schematizzazioni matematiche, poiché la semplicità di queste mal si presta a riprodurre la complessità del fenomeno fisico: possono infatti aversi sia o. longitudinali e trasversali, interessanti l'intero volume liquido, sia o. quasi superficiali. Tra le o. suscettibili d'una semplice schematizzazione sono le cosiddette o. progressive permanenti: si tratta in sostanza di quei moti dei liquidi nei quali la forma della superficie libera, o pelo libero, si sposta senza subire modificazioni con una certa velocità di propagazione v costante. È, per es., il caso che si verifica in un canale, a fondo orizzontale e a pareti verticali, di lunghezza molto grande (teoricamente infinita), quando, essendo trascurabile rispetto all'accelerazione di gravità l'accelerazione verticale dei singoli elementini (o particelle) del liquido, ciascuno di essi compie, al progredire dell'o., piccole oscillazioni. Le o. progressive permanenti, se si esclude il caso dell'o. solitaria, sono periodiche, cioè il pelo libero è costituito da archi di curva uguali riproducentisi periodicamente a distanza costante $\lambda$ (lunghezza d'o.); e fra esse vanno particolarmente ricordate le o. trocoidali di F.J. von Gerstner e le o. semplici o sinusoidali di G.B. Airy. Tali denominazioni derivano dalla forma del profilo del pelo libero, che è appunto una trocoide (o, più esattamente, una cicloide accorciata), in un caso, una sinusoide nell'altro. Altre sostanziali differenze tra i due tipi di o. sono: a) si hanno o. di Airy se la profondità h del liquido è molto minore di $\lambda$ (di qui l'altra denominazione di o. di acqua bassa) e o. di Gerstner invece, se $h>>\lambda$ (o. di acqua alta o profonda); b) nelle o. di Airy la perturbazione ondosa interessa tutta la sezione del liquido, mentre nelle o. di Gerstner la perturbazione non si estende molto al di sotto del pelo libero (o. superficiali). Per quanto riguarda le o. di Airy, se si indica con s (fig. 4), lo spostamento del generico elementino (o particella) del pelo libero dalla sua posizione d'equilibrio, assumendosi quest'ultima giacente nel piano xy e l'asse x normale alla sezione del canale, si trova che s deve soddisfare all'equazione
+\begin{equation}
+\frac{\partial^2 s}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 s}{\partial t^2}
+\end{equation}
 
 con
+\begin{equation}
+v^2=\frac{Ag}{b}
+\end{equation}
 
-$v^2=\frac{Ag}{b}$
-
-g è l’accelerazione di gravità, mentre b e A, generalmente dipendenti da x, sono la larghezza al pelo libero e l’area della sezione verticale ‘liquida’ del canale. Se quest’ultima è rettangolare costante, si ha A=bh, essendo h la profondità del liquido, e per la velocità di propagazione si ha: 
-
-$v=sqrt{gh}$
+g è l'accelerazione di gravità, mentre b e A, generalmente dipendenti da x, sono la larghezza al pelo libero e l'area della sezione verticale ‘liquida' del canale. Se quest'ultima è rettangolare costante, si ha A=bh, essendo h la profondità del liquido, e per la velocità di propagazione si ha: 
+\begin{equation}
+v=sqrt{gh}
+\end{equation}
 
 In generale, per la velocità v vale la relazione: 
-
-$v=\sqrt{\frac{g\lambda}{2\pi} tgh \frac{2\pi h}{\lambda}}$
+\begin{equation}
+v=\sqrt{\frac{g\lambda}{2\pi} tgh \frac{2\pi h}{\lambda}}
+\end{equation}
 
 Se $h>>\lambda$, è $tgh(2\pi h/\lambda)\cong 1$ e si ha $v=(g\lambda/2\pi )1/2$ (formula di Gerstner); se invece è $h<<\lambda$, si ha $tgh(\frac{2\pi h}{\lambda})\cong \frac{2\pi h}{\lambda}$ e per v si ottiene la [21]. La [22], che costituisce dunque una relazione abbastanza generale, da cui si possono derivare espressioni valide per o. sia di acqua alta sia di acqua bassa, è nota come formula di Airy. Sia le o. di Gerstner sia quelle di Airy sono modelli analitici, che trovano tuttavia largo impiego nelle applicazioni idrauliche e nautiche come base teorica per affrontare complessi problemi pratici. 
 
 \section{Onde elastiche nei solidi}
-Ancora più complesso rispetto al caso delle o. nei liquidi è quello delle o. che possono generarsi e propagarsi in un solido; si tratta di o. elastiche di tipo generale, cioè rotazionali o irrotazionali, che spesso si combinano in modi complicati. Le trattazioni analitiche di cui si dispone sono relative a casi particolari; tra questi vanno ricordati: a) il caso delle corde vibranti; b) il caso di membrane elastiche vibranti, la cui trattazione è per molti versi analoga a quella delle o. superficiali nei liquidi; c) il caso di sbarre elastiche, in cui, a differenza dei casi precedenti, si possono destare anche o. longitudinali, la cui trattazione è analoga, almeno formalmente, a quella delle o. in un gas racchiuso in un condotto; d) il caso di un mezzo semiinfinito, studiato da lord Rayleigh, sulla superficie del quale si possono destare o., dette o. di Rayleigh, consistenti in contemporanee vibrazioni trasversali e longitudinali, la cui energia è confinata in uno spessore dell’ordine di una lunghezza d’o. al di sotto della superficie limite del mezzo materiale (l’alta densità di energia elastica collegata con questo tipo di o. dà luogo a vistosi fenomeni di nonlinearità elastica, quali la generazione di armoniche e il mescolamento di frequenze); e) il caso di un mezzo stratiforme, compreso tra altri mezzi di diverse caratteristiche elastiche, nel quale possono insorgere o. di tipo speciale (o. di Love), trasversali, polarizzate, vibranti in un piano orizzontale, la cui propagazione, in particolare, può essere ristretta, in virtù di fenomeni di riflessione totale, allo strato in questione, che agisce come una sorta di guida per le o. medesime (o. canalizzate o guidate). 
+Ancora più complesso rispetto al caso delle o. nei liquidi è quello delle o. che possono generarsi e propagarsi in un solido; si tratta di o. elastiche di tipo generale, cioè rotazionali o irrotazionali, che spesso si combinano in modi complicati. Le trattazioni analitiche di cui si dispone sono relative a casi particolari; tra questi vanno ricordati: a) il caso delle corde vibranti; b) il caso di membrane elastiche vibranti, la cui trattazione è per molti versi analoga a quella delle o. superficiali nei liquidi; c) il caso di sbarre elastiche, in cui, a differenza dei casi precedenti, si possono destare anche o. longitudinali, la cui trattazione è analoga, almeno formalmente, a quella delle o. in un gas racchiuso in un condotto; d) il caso di un mezzo semiinfinito, studiato da lord Rayleigh, sulla superficie del quale si possono destare o., dette o. di Rayleigh, consistenti in contemporanee vibrazioni trasversali e longitudinali, la cui energia è confinata in uno spessore dell'ordine di una lunghezza d'o. al di sotto della superficie limite del mezzo materiale (l'alta densità di energia elastica collegata con questo tipo di o. dà luogo a vistosi fenomeni di nonlinearità elastica, quali la generazione di armoniche e il mescolamento di frequenze); e) il caso di un mezzo stratiforme, compreso tra altri mezzi di diverse caratteristiche elastiche, nel quale possono insorgere o. di tipo speciale (o. di Love), trasversali, polarizzate, vibranti in un piano orizzontale, la cui propagazione, in particolare, può essere ristretta, in virtù di fenomeni di riflessione totale, allo strato in questione, che agisce come una sorta di guida per le o. medesime (o. canalizzate o guidate). 
 
 \section{Tipi particolari di o. elastiche}
 
@@ -221,45 +257,44 @@ O. elastiche la cui frequenza è tale da eccitare sensazioni acustiche: precisam
 Tipo di o. magnetoidrodinamiche. 
 
 \subsection{O. di discontinuità}
-Con riferimento a un determinato fenomeno (precisamente a fenomeni che si traducano matematicamente in sistemi normali di equazioni alle derivate parziali), o. mediante le quali si propagano nello spazio certe discontinuità di qualche grandezza legata al fenomeno in esame. Si tratta di quei casi in cui esiste una superficie $\sigma$, mobile e generalmente deformabile nel tempo, tale che per una grandezza G legata al fenomeno si abbiano attraverso $\sigma$ discontinuità nelle derivate parziali, a partire da un certo ordine, della funzione mediante la quale si esprime G (in modo che alle due facce di $\sigma$ corrispondono determinazioni di G che soltanto parzialmente si raccordano attraverso $\sigma$ e dalle due parti di $\sigma$ valgono regimi diversi per la grandezza in esame) e le dette discontinuità si propaghino, al muoversi di $\sigma$, con andamento ondoso. Le o. di discontinuità sono dette più particolarmente o. ordinarie di discontinuità quando si debbano distinguere dalle o. d’urto. 
+Con riferimento a un determinato fenomeno (precisamente a fenomeni che si traducano matematicamente in sistemi normali di equazioni alle derivate parziali), o. mediante le quali si propagano nello spazio certe discontinuità di qualche grandezza legata al fenomeno in esame. Si tratta di quei casi in cui esiste una superficie $\sigma$, mobile e generalmente deformabile nel tempo, tale che per una grandezza G legata al fenomeno si abbiano attraverso $\sigma$ discontinuità nelle derivate parziali, a partire da un certo ordine, della funzione mediante la quale si esprime G (in modo che alle due facce di $\sigma$ corrispondono determinazioni di G che soltanto parzialmente si raccordano attraverso $\sigma$ e dalle due parti di $\sigma$ valgono regimi diversi per la grandezza in esame) e le dette discontinuità si propaghino, al muoversi di $\sigma$, con andamento ondoso. Le o. di discontinuità sono dette più particolarmente o. ordinarie di discontinuità quando si debbano distinguere dalle o. d'urto. 
  
 \subsection{O. gravitazionali}
 O. previste dalla teoria generale della relatività di A. Einstein, emesse da masse in moto, tali che il loro tensore di quadrupolo abbia derivata terza non nulla rispetto al tempo. 
 
 \subsection{O. infrasonore} 
-O. longitudinali nell’aria, di frequenza minore di circa 16 Hz. 
+O. longitudinali nell'aria, di frequenza minore di circa 16 Hz. 
 
 \subsection{O di Rayleigh o superficiali}
-Sono le onde che si propagano sulla superficie libera dei solidi e hanno interesse nelle applicazioni dell’elettronica e in teoria dei segnali. 
+Sono le onde che si propagano sulla superficie libera dei solidi e hanno interesse nelle applicazioni dell'elettronica e in teoria dei segnali. 
 
 \subsection{O. di Lamb}
-Particolari eccitazioni ultrasoniche di tipo elastico di strutture laminari dei solidi; prendono il nome da H. Lamb e sono state utilizzate per l’analisi non distruttiva di materiali e sono quelle che interessano le perturbazioni di tipo sismico. 
+Particolari eccitazioni ultrasoniche di tipo elastico di strutture laminari dei solidi; prendono il nome da H. Lamb e sono state utilizzate per l'analisi non distruttiva di materiali e sono quelle che interessano le perturbazioni di tipo sismico. 
 
 \subsection{O. di marea}
 Con significato specifico, le o., progressive o stazionarie, che si stabiliscono in un fiume, o in un canale, per effetto delle oscillazioni di marea alla foce. 
 
 \subsection{O. sismiche}
-O. elastiche longitudinali e trasversali che si propagano nella Terra dall’ipocentro di un terremoto. Le o. canalizzate si propagano in una stratificazione in cui la velocità di propagazione risulta inferiore sia a quella degli strati sottostanti sia a quella degli strati sovrastanti. Il nome è dovuto al fatto che, a causa delle suddette relazioni di velocità, le o. che tendono a uscire dalla stratificazione vengono rifratte verso l’interno di questa da parte sia degli strati inferiori sia di quelli superiori, per cui la stratificazione agisce come un canale che le convoglia. 
+O. elastiche longitudinali e trasversali che si propagano nella Terra dall'ipocentro di un terremoto. Le o. canalizzate si propagano in una stratificazione in cui la velocità di propagazione risulta inferiore sia a quella degli strati sottostanti sia a quella degli strati sovrastanti. Il nome è dovuto al fatto che, a causa delle suddette relazioni di velocità, le o. che tendono a uscire dalla stratificazione vengono rifratte verso l'interno di questa da parte sia degli strati inferiori sia di quelli superiori, per cui la stratificazione agisce come un canale che le convoglia. 
 
-\subsection{O. d’urto}
-Nella meccanica dei fluidi, particolare o. di discontinuità, attraverso la quale la componente della velocità del fluido perpendicolare alla superficie d’o. subisce una variazione brusca. Un’o. d’urto può essere schematizzata come in fig. 5. La superficie d’o. $\sigma$ (detta fronte d’urto) separa il fluido in due regioni: la regione a monte, indicata in figura come lato 1, e quella a valle, indicata come lato 2. Per semplicità, si è supposto che il fronte d’urto sia piano e che il fluido incida su di esso perpendicolarmente. 
-In generale, non soltanto la velocità v, ma tutte le grandezze che caratterizzano il fluido (la densità $\rho$, la pressione p, la temperatura T, ...) variano in modo brusco attraverso il fronte d’urto. Questo, nella realtà, non è una superficie geometrica, ma uno strato assai sottile (avente uno spessore dell’ordine del cammino libero medio delle molecole), nel quale avvengono processi dissipativi responsabili delle variazioni dei parametri macroscopici del fluido. 
-D’altra parte, le discontinuità delle varie grandezze, espresse dai rapporti $\frac{v2}{v1}$, $\frac{\rho_2}{\rho_1}$, $\frac{p2}{p1}$, ... (dove gli indici 1 e 2 si riferiscono alle due regioni del fluido definite in fig. 5), non sono arbitrarie. Occorre, infatti, che i valori di v1, v2, $\rho1$, $\rho2$, p1, p2, ... siano tali da rispettare le leggi di conservazione della massa, dell’energia e della quantità di moto. 
-Queste impongono che i flussi di massa, di energia e di quantità di moto che ‘entrano’ nella superficie $\sigma$ (dal lato 1) siano uguali a quelli corrispondenti che ne ‘escono’ (dal lato 2). Ne deriva che la velocità del fluido diminuisce passando dal lato 1 al lato 2 (v1>v2): più precisamente, si trova che la velocità del fluido deve essere supersonica a monte del fronte d’urto (v1>c1, essendo c1 la velocità del suono sul lato 1) e subsonica a valle di questo (v2<c2, essendo c2 la velocità del suono sul lato 2). Per la conservazione della massa, la disuguaglianza v1>v2 implica l’altra: $\rho1<\rho2$ (cioè il fluido attraversando il fronte d’urto subisce una compressione).
+\subsection{O. d'urto}
+Nella meccanica dei fluidi, particolare o. di discontinuità, attraverso la quale la componente della velocità del fluido perpendicolare alla superficie d'o. subisce una variazione brusca. Un'o. d'urto può essere schematizzata come in fig. 5. La superficie d'o. $\sigma$ (detta fronte d'urto) separa il fluido in due regioni: la regione a monte, indicata in figura come lato 1, e quella a valle, indicata come lato 2. Per semplicità, si è supposto che il fronte d'urto sia piano e che il fluido incida su di esso perpendicolarmente. 
+In generale, non soltanto la velocità v, ma tutte le grandezze che caratterizzano il fluido (la densità $\rho$, la pressione p, la temperatura T, ...) variano in modo brusco attraverso il fronte d'urto. Questo, nella realtà, non è una superficie geometrica, ma uno strato assai sottile (avente uno spessore dell'ordine del cammino libero medio delle molecole), nel quale avvengono processi dissipativi responsabili delle variazioni dei parametri macroscopici del fluido. 
+D'altra parte, le discontinuità delle varie grandezze, espresse dai rapporti $\frac{v2}{v1}$, $\frac{\rho_2}{\rho_1}$, $\frac{p2}{p1}$, ... (dove gli indici 1 e 2 si riferiscono alle due regioni del fluido definite in fig. 5), non sono arbitrarie. Occorre, infatti, che i valori di v1, v2, $\rho1$, $\rho2$, p1, p2, ... siano tali da rispettare le leggi di conservazione della massa, dell'energia e della quantità di moto. 
+Queste impongono che i flussi di massa, di energia e di quantità di moto che ‘entrano' nella superficie $\sigma$ (dal lato 1) siano uguali a quelli corrispondenti che ne ‘escono' (dal lato 2). Ne deriva che la velocità del fluido diminuisce passando dal lato 1 al lato 2 (v1>v2): più precisamente, si trova che la velocità del fluido deve essere supersonica a monte del fronte d'urto (v1>c1, essendo c1 la velocità del suono sul lato 1) e subsonica a valle di questo (v2<c2, essendo c2 la velocità del suono sul lato 2). Per la conservazione della massa, la disuguaglianza v1>v2 implica l'altra: $\rho1<\rho2$ (cioè il fluido attraversando il fronte d'urto subisce una compressione).
 
-Un’o. d’urto si genera quando un flusso supersonico incontra un ostacolo. Tale situazione si presenta, per es., nel caso di un aereo in volo supersonico (infatti, in un sistema di riferimento solidale con l’aereo, è l’aria a investire questo con velocità supersonica). La fig. 6 illustra schematicamente il fenomeno. Si supponga che l’aereo negli istanti successivi t0, t1, t2, t3, t4, t5 si trovi nelle posizioni P0, P1, P2, P3, P4, P5. In ciascun istante, esso perturba l’aria generando impulsi di onde sonore che si propagano in tutte le direzioni. Tuttavia, poiché l’aereo si muove alla velocità v, maggiore della velocità del suono c, le onde rimangono ‘indietro’ rispetto a esso. All’istante t5, i fronti delle onde generate nei punti P0, P1, P2, P3, P4, P5 sono le superfici sferiche tratteggiate in figura, i cui raggi misurano rispettivamente r0=c(t5-t0), r1=c(t5-t1), ...: queste inviluppano una superficie conica, detta cono di Mach, il cui vertice cade nel punto P5. Si trova che le o. sonore interferiscono positivamente (cioè si rafforzano a vicenda) lungo la superficie del cono di Mach, sviluppando, appunto, un’o. d’urto (il cosiddetto boom supersonico). 
-Analogo è il caso dell’o. balistica, prodotta da un proiettile in moto supersonico attraverso l’aria. O. d’urto possono anche svilupparsi da o. sonore di ampiezza finita. 
-Queste, infatti, si propagano attraverso un fluido, rimanendo inalterate, soltanto se hanno ampiezza infinitesima: se, invece, la loro ampiezza è finita, evolvono progressivamente trasformandosi in o. d’urto. Il fenomeno è illustrato nella fig. 7, che mostra le variazioni spaziali della densità $\rho$ del fluido, intorno al valore medio $\bar{\rho}$, in tre momenti successivi. 
+Un'o. d'urto si genera quando un flusso supersonico incontra un ostacolo. Tale situazione si presenta, per es., nel caso di un aereo in volo supersonico (infatti, in un sistema di riferimento solidale con l'aereo, è l'aria a investire questo con velocità supersonica). La fig. 6 illustra schematicamente il fenomeno. Si supponga che l'aereo negli istanti successivi t0, t1, t2, t3, t4, t5 si trovi nelle posizioni P0, P1, P2, P3, P4, P5. In ciascun istante, esso perturba l'aria generando impulsi di onde sonore che si propagano in tutte le direzioni. Tuttavia, poiché l'aereo si muove alla velocità v, maggiore della velocità del suono c, le onde rimangono ‘indietro' rispetto a esso. All'istante t5, i fronti delle onde generate nei punti P0, P1, P2, P3, P4, P5 sono le superfici sferiche tratteggiate in figura, i cui raggi misurano rispettivamente r0=c(t5-t0), r1=c(t5-t1), ...: queste inviluppano una superficie conica, detta cono di Mach, il cui vertice cade nel punto P5. Si trova che le o. sonore interferiscono positivamente (cioè si rafforzano a vicenda) lungo la superficie del cono di Mach, sviluppando, appunto, un'o. d'urto (il cosiddetto boom supersonico). 
+Analogo è il caso dell'o. balistica, prodotta da un proiettile in moto supersonico attraverso l'aria. O. d'urto possono anche svilupparsi da o. sonore di ampiezza finita. 
+Queste, infatti, si propagano attraverso un fluido, rimanendo inalterate, soltanto se hanno ampiezza infinitesima: se, invece, la loro ampiezza è finita, evolvono progressivamente trasformandosi in o. d'urto. Il fenomeno è illustrato nella fig. 7, che mostra le variazioni spaziali della densità $\rho$ del fluido, intorno al valore medio $\bar{\rho}$, in tre momenti successivi. 
 Inizialmente $\rho$ varia sinusoidalmente (fig. 7A). Tuttavia, la regione dove il fluido è compresso ($\rho>\bar{\rho}$) viaggia più velocemente di quella dove esso è rarefatto ($\rho<\bar{\rho}$) . 
 Ciò perché la velocità di propagazione delle o. sonore aumenta con la densità: dalle equazioni [19] si ricava infatti 
 $c=(k primo \gamma\rho \gamma-1)\frac{1}{2}$. 
-Ne segue che la regione di compressione tende a sopravanzare quella di rarefazione che la precede: la variazione di densità diventa pertanto sempre più brusca (fig. 7B) fino a dar luogo a una discontinuità, cioè a un’o. d’urto (fig. 7C). 
+Ne segue che la regione di compressione tende a sopravanzare quella di rarefazione che la precede: la variazione di densità diventa pertanto sempre più brusca (fig. 7B) fino a dar luogo a una discontinuità, cioè a un'o. d'urto (fig. 7C). 
 
 
-
-Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,hess_mcknights_2013,walker_halliday_2018,telford_applied_1990}.
-Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,baggio_note_1969}.
-\citep{turcotte_geodynamics_2014,turcotte_geodynamics_2002}
+%Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,hess_mcknights_2013,walker_halliday_2018,telford_applied_1990}.
+%Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,baggio_note_1969}.
+%\citep{turcotte_geodynamics_2014,turcotte_geodynamics_2002}
 
 \bibliographystyle{sgi}
 \begin{small}
