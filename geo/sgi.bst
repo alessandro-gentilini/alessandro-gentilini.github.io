@@ -376,6 +376,7 @@ FUNCTION {bibinfo.warn}
 }
 
 % Vedi anche https://tex.stackexchange.com/questions/236028/hack-of-bst-to-add-urldate-in-misc-in-bibtex-with-natbib
+% occorre \usepackage[italian]{isodate} per avere printdate
 FUNCTION {write.url}
 { url empty$
     { skip$ }

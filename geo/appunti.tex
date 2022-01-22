@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[italian]{isodate}
+\usepackage{natbib}
+
+\begin{document}
+\title{Appunti}
+\author{Alessandro Gentilini}
+\maketitle
+
+Ecco il mio primo documento con \LaTeX.
+
+Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,hess_mcknights_2013,walker_halliday_2018,telford_applied_1990}.
+Alcune citazioni bibliografiche:  \citet{bosellini_scienze_2013,baggio_note_1969}.
+\citep{turcotte_geodynamics_2014,turcotte_geodynamics_2002}
+
+\bibliographystyle{sgi}
+\begin{small}
+\bibliography{appunti} 
+\end{small}
+
+\end{document}
