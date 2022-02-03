@@ -9,7 +9,7 @@
 > spiraling in line with Earth’s rotational axis, induces the magnetic field
 > of our planet through what is sometimes called a geodynamo.
 > Most geophysicists think that for such a geodynamo to work, the presence of an 
-> initial weak magnetic ield was needed, most likely coming from the Sun. 
+> initial weak magnetic field was needed, most likely coming from the Sun. 
  
 [App, capitolo 13]
 
@@ -150,9 +150,9 @@
 > an electrical conductor, and flow of a conductor in the presence
 > of a magnetic field generates an electric current. This current,
 > in turn, maintains the magnetic field. Put in the terminology
-> of physics, the outer core behaves like a self-sustaining dynamo.
+> of physics, the outer core behaves like a _self-sustaining dynamo_.
 
-[Marshak]
+[Marshak, paragrafo 3.4 Paleomagnetism - Proving Continental Drift and Seafloor Spreading]
 
 ### Bibliografia
 [HR]
