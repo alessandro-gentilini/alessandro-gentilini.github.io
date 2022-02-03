@@ -142,6 +142,18 @@
 
 [Giorgi]
 
+> Why
+> does the Earth produce such a magnetic field? Recall that the
+> Earth's outer core consists of molten iron alloy, which constantly
+> undergoes convective flow due to variations in density that
+> develop in it (see Box 2.3). As physics textbooks explain, iron is
+> an electrical conductor, and flow of a conductor in the presence
+> of a magnetic field generates an electric current. This current,
+> in turn, maintains the magnetic field. Put in the terminology
+> of physics, the outer core behaves like a self-sustaining dynamo.
+
+[Marshak]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -227,7 +239,10 @@ _Il campo magnetico terrestre_,
 _L'agenda nautica 1972_,
 Istituto Idrografico della Marina, 1972.
 
-
+[Marshak]
+Stephen MARSHAK,
+_EARTH PORTRAIT OF A PLANET_,
+W. W. NORTON & COMPANY, 2019
 
 
 
