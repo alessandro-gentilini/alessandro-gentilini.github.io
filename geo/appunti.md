@@ -154,6 +154,21 @@
 
 [Marshak, paragrafo 3.4 Paleomagnetism - Proving Continental Drift and Seafloor Spreading]
 
+> A popular model is that of the self-exciting
+> dynamo: A conductor rotating in a magnetic
+> field creates an electron flow. If the flow passes
+> through a coil, the coih itself creates a magnetic
+> field that keeps the flow moving as long as
+> the conductor keeps rotating. Well, tbe Earth
+> rotates. Tbe core is conducting, but probably
+> more here and less there because of temperature and/or compositional inhomogeneities.
+> The more conducting portions could act as
+> coils by funneling the electron flow. Although
+> we may bave here the ingredients for the creation of a magnetic field, we still do not know
+> exactly how it works.
+
+[Emiliani, p.233]
+
 ### Bibliografia
 [HR]
 Jearl WALKER,
@@ -243,6 +258,15 @@ Istituto Idrografico della Marina, 1972.
 Stephen MARSHAK,
 _EARTH PORTRAIT OF A PLANET_,
 W. W. NORTON & COMPANY, 2019
+
+[Emiliani]
+Cesare EMILIANI,
+_Planet
+Earth:
+Cosmology, geology and
+the evolution of life
+and environment_
+Cambridge University Press, 1992
 
 
 
