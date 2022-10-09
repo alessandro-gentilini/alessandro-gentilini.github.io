@@ -64,6 +64,7 @@ x_list = df['X']
 y_list = df['Y']
 z_list = df['V']
 
+# https://stackoverflow.com/a/39733263
 # f will be a function with two arguments (x and y coordinates),
 # but those can be array_like structures too, in which case the
 # result will be a matrix representing the values in the grid 
@@ -74,6 +75,14 @@ x_coords = np.arange(-3+min(x_list),max(x_list)+3)
 y_coords = np.arange(-3+min(y_list),max(y_list)+3)
 Z = f(x_coords,y_coords)
 
+Z2 = []
+for x in x_coords:
+    for y in y_coords:
+        Z2.append(estimate_at(x,y,df))
+
+Z2 = np.array(Z2).reshape([len(x_coords),len(y_coords)])
+
+
 fig = plt.imshow(Z,
            extent=[-3+min(x_list),max(x_list)+3,-3+min(y_list),max(y_list)+3],
            origin="lower")
@@ -81,3 +90,15 @@ fig = plt.imshow(Z,
 # Show the positions of the sample points, just to have some reference
 #fig.axes.set_autoscale_on(False)
 fig.axes.scatter(x_list,y_list,facecolors='black')
+
+plt.show()
+
+fig = plt.imshow(Z2,
+           extent=[-3+min(x_list),max(x_list)+3,-3+min(y_list),max(y_list)+3],
+           origin="lower")
+
+# Show the positions of the sample points, just to have some reference
+#fig.axes.set_autoscale_on(False)
+fig.axes.scatter(x_list,y_list,facecolors='black')
+
+plt.show()
