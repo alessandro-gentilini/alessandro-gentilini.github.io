@@ -1,3 +1,4 @@
+# taken from "Motion in a central field" https://marksmath.org/visualization/orbits/CentralOrbit.html by Mark McClure
 # Imports
 # SciPy's numerical ODE solver
 from scipy.integrate import odeint
@@ -115,6 +116,6 @@ ax.plot([0],[0], '*')
 
 
 
-print(accum)
+
 
 plt.show()
