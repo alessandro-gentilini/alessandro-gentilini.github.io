@@ -25,7 +25,7 @@ vy0 = -1
 # In general, F can depend upon time t as well. Although our F is independent of t, we still need to
 # indicate that it is a possible variable.
 
-def Fun(s,t): return [s[2],s[3],
+def Fun(s,t,k): return [s[2],s[3],
     k*s[0]/(s[0]**2 + s[1]**2)**(6/2),
     k*s[1]/(s[0]**2 + s[1]**2)**(6/2),
 ]
@@ -40,7 +40,7 @@ Delta_x = .1
 
 for i in steps:
     # Solve it!
-    solution = odeint(Fun,[x0+i*Delta_x,y0,vx0,vy0],t)
+    solution = odeint(Fun,[x0+i*Delta_x,y0,vx0,vy0],t,args=(k,))
     x = solution[:,0]
     y = solution[:,1]
     ax.plot(x,y, '-')
@@ -67,7 +67,7 @@ G = (5.3,4.9)
 H = (7,6)
 
 fig, ax = plt.subplots(1)
-solution = odeint(Fun,[1.1,4.1,0,-1.2],t)
+solution = odeint(Fun,[1.1,4.1,0,-1.2],t,args=(k,))
 x = solution[:,0]
 y = solution[:,1]
 #ax.plot(x,y, '-')
@@ -84,7 +84,7 @@ for r in solution:
         accum = accum + d1
         ax.plot(r[0],r[1], 'x',color='C0')
 
-solution = odeint(Fun,[1.8,4.1,0,-1.2],t)
+solution = odeint(Fun,[1.8,4.1,0,-1.2],t,args=(k,))
 x = solution[:,0]
 y = solution[:,1]
 #ax.plot(x,y, '-')
@@ -121,7 +121,7 @@ t = np.linspace(0,5,100)
 def tenta(vy0):
     cost = 0
 
-    solution = odeint(Fun,[1.1,4.1,0,vy0],t)
+    solution = odeint(Fun,[1.1,4.1,0,vy0],t,args=(k,))
     accum = 0
     for r in solution:
         v1 = p2ld(r[0],r[1],A[0],A[1],B[0],B[1])
@@ -132,7 +132,7 @@ def tenta(vy0):
             accum = accum + d1
     cost = cost + accum
 
-    solution = odeint(Fun,[1.8,4.1,0,vy0],t)
+    solution = odeint(Fun,[1.8,4.1,0,vy0],t,args=(k,))
     accum = 0
     for r in solution:
         v2 = p2ld(r[0],r[1],E[0],E[1],F[0],F[1])
