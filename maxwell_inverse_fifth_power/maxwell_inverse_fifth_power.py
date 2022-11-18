@@ -67,7 +67,7 @@ G = (5.3,4.9)
 H = (7,6)
 
 fig, ax = plt.subplots(1)
-solution = odeint(Fun,[1.1,4.1,0,-1.5],t)
+solution = odeint(Fun,[1.1,4.1,0,-1.2],t)
 x = solution[:,0]
 y = solution[:,1]
 #ax.plot(x,y, '-')
@@ -84,7 +84,7 @@ for r in solution:
         accum = accum + d1
         ax.plot(r[0],r[1], 'x',color='C0')
 
-solution = odeint(Fun,[1.8,4.1,0,-1.5],t)
+solution = odeint(Fun,[1.8,4.1,0,-1.2],t)
 x = solution[:,0]
 y = solution[:,1]
 #ax.plot(x,y, '-')
@@ -114,8 +114,42 @@ ax.axline(G,H,ls='--',color='C1')
 
 ax.plot([0],[0], '*')
 
+vy0 = -1.5
+k = 1000
+t = np.linspace(0,5,100)
 
+def tenta(vy0):
+    cost = 0
 
+    solution = odeint(Fun,[1.1,4.1,0,vy0],t)
+    accum = 0
+    for r in solution:
+        v1 = p2ld(r[0],r[1],A[0],A[1],B[0],B[1])
+        d1 = p2ld(r[0],r[1],C[0],C[1],D[0],D[1])
+        if v1 < d1:
+            accum = accum + v1
+        else:
+            accum = accum + d1
+    cost = cost + accum
+
+    solution = odeint(Fun,[1.8,4.1,0,vy0],t)
+    accum = 0
+    for r in solution:
+        v2 = p2ld(r[0],r[1],E[0],E[1],F[0],F[1])
+        d2 = p2ld(r[0],r[1],G[0],G[1],H[0],H[1])
+        if v2 < d2:
+            accum = accum + v2
+        else:
+            accum = accum + d2
+    cost = cost + accum
+    return cost
+
+print(tenta(-1.1))
+print(tenta(-1.2))
+print(tenta(-1.3))
+print(tenta(-1.4))
+print(tenta(-1.5))
+print(tenta(-1.6))
 
 
 plt.show()
