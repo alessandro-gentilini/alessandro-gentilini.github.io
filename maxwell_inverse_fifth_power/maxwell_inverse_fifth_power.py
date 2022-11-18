@@ -6,6 +6,7 @@ from scipy.integrate import odeint
 import numpy as np
 import matplotlib.pyplot as plt
 import math
+import datetime
 
 def p2ld(x0,y0,x1,y1,x2,y2):
     return abs((x2-x1)*(y1-y0)-(x1-x0)*(y2-y1))/math.sqrt((x2-x1)**2+(y2-y1)**2)
@@ -103,24 +104,26 @@ for r in solution:
 
 
 
-#ax.axline((1.1,9.4),(1.2,4.9),ls='--',color='C0')
-ax.axline(A,B,ls='--',color='C0')
-ax.axline(C,D,ls='--',color='C0')
-
-#ax.axline((1.8,9.4),(1.9,4.9),ls='--',color='C1')
-ax.axline(E,F,ls='--',color='C1')
-ax.axline(G,H,ls='--',color='C1')
 
 
-ax.plot([0],[0], '*')
 
-vy0 = -1.5
-k = 1000
-t = np.linspace(0,5,100)
 
-def tenta(vy0):
+
+def tenta(vy0,k):
+    fig, ax = plt.subplots(1)
+
+    #ax.axline((1.1,9.4),(1.2,4.9),ls='--',color='C0')
+    ax.axline(A,B,ls='--',color='C0')
+    ax.axline(C,D,ls='--',color='C0')
+
+    #ax.axline((1.8,9.4),(1.9,4.9),ls='--',color='C1')
+    ax.axline(E,F,ls='--',color='C1')
+    ax.axline(G,H,ls='--',color='C1')
+
+    ax.plot([0],[0], '*')
+
     cost = 0
-
+    t = np.linspace(0,5,100)
     solution = odeint(Fun,[1.1,4.1,0,vy0],t,args=(k,))
     accum = 0
     for r in solution:
@@ -128,8 +131,10 @@ def tenta(vy0):
         d1 = p2ld(r[0],r[1],C[0],C[1],D[0],D[1])
         if v1 < d1:
             accum = accum + v1
+            ax.plot(r[0],r[1], 'd',color='C0')
         else:
             accum = accum + d1
+            ax.plot(r[0],r[1], 'x',color='C0')
     cost = cost + accum
 
     solution = odeint(Fun,[1.8,4.1,0,vy0],t,args=(k,))
@@ -139,17 +144,26 @@ def tenta(vy0):
         d2 = p2ld(r[0],r[1],G[0],G[1],H[0],H[1])
         if v2 < d2:
             accum = accum + v2
+            ax.plot(r[0],r[1], 'd',color='C1')
         else:
             accum = accum + d2
+            ax.plot(r[0],r[1], 'x',color='C1')
     cost = cost + accum
+
+    ax.set_aspect('equal', 'box')
+    ax.set_title('cost={0:f} vy0={1:f} k={2:f}'.format(cost,vy0,k))
+    timestamp = datetime.datetime.now().isoformat().replace(":","-")
+    fig.savefig(timestamp+'.png', dpi=fig.dpi)
+
+
     return cost
 
-print(tenta(-1.1))
-print(tenta(-1.2))
-print(tenta(-1.3))
-print(tenta(-1.4))
-print(tenta(-1.5))
-print(tenta(-1.6))
+print(tenta(-1.1,1000))
+print(tenta(-1.2,1000))
+print(tenta(-1.3,1000))
+print(tenta(-1.4,1000))
+print(tenta(-1.5,1000))
+print(tenta(-1.6,1000))
 
 
 plt.show()
