@@ -178,7 +178,7 @@ rranges = (slice(-2, -1, 0.5), slice(900, 1000, 50))
 
 fig, ax = plt.subplots()
 scale = 362/188
-#fig.set_size_inches(scale*6.4,scale*4.8)
+fig.set_size_inches(scale*6.4,scale*4.8)
 # -1.26665 k=1062.093506
 x0s = [1.1, 1.8, 2.3, 3.4, 4.4, 5.3, 6.4, 7.7, 9.7]
 t = np.linspace(0,7,100)
