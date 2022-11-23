@@ -75,12 +75,17 @@ x_coords = np.arange(-3+min(x_list),max(x_list)+3)
 y_coords = np.arange(-3+min(y_list),max(y_list)+3)
 Z = f(x_coords,y_coords)
 
+full_dataset=pd.read_csv('Exhaustive_set.dat')
+
+Z3 = []
 Z2 = []
 for x in x_coords:
     for y in y_coords:
         Z2.append(estimate_at(x,y,df))
+        Z3.append(full_dataset.loc[(full_dataset['X']==x) & (full_dataset['Y']==y)]['V'])
 
 Z2 = np.array(Z2).reshape([len(x_coords),len(y_coords)])
+
 
 
 fig = plt.imshow(Z,
@@ -101,4 +106,15 @@ fig = plt.imshow(Z2,
 #fig.axes.set_autoscale_on(False)
 fig.axes.scatter(x_list,y_list,facecolors='black')
 
+plt.show()
+
+Z3 = np.array(Z3).reshape([len(x_coords),len(y_coords)])
+
+fig = plt.imshow(Z3,
+           extent=[-3+min(x_list),max(x_list)+3,-3+min(y_list),max(y_list)+3],
+           origin="lower")
+
+# Show the positions of the sample points, just to have some reference
+#fig.axes.set_autoscale_on(False)
+fig.axes.scatter(x_list,y_list,facecolors='black')
 plt.show()
