@@ -6,3 +6,8 @@ Linear interpolation:
 
 Kriging:
 ![](kriging-Figure_2.png)
+
+But what about the ``original'' data set?
+Appendix A describes how to make the  Walker Lake data set, it seems to me quite convolved and so I downloaded the dataset from [52north](52north.org)'s wiki at [*Well known geostatistical data sets*](https://wiki.52north.org/AI_GEOSTATS/AI_GEOSTATSData)
+
+![](kriging-Figure_3.png)
