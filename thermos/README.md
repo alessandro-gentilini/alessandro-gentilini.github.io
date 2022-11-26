@@ -1,6 +1,7 @@
 # Calore 
 ## Quanto calore mantiene un termos?
 ![Perdita di calore acqua in thermos](thermos.png)
+
 https://plus.google.com/u/0/+AlessandroGentilini/posts/AhRHpPCTg37
 
 ## Quanta potenza si può estrarre dall'acqua calda che si raffredda?
