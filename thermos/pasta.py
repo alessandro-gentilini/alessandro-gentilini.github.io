@@ -3,9 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def power(t_minute,T_amb,T_0):
-    k = -0.0327
+    k = -0.0327 # see http://jwilson.coe.uga.edu/EMAT6680Fa2014/Gieseking/Exploration%2012/Newton%27s%20Law%20of%20Cooling.htm
     T=T_amb+(T_0-T_amb)*np.exp(k*t_minute)
-    a = 83.06e-6
+    # GM250-127-10-15 datasheets states that 4.02W are generated when the output 
+    # is matched to the load, the hot side is at 250 celsius and the cold side is ar 30 celsius.
+    # The graph in the data sheet for matched output voltage and matched output current seems
+    # linear to me and so the power should be quadratic; so a parabola that has a zero value
+    # at T ambient (30 celsius) and 4.02 at 250 celsius can be written as:
+    # power = a*(temperature-T_ambient)**2 and putting the numbers gives
+    # 4.02 = a*(250-30)**2
+    # which solved for a gives
+    a = 4.02/(250-30)**2
     return a*(T-T_amb)**2
 
 t = np.linspace(0,30,100)
