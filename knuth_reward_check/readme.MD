@@ -6,7 +6,7 @@ The [account balances](https://www-cs-faculty.stanford.edu/~knuth/boss.html) do 
 
 Inferring a country from a person name is not a well posed problem, what should be the country? The native one? The one where the person lives most of his/her life?
 
-Anyway, in order to get some insights, I relied on Philippe Remy's [`Name Dataset`](https://github.com/philipperemy/name-dataset) to get an estimate of the country related to a person (unfortunately I do not have an account at ChatGPT ;-).
+Anyway, in order to get some insights, I relied on Philippe Rémy's [`Name Dataset`](https://github.com/philipperemy/name-dataset) to get an estimate of the country related to a person (unfortunately I do not have an account at ChatGPT ;-).
 
 There are a lot of intricacies to sort out in order to get a decent estimation, take for example the topmost contributor Udo Wermuth: according to Name Dataset, Udo can be a German first name but also a Nigerian last name.
 
