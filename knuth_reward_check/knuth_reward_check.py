@@ -2,7 +2,6 @@ from names_dataset import NameDataset, NameWrapper
 import pandas as pd
 import requests
 
-
 nd = NameDataset()
 html = requests.get('https://www-cs-faculty.stanford.edu/~knuth/boss.html')
 df = pd.read_html(html.text)[1]
