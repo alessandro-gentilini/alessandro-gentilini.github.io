@@ -1,4 +1,4 @@
-# Donald Knuth reward checks: how are dsitributed worl wide?
+# Donald Knuth reward checks: how are dsitributed world wide?
 
 An analysis of the distribution of the Donald Knuth reward checks in the world.
 
