@@ -55,3 +55,5 @@ result2 = result.groupby('country').sum().sort_values(by=['decimal_cents'],ascen
 result2['0x$'] = result2.apply(lambda row: to_hexdollar(row.decimal_cents),axis=1)
 result2 = result2.drop(columns=['decimal_cents'])
 print(result2.to_markdown())
+
+print(result.to_markdown())
