@@ -10,11 +10,13 @@ df = pd.read_html(html.text)[1]
 name = []
 country = []
 gender = []
+amount = []
 
 cnt = 0
 total = 0
-for n in df[0]:
+for index, row in df.iterrows():
     total = total+1
+    n = row[0]
     tokens = n.split()
     info = []
     t_countries = []
@@ -34,3 +36,6 @@ for n in df[0]:
         name.append(n)
         country.append(t_countries[0])
         gender.append(t_genders[0])
+        amount.append(row[1])
+
+result = pd.DataFrame({'name':name,'amount':amount,'country':country,'gender':gender})        
