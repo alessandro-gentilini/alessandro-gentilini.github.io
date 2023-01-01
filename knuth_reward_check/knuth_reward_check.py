@@ -40,3 +40,18 @@ for index, row in df.iterrows():
         decimal_cents.append(int(row[1].replace('0x$','').replace('.',''),16))
 
 result = pd.DataFrame({'name':name,'amount':amount,'country':country,'gender':gender, 'decimal_cents':decimal_cents})        
+
+print(result['country'].value_counts().to_markdown())
+
+
+
+
+def to_hexdollar(n):
+    s = str(hex(n)).replace('0x','0x$')
+    p = len(s)-2
+    return s[:p]+'.'+s[p:]
+
+result2 = result.groupby('country').sum().sort_values(by=['decimal_cents'],ascending=False)
+result2['0x$'] = result2.apply(lambda row: to_hexdollar(row.decimal_cents),axis=1)
+result2 = result2.drop(columns=['decimal_cents'])
+print(result2.to_markdown())
