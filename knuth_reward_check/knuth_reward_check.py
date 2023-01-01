@@ -11,6 +11,7 @@ name = []
 country = []
 gender = []
 amount = []
+decimal_cents = []
 
 cnt = 0
 total = 0
@@ -37,5 +38,6 @@ for index, row in df.iterrows():
         country.append(t_countries[0])
         gender.append(t_genders[0])
         amount.append(row[1])
+        decimal_cents.append(int(row[1].replace('0x$','').replace('.',''),16))
 
-result = pd.DataFrame({'name':name,'amount':amount,'country':country,'gender':gender})        
+result = pd.DataFrame({'name':name,'amount':amount,'country':country,'gender':gender, 'decimal_cents':decimal_cents})        
