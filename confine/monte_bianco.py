@@ -4,8 +4,9 @@ import geopandas
 import rasterio
 import matplotlib.pyplot as plt
 from shapely.geometry import Point
+import pandas as pd
 
-// https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/Limiti01012022.zip
+# // https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/Limiti01012022.zip
 gdf=geopandas.read_file('Limiti01012022/Com01012022/Com01012022_WGS84.shp')# todo conciliare i crs!!!
 gdf = gdf.loc[gdf['COMUNE']=="Courmayeur"]
 src = rasterio.open('Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif')# todo conciliare i crs!!!
@@ -13,6 +14,8 @@ src = rasterio.open('Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif')# todo conciliar
 df2=geopandas.read_file('ADMIN-EXPRESS_3-1__SHP_LAMB93_FXX_2022-12-20/ADMIN-EXPRESS/1_DONNEES_LIVRAISON_2022-12-20/ADE_3-1_SHP_LAMB93_FXX/COMMUNE.shp')# todo conciliare i crs!!!
 df2 = df2.loc[(df2['NOM']=='Saint-Gervais-les-Bains') | (df2['NOM']=='Chamonix-Mont-Blanc')]
 df2 = df2.to_crs(epsg=32632)
+
+df3 = pd.concat([gdf['geometry'],df2['geometry']])
 
 # todo conciliare i crs!!!
 
@@ -23,6 +26,14 @@ fig, ax = plt.subplots()
 # transform rasterio plot to real world coords
 extent=[src.bounds[0], src.bounds[2], src.bounds[1], src.bounds[3]]
 ax = rasterio.plot.show(src, extent=extent, ax=ax)#, cmap='terrain')
+
+ 
+
+ax.axhline(y=5077700, color='gray', linestyle='-')
+ax.axvline(x=334162, color='gray', linestyle='-')
+
+df3.plot(ax=ax,facecolor="none", edgecolor=["red","black","blue"])
+
 df2.plot(ax=ax,facecolor="none", edgecolor="black")
 gdf.plot(ax=ax,facecolor="none", edgecolor="black")
 
