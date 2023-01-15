@@ -7,7 +7,9 @@ import pandas as pd
 from rasterio.plot import show
 import rasterio.mask
 
+# https://geohack.toolforge.org/geohack.php?language=it&pagename=Monte_Bianco&params=45.832905_N_6.864688_E_type:mountain
 monte_bianco = (334162,5077700)
+
 crop_side = 1000
 
 # https://github.com/rasterio/rasterio/issues/1343#issuecomment-389971813
@@ -61,6 +63,7 @@ ax.axvline(x=monte_bianco[0], color='gray', linestyle='-')
 xlim = ([monte_bianco[0]-crop_side/2, monte_bianco[0]+crop_side/2])
 ylim = ([monte_bianco[1]-crop_side/2, monte_bianco[1]+crop_side/2])
 
+# https://gis.stackexchange.com/a/442136
 ax.set_xlim(xlim)
 ax.set_ylim(ylim)
 
