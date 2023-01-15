@@ -75,18 +75,24 @@ if np.any(raw_dem == -9999):
 
 qcs = plt.contour(raw_dem,levels = list(range(4000, 5000, 25)))    
 
+idx = 0
+lw = .1
 for collection in qcs.collections:
+    if int(qcs.levels[idx]) % 100 == 0:
+        lw=.3
+    else:
+        lw=.1
     for path in collection.get_paths():
         for polygon in path.to_polygons(): 
             polygon[:,0]=5*(polygon[:,0]-raw_dem.shape[0]/2)
             polygon[:,1]=5*(polygon[:,1]-raw_dem.shape[1]/2)
             polygon[:,0]=polygon[:,0]+monte_bianco[0]
             polygon[:,1]=polygon[:,1]+monte_bianco[1]
-            ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.1))
-            #ax.plot(polygon[:,0],polygon[:,1],'.')
+            ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=lw))
+    idx = idx+1
 
 
-boundary.plot(ax=ax,facecolor="none", edgecolor=["red","black","blue"])
+boundary.plot(ax=ax,facecolor="none", edgecolor=["blue","red","red"],linestyle='-.')
 
 #boundary_fr.plot(ax=ax,facecolor="none", edgecolor="black")
 #boundary_it.plot(ax=ax,facecolor="none", edgecolor="black")
