@@ -6,6 +6,8 @@ from shapely.geometry import Point
 import pandas as pd
 from rasterio.plot import show
 import rasterio.mask
+import numpy as np
+from matplotlib.patches import Polygon
 
 # https://geohack.toolforge.org/geohack.php?language=it&pagename=Monte_Bianco&params=45.832905_N_6.864688_E_type:mountain
 monte_bianco = (334162,5077700)
@@ -57,8 +59,8 @@ fig, ax = plt.subplots()
 extent=[dem.bounds[0], dem.bounds[2], dem.bounds[1], dem.bounds[3]]
 ax = rasterio.plot.show(dem, extent=extent, ax=ax)#, cmap='terrain')
 
-ax.axhline(y=monte_bianco[1], color='gray', linestyle='-')
-ax.axvline(x=monte_bianco[0], color='gray', linestyle='-')
+#ax.axhline(y=monte_bianco[1], color='gray', linestyle='-',linewidth=.1)
+#ax.axvline(x=monte_bianco[0], color='gray', linestyle='-',linewidth=.1)
 
 xlim = ([monte_bianco[0]-crop_side/2, monte_bianco[0]+crop_side/2])
 ylim = ([monte_bianco[1]-crop_side/2, monte_bianco[1]+crop_side/2])
@@ -66,6 +68,23 @@ ylim = ([monte_bianco[1]-crop_side/2, monte_bianco[1]+crop_side/2])
 # https://gis.stackexchange.com/a/442136
 ax.set_xlim(xlim)
 ax.set_ylim(ylim)
+
+raw_dem=dem.read()[0]
+if np.any(raw_dem == -9999):
+    raw_dem[raw_dem == -9999] = np.nan
+
+qcs = plt.contour(raw_dem,levels = list(range(4000, 5000, 25)))    
+
+for collection in qcs.collections:
+    for path in collection.get_paths():
+        for polygon in path.to_polygons(): 
+            polygon[:,0]=5*(polygon[:,0]-raw_dem.shape[0]/2)
+            polygon[:,1]=5*(polygon[:,1]-raw_dem.shape[1]/2)
+            polygon[:,0]=polygon[:,0]+monte_bianco[0]
+            polygon[:,1]=polygon[:,1]+monte_bianco[1]
+            ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.1))
+            #ax.plot(polygon[:,0],polygon[:,1],'.')
+
 
 boundary.plot(ax=ax,facecolor="none", edgecolor=["red","black","blue"])
 
