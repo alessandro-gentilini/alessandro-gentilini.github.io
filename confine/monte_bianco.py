@@ -58,6 +58,12 @@ ax = rasterio.plot.show(dem, extent=extent, ax=ax)#, cmap='terrain')
 ax.axhline(y=monte_bianco[1], color='gray', linestyle='-')
 ax.axvline(x=monte_bianco[0], color='gray', linestyle='-')
 
+xlim = ([monte_bianco[0]-crop_side/2, monte_bianco[0]+crop_side/2])
+ylim = ([monte_bianco[1]-crop_side/2, monte_bianco[1]+crop_side/2])
+
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+
 boundary.plot(ax=ax,facecolor="none", edgecolor=["red","black","blue"])
 
 #boundary_fr.plot(ax=ax,facecolor="none", edgecolor="black")
