@@ -2,7 +2,7 @@
 import geopandas
 import rasterio
 import matplotlib.pyplot as plt
-from shapely.geometry import Point
+from shapely import LineString
 import pandas as pd
 from rasterio.plot import show
 import rasterio.mask
@@ -57,7 +57,7 @@ fig, ax = plt.subplots()
 
 # transform rasterio plot to real world coords
 extent=[dem.bounds[0], dem.bounds[2], dem.bounds[1], dem.bounds[3]]
-ax = rasterio.plot.show(dem, extent=extent, ax=ax)#, cmap='terrain')
+ax = rasterio.plot.show(dem, extent=extent, ax=ax, cmap='plasma')
 
 #ax.axhline(y=monte_bianco[1], color='gray', linestyle='-',linewidth=.1)
 #ax.axvline(x=monte_bianco[0], color='gray', linestyle='-',linewidth=.1)
@@ -75,6 +75,9 @@ if np.any(raw_dem == -9999):
 
 qcs = plt.contour(raw_dem,levels = list(range(4000, 5000, 25)))    
 
+meter_per_px_x = abs(dem.transform[0])
+meter_per_px_y = abs(dem.transform[4])
+
 idx = 0
 lw = .1
 for collection in qcs.collections:
@@ -84,10 +87,11 @@ for collection in qcs.collections:
         lw=.1
     for path in collection.get_paths():
         for polygon in path.to_polygons(): 
-            polygon[:,0]=5*(polygon[:,0]-raw_dem.shape[0]/2)
-            polygon[:,1]=5*(polygon[:,1]-raw_dem.shape[1]/2)
+            polygon[:,0]=meter_per_px_x*(polygon[:,0]-raw_dem.shape[0]/2)
+            polygon[:,1]=meter_per_px_y*(polygon[:,1]-raw_dem.shape[1]/2)
             polygon[:,0]=polygon[:,0]+monte_bianco[0]
             polygon[:,1]=polygon[:,1]+monte_bianco[1]
+            #polygon = np.array(LineString(polygon).simplify(10).coords)
             ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=lw))
     idx = idx+1
 
