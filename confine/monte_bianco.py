@@ -84,16 +84,19 @@ for collection in qcs.collections:
     if int(qcs.levels[idx]) % 100 == 0:
         lw=.3
     else:
-        lw=.1
+        lw=.000000001
     for path in collection.get_paths():
         for polygon in path.to_polygons(): 
             polygon[:,0]=meter_per_px_x*(polygon[:,0]-raw_dem.shape[0]/2)
             polygon[:,1]=meter_per_px_y*(polygon[:,1]-raw_dem.shape[1]/2)
             polygon[:,0]=polygon[:,0]+monte_bianco[0]
             polygon[:,1]=polygon[:,1]+monte_bianco[1]
-            #polygon = np.array(LineString(polygon).simplify(10).coords)
             ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=lw))
     idx = idx+1
+
+t = ax.text(monte_bianco[0],monte_bianco[1],'Monte Bianco',{'ha': 'center', 'va': 'center'},rotation=45)
+renderer = fig.canvas.get_renderer()
+bbox = plt.gca().transData.inverted().transform_bbox(t.get_window_extent(renderer))
 
 
 boundary.plot(ax=ax,facecolor="none", edgecolor=["blue","red","red"],linestyle='-.')
