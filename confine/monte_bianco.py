@@ -137,7 +137,7 @@ for idx,collection in enumerate(qcs.collections):
                 #ax.plot(min_L[0],min_L[1],'x',color='blue')
                 #ax.plot(min_p[0],min_p[1],'+',color='green')
 
-                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center'},rotation=min_angle)         
+                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center','family':'serif'},rotation=min_angle)         
                 
             if main_contour:                 
                 ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.3))
