@@ -145,7 +145,7 @@ for idx,collection in enumerate(qcs.collections):
                 # font_name = fm.FontProperties(fname=font_path).get_name()
                 # RuntimeError: In FT2Font: Can not load face.  Unknown file format.
 
-                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center','family':'serif'},rotation=min_angle)         
+                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center','family':'serif'},rotation=min_angle+180)         
                 
             if main_contour:                 
                 ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.3))
