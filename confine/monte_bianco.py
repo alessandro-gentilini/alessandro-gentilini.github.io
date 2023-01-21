@@ -116,7 +116,7 @@ for idx,collection in enumerate(qcs.collections):
                 for i,p in enumerate(polygon):
                     L=np.array([p[0]-bbox.width/2,p[1]])
                     R=np.array([p[0]+bbox.width/2,p[1]])
-                    for d in range(0,180):
+                    for d in range(0,360):
                         L_0 = L-p
                         R_0 = R-p
                         theta = math.radians(d)
