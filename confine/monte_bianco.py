@@ -9,6 +9,7 @@ import rasterio.mask
 import numpy as np
 from matplotlib.patches import Polygon
 import math
+import matplotlib.font_manager
 
 # https://geohack.toolforge.org/geohack.php?language=it&pagename=Monte_Bianco&params=45.832905_N_6.864688_E_type:mountain
 monte_bianco = (334162,5077700)
@@ -136,6 +137,13 @@ for idx,collection in enumerate(qcs.collections):
                 #ax.plot(min_R[0],min_R[1],'o',color='red')
                 #ax.plot(min_L[0],min_L[1],'x',color='blue')
                 #ax.plot(min_p[0],min_p[1],'+',color='green')
+
+                # mi piacerebbe usare il font ITC Zapf Chancery ma al momento non va perché ha estensione .afm che dà errore
+                # questo è un minimum working sample che dà errore:
+                # import matplotlib.font_manager as fm
+                # font_path ="/usr/share/fonts/type1/gsfonts/z003034l.afm"
+                # font_name = fm.FontProperties(fname=font_path).get_name()
+                # RuntimeError: In FT2Font: Can not load face.  Unknown file format.
 
                 ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center','family':'serif'},rotation=min_angle)         
                 
