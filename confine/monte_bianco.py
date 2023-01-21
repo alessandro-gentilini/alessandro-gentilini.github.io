@@ -102,7 +102,8 @@ for idx,collection in enumerate(qcs.collections):
             polygon[:,1]=meter_per_px_y*(polygon[:,1]-raw_dem.shape[1]/2)
             polygon[:,0]=polygon[:,0]+monte_bianco[0]
             polygon[:,1]=polygon[:,1]+monte_bianco[1]
-            if main_contour:
+
+            if main_contour and polygon.shape[0]>100:
                 t = ax2.text(monte_bianco[0],monte_bianco[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center'},rotation=0)
                 renderer = fig.canvas.get_renderer()
                 bbox = plt.gca().transData.inverted().transform_bbox(t.get_window_extent(renderer))      
@@ -114,7 +115,7 @@ for idx,collection in enumerate(qcs.collections):
                 for i,p in enumerate(polygon):
                     L=np.array([p[0]-bbox.width/2,p[1]])
                     R=np.array([p[0]+bbox.width/2,p[1]])
-                    for d in range(0,360):
+                    for d in range(0,180):
                         L_0 = L-p
                         R_0 = R-p
                         theta = math.radians(d)
@@ -136,7 +137,9 @@ for idx,collection in enumerate(qcs.collections):
                 #ax.plot(min_L[0],min_L[1],'x',color='blue')
                 #ax.plot(min_p[0],min_p[1],'+',color='green')
 
-                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center'},rotation=min_angle)          
+                ax.text(min_p[0],min_p[1],str(qcs.levels[idx]),{'ha': 'center', 'va': 'center'},rotation=min_angle)         
+                
+            if main_contour:                 
                 ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.3))
             else:
                 ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=.1))
