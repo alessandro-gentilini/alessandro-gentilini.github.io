@@ -8,6 +8,7 @@ from rasterio.plot import show
 import rasterio.mask
 import numpy as np
 from matplotlib.patches import Polygon
+import math
 
 # https://geohack.toolforge.org/geohack.php?language=it&pagename=Monte_Bianco&params=45.832905_N_6.864688_E_type:mountain
 monte_bianco = (334162,5077700)
@@ -84,7 +85,7 @@ for collection in qcs.collections:
     if int(qcs.levels[idx]) % 100 == 0:
         lw=.3
     else:
-        lw=.000000001
+        lw=.1
     for path in collection.get_paths():
         for polygon in path.to_polygons(): 
             polygon[:,0]=meter_per_px_x*(polygon[:,0]-raw_dem.shape[0]/2)
@@ -94,9 +95,46 @@ for collection in qcs.collections:
             ax.add_patch(Polygon(polygon,fill=None,closed=False,linewidth=lw))
     idx = idx+1
 
-t = ax.text(monte_bianco[0],monte_bianco[1],'Monte Bianco',{'ha': 'center', 'va': 'center'},rotation=45)
+t = ax.text(monte_bianco[0],monte_bianco[1],'Monte Bianco',{'ha': 'center', 'va': 'center'},rotation=0)
 renderer = fig.canvas.get_renderer()
 bbox = plt.gca().transData.inverted().transform_bbox(t.get_window_extent(renderer))
+
+# https://codereview.stackexchange.com/a/28210
+def shortest_distance(node, nodes):
+    dist_2 = np.sum((nodes - node)**2, axis=1)
+    return {'sqdist':np.min(dist_2),'p':nodes[np.argmin(dist_2)]}
+
+min_distance = np.inf
+min_p = polygon[0]
+min_angle = 0
+min_R = polygon[0]
+min_L = polygon[0]
+for i,p in enumerate(polygon):
+    L=np.array([p[0]-bbox.width/2,p[1]])
+    R=np.array([p[0]+bbox.width/2,p[1]])
+    for d in range(0,360):
+        L_0 = L-p
+        R_0 = R-p
+        theta = math.radians(d)
+        M = np.array([[math.cos(theta),-math.sin(theta)],[math.sin(theta),math.cos(theta)]])
+        L_rot = np.dot(M,L_0)+p
+        R_rot = np.dot(M,R_0)+p
+        pp = np.vstack([polygon[0:i],polygon[i+1:]])
+        d_L = shortest_distance(L_rot,pp)
+        d_R = shortest_distance(R_rot,pp)
+        if d_L['sqdist']+d_R['sqdist']<min_distance:
+            min_distance = d_L['sqdist']+d_R['sqdist']
+            min_p = p
+            min_angle = d
+            min_R = d_R['p']
+            min_L = d_L['p']
+    ax.plot(p[0],p[1],'.',color='black')
+
+ax.plot(min_R[0],min_R[1],'o',color='red')
+ax.plot(min_L[0],min_L[1],'x',color='blue')
+ax.plot(min_p[0],min_p[1],'+',color='green')
+
+ax.text(min_p[0],min_p[1],'Monte Bianco',{'ha': 'center', 'va': 'center'},rotation=min_angle)
 
 
 boundary.plot(ax=ax,facecolor="none", edgecolor=["blue","red","red"],linestyle='-.')
