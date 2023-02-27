@@ -268,5 +268,9 @@ the evolution of life
 and environment_
 Cambridge University Press, 1992
 
+https://www.treccani.it/enciclopedia/campo-geomagnetico_%28Enciclopedia-della-Scienza-e-della-Tecnica%29/
+
+https://www.treccani.it/enciclopedia/magnetismo-terrestre_%28Enciclopedia-della-Scienza-e-della-Tecnica%29/
+
 
 
