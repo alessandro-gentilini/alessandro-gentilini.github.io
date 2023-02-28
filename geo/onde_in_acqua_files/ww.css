@@ -1,0 +1,35 @@
+body {
+    /* margin: auto; */
+    background: #FFFFFF;
+    font-family: sans-serif;
+}
+
+h1 {
+	padding-left: 20px;
+	/* border-bottom: 1px solid darkslategray; */
+}
+
+p {
+	padding-left: 30px;
+}
+
+svg {
+	background: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+#sliders {
+  margin-left: 5%;
+}
+input {
+	width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* #slider_container {
+    margin: 0 auto;
+    width: 50%;
+} */
