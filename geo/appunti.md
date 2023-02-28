@@ -157,14 +157,14 @@
 > A popular model is that of the self-exciting
 > dynamo: A conductor rotating in a magnetic
 > field creates an electron flow. If the flow passes
-> through a coil, the coih itself creates a magnetic
+> through a coil, the coil itself creates a magnetic
 > field that keeps the flow moving as long as
-> the conductor keeps rotating. Well, tbe Earth
-> rotates. Tbe core is conducting, but probably
+> the conductor keeps rotating. Well, the Earth
+> rotates. The core is conducting, but probably
 > more here and less there because of temperature and/or compositional inhomogeneities.
 > The more conducting portions could act as
 > coils by funneling the electron flow. Although
-> we may bave here the ingredients for the creation of a magnetic field, we still do not know
+> we may have here the ingredients for the creation of a magnetic field, we still do not know
 > exactly how it works.
 
 [Emiliani, p.233]
