@@ -697,15 +697,11 @@ return p1.lat*p2.lon-p2.lat*p1.lon;
 var A = [
 [x_coeff(p4,p4_end),y_coeff(p4,p4_end)],
 [x_coeff(p5,p5_end),y_coeff(p5,p5_end)],
-[x_coeff(p6,p6_end),y_coeff(p6,p6_end)],
-[x_coeff(p7,p7_end),y_coeff(p7,p7_end)],
 ];
 
 var b = [
 known(p4,p4_end),
 known(p5,p5_end),
-known(p6,p6_end),
-known(p7,p7_end),
 ];
 
 var best_intersection = numeric.dot(pinv(A),b);
@@ -758,11 +754,6 @@ L.marker(wp4).addTo(map)
 L.marker(wp5).addTo(map)
     .bindPopup('5');
     
-L.marker(wp6).addTo(map)
-    .bindPopup('6');
-    
-L.marker(wp7).addTo(map)
-    .bindPopup('7');
     
 
     
@@ -778,17 +769,6 @@ var r5 = [
 ];
 var polyline = L.polyline(r5, {color: 'green'}).addTo(map);
 
-var r6 = [
-    wp6,
-    p6_end
-];
-var polyline = L.polyline(r6, {color: 'blue'}).addTo(map);
-
-var r7 = [
-    wp7,
-    p7_end
-];
-var polyline = L.polyline(r7, {color: 'yellow'}).addTo(map);
 
 L.marker(best_intersection).addTo(map)
     .bindPopup('Least squares solution.');
