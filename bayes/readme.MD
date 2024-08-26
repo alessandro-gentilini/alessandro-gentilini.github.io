@@ -37,7 +37,7 @@ The original figure:
 
 The figure made using [Stan](https://mc-stan.org/):
 
-![My replication of Figure 7.1](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
+![My replication of Figure 7.1 using stan](Estimation_of_the_Epicentral_Coordinates_of_a_Seismic_Event.png)
 
 To the left the original problem with an uncertainty of 0.1sec on the arrival time,
 to the right what happens when the uncertainty is 1sec: the epicentral cannot be
@@ -45,6 +45,14 @@ located anymore.
 
 ![low uncertainties in arrival time](epicentral-low_uncertainties_in_time_of_arrival.png)
 ![high uncertainties in arrival time](epicentral-high_uncertainties_in_time_of_arrival.png)
+
+_2024 update_
+
+The figure made using [CUQIpy](https://cuqi-dtu.github.io/CUQIpy/):
+![My replication of Figure 7.1 using CUQIpy](tarantola.png)
+
+Note on the reproducibility of original figure: in the original figure the vertical coordinate of the topmost three seismic stations, which is about 15.8, is not compatible with then number given in the book, which is 16.
+
 
 ## A bayesian approach to the confidence bounds when sampling from small finite universes
 We have a population of N=100 elements, some of the elements have a property of interest.
