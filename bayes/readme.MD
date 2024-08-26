@@ -24,7 +24,7 @@ An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent c
 <img alt='Albert Tarantola' src='https://upload.wikimedia.org/wikipedia/commons/3/31/YFB_2005-12_044.jpg' height='200'>
   </td>
   <td>
-<img alt='siam' src='https://epubs.siam.org/na101/home/literatum/publisher/siam/books/content/ot/2005/1.9780898717921/1.9780898717921/production/1.9780898717921.cover.jpg' height='200'>
+<img alt='siam' src='1.9780898717921.cover.jpg' height='200'>
   </td>
   </tr>
 </table>
