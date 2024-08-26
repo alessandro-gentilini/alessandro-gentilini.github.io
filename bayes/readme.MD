@@ -1,7 +1,17 @@
 # Exercises in Bayesian statistics
 
 ##  Rasmus Bååth's beach party
-<img alt='Rasmus Bååth' src='http://www.sumsar.net/images/rasmus1.jpeg' height='200'>
+<table>
+<tr>
+  <td>
+<img alt='Rasmus Bååth' src='https://www.sumsar.net/about/rasmus_2019.jpeg' height='200'>
+  </td>
+  <td>
+<img alt='datacamp' src='datacamp.png' height='200'>
+  </td>
+  </tr>
+</table>
+
 
 An [example](rasmus_baath_lake_beach_summer_party.R) inspired by the excellent course [Fundamentals of Bayesian Data Analysis in R](https://www.datacamp.com/courses/fundamentals-of-bayesian-data-analysis-in-r) by [Rasmus Bååth](http://www.sumsar.net/about.html).
 
@@ -81,7 +91,7 @@ able to simulate the data generation process:
   <tr>
     <td>
 <img alt='Richard McElreath'
-src='https://xcelab.net/rm/wp-content/uploads/2020/03/Kjp6Lib_400x400-300x300.jpg'
+src='https://www.eva.mpg.de/fileadmin/_processed_/8/0/csm_richard_dec_2023_e08f49768a.png'
      height='200'></td>
 <td><img alt='Statistical Rethinking, Second Edition'
 src='https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.jpg'
