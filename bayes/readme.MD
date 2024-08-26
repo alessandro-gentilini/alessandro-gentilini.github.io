@@ -51,6 +51,10 @@ _2024 update_
 The figure made using [CUQIpy](https://cuqi-dtu.github.io/CUQIpy/):
 ![My replication of Figure 7.1 using CUQIpy](tarantola.png)
 
+The [script](tarantola.py) is based on the example
+[Case study: user-specified nonlinear model with a gravity anomaly](
+https://github.com/CUQI-DTU/Paper-CUQIpy-1-Core/blob/main/gravity/gravity.ipynb).
+
 Note on the reproducibility of original figure: in the original figure the vertical coordinate of the topmost three seismic stations, which is about 15.8, is not compatible with then number given in the book, which is 16.
 
 
