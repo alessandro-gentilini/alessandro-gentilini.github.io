@@ -1,3 +1,7 @@
+# Estimation of the Epicentral Coordinates of a Seismic Event
+# TARANTOLA, Albert. Inverse problem theory and methods for model parameter estimation. Society for Industrial and Applied Mathematics, 2005.
+
+
 import numpy as np
 import cuqi
 from cuqi.model import Model
