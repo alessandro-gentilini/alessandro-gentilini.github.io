@@ -28,7 +28,7 @@ and
 
 > For most purposes, EGM2008 is an adequate approximation of mean sea level.
 
-Firs of all we plot the histogram for the Earth altimetry and bathymetry:
+First of all we plot the histogram for the Earth altimetry and bathymetry:
 
 ![Histogram of Earth altimetry and bathymetry](cdf_earth_elevation-Figure_2.png)
 
