@@ -1,0 +1,102 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[italian]{isodate}
+\usepackage{natbib}
+
+\usepackage{newpxtext}
+\usepackage{euler}
+
+\usepackage{amsmath}
+
+\usepackage{quoting}
+
+\begin{document}
+\title{Ghiaccio galleggiante}
+\author{Alessandro Gentilini}
+\maketitle
+
+\cite{grotzinger_understanding_2014} scrivono a pagina 599:
+
+\begin{quoting}
+    Ice shelves, like icebergs, float on ocean waters. When they melt,
+    there is no change in sea level for the same reason that, when
+    ice cubes in your drink melt, the level of the liquid in your glass
+    doesn't change.
+\end{quoting}
+
+Allo stesso modo \cite{hess_mcknights_2013}, a pagina 550, scrive:
+
+\begin{quoting}
+Although the loss of ice shelves does not raise global sea level 
+(for the same reason that a floating ice cube does not raise the level of the water in a glass as it melts), 
+changing ice shelves can trigger a change in the flow of land-based ice off the continent.
+\end{quoting}
+
+Le spiegazioni in \citet{noerdlinger_melting_2007,jenkins_melting_2007} secondo me non sono valide per la didattica.
+
+Lo è invece \cite{lan_does_2010} anche se non è chiarissima la sequenza dei passaggi per giungere alla formula principale (6), 
+pertanto qui di seguito metto il mio procedimento.
+
+Guardate la figura -quale?- e convincetevi del fatto che se il volume occupato dall'intero iceberg sciolto, 
+che indichiamo con $V_W$, occupasse esattamente lo stesso volume occupato dalla parte sommersa dell'iceberg, 
+che indichiamo con $V_S$, allora il livello del mare non crescerebbe rispetto al livello che si ha con 
+l'iceberg galleggiante.
+
+Si vuole quindi trovare la differenza tra il volume dell'acqua ottenuto dal completo scioglimento dell'iceberg, indicato con $V_W$,
+e il volume della parte sommersa dell'iceberg solido, parte indicata con $V_S$, se tale differenza sarà nulla allora, per quanto
+detto poco fa, non si avrà innalzamento del livello del mare.
+
+, si ricava quindi $V_W$ dalla (4):
+
+\[V_W=\frac{\rho_i}{\rho_W}V_i\]
+
+e si ricava $V_S$ dalla (3):
+
+\[V_S=\frac{\rho_i}{\rho_S}V_i\]
+
+quindi la differenza è
+
+\[V_W-V_S=\frac{\rho_i}{\rho_W}V_i-\frac{\rho_i}{\rho_S}V_i=(\frac{\rho_i}{\rho_W}-\frac{\rho_i}{\rho_S})V_i\]
+
+che corrisponde alla formula (6) che è più comodo riscrivere come:
+
+\[V_W-V_S=(\frac{1}{\rho_W}-\frac{1}{\rho_S})\rho_i V_i\]
+
+
+
+Se l'acqua di mare fosse dolce allora si avrebbe $\rho_S=\rho_W$ e quindi
+
+% \begin{lstlisting}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=\columnwidth]{IMG_6746} 
+%         \caption{Esempio di figura.}
+%         \label{fig:stereonet1}
+%     \end{figure}
+%     \end{lstlisting}
+
+Ghiaccio puro senza bolle d'aria.
+
+No galleggiamento dall'aria.
+
+no freddo cambia densità
+
+% https://www.reddit.com/r/askscience/comments/9oertl/do_melting_icebergs_raise_sea_levels/?show=original
+
+% https://blogs.reading.ac.uk/weather-and-climate-at-reading/2015/melting-of-floating-ice-and-sea-level/
+
+
+
+
+
+
+\bibliographystyle{sgi}
+\begin{small}
+\bibliography{ghiaccio_galleggiante} 
+\end{small}
+
+\end{document}

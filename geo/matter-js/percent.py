@@ -53,6 +53,7 @@ def generate_svg(radius, square_area_ratio, square_side_ratio):
         xy.append((x_i,y_i))
     dwg.add(dwg.polygon(xy,fill='white'))
     circle_approx = shapely.Polygon(xy)
+    dwg.add(dwg.text('Ciao'))
 
     filled_area = 0
 
@@ -83,6 +84,6 @@ def generate_svg(radius, square_area_ratio, square_side_ratio):
     return dwg.tostring()
 
 # Example usage:
-svg_string = generate_svg(500,.6,.15)
+svg_string = generate_svg(500,.16,.15)
 with open('circle_with_squares.svg', 'w') as f:
     f.write(svg_string)
