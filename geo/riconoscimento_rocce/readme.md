@@ -11,7 +11,7 @@ Per svolgere l'esercizio:
 1) scegliere una immagine a caso dalla cartella, per esempio la "Vaderite blu giurassica" ![photos](./photos/Vaderite_Blu_Giurassica.gif).
 
 2) applicare i metodi di riconoscimento e giungere ad un nome. Nell'esempio si ha una roccia olocristallina a grana medio-grossa, dunque i cristalli hanno avuto tempo di crescere e questo è tipico delle rocce ignee intrusive o plutoniche.
-con indice di colore M pari circa al 50% (nello stimare M ho escluso il cristallo più grande indicato dalla punta della matita); i minerali chiari hanno aspetto bianco lattiginoso quindi mi suggeriscono una predominanza di plagioclasi rispetto ai K-feldspati, stimo quindi P/(A+P) > 65%; dalla foto non riesco a vedere con sicurezza quarzo quindi stimo Q < 20%. Dal diagramma QAP per la classificazione speditiva sul campo<sup>nota 1</sup> si tratta quindi di Dioritoide o Gabbroide.
+L'indice di colore M (definito come il rapporto tra "quantità" di minerali scuri e il totale dei minerali) è pari circa al 50% (nello stimare M ho escluso il cristallo più grande indicato dalla punta della matita); i minerali chiari hanno aspetto bianco lattiginoso quindi mi suggeriscono una predominanza di plagioclasi rispetto ai K-feldspati, stimo quindi P/(A+P) > 65%; dalla foto non riesco a vedere con sicurezza quarzo quindi stimo Q < 20%. Dal diagramma QAP per la classificazione speditiva sul campo<sup>nota 1</sup> si tratta quindi di Dioritoide o Gabbroide.
 
 3) trovare la corrispondenza tra il nome di fantasia ed il nome originale usando la [tabella allegata](corrispondenza_immagini.csv): si ottiene che `Vaderite_Blu_Giurassica.gif` corrisponde all'immagine oridinale `p911.gif`, la `p` nel nome del file suggerisce che si tratta di una roccia plutonica.
 
