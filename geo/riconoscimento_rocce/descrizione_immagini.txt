@@ -1,0 +1,966 @@
+V2326 - Granito rosa di Baveno
+Granito rosa
+
+V2327 - Granito bianco di Montorfano
+Granito bianco
+
+V2329 - Sienite della Balma
+Sienite della Balma
+
+P1 - Granito biotitico bianco
+Granito biotitico bianco
+
+P2 - Granito biotitico rosa
+Granito biotitico rosa
+
+P3 - Granito biotitico bianco (granito porfirico).
+Granito biotitico bianco
+
+P4 - Granito (-sieno) biotitico rosso alcalino a struttura granulare con tendenza porfirica
+Sienogranito biotitico rosso
+
+P5 - Granito bianco biotitico
+Granito bianco biotitico
+
+P6 - Granito biotitico inequigranulare a tendenza porfirica.
+Granito biotitico
+
+P7 - Granito biotitico rosa a struttura cataclastica.
+Granito biotitico rosa
+
+P8 - Granito biotitico inequigranulare, a tendenza porfirica.
+Granito biotitico
+
+P9 - Granito biotitico (granito porfirico)
+Granito biotitico (granito porfirico)
+
+P12 - Granodiorite anfibolica.
+Granodiorite anfibolica
+
+P15 - Tonalite anfibolico-biotitica.
+Tonalite anfibolico-biotitica
+
+P16 - Tonalite anfibolico-biotitica.
+Tonalite anfibolico-biotitica
+
+P17 - Tonalite/quarzodiorite anfibolico-biotitica.
+Tonalite/quarzodiorite anfibolico-biotitica
+
+P18 - Tonalite/monzodiorite quarzifera anfibolico-biotitica.
+Tonalite/monzodiorite quarzifera
+
+P19 - Sienite anfibolica.
+Sienite anfibolica
+
+P21 - Monzonite anfibolico-pirossenico-biotitica.
+Monzonite anfibolico-pirossenico-biotitica
+
+P23 - Monzonite anfibolica.
+Monzonite anfibolica
+
+P25 - Gabbro anfibolico.
+Gabbro anfibolico
+
+P26 - Gabbro anfibolico-biotitico.
+Gabbro anfibolico-biotitico
+
+P27 - Gabbronorite anortositica.
+Gabbronorite anortositica
+
+P28 - Diorite anfibolica.
+Diorite anfibolica
+
+P29 - Leucogabbro anfibolico.
+Leucogabbro anfibolico
+
+P30 - Anortosite (labradoritite).
+Anortosite
+
+P33 - Troctolite.
+Troctolite
+
+P35 - Gabbro.
+Gabbro
+
+P36 - Troctolite mafitica .
+Troctolite mafitica
+
+P37 - Sienite nefelinifera.
+Sienite nefelinifera
+
+P38 - Sienite foidale .
+Sienite foidale
+
+P43 - Orneblendite ad olivina e due pirosseni .
+Orneblendite
+
+P44 - Ortopirossenite a spinello.
+Ortopirossenite
+
+P45 - Ortopirossenite .
+Ortopirossenite
+
+P46 - Filone di ortopirossenite in peridotite di tipo dunitico.
+Filone di ortopirossenite in peridotite
+
+P47 - Olivin-clinopirossenite
+Olivin-clinopirossenite
+
+P48 - Olivin-clinopirossenite di cumulo
+Olivin-clinopirossenite di cumulo
+
+P49 - Lherzolite
+Lherzolite
+
+P50- Lherzolite a spinello
+Lherzolite a spinello
+
+P51- Lherzolite
+Lherzolite
+
+P52 - Layering a spinello cromite e diopside cromifero in peridotite.
+Layering a spinello e diopside in peridotite
+
+P53 - Dunite con layering di cromitite.
+Dunite con layering di cromitite
+
+P56 - Aplite entro tonalite biotitico-anfibolica.
+Aplite
+
+P57 - Aplite granitica entro una tonalite biotitico-anfibolica.
+Aplite granitica entro tonalite
+
+P58 - Aplite granitica in tonalite.
+Aplite
+
+P59 - Porfido granitico filoniano.
+Porfido granitico
+
+P61 - Pegmatite con associazione grafica di K-feldspato + quarzo.
+Pegmatite
+
+P62- Pegmatite tormalinifera a muscovite.
+Pegmatite
+
+P63 - Pegmatite biotitica.
+Pegmatite
+
+P64 - Filone aplitico-pegmatitico a K-feldspato con biotite.
+Filone aplitico-pegmatitico
+
+P68 - Porfirite dioritica.
+Porfirite dioritica
+
+P70 - Camptonite (lamprofiro) a anortoclasio e orneblenda.
+Camptonite (lamprofiro)
+
+P74 - Struttura rapakivitica in monzogranito porfirico.
+Struttura rapakivitica in monzogranito porfirico
+
+PETRO1 - Granito rosa omeogranulare
+Granito rosa omeogranulare
+
+PETRO2 - Granito porfirico rosa
+Granito porfirico rosa
+
+PETRO3 - Granito alcalifeldspatico
+Granito alcalifeldspatico
+
+PETRO4 - Sienite
+Sienite
+
+PETRO5 - Sienite a nefelina
+Sienite a nefelina
+
+PETRO6 - Monzosienite a sodalite
+Monzosienite a sodalite
+
+PETRO8 - Micro-gabbro
+Micro-gabbro
+
+SN1 - Granito biotitico
+Granito biotitico
+
+SN2 - Sienogranito con biotite
+Sienogranito con biotite
+
+SN3 - Monzogranito biotitico porfirico
+Monzogranito biotitico
+
+SN4 - Granito alcali-feldspatico con biotite
+Granito alcali-feldspatico
+
+SN5 - Sienite anfibolica
+Sienite anfibolica
+
+SN6 - Monzonite anfibolico-biotitica
+Monzonite anfibolico-biotitica
+
+SN7 - Micro-gabbro
+Micro-gabbro
+
+SN11 - Sienogranito biotitico
+Sienogranito biotitico
+
+SN13 - Tonalite biotitico-anfibolica
+Tonalite biotitico-anfibolica
+
+SN14 - Leuco-granito con biotite
+Leuco-granito con biotite
+
+SN15 - Granito rosso
+Granito rosso
+
+SN16 - Gabbronorite
+Gabbronorite
+
+P73 - Sviluppo di megacristalli
+Sviluppo di megacristalli
+
+P75 - Struttura grafica.
+Struttura grafica.
+
+P76 - Troctolite con struttura di rapida crescita nell'olivina.
+Struttura di rapida crescita
+
+P77 - Pegmatite gabbrica con strutture di coprecipitazione.
+Strutture di coprecipitazione
+
+P79 - Tessitura di flusso in rocce plutoniche.
+Tessitura di flusso
+
+P80 - Tessitura di flusso in rocce plutoniche.
+Tessitura di flusso
+
+P81 - Foliazione secondaria in rocce plutoniche.
+Foliazione secondaria
+
+P83 - Layering magmatico composizionale.
+Layering magmatico composizionale
+
+P86 - Layering di cumulo (layered gabbro).
+Layering di cumulo
+
+P88 - Margini di rapido raffreddamento
+Chilled margins
+
+P89 - Rapido raffreddamento ai margini di un lamprofiro.
+Rapido raffreddamento
+
+P91 - Frammenti enallogeni, con bordo di reazione, in tonalite.
+Frammenti enallogeni con bordo di reazione
+
+P92 - Inclusione enallogena in Tonalite.
+Inclusione enallogena
+
+P93 - Melanolite enallogena in tonalite.
+Melanolite enallogena
+
+P94 - Frammento di gneiss cornubianizzato in tonalite .
+Gneiss cornubianizzato in tonalite
+
+P95 - Incluso di gneiss in tonalite .
+Incluso di gneiss in tonalite
+
+P96 - Xenolite di anfibolite in tonalite.
+Xenolite di anfibolite in tonalite
+
+P98 - Inclusioni femiche in granodiorite.
+Inclusioni femiche in granodiorite
+
+P99 - Inclusi femici in tonalite.
+Inclusi femici in tonalite
+
+P100 - Incluso femico a grana media in tonalite a grana grossa
+Incluso femico in tonalite
+
+P102 - Bordi di rapido raffreddamento in un'inclusione gabbrica entro la tonalite.
+Bordi di rapido raffreddamento
+
+P104 - Trasformazioni deuteriche (pseudo-inclusioni femiche) in granito.
+Trasformazioni deuteriche in granito
+
+P105 - Greisen.
+Greisen
+
+V2330 - Porfido della Val Camonica
+Porfido della Val Camonica
+
+V2331 - Basalto di Serrenti
+Basalto di Serrenti
+
+V2332 - Trachite di Zovon (Zovonite)
+Trachite di Zovon
+
+V2333 - Peperino grigio
+Peperino grigio
+
+V1 - Dacite vetrosa.
+Dacite vetrosa
+
+V2 - Riolite oligoporfirica/ignimbrite rubefatta a plagioclasio.
+Riolite oligoporfirica
+
+V5 - Riolite porfirica.
+Riolite porfirica
+
+V6 - Riolite porfirica.
+Riolite porfirica
+
+V7 - Riolite vetrosa a struttura perlitica (perlite).
+Perlite
+
+V8 - Riolite oligoporfirica a tessitura fluidale con struttura microvacuolare.
+Riolite oligoporfirica
+
+V9 - Lava vacuolare.
+Lava vacuolare
+
+V10 - Porfido quarzifero/riodacite.
+Porfido quarzifero/riodacite
+
+V11 - Riolite/riodacite porfirica.
+Riolite / riodacite porfirica
+
+V13 - Quarzo-trachite porfirica passante a riolite.
+Quarzo-trachite porfirica passante a riolite
+
+V14 - Trachite porfirica.
+Trachite porfirica
+
+V15 - Trachite porfirica.
+Trachite porfirica
+
+PETRO10 - Trachite porfirica
+Trachite porfirica
+
+V16 - Latite porfirica.
+Latite porfirica
+
+V17 - Feno-latite porfirica a tessitura ignimbritica.
+Feno-latite porfirica
+
+V18 - Feno-trachite porfirica.
+Feno-trachite porfirica
+
+V19 - Andesite porfirica alterata.
+Andesite porfirica
+
+V21 - Feno-latite a plagioclasio e due pirosseni.
+Feno-latite
+
+V22 - Andesite porfirica (plagioclasio-orneblendofirica).
+Andesite porfirica
+
+V24 - Basalto andesitico vacuolare porfirico.
+Basalto andesitico
+
+V25 - Basalto afirico alterato.
+Basalto afirico
+
+V26 - Basalto porfirico.
+Basalto porfirico
+
+V27 - Latibasalto/trachibasalto porfirico.
+Latibasalto/trachibasalto
+
+V28 - Andesite basaltica a struttura porfirica e tessitura fluidale.
+Andesite basaltica
+
+V29 - Olivin-basalto oligoporfirico.
+Olivin-basalto oligoporfirico
+
+V30 - Komatiite microporfirica.
+Komatiite microporfirica
+
+V31 - Tefrite a leucite a struttura porfirica.
+Tefrite a leucite
+
+V32 - Lava a leucite a struttura porfirica.
+Lava a leucite
+
+V33 - Foidite leucitica afirica (Leucitite).
+Leucitite
+
+V34 - Noduli lherzolitici inclusi in alcali-olivin-basalto.
+Noduli lherzolitici in basalto
+
+V35 - Tessiture a fiamme nei porfidi quarziferi.
+Tessiture a fiamme nei porfidi quarziferi
+
+V36 - Tufo ignimbritico con strutture a fiamme.
+Tufo ignimbritico con strutture a fiamme
+
+V37 - Ossidiana scoriacea.
+Ossidiana scoriacea
+
+V38 - Tefrite leucitica.
+Tefrite leucitica
+
+V39 - Colatine stratificate di lava.
+Colatine stratificate di lava
+
+V40 - Ossidiana.
+Ossidiana
+
+V42 - Proietto con vesuviana.
+Proietto con vesuviana
+
+V43 - Breccia autoclastica.
+Breccia autoclastica
+
+V44 - Breccia autoclastica - flusso piroclastico.
+Breccia autoclastica - flusso piroclastico
+
+V46 - Basalto fumarolizzato (rossastro).
+Basalto fumarolizzato
+
+V47 - Mineralizzazione a cinabro.
+Mineralizzazione a cinabro
+
+V48 - Tufo (peperino).
+Tufo (peperino)
+
+V207 - Trachite leucitica con tessitura di tipo ignimbritico.
+Trachite leucitica
+
+PETRO9 - Porfido riolitico
+Porfido riolitico
+
+SN8 - Feno-riolite (porfido riolitico)
+Feno-riolite
+
+SN9 - Ignimbrite (tufo a lapilli)
+Ignimbrite
+
+SN12 - Basalto
+Basalto
+
+V2345 - Pietra di Vico
+Pietra di Vico
+
+V2346 - Pietra Serena
+Pietra Serena
+
+S15 - Argilla marnosa.
+Argilla marnosa
+
+S16 - Marna calcarea.
+Marna calcarea
+
+S40 - Arenaria rossa.
+Arenaria rossa
+
+S41 - Arenaria glauconitica.
+Arenaria glauconitica
+
+S42 - Arenaria rossa.
+Arenaria rossa
+
+S43 - Arenaria rossa.
+Arenaria rossa
+
+S44 - Arenaria con stratificazione incrociata.
+Arenaria
+
+S60 - Conglomerato poligenico a ciottoli di rocce carbonatiche.
+Conglomerato poligenico
+
+S61 - Conglomerato a ciottoli calcarei.
+Conglomerato
+
+S62 - Conglomerato a ciottoli quarzosi.
+Conglomerato
+
+S63 - Breccia tettonica a elementi spigolosi di quarzite.
+Breccia tettonica
+
+S64 - Conglomerato poligenico con cemento quarzoso.
+Conglomerato poligenico
+
+SN20 - Quarzo-arenaria a grana grossa
+Quarzo-arenaria
+
+SN21 - Arenaria quarzoso-feldspatica
+Arenaria quarzoso-feldspatica
+
+SN23 - Arenaria glauconitica
+Arenaria glauconitica
+
+V2343 - Calcare Botticino
+Calcare Botticino
+
+V2344 - Calcare Rosso Verona
+Rosso Verona
+
+S20 - Calcare grigio.
+Calcare grigio
+
+S21 - Calcare grigio.
+Calcare grigio
+
+S22 - Calcare marnoso / biomicrite a Globotruncane (Scaglia).
+Calcare marnoso / biomicrite
+
+S23 - Calcare grigio.
+Calcare grigio
+
+S24 - Calcare rosso fossilifero.
+Calcare rosso fossilifero
+
+S25 - Calcare marnoso grigio.
+Calcare marnoso grigio
+
+S26 - Calcare pelagico (Biancone).
+Calcare pelagico
+
+S27 - Calcare fossilifero a glauconite.
+Calcare fossilifero a glauconite
+
+S51 - Diaspro rosso / ftanite.
+Diaspro rosso
+
+S52 - Diaspro rosso / ftanite.
+Diaspro rosso
+
+SN22 - Calcare fossilifero
+Calcare fossilifero
+
+SN24 - Calcare nero
+Calcare nero
+
+SN26 - Calcare nodulare
+Calcare nodulare
+
+SN27 - Calcare stilolitico
+Calcare stilolitico
+
+SN28 - Calcare micritico
+Calcare micritico
+
+SN29 - Calcarenite
+Calcarenite
+
+V2347 - Travertino
+Travertino
+
+S1 - Gesso.
+Gesso
+
+S2 - Gesso.
+Gesso
+
+S3 - Gesso cristallino.
+Gesso cristallino
+
+S4 - Gesso stratificato e ripiegato.
+Gesso stratificato e ripiegato
+
+S5 - Gesso.
+Gesso
+
+S6 - Intima associazione di gesso e zolfo.
+Intima associazione di gesso e zolfo
+
+S10 - Anidrite.
+Anidrite
+
+S11 - Travertino.
+Travertino
+
+S12 - Travertino massiccio.
+Travertino massiccio
+
+S13 - Sezione trasversale di stalattite.
+Stalattite
+
+S28 - Calcare selcifero.
+Calcare selcifero
+
+S29 - Selce grigia.
+Selce grigia
+
+S30 - Alternanza di selce e calcare micritico.
+Alternanza di selce e calcare micritico
+
+S32 - Selce nera.
+Selce nera
+
+S33 - Opale xiloide / silexite.
+Opale xiloide / silexite
+
+S35 - Dolomia saccaroide.
+Dolomia
+
+S80 - Bauxite.
+Bauxite
+
+SN25 - Travertino
+Travertino
+
+MR1 - Argilloscisto bituminoso.
+Argilloscisto bituminoso
+
+MR2 - Argilloscisto carbonioso.
+Argilloscisto carbonioso
+
+MR3 - Argilloscisto carbonioso (slate).
+Argilloscisto carbonioso
+
+MR6 - Fillade biotitica-grafitica a chiastolite.
+Fillade biotitica-grafitica a chiastolite
+
+MR10 - Parascisto filladico quarzifero con muscovite e clorite.
+Parascisto filladico quarzifero con Mu e Chl
+
+MR11 - Micascisto a mica chiara.
+Micascisto a mica chiara
+
+MR12 - Scisto con quarzo, granato e cianite.
+Scisto con quarzo, granato e cianite
+
+MR13 - Micascisto grafitico a due miche con porfiroblasti di granato almandino.
+Micascisto grafitico a due miche con porfiroblasti di Grt
+
+MR14 - Micascisto granatifero a 2 miche con porfiroblasti di staurolite.
+Micascisto granatifero a 2 miche con porfiroblasti di St
+
+MR15 - Micascisto muscovitico a staurolite ± granato.
+Micascisto muscovitico a St ± Grt
+
+MR16 - Micascisto gneissico a 2 miche con porfiroblasti di plagioclasio.
+Micascisto gneissico a 2 miche con porfiroblasti di Pl
+
+MR17 - Micascisto biotitico metatettico.
+Micascisto biotitico metatettico
+
+MR18 - Micascisto biotitico-granatifero metatettico.
+Micascisto biotitico-granatifero metatettico
+
+MR19 - Paragneiss migmatitico.
+Paragneiss migmatitico
+
+MR20 - Granulite acida a sillimanite.
+Granulite acida a sillimanite
+
+MR30 - Sacca di quarzite con grossi blasti di andalusite.
+Sacca di quarzite con grossi blasti di And
+
+MR40 - Metaconglomerato ad elementi quarzitici con matrice quarzoso-biotitico-albitica.
+Metaconglomerato
+
+MR50 - Gneiss granodioritico a grana fine, con rari occhietti feldspatici.
+Gneiss granodioritico
+
+MR52 - Gneiss granitico ad albite e fengite, con porfiroclasti appiattiti di K-feldspato.
+Gneiss granitico
+
+MR53 - Gneiss aplogranitico a due miche.
+Gneiss aplogranitico a due miche
+
+MR54 - Gneiss occhiadino.
+Gneiss occhiadino
+
+PETRO11 - Gneiss anfibolico-biotitico
+Gneiss anfibolico-biotitico
+
+MR55 - Ortogneiss occhiadino a porfiroclasti stirati di ex K-feldspato.
+Ortogneiss occhiadino
+
+MR56 - Ortogneiss occhiadino a due miche con porfiroclasti di K-feldspato.
+Ortogneiss occhiadino
+
+MR57 - Ortogneiss migmatitico.
+Ortogneiss migmatitico
+
+MR58 - Metagranito aplitico a pinite con struttura gneissica.
+Metagranito aplitico a pinite
+
+MR60 - Metagabbro a diallagio.
+Metagabbro a diallagio
+
+MR62 - Prasinite anfibolica.
+Prasinite anfibolica
+
+MR63 - Scisto attinolitico.
+Scisto attinolitico
+
+MR64 - Anfibolite listata diopsidico granatifera.
+Anfibolite listata diopsidico granatifera
+
+MR70 - Granulite basica ad ortopirosseno, clinopirosseno, orneblenda e plagioclasio.
+Granulite basica ad Opx, Cpx, Hbl e Pl
+
+MR71 - Granulite basica.
+Granulite basica
+
+MR80 - Rodingite a vesuviana e granato.
+Rodingite a vesuviana e granato
+
+MR81 - Rodingite granatifera diopsidica.
+Rodingite granatifera diopsidica
+
+MR90 - Quarzite fengitica a piemontite.
+Quarzite fengitica a piemontite
+
+MR100 - Serpentinite a struttura massiccia.
+Serpentinite a struttura massiccia
+
+MR101 - Serpentinoscisto.
+Serpentinoscisto
+
+MR102 - Serpentinite antigoritica a struttura massiccia con olivina porfiroblastica.
+Serpentinite con Ol porfiroblastica
+
+MR103 - Serpentinite antigoritica a Cr-clorite (kämmarerite).
+Serpentinite antigoritica a Cr-Chl
+
+MR106 - Metaperidotite lherzolitica listata.
+Metaperidotite lherzolitica listata
+
+MR110 - Talcoscisto serpentinoso.
+Talcoscisto serpentinoso
+
+MR111 - Talco.
+Talco
+
+MR112 - Talcoscisto purissimo.
+Talcoscisto
+
+MR121 - Metaoficalcite.
+Metaoficalcite
+
+MR122 - Metaoficalcite antigoritica.
+Metaoficalcite antigoritica
+
+MR123 - Oficalcite.
+Oficalcite
+
+MR124 - Oficalcite.
+Oficalcite
+
+MR130 - Marmo saccaroide.
+Marmo saccaroide
+
+MR131 - Marmo a flogopite.
+Marmo a flogopite
+
+MR132 - Marmo a grafite.
+Marmo a grafite
+
+MR133 - Marmo a grafite.
+Marmo a grafite
+
+MR134 - Roccia a tremolite.
+Roccia a tremolite
+
+MR135 - Marmo a flogopite e porfiroblasti di tremolite.
+Marmo a flogopite e tremolite
+
+MR136 - Marmo a silicati.
+Marmo a silicati
+
+MR137 - Anidrite a struttura saccaroide.
+Anidrite a struttura saccaroide
+
+SN40 - Micascisto gneissico a due miche
+Micascisto gneissico a due miche
+
+SN41 - Ortogneiss biotitico micro-occhiadino
+Ortogneiss biotitico micro-occhiadino
+
+SN42 - Scisto filladico
+Scisto filladico
+
+SN43 - Marmo rosa
+Marmo rosa
+
+SN44 - Marmo bianco
+Marmo bianco
+
+SN45 - Gneiss tabulare
+Gneiss tabulare
+
+SN46 - Ortogneiss ghiandolare
+Ortogneiss ghiandolare
+
+SN47 - Quarzite debolmente micacea
+Quarzite debolmente micacea
+
+SN48 - Granulite basica
+Granulite basica
+
+SN49 - Gneiss a tormalina
+Gneiss a tormalina
+
+SN50 - Oficarbonato
+Oficarbonato
+
+SN51 - Marmo a flogopite
+Marmo a flogopite
+
+SN52 - Marmo
+Marmo
+
+SN53 - Marmo
+Marmo
+
+SN54 - Prasinite
+Prasinite
+
+SN55 - Anfibolite
+Anfibolite
+
+SN56 - Eclogite a granato e fengite
+Eclogite a granato e fengite
+
+SN57 - Micascisto a granato e cloritoide
+Micascisto a granato e cloritoide
+
+SN100 - Peridotite a granato
+Peridotite a granato
+
+SN101 - Peridotite a flogopite
+Peridotite a flogopite
+
+SN102 - Eclogite a coesite
+Eclogite a coesite
+
+SN103 - Gneiss
+Gneiss
+
+SN104 - Ardesia
+Ardesia
+
+SN105 - Micascisto granatifero a biotite
+Micascisto granatifero a biotite
+
+SN106 - Anfibolite a biotite e granato
+Anfibolite a biotite e granato
+
+SN107 - Lazulite
+Lazulite
+
+MC1 - Argilloscisto scuro cornubianitico.
+Argilloscisto cornubianitico
+
+MC2 - Scisto cornubianitico a biotite + sillimanite + andalusite + cordierite.
+Scisto cornubianitico
+
+MC3 - Scisto cornubianitico a sillimanite, andalusite, biotite e cordierite.
+Scisto cornubianitico
+
+MC4 - Cornubianite a cordierite + sillimanite ± andalusite ± spinello.
+Cornubianite
+
+MC10 - Cornubianite macchiettata.
+Cornubianite
+
+MC11 - Cornubianite macchiettata.
+Cornubianite
+
+MC12 - Cornubianite rossastra biotitica con noduli zonati a quarzo, anfibolo e solfuri.
+Cornubianite
+
+MC20 - Cornubianite listata con alternanze di marmi a silicati e di cornubianiti biotitiche.
+Cornubianite listata
+
+MC21 - Cornubianite listata con alternanze di marmi grigi e di cornubianiti chiare.
+Cornubianite listata
+
+MC22 - Cornubianite listata con alternanze di marmi a silicati e di cornubianiti diopsidico-granatifere.
+Cornubianite listata
+
+MC23 - Cornubianite diopsidico-granatifera a vesuviana.
+Cornubianite diopsidico-granatifera a vesuviana
+
+MC30 - Marmo listato a silicati di calcio (calcefiro).
+Marmo listato
+
+MC31 - Marmo dolomitico bianco saccaroide.
+Marmo dolomitico
+
+MC32 - Marmo biancastro saccaroide a brucite.
+Marmo a brucite
+
+MC33 - Marmo grigio a scapolite.
+Marmo a scapolite
+
+MC40 - Skarn a wollastonite, diopside, granato e vesuviana.
+Skarn
+
+MAP1 - Micascisto fengitico a glaucofane, con tendenza gneissica.
+Micascisto fengitico a glaucofane
+
+MAP2 - Micascisto fengitico a onfacite e granato.
+Micascisto fengitico a onfacite e granato
+
+MAP3 - Micascisto argenteo a granato.
+Micascisto argenteo a granato
+
+MAP4 - Micascisto argenteo a cloritoide.
+Micascisto argenteo a cloritoide
+
+MAP10 - Ortogneiss a fengite, quarzo e albite, con fenoclasti di K-feldspato.
+Ortogneiss a fengite
+
+MAP11 - Ortogneiss leucocratico a giadeite, fengite e K-feldspato.
+Ortogneiss a giadeite
+
+MAP12 - Metagranodiorite a giadeite e granato coronitico.
+Metagranodiorite a giadeite
+
+MAP20 - Metagabbro smaragditico a struttura occhiadina.
+Metagabbro smaragditico
+
+MAP30 - Scisto glaucofanico listato a lawsonite porfiroblastica.
+Scisto glaucofanico a lawsonite
+
+MAP31 - Metabasite a lawsonite.
+Metabasite a lawsonite
+
+MAP33 - Glaucofanite foliata a granato e cloritoide.
+Glaucofanite foliata a granato e cloritoide
+
+MAP34 - Glaucofanite a lawsonite porfiroblastica con fengite.
+Glaucofanite a lawsonite
+
+MAP40 - Scisto blu - eclogite glaucofanica a zoisite, minore fengite e ankerite.
+Scisto blu - eclogite glaucofanica
+
+MAP41 - Eclogite glaucofanica.
+Eclogite glaucofanica
+
+MAP42 - Eclogite glaucofanica.
+Eclogite glaucofanica
+
+MAP43 - Eclogite glaucofanica con fratture a glaucofane e titanite.
+Eclogite glaucofanica
+
+MAP44 - Eclogite a glaucofane e fengite.
+Eclogite a glaucofane e fengite
+
+MAP46 - Eclogite fengitica.
+Eclogite fengitica
+
+MAP50 - Cloritoscisto anfibolitico a granato e cloritoide.
+Cloritoscisto anfibolitico
+
+MAP51 - Cloritoscisto a granato e cloritoide.
+Cloritoscisto a granato e cloritoide
+
+MAP52 - Scisto granatifero con talco, clorite e cloritoide.
+Scisto granatifero con talco e cloritoide
+
+MAP60 - Serpentinoscisto antigoritico con vene metamorfiche ad olivina e Ti-clinohumite.
+Serpentinoscisto antigoritico
+
+MAP61 - Metaultramafite a talco e ortopirosseno.
+Metaultramafite a talco e ortopirosseno
+
+MAP70 - Marmo calcitico a fengite.
+Marmo calcitico a fengite
+
+MAP71 - Marmo dolomitico.
+Marmo dolomitico
+
