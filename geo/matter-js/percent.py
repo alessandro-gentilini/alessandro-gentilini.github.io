@@ -3,6 +3,7 @@ import random
 from math import pi, sqrt, sin, cos
 #from shapely.geometry import box, Polygon
 import shapely
+import datetime
 
 def is_overlapping(polygon1, polygon2):
   """Checks if two polygons overlap.
@@ -53,7 +54,7 @@ def generate_svg(radius, square_area_ratio, square_side_ratio):
         xy.append((x_i,y_i))
     dwg.add(dwg.polygon(xy,fill='white'))
     circle_approx = shapely.Polygon(xy)
-    dwg.add(dwg.text('Ciao'))
+    dwg.add(dwg.text(f'{int(100*square_area_ratio)}%',insert=(0,1.05*(cy+radius*sin(pi/2+pi/4)*(1+sqrt(2))/2)),style = "font-size:90px; font-family:Arial"))
 
     filled_area = 0
 
@@ -84,6 +85,10 @@ def generate_svg(radius, square_area_ratio, square_side_ratio):
     return dwg.tostring()
 
 # Example usage:
-svg_string = generate_svg(500,.16,.15)
-with open('circle_with_squares.svg', 'w') as f:
+a = .9
+b = .01
+svg_string = generate_svg(500,a,b)
+now = datetime.datetime.now()
+filename = f"{int(100*a):02}_{int(100*b):02}-"+now.strftime("%Y-%m-%dT%H-%M-%S")+".svg"
+with open(filename, 'w') as f:
     f.write(svg_string)

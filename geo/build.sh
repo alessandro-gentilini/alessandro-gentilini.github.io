@@ -1,14 +1,14 @@
 #!/bin/sh
-rm appunti.aux
-rm appunti.bbl
-rm appunti.blg
-rm appunti.out
-rm appunti.log
-rm apunti.pdf
+rm $1.aux
+rm $1.bbl
+rm $1.blg
+rm $1.out
+rm $1.log
+rm $1.pdf
 
-pdflatex appunti.tex
+lualatex $1.tex
 
 # da Zotero fare xport bibtex NON biblatex!
-bibtex appunti.aux
-pdflatex appunti.tex
-pdflatex appunti.tex
+bibtex $1.aux
+lualatex $1.tex
+lualatex $1.tex

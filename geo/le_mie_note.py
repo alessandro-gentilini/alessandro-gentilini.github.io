@@ -58,6 +58,9 @@ def create_latex_from_bib(bib_file_path, output_tex_path):
         tex_file.write(r'\setmainfont{Noto Serif}' + '\n')
 
         tex_file.write(r'\usepackage[utf8]{inputenc}' + '\n')
+
+        #tex_file.write(r'\usepackage[authoryear]{natbib}'+'\n')
+
         tex_file.write(r'\begin{document}' + '\n')
 
         for entry in bib_database.entries:
@@ -71,13 +74,15 @@ def create_latex_from_bib(bib_file_path, output_tex_path):
                     try:
                         print(last_line+'\t'+str(parse_italian_date(last_line)))
                     except:
-                        print(last_line)
+                        print('Unable to parse data: '+last_line)
                 tex_file.write(f'{annote}\n')
                 tex_file.write(f'\\cite{{{citation_key}}}\n\n')
                 tex_file.write(r'\par\noindent\rule{\textwidth}{0.4pt}')
                 tex_file.write('\n\n')
         
-        tex_file.write(r'\bibliographystyle{plain}' + '\n')
+        #tex_file.write(r'\bibliographystyle{jbact}' + '\n')
+        #tex_file.write(r'\bibliographystyle{annotation}' + '\n')
+        tex_file.write(r'\bibliographystyle{chicago-annote}' + '\n')
         tex_file.write(r'\bibliography{' + bib_file_path.replace('.bib', '') + '}' + '\n')
         tex_file.write(r'\end{document}' + '\n')
 
