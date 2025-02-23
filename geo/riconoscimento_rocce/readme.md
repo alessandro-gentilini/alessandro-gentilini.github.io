@@ -2,7 +2,7 @@
 
 L'esercizio consiste nel riconoscere una roccia data la sua foto e senza altre informazioni. 
 
-Nella cartella [photos](./photos/) si trovano le foto dei "campioni macroscopici" tratti dall'[Atlante di petrografia del Dipartimento di Scienze della Terra dell'Università di Torino](https://www.atlantepetro.unito.it/page-1d41d.html?).
+Nella cartella [photos](./photos/) si trovano le foto dei "campioni macroscopici" tratti dall'[Atlante di petrografia del Dipartimento di Scienze della Terra dell'Università di Torino](https://www.atlantepetro.unito.it/page-1d41d.html?) curato da Chiara Groppo et al.<sup>nota 1</sup>.
 
 Nell'Atlante i nomi dei file suggeriscono il tipo di roccia (ignea, sedimentaria, metamorfica); per non avere questo suggerimento i nomi dei file sono stati cambiati in nomi di fantasia come per esempio "Vaderite blu giurassica".
 
@@ -11,7 +11,7 @@ Per svolgere l'esercizio:
 1) scegliere una immagine a caso dalla cartella, per esempio la "Vaderite blu giurassica" ![photos](./photos/Vaderite_Blu_Giurassica.gif).
 
 2) applicare i metodi di riconoscimento e giungere ad un nome. Nell'esempio si ha una roccia olocristallina a grana medio-grossa, dunque i cristalli hanno avuto tempo di crescere e questo è tipico delle rocce ignee intrusive o plutoniche.
-L'indice di colore M (definito come il rapporto tra "quantità" di minerali scuri e il totale dei minerali) è pari circa al 50% (nello stimare M ho escluso il cristallo più grande indicato dalla punta della matita); i minerali chiari hanno aspetto bianco lattiginoso quindi mi suggeriscono una predominanza di plagioclasi rispetto ai K-feldspati, stimo quindi P/(A+P) > 65%; dalla foto non riesco a vedere con sicurezza quarzo quindi stimo Q < 20%. Dal diagramma QAP per la classificazione speditiva sul campo<sup>nota 1</sup> si tratta quindi di Dioritoide o Gabbroide.
+L'indice di colore M (definito come il rapporto tra "quantità" di minerali scuri e il totale dei minerali) è pari circa al 50% (nello stimare M ho escluso il cristallo più grande indicato dalla punta della matita); i minerali chiari hanno aspetto bianco lattiginoso quindi mi suggeriscono una predominanza di plagioclasi rispetto ai K-feldspati, stimo quindi P/(A+P) > 65%; dalla foto non riesco a vedere con sicurezza quarzo quindi stimo Q < 20%. Dal diagramma QAP per la classificazione speditiva sul campo<sup>nota 2</sup> si tratta quindi di Dioritoide o Gabbroide.
 
 3) trovare la corrispondenza tra il nome di fantasia ed il nome originale usando la [tabella allegata](corrispondenza_immagini.csv): si ottiene che `Vaderite_Blu_Giurassica.gif` corrisponde all'immagine oridinale `p911.gif`, la `p` nel nome del file suggerisce che si tratta di una roccia plutonica.
 
@@ -21,8 +21,17 @@ L'indice di colore M (definito come il rapporto tra "quantità" di minerali scur
 https://www.atlantepetro.unito.it/page-974d9b3.html?xsl=tavole&xml=macro.Magmatiche4&tavola=p91).
 
 -----------------
+## Note
+### nota 1
 
-nota 1
+Atlante di petrografia del Dipartimento di Scienze della Terra dell'Università di Torino.
+Atlante realizzato da Chiara Groppo, Ezio Callegari, Daniele Castelli e Roberto Compagnoni
+Foto di Chiara Groppo; Roberto Giglio (campioni macroscopici), con il contributo di Costanza Scagliotti (foto micro da SN46 a SN57). Web solution Carlo De Marchis
+
+URL [https://www.atlantepetro.unito.it/page-1d41d.html?](https://www.atlantepetro.unito.it/page-1d41d.html?) consultato il 23 febbraio 2025.
+
+
+### nota 2
 
 Il diagramma QAP per la classificazione speditiva sul campo è spiegato nella sezione 
 _2.11.3 PROVISIONAL "FIELD" CLASSIFICATION_ e nella Figura 2.10 del libro:
