@@ -25,7 +25,7 @@ https://www.atlantepetro.unito.it/page-974d9b3.html?xsl=tavole&xml=macro.Magmati
 ### nota 1
 
 Atlante di petrografia del Dipartimento di Scienze della Terra dell'Università di Torino.
-Atlante realizzato da Chiara Groppo, Ezio Callegari, Daniele Castelli e Roberto Compagnoni
+Atlante realizzato da Chiara Groppo, Ezio Callegari, Daniele Castelli e Roberto Compagnoni.
 Foto di Chiara Groppo; Roberto Giglio (campioni macroscopici), con il contributo di Costanza Scagliotti (foto micro da SN46 a SN57). Web solution Carlo De Marchis
 
 URL [https://www.atlantepetro.unito.it/page-1d41d.html?](https://www.atlantepetro.unito.it/page-1d41d.html?) consultato il 23 febbraio 2025.
