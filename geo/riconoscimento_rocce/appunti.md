@@ -2,11 +2,15 @@
 Struttura vs tessitura
 * la tessitura si vede solo al microscopio
 
+---
+
 Struttura:
 * olocristallina
 * porfirica (fenocristalli immersi in pasta di fondo)
 * afirica (fenocristalli assenti e quindi è presente la sola pasta di fondo) [BDA p45]
 * amorfa (opaca?) o vetrosa (lucida?)
+
+---
 
 |Struttura|Classificare con|
 |---------|----------------|
@@ -15,23 +19,39 @@ Struttura:
 |Afirica|Diagramma QAP per rocce effusive: attenzione ad eventuali microcristalli chiari!|
 |Amorfa|TODO|
 
+---
+
 Dimensione dei cristalli: [BDA p46]
 * criptocristalli
 * grana fine < 1 mm
 * grana media > 1 mm e < 5 mm
 * grana grossa > 5 mm
 
+---
+
 Variabilità della dimensione dei cristalli:
 * equigranulare [BDA p45]
 * eterogranulare
+
+---
 
 Colore e composizione:
 * tipicamente scuri i minerali femici
 * tipicamente chiari i minerali sialici
 
+---
+
 Suggerimenti uso lente a mano:
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani": potrebbero essere fossili
+
+---
+
+Strumenti di diagnosi:
+* scala delle durezze di Mohs
+* comportamento reazione con acido
+
+---
 
 Serie di Bowen (descrizione dei minerali visti nelìi campioni a mano)
 |T xtal/°C|Minerale|Abito|Riflette la luce|Colore|Minerale serie continua|Colore Plagioclasio
@@ -79,6 +99,51 @@ Strutture delle rocce effusive [Q p98]:
 * vetrosa 
 * clastica 
 * scoriacea
+
+## Rocce metamorfiche
+
+Fissile - Fissilità  
+Clivaggio  
+Paragenesi  
+Minerali indice: granato, albite, glaucofane (di alta pressione)  
+Foglietto scistogeno dà scistosità  
+Scisto è struttura  
+Granulitica è struttura  
+Slate  
+Gneisstosità  
+Da roccia sedimentaria silicoclastica a paragneiss  
+Da roccia magmatica a ortogneiss  
+Bande  
+Minerali orientati  
+Eclogite  
+Banding (?)
+Da olivina a serpentino (verdi scuri)  
+Rocce serpentiniti hanno parecchie superfici riflettenti che danno idea di scistosità  
+La peridotite si serpentinizza  
+Da roccia carbonatica (calcite) a marmo  
+Da quarzo a quarzite  
+Struttura saccaroide  
+Struttura granulare  
+Lineazioni  
+Anatessi
+
+Grado di metamorfismo:
+* colori chiari tipicamente indicano grado di metamorfismo basso
+* fino al verde il grado di metamorfismo è basso
+* se c'è granato (che è rosso violaceo, sfere compatte) il grado di metamorfismo è medio alto. Il granato è un minerale indice che dice che si sta andando verso un grado di metamorfismo alto. Molto spesso granato indica che la roccia madre è sedimentaria.
+
+Rocce citate (ordinate per grado di metamorfismo crescente), rocce madri acide/sialiche:  
+Ardesia  
+Fillade  
+Scisto (i.e. scisti blu)  
+Gneiss  
+
+Rocce citate (ordinate per grado di metamorfismo crescente), rocce madri basiche/femiche,
+nessuna banda, nessuna scistosità ma struttura granulitica:  
+Eclogite  
+Serpentinite  
+
+Migmatite  
 
 ## Bibliografia
 
