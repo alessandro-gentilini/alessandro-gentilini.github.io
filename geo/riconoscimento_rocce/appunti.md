@@ -33,12 +33,16 @@ Suggerimenti uso lente a mano:
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani": potrebbero essere fossili
 
-Serie di Bowen
+Serie di Bowen (descrizione dei minerali visti nelìi campioni a mano)
 |T xtal/°C|Minerale|Abito|Riflette la luce|Colore|
 |---------|---|--|-|-|
-|600-700|Quarzo|Prisma esagonale con tetto "piramidale"|Non riflette|grigio|
-||Muscovite|Foglietti|riflette|incolore|
+|600-700|Quarzo|Prisma esagonale tozzo con tetto "piramidale"|Non riflette|grigio|
+||Muscovite|Foglietti|Riflette|incolore|
 ||K-feldspato/Ortoclasio|||rosa|
+||Biotite|Foglietti|Riflette|nero|
+||Anfiboli|Prismi allungati|Non riflette|nero|
+||Pirosseni|Piani|Non riflette|verde|
+|1200|Olivina|Compatta arrotondata||verde
 ## Rocce intrusive o plutoniche
 
 ### Classificazione con diagramma QAP intrusive
