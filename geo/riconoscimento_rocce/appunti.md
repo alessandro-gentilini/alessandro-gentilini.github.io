@@ -122,6 +122,17 @@ Strutture delle rocce effusive [Q p98]:
 * clastica 
 * scoriacea
 
+## Rocce sedimentarie
+
+### Rocce miste
+
+Ad un estremo c'è calcare (rigido), all'estremo opposto c'è argilla (plastica).
+Anche calcilutiti ad un estremo e peliti all'estremo opposto.
+A metà strada ci sono le marne che sono composte in parte da minerali argillosi, in parte da carbonati.
+Poi ci sono le rocce intermedie:  
+calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argilla marnosa -> argilla. [MMD p107]
+
+
 ## Rocce metamorfiche
 
 Fissile - Fissilità  
@@ -168,8 +179,41 @@ Serpentinite
 
 Migmatite  
 
-## Campioni a mano
+\newpage
 
+## Campioni a mano 11 novembre 2024 (sedimentarie)
+
+![Conglomerato perché i clasti sono arrotondati, la punta della biro indica la matrice, la prof ha detto che il cemento non si vede. I clasti non sono ben cerniti, a vista i più piccoli sono contenuti circa 10 volte nei più grandi.](2024-11-11_laboratorio_rocce/conglomerato_1.jpg)
+
+\newpage
+
+![Breccia (se clasti spigolosi) o conglomerato (se clasti arrotondati). I clasti visibili sono ben cerniti, circa con la medesima dimesione. La matrice è di colore rossiccio.](2024-11-11_laboratorio_rocce/conglomerato_2.jpg)
+
+\newpage
+
+## Campioni a mano 25 novembre 2024 (sedimentarie)
+
+![Argilla marnosa: reazione con HCl resta fango argilloso. Tenera dà frattura con angoli molto smussati. Colpita con il martello suona come "toc-toc".](2024-11-25_laboratorio_rocce/argilla_marnosa.jpg)
+
+![Calcare marnoso: reazione con HCl resta poco residuo fangoso. Dà frattura concoide (che dà conche) ed è dura e spigolosa.](2024-11-25_laboratorio_rocce/calcare_marnoso.jpg)
+
+![Calcare micritico aka calcilutite: reazione con HCl non lascia residuo fangoso. Ha spigoli ancora più vivi. Colpita con il martello suona come "plin-plin".](2024-11-25_laboratorio_rocce/calcare_micritico.jpg)
+
+![????????????Calcare fossilifero????????](2024-11-25_laboratorio_rocce/IMG_6322.jpg)
+
+\newpage
+
+## Campioni a mano 2 dicembre 2024 (sedimentarie)
+
+![Mudstone o wackestone perché il clasto composto dall'Ammonite è isolato, è immerso nel fango e non è a contatto con altri clasti.](2024-12-02_laboratorio_rocce/mudstone_wackestone_con_ammonite.jpg)
+
+![Calcare a oncoliti.](2024-12-02_laboratorio_rocce/oncolite.jpg)
+
+![Calcare a rodoliti.](2024-12-02_laboratorio_rocce/rodolite.jpg)
+
+\newpage
+
+## Campioni a mano 19 febbraio 2025 (metamorfiche)
 
 ![Ardesia, clivaggio ardesiaco, grana fine, acida, grado metamorfico basso [BDA p101].](2025-02-19_laboratorio_rocce/ardesia.jpg)
 
@@ -191,7 +235,7 @@ Migmatite
 
 ![?????????????Serpentinite.](2025-02-19_laboratorio_rocce/eclogite.jpg)
 
-![Marmo, la roccia madre è carbonatica, la calcite non si trasforma in altri minerali. Strttura saccaroide.](2025-02-19_laboratorio_rocce/marmo.jpg)
+![Marmo, la roccia madre è carbonatica, la calcite non si trasforma in altri minerali. Struttura saccaroide.](2025-02-19_laboratorio_rocce/marmo.jpg)
 
 ![Quarzite, la roccia madre era quarzarenite, il quarzo non si trasforma in altri minerali.](2025-02-19_laboratorio_rocce/quarzite_1.jpg)
 
@@ -199,8 +243,11 @@ Migmatite
 
 ![Migmatite, è il prodotto della fusione parziale detta anatessi.](2025-02-19_laboratorio_rocce/migmatite.jpg)
 
+\newpage
+
 ## Bibliografia
 
 [Q] quaderno nero  
-[BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.
+[BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
+[MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.
 
