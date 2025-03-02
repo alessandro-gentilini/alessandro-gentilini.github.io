@@ -1,10 +1,12 @@
 # Rocce ignee
 Struttura vs tessitura
-* la tessitura si vede solo al microscopio
+
+* la tessitura si vede solo al microscopio  
 
 ---
 
 Struttura:
+
 * olocristallina
 * porfirica (fenocristalli immersi in pasta di fondo)
 * afirica (fenocristalli assenti e quindi è presente la sola pasta di fondo) [BDA p45]
@@ -22,6 +24,7 @@ Struttura:
 ---
 
 Dimensione dei cristalli: [BDA p46]
+
 * criptocristalli
 * grana fine < 1 mm
 * grana media > 1 mm e < 5 mm
@@ -30,39 +33,55 @@ Dimensione dei cristalli: [BDA p46]
 ---
 
 Variabilità della dimensione dei cristalli:
+
 * equigranulare [BDA p45]
 * eterogranulare
 
 ---
 
 Colore e composizione:
+
 * tipicamente scuri i minerali femici
 * tipicamente chiari i minerali sialici
 
 ---
 
 Suggerimenti uso lente a mano:
+
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani": potrebbero essere fossili
 
 ---
 
 Strumenti di diagnosi:
+
 * scala delle durezze di Mohs
 * comportamento reazione con acido
 
 ---
 
-Serie di Bowen (descrizione dei minerali visti nelìi campioni a mano)
-|T xtal/°C|Minerale|Abito|Riflette la luce|Colore|Minerale serie continua|Colore Plagioclasio
-|---------|---|--|-|-|-|-|
-|600-700|Quarzo|Prisma esagonale tozzo con tetto "piramidale"|Non riflette|grigio|Plagioclasio Na/Albite|bianco lattiginoso|
-||Muscovite|Foglietti|Riflette|incolore||
-||K-feldspato/Ortoclasio|||rosa||
-||Biotite|Foglietti|Riflette|nero||
-||Anfiboli|Prismi allungati|Non riflette|nero||
-||Pirosseni|Piani|Non riflette|verde||
-|1200|Olivina|Compatta arrotondata||verde|Plagioclasio Ca/Anortite|grigio|
+Serie di Bowen (descrizione dei minerali visti nei campioni a mano)
+
+|T xtal/°C|Minerale|Abito|Riflette?|Colore|
+|---------|---|--|-|-|
+|600-700|Quarzo|Prisma esagonale tozzo con tetto "piramidale"|No|grigio|
+||Muscovite|Foglietti|Sì|incolore|
+||K-feldspato/Ortoclasio|||rosa|
+||Biotite|Foglietti|Sì|nero|
+||Anfiboli|Prismi allungati|No|nero|
+||Pirosseni|Piani|No|verde|
+|1200|Olivina|Compatta arrotondata||verde|
+
+|T xtal/°C|Minerale|Minerale serie continua|Colore Plagioclasio|
+|---------|--------|-----------------------|-------------------|
+|600-700  |Quarzo  |Plagioclasio Na/Albite |bianco lattiginoso |
+|         |Muscovite|                      |                   |
+|         |K-feldspato/Ortoclasio|         |                   |
+|         |Biotite|                        |                   |
+|         |Anfiboli|                       |                   |
+|         |Pirosseni|                      |                   |
+|1200     |Olivina|Plagioclasio Ca/Anortite|grigio|
+
 ## Rocce intrusive o plutoniche
 
 ### Classificazione con diagramma QAP intrusive
@@ -83,17 +102,20 @@ $IC=(scuri)/(chiari+scuri)$ espresso in percentuale [KP p291]
 3) Stimare IC (tramite _stima visiva_)
 
 Note sull'indice di colore:
+
 * IC alto suggerisce P>A, quindi regione dello schema vicina a P. [BDA p47 fig2.19] 
 
 
 Consigli e avvertimenti per la stima visiva:
+
 * se quarzo "salta all'occhio" allora Q>20%
 * attenzione al rischio di sovrastimare i minerali scuri/femici.
 
 
 ## Rocce effusive o vulcaniche
 
-Strutture delle rocce effusive [Q p98]:  
+Strutture delle rocce effusive [Q p98]:
+
 * microcristallina
 * porfirica
 * vetrosa 
@@ -128,6 +150,7 @@ Lineazioni
 Anatessi
 
 Grado di metamorfismo:
+
 * colori chiari tipicamente indicano grado di metamorfismo basso
 * fino al verde il grado di metamorfismo è basso
 * se c'è granato (che è rosso violaceo, sfere compatte) il grado di metamorfismo è medio alto. Il granato è un minerale indice che dice che si sta andando verso un grado di metamorfismo alto. Molto spesso granato indica che la roccia madre è sedimentaria.
@@ -144,6 +167,15 @@ Eclogite
 Serpentinite  
 
 Migmatite  
+
+## Campioni a mano
+
+|Foto|Descrizione|
+|----|-----------|
+|![](2025-02-19_laboratorio_rocce/ardesia.jpg)|Ardesia|
+|![](2025-02-19_laboratorio_rocce/fillade.jpg)|Fillade|
+|![](2025-02-19_laboratorio_rocce/scisto.jpg)|Scisto|
+|![](2025-02-19_laboratorio_rocce/gneiss.jpg)|Gneiss|
 
 ## Bibliografia
 
