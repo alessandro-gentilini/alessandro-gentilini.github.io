@@ -33,7 +33,7 @@ Come quantità di minerali, tolti quelli scuri/verdi, restano solo quelli chiari
 Roccia metamorfica: anfibolite.  
 Ha tessitura anisotropa, su un lato è più foliata mentre sull'altro lato è più gneissica con "occhi" millimetrici di colore nero.  
 Composizione: quarzo, biotite (mica di colore nero), anfiboli (prismatici non brillanti).  
-Io ho dichiarato gneiss ma la prof ha detto anfibolite che è se ho capito bene è una roccia che sta diventanto uno gneiss.  
+Io ho dichiarato gneiss ma la prof ha corretto in anfibolite che è, se ho capito bene, una roccia che sta diventanto uno gneiss.  
 
 ![Roccia metamorfica: anfibolite.](2025-03-05_laboratorio_rocce/anfibolite_1.jpg)
 
