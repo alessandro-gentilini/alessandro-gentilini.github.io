@@ -5,7 +5,7 @@ Struttura vs tessitura
 
 ---
 
-Struttura:
+Struttura [PDF10 p22/45]:
 
 * olocristallina
 * porfirica (fenocristalli immersi in pasta di fondo)
@@ -247,7 +247,8 @@ Migmatite
 
 ## Bibliografia
 
-[Q] quaderno nero  
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
-[MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.
+[MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
+[PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
+[Q] quaderno nero  
 
