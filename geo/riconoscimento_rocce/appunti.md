@@ -268,6 +268,15 @@ La grovacca è una arenite meno matura.
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_28.png)
 
+## Peliti
+
+Il colore dipende dallo stato di ossidazione del ferro e non dalla sua quantità.
+Il rosso è dato da ossido ferrico mentre per il verde/nero il ferro si trova nello stato ferroso.
+
+Qui sotto si vede l'evoluzione del sedimento fango verso la roccia pelite attraverso la diagenesi, diagenesi che poi diventa metamorfismo e che porta la pelite a diventare uno shale, poi un'ardesia ed infine una fillade.
+
+![Tratto da [BMRL]](fig/BMRL_fig2_31.png)
+
 
 ## Rocce miste
 
