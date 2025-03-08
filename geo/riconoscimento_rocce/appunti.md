@@ -50,6 +50,7 @@ Suggerimenti uso lente a mano:
 
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani": potrebbero essere fossili
+* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].
 
 ---
 
@@ -289,6 +290,14 @@ Qui sotto si vede l'evoluzione del sedimento fango verso la roccia pelite attrav
 
 \newpage
 
+## Tipi di granuli carbonatici
+
+|Nome|Origine|Caratteristiche|
+|-|-|-|
+|Oolite|Inorganica|Lamine concentriche regolari|
+|Oncolite|Organica (alghe)|Lamine concentriche leggermente irregolari e ondulate|
+|Rodolite|Organiche (alghe rosse=rodo)|Vero e proprio scheletro|
+
 ## Rocce miste
 
 Ad un estremo c'è calcare (rigido), all'estremo opposto c'è argilla (plastica).
@@ -422,8 +431,8 @@ Migmatite
 
 # Abbreviazioni
 
-aka = also known as = alias = sinonimo di  
-e.g. = exempli gratia = per esempio  
-s.s. = strictu sensu = in senso stretto
+aka = also known as (inglese) = alias (latino) = sinonimo di  
+e.g. = exempli gratia (latino) = per esempio  
+s.s. = strictu sensu (latino) = in senso stretto
 
 
