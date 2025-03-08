@@ -240,7 +240,19 @@ Angoloso/spigoloso vs arrotondato.
 
 \newpage
 
-## Maturità tessiturale
+## Maturità tessiturale [BMRL p28]
+
+_Determinata sia dal trasporto s.s. che anche dal moto locale che i sedimenti hanno nell'ambiente di deposizione._
+
+|Stadio|Matrice|Selezionamento|Forma|
+|-|-|-|-|
+|Immaturo|argillosa>5%|Basso|Angoloso|
+|Submaturo|argillosa<5%|Medio basso|Sub angoloso|
+|Maturo|Quasi assente|Medio alto|Sub arrotondato|
+|Supermaturo|Assente|Alto|Arrotondato|
+
+![Tratto da [BMRL]](fig/BMRL_fig2_18.png)
+
 
 ## Rocce miste
 
@@ -376,5 +388,6 @@ Migmatite
 
 aka = also known as = alias = sinonimo di  
 e.g. = exempli gratia = per esempio  
+s.s. = strictu sensu = in senso stretto
 
 
