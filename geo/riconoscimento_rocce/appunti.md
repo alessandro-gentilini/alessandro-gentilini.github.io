@@ -82,6 +82,8 @@ Serie di Bowen (descrizione dei minerali visti nei campioni a mano)
 |         |Pirosseni|                      |                   |
 |1200     |Olivina|Plagioclasio Ca/Anortite|grigio|
 
+\newpage
+
 ## Rocce intrusive o plutoniche
 
 ### Classificazione con diagramma QAP intrusive
@@ -111,6 +113,7 @@ Consigli e avvertimenti per la stima visiva:
 * se quarzo "salta all'occhio" allora Q>20%
 * attenzione al rischio di sovrastimare i minerali scuri/femici.
 
+\newpage
 
 ## Rocce effusive o vulcaniche
 
@@ -138,7 +141,7 @@ Strutture delle rocce effusive [Q p98]:
 |-|-|-|-|
 |Rocce granulari (aka particellari)|gravità, meccanica dei fluidi|stratificate, porose|terrigene|
 |Rocce cristalline|processi chimici, regola delle fasi|non porose|salgemma|
-|Rocce biocostruite|secrezione biochimica|non stratificate, porose|
+|Rocce biocostruite|secrezione biochimica (contro la gravità)|non stratificate, porose|
 |Rocce residuali|degradazione chimica/fisica|mal stratificate, possono essere porose|suoli, carbone|
 
 ### Famiglie di rocce importanti [BMRL p6]
@@ -148,12 +151,31 @@ Strutture delle rocce effusive [Q p98]:
 * Evaporiti
 * Rocce silicee
 
+\newpage
+
 ### Componenti tessiturali delle rocce granulari [BMRL p7]
 
 **granuli** - **matrice** - **cemento**
 
-Nella fase iniziale di genesi della roccia ci sono i **granuli** che sono le unità elementari e che per gravità stanno uno sull'altro, gli spazi vuoti fra i granuli sono i **pori**; con il passare del tempo i pori si riempiono di materia (solida e più fine e.g. fango oppure allo stato fluido come acqua, gas petrolio) che compone la **matrice**; con il passare di altro tempo i pori possono venir eliminati (e.g. per costipamento) oppure essere riempiti da **cemento** (e.g. fasi cristalline precipitate chimicamente).  
+Nella fase iniziale di genesi della roccia ci sono i **granuli** che sono le unità elementari e che per gravità stanno uno sull'altro, gli spazi vuoti fra i granuli sono i **pori**; con il passare del tempo i pori si riempiono di materia (solida e più fine e.g. fango oppure allo stato fluido come acqua, gas, petrolio) che compone la **matrice**; con il passare di altro tempo i pori possono venir eliminati (e.g. per costipamento) oppure essere riempiti da **cemento** (e.g. cemento costituito da fasi cristalline precipitate chimicamente).  
 _Quindi il fattore tempo è importante e si collegherà al concetto di "maturità tessiturale"._
+
+![Tratta da [BMRL]](fig/BMRL_fig1_4.png)
+
+I granuli definiscono l'**impalcatura** aka **intelaiatura granulare**.
+Il limite tra impalcatura e matrice è, per quanto riguarda le dimensioni, relativo.
+
+![Tratta da [BMRL]](fig/BMRL_fig1_5.png)
+
+|Tessitura|Ambiente di deposizione|
+|-|-|
+|Grano-sostenuta|Alta energia|
+|Fango-sostenuta|Bassa energia|
+
+|Famiglia|Matrice tipica|Cemento tipico|
+|-|-|-|
+|Terrigene silicoclastiche|Silt (aka limo) e argilla|Calcite e quarzo|
+|Carbonatiche|Fango carbonatico (aka micrite)|Calcite|
 
 ### Rocce miste
 
