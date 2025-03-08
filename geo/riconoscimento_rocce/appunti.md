@@ -89,7 +89,7 @@ Si basa sulla stima dei componenti Q, A, P, M. [BDA p47] e dell'indice di colore
 Q = Quarzo  
 A = Alkali Feldspati  
 P = Plagioclasio  
-M = Minerali femici (tipicamente di colore scuro i.e. nero, verdone).
+M = Minerali femici (tipicamente di colore scuro e.g. nero, verdone).
 
 $IC=(scuri)/(chiari+scuri)$ espresso in percentuale [KP p291]
 
@@ -122,7 +122,38 @@ Strutture delle rocce effusive [Q p98]:
 * clastica 
 * scoriacea
 
+\newpage
+
 ## Rocce sedimentarie
+
+### Composizione, tessitura, struttura [BMRL p3]
+
+* Composizione: di che materiale è fatto?  
+* Tessitura: distribuzione statistica delle dimensioni, forme degli elementi costituenti la roccia.  
+* Struttura: stratificazione se grande, laminazione se piccola.
+
+### Una classificazione basata sulle caratteristiche genetico-tessiturali [BMRL p5 fig1.3]
+
+|gruppo|controllato da|feature|esempi
+|-|-|-|-|
+|Rocce granulari (aka particellari)|gravità, meccanica dei fluidi|stratificate, porose|terrigene|
+|Rocce cristalline|processi chimici, regola delle fasi|non porose|salgemma|
+|Rocce biocostruite|secrezione biochimica|non stratificate, porose|
+|Rocce residuali|degradazione chimica/fisica|mal stratificate, possono essere porose|suoli, carbone|
+
+### Famiglie di rocce importanti [BMRL p6]
+
+* Rocce terrigene silicoclastiche
+* Rocce carbonatiche
+* Evaporiti
+* Rocce silicee
+
+### Componenti tessiturali delle rocce granulari [BMRL p7]
+
+**granuli** - **matrice** - **cemento**
+
+Nella fase iniziale di genesi della roccia ci sono i **granuli** che sono le unità elementari e che per gravità stanno uno sull'altro, gli spazi vuoti fra i granuli sono i **pori**; con il passare del tempo i pori si riempiono di materia (solida e più fine e.g. fango oppure allo stato fluido come acqua, gas petrolio) che compone la **matrice**; con il passare di altro tempo i pori possono venir eliminati (e.g. per costipamento) oppure essere riempiti da **cemento** (e.g. fasi cristalline precipitate chimicamente).  
+_Quindi il fattore tempo è importante e si collegherà al concetto di "maturità tessiturale"._
 
 ### Rocce miste
 
@@ -132,6 +163,7 @@ A metà strada ci sono le marne che sono composte in parte da minerali argillosi
 Poi ci sono le rocce intermedie:  
 calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argilla marnosa -> argilla. [MMD p107]
 
+\newpage
 
 ## Rocce metamorfiche
 
@@ -169,7 +201,7 @@ Grado di metamorfismo:
 Rocce citate (ordinate per grado di metamorfismo crescente), rocce madri acide/sialiche:  
 Ardesia (grana molto fine)  
 Fillade (grana da fine a media)  
-Scisto (grana da media a grossa)(i.e. scisti blu)  
+Scisto (grana da media a grossa)(e.g. scisti blu)  
 Gneiss  
 
 Rocce citate (ordinate per grado di metamorfismo crescente), rocce madri basiche/femiche,
@@ -248,7 +280,14 @@ Migmatite
 ## Bibliografia
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
+[BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
 [Q] quaderno nero  
+
+## Abbreviazioni
+
+aka = also known as = alias = sinonimo di  
+e.g. = exempli gratia = per esempio  
+
 
