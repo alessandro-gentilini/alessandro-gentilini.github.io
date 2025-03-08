@@ -261,9 +261,9 @@ _Determinata sia dal trasporto s.s. che anche dal moto in loco che i sedimenti h
 
 \newpage
 
-## Classificazione per le Areniti
+## Classificazione delle Areniti
 
-Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [PDF17 p32/34, è equivalente al seguente]:
+Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [quello in PDF17 p32/34 è equivalente al seguente]:
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_24.png)
 
@@ -318,7 +318,7 @@ Formazione di calcare concrezionato da acqua dolce:
 
 Il travertino presenta una evidente straterellatura accentuata da numerosi vacui allungati nel senso della stratificazione (quindi elevata porosità).
 
-## Granulometria per rocce carbonatiche
+## Granulometria delle rocce carbonatiche
 
 La dimensione dei granuli è un carattere tessiturale [BMRL p14].  
 
@@ -335,6 +335,12 @@ Alcuni esempi di nomi di rocce:
 * Calcari a coccoliti [BMRL p86 fig3.34]
 * Biocalcarenite
 * Calcarenite oolitica
+
+## Classificazione delle rocce carbonatiche
+
+Per le rocce carbonatiche si usa la classificazione di Dunham 1962, [quella in PDF29 p32/56 è equivalente al seguente]:
+
+![Tratto da [BMRL]](fig/BMRL_fig3_36.png)
 
 
 
@@ -466,7 +472,8 @@ Migmatite
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
-[PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche
+[PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
+[PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024
 [Q] quaderno nero  
 
 # Abbreviazioni
