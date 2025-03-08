@@ -58,9 +58,13 @@ Strumenti di diagnosi:
 * scala delle durezze di Mohs
 * comportamento reazione con acido
 
----
+\newpage
 
-Serie di Bowen (descrizione dei minerali visti nei campioni a mano)
+## Serie di Bowen
+
+Serie di Bowen, con descrizione dei minerali visti nei campioni a mano.
+
+Serie discontinua:
 
 |T xtal/°C|Minerale|Abito|Riflette?|Colore|
 |---------|---|--|-|-|
@@ -72,6 +76,8 @@ Serie di Bowen (descrizione dei minerali visti nei campioni a mano)
 ||Pirosseni|Piani|No|verde|
 |1200|Olivina|Compatta arrotondata||verde|
 
+Serie continua:
+
 |T xtal/°C|Minerale|Minerale serie continua|Colore Plagioclasio|
 |---------|--------|-----------------------|-------------------|
 |600-700  |Quarzo  |Plagioclasio Na/Albite |bianco lattiginoso |
@@ -81,6 +87,19 @@ Serie di Bowen (descrizione dei minerali visti nei campioni a mano)
 |         |Anfiboli|                       |                   |
 |         |Pirosseni|                      |                   |
 |1200     |Olivina|Plagioclasio Ca/Anortite|grigio|
+
+La stabilità chimica è in ordine decrescente [BMRL p14 tab2.2].  
+Il quarzo che si è cristallizzato a temperatura più bassa e in presenza di vapor acqueo è più stabile perché la sua "nascita" è più vicina alle condizioni ambientali tipiche della sedimentazione: freddo (_non in senso assoluto ma in relazione alla T xtal_) e umido [BMRL p14].
+
+|T xtal/°C|Minerale|Minerale serie continua|Stabilità chimica|
+|---------|--------|-----------------------|-------------------|
+|600-700  |Quarzo  |Plagioclasio Na/Albite |Alta               |
+|         |Muscovite|                      |                   |
+|         |K-feldspato/Ortoclasio|         |                   |
+|         |Biotite|                        |                   |
+|         |Anfiboli|                       |                   |
+|         |Pirosseni|                      |                   |
+|1200     |Olivina|Plagioclasio Ca/Anortite|Bassa              |
 
 \newpage
 
@@ -127,15 +146,15 @@ Strutture delle rocce effusive [Q p98]:
 
 \newpage
 
-## Rocce sedimentarie
+# Rocce sedimentarie
 
-### Composizione, tessitura, struttura [BMRL p3]
+## Composizione, tessitura, struttura [BMRL p3]
 
 * Composizione: di che materiale è fatto?  
 * Tessitura: distribuzione statistica delle dimensioni, forme degli elementi costituenti la roccia.  
 * Struttura: stratificazione se grande, laminazione se piccola.
 
-### Una classificazione basata sulle caratteristiche genetico-tessiturali [BMRL p5 fig1.3]
+## Una classificazione basata sulle caratteristiche genetico-tessiturali [BMRL p5 fig1.3]
 
 |gruppo|controllato da|feature|esempi
 |-|-|-|-|
@@ -144,7 +163,7 @@ Strutture delle rocce effusive [Q p98]:
 |Rocce biocostruite|secrezione biochimica (contro la gravità)|non stratificate, porose|
 |Rocce residuali|degradazione chimica/fisica|mal stratificate, possono essere porose|suoli, carbone|
 
-### Famiglie di rocce importanti [BMRL p6]
+## Famiglie di rocce importanti [BMRL p6]
 
 * Rocce terrigene silicoclastiche
 * Rocce carbonatiche
@@ -153,7 +172,7 @@ Strutture delle rocce effusive [Q p98]:
 
 \newpage
 
-### Componenti tessiturali delle rocce granulari [BMRL p7]
+## Componenti tessiturali delle rocce granulari [BMRL p7]
 
 **granuli** - **matrice** - **cemento**
 
@@ -167,7 +186,7 @@ Il limite tra impalcatura e matrice è, per quanto riguarda le dimensioni, relat
 
 ![Tratta da [BMRL]](fig/BMRL_fig1_5.png)
 
-|Tessitura|Ambiente di deposizione|
+|Tessitura|Ambiente di trasporto e/o deposizione|
 |-|-|
 |Grano-sostenuta|Alta energia|
 |Fango-sostenuta|Bassa energia|
@@ -177,7 +196,53 @@ Il limite tra impalcatura e matrice è, per quanto riguarda le dimensioni, relat
 |Terrigene silicoclastiche|Silt (aka limo) e argilla|Calcite e quarzo|
 |Carbonatiche|Fango carbonatico (aka micrite)|Calcite|
 
-### Rocce miste
+## Maturità composizionale [BMRL p14]
+
+Il sedimento maturo composizionalmente è quello che ha i minerali più stabili chimicamente e con maggio resistenza meccanica, e.g. quarzo.
+
+\newpage
+
+## Granulometria per rocce terrigene silicoclastiche
+
+La dimensione dei granuli è un carattere tessiturale [BMRL p.14].
+
+Rammentare che 1/16 mm = 6/100 mm = 60 um
+
+Grana|Sedimento sciolto|Sedimento litificato|
+|-|-|-|
+|2mm < grossa|ghiaia|Conglomerato (tondo) Breccia (spigoloso)|
+|1/16mm < media < 2mm|sabbia|Arenite|
+|fine < 1/16mm|argilla|Argillite|
+
+Grana|Sedimento sciolto|_Famiglia_|
+|-|-|-|
+|2mm < grossa|ghiaia|Ruditi|
+|1/16mm < media < 2mm|sabbia|Areniti|
+|fine < 1/16mm|argilla|Lutiti (aka Peliti)|
+
+### Grado di selezionamento
+
+Il grado di selezionamento (aka sorting) è una proprietà tessiturale [BMRL p.17] e si stima con la deviazione standard della dimensione dei granuli.
+
+|Deviazione standard|Grado di selezionamento|Esempi|
+|-|-|-|
+|Bassa|Alto|Sabbia di duna|
+|Media|Medio||
+|Alta|Basso|Depositi morenici da ghiacciaio, fiume in piena|
+
+![Tratto da [BMRL]](fig/BMRL_fig2_7.png)
+
+### Morfologia
+
+Angoloso/spigoloso vs arrotondato.
+
+![Tratto da [BMRL]](fig/BMRL_fig2_13.png)
+
+\newpage
+
+## Maturità tessiturale
+
+## Rocce miste
 
 Ad un estremo c'è calcare (rigido), all'estremo opposto c'è argilla (plastica).
 Anche calcilutiti ad un estremo e peliti all'estremo opposto.
@@ -187,7 +252,7 @@ calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argi
 
 \newpage
 
-## Rocce metamorfiche
+# Rocce metamorfiche
 
 Fissile - Fissilità  
 Clivaggio  
@@ -235,7 +300,7 @@ Migmatite
 
 \newpage
 
-## Campioni a mano 11 novembre 2024 (sedimentarie)
+# Campioni a mano 11 novembre 2024 (sedimentarie)
 
 ![Conglomerato perché i clasti sono arrotondati, la punta della biro indica la matrice, la prof ha detto che il cemento non si vede. I clasti non sono ben cerniti, a vista i più piccoli sono contenuti circa 10 volte nei più grandi.](2024-11-11_laboratorio_rocce/conglomerato_1.jpg)
 
@@ -245,7 +310,7 @@ Migmatite
 
 \newpage
 
-## Campioni a mano 25 novembre 2024 (sedimentarie)
+# Campioni a mano 25 novembre 2024 (sedimentarie)
 
 ![Argilla marnosa: reazione con HCl resta fango argilloso. Tenera dà frattura con angoli molto smussati. Colpita con il martello suona come "toc-toc".](2024-11-25_laboratorio_rocce/argilla_marnosa.jpg)
 
@@ -257,7 +322,7 @@ Migmatite
 
 \newpage
 
-## Campioni a mano 2 dicembre 2024 (sedimentarie)
+# Campioni a mano 2 dicembre 2024 (sedimentarie)
 
 ![Mudstone o wackestone perché il clasto composto dall'Ammonite è isolato, è immerso nel fango e non è a contatto con altri clasti.](2024-12-02_laboratorio_rocce/mudstone_wackestone_con_ammonite.jpg)
 
@@ -267,7 +332,7 @@ Migmatite
 
 \newpage
 
-## Campioni a mano 19 febbraio 2025 (metamorfiche)
+# Campioni a mano 19 febbraio 2025 (metamorfiche)
 
 ![Ardesia, clivaggio ardesiaco, grana fine, acida, grado metamorfico basso [BDA p101].](2025-02-19_laboratorio_rocce/ardesia.jpg)
 
@@ -299,7 +364,7 @@ Migmatite
 
 \newpage
 
-## Bibliografia
+# Bibliografia
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
@@ -307,7 +372,7 @@ Migmatite
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
 [Q] quaderno nero  
 
-## Abbreviazioni
+# Abbreviazioni
 
 aka = also known as = alias = sinonimo di  
 e.g. = exempli gratia = per esempio  
