@@ -177,7 +177,7 @@ Strutture delle rocce effusive [Q p98]:
 **granuli** - **matrice** - **cemento**
 
 Nella fase iniziale di genesi della roccia ci sono i **granuli** che sono le unità elementari e che per gravità stanno uno sull'altro, gli spazi vuoti fra i granuli sono i **pori**; con il passare del tempo i pori si riempiono di materia (solida e più fine e.g. fango oppure allo stato fluido come acqua, gas, petrolio) che compone la **matrice**; con il passare di altro tempo i pori possono venir eliminati (e.g. per costipamento) oppure essere riempiti da **cemento** (e.g. cemento costituito da fasi cristalline precipitate chimicamente).  
-_Quindi il fattore tempo è importante e si collegherà al concetto di "maturità tessiturale"._
+_Quindi il fattore tempo è importante e, insieme al fattore energia, si collegherà al concetto di "maturità tessiturale"._
 
 ![Tratta da [BMRL]](fig/BMRL_fig1_4.png)
 
@@ -221,6 +221,8 @@ Grana|Sedimento sciolto|_Famiglia_|
 |1/16mm < media < 2mm|sabbia|Areniti|
 |fine < 1/16mm|argilla|Lutiti (aka Peliti)|
 
+\newpage
+
 ### Grado di selezionamento
 
 Il grado di selezionamento (aka sorting) è una proprietà tessiturale [BMRL p17] e si stima con la deviazione standard della dimensione dei granuli.
@@ -232,6 +234,8 @@ Il grado di selezionamento (aka sorting) è una proprietà tessiturale [BMRL p17
 |Alta|Basso|Depositi morenici da ghiacciaio, fiume in piena|
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_7.png)
+
+\newpage
 
 ### Morfologia
 
@@ -254,6 +258,8 @@ _Determinata sia dal trasporto s.s. che anche dal moto in loco che i sedimenti h
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_18.png)
 
+\newpage
+
 ## Classificazione per le Areniti
 
 Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [PDF17 p32/34, è equivalente al seguente]:
@@ -262,11 +268,15 @@ Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastic
 
 La prof. non ha considerato il triangolo piccolo in basso a destra.
 
+\newpage
+
 ## Maturità tessiturale e composizionale per le Areniti
 
 La grovacca è una arenite meno matura.
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_28.png)
+
+\newpage
 
 ## Peliti
 
@@ -277,6 +287,7 @@ Qui sotto si vede l'evoluzione del sedimento fango verso la roccia pelite attrav
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_31.png)
 
+\newpage
 
 ## Rocce miste
 
