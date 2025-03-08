@@ -50,7 +50,7 @@ Suggerimenti uso lente a mano:
 
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
-* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].
+* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77]. I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].
 
 ---
 
@@ -317,6 +317,24 @@ Formazione di calcare concrezionato da acqua dolce:
 3) per l'azione indiretta di vegetali (muschi, alghe, erbe) viventi nelle acque i quali sottraggono CO2 precipitando CaCO3 sotto forma di incrostazioni.
 
 Il travertino presenta una evidente straterellatura accentuata da numerosi vacui allungati nel senso della stratificazione (quindi elevata porosità).
+
+## Granulometria per rocce carbonatiche
+
+La dimensione dei granuli è un carattere tessiturale [BMRL p14].  
+
+Rammentare che 1/16 mm = 6/100 mm = 60 um
+
+Grana|_Famiglia_|
+|-|-|
+|2mm < grossa|Calcirudite|
+|1/16mm < media < 2mm|Calcarenite|
+|fine < 1/16mm|Calcilutite|
+
+Alcuni esempi di nomi di rocce:
+
+* Calcari a coccoliti [BMRL p86 fig3.34]
+* Biocalcarenite
+* Calcarenite oolitica
 
 
 
