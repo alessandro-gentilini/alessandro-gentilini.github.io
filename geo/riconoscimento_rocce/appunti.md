@@ -49,7 +49,7 @@ Colore e composizione:
 Suggerimenti uso lente a mano:
 
 * lo stesso minerale va cercato con la lente in più punti del campione
-* attenzione ad oggetti "strani": potrebbero essere fossili
+* attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
 * Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].
 
 ---
@@ -297,6 +297,28 @@ Qui sotto si vede l'evoluzione del sedimento fango verso la roccia pelite attrav
 |Oolite|Inorganica|Lamine concentriche regolari|
 |Oncolite|Organica (alghe)|Lamine concentriche leggermente irregolari e ondulate|
 |Rodolite|Organiche (alghe rosse=rodo)|Vero e proprio scheletro|
+
+## Carbonati accresciuti in situ
+
+### Bioliti (Boundstone)
+
+Scogliere coralline: tutto l'insieme della costruzione carbonatica è sostenuto da organismi sedentari ancora nella posizione originaria di crescita.
+
+### Stromatoliti
+
+Le stromatoliti non sono scheletri algali ma strutture organo-sedimentarie; sono costituite da sedimento particellare (clastico) fine, disposto in sottili lamine piano-parallele o variamente ondulate.
+
+### Carbonati concrezionati: travertini
+
+Formazione di calcare concrezionato da acqua dolce:
+
+1) per rapida evaporazione di acqua di fiumi e cascate dove una parte dell'acqua è costituita da piccolissime goccioline.
+2) per lento sgocciolamento di acque sature di bicarbonato di calcio nelle grotte carsiche.
+3) per l'azione indiretta di vegetali (muschi, alghe, erbe) viventi nelle acque i quali sottraggono CO2 precipitando CaCO3 sotto forma di incrostazioni.
+
+Il travertino presenta una evidente straterellatura accentuata da numerosi vacui allungati nel senso della stratificazione (quindi elevata porosità).
+
+
 
 ## Rocce miste
 
