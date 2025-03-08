@@ -186,10 +186,10 @@ Il limite tra impalcatura e matrice è, per quanto riguarda le dimensioni, relat
 
 ![Tratta da [BMRL]](fig/BMRL_fig1_5.png)
 
-|Tessitura|Ambiente di trasporto e/o deposizione|
-|-|-|
-|Grano-sostenuta|Alta energia|
-|Fango-sostenuta|Bassa energia|
+|Tessitura|Ambiente di trasporto e/o deposizione|Termine per conglomerati/brecce|
+|-|-|-|
+|Grano-sostenuta|Alta energia|Clasto-sostenuta|
+|Fango-sostenuta|Bassa energia|Matrice-sostenuta|
 
 |Famiglia|Matrice tipica|Cemento tipico|
 |-|-|-|
@@ -204,7 +204,8 @@ Il sedimento maturo composizionalmente è quello che ha i minerali più stabili 
 
 ## Granulometria per rocce terrigene silicoclastiche
 
-La dimensione dei granuli è un carattere tessiturale [BMRL p.14].
+La dimensione dei granuli è un carattere tessiturale [BMRL p14].  
+Arenite è un termine tessiturale [BMRL p34].  
 
 Rammentare che 1/16 mm = 6/100 mm = 60 um
 
@@ -222,7 +223,7 @@ Grana|Sedimento sciolto|_Famiglia_|
 
 ### Grado di selezionamento
 
-Il grado di selezionamento (aka sorting) è una proprietà tessiturale [BMRL p.17] e si stima con la deviazione standard della dimensione dei granuli.
+Il grado di selezionamento (aka sorting) è una proprietà tessiturale [BMRL p17] e si stima con la deviazione standard della dimensione dei granuli.
 
 |Deviazione standard|Grado di selezionamento|Esempi|
 |-|-|-|
@@ -242,7 +243,7 @@ Angoloso/spigoloso vs arrotondato.
 
 ## Maturità tessiturale [BMRL p28]
 
-_Determinata sia dal trasporto s.s. che anche dal moto locale che i sedimenti hanno nell'ambiente di deposizione._
+_Determinata sia dal trasporto s.s. che anche dal moto in loco che i sedimenti hanno nell'ambiente di deposizione (per esempio rielaborazione lungo una spiaggia [BMRL p31])._
 
 |Stadio|Matrice|Selezionamento|Forma|
 |-|-|-|-|
@@ -252,6 +253,20 @@ _Determinata sia dal trasporto s.s. che anche dal moto locale che i sedimenti ha
 |Supermaturo|Assente|Alto|Arrotondato|
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_18.png)
+
+## Classificazione per le Areniti
+
+Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [PDF17 p32/34, è equivalente al seguente]:
+
+![Tratto da [BMRL]](fig/BMRL_fig2_24.png)
+
+La prof. non ha considerato il triangolo piccolo in basso a destra.
+
+## Maturità tessiturale e composizionale per le Areniti
+
+La grovacca è una arenite meno matura.
+
+![Tratto da [BMRL]](fig/BMRL_fig2_28.png)
 
 
 ## Rocce miste
@@ -382,6 +397,7 @@ Migmatite
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
+[PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche
 [Q] quaderno nero  
 
 # Abbreviazioni
