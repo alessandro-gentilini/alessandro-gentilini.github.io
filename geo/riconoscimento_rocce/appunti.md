@@ -64,6 +64,7 @@ Strumenti di diagnosi:
 
 * scala delle durezze di Mohs
 * comportamento reazione con acido
+* toccare con mano per sentire la ruvidezza
 
 \newpage
 
@@ -145,6 +146,7 @@ Consigli e avvertimenti per la stima visiva:
 
 Strutture delle rocce effusive [Q p98]:
 
+* criptocristallina
 * microcristallina
 * porfirica
 * vetrosa 
@@ -352,7 +354,7 @@ Per le rocce carbonatiche si usa la classificazione di Dunham 1962, [quella in P
 
 ![Tratto da [BMRL]](fig/BMRL_fig3_36.png)
 
-
+\newpage
 
 ## Rocce miste
 
@@ -361,6 +363,15 @@ Anche calcilutiti ad un estremo e peliti all'estremo opposto.
 A metà strada ci sono le marne che sono composte in parte da minerali argillosi, in parte da carbonati.
 Poi ci sono le rocce intermedie:  
 calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argilla marnosa -> argilla. [MMD p107]
+
+\newpage
+
+## Durezza Mohs e rocce sedimentarie
+
+|Roccia|Si segna con unghia?|
+|-|-|
+|Gesso|Sì|
+|Dolomia stromatolitica|No|
 
 \newpage
 
@@ -411,6 +422,12 @@ Serpentinite
 Migmatite  
 
 \newpage
+
+# Campioni a mano 4 novembre 2024 (ignee)
+
+* Riolite (struttura porfirica)
+* 
+
 
 # Campioni a mano 11 novembre 2024 (sedimentarie)
 
@@ -503,6 +520,16 @@ Migmatite
 ![Nodulo di selce, non è cristallino ma amorfo. Il nodulo di selce viene da depositi che erano ad una profondità inferiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/nodulo_di_selce_1.jpg)
 
 ![Nodulo di selce, non è cristallino ma amorfo. Il nodulo di selce viene da depositi che erano ad una profondità inferiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/nodulo_di_selce_2.jpg)
+
+\newpage
+
+# Campioni a mano 16 dicembre 2024 (sedimentarie)
+
+* Gesso selenitico
+* Gesso nodulare
+* Gesso balatino
+* Gesso fibroso
+* Il talco non c'è ad oggi nel laboratorio rocce.
 
 \newpage
 
