@@ -182,10 +182,14 @@ D'altra parte Perkins scrive:
 
 ## Lave
 
-|Tipo|Chimismo|Reologia|
-|-|-|-|
-|**F**emico|Basico|**F**luido|
-|Sialico|Acido|Viscoso|
+|Tipo|Chimismo|Reologia|Esempio di roccia
+|-|-|-|-|
+|**F**emico|**Bas**ico|**F**luido|**Bas**alto|
+|Sialico|Acido|Viscoso|Ossidiana|
+
+L'ossidiana è fortemente sialica, vedi [Q p97].
+
+\newpage
 
 # Rocce sedimentarie
 
@@ -463,12 +467,15 @@ Migmatite
 * Riolite porfirica vs porfido riolitico.
 * Il basalto non ha i fenocristalli, il colore scuro è dato da minerali femici.
 * Basalto colonnare, a sezione esagonale.
-* Pillow lava.
+* Pillow lava aka lave a cuscino (eruzione di vulcano sottomarino, 3km di profondità, la lava rotola ed assume forma rotondeggiante).
 * Zeoliti con minerali bianchi che non sono plagioclasi.
 * Vulcanoclastiti.
-* Pomice leggera perché porosa (si è liberato tanto gas), non si riconoscono minerali [Q p97].
-* Ossidiana, si è liberato poco gas, è molto viscosa [Q p97].
+* Pomice leggera perché porosa (si è liberato tanto gas), non si riconoscono minerali [Q p97], bianca ricorda sialica [Q p97].
+* Ossidiana, si è liberato poco gas, è molto viscosa [Q p97], ha struttura tagliente ed amorfa, è vetrosa, è fortemente sialica.
 * Ignimbrite sono i depositi da nube ardente [MMD p89].
+* Lava scoriacea, bollosità. Le bolle indicano che ha degassato. È viscosa.
+* Lava con struttura a corda è **f**luida quindi **f**emica quindi tipicamente basalto.
+* Vulcanoclastite non è una pomice.
 
 # Campioni a mano 11 novembre 2024 (sedimentarie)
 
