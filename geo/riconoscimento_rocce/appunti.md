@@ -4,6 +4,22 @@ author: "Appunti di Alessandro Gentilini"
 date: "9 marzo 2025"
 ---
 
+# Suggerimenti uso lente a mano
+
+* lo stesso minerale va cercato con la lente in più punti del campione
+* attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
+* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77]. I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].
+
+# Strumenti di diagnosi
+
+* scala delle durezze di Mohs
+* comportamento reazione con acido
+* toccare con mano per sentire la ruvidezza
+
+# Aiuti nel riconoscimento dei minerali
+
+* "Il quarzo non sfalda": se muovendo il campione si vede riflessione della luce su ampia superficie allora la luce è riflessa da un piano di sfaldatura ma il quarzo non si sfalda e quindi quella riflessione non può indicare presenza di quarzo, vedi [Q p95].
+
 # Rocce ignee
 Struttura vs tessitura
 
@@ -24,7 +40,7 @@ Struttura [PDF10 p22/45]:
 |---------|----------------|
 |Olocristallina|Diagramma QAP per rocce intrusive|
 |Porfirica|Diagramma QAP per rocce effusive, ignorando la pasta di fondo se non si vedono cristalli, quindi contando solo i fenocristalli|
-|Afirica|Diagramma QAP per rocce effusive: attenzione ad eventuali microcristalli chiari!|
+|Afirica|Diagramma QAP per rocce effusive: attenzione ad eventuali cristalli piccoli e chiari!|
 |Amorfa|TODO|
 
 ---
@@ -49,22 +65,6 @@ Colore e composizione:
 
 * tipicamente scuri i minerali femici
 * tipicamente chiari i minerali sialici
-
----
-
-Suggerimenti uso lente a mano:
-
-* lo stesso minerale va cercato con la lente in più punti del campione
-* attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
-* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77]. I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].
-
----
-
-Strumenti di diagnosi:
-
-* scala delle durezze di Mohs
-* comportamento reazione con acido
-* toccare con mano per sentire la ruvidezza
 
 \newpage
 
@@ -113,7 +113,8 @@ Il quarzo che si è cristallizzato a temperatura più bassa e in presenza di vap
 
 ## Rocce intrusive o plutoniche
 
-### Classificazione con diagramma QAP intrusive
+### Classificazione con diagramma QAP intrusive/plutoniche
+**N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).  
 Si basa sulla stima dei componenti Q, A, P, M. [BDA p47] e dell'indice di colore IC.  
 Q = Quarzo  
 A = Alkali Feldspati  
@@ -134,11 +135,14 @@ Note sull'indice di colore:
 
 * IC alto suggerisce P>A, quindi regione dello schema vicina a P. [BDA p47 fig2.19] 
 
-
 Consigli e avvertimenti per la stima visiva:
 
 * se quarzo "salta all'occhio" allora Q>20%
 * attenzione al rischio di sovrastimare i minerali scuri/femici.
+
+\newpage
+
+![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_4.png)
 
 \newpage
 
@@ -152,6 +156,27 @@ Strutture delle rocce effusive [Q p98]:
 * vetrosa 
 * clastica 
 * scoriacea
+
+### Classificazione con diagramma QAP effusive/vulcaniche
+**N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).  
+
+Verbatim dagli appunti [Q p96]:
+
+> "Roccia nera a grana fine microcristallina verosimilmente è un basalto, ma i cristalli bianchi se ci sono vanno al 100% di plagioclasio perché il nero non si calcola!"
+
+> "Rosa tutta microcristallina non sarebbe basalto!"
+
+> "Ma se è nera con dei puntini bianchi, che non sono quarzo, il nero è il femico e va tutto nei plagioclasi!"
+
+_Quindi come schema di classificazione: se la roccia è a grana molto fine ed è tutta nera posso dire che è un basalto, se invece si vedono dei piccoli fenocristalli chiari va capito se sono quarzo oppure plagioclasio e di conseguenza si usa il diagramma QAP._
+
+D'altra parte Perkins scrive:
+
+> "In the field, when we do not have detailed chemical or mineralogical information, we often call pink volcanic rocks rhyolite, white ones andesite, and darker colored rocks basalt."
+
+\newpage
+
+![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_11.png)
 
 \newpage
 
@@ -425,9 +450,13 @@ Migmatite
 
 # Campioni a mano 4 novembre 2024 (ignee)
 
-* Riolite (struttura porfirica)
-* 
-
+* Riolite, ha struttura porfirica.
+* Trachite ha struttura porfirica.
+* Andesite.
+* Riolite porfirica vs porfido riolitico.
+* Il basalto non ha i fenocristalli, il colore scuro è dato da minerali femici.
+* Basalto colonnare, a sezione esagonale.
+* Pillow lava.
 
 # Campioni a mano 11 novembre 2024 (sedimentarie)
 
@@ -587,7 +616,10 @@ Migmatite
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
+[IUGS_igneous]  
+[KP]  Capire la terra, Bologna, .  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
+[Perkins]  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
 [PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
 [PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024
