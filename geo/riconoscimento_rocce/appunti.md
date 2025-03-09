@@ -411,6 +411,38 @@ calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argi
 
 \newpage
 
+## Classificazione proposta da Venturini
+
+1) Sono presenti evidenze originate da deformazione? Esempi: fratture, superfici di faglie, pieghe, ecc.  
+Tali superfici sono rivestite di minerali di nuova formazione come calcite o quarzo?  
+Sì: se sì allora vanno riconosciuti e non considerati per la classificazione della roccia perché acquisiti successivamente alla deposizione e litificazione.
+
+2) È omogeneo per tessitura/composizione?  
+No: se non lo è allora vanno riconosciuti e classificati i diversi tipi di roccia presenti.
+Un conglomerato è omogeneo anche se i clasti che lo compongono sono di composizione diversa; diventa non omogeneo se la granulometria cambia e per esempio diventa arenitica.
+
+3) È clastico?  
+    - Sì  
+        1) individuare granulometria più rappresentativa  
+        2) eventuale granulometria subordinata (bimodale)  
+        3) matrice? Assente, scarsa, media, abbondante  
+        4) composizione cemento? Carbonatico oppure siliceo
+    - No  
+        1) fossili
+        2) chimica
+        3) organica (carbon fossile, ambra, bitume)
+    - Forse  
+        1) < 1/256mm: granulometria molto fine, roccia molto compatta, serve microscopio perché la lente a mano non è sufficiente.
+
+|Effervescenza? Compatta/polverizzata|Si incide con acciaio?|Descrizione breve|Roccia
+|-|-|-|-|
+|No/No|Sì|Polveri fillosilicatiche cementate|argilliti|
+|Sì/-|Sì con sforzo|Polveri calcaree cementate|calcari micritici|
+|No/Sì|Sì a fatica|Con lente struttura microcristallina piuttosto che clastica|dolomie micritiche|
+|No/-|No|Con lente struttura criptocristallina|selci|
+
+\newpage
+
 # Rocce metamorfiche
 
 Fissile - Fissilità  
