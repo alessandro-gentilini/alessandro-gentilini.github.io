@@ -1,0 +1,1 @@
+pandoc appunti.md -H figure_placement.tex -o appunti.pdf

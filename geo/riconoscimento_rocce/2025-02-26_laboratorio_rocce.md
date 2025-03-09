@@ -1,12 +1,13 @@
 # Laboratorio rocce 26 febbraio 2025
 
-Roccia sedimentaria  
+Roccia sedimentaria: Dolomia stromatolitica.  
 La tessitura è omogenea a grana fine.  
 È preferibile dire che qui le strutture sono le _laminazioni_ e riservare il termine _stratificazioni_ al caso in cui siano più grandi.  
+Le laminazioni sono dovute alle stromatoliti.
 
-![Roccia sedimentaria.](2025-02-26_laboratorio_rocce/IMG_7274.jpg)  
+![Roccia sedimentaria: Dolomia stromatolitica.](2025-02-26_laboratorio_rocce/IMG_7274.jpg)  
 
-![Roccia sedimentaria.](2025-02-26_laboratorio_rocce/IMG_7275.jpg)
+![Roccia sedimentaria: Dolomia stromatolitica.](2025-02-26_laboratorio_rocce/IMG_7275.jpg)
 
 \newpage
 

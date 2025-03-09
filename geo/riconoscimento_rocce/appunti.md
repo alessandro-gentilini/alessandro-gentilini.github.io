@@ -1,3 +1,9 @@
+---
+title: "Geologia e Geografia - Riconoscimento rocce - A.A. 2024-25"
+author: "Appunti di Alessandro Gentilini"
+date: "9 marzo 2025"
+---
+
 # Rocce ignee
 Struttura vs tessitura
 
@@ -153,7 +159,9 @@ Strutture delle rocce effusive [Q p98]:
 
 * Composizione: di che materiale è fatto?  
 * Tessitura: distribuzione statistica delle dimensioni, forme degli elementi costituenti la roccia.  
-* Struttura: stratificazione se grande, laminazione se piccola.
+* Struttura: stratificazione se grande, laminazione se piccola (< 1cm, vedi [Q p120]).  
+Struttura: nodulo (esempio calcare nodulare aka rosso ammonitico, vedi [Q p120]).  
+Struttura: vacuoli, vedi [Q p122]
 
 ## Una classificazione basata sulle caratteristiche genetico-tessiturali [BMRL p5 fig1.3]
 
@@ -199,7 +207,7 @@ Il limite tra impalcatura e matrice è, per quanto riguarda le dimensioni, relat
 
 ## Maturità composizionale [BMRL p14]
 
-Il sedimento maturo composizionalmente è quello che ha i minerali più stabili chimicamente e con maggio resistenza meccanica, e.g. quarzo.
+Il sedimento maturo composizionalmente è quello che ha i minerali più stabili chimicamente e con maggior resistenza meccanica, e.g. quarzo.
 
 \newpage
 
@@ -318,6 +326,8 @@ Formazione di calcare concrezionato da acqua dolce:
 
 Il travertino presenta una evidente straterellatura accentuata da numerosi vacui allungati nel senso della stratificazione (quindi elevata porosità).
 
+\newpage
+
 ## Granulometria delle rocce carbonatiche
 
 La dimensione dei granuli è un carattere tessiturale [BMRL p14].  
@@ -416,11 +426,19 @@ Migmatite
 
 ![Argilla marnosa: reazione con HCl resta fango argilloso. Tenera dà frattura con angoli molto smussati. Colpita con il martello suona come "toc-toc".](2024-11-25_laboratorio_rocce/argilla_marnosa.jpg)
 
+\newpage
+
 ![Calcare marnoso: reazione con HCl resta poco residuo fangoso. Dà frattura concoide (che dà conche) ed è dura e spigolosa.](2024-11-25_laboratorio_rocce/calcare_marnoso.jpg)
+
+\newpage
 
 ![Calcare micritico aka calcilutite: reazione con HCl non lascia residuo fangoso. Ha spigoli ancora più vivi. Colpita con il martello suona come "plin-plin".](2024-11-25_laboratorio_rocce/calcare_micritico.jpg)
 
+\newpage
+
 ![????????????Calcare fossilifero????????](2024-11-25_laboratorio_rocce/IMG_6322.jpg)
+
+\newpage
 
 \newpage
 
@@ -428,9 +446,63 @@ Migmatite
 
 ![Mudstone o wackestone perché il clasto composto dall'Ammonite è isolato, è immerso nel fango e non è a contatto con altri clasti.](2024-12-02_laboratorio_rocce/mudstone_wackestone_con_ammonite.jpg)
 
+\newpage
+
 ![Calcare a oncoliti.](2024-12-02_laboratorio_rocce/oncolite.jpg)
 
+\newpage
+
 ![Calcare a rodoliti.](2024-12-02_laboratorio_rocce/rodolite.jpg)
+
+\newpage
+
+# Campioni a mano 9 dicembre 2024 (sedimentarie)
+
+![Calcare nodulare, Ammonitico veronese. Secondo Dunham è Wackestone, vedi anche [SN26 - Calcare nodulare - Atlante di petrografia università di Torino](https://www.atlantepetro.unito.it/page-1068ce00.html?xsl=tavole&xml=macro.Sedimentarie4&tavola=SN26). Questa è la faccia non levigata, le due foto successive sono facce levigate.  Vedi [Q p120].](2024-12-09_laboratorio_rocce/calcare_nodulare_1.jpg)
+
+![Calcare nodulare, Ammonitico veronese. Faccia levigata. Vedi [Q p120].](2024-12-09_laboratorio_rocce/calcare_nodulare_2.jpg)
+
+![Calcare nodulare, Ammonitico veronese. Faccia levigata.  Vedi [Q p120].](2024-12-09_laboratorio_rocce/calcare_nodulare_3.jpg)
+
+\newpage
+
+![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica. Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_1.jpg)
+
+![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica. Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_2.jpg)
+
+\newpage
+
+![Travertino. È un carbonato continentale ed è idrotermale. Vedi [Q p122].](2024-12-09_laboratorio_rocce/travertino_1.jpg)
+
+![Travertino. È un carbonato continentale ed è idrotermale. Vedi [Q p122].](2024-12-09_laboratorio_rocce/travertino_2.jpg)
+
+![Travertino. È un carbonato continentale ed è idrotermale. Vedi [Q p122].](2024-12-09_laboratorio_rocce/travertino_3.jpg)
+
+\newpage
+
+![Concrezione calcarea, i vacuoli sono caratteristiche strutturali. Vedi [Q p122]. Concrezione = incrostazione minerale depositata chimicamente da acque superficiali o idrotermali [MMD p35.]](2024-12-09_laboratorio_rocce/concrezione_calcarea.jpg)
+
+\newpage
+
+![Nodulo di silice o selce. Vedi [Q p123].](2024-12-09_laboratorio_rocce/nodulo_di_silice.jpg)
+
+\newpage
+
+![Silice intercalata ad altri sedimenti. La silice è la parte grigio scuro. Vedi [Q p123].](2024-12-09_laboratorio_rocce/silice_intercalata_con_altri_sedimenti_1.jpg)
+
+![Silice intercalata ad altri sedimenti. La silice è la parte grigio scuro. Vedi [Q p123].](2024-12-09_laboratorio_rocce/silice_intercalata_con_altri_sedimenti_2.jpg)
+
+\newpage
+
+![Diaspro, è siliceo e non carbonatico. Il materiale bianco costituisce vene carbonatiche ed è calcite [Q p124]. Il diaspro è microcristallino. Il diaspro viene da depositi che erano ad una profondità superiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/diaspro_1.jpg)
+
+![Diaspro, è siliceo e non carbonatico. Il materiale bianco costituisce vene carbonatiche ed è calcite [Q p124]. Il diaspro è microcristallino. Il diaspro viene da depositi che erano ad una profondità superiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/diaspro_2.jpg)
+
+\newpage
+
+![Nodulo di selce, non è cristallino ma amorfo. Il nodulo di selce viene da depositi che erano ad una profondità inferiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/nodulo_di_selce_1.jpg)
+
+![Nodulo di selce, non è cristallino ma amorfo. Il nodulo di selce viene da depositi che erano ad una profondità inferiore alla Carbonate Compensation Depth.](2024-12-09_laboratorio_rocce/nodulo_di_selce_2.jpg)
 
 \newpage
 
@@ -438,9 +510,15 @@ Migmatite
 
 ![Ardesia, clivaggio ardesiaco, grana fine, acida, grado metamorfico basso [BDA p101].](2025-02-19_laboratorio_rocce/ardesia.jpg)
 
+\newpage
+
 ![Fillade, viva lucentezza e scistosità, grana da fine a media, acida, grado metamorfico basso [BDA p101].](2025-02-19_laboratorio_rocce/fillade.jpg)
 
+\newpage
+
 ![Scisto, acida.](2025-02-19_laboratorio_rocce/scisto.jpg)
+
+\newpage
 
 ![Scisto blu.](2025-02-19_laboratorio_rocce/scisto_blu_1.jpg)
 
@@ -450,17 +528,29 @@ Migmatite
 
 ![Scisto blu.](2025-02-19_laboratorio_rocce/scisto_blu_4.jpg)
 
+\newpage
+
 ![Gneiss, acida, grado metamorfico alto.](2025-02-19_laboratorio_rocce/gneiss.jpg)
+
+\newpage
 
 ![?????????????Eclogite, nessuna banda e nessun minerale orientato ma invece granuli, granato femico.](2025-02-19_laboratorio_rocce/eclogite.jpg)
 
+\newpage
+
 ![?????????????Serpentinite.](2025-02-19_laboratorio_rocce/eclogite.jpg)
 
+\newpage
+
 ![Marmo, la roccia madre è carbonatica, la calcite non si trasforma in altri minerali. Struttura saccaroide.](2025-02-19_laboratorio_rocce/marmo.jpg)
+
+\newpage
 
 ![Quarzite, la roccia madre era quarzarenite, il quarzo non si trasforma in altri minerali.](2025-02-19_laboratorio_rocce/quarzite_1.jpg)
 
 ![Quarzite, la roccia madre era quarzarenite, il quarzo non si trasforma in altri minerali.](2025-02-19_laboratorio_rocce/quarzite_2.jpg)
+
+\newpage
 
 ![Migmatite, è il prodotto della fusione parziale detta anatessi.](2025-02-19_laboratorio_rocce/migmatite.jpg)
 
