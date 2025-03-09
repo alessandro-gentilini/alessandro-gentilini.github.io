@@ -411,7 +411,7 @@ calcare -> calcare marnoso -> marna calcarea -> marna -> marna argillosa -> argi
 
 \newpage
 
-## Classificazione proposta da Venturini
+## Classificazione proposta in [Venturini p17]
 
 1) Sono presenti evidenze originate da deformazione? Esempi: fratture, superfici di faglie, pieghe, ecc.  
 Tali superfici sono rivestite di minerali di nuova formazione come calcite o quarzo?  
@@ -433,6 +433,10 @@ Un conglomerato è omogeneo anche se i clasti che lo compongono sono di composiz
         3) organica (carbon fossile, ambra, bitume)
     - Forse  
         1) < 1/256mm: granulometria molto fine, roccia molto compatta, serve microscopio perché la lente a mano non è sufficiente.
+
+\newpage
+
+Se alla domanda 3) si è risposto "forse" allora va considerata la tabella seguente:
 
 |Effervescenza? Compatta/polverizzata|Si incide con acciaio?|Descrizione breve|Roccia
 |-|-|-|-|
@@ -490,6 +494,30 @@ Serpentinite
 Migmatite  
 
 ![Cortesia di R. Venturoli.](fig/PHOTO-2025-02-19-21-10-59.jpg)
+
+\newpage
+
+## Classificazione proposta in [Venturini p190] e a cura di G. Vignaroli
+
+Tessitura:  
+- Isotropa  
+    - Granulare  
+        - Grossolana  
+            - **Quarzite**  
+            - **Marmo**  
+        - Fine  
+            - **Eclogite**  
+            - **Anfibolite**  
+            - **Serpentinite**  
+- Anisotropa  
+    - Foliata  
+        - Superfici lisce, levigate, planari, granulometria fine  
+            - Opaca -> **Slate**  
+            - Riflettente -> **Fillade**  
+        - Superfici irregolari, granulometria grossolana  
+            - **Scisto**  
+    - Alternanza mineralogiche in bande chiare e scure, tessitura porfiroblastica  
+        - **Gneiss**  
 
 \newpage
 
