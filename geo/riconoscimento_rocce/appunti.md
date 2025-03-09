@@ -500,7 +500,8 @@ Migmatite
 ## Classificazione proposta in [Venturini p190] e a cura di G. Vignaroli
 
 Tessitura:  
-- Isotropa  
+
+* Isotropa  
     - Granulare  
         - Grossolana  
             - **Quarzite**  
@@ -509,7 +510,7 @@ Tessitura:
             - **Eclogite**  
             - **Anfibolite**  
             - **Serpentinite**  
-- Anisotropa  
+* Anisotropa  
     - Foliata  
         - Superfici lisce, levigate, planari, granulometria fine  
             - Opaca -> **Slate**  
