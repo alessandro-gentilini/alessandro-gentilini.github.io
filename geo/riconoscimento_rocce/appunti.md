@@ -180,6 +180,13 @@ D'altra parte Perkins scrive:
 
 \newpage
 
+## Lave
+
+|Tipo|Chimismo|Reologia|
+|-|-|-|
+|**F**emico|Basico|**F**luido|
+|Sialico|Acido|Viscoso|
+
 # Rocce sedimentarie
 
 ## Composizione, tessitura, struttura [BMRL p3]
@@ -457,6 +464,11 @@ Migmatite
 * Il basalto non ha i fenocristalli, il colore scuro è dato da minerali femici.
 * Basalto colonnare, a sezione esagonale.
 * Pillow lava.
+* Zeoliti con minerali bianchi che non sono plagioclasi.
+* Vulcanoclastiti.
+* Pomice leggera perché porosa (si è liberato tanto gas), non si riconoscono minerali [Q p97].
+* Ossidiana, si è liberato poco gas, è molto viscosa [Q p97].
+* Ignimbrite sono i depositi da nube ardente [MMD p89].
 
 # Campioni a mano 11 novembre 2024 (sedimentarie)
 
@@ -512,9 +524,9 @@ Migmatite
 
 \newpage
 
-![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica. Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_1.jpg)
+![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica (precipitazione biochimica da parte di alghe [MMD p176]). Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_1.jpg)
 
-![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica. Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_2.jpg)
+![Dolomia stromatolitica. Le laminazioni sono caratteristiche strutturali di origine biologica (precipitazione biochimica da parte di alghe [MMD p176]). Vedi [Q p121].](2024-12-09_laboratorio_rocce/dolomia_stromatolitica_2.jpg)
 
 \newpage
 
