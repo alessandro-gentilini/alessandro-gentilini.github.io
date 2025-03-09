@@ -628,10 +628,10 @@ Migmatite
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
-[IUGS_igneous]  
-[KP]  Capire la terra, Bologna, .  
+[IUGS_igneous] Le Maitre er alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
+[KP]  Klein et Philpotts, "Mineralogia e Petrografia", Bologna, 2018.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
-[Perkins]  
+[Perkins] Perkins, "Mineralogy", https://opengeology.org/Mineralogy/, 2022.  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
 [PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
 [PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024
