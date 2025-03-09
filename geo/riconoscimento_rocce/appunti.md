@@ -457,6 +457,8 @@ Serpentinite
 
 Migmatite  
 
+![Cortesia di R. Venturoli.](fig/PHOTO-2025-02-19-21-10-59.jpg)
+
 \newpage
 
 # Campioni a mano 4 novembre 2024 (ignee)
@@ -643,6 +645,7 @@ Migmatite
 [PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
 [PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024
 [Q] quaderno nero  
+[Venturini] Venturini, "Rilevamento geologico", Bologna, 2023.
 
 # Abbreviazioni
 
