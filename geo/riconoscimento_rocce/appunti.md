@@ -8,7 +8,11 @@ date: "9 marzo 2025"
 
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
-* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77]. I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].
+* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].  
+I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].  
+Per maggiore chiarezza, la normale lente a 10-12 ingrandimenti che si usa in campagna non permette il riconoscimento di particelle al di sotto dei 31 micron [GURI p173].  
+Personalmente con la mia lente "Belomo 10x" riesco ad apprezzare 25 micron (provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
+
 
 # Strumenti di diagnosi
 
@@ -343,6 +347,10 @@ Qui sotto si vede l'evoluzione del sedimento fango verso la roccia pelite attrav
 |Oolite|Inorganica|Lamine concentriche regolari|
 |Oncolite|Organica (alghe)|Lamine concentriche leggermente irregolari e ondulate|
 |Rodolite|Organiche (alghe rosse=rodo)|Vero e proprio scheletro|
+
+![Tratto da [Coe]](fig/Coe_figA6_10.png)
+
+\newpage
 
 ## Carbonati accresciuti in situ
 
@@ -698,6 +706,8 @@ Tessitura:
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
+[Coe] Coe, "Geological Field Techniques", Milton Keynes, 2010.  
+[GURI] CNR, "Carta geologica d'Italia - 1:50000 - Guida al rilevamento", Roma, 1992.  
 [IUGS_igneous] Le Maitre er alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
 [KP]  Klein et Philpotts, "Mineralogia e Petrografia", Bologna, 2018.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
