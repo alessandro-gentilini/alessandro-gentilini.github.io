@@ -161,6 +161,8 @@ Consigli e avvertimenti per la stima visiva:
 * se quarzo "salta all'occhio" allora Q>20%
 * attenzione al rischio di sovrastimare i minerali scuri/femici.
 
+**N.B.**: il diagramma per Q<20% e P/(A+P)>90% indica due rocce: diorite e gabbro ma la diorite ha un colore chiaro mentre il gabbro ha un colore verde scuro.
+
 \newpage
 
 ![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_4.png)
@@ -194,6 +196,8 @@ _Quindi come schema di classificazione: se la roccia è a grana molto fine ed è
 D'altra parte Perkins scrive:
 
 > "In the field, when we do not have detailed chemical or mineralogical information, we often call pink volcanic rocks rhyolite, white ones andesite, and darker colored rocks basalt."
+
+**N.B.**: il diagramma per Q<20% e P/(A+P)>90% indica due rocce: andesite e basalto ma l'andesite ha aspetto diverso dal basalto, in particolare il basalto è più scuro (vedi anche qui sopra quanto scritto da Perkins).
 
 \newpage
 
