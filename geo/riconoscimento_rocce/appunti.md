@@ -224,7 +224,7 @@ L'ossidiana è fortemente sialica, vedi [Q p97].
 * Tessitura: distribuzione statistica delle dimensioni, forme degli elementi costituenti la roccia.  
 * Struttura: stratificazione se grande, laminazione se piccola (< 1cm, vedi [Q p120]).  
 Struttura: nodulo (esempio calcare nodulare aka rosso ammonitico, vedi [Q p120]).  
-Struttura: vacuoli, vedi [Q p122]
+Struttura: vacuoli (esempio travertino, vedi [Q p122]).
 
 ## Una classificazione basata sulle caratteristiche genetico-tessiturali [BMRL p5 fig1.3]
 
