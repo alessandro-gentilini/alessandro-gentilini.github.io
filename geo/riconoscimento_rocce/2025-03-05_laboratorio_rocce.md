@@ -8,6 +8,8 @@ Strati compatti ed omogenei di colore bianco alternati a strati di frammenti lit
 
 La prof ha detto che la scalfitura con unghia porta a classificare la roccia come gesso; ha poi spiegato che negli ambienti evaporitici si può formare sia il gesso con i caratteristici cristalli grandi e parzialmente trasparenti, sia il gesso in questa forma.
 
+Assomiglia a "successione gessoso-dolomitica, formazione a Bellerophon" rappresentata in figura 1.90 a pag. 57 di Venturini, "Rilevamento geologico", 2023, Bologna.
+
 ![Gesso.](2025-03-05_laboratorio_rocce/gesso.jpg)
 
 \newpage

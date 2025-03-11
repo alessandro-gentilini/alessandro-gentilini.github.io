@@ -17,12 +17,17 @@ Personalmente con la mia lente "Belomo 10x" riesco ad apprezzare 25 micron (prov
 # Strumenti di diagnosi
 
 * scala delle durezze di Mohs
-* comportamento reazione con acido
-* toccare con mano per sentire la ruvidezza
+* comportamento reazione con acido HCl diluito
+* toccare con mano per sentire la ruvidezza (e.g. argillite è molto liscia al tatto mentre pelite è moderatamente ruvida [Venturini p17]). Al tocco liscia, probabilmente non si vedranno i granuli. Al tocco ruvida probabilmente si vedranno i granuli con lente
+* porosità
 
 # Aiuti nel riconoscimento dei minerali
 
 * "Il quarzo non sfalda": se muovendo il campione si vede riflessione della luce su ampia superficie allora la luce è riflessa da un piano di sfaldatura ma il quarzo non si sfalda e quindi quella riflessione non può indicare presenza di quarzo, vedi [Q p95].
+
+# Comparatore visuale per stime di proporzioni
+
+![Tratto da [Coe]](fig/Coe_figA1_1.png)
 
 # Rocce ignee
 Struttura vs tessitura
@@ -67,8 +72,8 @@ Variabilità della dimensione dei cristalli:
 
 Colore e composizione:
 
-* tipicamente scuri i minerali femici
-* tipicamente chiari i minerali sialici
+* tipicamente scuri i minerali femici, aka mafici (Mg e Fe)
+* tipicamente chiari i minerali sialici 
 
 \newpage
 
@@ -113,6 +118,18 @@ Il quarzo che si è cristallizzato a temperatura più bassa e in presenza di vap
 |         |Pirosseni|                      |                   |
 |1200     |Olivina|Plagioclasio Ca/Anortite|Bassa              |
 
+La seguente tabella è [GJ Tab4.1 p101].
+
+|T xtal/°C|Minerale|Aggettivo|
+|---------|--------|-----------------------|
+|600-700  |Quarzo  |Sialico|
+|         |Muscovite|Sialico               |
+|         |K-feldspato/Ortoclasio|Sialico         |
+|         |Biotite|Femico=Mafico          |
+|         |Anfiboli|Femico=Mafico          |
+|         |Pirosseni|Femico=Mafico          |
+|1200     |Olivina|Femico=Mafico          |
+
 \newpage
 
 ## Rocce intrusive o plutoniche
@@ -120,9 +137,9 @@ Il quarzo che si è cristallizzato a temperatura più bassa e in presenza di vap
 ### Classificazione con diagramma QAP intrusive/plutoniche
 **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).  
 Si basa sulla stima dei componenti Q, A, P, M. [BDA p47] e dell'indice di colore IC.  
-Q = Quarzo  
-A = Alkali Feldspati  
-P = Plagioclasio  
+Q = Quarzo (grigio vitreo)  
+A = Alkali Feldspati (rosa)  
+P = Plagioclasio (bianco lattiginoso)  
 M = Minerali femici (tipicamente di colore scuro e.g. nero, verdone).
 
 $IC=(scuri)/(chiari+scuri)$ espresso in percentuale [KP p291]
@@ -313,7 +330,7 @@ _Determinata sia dal trasporto s.s. che anche dal moto in loco che i sedimenti h
 
 ## Classificazione delle Areniti
 
-Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [quello in PDF17 p32/34 è equivalente al seguente]:
+Per classificare le areniti, che sono rocce sedimentarie terrigene silicoclastiche delle granulometria delle sabbie, si usa il diagramma di Folk 1954 [quello in PDF17 p32/34 è equivalente al seguente][Venturini Fig1.13 p17 è equivalente al seguente]:
 
 ![Tratto da [BMRL]](fig/BMRL_fig2_24.png)
 
@@ -546,6 +563,7 @@ Tessitura:
 * Ignimbrite sono i depositi da nube ardente [MMD p89].
 * Lava scoriacea, bollosità. Le bolle indicano che ha degassato. È viscosa.
 * Lava con struttura a corda è **f**luida quindi **f**emica quindi tipicamente basalto.
+* Bollosità e vacui sono segno di magmi con abbondanti componenti volatili [Carloni p.33].
 * Vulcanoclastite non è una pomice.
 
 # Campioni a mano 11 novembre 2024 (sedimentarie)
@@ -706,9 +724,11 @@ Tessitura:
 
 [BDA] D'Argenio et alii, "Introduzione allo studio delle rocce", Torino, 1994.  
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
+[Carloni] Carloni, "Litologia e geologia applicate all'ingegneria civile", Bologna, 1987.  
 [Coe] Coe, "Geological Field Techniques", Milton Keynes, 2010.  
 [GURI] CNR, "Carta geologica d'Italia - 1:50000 - Guida al rilevamento", Roma, 1992.  
-[IUGS_igneous] Le Maitre er alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
+[GJ] Grotzinger, Joran, "Capire la Terra", Bologna, 2016.  
+[IUGS_igneous] Le Maitre et alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
 [KP]  Klein et Philpotts, "Mineralogia e Petrografia", Bologna, 2018.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
 [Perkins] Perkins, "Mineralogy", https://opengeology.org/Mineralogy/, 2022.  
