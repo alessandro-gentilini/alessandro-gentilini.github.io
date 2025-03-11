@@ -37,4 +37,10 @@ Il diagramma QAP per la classificazione speditiva sul campo è spiegato nella se
 _2.11.3 PROVISIONAL "FIELD" CLASSIFICATION_ e nella Figura 2.10 del libro:
 Le Maitre, Streckeisen e altri, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge, Cambridge University Press, 2002.
 
+## Altre risorse
+
+[Digital collection - Università di Padova](https://collections.geoscienze.unipd.it/)  
+[Atlante delle rocce italiane - Università di Parma](https://www.rocks.unipr.it/)
+
+
 
