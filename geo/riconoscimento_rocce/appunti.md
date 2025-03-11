@@ -14,7 +14,7 @@ Per maggiore chiarezza, la normale lente a 10-12 ingrandimenti che si usa in cam
 Personalmente con la mia lente "Belomo 10x" riesco ad apprezzare 25 micron (provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
 
 
-# Strumenti di diagnosi
+# Strumenti di diagnosi speditiva
 
 * scala delle durezze di Mohs
 * comportamento reazione con acido HCl diluito
