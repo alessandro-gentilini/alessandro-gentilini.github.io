@@ -11,7 +11,7 @@ date: "9 marzo 2025"
 * Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].  
 I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].  
 Per maggiore chiarezza, la normale lente a 10-12 ingrandimenti che si usa in campagna non permette il riconoscimento di particelle al di sotto dei 31 micron [GURI p173].  
-Personalmente con la mia lente "Belomo 10x" riesco ad apprezzare 25 micron (provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
+Personalmente con la mia lente "B 10x" riesco ad apprezzare 25 micron (provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
 
 
 # Strumenti di diagnosi speditiva
@@ -51,6 +51,7 @@ Struttura [PDF10 p22/45]:
 |Porfirica|Diagramma QAP per rocce effusive, ignorando la pasta di fondo se non si vedono cristalli, quindi contando solo i fenocristalli|
 |Afirica|Diagramma QAP per rocce effusive: attenzione ad eventuali cristalli piccoli e chiari!|
 |Amorfa|TODO|
+[Ciao]
 
 ---
 
@@ -731,7 +732,7 @@ Tessitura:
 [Carloni] Carloni, "Litologia e geologia applicate all'ingegneria civile", Bologna, 1987.  
 [Coe] Coe, "Geological Field Techniques", Milton Keynes, 2010.  
 [GURI] CNR, "Carta geologica d'Italia - 1:50000 - Guida al rilevamento", Roma, 1992.  
-[GJ] Grotzinger, Joran, "Capire la Terra", Bologna, 2016.  
+[GJ] Grotzinger, Jordan, "Capire la Terra", Bologna, 2016.  
 [IUGS_igneous] Le Maitre et alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
 [KP]  Klein et Philpotts, "Mineralogia e Petrografia", Bologna, 2018.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
