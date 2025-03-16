@@ -1,3 +1,9 @@
+---
+title: "Paleontologia - Riconoscimento fossili - A.A. 2024-25"
+author: "Appunti di Alessandro Gentilini"
+date: "16 marzo 2025"
+---
+
 # Martedì 4 marzo 2025
 
 ## _Fusulina_
@@ -18,16 +24,16 @@
 
 ## _Alveolina_
 
-![Alveolina.](2025-03-04/alveolina.jpg)
+![Alveolina in slide.](2025-03-04/alveolina.jpg)
 
 ![Alveolina in roccia.](2025-03-04/alveolina-in_roccia.jpg)
 
-![Vedo strutture concentriche, non vedo la spirale quindi la sezione è parallela all'asse di accrescimento (oppure lo contiene).](2025-03-04/alveolina-sezione_contiene_asse_accrescimento.jpg)
+![Alveolina. Vedo strutture concentriche, non vedo la spirale quindi la sezione è parallela all'asse di accrescimento (oppure lo contiene).](2025-03-04/alveolina-sezione_contiene_asse_accrescimento.jpg)
 
-![La sezione è ortogonale all'asse accrescimento perché si vede la spirale. È una specie particolare che è poco diffusa. Ha molto guscio che è la parte scura dell'immagine.](2025-03-04/alveolina-poco_diffusa.jpg)
+![Alveolina. La sezione è ortogonale all'asse accrescimento perché si vede la spirale. È una specie particolare che è poco diffusa. Ha molto guscio che è la parte scura dell'immagine.](2025-03-04/alveolina-poco_diffusa.jpg)
 
 ![Alveolina, vedo strutture concentriche, non vedo la spirale quindi la sezione contiene l'asse di accrescimento.](2025-03-04/alveolina-sezione_ortogonale.jpg)
 
 ## _Nummulite_
 
-![Nummulite](2025-03-04/nummulite.jpg)
+![Nummulite.](2025-03-04/nummulite.jpg)

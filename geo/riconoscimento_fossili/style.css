@@ -1,0 +1,23 @@
+<style>
+    figcaption {
+        text-align: center;
+    }
+    
+    table {
+        border: 1px solid lightgray;
+        border-collapse: collapse;
+        margin: 0 auto; /* Added to center the table */
+    }
+    
+    table td, table th {
+        border: 1px solid lightgray;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid lightgray;
+    }
+</style>
