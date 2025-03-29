@@ -220,7 +220,7 @@ date: "16 marzo 2025"
 
 ![Alveolina. La sezione è ortogonale all'asse accrescimento perché si vede la spirale. È una specie particolare che è poco diffusa. Ha molto guscio che è la parte scura dell'immagine.](2025-03-04/alveolina-poco_diffusa.jpg)
 
-![Alveolina, vedo strutture concentriche, non vedo la spirale quindi la sezione contiene l'asse di accrescimento.](2025-03-04/alveolina-sezione_ortogonale.jpg)
+![Alveolina, camere grandi, sezione ortogonale.](2025-03-04/alveolina-sezione_ortogonale.jpg)
 
 ## _Nummulite_
 
