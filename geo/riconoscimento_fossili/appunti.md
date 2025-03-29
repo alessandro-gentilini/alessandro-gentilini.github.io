@@ -305,4 +305,5 @@ Querschnitt = Sezione trasversale (tedesco).
 
 f. = femminile  
 p. = plurale  
+pl. = plurale  
 s. = singolare  
