@@ -277,6 +277,25 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 ![Al centro un esemplare dell'ordine spumellaria con la tipica forma sferica, sono visibili le spine radiali (vedi [SCV-PDF5 p12/20]).](2025-03-05/spumellaria_2.PNG)
 
 
+# Macroinvertebrati
+
+1) Artropodi (solo) Trilobiti
+2) Brachiopodi
+3) Cnidari (coralli)
+   - Rugosa
+   - Tabulata
+   - Scleractinia
+4) Molluschi
+   - Bivalvi
+   - Gasteropodi
+   - Cefalopodi
+     - Nautiloidi
+     - Ammoniti
+     - Belemniti
+5) Echinodermi
+     - Crinoidea
+     - Echinoidea (regolari e irregolari)
+
 # Bibliografia
 
 [AA]  
