@@ -4,6 +4,14 @@ author: "Appunti di Alessandro Gentilini"
 date: "16 marzo 2025"
 ---
 
+# Definizioni
+
+Fanti in [PDF8]:  
+**Sistematica**: studio scientifico di esseri viventi e fossili con gli obiettivi di **classificazione** e **nomenclatura** univoche.  
+**Classificazione**: ordinamento degli essere viventi in gruppi; l'ordinamento è basato sui caratteri comuni degli esseri viventi; i gruppi sono nell'ambito di un sistema gerarchico.
+**Tassonomia**: insieme di regole da usare nella classificazione.  
+**Nomenclatura**: insieme di regole per denominare e descrivere gli esseri viventi oggetto della sistematica.  
+
 # Specie e categorie superiori
 
 Secondo Allasinaz [Alla p.187] le categorie superiori alla specie sono oggetto di discussione fra gli studiosi: per alcuni sono artificiali  e arbitrarie; per altri sono sì arbitrarie ma possono essere istituite secondo principi evolutivi; per altri sono invece del tutto naturali. 
@@ -92,9 +100,18 @@ Fanti in [PDF8] indica queste categorie:
 
 # Mercoledì 5 marzo 2025
 
-## _Orbitolites complanatus_
+## Genere _Orbitolites_
 
-![Slide con singolo esemplare di _Orbitolites sp._ (dichiarato _Orbitolites complanatus_) e frammento.](2025-03-05/slide_con_orbitolites.jpg)
+Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbitolites_ Lamarck, 1801 †](https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373)
+
+|Categoria||
+|----|----|
+|Phylum|Foraminifera|
+|Classe||
+|Ordine||
+|Famiglia||
+|Genere|_Orbitolites_|
+|Specie||
 
 ![Per i nomi delle sezioni vedi questa figura tratta da [Alla f7.17 p300]. La sezione che appare allungata e schiacciata al centro è la _sezione assiale_; la sezione che appare circolare è la _sezione equatoriale_.](fig/Alla_fig7.17_p300.jpg)
 
@@ -102,8 +119,16 @@ Fanti in [PDF8] indica queste categorie:
 
 ![Sezione sottile di _Orbitolites sp._ in sezione equatoriale.](2025-03-05/orbitolites_sezione_equatoriale.jpg)
 
+![Slide con singolo esemplare di _Orbitolites sp._ (dichiarato _Orbitolites complanatus_) e frammento.](2025-03-05/slide_con_orbitolites.jpg)
 
-https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373
+![Dettaglio di esemplare singolo di _Orbitolites sp._](2025-03-05/particolare_orbitolites_1.jpg)
+
+![Dettaglio di esemplare singolo di _Orbitolites sp._](2025-03-05/particolare_orbitolites_2.jpg)
+
+![Dettaglio di esemplare singolo di _Orbitolites sp._](2025-03-05/particolare_orbitolites_3.jpg)
+
+
+
 
 
 # Bibliografia
