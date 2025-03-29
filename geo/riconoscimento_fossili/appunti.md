@@ -94,7 +94,9 @@ Fanti in [PDF8] indica queste categorie:
 
 ## _Orbitolites complanatus_
 
-![_Orbitolites_ sezione assiale. ](2025-03-05/orbitolites_sezione_assiale.jpg)
+![Per i nomi delle sezioni vedi questa figura tratta da [Alla f7.17 p300]. La sezione che appare allungata e schiacciata al centro è la _sezione assiale_; la sezione che appare circolare è la _sezione euqatoriale_.](fig/Alla_fig7.17_p300.jpg)
+
+![_Orbitolites_ sezione assiale.](2025-03-05/orbitolites_sezione_assiale.jpg)
 
 
 https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373
@@ -113,3 +115,5 @@ Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
 
 [WFM]  
 Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at https://www.marinespecies.org/foraminifera on 2025-03-29. doi:10.14284/305
+
+Querschnitt = Sezione trasversale (tedesco).
