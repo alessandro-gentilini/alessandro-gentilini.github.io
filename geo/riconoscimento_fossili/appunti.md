@@ -4,6 +4,26 @@ author: "Appunti di Alessandro Gentilini"
 date: "16 marzo 2025"
 ---
 
+    <table width="500" border="1"> 
+        <tr> 
+            <th>NAME</th> 
+            <th>AGE</th> 
+            <th>BRANCH</th> 
+        </tr> 
+  
+        <tr> 
+            <td bgcolor="green">BITTU</td> 
+            <td bgcolor="red">22</td> 
+            <td bgcolor="yellow">CSE</td> 
+        </tr> 
+  
+        <tr> 
+            <td bgcolor="yellow">RAKESH</td> 
+            <td bgcolor="green">25</td> 
+            <td bgcolor="red">EC</td> 
+        </tr> 
+    </table> 
+
 # Specie e categorie superiori
 
 Secondo Allasinaz [Alla p.187] le categorie superiori alla specie sono oggetto di discussione fra gli studiosi: per alcuni sono artificiali  e arbitrarie; per altri sono sì arbitrarie ma possono essere istituite secondo principi evolutivi; per altri sono invece del tutto naturali. 
