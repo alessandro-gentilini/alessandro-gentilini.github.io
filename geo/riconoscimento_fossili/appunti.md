@@ -10,13 +10,11 @@ date: "16 marzo 2025"
         <th>AGE</th> 
         <th>BRANCH</th> 
     </tr> 
-
     <tr> 
         <td bgcolor="green">BITTU</td> 
         <td bgcolor="red">22</td> 
         <td bgcolor="yellow">CSE</td> 
     </tr> 
-
     <tr> 
         <td bgcolor="yellow">RAKESH</td> 
         <td bgcolor="green">25</td> 
