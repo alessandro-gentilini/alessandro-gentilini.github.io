@@ -303,7 +303,7 @@ Querschnitt = Sezione trasversale (tedesco).
 
 # Abbreviazioni
 
-f. = femminile  
-p. = plurale  
-pl. = plurale  
-s. = singolare  
+f.=femminile  
+p.=plurale  
+pl.=plurale  
+s.=singolare  
