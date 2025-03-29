@@ -62,14 +62,23 @@ Fanti in [PDF8] indica queste categorie:
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
 
+# Nomenclatura macro foraminiferi
+
+|Famiglia|Nome comune|
+|--------|-----------|
+|Nummulitidae|nummulite (s. f.), nummuliti (p. f.)|
+
 # Distribuzione cronostratigrafica dei macro foraminiferi
 
-La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [CSV-PDF4 p37/37].
+La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
 <table>
 <thead>
 <tr>
-<th></th><th>name</th><th>end</th><th>begin</th><th>Alveolinacea</th><th>Orbitolinacea</th>
+<th></th><th>name</th><th>end</th><th>begin</th>
+<th>Alveolinacea</th>
+<th>Nummulitidae</th>
+<th>Orbitolinacea</th>
 </tr>
 </thead>
 <tbody><tr style='background-color: #F9F97F;'>
@@ -78,6 +87,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>0</td>
 <td>2.58</td>
 <td>X</td>
+<td>X</td>
 <td></td>
 </tr>
 <tr style='background-color: #FFE619;'>
@@ -85,6 +95,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>neogene</td>
 <td>2.58</td>
 <td>25</td>
+<td>X</td>
 <td>X</td>
 <td></td>
 </tr>
@@ -95,6 +106,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>65</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
 <td><img src='./fig/cretacico.png'></td>
@@ -102,6 +114,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>65</td>
 <td>145</td>
 <td>X</td>
+<td></td>
 <td>X</td>
 </tr>
 <tr style='background-color: #34B2C9;'>
@@ -109,6 +122,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>giurassico</td>
 <td>145</td>
 <td>200</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -119,12 +133,14 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>250</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr style='background-color: #F04028;'>
 <td><img src='./fig/permiano.png'></td>
 <td>permiano</td>
 <td>250</td>
 <td>300</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -135,12 +151,14 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>360</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr style='background-color: #CB8C37;'>
 <td><img src='./fig/devoniano.png'></td>
 <td>devoniano</td>
 <td>360</td>
 <td>420</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -151,6 +169,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>445</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr style='background-color: #009270;'>
 <td><img src='./fig/ordoviciano.png'></td>
@@ -159,12 +178,14 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>485</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td><img src='./fig/cambriano.png'></td>
 <td>cambriano</td>
 <td>485</td>
 <td>540</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -209,7 +230,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 
 # Mercoledì 5 marzo 2025
 
-## Genere _Orbitolites_
+##  _Orbitolites_
 
 Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbitolites_ Lamarck, 1801 †](https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373)
 
@@ -237,7 +258,17 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 ![Dettaglio di esemplare singolo di _Orbitolites sp._](2025-03-05/particolare_orbitolites_3.jpg)
 
 
+## Famiglia Nummulitidae
 
+![Tratto da [SCV-PDF4 p30/37.]](fig/SCV-PDF4_p30_di_37.png)
+
+![In alto a destra nummulite in sezione che include l'asse di avvolgimento, in basso a sinistra alveolina.](2025-03-05/forse_nummulite.jpg)
+
+![Nummulite in sezione che include l'asse di avvolgimento, sono visibili i pilastri.](2025-03-05/nummulite.jpg)
+
+![Roccia che contiene grande quantità di nummuliti. Erodoto, vedendo le nummuliti sui calcari di cui sono fatte le piramidi, le interpretò come i ceci del pasto degli operai che le costruirono.](2025-03-05/roccia_con_nummulite_2.jpg)
+
+![L'altra faccia della roccia della figura precedente.](2025-03-05/roccia_con_nummulite_1.jpg)
 
 
 # Bibliografia
@@ -245,8 +276,8 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 [AA]  
 Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Genova, 1992, ECIG UNIVERSITAS.
 
-[CSV-PDF4]  
-Claudio Stefano Vaiani, "Macro foraminiferi".
+[SCV-PDF4]  
+Stefano Claudio Vaiani, "Macro foraminiferi".
 
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
@@ -260,3 +291,9 @@ Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Da
 # Glossario
 
 Querschnitt = Sezione trasversale (tedesco).
+
+# Abbreviazioni
+
+f. = femminile  
+p. = plurale  
+s. = singolare  
