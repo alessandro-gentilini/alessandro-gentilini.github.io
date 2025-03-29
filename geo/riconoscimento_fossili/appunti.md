@@ -52,7 +52,7 @@ Fanti in [PDF8] indica queste categorie:
 
 # Sezioni
 
-![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p11.png)
+![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
 
 
 
