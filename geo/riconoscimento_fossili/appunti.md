@@ -94,9 +94,13 @@ Fanti in [PDF8] indica queste categorie:
 
 ## _Orbitolites complanatus_
 
-![Per i nomi delle sezioni vedi questa figura tratta da [Alla f7.17 p300]. La sezione che appare allungata e schiacciata al centro è la _sezione assiale_; la sezione che appare circolare è la _sezione euqatoriale_.](fig/Alla_fig7.17_p300.jpg)
+![Slide con singolo esemplare di _Orbitolites sp._ (dichiarato _Orbitolites complanatus_) e frammento.](2025-03-05/slide_con_orbitolites.jpg)
 
-![_Orbitolites_ sezione assiale.](2025-03-05/orbitolites_sezione_assiale.jpg)
+![Per i nomi delle sezioni vedi questa figura tratta da [Alla f7.17 p300]. La sezione che appare allungata e schiacciata al centro è la _sezione assiale_; la sezione che appare circolare è la _sezione equatoriale_.](fig/Alla_fig7.17_p300.jpg)
+
+![Sezione sottile di _Orbitolites sp._ in sezione assiale.](2025-03-05/orbitolites_sezione_assiale.jpg)
+
+![Sezione sottile di _Orbitolites sp._ in sezione equatoriale.](2025-03-05/orbitolites_sezione_equatoriale.jpg)
 
 
 https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373
