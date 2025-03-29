@@ -270,20 +270,29 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 
 ![L'altra faccia della roccia della figura precedente.](2025-03-05/roccia_con_nummulite_1.jpg)
 
+## Radiolari, ordine Spumellaria
+
+![Al centro un esemplare dell'ordine spumellaria con la tipica forma sferica.](2025-03-05/spumellaria_1.jpg)
+
+![Al centro un esemplare dell'ordine spumellaria con la tipica forma sferica, sono visibili le spine radiali (vedi [SCV-PDF5 p12/20]).](2025-03-05/spumellaria_2.PNG)
+
 
 # Bibliografia
 
 [AA]  
 Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Genova, 1992, ECIG UNIVERSITAS.
 
-[SCV-PDF4]  
-Stefano Claudio Vaiani, "Macro foraminiferi".
+[FF-PDF8]  
+Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
 
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
 
-[FF-PDF8]  
-Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
+[SCV-PDF4]  
+Stefano Claudio Vaiani, "Macro foraminiferi".
+
+[SCV-PDF5]  
+Stefano Claudio Vaiani, "Radiolari".
 
 [WFM]  
 Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at https://www.marinespecies.org/foraminifera on 2025-03-29. doi:10.14284/305
