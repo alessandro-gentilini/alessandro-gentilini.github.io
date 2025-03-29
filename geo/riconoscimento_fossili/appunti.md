@@ -8,13 +8,13 @@ date: "16 marzo 2025"
 
 Fanti in [PDF8]:  
 **Sistematica**: studio scientifico di esseri viventi e fossili con gli obiettivi di **classificazione** e **nomenclatura** univoche.  
-**Classificazione**: ordinamento degli essere viventi in gruppi; l'ordinamento è basato sui caratteri comuni degli esseri viventi; i gruppi sono nell'ambito di un sistema gerarchico.
+**Classificazione**: ordinamento degli essere viventi in gruppi; l'ordinamento è basato sui caratteri comuni degli esseri viventi; i gruppi sono nell'ambito di un sistema gerarchico.  
 **Tassonomia**: insieme di regole da usare nella classificazione.  
 **Nomenclatura**: insieme di regole per denominare e descrivere gli esseri viventi oggetto della sistematica.  
 
 # Specie e categorie superiori
 
-Secondo Allasinaz [Alla p.187] le categorie superiori alla specie sono oggetto di discussione fra gli studiosi: per alcuni sono artificiali  e arbitrarie; per altri sono sì arbitrarie ma possono essere istituite secondo principi evolutivi; per altri sono invece del tutto naturali. 
+Secondo Allasinaz [AA p.187] le categorie superiori alla specie sono oggetto di discussione fra gli studiosi: per alcuni sono artificiali  e arbitrarie; per altri sono sì arbitrarie ma possono essere istituite secondo principi evolutivi; per altri sono invece del tutto naturali. 
 
 Fanti in [PDF8] indica queste categorie:
 
@@ -61,6 +61,115 @@ Fanti in [PDF8] indica queste categorie:
 # Sezioni
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
+
+# Distribuzione cronostratigrafica dei macro foraminiferi
+
+La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [CSV-PDF4 p37/37].
+
+<table>
+<thead>
+<tr>
+<th></th><th>name</th><th>end</th><th>begin</th><th>Alveolinacea</th><th>Orbitolinacea</th>
+</tr>
+</thead>
+<tbody><tr style='background-color: #F9F97F;'>
+<td><img src='./fig/quaternario.png'></td>
+<td>quaternario</td>
+<td>0</td>
+<td>2.58</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr style='background-color: #FFE619;'>
+<td><img src='./fig/neogene.png'></td>
+<td>neogene</td>
+<td>2.58</td>
+<td>25</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr style='background-color: #FD9A52;'>
+<td><img src='./fig/paleogene.png'></td>
+<td>paleogene</td>
+<td>25</td>
+<td>65</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #7FC64E;'>
+<td><img src='./fig/cretacico.png'></td>
+<td>cretacico</td>
+<td>65</td>
+<td>145</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #34B2C9;'>
+<td><img src='./fig/giurassico.png'></td>
+<td>giurassico</td>
+<td>145</td>
+<td>200</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #812B92;'>
+<td><img src='./fig/triassico.png'></td>
+<td>triassico</td>
+<td>200</td>
+<td>250</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #F04028;'>
+<td><img src='./fig/permiano.png'></td>
+<td>permiano</td>
+<td>250</td>
+<td>300</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #67A599;'>
+<td><img src='./fig/carbonifero.png'></td>
+<td>carbonifero</td>
+<td>300</td>
+<td>360</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #CB8C37;'>
+<td><img src='./fig/devoniano.png'></td>
+<td>devoniano</td>
+<td>360</td>
+<td>420</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #B3E1B6;'>
+<td><img src='./fig/siluriano.png'></td>
+<td>siluriano</td>
+<td>420</td>
+<td>445</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #009270;'>
+<td><img src='./fig/ordoviciano.png'></td>
+<td>ordoviciano</td>
+<td>445</td>
+<td>485</td>
+<td></td>
+<td></td>
+</tr>
+<tr style='background-color: #7FA056;'>
+<td><img src='./fig/cambriano.png'></td>
+<td>cambriano</td>
+<td>485</td>
+<td>540</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -133,16 +242,21 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 
 # Bibliografia
 
-[Alla]  
+[AA]  
 Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Genova, 1992, ECIG UNIVERSITAS.
+
+[CSV-PDF4]  
+Claudio Stefano Vaiani, "Macro foraminiferi".
 
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
 
-[PDF8]  
+[FF-PDF8]  
 Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
 
 [WFM]  
 Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at https://www.marinespecies.org/foraminifera on 2025-03-29. doi:10.14284/305
+
+# Glossario
 
 Querschnitt = Sezione trasversale (tedesco).
