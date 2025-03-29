@@ -4,6 +4,23 @@ author: "Appunti di Alessandro Gentilini"
 date: "16 marzo 2025"
 ---
 
+# Specie e categorie superiori
+
+Secondo Allasinaz [Alla p.187] le categorie superiori alla specie sono oggetto di discussione fra gli studiosi: per alcuni sono artificiali  e arbitrarie; per altri sono sì arbitrarie ma possono essere istituite secondo principi evolutivi; per altri sono invece del tutto naturali. 
+
+Fanti in [PDF8] indica queste categorie:
+
+|Nome|Note|
+|----|----|
+|Phylum|(pl. Phyla)|
+|Classe|(-a)|
+|Ordine|(-ata o -ida)|
+|Famiglia|(-idae)|
+|Genere||
+|Specie||
+
+# Epoche
+
 <style type="text/css">
 #T_4778f_row0_col0, #T_4778f_row0_col1, #T_4778f_row0_col2, #T_4778f_row0_col3 {
   background-color: #F9F97F;
@@ -225,3 +242,23 @@ date: "16 marzo 2025"
 ## _Nummulite_
 
 ![Nummulite.](2025-03-04/nummulite.jpg)
+
+# Mercoledì 5 marzo 2025
+
+## _Orbitolites complanatus_
+
+
+
+https://www.marinespecies.org/foraminifera/aphia.php?p=taxdetails&id=582373
+
+
+# Bibliografia
+
+[Alla]  
+Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Genova, 1992, ECIG UNIVERSITAS.
+
+[PDF8]  
+Federico Fant, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
+
+[WFM]  
+Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at https://www.marinespecies.org/foraminifera on 2025-03-29. doi:10.14284/305
