@@ -21,65 +21,7 @@ Fanti in [PDF8] indica queste categorie:
 
 # Epoche
 
-<style type="text/css">
-#T_4778f_row0_col0, #T_4778f_row0_col1, #T_4778f_row0_col2, #T_4778f_row0_col3 {
-  background-color: #F9F97F;
-}
-#T_4778f_row1_col0, #T_4778f_row1_col1, #T_4778f_row1_col2, #T_4778f_row1_col3 {
-  background-color: #FFE619;
-}
-#T_4778f_row2_col0, #T_4778f_row2_col1, #T_4778f_row2_col2, #T_4778f_row2_col3 {
-  background-color: #FD9A52;
-}
-#T_4778f_row3_col0, #T_4778f_row3_col1, #T_4778f_row3_col2, #T_4778f_row3_col3 {
-  background-color: #7FC64E;
-}
-#T_4778f_row4_col0, #T_4778f_row4_col1, #T_4778f_row4_col2, #T_4778f_row4_col3 {
-  background-color: #34B2C9;
-}
-#T_4778f_row5_col0, #T_4778f_row5_col1, #T_4778f_row5_col2, #T_4778f_row5_col3 {
-  background-color: #812B92;
-}
-#T_4778f_row6_col0, #T_4778f_row6_col1, #T_4778f_row6_col2, #T_4778f_row6_col3 {
-  background-color: #F04028;
-}
-#T_4778f_row7_col0, #T_4778f_row7_col1, #T_4778f_row7_col2, #T_4778f_row7_col3 {
-  background-color: #67A599;
-}
-#T_4778f_row8_col0, #T_4778f_row8_col1, #T_4778f_row8_col2, #T_4778f_row8_col3 {
-  background-color: #CB8C37;
-}
-#T_4778f_row9_col0, #T_4778f_row9_col1, #T_4778f_row9_col2, #T_4778f_row9_col3 {
-  background-color: #B3E1B6;
-}
-#T_4778f_row10_col0, #T_4778f_row10_col1, #T_4778f_row10_col2, #T_4778f_row10_col3 {
-  background-color: #009270;
-}
-#T_4778f_row11_col0, #T_4778f_row11_col1, #T_4778f_row11_col2, #T_4778f_row11_col3 {
-  background-color: #7FA056;
-}
-#T_4778f_row12_col0, #T_4778f_row12_col1, #T_4778f_row12_col2, #T_4778f_row12_col3 {
-  background-color: #FEB342;
-}
-#T_4778f_row13_col0, #T_4778f_row13_col1, #T_4778f_row13_col2, #T_4778f_row13_col3 {
-  background-color: #FDB462;
-}
-#T_4778f_row14_col0, #T_4778f_row14_col1, #T_4778f_row14_col2, #T_4778f_row14_col3 {
-  background-color: #F74370;
-}
-#T_4778f_row15_col0, #T_4778f_row15_col1, #T_4778f_row15_col2, #T_4778f_row15_col3 {
-  background-color: #F99BC1;
-}
-#T_4778f_row16_col0, #T_4778f_row16_col1, #T_4778f_row16_col2, #T_4778f_row16_col3 {
-  background-color: #F768A9;
-}
-#T_4778f_row17_col0, #T_4778f_row17_col1, #T_4778f_row17_col2, #T_4778f_row17_col3 {
-  background-color: #F4449F;
-}
-#T_4778f_row18_col0, #T_4778f_row18_col1, #T_4778f_row18_col2, #T_4778f_row18_col3 {
-  background-color: #DA037F;
-}
-</style>
+
 <table id="T_4778f">
   <thead>
     <tr>
