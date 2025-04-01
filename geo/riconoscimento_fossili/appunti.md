@@ -29,6 +29,7 @@ Fanti in [PDF8] indica queste categorie:
 
 # Epoche
 
+"**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano" - "**TRI**ppe **GIU**noniche **CRE**scono"
 
 <table>
 <thead>
