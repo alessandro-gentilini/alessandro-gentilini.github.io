@@ -37,6 +37,10 @@ continentale fino al limite superiore della scarpata, poi diminuisce.
 Ruolo dominante dei nutrienti e subordinato di altri fattori
 (temperatura, salinità, substrato, circolazione nel bacino).
 
+## Stima della batimetria tramite "indice di oceanicità"
+
+![Tratto da [SCV-PDF2].](fig/SCV-PDF2_p13_di_46.png)
+
 Si calcola l'"Indice di oceanicità":
 
 $P$ = numero di planctonici contati.  
@@ -133,6 +137,10 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 |Fusulina|
 |--------|
 |![](fig/SCV-PDF4_p3_di_37-fusulina.png)|
+
+# Fusulina
+
+![](fig/riassunto_fusulinidae.png)
 
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
