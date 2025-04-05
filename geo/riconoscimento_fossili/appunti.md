@@ -146,6 +146,10 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 
 ![](fig/riassunto_alveoline.png)
 
+# Nummuliti
+
+![](fig/riassunto_nummulite.png)
+
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
 - Paleozoico: "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
