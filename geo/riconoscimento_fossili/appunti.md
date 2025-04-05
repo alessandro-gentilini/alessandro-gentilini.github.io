@@ -4,6 +4,49 @@ author: "Appunti di Alessandro Gentilini"
 date: "16 marzo 2025"
 ---
 
+# Foraminiferi
+
+Applicazioni:  
+biostratigrafia = datazione dei corpi sedimentari  
+ricostruzioni paleoambientali = definire l’ambiente deposizionale  
+
+Nella maggior parte dei Foraminiferi le camere sono disposte secondo una spirale che può essere piana (avvolgimento planispirale) o rialzata (avvolgimento trocospirale). [MBC p35]
+
+- Gusci porcellanacei, imperforati
+- Gusci ialini, perforati.
+
+# Foraminiferi e batimetria [SCV-PDF3]
+
+Vicino alla costa (laguna, mare bassa profondità) c'è prevalenza di bentonici,
+allontanandosi dalla costa compaiono anche i planctonici.
+
+![Tratto da [Bellier].](fig/CG2010_B02_Fig_10.png)
+
+Interpretare la paleobatimetria considerando l’associazione a
+foraminiferi di un campione di sedimento.
+
+I foraminiferi bentonici generalmente aumentano di numero dalle
+zone costiere fino al limite superiore della scarpata. Poi
+diminuiscono piuttosto rapidamente.
+
+In generale i foraminiferi bentonici come la biomassa bentonica
+sono proporzionali alla distribuzione della concentrazione di
+carbonio organico nel sedimento, che è alta nella piattaforma
+continentale fino al limite superiore della scarpata, poi diminuisce.
+
+Ruolo dominante dei nutrienti e subordinato di altri fattori
+(temperatura, salinità, substrato, circolazione nel bacino).
+
+Si calcola l'"Indice di oceanicità":
+
+$P$ = numero di planctonici contati.  
+$B$ = numero di bentonici contati.  
+Indice di oceanicità: $I=100\frac{P}{P+B}$
+
+Poi si usa una formula esponenziale per calcolare la profondità $D$:
+
+$D=\exp(3.58+0.03\cdot I)$
+
 # Definizioni
 
 Fanti in [PDF8]:  
@@ -29,7 +72,7 @@ Fanti in [PDF8] indica queste categorie:
 
 # Epoche
 
-"**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano" - "**TRI**ppe **GIU**noniche **CRE**scono"
+
 
 <table>
 <thead>
@@ -60,8 +103,13 @@ Fanti in [PDF8] indica queste categorie:
 </table>
 
 # Sezioni
+Non si può più parlare di sezioni equatoriali, nel vero senso  della parola, nelle forme ad avvolgimento trocospirale: si parla in que  sto caso di sezioni trasversali. [MBC p35]
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
+
+![](fig/MBC_fig160_p244.png)
+
+![](fig/MBC_fig168_p255.png)
 
 # Nomenclatura macro foraminiferi
 
@@ -71,7 +119,26 @@ Fanti in [PDF8] indica queste categorie:
 
 # Distribuzione cronostratigrafica dei macro foraminiferi
 
+Fusuline, Alveoline e Nummuliti.
+
+Alveolina e nummulite sono associate, esistono dal Cretacico ad oggi.
+
+|Alveolina|Nummulite|
+|---------|---------|
+|![](fig/SCV-PDF4_p3_di_37-alveolina.png)|![](fig/SCV-PDF4_p3_di_37-nummulites.png)|
+
+
+Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
+
+|Fusulina|
+|--------|
+|![](fig/SCV-PDF4_p3_di_37-fusulina.png)|
+
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
+
+- Paleozoico: "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
+- Mesozoico: "**TRI**ppe **GIU**noniche **CRE**scono"
+- Cenozoico: "**P**erò **N**on **Q**ua"
 
 <table>
 <thead>
@@ -79,20 +146,21 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <th></th><th>name</th><th>end</th><th>begin</th>
 <th>Alveolinacea</th>
 <th>Nummulitidae</th>
-<th>Orbitolinacea</th>
+<th>Fusulinidae</th>
 </tr>
 </thead>
-<tbody><tr style='background-color: #F9F97F;'>
-<td><img src='./fig/quaternario.png'></td>
+<tbody>
+<tr style='background-color: #F9F97F;'>
+<td>CZ<img src='./fig/quaternario.png'></td>
 <td>quaternario</td>
 <td>0</td>
-<td>2.58</td>
+<td><b>2.58</b></td>
 <td>X</td>
 <td>X</td>
 <td></td>
 </tr>
 <tr style='background-color: #FFE619;'>
-<td><img src='./fig/neogene.png'></td>
+<td>CZ<img src='./fig/neogene.png'></td>
 <td>neogene</td>
 <td>2.58</td>
 <td>25</td>
@@ -101,25 +169,25 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 </tr>
 <tr style='background-color: #FD9A52;'>
-<td><img src='./fig/paleogene.png'></td>
+<td>CZ<img src='./fig/paleogene.png'></td>
 <td>paleogene</td>
 <td>25</td>
-<td>65</td>
+<td><b>65</b></td>
 <td>X</td>
 <td>X</td>
-<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #7FC64E;'>
-<td><img src='./fig/cretacico.png'></td>
+<td>MZ<img src='./fig/cretacico.png'></td>
 <td>cretacico</td>
 <td>65</td>
 <td>145</td>
 <td>X</td>
 <td></td>
-<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #34B2C9;'>
-<td><img src='./fig/giurassico.png'></td>
+<td>MZ<img src='./fig/giurassico.png'></td>
 <td>giurassico</td>
 <td>145</td>
 <td>200</td>
@@ -128,34 +196,34 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 </tr>
 <tr style='background-color: #812B92;'>
-<td><img src='./fig/triassico.png'></td>
+<td>MZ<img src='./fig/triassico.png'></td>
 <td>triassico</td>
 <td>200</td>
-<td>250</td>
+<td><b>250</b></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr style='background-color: #F04028;'>
-<td><img src='./fig/permiano.png'></td>
+<td>PZ<img src='./fig/permiano.png'></td>
 <td>permiano</td>
 <td>250</td>
 <td>300</td>
 <td></td>
 <td></td>
-<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #67A599;'>
-<td><img src='./fig/carbonifero.png'></td>
+<td>PZ<img src='./fig/carbonifero.png'></td>
 <td>carbonifero</td>
 <td>300</td>
 <td>360</td>
 <td></td>
 <td></td>
-<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #CB8C37;'>
-<td><img src='./fig/devoniano.png'></td>
+<td>PZ<img src='./fig/devoniano.png'></td>
 <td>devoniano</td>
 <td>360</td>
 <td>420</td>
@@ -164,7 +232,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
-<td><img src='./fig/siluriano.png'></td>
+<td>PZ<img src='./fig/siluriano.png'></td>
 <td>siluriano</td>
 <td>420</td>
 <td>445</td>
@@ -173,7 +241,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 </tr>
 <tr style='background-color: #009270;'>
-<td><img src='./fig/ordoviciano.png'></td>
+<td>PZ<img src='./fig/ordoviciano.png'></td>
 <td>ordoviciano</td>
 <td>445</td>
 <td>485</td>
@@ -182,7 +250,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 </tr>
 <tr style='background-color: #7FA056;'>
-<td><img src='./fig/cambriano.png'></td>
+<td>PZ<img src='./fig/cambriano.png'></td>
 <td>cambriano</td>
 <td>485</td>
 <td>540</td>
@@ -302,11 +370,21 @@ Le categorie di appartenenza della seguente tabella sono tratte da [WFM]: [_Orbi
 [AA]  
 Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Genova, 1992, ECIG UNIVERSITAS.
 
+[Bellier]  
+Bellier J.-P., Mathieu R. & Granier B. (2010).- Short Treatise on Foraminiferology (Essential on modern and fossil Foraminifera) [Court traité de foraminiférologie (L'essentiel sur les foraminifères actuels et fossiles)].- Carnets de Géologie - Notebooks on Geology, Brest, Book 2010/02 (CG2010_B02), 104 p., 15 figs, 10 pls.
+http://paleopolis.rediris.es/cg/BOOKS/CG2010_B02/
+
 [FF-PDF8]  
 Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
 
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
+
+[SCV-PDF2]  
+Stefano Claudio Vaiani, "Foraminiferi".
+
+[SCV-PDF3]  
+Stefano Claudio Vaiani, "Foraminiferi e batimetria".
 
 [SCV-PDF4]  
 Stefano Claudio Vaiani, "Macro foraminiferi".
