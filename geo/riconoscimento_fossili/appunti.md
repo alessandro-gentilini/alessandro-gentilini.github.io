@@ -142,6 +142,10 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 
 ![](fig/riassunto_fusulinidae.png)
 
+# Alveolina
+
+![](fig/riassunto_alveoline.png)
+
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
 - Paleozoico: "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
@@ -380,7 +384,7 @@ Andrea Allasinaz, "Paleontologia generale e sistematica degli invertebrati", Gen
 
 [Bellier]  
 Bellier J.-P., Mathieu R. & Granier B. (2010).- Short Treatise on Foraminiferology (Essential on modern and fossil Foraminifera) [Court traité de foraminiférologie (L'essentiel sur les foraminifères actuels et fossiles)].- Carnets de Géologie - Notebooks on Geology, Brest, Book 2010/02 (CG2010_B02), 104 p., 15 figs, 10 pls.
-http://paleopolis.rediris.es/cg/BOOKS/CG2010_B02/
+[http://paleopolis.rediris.es/cg/BOOKS/CG2010_B02/](http://paleopolis.rediris.es/cg/BOOKS/CG2010_B02/)
 
 [FF-PDF8]  
 Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
@@ -401,7 +405,7 @@ Stefano Claudio Vaiani, "Macro foraminiferi".
 Stefano Claudio Vaiani, "Radiolari".
 
 [WFM]  
-Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at https://www.marinespecies.org/foraminifera on 2025-03-29. doi:10.14284/305
+Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Database. Accessed at [https://www.marinespecies.org/foraminifera](https://www.marinespecies.org/foraminifera) on 2025-03-29. doi:10.14284/305
 
 # Glossario
 
