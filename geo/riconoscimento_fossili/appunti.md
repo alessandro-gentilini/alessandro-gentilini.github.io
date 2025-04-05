@@ -267,7 +267,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 
 ## _Fusulina_
 
-![Fusulina contiene asse di accrescimento aka sezione parallela. Sezione sottile, luce trasmessa.](2025-03-04/fusulina-contiene_asse_accrescimento.jpg)
+![Fusulina contiene asse di avvolgimento aka sezione parallela. Sezione sottile, luce trasmessa.](2025-03-04/fusulina-contiene_asse_avvolgimento.jpg)
 
 ![Fusulina sezione ortogonale. Sezione sottile, luce trasmessa.](2025-03-04/fusulina-sezione_ortogonale.jpg)
 
@@ -277,9 +277,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 
 ![Fusulina in roccia.](2025-03-04/fusulina-in_roccia_2.jpg)
 
-![Fusulina in roccia, asse di accrescimento ortogonale al piano della roccia.](2025-03-04/fusulina-in_roccia_asse_di_accrescimento_ortogonale_alla_roccia.jpg)
+![Fusulina in roccia, asse di avvolgimento ortogonale al piano della roccia.](2025-03-04/fusulina-in_roccia_asse_di_avvolgimento_ortogonale_alla_roccia.jpg)
 
-![Fusulina in roccia, asse di accrescimento ortogonale al piano della roccia.](2025-03-04/fusulina-in_roccia_asse_di_accrescimento_ortogonale_alla_roccia_2.jpg)
+![Fusulina in roccia, asse di avvolgimento ortogonale al piano della roccia.](2025-03-04/fusulina-in_roccia_asse_di_avvolgimento_ortogonale_alla_roccia_2.jpg)
 
 ## _Alveolina_
 
@@ -287,9 +287,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 
 ![Alveolina in roccia.](2025-03-04/alveolina-in_roccia.jpg)
 
-![Alveolina. Vedo strutture concentriche, non vedo la spirale quindi la sezione è parallela all'asse di accrescimento (oppure lo contiene).](2025-03-04/alveolina-sezione_contiene_asse_accrescimento.jpg)
+![Alveolina. Vedo strutture concentriche, non vedo la spirale quindi la sezione è parallela all'asse di avvolgimento (oppure lo contiene).](2025-03-04/alveolina-sezione_contiene_asse_avvolgimento.jpg)
 
-![Alveolina. La sezione è ortogonale all'asse accrescimento perché si vede la spirale. È una specie particolare che è poco diffusa. Ha molto guscio che è la parte scura dell'immagine.](2025-03-04/alveolina-poco_diffusa.jpg)
+![Alveolina. La sezione è ortogonale all'asse avvolgimento perché si vede la spirale. È una specie particolare che è poco diffusa. Ha molto guscio che è la parte scura dell'immagine.](2025-03-04/alveolina-poco_diffusa.jpg)
 
 ![Alveolina, camere grandi, sezione ortogonale.](2025-03-04/alveolina-sezione_ortogonale.jpg)
 
