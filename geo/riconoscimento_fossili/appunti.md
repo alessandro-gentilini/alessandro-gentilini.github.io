@@ -106,7 +106,7 @@ $D=\exp(3.58+0.03\cdot I)$
 
 
 
-# Sezioni
+# Sezioni dei macro foraminiferi
 Non si può più parlare di sezioni equatoriali, nel vero senso  della parola, nelle forme ad avvolgimento trocospirale: si parla in que  sto caso di sezioni trasversali. [MBC p35]
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
@@ -121,9 +121,10 @@ Non si può più parlare di sezioni equatoriali, nel vero senso  della parola, n
 |--------|-----------|
 |Nummulitidae|nummulite (s. f.), nummuliti (p. f.)|
 
-# Distribuzione cronostratigrafica dei macro foraminiferi
 
-Fusuline, Alveoline e Nummuliti.
+# Macro foraminiferi considerati nella verifica dell'8 aprile 2025
+
+## Fusuline, Alveoline e Nummuliti.
 
 Alveolina e nummulite sono associate, esistono dal Cretacico ad oggi.
 
@@ -140,15 +141,21 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 
 # Fusulina
 
-![](fig/riassunto_fusulinidae.png)
+![Foto fatte a lezione di sezioni sottili di Fusuline (come sfondo [SCV-PDF4]).](fig/riassunto_fusulinidae.png)
+
+![Sezioni assiali Fusuline, tratto da [MBC].](fig/MBC_fig216_p303.png)
 
 # Alveolina
 
-![](fig/riassunto_alveoline.png)
+![Foto fatte a lezione di sezioni sottili di Alveoline (come sfondo [MBC]).](fig/riassunto_alveoline.png)
+
+![Sezioni assiali ed equatoriali di Alveoline, tratto da [MBC].](fig/MBC_fig237_p318.png)
 
 # Nummuliti
 
-![](fig/riassunto_nummulite.png)
+![Foto fatte a lezione di sezioni sottili di Nummuliti (come sfondo [SCV-PDF4]). Le foto sono di sole sezioni assiali perché le sezioni equatoriali sono difficili da trovare siccome le nummuliti hanno forme discoidali di piccolo spessore.](fig/riassunto_nummulite.png)
+
+# Distribuzione cronostratigrafica dei macro foraminiferi
 
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
