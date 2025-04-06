@@ -107,6 +107,7 @@ $D=\exp(3.58+0.03\cdot I)$
 
 
 # Sezioni dei macro foraminiferi
+
 Non si può più parlare di sezioni equatoriali, nel vero senso  della parola, nelle forme ad avvolgimento trocospirale: si parla in que  sto caso di sezioni trasversali. [MBC p35]
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
@@ -535,45 +536,66 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 # Chiavi per la classificazione dei macro invertebrati
 
 - Ha struttura tripartita?
-  - Sì → Artropode trilobite
+  - Sì → **Artropode trilobite**
   - No
+    - Ha conchiglia?
+      - No
+        - Ha simmetria pentaraggiata?
+          - Sì → **Echinodermata**
+          - No → **Cnidaria**
+      - Sì
+        - Ha due valve?
+          - Sì
+            - Sono speculari?
+              - Sì → **Mollusca Bivalvia**
+              - No → **Brachiopoda**
+          - No
+            - Gastropoda
+            - Cephalopoda
 
 # Artropodi Trilobiti
 
-Cuticola dorsale mineralizzata, parte ventrale scarsamente conservata  
-Escoscheletro suddiviso in tre parti  
-Corpo segmentato  
-Arti articolati  
-Accrescimento per mute (la maggior parte dei fossili trovati sono exuvie mineralizzate)  
-Muta attraverso rottura dell'escoscheletro in corrispondenza della sutura facciale  
-Longitudinale: lobo assiale e due lobi pleurali  
-Trasversale: cephalon (anteriore), thorax (mediano), pygidium (posteriore)  
-Dimensione pygidium rispetto a cephalon: micropigidiale, isopigidiale, macropigidiale  
-Occhi: molto sviluppati in forme pelagiche, regredite in forme infossate o di mare profondo  
-Thorax articolato permette di appallottolarsi per difesa  
-Segmenti terminano in spine  
-Punta/e caudale nel pygidium  
-Ipostoma nella parte ventrale protegge la bocca e a volte si conserva  
-Organismi bentonici che camminano sul fondo, scavano nel sedimento e nuotano sul fondo  
-Exuvie ritrovate in sedimenti calcarei a grana fine in ambiente di piattaforma  
-Utili per stratigrafia (cambriano-ordoviciano)  
-Utili per paleobiogeografia (alcuni periodi del paleozoico)  
-Utili per paleoecologia
+- Riconoscimento
+  - Cuticola dorsale mineralizzata, parte ventrale scarsamente conservata  
+  - Escoscheletro suddiviso in tre parti  
+  - Corpo segmentato  
+  - Arti articolati  
+  - Accrescimento per mute (la maggior parte dei fossili trovati sono exuvie mineralizzate)  
+  - Muta attraverso rottura dell'escoscheletro in corrispondenza della sutura facciale  
+  - Suddivisione longitudinale: lobo assiale e due lobi pleurali  
+  - Suddivisione trasversale: cephalon (anteriore), thorax (mediano), pygidium (posteriore)  
+  - Dimensione pygidium rispetto a cephalon: micropigidiale, isopigidiale, macropigidiale  
+  - Occhi: molto sviluppati in forme pelagiche, regredite in forme infossate o di mare profondo  
+  - Thorax articolato permette di appallottolarsi per difesa  
+  - Segmenti terminano in spine  
+  - Punta/e caudale nel pygidium  
+  - Ipostoma nella parte ventrale protegge la bocca e a volte si conserva  
+- Habitat
+  - Organismi bentonici che camminano sul fondo, scavano nel sedimento e nuotano sul fondo  
+  - Exuvie ritrovate in sedimenti calcarei a grana fine in ambiente di piattaforma  
+- Applicazioni in geologia  
+  - Utili per stratigrafia (cambriano-ordoviciano)  
+  - Utili per paleobiogeografia (alcuni periodi del paleozoico)  
+  - Utili per paleoecologia
 
 # Cnidaria
 
-Simmetria raggiata  
-Esoscheletro chitinoso o calcareo  
-Forma di polipo (si conserva come fossile) o medusa (difficilmente conservabile)  
-Individui isolati/solitario vs colonie  
-Habitat individui isolati: mare di alta profondità, anche freddo  
-Habitat colonie: mare di bassa profondità (inferiore a 60m), caldo (>20°C), acque agitate senza apporto di materiale torbido o acqua dolce  
-Madrepore richiamano CaCO<sub>3</sub> marino per formare scheletro  
-Polipo: struttura cilindrica  
-Corallite: scheletro di ogni singolo polipo solitario o parte di una colonia  
-Corallo: scheletro della colonia, formato dai coralliti  
-Setto: partizione radiale della parete interna del corallite  
-Costa: elementi radiali della parete esterna del corallite  
+- Riconoscimento
+  - Simmetria raggiata  
+  - Esoscheletro chitinoso o calcareo  
+  - Forma di polipo (si conserva come fossile) o medusa (difficilmente conservabile)  
+  - Individui isolati/solitario vs colonie  
+  - Polipo: struttura cilindrica  
+  - Corallite: scheletro di ogni singolo polipo solitario o parte di una colonia  
+  - Corallo: scheletro della colonia, formato dai coralliti  
+  - Setto: partizione radiale della parete interna del corallite  
+  - Costa: elementi radiali della parete esterna del corallite    
+- Habitat  
+  - Habitat individui isolati: mare di alta profondità, anche freddo  
+  - Habitat colonie: mare di bassa profondità (inferiore a 60m), caldo (>20°C), acque agitate senza apporto di materiale torbido o acqua dolce  
+- Applicazioni in geologia  
+  - Madrepore richiamano CaCO<sub>3</sub> marino per formare scheletro  
+
 
 ||Scleractinia|Rugosa|Tabulata|
 |-|-|-|-|
@@ -606,34 +628,37 @@ Utili per paleoecologia
 
 ## Mollusca Bivalvia (aka lamellibranchi)
 
-Mantello: secerne il guscio e contiene le parti molli  
-Cerniera: su cui si articolano le due valve (composta da denti e fossette complementari fra valve)  
-Legamento: unisce le due valve e tende ad aprirle  
-Muscoli adduttori: interni, per aprire le valve (contrastano il legamento), anteriore e posteriore  
-Impronte dei muscoli adduttori: posteriore è la più grande (a volte l'unica presente)  
-Muscoli palleali: collegano il mantello alla superficie interna della conchiglia  
-Linea palleale: impronta sulla superficie interna della conchiglia in corrispondenza del fissaggio dei muscoli palleali  
-Seno palleale: piega della linea palleale (ospita i sifoni quando sono ritirati entro la conchiglia)  
-Equivalve vs unequivalve (esempio _Ostrea edulis_ che ha una valva concava e l'altra piatta)  
-Forma delle valve: ovale, ellittica, etc  
-Umbone: apice da cui partono le ornamentazioni concentriche (tipicamente linee di accrescimento) delle valve  
-Ornamentazioni radiali: spine, tubercoli, nodi  
+- Riconoscimento
+  - Mantello: secerne il guscio e contiene le parti molli  
+  - Cerniera: su cui si articolano le due valve (composta da denti e fossette complementari fra valve)  
+  - Legamento: unisce le due valve e tende ad aprirle  
+  - Muscoli adduttori: interni, per aprire le valve (contrastano il legamento), anteriore e posteriore  
+  - Impronte dei muscoli adduttori: posteriore è la più grande (a volte l'unica presente)  
+  - Muscoli palleali: collegano il mantello alla superficie interna della conchiglia  
+  - Linea palleale: impronta sulla superficie interna della conchiglia in corrispondenza del fissaggio dei muscoli palleali  
+  - Seno palleale: piega della linea palleale (ospita i sifoni quando sono ritirati entro la conchiglia)  
+  - Equivalve vs unequivalve (esempio _Ostrea edulis_ che ha una valva concava e l'altra piatta)  
+  - Forma delle valve: ovale, ellittica, etc  
+  - Umbone: apice da cui partono le ornamentazioni concentriche (tipicamente linee di accrescimento) delle valve  
+  - Ornamentazioni radiali: spine, tubercoli, nodi  
 
 ## Mollusca Gastropoda
 
-Conchiglia unica che si avvolge attorno ad un asse; suddivisa in: apice, spira (divisa da suture), ultimo giro  
-Avvolgimento largo: i giri di spira che non sono a contatto e lasciano una apertura detta ombelico  
+- Riconoscimento  
+  - Conchiglia unica che si avvolge attorno ad un asse; suddivisa in: apice, spira (divisa da suture), ultimo giro  
+  - Avvolgimento largo: i giri di spira che non sono a contatto e lasciano una apertura detta ombelico  
 
 
 ## Mollusca Cephalopoda
 
-Conchiglia esterna: conica avvolta oppure diritta  
-Morfologia conchiglia esterna: protoconca (all'apice), fragmocono (suddivisa in camere tramite setti), camera di abitazione con apertura detta peristoma  
-Il sifone perfora i setti e dà luogo ai colletti settali che sono orientati verso l'apice nei Nautiloidi e verso l'apertura negli Ammonoidi  
-Il setto incontra la parete della conchiglia nella linea di sutura  
-Le linee di sutura sono interne alla conchiglia, se si vedono nel fossile allora si sta osservando il calco della conchiglia  
-Aptici: opercolo che chiude la camera di abitazione  
-Rincoliti: mascelle mineralizzate di cefalopodi  
+- Riconoscimento
+  - Conchiglia esterna: conica avvolta oppure diritta  
+  - Morfologia conchiglia esterna: protoconca (all'apice), fragmocono (suddivisa in camere tramite setti), camera di abitazione con apertura detta peristoma  
+  - Il sifone perfora i setti e dà luogo ai colletti settali che sono orientati verso l'apice nei Nautiloidi e verso l'apertura negli Ammonoidi  
+  - Il setto incontra la parete della conchiglia nella linea di sutura  
+  - Le linee di sutura sono interne alla conchiglia, se si vedono nel fossile allora si sta osservando il calco della conchiglia  
+  - Aptici: opercolo che chiude la camera di abitazione  
+  - Rincoliti: mascelle mineralizzate di cefalopodi  
 
 ## Mollusca Cephalopoda, Nautiloidea vs Ammonoidea
 
@@ -647,43 +672,55 @@ Rincoliti: mascelle mineralizzate di cefalopodi
 
 ## Mollusca Cephalopoda - Belemnoidea
 
-Conchiglia interna conica, non avvolta  
-Parti della conchiglia: rostro (tipicamente ritrovato), fragmocono, proostraco (rudimentale camera di abitazione, raramente conservato)
+- Riconoscimento  
+  - Conchiglia interna conica, non avvolta  
+  - Parti della conchiglia: rostro (tipicamente ritrovato), fragmocono, proostraco (rudimentale camera di abitazione, raramente conservato)
 
 # Brachiopoda
 
-Denominate anche "conchiglie a lucerna" (dalla forma delle lucerne ad olio romane)  
-Paio di valve simmetriche ma ineguali  
-Valva brachiale vs valva peduncolare (ha il foramen peduncolare, è l'apertura da cui esce il peduncolo)  
-Il foramen peduncolare è la parte posteriore (è all'apice della conchiglia), la parte opposta è quella anteriore  
-Piano di commessura: è la superficie occupata dai bordi delle valve quando sono chiuse  
-Il piano di simmetria per i brachiopoda è ortogonale al piano di commessura  
-Invece il piano di simmetria per i bivalvia coincide con il piano di commessura  
-Classe Inarticulata: cerniera assente (senza denti e fossette), guscio chitino fofatico (alta frazione di materia organica)  
-Classe Articulata: cerniera presente (con due denti e due fossette), guscio calcareo (bassa frazione di material organica)  
-Esclusivamente marini  
-Bentonici ancorati al fondale marino tramite il peduncolo, epifaunali o quasi-infaunali  
-Alle volte ancorati al fondale tramite spine  
-Cerniera dritta vs curva  
-Una valva è sempre convessa, l'altra può essere convessa, piana o concava  
-Ornamentazioni: strie di accrescimento (tangenziali), coste (radiali)  
-Utili per ricostruzioni paleoambienti (tipo di subtrato (hanno il peduncolo!), profondità)  
+- Riconoscimento  
+  - Denominate anche "conchiglie a lucerna" (dalla forma delle lucerne ad olio romane)  
+  - Paio di valve simmetriche ma ineguali  
+  - Valva brachiale vs valva peduncolare (ha il foramen peduncolare, è l'apertura da cui esce il peduncolo)  
+  - Il foramen peduncolare è la parte posteriore (è all'apice della conchiglia), la parte opposta è quella anteriore  
+  - Piano di commessura: è la superficie occupata dai bordi delle valve quando sono chiuse  
+  - Il piano di simmetria per i brachiopoda è ortogonale al piano di commessura  
+  - Invece il piano di simmetria per i bivalvia coincide con il piano di commessura  
+  - Classe Inarticulata: cerniera assente (senza denti e fossette), guscio chitino fofatico (alta frazione di materia organica)  
+  - Classe Articulata: cerniera presente (con due denti e due fossette), guscio calcareo (bassa frazione di material organica)  
+  - Cerniera dritta vs curva  
+  - Una valva è sempre convessa, l'altra può essere convessa, piana o concava  
+  - Ornamentazioni: strie di accrescimento (tangenziali), coste (radiali)    
+- Habitat  
+  - Esclusivamente marini  
+  - Bentonici ancorati al fondale marino tramite il peduncolo, epifaunali o quasi-infaunali  
+  - Alle volte ancorati al fondale tramite spine  
+- Applicazioni in geologia
+  - Utili per ricostruzioni paleoambienti
+  - Tipo di subtrato (hanno il peduncolo!)
+  - Batimetria  
 
 # Echinodermata
 
-Simmetria pentaraggiata  
-Endoscheletro composto di piastre e spicole calcaree  
-Poca tolleranza alle variazioni di salinità  
-Echinoidi e crinoidi tipici in acque basse  
+- Riconoscimento
+  - Simmetria pentaraggiata  
+  - Endoscheletro composto di piastre e spicole calcaree  
+- Habitat  
+  - Poca tolleranza alle variazioni di salinità  
+  - Echinoidi e crinoidi tipici in acque basse  
 
-# Echinodermata crinoidea
+## Echinodermata crinoidea
 
-Corpo caliciforme con cinque braccia  
-Parti del corpo: peduncolo, teca, braccia  
-Importanti dal punto di vista litogenetico  
-Ecologia: bentonici poco profondi  
+- Riconoscimento
+  - Corpo caliciforme con cinque braccia  
+  - Parti del corpo: peduncolo, teca, braccia  
+- Habitat  
+  - Ecologia: bentonici poco profondi  
+- Applicazioni in geologia  
+  - Importanti dal punto di vista litogenetico  
 
-# Echinodermata echinoidea
+
+## Echinodermata echinoidea
 
 ||Regolari|Irregolari|
 |-|-|-|
