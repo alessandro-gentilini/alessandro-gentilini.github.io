@@ -304,6 +304,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <th>Cnidaria Scleractinia</th>
 <th>Mollusca Bivalvia</th>
 <th>Mollusca Gastropoda</th>
+<th>Mollusca Cephalopoda Nautiloidi</th>
+<th>Mollusca Cephalopoda Ammoniti</th>
+<th>Mollusca Cephalopoda Belemniti</th>
 </tr>
 </thead>
 <tbody>
@@ -318,6 +321,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
 </tr>
 <tr style='background-color: #FFE619;'>
 <td>CZ<img src='./fig/neogene.png'></td>
@@ -329,6 +335,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 <td>X</td>
 </tr>
 <tr style='background-color: #FD9A52;'>
@@ -342,6 +351,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
 <td>MZ<img src='./fig/cretacico.png'></td>
@@ -351,6 +363,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 <td>X</td>
 <td>X</td>
@@ -366,6 +381,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #812B92;'>
 <td>MZ<img src='./fig/triassico.png'></td>
@@ -378,6 +396,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #F04028;'>
 <td>PZ<img src='./fig/permiano.png'></td>
@@ -390,6 +411,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #67A599;'>
 <td>PZ<img src='./fig/carbonifero.png'></td>
@@ -402,6 +426,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #CB8C37;'>
 <td>PZ<img src='./fig/devoniano.png'></td>
@@ -414,6 +441,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
 <td>PZ<img src='./fig/siluriano.png'></td>
@@ -426,6 +456,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
 </tr>
 <tr style='background-color: #009270;'>
 <td>PZ<img src='./fig/ordoviciano.png'></td>
@@ -438,6 +471,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td>PZ<img src='./fig/cambriano.png'></td>
@@ -450,6 +486,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -512,19 +551,19 @@ Costa: elementi radiali della parete esterna del corallite
 Utili per biostratigrafia  
 Utili per paleoecologia  
 
-||Bivalvia|Gastropoda|
-|-|-|-|
-|Conchiglia|Esterna, composta da due valve articolate|Esterna, unica|
-|Composizione conchiglia|Carbonato di calcio|
-|Ecologia|Bentonici: epifaunali, semi-infaunali, infaunali|
-|Batimetria|Aree poco profonde (zone costiere e piattaforma)
-|Marini|Prevalentemente|Sì (Bentonici)|
-|Salmastri|Comuni|Sì|
-|Dulcicoli|Rari|Sì|
-|Terrestri|No|Sì|
-|Applicazioni paleoambientali|Sì|Sì (perché legati al substrato)|
-|Applicazioni paleobatimetrie|Sì|Sì|
-|Applicazioni biostratigrafiche||Scarse|
+||Bivalvia|Gastropoda|Cephalopoda - Nautiloidea|Cephalopoda - Ammonoidea|Cephalopoda - Belemnoidea|
+|-|-|-|-|-|-|
+|Conchiglia|Esterna, composta da due valve articolate|Esterna, unica|Esterna, unica|Esterna, unica|Interna|
+|Composizione conchiglia|Carbonato di calcio||||Calcite/aragonite|
+|Ecologia|Bentonici: epifaunali, semi-infaunali, infaunali|||assenti in: ambienti di scogliera; sedimenti sabbiosi/oolitici; ambienti ad alto tasso di sedimentazione|Nectonici|
+|Batimetria|Aree poco profonde (zone costiere e piattaforma)|||||
+|Marini|Prevalentemente|Sì (Bentonici)|Esclusivamente marini (Nectonici)|Nectonici|Nectonici|
+|Salmastri|Comuni|Sì|No|No|No|
+|Dulcicoli|Rari|Sì|No|No|No|
+|Terrestri|No|Sì|No|No|No|
+|Applicazioni paleoambientali|Sì|Sì (perché legati al substrato)||||
+|Applicazioni paleobatimetrie|Sì|Sì||||
+|Applicazioni biostratigrafiche||Scarse|Sì|||
 
 ## Mollusca Bivalvia (aka lamellibranchi)
 
@@ -547,6 +586,29 @@ Conchiglia unica che si avvolge attorno ad un asse; suddivisa in: apice, spira (
 Avvolgimento largo: i giri di spira che non sono a contatto e lasciano una apertura detta ombelico  
 
 
+## Mollusca Cephalopoda
+
+Conchiglia esterna: conica avvolta oppure diritta  
+Morfologia conchiglia esterna: protoconca (all'apice), fragmocono (suddivisa in camere tramite setti), camera di abitazione con apertura detta peristoma  
+Il sifone perfora i setti e dà luogo ai colletti settali che sono orientati verso l'apice nei Nautiloidi e verso l'apertura negli Ammonoidi  
+Il setto incontra la parete della conchiglia nella linea di sutura  
+Aptici: opercolo che chiude la camera di abitazione  
+Rincoliti: mascelle mineralizzate di cefalopodi  
+
+## Mollusca Cephalopoda, Nautiloidea vs Ammonoidea
+
+||Nautiloidea|Ammonoidea|
+|-|-|-|
+|Forma conchiglia|molto variabile|prevalentemente planispirale|
+|Colletti settali|verso apice|verso apertura|
+|Convessità setti|verso apice|verso apertura|
+|Suture|semplici|elaborate|
+|Ornamentazioni||presenti|
+
+## Mollusca Cephalopoda - Belemnoidea
+
+Conchiglia interna conica, non avvolta  
+Parti della conchiglia: rostro (tipicamente ritrovato), fragmocono, proostraco (rudimentale camera di abitazione, raramente conservato)
 
 
 
