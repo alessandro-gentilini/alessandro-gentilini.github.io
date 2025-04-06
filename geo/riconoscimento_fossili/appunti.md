@@ -307,6 +307,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <th>Mollusca Cephalopoda Nautiloidi</th>
 <th>Mollusca Cephalopoda Ammoniti</th>
 <th>Mollusca Cephalopoda Belemniti</th>
+<th>Brachiopoda</th>
 </tr>
 </thead>
 <tbody>
@@ -324,6 +325,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #FFE619;'>
 <td>CZ<img src='./fig/neogene.png'></td>
@@ -338,6 +340,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #FD9A52;'>
@@ -354,6 +357,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
 <td>MZ<img src='./fig/cretacico.png'></td>
@@ -363,6 +367,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
 <td>X</td>
 <td>X</td>
 <td>X</td>
@@ -384,6 +389,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #812B92;'>
 <td>MZ<img src='./fig/triassico.png'></td>
@@ -399,6 +405,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #F04028;'>
 <td>PZ<img src='./fig/permiano.png'></td>
@@ -414,6 +421,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #67A599;'>
 <td>PZ<img src='./fig/carbonifero.png'></td>
@@ -429,6 +437,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #CB8C37;'>
 <td>PZ<img src='./fig/devoniano.png'></td>
@@ -444,6 +453,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
 <td>PZ<img src='./fig/siluriano.png'></td>
@@ -459,6 +469,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #009270;'>
 <td>PZ<img src='./fig/ordoviciano.png'></td>
@@ -474,6 +485,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td>PZ<img src='./fig/cambriano.png'></td>
@@ -489,6 +501,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
 </tr>
 </tbody>
 </table>
@@ -592,6 +605,7 @@ Conchiglia esterna: conica avvolta oppure diritta
 Morfologia conchiglia esterna: protoconca (all'apice), fragmocono (suddivisa in camere tramite setti), camera di abitazione con apertura detta peristoma  
 Il sifone perfora i setti e dà luogo ai colletti settali che sono orientati verso l'apice nei Nautiloidi e verso l'apertura negli Ammonoidi  
 Il setto incontra la parete della conchiglia nella linea di sutura  
+Le linee di sutura sono interne alla conchiglia, se si vedono nel fossile allora si sta osservando il calco della conchiglia  
 Aptici: opercolo che chiude la camera di abitazione  
 Rincoliti: mascelle mineralizzate di cefalopodi  
 
@@ -610,6 +624,24 @@ Rincoliti: mascelle mineralizzate di cefalopodi
 Conchiglia interna conica, non avvolta  
 Parti della conchiglia: rostro (tipicamente ritrovato), fragmocono, proostraco (rudimentale camera di abitazione, raramente conservato)
 
+# Brachiopoda
+
+Denominate anche "conchiglie a lucerna" (dalla forma delle lucerne ad olio romane)  
+Paio di valve simmetriche ma ineguali  
+Valva brachiale vs valva peduncolare (ha il foramen peduncolare, è l'apertura da cui esce il peduncolo)  
+Il foramen peduncolare è la parte posteriore (è all'apice della conchiglia), la parte opposta è quella anteriore  
+Piano di commessura: è la superficie occupata dai bordi delle valve quando sono chiuse  
+Il piano di simmetria per i brachiopoda è ortogonale al piano di commessura  
+Invece il piano di simmetria per i bivalvia coincide con il piano di commessura  
+Classe Inarticulata: cerniera assente (senza denti e fossette), guscio chitino fofatico (alta frazione di materia organica)  
+Classe Articulata: cerniera presente (con due denti e due fossette), guscio calcareo (bassa frazione di material organica)  
+Esclusivamente marini  
+Bentonici ancorati al fondale marino tramite il peduncolo, epifaunali o quasi-infaunali  
+Alle volte ancorati al fondale tramite spine  
+Cerniera dritta vs curva  
+Una valva è sempre convessa, l'altra può essere convessa, piana o concava  
+Ornamentazioni: strie di accrescimento (tangenziali), coste (radiali)  
+Utili per ricostruzioni paleoambienti (tipo di subtrato (hanno il peduncolo!), profondità)  
 
 
 # Martedì 4 marzo 2025
