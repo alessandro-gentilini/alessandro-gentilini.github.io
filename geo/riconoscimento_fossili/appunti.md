@@ -65,8 +65,8 @@ ricostruzioni paleoambientali = definire l’ambiente deposizionale
 
 Nella maggior parte dei Foraminiferi le camere sono disposte secondo una spirale che può essere piana (avvolgimento planispirale) o rialzata (avvolgimento trocospirale). [MBC p35]
 
-- Gusci porcellanacei, imperforati
-- Gusci ialini, perforati.
+![Terminologias per micro foraminifero (la forma a spirale è tipica di taxa bentonici). Tratto da [BMC].](fig/MBC_fig168_p255.png)
+
 
 # Foraminiferi e batimetria [SCV-PDF3]
 
@@ -110,10 +110,6 @@ $D=\exp(3.58+0.03\cdot I)$
 Non si può più parlare di sezioni equatoriali, nel vero senso  della parola, nelle forme ad avvolgimento trocospirale: si parla in que  sto caso di sezioni trasversali. [MBC p35]
 
 ![Tratto da [MBC fig1 p36].](fig/MBC_fig1_p36.png)
-
-![](fig/MBC_fig160_p244.png)
-
-![](fig/MBC_fig168_p255.png)
 
 # Nomenclatura macro foraminiferi
 
@@ -160,6 +156,8 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 ![Foto fatte a lezione di sezioni sottili di Alveoline (come sfondo [MBC]).](fig/riassunto_alveoline.png)
 
 ![Sezioni assiali ed equatoriali di Alveoline, tratto da [MBC].](fig/MBC_fig237_p318.png)
+
+![Sezione assiale di alveolina. Tratto da [MBC].](fig/MBC_fig160_p244.png)
 
 # Nummuliti
 
@@ -293,6 +291,125 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 </tr>
 </tbody>
 </table>
+
+# Distribuzione cronostratigrafica dei macro fossili invertebrati
+
+<table>
+<thead>
+<tr>
+<th></th><th>name</th><th>end</th><th>begin</th>
+<th>Artropodi Trilobiti</th>
+</tr>
+</thead>
+<tbody>
+<tr style='background-color: #F9F97F;'>
+<td>CZ<img src='./fig/quaternario.png'></td>
+<td>quaternario</td>
+<td>0</td>
+<td><b>2.58</b></td>
+<td></td>
+</tr>
+<tr style='background-color: #FFE619;'>
+<td>CZ<img src='./fig/neogene.png'></td>
+<td>neogene</td>
+<td>2.58</td>
+<td>25</td>
+<td></td>
+</tr>
+<tr style='background-color: #FD9A52;'>
+<td>CZ<img src='./fig/paleogene.png'></td>
+<td>paleogene</td>
+<td>25</td>
+<td><b>65</b></td>
+<td></td>
+</tr>
+<tr style='background-color: #7FC64E;'>
+<td>MZ<img src='./fig/cretacico.png'></td>
+<td>cretacico</td>
+<td>65</td>
+<td>145</td>
+<td></td>
+</tr>
+<tr style='background-color: #34B2C9;'>
+<td>MZ<img src='./fig/giurassico.png'></td>
+<td>giurassico</td>
+<td>145</td>
+<td>200</td>
+<td></td>
+</tr>
+<tr style='background-color: #812B92;'>
+<td>MZ<img src='./fig/triassico.png'></td>
+<td>triassico</td>
+<td>200</td>
+<td><b>250</b></td>
+<td></td>
+</tr>
+<tr style='background-color: #F04028;'>
+<td>PZ<img src='./fig/permiano.png'></td>
+<td>permiano</td>
+<td>250</td>
+<td>300</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #67A599;'>
+<td>PZ<img src='./fig/carbonifero.png'></td>
+<td>carbonifero</td>
+<td>300</td>
+<td>360</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #CB8C37;'>
+<td>PZ<img src='./fig/devoniano.png'></td>
+<td>devoniano</td>
+<td>360</td>
+<td>420</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #B3E1B6;'>
+<td>PZ<img src='./fig/siluriano.png'></td>
+<td>siluriano</td>
+<td>420</td>
+<td>445</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #009270;'>
+<td>PZ<img src='./fig/ordoviciano.png'></td>
+<td>ordoviciano</td>
+<td>445</td>
+<td>485</td>
+<td>X</td>
+</tr>
+<tr style='background-color: #7FA056;'>
+<td>PZ<img src='./fig/cambriano.png'></td>
+<td>cambriano</td>
+<td>485</td>
+<td>540</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+
+# Artropodi Trilobiti
+
+Cuticola dorsale mineralizzata, parte ventrale scarsamente conservata  
+Escoscheletro suddiviso in tre parti  
+Corpo segmentato  
+Arti articolati  
+Accrescimento per mute (la maggior parte dei fossili trovati sono exuvie mineralizzate)  
+Muta attraverso rottura dell'escoscheletro in corrispondenza della sutura facciale  
+Longitudinale: lobo assiale e due lobi pleurali  
+Trasversale: cephalon (anteriore), thorax (mediano), pygidium (posteriore)  
+Dimensione pygidium rispetto a cephalon: micropigidiale, isopigidiale, macropigidiale  
+Occhi: molto sviluppati in forme pelagiche, regredite in forme infossate o di mare profondo  
+Thorax articolato permette di appallottolarsi per difesa  
+Segmenti terminano in spine  
+Punta/e caudale nel pygidium  
+Ipostoma nella parte ventrale protegge la bocca e a volte si conserva  
+Organismi bentonici che camminano sul fondo, scavano nel sedimento e nuotano sul fondo  
+Exuvie ritrovate in sedimenti calcarei a grana fine in ambiente di piattaforma  
+Utili per stratigrafia (cambriano-ordoviciano)  
+Utili per paleobiogeografia (alcuni periodi del paleozoico)  
+Utili per paleoecologia
 
 
 
