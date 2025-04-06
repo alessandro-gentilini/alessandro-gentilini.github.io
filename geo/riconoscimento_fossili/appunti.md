@@ -185,7 +185,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>CZ<img src='./fig/quaternario.png'></td>
 <td>quaternario</td>
 <td>0</td>
-<td><b>2.58</b></td>
+<td><u><b>2.58</b></u></td>
 <td>X</td>
 <td>X</td>
 <td></td>
@@ -203,7 +203,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>CZ<img src='./fig/paleogene.png'></td>
 <td>paleogene</td>
 <td>25</td>
-<td><b>65</b></td>
+<td><u><b>65</b></u></td>
 <td>X</td>
 <td>X</td>
 <td></td>
@@ -230,7 +230,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>MZ<img src='./fig/triassico.png'></td>
 <td>triassico</td>
 <td>200</td>
-<td><b>250</b></td>
+<td><u><b>250</b></u></td>
 <td></td>
 <td></td>
 <td></td>
@@ -302,6 +302,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <th>Cnidaria Rugosa</th>
 <th>Cnidaria Tabulata</th>
 <th>Cnidaria Scleractinia</th>
+<th>Mollusca Bivalvia</th>
+<th>Mollusca Gastropoda</th>
 </tr>
 </thead>
 <tbody>
@@ -309,10 +311,12 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>CZ<img src='./fig/quaternario.png'></td>
 <td>quaternario</td>
 <td>0</td>
-<td><b>2.58</b></td>
+<td><u><b>2.58</b></u></td>
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #FFE619;'>
@@ -324,15 +328,19 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #FD9A52;'>
 <td>CZ<img src='./fig/paleogene.png'></td>
 <td>paleogene</td>
 <td>25</td>
-<td><b>65</b></td>
+<td><u><b>65</b></u></td>
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
@@ -344,6 +352,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #34B2C9;'>
 <td>MZ<img src='./fig/giurassico.png'></td>
@@ -354,15 +364,19 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #812B92;'>
 <td>MZ<img src='./fig/triassico.png'></td>
 <td>triassico</td>
 <td>200</td>
-<td><b>250</b></td>
+<td><u><b>250</b></u></td>
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #F04028;'>
@@ -374,6 +388,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #67A599;'>
 <td>PZ<img src='./fig/carbonifero.png'></td>
@@ -384,6 +400,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #CB8C37;'>
 <td>PZ<img src='./fig/devoniano.png'></td>
@@ -394,6 +412,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
 <td>PZ<img src='./fig/siluriano.png'></td>
@@ -404,6 +424,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #009270;'>
 <td>PZ<img src='./fig/ordoviciano.png'></td>
@@ -414,6 +436,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td>PZ<img src='./fig/cambriano.png'></td>
@@ -424,9 +448,17 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 </tr>
 </tbody>
 </table>
+
+# Chiavi per la classificazione dei macro invertebrati
+
+- Ha struttura tripartita?
+  - Sì → Artropode trilobite
+  - No
 
 # Artropodi Trilobiti
 
@@ -469,11 +501,53 @@ Costa: elementi radiali della parete esterna del corallite
 |-|-|-|-|
 |Stato|Esistente|Estinto|Estinto|
 |Epoca|Triassico - recente|Ordoviciano - Permiano|Ordoviciano - Permiano|
-|Aggregazione|Solitari e coloniali|Più comuni i solitari|Solo coloniali|
+|Aggregazione|Più comuni i coloniali|Più comuni i solitari|Solo coloniali|
 |Esoscheletro|Aragonite|Calcite|Calcite|
 |Parete esterna||Strutture trasversali (crescita), creste e solchi longitudinali (in corrispondenza di setti e spazi intersettali)|non c'è perché solo coloniali|
 |Diagnostica|Setti|Setti più sviluppati nella parte periferica, fossula|Setti assenti o debolmente sviluppati|
 |Colonia|???a madrepora?||a favo|
+
+# Mollusca
+
+Utili per biostratigrafia  
+Utili per paleoecologia  
+
+||Bivalvia|Gastropoda|
+|-|-|-|
+|Conchiglia|Esterna, composta da due valve articolate|Esterna, unica|
+|Composizione conchiglia|Carbonato di calcio|
+|Ecologia|Bentonici: epifaunali, semi-infaunali, infaunali|
+|Batimetria|Aree poco profonde (zone costiere e piattaforma)
+|Marini|Prevalentemente|Sì (Bentonici)|
+|Salmastri|Comuni|Sì|
+|Dulcicoli|Rari|Sì|
+|Terrestri|No|Sì|
+|Applicazioni paleoambientali|Sì|Sì (perché legati al substrato)|
+|Applicazioni paleobatimetrie|Sì|Sì|
+|Applicazioni biostratigrafiche||Scarse|
+
+## Mollusca Bivalvia (aka lamellibranchi)
+
+Mantello: secerne il guscio e contiene le parti molli  
+Cerniera: su cui si articolano le due valve (composta da denti e fossette complementari fra valve)  
+Legamento: unisce le due valve e tende ad aprirle  
+Muscoli adduttori: interni, per aprire le valve (contrastano il legamento), anteriore e posteriore  
+Impronte dei muscoli adduttori: posteriore è la più grande (a volte l'unica presente)  
+Muscoli palleali: collegano il mantello alla superficie interna della conchiglia  
+Linea palleale: impronta sulla superficie interna della conchiglia in corrispondenza del fissaggio dei muscoli palleali  
+Seno palleale: piega della linea palleale (ospita i sifoni quando sono ritirati entro la conchiglia)  
+Equivalve vs unequivalve (esempio _Ostrea edulis_ che ha una valva concava e l'altra piatta)  
+Forma delle valve: ovale, ellittica, etc  
+Umbone: apice da cui partono le ornamentazioni concentriche (tipicamente linee di accrescimento) delle valve  
+Ornamentazioni radiali: spine, tubercoli, nodi  
+
+## Mollusca Gastropoda
+
+Conchiglia unica che si avvolge attorno ad un asse; suddivisa in: apice, spira (divisa da suture), ultimo giro  
+Avvolgimento largo: i giri di spira che non sono a contatto e lasciano una apertura detta ombelico  
+
+
+
 
 
 # Martedì 4 marzo 2025
@@ -610,10 +684,12 @@ Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Da
 
 # Glossario
 
-Querschnitt = Sezione trasversale (tedesco).
+Querschnitt = Sezione trasversale (tedesco).  
+ceno- = recente (greco).  
 
 # Abbreviazioni
 
+aka = also known as (inglese) = alias (latino) = sinonimo di  
 f.=femminile  
 p.=plurale  
 pl.=plurale  
