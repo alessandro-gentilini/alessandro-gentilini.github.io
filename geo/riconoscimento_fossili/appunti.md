@@ -550,8 +550,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
               - Sì → **Mollusca Bivalvia**
               - No → **Brachiopoda**
           - No
-            - Gastropoda
-            - Cephalopoda
+            - **Gastropoda**
+            - **Cephalopoda**
 
 # Artropodi Trilobiti
 
