@@ -139,6 +139,15 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 |--------|
 |![](fig/SCV-PDF4_p3_di_37-fusulina.png)|
 
+||Fusulina|Alveolina|Nummulite|
+|-|-|-|-|
+|Stato|Estinto|Esistente|Esistente (poche sp. in acque calde)|
+|Epoca|Carbonifero - Permiano|Cretaceo - recente|Cretaceo - recente|
+|Guscio|Calcareo microgranulare|Calcareo porcellanaceo imperforato (flosculinizzazione dà aspetto scuro in sezione sottile)|Calcareo ialino perforato|
+|Setti|Ondulati|Lineari|Camere a V, pilastri|
+|Paleoecologia|Bentonici, condizioni ambientali stabili|Bentonici, i fossili presenti solo in sedimenti di mare basso|Bentonici, fondi calcarei o sabbiosi
+|Profondità|50-60m|Mari tropicali 10-80m i recenti|Meno litorali della Alveoline, 50-150m|
+
 # Fusulina
 
 ![Foto fatte a lezione di sezioni sottili di Fusuline (come sfondo [SCV-PDF4]).](fig/riassunto_fusulinidae.png)
@@ -428,3 +437,4 @@ f.=femminile
 p.=plurale  
 pl.=plurale  
 s.=singolare  
+sp.=specie
