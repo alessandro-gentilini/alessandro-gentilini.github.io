@@ -147,6 +147,7 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 |Setti|Ondulati|Lineari|Camere a V, pilastri|
 |Paleoecologia|Bentonici, condizioni ambientali stabili|Bentonici, i fossili presenti solo in sedimenti di mare basso|Bentonici, fondi calcarei o sabbiosi
 |Profondità|50-60m|Mari tropicali 10-80m i recenti|Meno litorali della Alveoline, 50-150m|
+|Associazioni||Con Nummuliti|Con Alevoline|
 
 # Fusulina
 
