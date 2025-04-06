@@ -308,6 +308,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <th>Mollusca Cephalopoda Ammoniti</th>
 <th>Mollusca Cephalopoda Belemniti</th>
 <th>Brachiopoda</th>
+<th>Echinodermata - Crinoidea</th>
+<th>Echinodermata - Echinoidea</th>
 </tr>
 </thead>
 <tbody>
@@ -326,6 +328,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #FFE619;'>
 <td>CZ<img src='./fig/neogene.png'></td>
@@ -340,6 +344,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 <td>X</td>
 </tr>
@@ -358,6 +364,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
 <td>MZ<img src='./fig/cretacico.png'></td>
@@ -367,6 +375,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 <td>X</td>
 <td>X</td>
@@ -390,6 +400,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #812B92;'>
 <td>MZ<img src='./fig/triassico.png'></td>
@@ -405,6 +417,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #F04028;'>
@@ -422,6 +436,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #67A599;'>
 <td>PZ<img src='./fig/carbonifero.png'></td>
@@ -437,6 +453,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td>X</td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #CB8C37;'>
@@ -454,6 +472,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
 <td>PZ<img src='./fig/siluriano.png'></td>
@@ -469,6 +489,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr style='background-color: #009270;'>
@@ -486,6 +508,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td></td>
 <td></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td>PZ<img src='./fig/cambriano.png'></td>
@@ -501,6 +525,8 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>X</td>
 <td></td>
 <td></td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 </tbody>
@@ -642,6 +668,30 @@ Cerniera dritta vs curva
 Una valva è sempre convessa, l'altra può essere convessa, piana o concava  
 Ornamentazioni: strie di accrescimento (tangenziali), coste (radiali)  
 Utili per ricostruzioni paleoambienti (tipo di subtrato (hanno il peduncolo!), profondità)  
+
+# Echinodermata
+
+Simmetria pentaraggiata  
+Endoscheletro composto di piastre e spicole calcaree  
+Poca tolleranza alle variazioni di salinità  
+Echinoidi e crinoidi tipici in acque basse  
+
+# Echinodermata crinoidea
+
+Corpo caliciforme con cinque braccia  
+Parti del corpo: peduncolo, teca, braccia  
+Importanti dal punto di vista litogenetico  
+Ecologia: bentonici poco profondi  
+
+# Echinodermata echinoidea
+
+||Regolari|Irregolari|
+|-|-|-|
+|Simmetria|pentamera perfetta|pentamera non omogenea (distorta)|
+|Ano e bocca|agli antipodi|non agli antipodi|
+|Habitat|fenditure rocce (subtidali e intertidali)|sepolti nel sedimento|
+
+
 
 
 # Martedì 4 marzo 2025
