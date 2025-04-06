@@ -299,6 +299,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <tr>
 <th></th><th>name</th><th>end</th><th>begin</th>
 <th>Artropodi Trilobiti</th>
+<th>Cnidaria Rugosa</th>
+<th>Cnidaria Tabulata</th>
+<th>Cnidaria Scleractinia</th>
 </tr>
 </thead>
 <tbody>
@@ -308,6 +311,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>0</td>
 <td><b>2.58</b></td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #FFE619;'>
 <td>CZ<img src='./fig/neogene.png'></td>
@@ -315,6 +321,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>2.58</td>
 <td>25</td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #FD9A52;'>
 <td>CZ<img src='./fig/paleogene.png'></td>
@@ -322,6 +331,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>25</td>
 <td><b>65</b></td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #7FC64E;'>
 <td>MZ<img src='./fig/cretacico.png'></td>
@@ -329,6 +341,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>65</td>
 <td>145</td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #34B2C9;'>
 <td>MZ<img src='./fig/giurassico.png'></td>
@@ -336,6 +351,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>145</td>
 <td>200</td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #812B92;'>
 <td>MZ<img src='./fig/triassico.png'></td>
@@ -343,6 +361,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>200</td>
 <td><b>250</b></td>
 <td></td>
+<td></td>
+<td></td>
+<td>X</td>
 </tr>
 <tr style='background-color: #F04028;'>
 <td>PZ<img src='./fig/permiano.png'></td>
@@ -350,6 +371,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>250</td>
 <td>300</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #67A599;'>
 <td>PZ<img src='./fig/carbonifero.png'></td>
@@ -357,6 +381,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>300</td>
 <td>360</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #CB8C37;'>
 <td>PZ<img src='./fig/devoniano.png'></td>
@@ -364,6 +391,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>360</td>
 <td>420</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #B3E1B6;'>
 <td>PZ<img src='./fig/siluriano.png'></td>
@@ -371,6 +401,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>420</td>
 <td>445</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #009270;'>
 <td>PZ<img src='./fig/ordoviciano.png'></td>
@@ -378,6 +411,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>445</td>
 <td>485</td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
 </tr>
 <tr style='background-color: #7FA056;'>
 <td>PZ<img src='./fig/cambriano.png'></td>
@@ -385,6 +421,9 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 <td>485</td>
 <td>540</td>
 <td>X</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -411,6 +450,30 @@ Utili per stratigrafia (cambriano-ordoviciano)
 Utili per paleobiogeografia (alcuni periodi del paleozoico)  
 Utili per paleoecologia
 
+# Cnidaria
+
+Simmetria raggiata  
+Esoscheletro chitinoso o calcareo  
+Forma di polipo (si conserva come fossile) o medusa (difficilmente conservabile)  
+Individui isolati/solitario vs colonie  
+Habitat individui isolati: mare di alta profondità, anche freddo  
+Habitat colonie: mare di bassa profondità (inferiore a 60m), caldo (>20°C), acque agitate senza apporto di materiale torbido o acqua dolce  
+Madrepore richiamano CaCO<sub>3</sub> marino per formare scheletro  
+Polipo: struttura cilindrica  
+Corallite: scheletro di ogni singolo polipo solitario o parte di una colonia  
+Corallo: scheletro della colonia, formato dai coralliti  
+Setto: partizione radiale della parete interna del corallite  
+Costa: elementi radiali della parete esterna del corallite  
+
+||Scleractinia|Rugosa|Tabulata|
+|-|-|-|-|
+|Stato|Esistente|Estinto|Estinto|
+|Epoca|Triassico - recente|Ordoviciano - Permiano|Ordoviciano - Permiano|
+|Aggregazione|Solitari e coloniali|Più comuni i solitari|Solo coloniali|
+|Esoscheletro|Aragonite|Calcite|Calcite|
+|Parete esterna||Strutture trasversali (crescita), creste e solchi longitudinali (in corrispondenza di setti e spazi intersettali)|non c'è perché solo coloniali|
+|Diagnostica|Setti|Setti più sviluppati nella parte periferica, fossula|Setti assenti o debolmente sviluppati|
+|Colonia|???a madrepora?||a favo|
 
 
 # Martedì 4 marzo 2025
