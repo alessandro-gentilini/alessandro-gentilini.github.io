@@ -27,6 +27,16 @@ Fanti in [PDF8] indica queste categorie:
 |Genere||
 |Specie||
 
+# Alcuni dettagli dal codice ICZN (International Commission on Zoological Nomenclature)
+
+_Derivatio nominis_ = origine e significato del nome attribuito ad una specie.  
+_Nomen dubium_ = quando si revisiona il taxon, se si ritiene che la serie-tipo o l'olotipo siano privi delle caratteristiche adeguate a distinguere la specie che rappresentano allora per il nome della specie si utilizzerà la dicitura _nomen dubium_.  
+_Nomen nudum_ = quando l'autore non segue le indicazioni del codice il nome da lui scelto avrà la dicitura _nomen nudum_ che significa nome nudo perché per esempio privo della illustrazione o della diagnosi.  
+_Nomen novum_ = il caso in cui a due taxa differenti sia assegnato il medesimo nome va risolto con il "principio di priorità": si deve conservare il nome pubblicato per primo mentre per l'atro taxon va assegnato un nuovo nome detto per l'appunto _nomen novum_.  
+_Nomen oblitum_ = Nel caso di sinonimia se il nome più antico è oscuro e in disuso allora si può invertire il principio di priorità e mantenere il nome più recente (che deve essere invece noto e diffuso); il nome più antico non va più usato e viene detto _nomen oblitum_ che significa nome dimenticato.  
+_Nomen protectum_ = Nel caso di sinonimia se il nome più antico è oscuro e in disuso allora si può invertire il principio di priorità e mantenere il nome più recente (che deve essere invece noto e diffuso) che viene detto _nomen protectum_.  
+
+
 # Epoche
 
 <table>
@@ -848,6 +858,9 @@ Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
 
+[ManPal]  
+Società Paleontologica Italiana, "Manuale di paleontologia, Fondamenti - Applicazioni", Napoli, 2020, Idelson Gnocchi.
+
 [SCV-PDF2]  
 Stefano Claudio Vaiani, "Foraminiferi".
 
@@ -865,8 +878,9 @@ Hayward, B.W.; Le Coze, F.; Vachard, D.; Gross, O. (2025). World Foraminifera Da
 
 # Glossario
 
-Querschnitt = Sezione trasversale (tedesco).  
 ceno- = recente (greco).  
+Querschnitt = Sezione trasversale (tedesco).  
+
 
 # Abbreviazioni
 
