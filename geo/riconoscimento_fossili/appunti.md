@@ -543,7 +543,7 @@ La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da 
 </tbody>
 </table>
 
-# Chiavi per la classificazione dei macro invertebrati
+# Chiavi per la classificazione dei macro invertebrati (limitatamente ai taxa considerati nella verifica dell'8 aprile 2025)
 
 - Ha struttura tripartita?
   - Sì → **Artropode trilobite**
