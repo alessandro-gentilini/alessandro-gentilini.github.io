@@ -739,7 +739,7 @@ Tessitura:
 [Perkins] Perkins, "Mineralogy", https://opengeology.org/Mineralogy/, 2022.  
 [PDF10] 10-Argomento_6-Rocce_magmatiche-3.0 Roccemagmatiche(ignee)  
 [PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
-[PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024
+[PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024  
 [Q] quaderno nero  
 [Venturini] Venturini, "Rilevamento geologico", Bologna, 2023.
 
