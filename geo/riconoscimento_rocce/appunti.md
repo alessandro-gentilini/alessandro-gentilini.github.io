@@ -475,6 +475,8 @@ Se alla domanda 3) si è risposto "forse" allora va considerata la tabella segue
 |No/Sì|Sì a fatica|Con lente struttura microcristallina piuttosto che clastica|dolomie micritiche|
 |No/-|No|Con lente struttura criptocristallina|selci|
 
+
+
 \newpage
 
 # Rocce metamorfiche
@@ -741,7 +743,7 @@ Tessitura:
 [PDF17] 17-Argomento_7-Rocce_sedimentarie_clastiche-4.IntrRoccesedRocceclastiche  
 [PDF29] 29-Argomento_9-Rocce_carbonatiche-5.0 Roccesedcarbonatiche_2024  
 [Q] quaderno nero  
-[Venturini] Venturini, "Rilevamento geologico", Bologna, 2023.
+[Venturini] Venturini, "Rilevamento geologico", Bologna, 2023. [Anche disponibile come estratto nel sito del precedente editore](https://www.darioflaccovio.it/abstracts/9788857901534/realizzare-e-leggere-carte-e-sezioni-geologiche_9788857901534.pdf).
 
 # Abbreviazioni
 
