@@ -751,4 +751,8 @@ aka = also known as (inglese) = alias (latino) = sinonimo di
 e.g. = exempli gratia (latino) = per esempio  
 s.s. = strictu sensu (latino) = in senso stretto
 
+# Glossario
+
+[Glossario 3.0 per la Carta Geologica d'Italia](https://progetto-carg.isprambiente.it/glossario/index.html)
+
 
