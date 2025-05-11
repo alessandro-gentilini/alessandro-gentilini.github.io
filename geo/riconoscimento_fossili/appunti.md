@@ -4,6 +4,12 @@ author: "Appunti di Alessandro Gentilini"
 date: "16 marzo 2025"
 ---
 
+# Alberi
+
+I box sparsi in https://archive.org/details/phylogenetictree0000hall/
+
+Le prime 18 pagine di https://archive.org/details/cladisticstheory0000unse/
+
 # Definizioni
 
 Fanti in [PDF8]:  
