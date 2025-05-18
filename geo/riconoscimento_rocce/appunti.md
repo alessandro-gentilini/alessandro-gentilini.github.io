@@ -755,4 +755,8 @@ s.s. = strictu sensu (latino) = in senso stretto
 
 [Glossario 3.0 per la Carta Geologica d'Italia](https://progetto-carg.isprambiente.it/glossario/index.html)
 
+# Carte geologiche
+
+[OAR - Open Access Repository](https://www.openaccessrepository.it/)
+
 
