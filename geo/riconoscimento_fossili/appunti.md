@@ -184,9 +184,9 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
 
-- Paleozoico: "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
-- Mesozoico: "**TRI**ppe **GIU**noniche **CRE**scono"
-- Cenozoico: "**P**erò **N**on **Q**ua"
+- Paleozoico (**PZ**): "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
+- Mesozoico (**MZ**): "**TRI**ppe **GIU**noniche **CRE**scono"
+- Cenozoico (**CZ**): "**P**erò **N**on **Q**ua"
 
 <table>
 <thead>
