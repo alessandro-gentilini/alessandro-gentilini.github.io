@@ -8,10 +8,10 @@ date: "9 marzo 2025"
 
 * lo stesso minerale va cercato con la lente in più punti del campione
 * attenzione ad oggetti "strani" (per esempio con superfici molto frastagliate): potrebbero essere fossili
-* Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani [BMRL p77].  
-I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento [BMRL p87].  
-Per maggiore chiarezza, la normale lente a 10-12 ingrandimenti che si usa in campagna non permette il riconoscimento di particelle al di sotto dei 31 micron [GURI p173].  
-Personalmente con la mia lente "B 10x" riesco ad apprezzare 25 micron (provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
+* _Sotto i 25-30 um non è praticamente possibile, con le lenti normalmente a disposizione in campagna, distinguere i vari grani_ [BMRL p77].  
+_I 20-30 um segnano il limite pratico sotto il quale è impossibile distinguere, in campagna e con l'ausilio di una lente a 10-15 ingrandimenti, i singoli componenti (grani, cristalli) di un sedimento_ [BMRL p87].  
+_Per maggiore chiarezza, la normale lente a 10-12 ingrandimenti che si usa in campagna non permette il riconoscimento di particelle al di sotto dei 31 micron_ [GURI p173].    
+Personalmente con la mia lente "B 10x" riesco ad apprezzare 25 micron (=2.5 centesimi di mm, provato il 10 marzo 2025 con target Thorlabs R2L2S2P che riporta vari reticoli di Ronchi, 10LP/mm si distinguono molto bene, 20LP/mm si distinguono ancora altrettanto bene, 30LP/mm si fa molto fatica a distinguerle).
 
 
 # Strumenti di diagnosi speditiva
