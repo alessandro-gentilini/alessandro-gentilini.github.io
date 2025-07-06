@@ -1,7 +1,7 @@
 ---
 title: "Geologia e Geografia - Riconoscimento rocce - A.A. 2024-25"
 author: "Appunti di Alessandro Gentilini"
-date: "6 luglio 2025"
+date: "6 July 2025"
 ---
 
 # Suggerimenti uso lente a mano
