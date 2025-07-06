@@ -1,7 +1,7 @@
 ---
 title: "Geologia e Geografia - Riconoscimento rocce - A.A. 2024-25"
 author: "Appunti di Alessandro Gentilini"
-date: "9 marzo 2025"
+date: "6 luglio 2025"
 ---
 
 # Suggerimenti uso lente a mano
@@ -251,7 +251,7 @@ D'altra parte [Perkins, paragrafo 6.7.1](https://geo.libretexts.org/Bookshelves/
 |**F**emico|**Bas**ico|**F**luido|**Bas**alto|
 |Sialico|Acido|Viscoso|Ossidiana|
 
-L'ossidiana è fortemente sialica, vedi [Q p97].
+L'ossidiana è fortemente sialica, vedi [Q p97] e [GJ p.335].
 
 \newpage
 
