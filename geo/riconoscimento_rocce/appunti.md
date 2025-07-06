@@ -170,6 +170,14 @@ Consigli e avvertimenti per la stima visiva:
 
 \newpage
 
+#### Classificazione speditiva di campagna
+
+\newpage
+
+![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_10.png)
+
+\newpage
+
 ## Rocce effusive o vulcaniche
 
 Strutture delle rocce effusive [Q p98]:
@@ -203,6 +211,14 @@ D'altra parte Perkins scrive:
 \newpage
 
 ![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_11.png)
+
+\newpage
+
+#### Classificazione speditiva di campagna
+
+\newpage
+
+![Tratto da [IUGS_igneous]. **N.B.**: a lezione non abbiamo mai considerato la parte inferiore del diagramma (che è il triangolo FAP).](fig/IUGS_igneous_fig2_19.png)
 
 \newpage
 
