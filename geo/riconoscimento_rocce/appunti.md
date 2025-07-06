@@ -202,7 +202,7 @@ Verbatim dagli appunti [Q p96]:
 
 _Quindi come schema di classificazione: se la roccia è a grana molto fine ed è tutta nera posso dire che è un basalto, se invece si vedono dei piccoli fenocristalli chiari va capito se sono quarzo oppure plagioclasio e di conseguenza si usa il diagramma QAP._
 
-D'altra parte Perkins scrive:
+D'altra parte [Perkins, paragrafo 6.7.1](https://geo.libretexts.org/Bookshelves/Geology/Mineralogy_(Perkins_et_al.)/06%3A_Igneous_Rocks_and_Silicate_Minerals/6.07%3A_Common_Types_of_Igneous_Rock/6.7.01%3A_Silicic_Igneous_Rocks_(20__Quartz)) scrive:
 
 > "In the field, when we do not have detailed chemical or mineralogical information, we often call pink volcanic rocks rhyolite, white ones andesite, and darker colored rocks basalt."
 
@@ -223,6 +223,21 @@ D'altra parte Perkins scrive:
 \newpage
 
 ## Lave
+
+|Composizione|Reologia|Acidità|Tipo effusivo|Temperatura|Perkins|Tipo intrusivo|Genesi|Ambiente|Esempio|
+|-|-|-|-|-|-|-|-|-|-|
+|**F**emico|**F**luido|**Bas**ico (poca silice)|**Bas**alto|Alta 1000|Nero|Gabbro|Fusione mantello|Dorsali oceaniche, hot spot interni a placche, rift valley continentali, zone di distensione crosta|Isola Hawaii|
+|Intermedio|Intermedio|Intermedio|Andesite||Bianco|Diorite||Catene di rilievi vulcanici sopra le zone di subduzione|Ande|
+|Sialico|Viscoso|Acido (molta silice)|Riolite|Bassa 600|Rosa|Granito|
+
+* Fluida
+    - Fuori dall'acqua
+        - Pahohe (a corda), modesto spessore, più vicino alla sorgente.
+        - Aa (a zolle frastagliate), grosso spessore, più lontano dalla sorgente.
+    - Sott'acqua
+        - Pillow (a cuscino), crosta vetrosa, interno tessitura cristallina.  
+        Se rivenuto su terra ferma indica paleoambiente sommerso.
+* Viscosa
 
 |Tipo|Chimismo|Reologia|Esempio di roccia
 |-|-|-|-|
