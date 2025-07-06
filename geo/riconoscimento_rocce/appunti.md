@@ -226,15 +226,15 @@ D'altra parte [Perkins, paragrafo 6.7.1](https://geo.libretexts.org/Bookshelves/
 
 |Composizione|Reologia|Acidità|Tipo effusivo|Temperatura
 |-|-|-|-|-|
-|**F**emico|**F**luido|**Bas**ico (poca silice)|**Bas**alto|Alta 1000|
+|**F**emico|**F**luido|**Bas**ico (poca silice)|**Bas**alto|Alta 1000°C|
 |Intermedio|Intermedio|Intermedio|Andesite|Intermedia|
-|Sialico|Viscoso|Acido (molta silice)|Riolite|Bassa 600|
+|Sialico|Viscoso|Acido (molta silice)|Riolite|Bassa 600°C|
 
-|Tipo effusivo|Perkins|Tipo intrusivo|Genesi|Ambiente|Esempio|
+|Tipo effusivo|Velocità|Perkins|Tipo intrusivo|Ambiente|Esempio|
 |-|-|-|-|-|-|
-|Basalto|Nero|Gabbro|Fusione mantello|Dorsali oceaniche, hot spot interni a placche, rift valley continentali, zone di distensione crosta|Isola Hawaii|
-|Andesite|Bianco|Diorite||Catene di rilievi vulcanici sopra le zone di subduzione|Ande, Mount St. Helens|
-|Riolite|Rosa|Granito||Crosta continentale|Yellowstone|
+|Basalto|100km/h|Nero|Gabbro|Dorsali oceaniche, hot spot interni a placche, rift valley continentali, zone di distensione crosta|Isola Hawaii|
+|Andesite|Intermedia|Bianco|Diorite|Catene di rilievi vulcanici sopra le zone di subduzione|Ande, Mount St. Helens|
+|Riolite|10km/h|Rosa|Granito|Crosta continentale|Yellowstone|
 
 * Fluida
     - Fuori dall'acqua
@@ -244,6 +244,7 @@ D'altra parte [Perkins, paragrafo 6.7.1](https://geo.libretexts.org/Bookshelves/
         - Pillow (a cuscino), crosta vetrosa, interno tessitura cristallina.  
         Se rivenuto su terra ferma indica paleoambiente sommerso.
 * Viscosa
+    - Depositi di grosso spessore, bulbosi.
 
 |Tipo|Chimismo|Reologia|Esempio di roccia
 |-|-|-|-|
