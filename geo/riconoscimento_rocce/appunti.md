@@ -224,11 +224,17 @@ D'altra parte [Perkins, paragrafo 6.7.1](https://geo.libretexts.org/Bookshelves/
 
 ## Lave
 
-|Composizione|Reologia|Acidità|Tipo effusivo|Temperatura|Perkins|Tipo intrusivo|Genesi|Ambiente|Esempio|
-|-|-|-|-|-|-|-|-|-|-|
-|**F**emico|**F**luido|**Bas**ico (poca silice)|**Bas**alto|Alta 1000|Nero|Gabbro|Fusione mantello|Dorsali oceaniche, hot spot interni a placche, rift valley continentali, zone di distensione crosta|Isola Hawaii|
-|Intermedio|Intermedio|Intermedio|Andesite||Bianco|Diorite||Catene di rilievi vulcanici sopra le zone di subduzione|Ande|
-|Sialico|Viscoso|Acido (molta silice)|Riolite|Bassa 600|Rosa|Granito|
+|Composizione|Reologia|Acidità|Tipo effusivo|Temperatura
+|-|-|-|-|-|
+|**F**emico|**F**luido|**Bas**ico (poca silice)|**Bas**alto|Alta 1000|
+|Intermedio|Intermedio|Intermedio|Andesite|Intermedia|
+|Sialico|Viscoso|Acido (molta silice)|Riolite|Bassa 600|
+
+|Tipo effusivo|Perkins|Tipo intrusivo|Genesi|Ambiente|Esempio|
+|-|-|-|-|-|-|
+|Basalto|Nero|Gabbro|Fusione mantello|Dorsali oceaniche, hot spot interni a placche, rift valley continentali, zone di distensione crosta|Isola Hawaii|
+|Andesite|Bianco|Diorite||Catene di rilievi vulcanici sopra le zone di subduzione|Ande, Mount St. Helens|
+|Riolite|Rosa|Granito||Crosta continentale|Yellowstone|
 
 * Fluida
     - Fuori dall'acqua
