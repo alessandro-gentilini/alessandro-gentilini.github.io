@@ -34,6 +34,8 @@ Struttura vs tessitura
 
 * la tessitura si vede solo al microscopio  
 
+Tessitura afanitica (raffreddamento rapido) vs tessitura faneritica (raffreddamento lento) [GC p7].
+
 ---
 
 Struttura [PDF10 p22/45]:
@@ -771,8 +773,9 @@ Tessitura:
 [BMRL] Bosellini et alii, "Rocce e successioni sedimentarie", Torino, 1989.  
 [Carloni] Carloni, "Litologia e geologia applicate all'ingegneria civile", Bologna, 1987.  
 [Coe] Coe, "Geological Field Techniques", Milton Keynes, 2010.  
-[GURI] CNR, "Carta geologica d'Italia - 1:50000 - Guida al rilevamento", Roma, 1992.  
+[GC] Giorgio Cremonini, "Introduzione alle Scienze della Terra" - Per gli studenti del primo anno di Scienze Geologiche. Bologna, 1979.
 [GJ] Grotzinger, Jordan, "Capire la Terra", Bologna, 2016.  
+[GURI] CNR, "Carta geologica d'Italia - 1:50000 - Guida al rilevamento", Roma, 1992.  
 [IUGS_igneous] Le Maitre et alii, "Igneous Rocks: A Classification and Glossary of Terms", Cambridge UK, 2002.  
 [KP]  Klein et Philpotts, "Mineralogia e Petrografia", Bologna, 2018.  
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.  
