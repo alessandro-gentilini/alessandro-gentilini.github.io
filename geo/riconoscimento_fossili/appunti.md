@@ -43,7 +43,33 @@ _Nomen oblitum_ = Nel caso di sinonimia se il nome più antico è oscuro e in di
 _Nomen protectum_ = Nel caso di sinonimia se il nome più antico è oscuro e in disuso allora si può invertire il principio di priorità e mantenere il nome più recente (che deve essere invece noto e diffuso) che viene detto _nomen protectum_.  
 
 
-# Epoche
+# Periodi
+
+## Da sapere a memoria - Eoni  
+Precambriano - Fanerozoico
+
+## Da sapere a memoria - Ere e periodi  
+Tratto da [Gould, N.d.T. 1 (Libero Sosio), p.51]:  
+- Paleozoico (**PZ**): "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
+- Mesozoico (**MZ**): "**TRI**ppe **GIU**noniche **CRE**scono"
+- Cenozoico (**CZ**): "**P**erò **N**on **Q**ua"
+
+## Da sapere a memoria - Alcune epoche  
+I 7 -cene (dal grego kainos=nuovo, recente)  
+- Paleogene  
+  |Paleo|Eo|Oligo|
+  |-|-|-|
+  |Antico|Alba|Poco|
+- Neogene: Mio-cene, Plio-cene
+  |**M**io|**P**lio|
+  |-|-|
+  |**M**eno|**P**iù|
+- Quaternario  
+  |Pleisto|Olo|
+  |-|-|
+  |Di più|Tutto|
+
+## Tutti i periodi
 
 <table>
 <thead>
@@ -183,10 +209,6 @@ Fusuline sono estinte, esistevano dal Carbonifero al Permiano.
 # Distribuzione cronostratigrafica dei macro foraminiferi
 
 La seguente distribuzione cronostratigrafica dei macroforaminiferi è tratta da [SCV-PDF4 p37/37].
-
-- Paleozoico (**PZ**): "**CAM**biar **OR**a **SI** **DEV**e **CAR**rozza **PER MI**lano"
-- Mesozoico (**MZ**): "**TRI**ppe **GIU**noniche **CRE**scono"
-- Cenozoico (**CZ**): "**P**erò **N**on **Q**ua"
 
 <table>
 <thead>
@@ -860,6 +882,9 @@ Bellier J.-P., Mathieu R. & Granier B. (2010).- Short Treatise on Foraminiferolo
 
 [FF-PDF8]  
 Federico Fanti, "CLASSIFICARE GLI ORGANISMI VIVENTI E FOSSILI".
+
+[Gould]
+Stephen J. Gould, "La vita meravigliosa", 2024, Milano, Feltrinelli. 
 
 [MBC]  
 Maria Bianca Cita, "Micro Paleontologia", Milano, 1983, Cisalpino Goliardica.
