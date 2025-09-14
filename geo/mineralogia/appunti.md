@@ -40,6 +40,12 @@ Come esempio la sezione basale (001) della biotite non mostra pleocroismo mentre
 Si prende il ritardo del quarzo che è 270nm, lo si divide per la lunghezza d'onda convenzionale del blu, che è 475nm ed è nel riquadro grigio in basso a destra, e si ottiene 0.568 che è la risposta alla domanda iniziale.
 [Ottica, p.56].  
 
+* Cosa significa "Sezione ⊥ asse ottico; nessuna direzione di vibrazione privilegiata. Granulo sempre estinto!"? [Ottica, p.64]  
+Significa che se il granulo è stato tagliato dando una lamina piana (sezione s.s. o anche sezione sottile) perpendicolare all'asse ottico allora non si avrà mai birifrangenza, questo perché "la luce che attraversa un cristallo di calcite o più in generale un cristallo dei sistemi trigonale, tetragonale o esagonale, **in una direzione non parallela all'asse di simmetria verticale**, si scinde in due onde che si propagano all'interno del cristallo con diverse velocità. [Peccerillo p.2]  
+Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è ortogonale all'asse ottico e quindi la luce è parallela all'asse ottico e quindi non si ha birifrangenza; qui direi che asse ottico ha lo stesso significato di asse di simmetria verticale.
+
+
+
 * colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
 
 * per valutare il colore di interferenza scegliere ritardi più alti? (vedi pdf lab5a, lab5b, lab5c)
