@@ -1,4 +1,4 @@
-"Hateful eight"
+# "Hateful eight"
 
 O - Ossigeno  
 Si - Silicio  
@@ -21,3 +21,72 @@ Mg - Magnesio
 |Augite|$(Ca,Na)(Mg,Fe,Al)Si_2O_6$|*|*|*|*|*|*||*||
 |Forsterite - Fayalite|$(Mg,Fe)_2SiO_4$|*|*||*||||*||
 |Calcite - Dolomite|$CaCO_3 - CaMg(CO_3)_2$|*||||*|||*|C|
+
+# Ottica mineralogica
+
+* colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
+
+* per valutare il colore di interferenza scegliere ritardi più alti? (vedi pdf lab5a, lab5b, lab5c)
+
+## Osservazioni in pol
+
+### Colore
+Individuare una regione del campione, ruotando lo stage cambia il suo colore?  
+Se sì allora è presente pleocroismo, se no allora non è presente.
+
+### Piani di sfaldamento?
+
+## Osservazioni in xpol
+
+### Estinzione
+#### Tipo di estinzione
+#### Angolo di estinzione
+Prendere come riferimento i piani di sfaldamento (segmenti lineari nell'immagine, paralleli fra loro) e vedere a che angolo avviene l'estinzione. Usare il goniometro solidale allo stage.
+
+Ruotare lo stage per avere i segmenti paralleli ad un asse del crocino, sia $G_1$ il valore del goniometro, ruotare lo stage per avere estinzione, sia $G_2$ il valore del goniometro, $G_2-G_1$ è diagnostico.
+
+
+## Come individuare un "buco"
+Per "buco" intendo una regione del campione della sezione sottile dove manca la roccia.
+
+1) Nessun campione sullo stage.
+2) In pol vedere il colore (dovrebbe essere bianco). È il colore della sorgente luminosa.
+3) Mettere il campione sullo stage.
+4) Individuare la regione dove si sospetta che ci sia il buco.  
+È dello stesso colore della sorgente luminosa?  
+Se sì continuare, se no allora non si tratta di un buco.
+5) Ruotare di 360 gradi lo stage, il colore della regione cambia?  
+Se sì non si tratta di buco; se no continuare.
+6) In xpol, il colore della regione sospetta è nero?  
+Se sì continuare, se no allora non si tratta di un buco.
+7) Ruotare di 360 gradi lo stage, il colore della regione resta nero?  
+Se sì allora è un buco, se no allora non è un buco.
+
+## Calibrazione
+LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
+Quindi 10 LP/mm implica che una LP abbia spessore di 0.1 mm.
+
+|Ingrandimento|Misure|Foto|Foto misure|
+|-|-|-|-|
+|4||![]()|![]()|
+|10|Distanza: 2433  per 12 coppie nero/bianco|![](plan10.jpg)|![](plan10-misure.png)|
+|20|Distanza: 2413  per 6 coppie nero/bianco|![](plan20.jpg)|![](plan20-misure.png)|
+|40|Distanza: 3309  per 4 coppie nero/bianco|![](plan40.jpg)|![](plan40-misure.png)|
+
+|Ingrandimento|Misure|Equivalente mm|px/mm|$\times$|
+|-|-|-|-|-|
+|4|||||
+|10|Distanza: 2433  per 12 coppie nero/bianco|$12\times.1=1.2$|$2433/1.2=2028$|$\times1.98$|
+|20|Distanza: 2413  per 6 coppie nero/bianco|$6\times.1=.6$|$2413/.6=4022$|$\times2.06$|
+|40|Distanza: 3309  per 4 coppie nero/bianco|$4\times.1=.4$|$3309/.4=8273$||
+
+# Glossario
+**pol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore disinserito.  
+Senza il campione il campo deve essere uniforme bianco (massima luminosità).  
+
+**xpol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore inserito.  
+Senza il campione il campo deve essere uniforme nero (minima luminosità). Se così non fosse allora ruotare il polarizzatore nero per ottenere la condizione di nero uniforme (si ha quando il polarizzatore superiore è a 90 gradi rispetto all'inferiore).  
+
+**determinazione**: giungere al nome di un minerale eseguendo un insieme di osservazioni.
+
+**diagnostico**: che serve alla determinazione di un minerale.
