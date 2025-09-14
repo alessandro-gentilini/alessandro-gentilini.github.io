@@ -36,6 +36,10 @@ which is called the basal section [Schmidt p.25].
 * In pol: un minerale può presentare differente assorbimento della luce (o anche differente colore, [Peccerillo, p.15]) in dipendenza della rotazione, questo fenomeno si chiama _pleocroismo_; lo stesso minerale può presentare il _pleocroismo_ oppure non presentarlo in dipendenza da quale sia l'orientamento del cristallo nella sezione sottile [Ottica, p.31-32].  
 Come esempio la sezione basale (001) della biotite non mostra pleocroismo mentre invece la mostra la sezione (010).
 
+* Ritardo in $\lambda$ per alcuni colori: esempio del quarzo, cosa significa "B 0.568"?
+Si prende il ritardo del quarzo che è 270nm, lo si divide per la lunghezza d'onda convenzionale del blu, che è 475nm ed è nel riquadro grigio in basso a destra, e si ottiene 0.568 che è la risposta alla domanda iniziale.
+[Ottica, p.56].  
+
 * colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
 
 * per valutare il colore di interferenza scegliere ritardi più alti? (vedi pdf lab5a, lab5b, lab5c)
