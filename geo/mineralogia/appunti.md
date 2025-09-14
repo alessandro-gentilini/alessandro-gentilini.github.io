@@ -1,3 +1,9 @@
+---
+title: "Mineralogia - A.A. 2024-25"
+author: "Appunti di Alessandro Gentilini"
+date: "14 settembre 2025"
+---
+
 # "Hateful eight"
 
 O - Ossigeno  
@@ -23,6 +29,12 @@ Mg - Magnesio
 |Calcite - Dolomite|$CaCO_3 - CaMg(CO_3)_2$|*||||*|||*|C|
 
 # Ottica mineralogica
+
+* Sezione basale: the section perpendicular to the [001] direction
+which is called the basal section [Schmidt p.25].
+
+* In pol: un minerale può presentare differente assorbimento della luce (o anche differente colore, [Peccerillo, p.15]) in dipendenza della rotazione, questo fenomeno si chiama _pleocroismo_; lo stesso minerale può presentare il _pleocroismo_ oppure non presentarlo in dipendenza da quale sia l'orientamento del cristallo nella sezione sottile [Ottica, p.31-32].  
+Come esempio la sezione basale (001) della biotite non mostra pleocroismo mentre invece la mostra la sezione (010).
 
 * colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
 
@@ -90,3 +102,16 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **determinazione**: giungere al nome di un minerale eseguendo un insieme di osservazioni.
 
 **diagnostico**: che serve alla determinazione di un minerale.
+
+# Bibliografia
+[Ottica] Corso di Mineralogia 
+Scienze Geologiche 
+A.A. 2024 / 2025 
+Lezioni introduttive al 
+Laboratorio di 
+ottica mineralogica 
+(pdf – #8)
+
+[Peccerillo] Angelo Peccerillo & Diego Perugini, Introduzione alla Petrografia ottica, Perugia, 2003, Morlacchi Editore.
+
+[Schmidt] Susanne Theodora Schmidt, Transmitted Light Microscopy of Rock-Forming Minerals - An Introduction to Optical Mineralogy, Cham, 2023, Springer.
