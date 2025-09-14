@@ -44,6 +44,8 @@ Si prende il ritardo del quarzo che è 270nm, lo si divide per la lunghezza d'on
 Significa che se il granulo è stato tagliato dando una lamina piana (sezione s.s. o anche sezione sottile) perpendicolare all'asse ottico allora non si avrà mai birifrangenza, questo perché "la luce che attraversa un cristallo di calcite o più in generale un cristallo dei sistemi trigonale, tetragonale o esagonale, **in una direzione non parallela all'asse di simmetria verticale**, si scinde in due onde che si propagano all'interno del cristallo con diverse velocità. [Peccerillo p.2]  
 Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è ortogonale all'asse ottico e quindi la luce è parallela all'asse ottico e quindi non si ha birifrangenza; qui direi che asse ottico ha lo stesso significato di asse di simmetria verticale (vedi anche [Ottica, p.69] dove si dice "sezione normale all’asse ottico (normale all’asse cristallografico c).").
 
+* "Propagazione della luce in un cristallo di quarzo" [Ottica, p.68] viene dal libro "Optical Mineralogy" di David Shelley, 1985.
+
 
 
 * colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
