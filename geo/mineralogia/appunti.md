@@ -86,6 +86,11 @@ Se sì continuare, se no allora non si tratta di un buco.
 7) Ruotare di 360 gradi lo stage, il colore della regione resta nero?  
 Se sì allora è un buco, se no allora non è un buco.
 
+## Tattiche
+“However, in routine work, identifications can usually be made without complete data, and for many common minerais only selected data needs to be obtained to confirm a tentative identification.” ([Nesse, 1991, p. 114](zotero://select/library/items/YUXCIT35)) ([pdf](zotero://open-pdf/library/items/EBMYA3PT?page=127))
+
+16 settembre 2025
+
 ## Calibrazione
 LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
 Quindi 10 LP/mm implica che una LP abbia spessore di 0.1 mm.
