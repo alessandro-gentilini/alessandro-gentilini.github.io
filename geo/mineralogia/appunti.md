@@ -89,7 +89,8 @@ Se sì allora è un buco, se no allora non è un buco.
 ## Tattiche
 “However, in routine work, identifications can usually be made without complete data, and for many common minerais only selected data needs to be obtained to confirm a tentative identification.” ([Nesse, 1991, p. 114](zotero://select/library/items/YUXCIT35)) ([pdf](zotero://open-pdf/library/items/EBMYA3PT?page=127))
 
-16 settembre 2025
+## Utile riassunto?
+“In this textbook, only the basic concepts and methods of polarising microscopy will be described.” ([Okrusch and Frimmel, 2020, p. 20](zotero://select/library/items/4GDH9SN2)) ([pdf](zotero://open-pdf/library/items/MGPA822C?page=31))
 
 ## Calibrazione
 LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
