@@ -75,7 +75,7 @@ Ruotare lo stage per avere i segmenti paralleli ad un asse del crocino, sia $G_1
 
 
 ## Come individuare un "buco"
-Per "buco" intendo una regione del campione della sezione sottile dove manca la roccia.
+Per "buco" intendo una regione del campione della sezione sottile dove manca la roccia. Un altro termine è "vuoto".
 
 1) Nessun campione sullo stage.
 2) In pol vedere il colore (dovrebbe essere bianco). È il colore della sorgente luminosa.
@@ -90,11 +90,51 @@ Se sì continuare, se no allora non si tratta di un buco.
 7) Ruotare di 360 gradi lo stage, il colore della regione resta nero?  
 Se sì allora è un buco, se no allora non è un buco.
 
+Cosa c'è nel buco? Aria? La resina epossidica che incolla la sezione del minerale al vetrino?
+
+A cosa serve individuare un buco? [Peccerillo p.13] nella stima dell'indice di rifrazione relativo tramite _linea di Becke_ suggerisce di individuare un vuoto come regione ad indice di rifrazione noto (Balsamo del Canada, resina epossidica) con cui confrontare l'indice di rifrazione del minerale adiacente al vuoto.
+
 ## Tattiche
 “However, in routine work, identifications can usually be made without complete data, and for many common minerais only selected data needs to be obtained to confirm a tentative identification.” ([Nesse, 1991, p. 114](zotero://select/library/items/YUXCIT35)) ([pdf](zotero://open-pdf/library/items/EBMYA3PT?page=127))
 
 ## Utile riassunto?
 “In this textbook, only the basic concepts and methods of polarising microscopy will be described.” ([Okrusch and Frimmel, 2020, p. 20](zotero://select/library/items/4GDH9SN2)) ([pdf](zotero://open-pdf/library/items/MGPA822C?page=31))
+
+## Parti di una sezione sottile
+Le parti di una sezione sottile, indicate dal basso (parte in appoggio sul piatto rotante del microscopio) all'alto:
+* Vetrino (qualche mm di spessore)
+* Sezione sottile del minerale (spessore tipico 30 micron). In inglese _thin section_.
+* Vetrino coprioggetto (spessore tipico 0.17mm). In inglese _cover slip_ [Nesse p.18].
+
+## Rilievo
+### Come appare in sezione sottile?
+Appare come un bordo nero con un certo spessore che compare all'interfaccia (al contatto) tra minerali diversi o tra minerale e collante [Schmidt p.73].  
+Lo spessore è direttamente proporzionale alla differenza tra gli indici di rifrazione dei due mezzi.  
+Osservando il solo bordo nero non è però possibile dire quale dei due mezzi ha indice di rifrazione superiore; questo perché il bordo è uniformemente nero senza nessuna differenza nelle sue parti più vicine ai due mezzi.  
+Quindi osservando il bordo nero si può solo dire qualitativamente se è più spesso (rilievo alto) oppure meno spesso (rilievo basso).  
+Quindi per ogni coppia di minerali in contatto, osservando lo spessore del bordo nero che li divide, si può dire se la differenza tra i loro indici di rifrazione è alta o bassa ma questa relazione (che ha come dominio la coppia non ordinata di minerali adiacenti e come codominio l'insieme $\{basso, medio, alto\}$) non può ordinare i minerali per indice di rifrazione.  
+Anche se un minerale (o il collante) è noto non è comunque possibile dire se il minerale incognito ha indice inferiore o superiore al noto; si può solo dire se la loro differenza è grande o piccola ([Schmidt p.77] scrive "In most cases, relief between minerals does not allow to state which of the two minerals has the higher refractive index.").
+
+### Definizioni e principi
+Consideriamo un granulo di minerale, avente indice di rifrazione incognito $n_m$, immerso in un mezzo avente indice di rifrazione noto $n_o$.  
+Il mezzo può essere liquido, indicato in inglese con il termine generico _oil_, oppure solido, come per esempio il collante che unisce la sezione sottile al vetrino; esempi di collante sono il "balsamo del Canada" oppure una resina epossidica.  
+Se $n_m=n_o$ allora il granulo risulterebbe all'occhio indistinguibile dal mezzo perché i raggi luminosi non sarebbero rifratti all'interfaccia granulo-mezzo, essendo i due indici perfettamente uguali, ma proseguirebbero inalterati come se il granulo non fosse presente.  
+Se invece $n_m$ è diverso da $n_o$ allora il granulo risulterà distinguibile dal mezzo.  
+Il rilievo è la differenza $n_m-n_o$ e i minerali sono detti avere rilievo positivo se la differenza è positiva e negativo altrimenti.  
+Viene detto rilievo perché il granulo a rilievo positivo sembra essere sopraelevato rispetto al mezzo; [Peccerillo p.15] scrive "può accadere che ai diversi osservatori uno stesso rilievo appaia di segno opposto"; [Nesse p.25] invece è più perentorio dicendo che il rilievo positivo appare simile a quello negativo ("positive and negative relief look alike").  
+
+### A cosa serve?
+Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi diversi e seguendo poi un metodo dicotomico che arriva a collocare $n_m$ in un intervallo $n_{o1}\lt n_m \lt n_{o2}$.  
+[Nesse p.33] scrive che in generale non è possibile stimare accuratamente l'indice di rifrazione di un minerale in sezione sottile ma che si può stimare se è più alto o più basso del mezzo solido in cui è contenuto ("it is generally not possible to determine índices of refraction of minerals accurately in thin section, but  it is possible to make estimates or to establish limits.").
+
+## Linea di Becke
+
+
+
+
+## Scheda
+
+Rilievo: alto [ ] medio [ ] basso [ ].
 
 ## Calibrazione
 LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
@@ -125,6 +165,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 **diagnostico**: che serve alla determinazione di un minerale.
 
+**_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
+
 # Bibliografia
 [Ottica] Corso di Mineralogia 
 Scienze Geologiche 
@@ -133,6 +175,8 @@ Lezioni introduttive al
 Laboratorio di 
 ottica mineralogica 
 (pdf – #8)
+
+[Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
 [Peccerillo] Angelo Peccerillo & Diego Perugini, Introduzione alla Petrografia ottica, Perugia, 2003, Morlacchi Editore.
 
