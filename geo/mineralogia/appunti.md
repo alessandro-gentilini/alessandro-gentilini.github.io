@@ -122,12 +122,26 @@ Se $n_m=n_o$ allora il granulo risulterebbe all'occhio indistinguibile dal mezzo
 Se invece $n_m$ è diverso da $n_o$ allora il granulo risulterà distinguibile dal mezzo.  
 Il rilievo è la differenza $n_m-n_o$ e i minerali sono detti avere rilievo positivo se la differenza è positiva e negativo altrimenti.  
 Viene detto rilievo perché il granulo a rilievo positivo sembra essere sopraelevato rispetto al mezzo; [Peccerillo p.15] scrive "può accadere che ai diversi osservatori uno stesso rilievo appaia di segno opposto"; [Nesse p.25] invece è più perentorio dicendo che il rilievo positivo appare simile a quello negativo ("positive and negative relief look alike").  
+[Schmidt Fig 4.26, p.76] spiega che la causa del rilievo è la riflessione totale perché quando c'è riflessione totale non c'è rifrazione e quindi l'assenza di raggi rifratti è percepita come nero e questo nero è proprio quanto si osserva.(NdA: però nella figura 4.26 il nero di osserverebbe guardando dall'alto verso il basso lungo una direzione che giace sulla pagina del libro ma nella sezione sottile se il nero è il "confine" tra due minerali diversi allora la direezione di osservazione è ortogonale alla pagina del libro e quindi a quel punto non è più vero che si vede il nero. Mi sa che mi limiterò a dire che il rilievo è causato dalla riflessione totale il cui angolo dipende dall'indice di rifrazione del minerale).
 
 ### A cosa serve?
 Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi diversi e seguendo poi un metodo dicotomico che arriva a collocare $n_m$ in un intervallo $n_{o1}\lt n_m \lt n_{o2}$.  
 [Nesse p.33] scrive che in generale non è possibile stimare accuratamente l'indice di rifrazione di un minerale in sezione sottile ma che si può stimare se è più alto o più basso del mezzo solido in cui è contenuto ("it is generally not possible to determine índices of refraction of minerals accurately in thin section, but  it is possible to make estimates or to establish limits.").
 
 ## Linea di Becke
+### Come appare in sezione sottile?
+In sezione sottile a fuoco la linea di Becke non appare.  
+La linea di Becke, che è una linea molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
+
+### Definizioni e principi
+È un fenomeno governato dalla riflessione totale e quindi dalla legge di Snell.
+L'angolo di riflessione totale dipende dall'indice di rifrazione.
+
+### A cosa serve
+Serve per individuare quale fra i due mezzi ha indice di rifrazione maggiore.  
+[Schmidt p.77] indica la regola ILH:  
+**I**ncreasing **L**ight **H**igher  
+incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbassando il piano) la linea di Becke entra nel materiale a più alto indice di rifrazione.
 
 
 
@@ -166,6 +180,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **diagnostico**: che serve alla determinazione di un minerale.
 
 **_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
+
+**sfaldatura**=_cleavage_?
 
 # Bibliografia
 [Ottica] Corso di Mineralogia 
