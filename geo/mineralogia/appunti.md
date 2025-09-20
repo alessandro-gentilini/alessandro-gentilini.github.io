@@ -30,6 +30,10 @@ Mg - Magnesio
 
 # Ottica mineralogica
 
+* Riflessione totale: si ha quando angolo i dà angolo r >= 90. Per l'i che dà riflessione totale: $i=\arcsin(\frac{n_{vuoto}}{n})$ dove $n_{vuoto}$ è 1 e $n$ è l'indice di rifrazione del materiale in oggetto.
+Per esempio il diamante ha $n=2.42$ e quindi $i=\arcsin(\frac{1}{2.42})=24.41°$.
+Vedi [Ottica, p.8 ].
+
 * Sezione basale: the section perpendicular to the [001] direction
 which is called the basal section [Schmidt p.25].
 
