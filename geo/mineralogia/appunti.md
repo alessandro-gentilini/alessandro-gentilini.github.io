@@ -162,6 +162,10 @@ La luce bianca è data dalla somma di varie lunghezze d'onda; il colore di un mi
 
 La "ruota dei colori" riporta i colori posizionati su una circonferena: se un minerale ha il colore di una posizione della ruota questo è dovuto all'assorbimento, da parte del minerale, dei colori in posizione diametralmente opposta [Schmidt p.49].
 
+Isotropic minerals possess only one index of refraction and display only one color, no matter how the crystal is cut [Schmidt p.50].
+
+Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation [Schmidt p.50].
+
 
 
 
@@ -209,7 +213,9 @@ pol - Assorbimento
                           Torbido [ ]
 
 pol - Colore
-   Costante [ ] Dicroico [ ] Pleocroico [ ]
+     Costante [ ] ⇒ il minerale è isotropo
+     Dicroico [ ] 
+   Pleocroico [ ]
 </pre>
 
 
@@ -249,6 +255,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **illuminazione ortoscopica**: aka pol
 
 **sfaldatura**=_cleavage_?
+
+**torbido**=_cloudy_?
 
 # Bibliografia
 [Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
