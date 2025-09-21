@@ -161,10 +161,12 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 ## Scheda
 <pre>
 Legenda
-    C = collante
-    M = minerale
-   M1 = minerale 1
-   M2 = minerale 2
+        C = collante
+        M = minerale
+   M1, M2 = minerale 1, minerale 2
+       nC = indice di rifrazione del collante
+       nM = indice di rifrazione del minerale
+   n1, n2 = indice di rifrazione del minerale 1, del minerale 2
 
 È noto l'indice di rifrazione di C?
    Balsamo del Canada [ ] ~1.54
@@ -178,19 +180,20 @@ Rilievo
 Linea di Becke
    Tra M e C [ ] 
       Allontanando il piatto la linea 
-         entra in M [ ] ⇒ M &gt; C
-         entra in C [ ] ⇒ M &lt; C
+         entra in M [ ] ⇒ nM &gt; nC
+         entra in C [ ] ⇒ nC &gt; nM
       Avvicinando il piatto la linea 
-         entra in M [ ]
-         entra in C [ ]
+         entra in M [ ] ⇒ nM &lt; nC
+         entra in C [ ] ⇒ nC &lt; nM
+         
 
    Tra M1 e M2 [ ]
       Allontanando il piatto la linea 
-         entra in M1 [ ]
-         entra in M2 [ ]
+         entra in M1 [ ] ⇒ n1 &gt; n2
+         entra in M2 [ ] ⇒ n2 &gt; n1
       Avvicinando il piatto la linea 
-         entra in M1 [ ]
-         entra in M2 [ ]
+         entra in M1 [ ] ⇒ n1 &lt; n2
+         entra in M2 [ ] ⇒ n2 &lt; n1
 </pre>
 
 
@@ -213,13 +216,14 @@ Quindi 10 LP/mm implica che una LP abbia spessore di 0.1 mm.
 |20|Distanza: 2413  per 6 coppie nero/bianco|$6\times.1=.6$|$2413/.6=4022$|$\times2.06$|
 |40|Distanza: 3309  per 4 coppie nero/bianco|$4\times.1=.4$|$3309/.4=8273$||
 
-# Glossario
+# Abbreviazioni
 **pol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore disinserito.  
 Senza il campione il campo deve essere uniforme bianco (massima luminosità).  
 
 **xpol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore inserito.  
 Senza il campione il campo deve essere uniforme nero (minima luminosità). Se così non fosse allora ruotare il polarizzatore nero per ottenere la condizione di nero uniforme (si ha quando il polarizzatore superiore è a 90 gradi rispetto all'inferiore).  
 
+# Glossario
 **determinazione**: giungere al nome di un minerale eseguendo un insieme di osservazioni.
 
 **diagnostico**: che serve alla determinazione di un minerale.
