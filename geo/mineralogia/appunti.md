@@ -159,12 +159,38 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 
 
 ## Scheda
-
 <pre>
-Rilievo:  
-Tra minerale e collante [ ] oppure tra minerale 1 e minerale 2 [ ].  
-   alto [ ] medio [ ] basso [ ]. Quali sono i mezzi?  
-Linea di Becke (tra due fasi).
+Legenda
+    C = collante
+    M = minerale
+   M1 = minerale 1
+   M2 = minerale 2
+
+È noto l'indice di rifrazione di C?
+   Balsamo del Canada [ ] ~1.54
+    Resina epossidica [ ] ~1.56
+   __________________ [ ]
+
+Rilievo
+   Tra M e C [ ] oppure tra M1 e M2 [ ].
+   Alto [ ] medio [ ] basso [ ].
+
+Linea di Becke
+   Tra M e C [ ] 
+      Allontanando il piatto la linea 
+         entra in M [ ] ⇒ M &gt; C
+         entra in C [ ] M &lt; C
+      Avvicinando il piatto la linea 
+         entra in M [ ]
+         entra in C [ ]
+
+   Tra M1 e M2 [ ]
+      Allontanando il piatto la linea 
+         entra in M1 [ ]
+         entra in M2 [ ]
+      Avvicinando il piatto la linea 
+         entra in M1 [ ]
+         entra in M2 [ ]
 </pre>
 
 
