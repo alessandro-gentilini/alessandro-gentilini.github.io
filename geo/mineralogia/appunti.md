@@ -160,6 +160,8 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 
 ## Scheda
 <pre>
+SCHEDA OSSERVAZIONI AL MICROSCOPIO POLARIZZATORE
+
 Legenda
         C = collante
         M = minerale
@@ -173,11 +175,11 @@ Legenda
     Resina epossidica [ ] ~1.56
    __________________ [ ]
 
-Rilievo
-   Tra M e C [ ] oppure tra M1 e M2 [ ].
-   Alto [ ] medio [ ] basso [ ].
+pol - Rilievo
+   Tra M e C [ ] oppure tra M1 e M2 [ ]
+   Alto [ ] medio [ ] basso [ ]
 
-Linea di Becke
+pol - Linea di Becke
    Tra M e C [ ] 
       Allontanando il piatto la linea 
          entra in M [ ] ⇒ nM &gt; nC
@@ -185,7 +187,6 @@ Linea di Becke
       Avvicinando il piatto la linea 
          entra in M [ ] ⇒ nM &lt; nC
          entra in C [ ] ⇒ nC &lt; nM
-         
 
    Tra M1 e M2 [ ]
       Allontanando il piatto la linea 
@@ -194,6 +195,12 @@ Linea di Becke
       Avvicinando il piatto la linea 
          entra in M1 [ ] ⇒ n1 &lt; n2
          entra in M2 [ ] ⇒ n2 &lt; n1
+
+pol - Assorbimento
+   Opaco [ ] Trasparente incolore [ ] Trasparente colorato [ ]
+
+pol - Colore
+   Costante [ ] Dicroico [ ] Pleocroico [ ]
 </pre>
 
 
