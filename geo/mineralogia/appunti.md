@@ -112,6 +112,9 @@ Le parti di una sezione sottile, indicate dal basso (parte in appoggio sul piatt
 * Vetrino coprioggetto (spessore tipico 0.17mm). In inglese _cover slip_ [Nesse p.18].
 
 ## Rilievo
+### Come si osserva?
+In pol.
+
 ### Come appare in sezione sottile?
 Appare come un bordo nero con un certo spessore che compare all'interfaccia (al contatto) tra minerali diversi o tra minerale e collante [Schmidt p.73].  
 Lo spessore è direttamente proporzionale alla differenza tra gli indici di rifrazione dei due mezzi.  
@@ -134,15 +137,19 @@ Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi
 [Nesse p.33] scrive che in generale non è possibile stimare accuratamente l'indice di rifrazione di un minerale in sezione sottile ma che si può stimare se è più alto o più basso del mezzo solido in cui è contenuto ("it is generally not possible to determine índices of refraction of minerals accurately in thin section, but  it is possible to make estimates or to establish limits.").
 
 ## Linea di Becke
+### Come si osserva?
+In  pol, obiettivo a medio ingrandimento (10X), chiudendo leggermente il diaframma sul condensatore per aumentare il contrasto [Ottica p.24].
+
 ### Come appare in sezione sottile?
 In sezione sottile a fuoco la linea di Becke non appare.  
-La linea di Becke, che è una linea molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
+La linea di Becke, che è una linea (aka frangia [Ottica p.24]) molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
 
 ### Definizioni e principi
 I frammenti di minerale sono tipicamente assottigliati ai bordi e quindi hanno grosso modo la forma di una lente; questa lente grossolana può essere convergente ($n_m>n_o$) oppure divergente ($n_m<n_o$) e la convergenza/divergenza sono la causa dell'apparire della linea di Becke.  
-Quando i granuli hanno i bordi quasi verticale la linea di Becke è un fenomeno governato dalla riflessione totale e quindi, comunque, in ultima analisi dalla legge di Snell (perché l'angolo di riflessione totale dipende infatti dall'indice di rifrazione).
+Quando i granuli hanno i bordi quasi verticale la linea di Becke è un fenomeno governato dalla riflessione totale e quindi, comunque, in ultima analisi dalla legge di Snell (perché l'angolo di riflessione totale dipende infatti dall'indice di rifrazione).  
+Per i dettagli [Nesse p.26].
 
-### A cosa serve
+### A cosa serve?
 Serve per individuare quale fra i due mezzi ha indice di rifrazione maggiore.  
 [Schmidt p.77] indica la regola ILH:  
 **I**ncreasing **L**ight **H**igher  
@@ -153,8 +160,14 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 
 ## Scheda
 
-Rilievo: alto [ ] medio [ ] basso [ ].  
-Linea di Becke.
+<pre>
+Rilievo:  
+Tra minerale e collante [ ] oppure tra minerale 1 e minerale 2 [ ].  
+   alto [ ] medio [ ] basso [ ]. Quali sono i mezzi?  
+Linea di Becke (tra due fasi).
+</pre>
+
+
 
 ## Calibrazione
 LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
