@@ -162,11 +162,25 @@ La luce bianca è data dalla somma di varie lunghezze d'onda; il colore di un mi
 
 La "ruota dei colori" riporta i colori posizionati su una circonferena: se un minerale ha il colore di una posizione della ruota questo è dovuto all'assorbimento, da parte del minerale, dei colori in posizione diametralmente opposta [Schmidt p.49].
 
-Isotropic minerals possess only one index of refraction and display only one color, no matter how the crystal is cut [Schmidt p.50].
+Se in pol il colore di un minerale è nero e non cambia con la rotazione allora quel minerale è opaco ("an opaque mineral (Fe-Ti oxide) is shown which will not change its black appearance during rotation of the microscopic stage." [Schmidt p.50]).)
 
-Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation [Schmidt p.50].
+Se in pol un minerale non cambia colore mentre si ruota il piatto allora è un minerale isotropo ("Isotropic minerals possess only one index of refraction and display only one color, no matter how the crystal is cut." [Schmidt p.50]).
 
+Se in pol un minerale cambia colore mentre si ruota il piatto allora è un minerale anisotropo ("Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation." [Schmidt p.50]).
 
+## Tavole determinative
+Le tavole determinative in [Peccerillo p.180-184] sono suddivise in:
+<pre>
+Minerali isotropi
+
+Minerali anisotropi
+   Uniassici
+      Uniassici +
+      Uniassici -
+   Biassici
+      Biassici +
+      Biassici -
+</pre>
 
 
 ## Scheda
