@@ -155,6 +155,13 @@ Serve per individuare quale fra i due mezzi ha indice di rifrazione maggiore.
 **I**ncreasing **L**ight **H**igher  
 incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbassando il piano) la linea di Becke entra nel materiale a più alto indice di rifrazione.
 
+## Colore
+Lunghezze d'onda nel visibile: da 390 nm (violetto) a 770 nm (rosso).
+
+La luce bianca è data dalla somma di varie lunghezze d'onda; il colore di un minerale, illuminato da luce bianca, è dato dalle lunghezze d'onda che non sono assorbite.
+
+La "ruota dei colori" riporta i colori posizionati su una circonferena: se un minerale ha il colore di una posizione della ruota questo è dovuto all'assorbimento, da parte del minerale, dei colori in posizione diametralmente opposta [Schmidt p.49].
+
 
 
 
@@ -197,7 +204,9 @@ pol - Linea di Becke
          entra in M2 [ ] ⇒ n2 &lt; n1
 
 pol - Assorbimento
-   Opaco [ ] Trasparente incolore [ ] Trasparente colorato [ ]
+   Opaco [ ] Trasparente incolore [ ] 
+             Trasparente colorato [ ]
+                          Torbido [ ]
 
 pol - Colore
    Costante [ ] Dicroico [ ] Pleocroico [ ]
@@ -236,6 +245,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **diagnostico**: che serve alla determinazione di un minerale.
 
 **_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
+
+**illuminazione ortoscopica**: aka pol
 
 **sfaldatura**=_cleavage_?
 
