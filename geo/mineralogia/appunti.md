@@ -30,9 +30,14 @@ Mg - Magnesio
 
 # Ottica mineralogica
 
+* Rifrazione e legge di Snell.  
+Regoletta mnemonica di raggio rifratto che si avvicina/allontana dalla normale a seconda del segno della differenza degli indici di rifrazione.
+
 * Riflessione totale: si ha quando angolo i dà angolo r >= 90. Per l'i che dà riflessione totale: $i=\arcsin(\frac{n_{vuoto}}{n})$ dove $n_{vuoto}$ è 1 e $n$ è l'indice di rifrazione del materiale in oggetto.
 Per esempio il diamante ha $n=2.42$ e quindi $i=\arcsin(\frac{1}{2.42})=24.41°$.
 Vedi [Ottica, p.8 ].
+
+* Birifrangenza: Treccani dizionario
 
 * Sezione basale: the section perpendicular to the [001] direction
 which is called the basal section [Schmidt p.25].
@@ -62,7 +67,7 @@ Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è orto
 Individuare una regione del campione, ruotando lo stage cambia il suo colore?  
 Se sì allora è presente pleocroismo, se no allora non è presente.
 
-### Piani di sfaldamento?
+### Piani di sfaldamento? aka cleavage? aka clivaggio?
 
 ## Osservazioni in xpol
 
@@ -134,8 +139,8 @@ In sezione sottile a fuoco la linea di Becke non appare.
 La linea di Becke, che è una linea molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
 
 ### Definizioni e principi
-È un fenomeno governato dalla riflessione totale e quindi dalla legge di Snell.
-L'angolo di riflessione totale dipende dall'indice di rifrazione.
+I frammenti di minerale sono tipicamente assottigliati ai bordi e quindi hanno grosso modo la forma di una lente; questa lente grossolana può essere convergente ($n_m>n_o$) oppure divergente ($n_m<n_o$) e la convergenza/divergenza sono la causa dell'apparire della linea di Becke.  
+Quando i granuli hanno i bordi quasi verticale la linea di Becke è un fenomeno governato dalla riflessione totale e quindi, comunque, in ultima analisi dalla legge di Snell (perché l'angolo di riflessione totale dipende infatti dall'indice di rifrazione).
 
 ### A cosa serve
 Serve per individuare quale fra i due mezzi ha indice di rifrazione maggiore.  
@@ -148,7 +153,8 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 
 ## Scheda
 
-Rilievo: alto [ ] medio [ ] basso [ ].
+Rilievo: alto [ ] medio [ ] basso [ ].  
+Linea di Becke.
 
 ## Calibrazione
 LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
