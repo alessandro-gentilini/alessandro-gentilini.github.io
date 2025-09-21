@@ -229,6 +229,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **sfaldatura**=_cleavage_?
 
 # Bibliografia
+[Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
+
 [Ottica] Corso di Mineralogia 
 Scienze Geologiche 
 A.A. 2024 / 2025 
@@ -236,8 +238,6 @@ Lezioni introduttive al
 Laboratorio di 
 ottica mineralogica 
 (pdf – #8)
-
-[Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
 [Peccerillo] Angelo Peccerillo & Diego Perugini, Introduzione alla Petrografia ottica, Perugia, 2003, Morlacchi Editore.
 
