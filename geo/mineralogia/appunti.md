@@ -179,7 +179,7 @@ Linea di Becke
    Tra M e C [ ] 
       Allontanando il piatto la linea 
          entra in M [ ] ⇒ M &gt; C
-         entra in C [ ] M &lt; C
+         entra in C [ ] ⇒ M &lt; C
       Avvicinando il piatto la linea 
          entra in M [ ]
          entra in C [ ]
