@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confronto Immagini Personalizzato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .twentytwenty-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 0.75rem -0.2rem rgba(0, 0, 0, 0.1), 0 0.25rem 0.5rem -0.1rem rgba(0, 0, 0, 0.05);
+            cursor: ew-resize;
+            touch-action: none;
+        }
+        
+        /* Posiziona entrambe le immagini una sopra l'altra, a piena grandezza */
+        .twentytwenty-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* L'immagine BLU è sopra e viene "ritagliata" */
+        .twentytwenty-before-img {
+            z-index: 10;
+            /* La proprietà clip-path viene manipolata via JavaScript */
+            clip-path: inset(0 50% 0 0);
+        }
+
+        /* Stili per etichette */
+        .twentytwenty-container .twentytwenty-before-label,
+        .twentytwenty-container .twentytwenty-after-label {
+            position: absolute;
+            bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 0.5rem;
+            font-weight: bold;
+            color: #333;
+            z-index: 30;
+        }
+
+        .twentytwenty-container .twentytwenty-before-label {
+            left: 1rem;
+        }
+
+        .twentytwenty-container .twentytwenty-after-label {
+            right: 1rem;
+        }
+
+        /* Stili per la maniglia */
+        .twentytwenty-container .twentytwenty-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0.125rem;
+            height: 100%;
+            background-color: white;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+
+        .twentytwenty-container .twentytwenty-handle::before {
+            content: '↔';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: white;
+            border: 0.125rem solid black;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: black;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center p-8">
+
+    <div class="twentytwenty-container max-w-2xl w-full aspect-video">
+        <!-- L'immagine di sfondo (VERDE) -->
+        <img src="canyon_de_chelly_arizona.png" alt="Immagine originale">
+        
+        <!-- L'immagine BLU che viene ritagliata -->
+        <img src="canyon_de_chelly_arizona-annotata.png" alt="Immagine annotata" class="twentytwenty-before-img">
+        
+
+        <div class="twentytwenty-handle"></div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.twentytwenty-container');
+        const beforeImg = container.querySelector('.twentytwenty-before-img');
+        const handle = container.querySelector('.twentytwenty-handle');
+
+        let isDragging = false;
+
+        const onStartDrag = (e) => {
+            isDragging = true;
+            e.preventDefault();
+        };
+
+        const onDrag = (e) => {
+            if (!isDragging) return;
+
+            let clientX = e.clientX || e.touches[0].clientX;
+            const rect = container.getBoundingClientRect();
+            let newX = clientX - rect.left;
+
+            if (newX < 0) newX = 0;
+            if (newX > rect.width) newX = rect.width;
+
+            // Aggiorna la posizione della maniglia
+            handle.style.left = `${newX}px`;
+
+            // Calcola la percentuale per il ritaglio
+            const percent = (newX / rect.width) * 100;
+            beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        };
+
+        const onEndDrag = () => {
+            isDragging = false;
+        };
+
+        container.addEventListener('mousedown', onStartDrag);
+        window.addEventListener('mousemove', onDrag);
+        window.addEventListener('mouseup', onEndDrag);
+
+        container.addEventListener('touchstart', onStartDrag);
+        window.addEventListener('touchmove', onDrag);
+        window.addEventListener('touchend', onEndDrag);
+    </script>
+
+</body>
+</html>
