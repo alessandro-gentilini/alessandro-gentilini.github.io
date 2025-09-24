@@ -34,7 +34,7 @@
             height: auto;
         }
 
-        /* L'immagine BLU è sopra e viene "ritagliata" */
+        /* L'immagine superiore che viene "ritagliata" */
         .twentytwenty-before-img {
             z-index: 10;
             /* La proprietà clip-path viene manipolata via JavaScript */
@@ -93,60 +93,76 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center p-8">
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center p-8 min-h-screen">
+    
 
-    <div class="twentytwenty-container max-w-2xl w-full aspect-video">
-        <!-- L'immagine di sfondo (VERDE) -->
-        <img src="canyon_de_chelly_arizona.png" alt="Immagine originale">
-        
-        <!-- L'immagine BLU che viene ritagliata -->
-        <img src="canyon_de_chelly_arizona-annotata.png" alt="Immagine annotata" class="twentytwenty-before-img">
-        
 
-        <div class="twentytwenty-handle"></div>
+    <!-- Contenitore principale per i due confronti -->
+    <div class="flex flex-col gap-8 w-full max-w-4xl">
+        
+        <!-- Primo confronto: BLU/VERDE -->
+        <div class="flex-1 twentytwenty-container w-full aspect-video">
+            <img src="canyon_de_chelly_arizona.png" alt="Immagine verde">
+            <img src="canyon_de_chelly_arizona-annotata.png" alt="Immagine blu" class="twentytwenty-before-img">
+            <div class="twentytwenty-handle"></div>
+        </div>
+
+        <!-- Secondo confronto: ROSSO/GIALLO -->
+        <div class="flex-1 twentytwenty-container w-full aspect-video">
+            <img src="escalante_utah.png" alt="Immagine gialla">
+            <img src="escalante_utah-annotata.png" alt="Immagine rossa" class="twentytwenty-before-img">
+            <div class="twentytwenty-handle"></div>
+        </div>
+
     </div>
 
     <script>
-        const container = document.querySelector('.twentytwenty-container');
-        const beforeImg = container.querySelector('.twentytwenty-before-img');
-        const handle = container.querySelector('.twentytwenty-handle');
+        // Seleziona tutti i contenitori di confronto
+        const containers = document.querySelectorAll('.twentytwenty-container');
 
-        let isDragging = false;
+        containers.forEach(container => {
+            const beforeImg = container.querySelector('.twentytwenty-before-img');
+            const handle = container.querySelector('.twentytwenty-handle');
 
-        const onStartDrag = (e) => {
-            isDragging = true;
-            e.preventDefault();
-        };
+            let isDragging = false;
 
-        const onDrag = (e) => {
-            if (!isDragging) return;
+            const onStartDrag = (e) => {
+                isDragging = true;
+                e.preventDefault();
+            };
 
-            let clientX = e.clientX || e.touches[0].clientX;
-            const rect = container.getBoundingClientRect();
-            let newX = clientX - rect.left;
+            const onDrag = (e) => {
+                if (!isDragging) return;
 
-            if (newX < 0) newX = 0;
-            if (newX > rect.width) newX = rect.width;
+                let clientX = e.clientX || e.touches[0].clientX;
+                const rect = container.getBoundingClientRect();
+                let newX = clientX - rect.left;
 
-            // Aggiorna la posizione della maniglia
-            handle.style.left = `${newX}px`;
+                if (newX < 0) newX = 0;
+                if (newX > rect.width) newX = rect.width;
 
-            // Calcola la percentuale per il ritaglio
-            const percent = (newX / rect.width) * 100;
-            beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-        };
+                // Aggiorna la posizione della maniglia
+                handle.style.left = `${newX}px`;
 
-        const onEndDrag = () => {
-            isDragging = false;
-        };
+                // Calcola la percentuale per il ritaglio
+                const percent = (newX / rect.width) * 100;
+                beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+            };
 
-        container.addEventListener('mousedown', onStartDrag);
-        window.addEventListener('mousemove', onDrag);
-        window.addEventListener('mouseup', onEndDrag);
+            const onEndDrag = () => {
+                isDragging = false;
+            };
 
-        container.addEventListener('touchstart', onStartDrag);
-        window.addEventListener('touchmove', onDrag);
-        window.addEventListener('touchend', onEndDrag);
+            // Eventi per desktop (mouse)
+            container.addEventListener('mousedown', onStartDrag);
+            window.addEventListener('mousemove', onDrag);
+            window.addEventListener('mouseup', onEndDrag);
+
+            // Eventi per mobile (touch)
+            container.addEventListener('touchstart', onStartDrag);
+            window.addEventListener('touchmove', onDrag);
+            window.addEventListener('touchend', onEndDrag);
+        });
     </script>
 
 </body>
