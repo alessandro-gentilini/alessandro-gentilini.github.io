@@ -1,0 +1,47 @@
+Atmosfera: 64
+Condensazione: 64
+Stato liquido: 64
+Hutton, James: 73
+Cristallizzazione: 73, 74
+Magma: 73
+Piroclastiti: 74
+Cenere: 74
+Bombe: 74
+Pomici: 74
+Ossidiana: 74
+Tessitura porfirica: 74
+Porfirica, tessitura: 74
+Fenocristalli: 74
+Fuso parziale: 76
+Parziale, fuso: 76
+Temperatura di fusione: 76
+Fusione da decompressione: 76
+Decompressione, fusione da: 76
+Fusione indotta da fluidi: 76
+Fluidi, fusione indotta da: 76
+Densità: 77
+Frazionamenti: 80
+Esperimenti: 80
+Serie discontinua: 80
+Discontinua, serie: 80
+Serie continua: 80
+Continua, serie: 80
+Serie di Bowen: 80
+Bowen, serie di: 80
+Problema del granito: 81
+Granito, problema del: 81
+Plutoni: 81
+Frattura delle rocce incassanti: 82
+Rocce incassanti, frattura: 82
+Xenoliti: 82
+Fusione delle rocce incassanti: 82
+Rocce incassanti, fusione: 82
+Batolite: 82
+Intrusioni discordanti: 82
+Discordanti, intrusioni: 82
+Filone strato: 82
+Sill: 82
+Suoli: 82
+Dicchi: 82
+Intrusioni concordanti: 82
+Concordanti, intrusioni: 82
