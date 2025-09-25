@@ -190,5 +190,5 @@ def genera_indice_html(nomi_file_input, nome_file_output='indice_analitico.html'
 if __name__ == '__main__':
     # Sostituisci i nomi dei file di esempio con i nomi dei tuoi file di testo
     # Per questo esempio, ho creato un input_vol1, input_vol2 ecc. che dovrai creare.
-    file_di_testo = ['indice_v01.txt']
+    file_di_testo = ['indice_v01.txt','indice_v02.txt']
     genera_indice_html(file_di_testo)

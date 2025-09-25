@@ -1,0 +1,10 @@
+Ferro: 95
+Nucleo esterno: 95
+Moti convettivi: 95
+Convettivi, moti: 95
+Rotazione terrestre: 95
+Variazioni secolari: 95
+Secolari, variazioni: 95
+Vento solare: 95
+Solare, vento: 95
+Paleomagnetismo: 95
