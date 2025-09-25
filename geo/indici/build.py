@@ -1,5 +1,30 @@
 import os
 
+def int_to_roman(num):
+    """
+    Converte un numero intero in una cifra romana.
+    """
+    val = [
+        1000, 900, 500, 400,
+        100, 90, 50, 40,
+        10, 9, 5, 4,
+        1
+    ]
+    syb = [
+        "M", "CM", "D", "CD",
+        "C", "XC", "L", "XL",
+        "X", "IX", "V", "IV",
+        "I"
+    ]
+    roman_num = ''
+    i = 0
+    while num > 0:
+        for _ in range(num // val[i]):
+            roman_num += syb[i]
+            num -= val[i]
+        i += 1
+    return roman_num
+
 def genera_indice_html(nomi_file_input, nome_file_output='indice_analitico.html'):
     """
     Legge una lista di file di testo, unisce e ordina i termini e i numeri di pagina,
@@ -10,7 +35,7 @@ def genera_indice_html(nomi_file_input, nome_file_output='indice_analitico.html'
         nome_file_output (str): Il nome del file HTML da generare.
     """
     indice_raw = {}
-    volume_map = {file_name: f"Vol. {i+1}" for i, file_name in enumerate(nomi_file_input)}
+    volume_map = {file_name: int_to_roman(i+1) for i, file_name in enumerate(nomi_file_input)}
 
     for nome_file_input in nomi_file_input:
         try:
@@ -165,5 +190,5 @@ def genera_indice_html(nomi_file_input, nome_file_output='indice_analitico.html'
 if __name__ == '__main__':
     # Sostituisci i nomi dei file di esempio con i nomi dei tuoi file di testo
     # Per questo esempio, ho creato un input_vol1, input_vol2 ecc. che dovrai creare.
-    file_di_testo = ['indice_v01.txt', 'indice_v02.txt']
+    file_di_testo = ['indice_v01.txt']
     genera_indice_html(file_di_testo)
