@@ -1,38 +1,49 @@
 import os
 
-def genera_indice_html(nome_file_input, nome_file_output='indice_analitico.html'):
+def genera_indice_html(nomi_file_input, nome_file_output='indice_analitico.html'):
     """
-    Legge un file di testo, ordina i termini e i numeri di pagina,
-    e genera un file HTML con un indice analitico.
+    Legge una lista di file di testo, unisce e ordina i termini e i numeri di pagina,
+    e genera un file HTML con un indice analitico consolidato.
 
     Args:
-        nome_file_input (str): Il percorso del file di testo da leggere.
+        nomi_file_input (list): Una lista di percorsi dei file di testo da leggere.
         nome_file_output (str): Il nome del file HTML da generare.
     """
-    try:
-        with open(nome_file_input, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        print(f"Errore: il file '{nome_file_input}' non è stato trovato.")
-        return
-
     indice_raw = {}
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
+    volume_map = {file_name: f"Vol. {i+1}" for i, file_name in enumerate(nomi_file_input)}
+
+    for nome_file_input in nomi_file_input:
         try:
-            # Suddivide la riga in due parti al primo ':'
-            termine, numeri_str = line.split(':', 1)
-            # Rimuove spazi bianchi e converte i numeri in una lista di interi
-            numeri = [int(n) for n in numeri_str.strip().split(',') if n.strip()]
-            indice_raw[termine.strip()] = sorted(numeri)
-        except ValueError as e:
-            print(f"Attenzione: Riga mal formattata ignorata: '{line.strip()}' - Errore: {e}")
+            with open(nome_file_input, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        except FileNotFoundError:
+            print(f"Errore: il file '{nome_file_input}' non è stato trovato. Verrà ignorato.")
             continue
 
-    # Ordina i termini alfabeticamente
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                # Suddivide la riga in due parti al primo ':'
+                termine, numeri_str = line.split(':', 1)
+                termine = termine.strip()
+                # Rimuove spazi bianchi e converte i numeri in una lista di interi
+                numeri = [int(n) for n in numeri_str.strip().split(',') if n.strip()]
+                
+                # Unisce i numeri di pagina se il termine esiste già, altrimenti lo aggiunge
+                if termine in indice_raw:
+                    indice_raw[termine].extend([(n, nome_file_input) for n in numeri])
+                else:
+                    indice_raw[termine] = [(n, nome_file_input) for n in numeri]
+            except ValueError as e:
+                print(f"Attenzione: Riga mal formattata in '{nome_file_input}' ignorata: '{line.strip()}' - Errore: {e}")
+                continue
+
+    # Ordina i termini alfabeticamente e i numeri di pagina in modo crescente e unico
     termini_ordinati = sorted(indice_raw.keys())
+    for termine in termini_ordinati:
+        indice_raw[termine] = sorted(list(set(indice_raw[termine])), key=lambda x: (x[1], x[0]))
 
     # Genera il contenuto HTML
     html_content = f"""
@@ -79,11 +90,19 @@ def genera_indice_html(nome_file_input, nome_file_output='indice_analitico.html'
             border-bottom: 1px solid #e5e7eb;
             margin: 1.5rem 0;
         }}
+        .volume-label {{
+            font-weight: normal;
+            font-style: italic;
+            color: #6b7280; /* Tailwind gray-500 */
+            margin-right: 0.5rem;
+        }}
     </style>
 </head>
 <body class="p-8">
     <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
-        <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-800">Indice analitico dei quaderni neri</h1>
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-800">Indice Analitico</h1>
+        <p class="text-center text-gray-600 mb-8">Elenco dei termini e delle relative pagine, ordinato alfabeticamente.</p>
+        
         <div class="index-container">
     """
 
@@ -105,8 +124,24 @@ def genera_indice_html(nome_file_input, nome_file_output='indice_analitico.html'
             """
             last_initial = current_initial
 
+        # Genera la stringa dei numeri di pagina raggruppandoli per volume
+        pagine_per_volume = {}
+        for page_number, volume_name in pages:
+            volume_label = volume_map.get(volume_name, volume_name)
+            if volume_label not in pagine_per_volume:
+                pagine_per_volume[volume_label] = []
+            pagine_per_volume[volume_label].append(str(page_number))
+
+        pagine_str_list = []
+        for vol_label, page_list in pagine_per_volume.items():
+            if len(nomi_file_input) > 1:
+                pagine_str_list.append(f"<span class='volume-label'>{vol_label}</span>{', '.join(page_list)}")
+            else:
+                pagine_str_list.append(f"{', '.join(page_list)}")
+        
+        pagine_str = ", ".join(pagine_str_list)
+
         # Aggiunge il termine e i numeri di pagina
-        pagine_str = ", ".join(map(str, pages))
         html_content += f"""
             <div class="flex justify-between items-start index-item">
                 <span class="text-lg font-medium">{termine}</span>
@@ -126,6 +161,9 @@ def genera_indice_html(nome_file_input, nome_file_output='indice_analitico.html'
 
     print(f"File HTML '{nome_file_output}' generato con successo.")
 
-# Chiamata alla funzione con il nome del file di input
+# Chiamata alla funzione con una lista di nomi di file di input
 if __name__ == '__main__':
-    genera_indice_html('indice_v01.txt')
+    # Sostituisci i nomi dei file di esempio con i nomi dei tuoi file di testo
+    # Per questo esempio, ho creato un input_vol1, input_vol2 ecc. che dovrai creare.
+    file_di_testo = ['indice_v01.txt', 'indice_v02.txt']
+    genera_indice_html(file_di_testo)
