@@ -170,29 +170,27 @@ Se in pol un minerale non cambia colore mentre si ruota il piatto allora è un m
 
 Se in pol un minerale cambia colore mentre si ruota il piatto allora è un minerale anisotropo ("Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation." [Schmidt p.50]).
 
-## Tavole determinative
-Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico che dire che è un sinonimo di ortorombico.
-
+## Birifrazione o birifrangenza
 Seguono le definizioni in [Peccerillo p.2-3], vedi anche [3CD p.87].
 
-Nei minerali isotropi, per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della monorifrazione che consiste nell'avere un solo raggio rifratto, chiamato raggio ordinario, che segue la legge di Snell.  
+Nei **minerali isotropi**, per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della **monorifrazione** che consiste nell'avere un solo raggio rifratto, chiamato **raggio ordinario**, che segue la legge di Snell.  
 Il raggio ordinario è indicato con la lettera O oppure ω (omega).  
 L'indice di rifrazione associato al raggio ordinario, indicato con $n_O$ o in alternativa con $n_{\omega}$, è costante, o, detto in altri termini, non dipende dalla direzione del raggio incidente. Dalla costanza di $n_O$ discende la costanza della velocità del raggio ordinario.
 
-Nei minerali anisotropi uniassici esiste una sola direzione di incidenza della luce per la quale si ha il fenomeno della monorifrazione; tale direzione è detta asse ottico.  
+Nei **minerali anisotropi uniassici** esiste una sola direzione di incidenza della luce per la quale si ha il fenomeno della monorifrazione; tale direzione è detta **asse ottico**.  
 La luce che incide sul minerale lungo una direzione parallela all'asse ottico darà luogo ad un unico raggio rifratto che è il sudetto raggio ordinario e che gode delle proprietà suddette.  
-Tutte le direzioni di incidenza che non sono parallele all'asse ottico danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, il primo chiamato ordinario, che ha le proprietà suddette, il secondo chiamato straordinario e che non segue la legge di Snell.  
-Il raggio ordinario è indicato con la lettera E oppure ε (epsilon).  
+Tutte le direzioni di incidenza che non sono parallele all'asse ottico danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, il primo chiamato ordinario, che ha le proprietà suddette, il secondo chiamato **straordinario** e che non segue la legge di Snell.  
+Il raggio straordinario è indicato con la lettera E oppure ε (epsilon).  
 L'indice di rifrazione associato al raggio straordinario non è costante ma dipende dalla direzione di incidenza; il suo valore varia dall'estremo $n_O$, valore assunto quando il raggio incidente è parallelo all'asse ottico, all'estremo $n_E$, valore assunto quando il raggio incidente è ortogonale all'asse ottico. In alternativa, $n_E$ può essere indicato con $n_{\epsilon}$.  
-I minerali per cui $n_E-n_O\gt0$ sono detti otticamente positivi (e.g. quarzo).  
-I minerali per cui $n_E-n_O\lt0$ sono detti otticamente negativi (e.g. calcite).  
+I minerali per cui $n_E-n_O\gt0$ sono detti **otticamente positivi** (e.g. quarzo).  
+I minerali per cui $n_E-n_O\lt0$ sono detti **otticamente negativi** (e.g. calcite).  
 
-Nei minerale anisotropi biassici esistono solo due direzioni di incidenza della luce per le quali apparentemente non si ha il fenomeno della birifrazione; tali direzioni sono dette assi ottici.  
+Nei **minerale anisotropi biassici** esistono solo due direzioni di incidenza della luce per le quali apparentemente non si ha il fenomeno della birifrazione; tali direzioni sono dette **assi ottici**.  
 Si è scritto apparentemente perché la luce che incide sul minerale lungo una direzione parallela ad uno dei due assi ottici darà luogo a due raggi rifratti che hanno il medesimo indice di rifrazione.  
 Tutte le direzioni di incidenza che non sono parallele ad uno dei due assi ottici danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, entrambi questi raggi non seguono la legge di Snell e sono quindi entrambi raggi straordinari.  
 
-
-
+### Collegamento tra le proprietà ottiche dei minerali e i sistemi cristallini
+Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico che dire che è un sinonimo di ortorombico.
 
 |Sistema cristallino|in inglese|Rifrangenza||
 |-|-|-|-|
@@ -203,6 +201,7 @@ Tutte le direzioni di incidenza che non sono parallele ad uno dei due assi ottic
 |Monoclino|Monoclinic|Birifrangente Biassico|Anisotropo|
 |Triclino|Triclinic|Birifrangente Biassico|Anisotropo|
 
+## Tavole determinative
 Le tavole determinative in [Peccerillo p.180-184] sono suddivise in :
 <pre>
 Minerali isotropi
