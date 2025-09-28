@@ -173,21 +173,24 @@ Se in pol un minerale cambia colore mentre si ruota il piatto allora è un miner
 ## Tavole determinative
 Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico che dire che è un sinonimo di ortorombico.
 
-Seguono le definizioni in [Peccerillo p.2-3].
+Seguono le definizioni in [Peccerillo p.2-3], vedi anche [3CD p.87].
 
-Minerale isotropo: per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della monorifrazione che consiste nell'avere un solo raggio rifratto detto raggio ordinario che segue 
+Nei minerali isotropi, per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della monorifrazione che consiste nell'avere un solo raggio rifratto, chiamato raggio ordinario, che segue la legge di Snell.  
+Il raggio ordinario è indicato con la lettera O oppure ω (omega).  
+L'indice di rifrazione associato al raggio ordinario, indicato con $n_O$ o in alternativa con $n_{\omega}$, è costante, o, detto in altri termini, non dipende dalla direzione del raggio incidente. Dalla costanza di $n_O$ discende la costanza della velocità del raggio ordinario.
 
-uniassico esiste una sola direzione di mono
+Nei minerali anisotropi uniassici esiste una sola direzione di incidenza della luce per la quale si ha il fenomeno della monorifrazione; tale direzione è detta asse ottico.  
+La luce che incide sul minerale lungo una direzione parallela all'asse ottico darà luogo ad un unico raggio rifratto che è il sudetto raggio ordinario e che gode delle proprietà suddette.  
+Tutte le direzioni di incidenza che non sono parallele all'asse ottico danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, il primo chiamato ordinario, che ha le proprietà suddette, il secondo chiamato straordinario e che non segue la legge di Snell.  
+Il raggio ordinario è indicato con la lettera E oppure ε (epsilon).  
+L'indice di rifrazione associato al raggio straordinario non è costante ma dipende dalla direzione di incidenza; il suo valore varia dall'estremo $n_O$, valore assunto quando il raggio incidente è parallelo all'asse ottico, all'estremo $n_E$, valore assunto quando il raggio incidente è ortogonale all'asse ottico. In alternativa, $n_E$ può essere indicato con $n_{\epsilon}$.  
+I minerali per cui $n_E-n_O\gt0$ sono detti otticamente positivi (e.g. quarzo).  
+I minerali per cui $n_E-n_O\lt0$ sono detti otticamente negativi (e.g. calcite).  
 
-Minerale anisotropo uniassico: c'è una sola direzione di incidenza della luce sul minerale lungo la quale la luce non si polarizza e non birifrange, tale direzione è detta asse ottico.
-La luce incidente lungo l'asse ottico (o in direzione ad esso parallelo) dà luogo 
-Lungo tutte le altre direzioni si che il raggio incidente si scinde in due raggi rifratti detti ordinario e straordinario; in ciò consiste la birifrazione.
-Il raggio ordinario segue la legge di Snell, il raggio straordinario non segue la legge di Snell.
-Il raggio ordinario ha indice di rifrazione costante indipendentemente dalla direzione di propagazione.
+Nei minerale anisotropi biassici esistono solo due direzioni di incidenza della luce per le quali apparentemente non si ha il fenomeno della birifrazione; tali direzioni sono dette assi ottici.  
+Si è scritto apparentemente perché la luce che incide sul minerale lungo una direzione parallela ad uno dei due assi ottici darà luogo a due raggi rifratti che hanno il medesimo indice di rifrazione.  
+Tutte le direzioni di incidenza che non sono parallele ad uno dei due assi ottici danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, entrambi questi raggi non seguono la legge di Snell e sono quindi entrambi raggi straordinari.  
 
-Minerale anisotropo biassico: ci sono due direzioni di incidenza della luce sul minerale lungo la quale apparentemente non si ha birifrazione, queste direzioni sono dette assi ottici.
-Lungo questi assi si ha birifrazione ma i raggi hanno valori uguali per gli indici di rifrazione.
-I due raggi non seguono la legge di Snell.
 
 
 
@@ -332,3 +335,5 @@ ottica mineralogica
 [Peccerillo] Angelo Peccerillo & Diego Perugini, Introduzione alla Petrografia ottica, Perugia, 2003, Morlacchi Editore.
 
 [Schmidt] Susanne Theodora Schmidt, Transmitted Light Microscopy of Rock-Forming Minerals - An Introduction to Optical Mineralogy, Cham, 2023, Springer.
+
+[3CD] Istituto della enciclopedia italiana (Treccani), Enciclopedia delle scienze fisiche, Volume VII, Dizionario, Roma, 1996.
