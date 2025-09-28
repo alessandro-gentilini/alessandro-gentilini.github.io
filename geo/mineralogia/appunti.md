@@ -158,7 +158,7 @@ incrementando la distanza tra lente e sezione sottile (e quindi sfuocando abbass
 ## Colore
 Lunghezze d'onda nel visibile: da 390 nm (violetto) a 770 nm (rosso).
 
-La luce bianca è data dalla somma di varie lunghezze d'onda; il colore di un minerale, illuminato da luce bianca, è dato dalle lunghezze d'onda che non sono assorbite.
+La luce bianca è data dalla somma di varie lunghezze d'onda; il colore di un minerale, illuminato da luce bianca, è dato dalle lunghezze d'onda che non sono assorbite dal minerale.
 
 La "ruota dei colori" riporta i colori posizionati su una circonferena: se un minerale ha il colore di una posizione della ruota questo è dovuto all'assorbimento, da parte del minerale, dei colori in posizione diametralmente opposta [Schmidt p.49].
 
@@ -181,6 +181,7 @@ Minerali anisotropi
       Biassici +
       Biassici -
 </pre>
+
 
 
 ## Scheda
@@ -227,9 +228,19 @@ pol - Assorbimento
                           Torbido [ ]
 
 pol - Colore
-     Costante [ ] ⇒ il minerale è isotropo
+   Ruotando il piatto il colore
+     Non cambia [ ] ⇒ il minerale è isotropo (oppure è tagliato parallelo a un piano che contiene asse ottico?)
      Dicroico [ ] 
    Pleocroico [ ]
+
+   Colori:
+     Incolore [ ]
+       Grigio [ ]
+        Verde [ ]
+      Marrone [ ]
+          Blu [ ]
+        Rosso [ ]
+         Rosa [ ]
 </pre>
 
 
