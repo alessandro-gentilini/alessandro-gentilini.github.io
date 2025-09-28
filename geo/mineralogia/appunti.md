@@ -233,14 +233,14 @@ pol - Colore
      Dicroico [ ] 
    Pleocroico [ ]
 
-   Colori:
-     Incolore [ ]
-       Grigio [ ]
-        Verde [ ]
-      Marrone [ ]
-          Blu [ ]
-        Rosso [ ]
-         Rosa [ ]
+pol - Colori
+   Incolore [ ]
+     Grigio [ ]
+      Verde [ ]
+    Marrone [ ]
+        Blu [ ]
+      Rosso [ ]
+       Rosa [ ]
 </pre>
 
 
