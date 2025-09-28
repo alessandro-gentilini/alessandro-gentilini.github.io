@@ -61,6 +61,8 @@ Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è orto
 
 * per valutare il colore di interferenza scegliere ritardi più alti? (vedi pdf lab5a, lab5b, lab5c)
 
+* che angolo c'è tra l'asse ottico e gli assi della cella elementare del reticolo?
+
 ## Osservazioni in pol
 
 ### Colore
@@ -169,15 +171,44 @@ Se in pol un minerale non cambia colore mentre si ruota il piatto allora è un m
 Se in pol un minerale cambia colore mentre si ruota il piatto allora è un minerale anisotropo ("Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation." [Schmidt p.50]).
 
 ## Tavole determinative
-Le tavole determinative in [Peccerillo p.180-184] sono suddivise in:
+Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico che dire che è un sinonimo di ortorombico.
+
+Seguono le definizioni in [Peccerillo p.2-3].
+
+Minerale isotropo: per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della monorifrazione che consiste nell'avere un solo raggio rifratto detto raggio ordinario che segue 
+
+uniassico esiste una sola direzione di mono
+
+Minerale anisotropo uniassico: c'è una sola direzione di incidenza della luce sul minerale lungo la quale la luce non si polarizza e non birifrange, tale direzione è detta asse ottico.
+La luce incidente lungo l'asse ottico (o in direzione ad esso parallelo) dà luogo 
+Lungo tutte le altre direzioni si che il raggio incidente si scinde in due raggi rifratti detti ordinario e straordinario; in ciò consiste la birifrazione.
+Il raggio ordinario segue la legge di Snell, il raggio straordinario non segue la legge di Snell.
+Il raggio ordinario ha indice di rifrazione costante indipendentemente dalla direzione di propagazione.
+
+Minerale anisotropo biassico: ci sono due direzioni di incidenza della luce sul minerale lungo la quale apparentemente non si ha birifrazione, queste direzioni sono dette assi ottici.
+Lungo questi assi si ha birifrazione ma i raggi hanno valori uguali per gli indici di rifrazione.
+I due raggi non seguono la legge di Snell.
+
+
+
+|Sistema cristallino|in inglese|Rifrangenza||
+|-|-|-|-|
+|Cubico|Cubic|Monorifrangente|Isotropo|
+|Esagonale|Hexagonal|Birifrangente Uniassico|Anisotropo|
+|Tetragonale e Trigonale|Tetragonal and Trigonal|Birifrangente Uniassico|Anisotropo|
+|Ortorombico (aka rombico)|Orthorombic|Birifrangente Biassico|Anisotropo|
+|Monoclino|Monoclinic|Birifrangente Biassico|Anisotropo|
+|Triclino|Triclinic|Birifrangente Biassico|Anisotropo|
+
+Le tavole determinative in [Peccerillo p.180-184] sono suddivise in :
 <pre>
 Minerali isotropi
 
-Minerali anisotropi
-   Uniassici
+Minerali anisotropi (o birifrangenti)
+   Uniassici ()
       Uniassici +
       Uniassici -
-   Biassici
+   Biassici (ci sono due direzioni di monorifrangenza)
       Biassici +
       Biassici -
 </pre>
@@ -284,6 +315,10 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **torbido**=_cloudy_?
 
 # Bibliografia
+[Hoffmann] Frank Hoffmann, Introduction to Crystallography, Cham, 2020, Springer.
+
+[K&P] Cornelis Klein & Anthony R. Philpotts, Mineralogia e petrografia, Bologna, 2018, Zanichelli.
+
 [Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
 [Ottica] Corso di Mineralogia 
