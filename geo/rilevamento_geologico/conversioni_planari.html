@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussola Cartografica Interattiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        /* Stile per il Canvas, centrato e con ombra */
+        #compassCanvas {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            /* Ho rimosso il border-radius qui, ma il div circostante lo manterrà */
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Cerchio della Bussola</h1>
+        
+        <!-- Canvas per il disegno (ho aumentato leggermente la dimensione del canvas
+             e del div per garantire spazio, anche se il raggio è la chiave) -->
+        <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
+
+        <p class="mt-6 text-gray-600">Punti cardinali (solo lettera) e tacche intermedie (con gradi) disegnati sul cerchio.</p>
+    </div>
+
+    <script>
+        // Funzione per convertire i gradi in radianti
+        function toRadians(degrees) {
+            return degrees * (Math.PI / 180);
+        }
+
+        function drawCompass() {
+            const canvas = document.getElementById('compassCanvas');
+            if (!canvas.getContext) {
+                console.error("Browser non supporta il Canvas.");
+                return;
+            }
+            const ctx = canvas.getContext('2d');
+
+            // Impostazioni del canvas
+            const width = canvas.width;
+            const height = canvas.height;
+            const center = { x: width / 2, y: height / 2 };
+            
+            // Raggio del cerchio (lo mantengo a 0.75 del semi-width per lasciare spazio al testo)
+            const radius = (width / 2) * 0.75; 
+            const textClearance = (width / 2) * 0.05; // Spazio di sicurezza tra i numeri e il bordo del canvas
+            
+            // Definisco un raggio esterno massimo per il testo, ben all'interno del canvas
+            const maxTextRadius = (width / 2) - textClearance; 
+
+            // Pulisce il canvas
+            ctx.clearRect(0, 0, width, height);
+
+            // --- 1. Disegna la circonferenza principale ---
+            ctx.beginPath();
+            ctx.arc(center.x, center.y, radius, 0, 2 * Math.PI);
+            ctx.strokeStyle = '#4b5563'; // Colore grigio scuro
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            ctx.closePath();
+
+            // --- 2. Definisce le tacche da disegnare ---
+            // Gradi (orientamento standard: 0° Nord, crescente in senso orario)
+            const markers = [
+                // Punti Cardinali (SOLO LETTERA)
+                { degree: 0, textLabel: 'N', color: '#ef4444', length: 15, size: '22px' },
+                { degree: 90, textLabel: 'E', color: '#2563eb', length: 15, size: '22px' },
+                { degree: 180, textLabel: 'S', color: '#22c55e', length: 15, size: '22px' },
+                { degree: 270, textLabel: 'W', color: '#f59e0b', length: 15, size: '22px' },
+                
+                // Tacche intermedie (CON GRADI)
+                { degree: 45, textLabel: '45°', color: '#9ca3af', length: 8, size: '18px' },
+                { degree: 135, textLabel: '135°', color: '#9ca3af', length: 8, size: '18px' },
+                { degree: 225, textLabel: '225°', color: '#9ca3af', length: 8, size: '18px' },
+                { degree: 315, textLabel: '315°', color: '#9ca3af', length: 8, size: '18px' },
+            ];
+
+            // --- 3. Disegna le tacche e le etichette ---
+            markers.forEach(marker => {
+                // Calcolo dell'angolo in radianti (0 a Est, cresce in senso antiorario)
+                // Usiamo (degree - 90) per allineare 0° al Nord (Y negativa) e crescere in senso orario.
+                const adjustedDegrees = marker.degree - 90; 
+                const angleRad = toRadians(adjustedDegrees);
+                
+                // Calcola le coordinate per l'inizio (sul cerchio)
+                const startX = center.x + radius * Math.cos(angleRad);
+                const startY = center.y + radius * Math.sin(angleRad);
+
+                // Calcola le coordinate per la fine della tacca (all'interno del cerchio)
+                const endRadius = radius - marker.length;
+                const endX = center.x + endRadius * Math.cos(angleRad);
+                const endY = center.y + endRadius * Math.sin(angleRad);
+
+                // Disegna la linea della tacca
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, endY);
+                ctx.strokeStyle = marker.color;
+                ctx.lineWidth = marker.length > 10 ? 3 : 2; 
+                ctx.stroke();
+                ctx.closePath();
+
+                // Disegna l'etichetta 
+                if (marker.textLabel) {
+                    // Imposto la distanza per le etichette per assicurare che non vengano tagliate.
+                    // Cerco il raggio più grande possibile che sia <= maxTextRadius
+                    const desiredRadius = radius + 30; 
+                    const textRadius = Math.min(desiredRadius, maxTextRadius);
+
+                    const textX = center.x + textRadius * Math.cos(angleRad);
+                    const textY = center.y + textRadius * Math.sin(angleRad);
+
+                    ctx.fillStyle = marker.color;
+                    ctx.font = `${marker.size} Inter`;
+                    ctx.textAlign = 'center'; 
+                    ctx.textBaseline = 'middle'; 
+                    
+                    ctx.fillText(marker.textLabel, textX, textY);
+                }
+            });
+        }
+
+        // Avvia il disegno quando la pagina è completamente caricata
+        window.onload = drawCompass;
+    </script>
+
+</body>
 </html>
+
