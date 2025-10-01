@@ -16,6 +16,12 @@
             background-color: #ffffff;
             border: 1px solid #e5e7eb;
         }
+        /* Stile specifico per il nuovo campo Strike Quadrante */
+        #strikeQuadrante {
+            text-transform: uppercase;
+            background-color: #eef2ff; /* Viola chiaro */
+            border-color: #818cf8;
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
@@ -23,20 +29,18 @@
     <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-xl text-center">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Misure Geologiche Interattive</h1>
         
-        <!-- LAYOUT CAMPI DI INPUT (2 righe) -->
+        <!-- LAYOUT CAMPI DI INPUT (3 righe) -->
         <div class="mb-8 w-full max-w-md mx-auto">
             
-            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo Strike / Dip</p>
-            
-            <!-- RIGA 1: Strike e Inclinazione -->
+            <!-- RIGA 1: Strike 3-cifre e Inclinazione -->
+            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo 1: Strike 3-cifre / Dip Angle</p>
             <div class="grid grid-cols-2 gap-4 mb-4">
-                
                 <!-- Strike (Direzione del Piano) -->
                 <div class="flex flex-col items-start">
-                    <label for="strike" class="text-sm font-medium text-gray-700 mb-1">Strike (Piano) [°]</label>
-                    <input type="text" id="strike" value="090" maxlength="3"
+                    <label for="strike3Cifre" class="text-sm font-medium text-gray-700 mb-1">Strike (Piano) [000-359°]</label>
+                    <input type="text" id="strike3Cifre" value="090" maxlength="3"
                            class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-yellow-50 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                    <div id="strikeError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                    <div id="strike3CifreError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
                         Formato: 3 cifre (000-359)
                     </div>
                 </div>
@@ -50,17 +54,16 @@
                 </div>
             </div>
 
-            <!-- Divisore -->
+            <!-- Divisore 1 -->
             <hr class="border-gray-300 my-4">
 
-            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo Dip Direction / Dip Angle</p>
-
             <!-- RIGA 2: Dip Direction e Inclinazione -->
-            <div class="grid grid-cols-2 gap-4">
+            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo 2: Dip Direction / Dip Angle</p>
+            <div class="grid grid-cols-2 gap-4 mb-4">
                 
                 <!-- Dip Direction (Direzione di Immersione) -->
                 <div class="flex flex-col items-start">
-                    <label for="dipDirezione" class="text-sm font-medium text-gray-700 mb-1">Dip Direction (Freccia) [°]</label>
+                    <label for="dipDirezione" class="text-sm font-medium text-gray-700 mb-1">Dip Direction (Freccia) [000-359°]</label>
                     <input type="text" id="dipDirezione" value="180" maxlength="3"
                            class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-red-50 focus:ring-red-500 focus:border-red-500 transition-colors">
                     <div id="dipDirezioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
@@ -68,10 +71,36 @@
                     </div>
                 </div>
 
-                <!-- Inclinazione (Dip Angle) - RIGA 2 (ORA EDITABILE) -->
+                <!-- Inclinazione (Dip Angle) - RIGA 2 -->
                 <div class="flex flex-col items-start">
                     <label for="inclinazioneRiga2" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Angolo) [°]</label>
                     <input type="number" id="inclinazioneRiga2" value="45" min="0" max="90" step="1" 
+                           class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                    <div class="mt-1 h-5"></div>
+                </div>
+            </div>
+
+            <!-- Divisore 2 -->
+            <hr class="border-gray-300 my-4">
+
+            <!-- RIGA 3: Strike Quadrante e Inclinazione -->
+            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo 3: Strike Quadrante / Dip Angle</p>
+            <div class="grid grid-cols-2 gap-4">
+                
+                <!-- Strike Quadrante (NxxE/SxxW) -->
+                <div class="flex flex-col items-start">
+                    <label for="strikeQuadrante" class="text-sm font-medium text-gray-700 mb-1">Strike Quadrante [NxxE, SxxW, etc.]</label>
+                    <input type="text" id="strikeQuadrante" value="N90E" 
+                           class="w-full p-2 border border-gray-400 rounded-lg text-center font-mono text-lg focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                    <div id="strikeQuadranteError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                        Formato: NxxE o SxxW (xx=0-90)
+                    </div>
+                </div>
+
+                <!-- Inclinazione (Dip Angle) - RIGA 3 -->
+                <div class="flex flex-col items-start">
+                    <label for="inclinazioneRiga3" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Angolo) [°]</label>
+                    <input type="number" id="inclinazioneRiga3" value="45" min="0" max="90" step="1" 
                            class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
                     <div class="mt-1 h-5"></div>
                 </div>
@@ -82,7 +111,7 @@
         <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
 
         <p class="mt-6 text-sm text-gray-600">
-            La linea gialla è lo **Strike** e la freccia rossa è il **Dip Direction**. La loro relazione di $90^\circ$ viene gestita automaticamente.
+            La linea gialla è lo **Strike** (orientamento del piano) e la freccia rossa è il **Dip Direction** (direzione di immersione). Tutte le misurazioni sono sincronizzate.
         </p>
     </div>
 
@@ -106,14 +135,12 @@
             ctx.restore();
         }
 
+        // --- VALIDAZIONE E CONVERSIONE ---
+
         /**
-         * Funzione di validazione generica per i campi direzione (3 cifre, 000-359).
-         * @param {string} value - Il valore da validare.
-         * @param {string} errorId - L'ID del div di errore.
-         * @param {boolean} updateUI - Se mostrare o nascondere il messaggio di errore.
-         * @returns {boolean} True se valido.
+         * Validazione generica per i campi direzione 3-cifre (000-359).
          */
-        function validateDirection(value, errorId, updateUI = true) {
+        function validateDirection3Cifre(value, errorId, updateUI = true) {
             const errorDiv = document.getElementById(errorId);
             const regex = /^\d{3}$/; 
             const numValue = parseInt(value, 10);
@@ -122,86 +149,185 @@
             if (updateUI) {
                 if (isValid) {
                     errorDiv.style.visibility = 'hidden';
-                    errorDiv.textContent = '';
                 } else {
                     errorDiv.style.visibility = 'visible';
-                    errorDiv.textContent = 'Formato: 3 cifre (000-359)';
                 }
             }
-
             return isValid;
         }
 
         /**
-         * Logica per aggiornare il Dip Direction quando lo Strike cambia.
-         * @param {number} strikeValue - Valore dello Strike in gradi (0-359).
+         * Converte Strike 3-cifre (000-359) in Strike Quadrante (NxxE/SxxW)
+         * @param {number} strike3Cifre - Valore Strike 3-cifre.
+         * @returns {string} Strike Quadrante.
          */
-        function updateDipDirection(strikeValue) {
-            // Dip Direction = Strike + 90 gradi (convenzione della mano destra)
-            let dipDirection = (strikeValue + 90) % 360;
+        function convert3CifreToQuadrante(strike3Cifre) {
+            if (strike3Cifre >= 0 && strike3Cifre <= 90) {
+                return `N${strike3Cifre}E`;
+            } else if (strike3Cifre > 90 && strike3Cifre <= 180) {
+                return `S${180 - strike3Cifre}E`;
+            } else if (strike3Cifre > 180 && strike3Cifre <= 270) {
+                return `S${strike3Cifre - 180}W`;
+            } else if (strike3Cifre > 270 && strike3Cifre < 360) {
+                return `N${360 - strike3Cifre}W`;
+            } else {
+                return 'N/A'; // Non dovrebbe succedere
+            }
+        }
+
+        /**
+         * Converte Strike Quadrante (NxxE/SxxW) in Strike 3-cifre (000-359)
+         * @param {string} quadrante - Valore Strike Quadrante (es: N30E).
+         * @returns {number | null} Strike 3-cifre, o null se non valido.
+         */
+        function convertQuadranteTo3Cifre(quadrante) {
+            // Rimuove spazi e converte in maiuscolo
+            quadrante = quadrante.toUpperCase().trim();
             
-            // Aggiorna il campo Dip Direction formattandolo a 3 cifre con zeri iniziali
-            const dipDirezioneInput = document.getElementById('dipDirezione');
-            dipDirezioneInput.value = dipDirection.toString().padStart(3, '0');
+            // Regex aggiornata per gestire meglio il formato
+            const match = quadrante.match(/^([NS])(\d{1,2})([EW])$/);
+            if (!match) return null;
+
+            const start = match[1];
+            const angle = parseInt(match[2], 10);
+            const direction = match[3];
+
+            if (angle < 0 || angle > 90) return null;
+
+            if (start === 'N') {
+                if (direction === 'E') return angle;
+                if (direction === 'W') return 360 - angle;
+            }
+            if (start === 'S') {
+                if (direction === 'E') return 180 - angle;
+                if (direction === 'W') return 180 + angle;
+            }
+            return null;
+        }
+
+        /**
+         * Validazione per Strike Quadrante (NxxE, SxxW, NxxW, SxxE)
+         */
+        function validateDirectionQuadrante(value, errorId, updateUI = true) {
+            const errorDiv = document.getElementById(errorId);
+            const regex = /^[NS]\d{1,2}[EW]$/i;
+            const isValidFormat = regex.test(value);
+            let isValidAngle = false;
+
+            if (isValidFormat) {
+                const angle = parseInt(value.substring(1, value.length - 1), 10);
+                isValidAngle = angle >= 0 && angle <= 90;
+            }
+
+            const isValid = isValidFormat && isValidAngle;
+
+            if (updateUI) {
+                if (isValid) {
+                    errorDiv.style.visibility = 'hidden';
+                } else {
+                    errorDiv.style.visibility = 'visible';
+                }
+            }
+            return isValid;
+        }
+        
+        // --- LOGICA DI SINCRONIZZAZIONE DEI CAMPI ---
+
+        /**
+         * Aggiorna tutti i campi di Strike/Dip Direction quando Strike 3-cifre cambia.
+         * @param {number} strike3Cifre - Valore Strike in gradi (0-359).
+         */
+        function updateAllFromStrike3Cifre(strike3Cifre) {
+            // Aggiorna Dip Direction (Dip Dir = Strike + 90)
+            let dipDirection = (strike3Cifre + 90) % 360;
+            document.getElementById('dipDirezione').value = dipDirection.toString().padStart(3, '0');
+            
+            // Aggiorna Strike Quadrante
+            const strikeQuadrante = convert3CifreToQuadrante(strike3Cifre);
+            document.getElementById('strikeQuadrante').value = strikeQuadrante;
             
             drawCompass();
         }
 
         /**
-         * Logica per aggiornare lo Strike quando il Dip Direction cambia.
-         * @param {number} dipDirectionValue - Valore del Dip Direction in gradi (0-359).
+         * Aggiorna tutti i campi di Strike/Dip Direction quando Dip Direction cambia.
+         * @param {number} dipDirectionValue - Valore Dip Direction in gradi (0-359).
          */
-        function updateStrike(dipDirectionValue) {
-            // Strike = Dip Direction - 90 gradi. Aggiungiamo 360 per gestire i valori negativi.
-            let strike = (dipDirectionValue - 90 + 360) % 360;
+        function updateAllFromDipDirection(dipDirectionValue) {
+            // Aggiorna Strike 3-cifre (Strike = Dip Dir - 90)
+            let strike3Cifre = (dipDirectionValue - 90 + 360) % 360;
+            document.getElementById('strike3Cifre').value = strike3Cifre.toString().padStart(3, '0');
             
-            // Aggiorna il campo Strike formattandolo a 3 cifre con zeri iniziali
-            const strikeInput = document.getElementById('strike');
-            strikeInput.value = strike.toString().padStart(3, '0');
+            // Aggiorna Strike Quadrante
+            const strikeQuadrante = convert3CifreToQuadrante(strike3Cifre);
+            document.getElementById('strikeQuadrante').value = strikeQuadrante;
 
             drawCompass();
+        }
+
+        /**
+         * Aggiorna tutti i campi di Strike/Dip Direction quando Strike Quadrante cambia.
+         * @param {string} quadrante - Valore Strike Quadrante (es: N30E).
+         */
+        function updateAllFromStrikeQuadrante(quadrante) {
+            const strike3Cifre = convertQuadranteTo3Cifre(quadrante);
+            
+            if (strike3Cifre !== null) {
+                // Aggiorna Strike 3-cifre
+                document.getElementById('strike3Cifre').value = strike3Cifre.toString().padStart(3, '0');
+                
+                // Aggiorna Dip Direction (Dip Dir = Strike + 90)
+                let dipDirection = (strike3Cifre + 90) % 360;
+                document.getElementById('dipDirezione').value = dipDirection.toString().padStart(3, '0');
+
+                // Ridisegna la bussola con i nuovi valori
+                drawCompass(); 
+            } else {
+                // Se il formato non è valido, nasconde l'errore e ridisegna con i valori validi attuali
+                drawCompass(); 
+            }
         }
         
         /**
-         * Sincronizza il valore di Inclinazione tra i due campi e ridisegna.
+         * Sincronizza il valore di Inclinazione tra tutti i campi e ridisegna.
          * @param {string} sourceId - ID del campo che ha innescato la modifica.
          */
         function syncInclinazione(sourceId) {
             const incl1 = document.getElementById('inclinazioneRiga1');
             const incl2 = document.getElementById('inclinazioneRiga2');
+            const incl3 = document.getElementById('inclinazioneRiga3');
             
-            let value = (sourceId === 'inclinazioneRiga1') ? incl1.value : incl2.value;
+            // Ottiene il valore e lo assicura che sia compreso tra 0 e 90
+            let value = Math.max(0, Math.min(90, parseFloat(document.getElementById(sourceId).value) || 0));
             
-            // Sincronizza l'altro campo
-            if (sourceId === 'inclinazioneRiga1') {
-                incl2.value = value;
-            } else {
-                incl1.value = value;
-            }
+            // Sincronizza tutti i campi eccetto quello sorgente
+            if (sourceId !== 'inclinazioneRiga1') incl1.value = value;
+            if (sourceId !== 'inclinazioneRiga2') incl2.value = value;
+            if (sourceId !== 'inclinazioneRiga3') incl3.value = value;
 
             drawCompass();
         }
 
 
+        // --- FUNZIONE DI DISEGNO PRINCIPALE ---
         function drawCompass() {
             const canvas = document.getElementById('compassCanvas');
             if (!canvas.getContext) return;
             const ctx = canvas.getContext('2d');
 
-            // --- LETTURA E VALIDAZIONE DEI VALORI ---
-            const strikeInput = document.getElementById('strike');
+            // --- LETTURA DEI VALORI ---
+            const strikeInput = document.getElementById('strike3Cifre');
             const dipDirezioneInput = document.getElementById('dipDirezione');
-            // Leggiamo il valore di Inclinazione dal primo campo (è sincronizzato)
-            const inclinazioneInput = document.getElementById('inclinazioneRiga1'); 
+            const inclinazioneInput = document.getElementById('inclinazioneRiga1'); // Usiamo il valore sincronizzato
 
-            // Valori numerici (usiamo 0 se l'input non è valido)
+            // Valori numerici validi
             let strike = 0;
-            if (validateDirection(strikeInput.value, 'strikeError', false)) {
+            if (validateDirection3Cifre(strikeInput.value, 'strike3CifreError', false)) {
                  strike = parseInt(strikeInput.value, 10);
             }
             
             let dipDirection = 0;
-            if (validateDirection(dipDirezioneInput.value, 'dipDirezioneError', false)) {
+            if (validateDirection3Cifre(dipDirezioneInput.value, 'dipDirezioneError', false)) {
                  dipDirection = parseInt(dipDirezioneInput.value, 10);
             }
 
@@ -223,15 +349,16 @@
             // Pulisce il canvas
             ctx.clearRect(0, 0, width, height);
 
-            // --- 1. Disegna la circonferenza principale ---
+            // --- 1. Disegna la circonferenza principale e le tacche ---
+            // Disegno del cerchio esterno
             ctx.beginPath();
             ctx.arc(center.x, center.y, radius, 0, 2 * Math.PI);
             ctx.strokeStyle = '#4b5563'; 
             ctx.lineWidth = 3;
             ctx.stroke();
             ctx.closePath();
-
-            // --- 2. Definisce e disegna le tacche e le etichette (Punti Cardinali) ---
+            
+            // Definisce e disegna le tacche e le etichette (Punti Cardinali)
             const markers = [
                 { degree: 0, textLabel: 'N', color: '#ef4444', length: 15, size: '22px' },
                 { degree: 90, textLabel: 'E', color: '#2563eb', length: 15, size: '22px' },
@@ -279,19 +406,15 @@
                 }
             });
 
-            // --- 3. Disegna STRIKE e DIP DIRECTION ---
-            // Usiamo la validazione di Dip Direction perché è il valore che determina la freccia
-            if (validateDirection(dipDirezioneInput.value, 'dipDirezioneError', false)) {
+
+            // --- 2. Disegna STRIKE e DIP DIRECTION ---
+            if (validateDirection3Cifre(dipDirezioneInput.value, 'dipDirezioneError', false)) {
                 
-                // --- A. Strike (Linea Gialla) ---
-                // Angolo Strike in radianti
+                // A. Strike (Linea Gialla)
                 const strikeAngleRad = toRadians(strike - 90); 
                 
-                // Punto 1: Inizio della linea Strike (opposto)
                 const end1X = center.x + (-distanceToCenter) * Math.cos(strikeAngleRad);
                 const end1Y = center.y + (-distanceToCenter) * Math.sin(strikeAngleRad);
-                
-                // Punto 2: Fine della linea Strike (verso lo Strike)
                 const end2X = center.x + distanceToCenter * Math.cos(strikeAngleRad);
                 const end2Y = center.y + distanceToCenter * Math.sin(strikeAngleRad);
 
@@ -311,11 +434,9 @@
                 ctx.fill();
                 ctx.closePath();
                 
-                // --- B. Dip Direction (Freccia Rossa) ---
-                // Angolo Dip Direction in radianti
+                // B. Dip Direction (Freccia Rossa)
                 const dipAngleRad = toRadians(dipDirection - 90); 
                 
-                // Calcoliamo le coordinate del punto Dip Direction (punta della freccia)
                 const dipDirectionX = center.x + distanceToCenter * Math.cos(dipAngleRad);
                 const dipDirectionY = center.y + distanceToCenter * Math.sin(dipAngleRad);
 
@@ -332,8 +453,7 @@
                 ctx.fillStyle = '#ef4444';
                 drawArrowhead(ctx, dipDirectionX, dipDirectionY, dipAngleRad, arrowHeadSize); 
                 
-                // --- C. Aggiunge l'angolo di Inclinazione (Dip Angle) accanto alla freccia Dip Direction ---
-                // Calcola la posizione del testo appena fuori dal cerchio
+                // C. Aggiunge l'angolo di Inclinazione (Dip Angle) accanto alla freccia Dip Direction
                 const textDipRadius = distanceToCenter + 20; 
                 const textX = center.x + textDipRadius * Math.cos(dipAngleRad);
                 const textY = center.y + textDipRadius * Math.sin(dipAngleRad);
@@ -347,51 +467,76 @@
             }
         }
 
-        // --- GESTIONE DEGLI INPUT ---
+        // --- GESTIONE DEGLI EVENT LISTENER ---
         function setupEventListeners() {
-            const strikeInput = document.getElementById('strike');
+            const strike3CifreInput = document.getElementById('strike3Cifre');
             const dipDirezioneInput = document.getElementById('dipDirezione');
-            const inclinazioneInput1 = document.getElementById('inclinazioneRiga1');
-            const inclinazioneInput2 = document.getElementById('inclinazioneRiga2');
+            const strikeQuadranteInput = document.getElementById('strikeQuadrante');
+            
+            const inclInputs = [
+                document.getElementById('inclinazioneRiga1'),
+                document.getElementById('inclinazioneRiga2'),
+                document.getElementById('inclinazioneRiga3')
+            ];
 
-            // Funzione helper per gestire l'input e la validazione/aggiornamento della Direzione
+            // 1. Funzione helper per gestire l'input e la validazione/aggiornamento della Direzione
             const handleDirectionInput = (inputElement, errorId, updateFunction) => {
                 const listener = function() {
                     let value = this.value.replace(/\D/g, ''); 
                     this.value = value.substring(0, 3); 
                     
-                    if (validateDirection(this.value, errorId, true)) {
+                    if (validateDirection3Cifre(this.value, errorId, true)) {
                         updateFunction(parseInt(this.value, 10));
                     }
                 };
-
                 inputElement.addEventListener('input', listener);
                 inputElement.addEventListener('change', listener);
             };
 
-            // 1. Modifica dello Strike -> Aggiorna Dip Direction
-            handleDirectionInput(strikeInput, 'strikeError', updateDipDirection);
+            // 1. Modifica Strike 3-cifre -> Aggiorna tutti
+            handleDirectionInput(strike3CifreInput, 'strike3CifreError', updateAllFromStrike3Cifre);
 
-            // 2. Modifica del Dip Direction -> Aggiorna Strike
-            handleDirectionInput(dipDirezioneInput, 'dipDirezioneError', updateStrike);
+            // 2. Modifica del Dip Direction -> Aggiorna tutti
+            handleDirectionInput(dipDirezioneInput, 'dipDirezioneError', updateAllFromDipDirection);
 
-            // 3. Modifica dell'Inclinazione (Dip Angle) - Sincronizzazione e ridisegno
-            inclinazioneInput1.addEventListener('input', () => syncInclinazione('inclinazioneRiga1'));
-            inclinazioneInput1.addEventListener('change', () => syncInclinazione('inclinazioneRiga1'));
+            // 3. Modifica Strike Quadrante -> Aggiorna tutti (LOGICA CORRETTA)
+            strikeQuadranteInput.addEventListener('input', function() {
+                // Pulisce l'input, permettendo solo lettere N, S, E, W e numeri
+                this.value = this.value.toUpperCase().replace(/[^NSEW0-9]/g, '');
+                
+                if (validateDirectionQuadrante(this.value, 'strikeQuadranteError', true)) {
+                    updateAllFromStrikeQuadrante(this.value);
+                } else {
+                    // Se l'input non è valido, mostra l'errore e ridisegna con i valori attuali validi
+                    drawCompass();
+                }
+            });
+            strikeQuadranteInput.addEventListener('change', function() {
+                if (validateDirectionQuadrante(this.value, 'strikeQuadranteError', false)) {
+                    updateAllFromStrikeQuadrante(this.value);
+                }
+            });
 
-            inclinazioneInput2.addEventListener('input', () => syncInclinazione('inclinazioneRiga2'));
-            inclinazioneInput2.addEventListener('change', () => syncInclinazione('inclinazioneRiga2'));
+
+            // 4. Modifica dell'Inclinazione (Dip Angle) - Sincronizzazione e ridisegno
+            inclInputs.forEach(input => {
+                input.addEventListener('input', () => syncInclinazione(input.id));
+                input.addEventListener('change', () => syncInclinazione(input.id));
+            });
         }
 
         // Avvia il disegno e configura gli eventi
         window.onload = function() {
             // Inizializzazione per coerenza
-            document.getElementById('strike').value = '090'; 
-            updateDipDirection(90); // Imposta Dip Direction a 180 inizialmente
+            const initialStrike3Cifre = '090';
+            document.getElementById('strike3Cifre').value = initialStrike3Cifre; 
+            
+            // Imposta Dip Direction (180) e Strike Quadrante (N90E) inizialmente
+            updateAllFromStrike3Cifre(parseInt(initialStrike3Cifre, 10));
+            
             setupEventListeners();
         };
     </script>
 
 </body>
 </html>
-
