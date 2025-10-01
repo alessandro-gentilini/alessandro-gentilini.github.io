@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bussola Cartografica Interattiva</title>
+    <title>Bussola Geologica Interattiva</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -11,7 +11,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
         }
-        /* Stile per il Canvas, centrato e con ombra */
         #compassCanvas {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             background-color: #ffffff;
@@ -21,35 +20,48 @@
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
 
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Cerchio della Bussola</h1>
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Misure Geologiche Interattive</h1>
         
         <!-- CAMPI DI INPUT PER MISURE GEOLOGICHE -->
-        <div class="mb-8 flex flex-col md:flex-row justify-center gap-6">
-            <!-- Direzione (Azimuth) -->
-            <div class="flex flex-col items-start w-full md:w-auto">
-                <label for="direzione" class="text-sm font-medium text-gray-700 mb-1">Direzione (Azimuth) [°]</label>
-                <!-- Modificato in type="text" per forzare il formato a 3 cifre, inclusi zeri iniziali -->
-                <input type="text" id="direzione" value="000" maxlength="3"
-                       class="w-full md:w-40 p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
-                <!-- Div statica per il messaggio di errore (visibilità: hidden se ok) -->
-                <div id="direzioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+        <div class="mb-8 flex flex-col md:flex-row justify-center gap-4">
+            
+            <!-- Strike (Direzione del Piano) -->
+            <div class="flex flex-col items-start w-full md:w-40">
+                <label for="strike" class="text-sm font-medium text-gray-700 mb-1">Strike (Direzione Piano) [°]</label>
+                <input type="text" id="strike" value="090" maxlength="3"
+                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-yellow-50 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
+                <div id="strikeError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
                     Formato: 3 cifre (es. 090)
                 </div>
             </div>
 
-            <!-- Inclinazione (Dip) -->
-            <div class="flex flex-col items-start w-full md:w-auto">
-                <label for="inclinazione" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Dip) [°]</label>
-                <input type="number" id="inclinazione" value="0" min="-90" max="90" step="1" 
-                       class="w-full md:w-40 p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+            <!-- Dip Direction (Direzione di Immersione) -->
+            <div class="flex flex-col items-start w-full md:w-40">
+                <label for="dipDirezione" class="text-sm font-medium text-gray-700 mb-1">Dip Direction (Freccia Rossa) [°]</label>
+                <input type="text" id="dipDirezione" value="180" maxlength="3"
+                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-red-50 focus:ring-red-500 focus:border-red-500 transition-colors">
+                <div id="dipDirezioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                    Formato: 3 cifre (es. 180)
+                </div>
+            </div>
+
+            <!-- Inclinazione (Dip Angle) -->
+            <div class="flex flex-col items-start w-full md:w-40">
+                <label for="inclinazione" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Dip Angle) [°]</label>
+                <input type="number" id="inclinazione" value="45" min="0" max="90" step="1" 
+                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
             </div>
         </div>
 
         <!-- Canvas per il disegno -->
         <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
 
-        <p class="mt-6 text-gray-600">Punti cardinali (solo lettera) e tacche intermedie (con gradi) disegnati sul cerchio. La freccia rossa indica il **Dip Pole** (Azimuth + 90°).</p>
+        <p class="mt-6 text-gray-600">
+            La linea gialla è lo **Strike** e la freccia rossa è il **Dip Direction**.
+            <br>
+            Questi due valori sono automaticamente collegati da una relazione di $90^\circ$.
+        </p>
     </div>
 
     <script>
@@ -72,12 +84,18 @@
             ctx.restore();
         }
 
-        // Funzione per validare il campo Direzione (DEVE essere esattamente 3 cifre)
-        function validateDirezione(value, updateUI = true) {
-            const errorDiv = document.getElementById('direzioneError');
-            // Regex: deve iniziare (^) e finire ($) con esattamente {3} cifre (\d)
+        /**
+         * Funzione di validazione generica per i campi direzione (3 cifre, 000-359).
+         * @param {string} value - Il valore da validare.
+         * @param {string} errorId - L'ID del div di errore.
+         * @param {boolean} updateUI - Se mostrare o nascondere il messaggio di errore.
+         * @returns {boolean} True se valido.
+         */
+        function validateDirection(value, errorId, updateUI = true) {
+            const errorDiv = document.getElementById(errorId);
             const regex = /^\d{3}$/; 
-            const isValid = regex.test(value);
+            const numValue = parseInt(value, 10);
+            const isValid = regex.test(value) && numValue >= 0 && numValue <= 359;
 
             if (updateUI) {
                 if (isValid) {
@@ -85,53 +103,78 @@
                     errorDiv.textContent = '';
                 } else {
                     errorDiv.style.visibility = 'visible';
-                    errorDiv.textContent = 'Formato: 3 cifre (es. 090)';
+                    errorDiv.textContent = 'Formato: 3 cifre (000-359)';
                 }
             }
 
             return isValid;
         }
 
+        /**
+         * Logica per aggiornare il Dip Direction quando lo Strike cambia.
+         * @param {number} strikeValue - Valore dello Strike in gradi (0-359).
+         */
+        function updateDipDirection(strikeValue) {
+            // Dip Direction = Strike + 90 gradi (convenzione della mano destra)
+            let dipDirection = (strikeValue + 90) % 360;
+            
+            // Aggiorna il campo Dip Direction formattandolo a 3 cifre con zeri iniziali
+            const dipDirezioneInput = document.getElementById('dipDirezione');
+            dipDirezioneInput.value = dipDirection.toString().padStart(3, '0');
+            
+            drawCompass();
+        }
+
+        /**
+         * Logica per aggiornare lo Strike quando il Dip Direction cambia.
+         * @param {number} dipDirectionValue - Valore del Dip Direction in gradi (0-359).
+         */
+        function updateStrike(dipDirectionValue) {
+            // Strike = Dip Direction - 90 gradi. Aggiungiamo 360 per gestire i valori negativi.
+            let strike = (dipDirectionValue - 90 + 360) % 360;
+            
+            // Aggiorna il campo Strike formattandolo a 3 cifre con zeri iniziali
+            const strikeInput = document.getElementById('strike');
+            strikeInput.value = strike.toString().padStart(3, '0');
+
+            drawCompass();
+        }
+
         function drawCompass() {
             const canvas = document.getElementById('compassCanvas');
-            if (!canvas.getContext) {
-                console.error("Browser non supporta il Canvas.");
-                return;
-            }
+            if (!canvas.getContext) return;
             const ctx = canvas.getContext('2d');
 
-            // --- LETTURA DEI VALORI DI INPUT ---
-            const direzioneInput = document.getElementById('direzione');
-            const isValidDirezione = validateDirezione(direzioneInput.value, false);
+            // --- LETTURA E VALIDAZIONE DEI VALORI ---
+            const strikeInput = document.getElementById('strike');
+            const dipDirezioneInput = document.getElementById('dipDirezione');
+            const inclinazioneInput = document.getElementById('inclinazione');
 
-            let direzione = 0;
-            if (isValidDirezione) {
-                 // Converte la stringa a 3 cifre in numero
-                 direzione = parseInt(direzioneInput.value, 10);
-            } else {
-                 // Se l'input non è valido, usiamo 0
-                 direzione = 0;
+            // Valori numerici (usiamo 0 se l'input non è valido)
+            let strike = 0;
+            if (validateDirection(strikeInput.value, 'strikeError', false)) {
+                 strike = parseInt(strikeInput.value, 10);
             }
             
-            // L'inclinazione (Dip) non è usata per il disegno del punto in questo momento, ma la manteniamo
-            const inclinazione = parseFloat(document.getElementById('inclinazione').value) || 0;
+            let dipDirection = 0;
+            if (validateDirection(dipDirezioneInput.value, 'dipDirezioneError', false)) {
+                 dipDirection = parseInt(dipDirezioneInput.value, 10);
+            }
+
+            const inclinazione = parseFloat(inclinazioneInput.value) || 0;
 
             // Impostazioni del canvas
             const width = canvas.width;
             const height = canvas.height;
             const center = { x: width / 2, y: height / 2 };
-            // Raggio del cerchio esterno.
             const radius = (width / 2) * 0.75; 
             const textClearance = (width / 2) * 0.05;
             const maxTextRadius = (width / 2) - textClearance; 
             
-            // Lunghezza desiderata della linea di direzione (60% del DIAMETRO per fare spazio alla freccia)
             const diameter = radius * 2;
             const lineLength = diameter * 0.60; 
-            
-            // Distanza dal centro (metà della lunghezza totale)
             const distanceToCenter = lineLength / 2;
-            const arrowHeadSize = 10; // Dimensione della punta della freccia
+            const arrowHeadSize = 10; 
 
             // Pulisce il canvas
             ctx.clearRect(0, 0, width, height);
@@ -139,7 +182,7 @@
             // --- 1. Disegna la circonferenza principale ---
             ctx.beginPath();
             ctx.arc(center.x, center.y, radius, 0, 2 * Math.PI);
-            ctx.strokeStyle = '#4b5563'; // Colore grigio scuro
+            ctx.strokeStyle = '#4b5563'; 
             ctx.lineWidth = 3;
             ctx.stroke();
             ctx.closePath();
@@ -192,103 +235,125 @@
                 }
             });
 
-            // --- 3. Disegna gli indicatori Azimuth e Dip Pole ---
-            if (isValidDirezione) {
+            // --- 3. Disegna STRIKE e DIP DIRECTION ---
+            if (validateDirection(strikeInput.value, 'strikeError', false)) {
                 
-                // --- Azimuth (Linea e Marcatore grigio) ---
+                // --- A. Strike (Linea Gialla) ---
+                // Angolo Strike in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
+                const strikeAngleRad = toRadians(strike - 90); 
                 
-                // Angolo Azimuth in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
-                const directionAngleRad = toRadians(direzione - 90); 
+                // Punto 1: Inizio della linea Strike (opposto)
+                const end1X = center.x + (-distanceToCenter) * Math.cos(strikeAngleRad);
+                const end1Y = center.y + (-distanceToCenter) * Math.sin(strikeAngleRad);
                 
-                // Punto 1: Inizio della linea Azimuth (opposto alla direzione)
-                const end1X = center.x + (-distanceToCenter) * Math.cos(directionAngleRad);
-                const end1Y = center.y + (-distanceToCenter) * Math.sin(directionAngleRad);
-                
-                // Punto 2: Fine della linea Azimuth (PUNTA AZIMUTH)
-                const end2X = center.x + distanceToCenter * Math.cos(directionAngleRad);
-                const end2Y = center.y + distanceToCenter * Math.sin(directionAngleRad);
+                // Punto 2: Fine della linea Strike (verso lo Strike)
+                const end2X = center.x + distanceToCenter * Math.cos(strikeAngleRad);
+                const end2Y = center.y + distanceToCenter * Math.sin(strikeAngleRad);
 
-                // Disegna il segmento Azimuth (Rosso)
+                // Disegna il segmento Strike (Giallo)
                 ctx.beginPath();
                 ctx.moveTo(end1X, end1Y); 
                 ctx.lineTo(end2X, end2Y); 
-                ctx.strokeStyle = '#dc2626'; 
+                ctx.strokeStyle = '#f59e0b'; // Giallo/Arancio
                 ctx.lineWidth = 4;
                 ctx.stroke();
                 ctx.closePath();
                 
-                // Disegna il cerchietto grigio chiaro sulla punta Azimuth (end2)
+                // Disegna il cerchietto grigio chiaro sulla punta Strike (end2)
                 ctx.beginPath();
                 ctx.arc(end2X, end2Y, 5, 0, 2 * Math.PI); 
                 ctx.fillStyle = '#9ca3af'; 
                 ctx.fill();
                 ctx.closePath();
                 
-                // --- Dip Pole (Freccia Rossa) ---
+                // --- B. Dip Direction (Freccia Rossa) ---
+                // Angolo Dip Direction in radianti
+                const dipAngleRad = toRadians(dipDirection - 90); 
                 
-                // Calcoliamo il nuovo angolo ruotato di 90 gradi in senso orario
-                const rotatedAngleRad = directionAngleRad + toRadians(90); 
-                
-                // Calcoliamo le coordinate del punto Dip Pole (stessa distanza dal centro dell'Azimuth)
-                const dipPoleX = center.x + distanceToCenter * Math.cos(rotatedAngleRad);
-                const dipPoleY = center.y + distanceToCenter * Math.sin(rotatedAngleRad);
+                // Calcoliamo le coordinate del punto Dip Direction (punta della freccia)
+                const dipDirectionX = center.x + distanceToCenter * Math.cos(dipAngleRad);
+                const dipDirectionY = center.y + distanceToCenter * Math.sin(dipAngleRad);
 
-                // A. Disegna la freccia dal centro al Dip Pole
+                // B1. Disegna la freccia dal centro al Dip Direction
                 ctx.beginPath();
                 ctx.moveTo(center.x, center.y); 
-                ctx.lineTo(dipPoleX, dipPoleY); 
-                ctx.strokeStyle = '#ef4444'; // Rosso più chiaro per la freccia
+                ctx.lineTo(dipDirectionX, dipDirectionY); 
+                ctx.strokeStyle = '#ef4444'; // Rosso vivo per la freccia
                 ctx.lineWidth = 3;
                 ctx.stroke();
                 ctx.closePath();
                 
-                // B. Disegna la punta della freccia (dipoleX, dipPoleY è la punta)
+                // B2. Disegna la punta della freccia (Dip Direction Marker)
                 ctx.fillStyle = '#ef4444';
-                // L'angolo per la punta della freccia è lo stesso del vettore (ruotato di 90)
-                drawArrowhead(ctx, dipPoleX, dipPoleY, rotatedAngleRad, arrowHeadSize); 
+                drawArrowhead(ctx, dipDirectionX, dipDirectionY, dipAngleRad, arrowHeadSize); 
                 
-                // *** PUNTO ROSSO RIMOSSO QUI ***
+                // --- C. Aggiunge l'angolo di Inclinazione (Dip Angle) accanto alla freccia Dip Direction ---
+                // Calcola la posizione del testo appena fuori dal cerchio
+                const textDipRadius = distanceToCenter + 20; 
+                const textX = center.x + textDipRadius * Math.cos(dipAngleRad);
+                const textY = center.y + textDipRadius * Math.sin(dipAngleRad);
+
+                // Disegna il testo dell'inclinazione
+                ctx.fillStyle = '#1e40af'; // Blu scuro
+                ctx.font = '16px Inter';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${inclinazione}°`, textX, textY);
             }
         }
 
         // --- GESTIONE DEGLI INPUT ---
         function setupEventListeners() {
-            const direzioneInput = document.getElementById('direzione');
+            const strikeInput = document.getElementById('strike');
+            const dipDirezioneInput = document.getElementById('dipDirezione');
             const inclinazioneInput = document.getElementById('inclinazione');
 
-            // 1. Validazione Direzione in tempo reale
-            direzioneInput.addEventListener('input', function() {
-                // Permette solo cifre e tronca a 3 caratteri
+            // 1. Modifica dello Strike -> Aggiorna Dip Direction
+            strikeInput.addEventListener('input', function() {
                 let value = this.value.replace(/\D/g, ''); 
                 this.value = value.substring(0, 3); 
                 
-                const isValid = validateDirezione(this.value);
-                
-                // Ridisegna solo se l'input è valido 
-                if (isValid) {
-                    drawCompass();
+                if (validateDirection(this.value, 'strikeError', true)) {
+                    updateDipDirection(parseInt(this.value, 10));
                 }
             });
-            
-            direzioneInput.addEventListener('change', function() {
-                // Forziamo la validazione finale al cambio 
-                validateDirezione(this.value);
-                drawCompass();
+
+            strikeInput.addEventListener('change', function() {
+                if (validateDirection(this.value, 'strikeError', true)) {
+                    updateDipDirection(parseInt(this.value, 10));
+                }
             });
 
-            // 2. Event listener per Inclinazione
+            // 2. Modifica del Dip Direction -> Aggiorna Strike
+            dipDirezioneInput.addEventListener('input', function() {
+                let value = this.value.replace(/\D/g, ''); 
+                this.value = value.substring(0, 3); 
+                
+                if (validateDirection(this.value, 'dipDirezioneError', true)) {
+                    updateStrike(parseInt(this.value, 10));
+                }
+            });
+
+            dipDirezioneInput.addEventListener('change', function() {
+                 if (validateDirection(this.value, 'dipDirezioneError', true)) {
+                    updateStrike(parseInt(this.value, 10));
+                }
+            });
+
+            // 3. Modifica dell'Inclinazione (Dip Angle) -> Solo ridisegna (è indipendente)
             inclinazioneInput.addEventListener('input', drawCompass);
             inclinazioneInput.addEventListener('change', drawCompass);
         }
 
-        // Avvia il disegno e configura gli eventi quando la pagina è completamente caricata
+        // Avvia il disegno e configura gli eventi
         window.onload = function() {
-            // Imposta il valore iniziale "000" per rispettare il formato
-            document.getElementById('direzione').value = '000'; 
-            drawCompass();
+            // Inizializzazione per coerenza
+            document.getElementById('strike').value = '090'; 
+            updateDipDirection(90); // Imposta Dip Direction a 180 inizialmente
             setupEventListeners();
         };
     </script>
 
 </body>
 </html>
+
