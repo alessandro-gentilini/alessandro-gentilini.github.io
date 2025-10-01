@@ -49,13 +49,27 @@
         <!-- Canvas per il disegno -->
         <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
 
-        <p class="mt-6 text-gray-600">Punti cardinali (solo lettera) e tacche intermedie (con gradi) disegnati sul cerchio.</p>
+        <p class="mt-6 text-gray-600">Punti cardinali (solo lettera) e tacche intermedie (con gradi) disegnati sul cerchio. La freccia rossa indica il **Dip Pole** (Azimuth + 90°).</p>
     </div>
 
     <script>
         // Funzione per convertire i gradi in radianti
         function toRadians(degrees) {
             return degrees * (Math.PI / 180);
+        }
+        
+        // Funzione per disegnare una punta di freccia
+        function drawArrowhead(ctx, x, y, angle, size) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(angle);
+            ctx.beginPath();
+            ctx.moveTo(0, 0); // Punta della freccia
+            ctx.lineTo(-size, size / 2);
+            ctx.lineTo(-size, -size / 2);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
         }
 
         // Funzione per validare il campo Direzione (DEVE essere esattamente 3 cifre)
@@ -99,6 +113,7 @@
                  direzione = 0;
             }
             
+            // L'inclinazione (Dip) non è usata per il disegno del punto in questo momento, ma la manteniamo
             const inclinazione = parseFloat(document.getElementById('inclinazione').value) || 0;
 
             // Impostazioni del canvas
@@ -110,12 +125,13 @@
             const textClearance = (width / 2) * 0.05;
             const maxTextRadius = (width / 2) - textClearance; 
             
-            // Lunghezza desiderata della linea di direzione (75% del DIAMETRO)
+            // Lunghezza desiderata della linea di direzione (60% del DIAMETRO per fare spazio alla freccia)
             const diameter = radius * 2;
-            const lineLength = diameter * 0.75; // Linea lunga 75% di 2 * Raggio
+            const lineLength = diameter * 0.60; 
             
             // Distanza dal centro (metà della lunghezza totale)
             const distanceToCenter = lineLength / 2;
+            const arrowHeadSize = 10; // Dimensione della punta della freccia
 
             // Pulisce il canvas
             ctx.clearRect(0, 0, width, height);
@@ -128,7 +144,7 @@
             ctx.stroke();
             ctx.closePath();
 
-            // --- 2. Definisce e disegna le tacche e le etichette (omesso per brevità, stessa logica precedente) ---
+            // --- 2. Definisce e disegna le tacche e le etichette (Punti Cardinali) ---
             const markers = [
                 { degree: 0, textLabel: 'N', color: '#ef4444', length: 15, size: '22px' },
                 { degree: 90, textLabel: 'E', color: '#2563eb', length: 15, size: '22px' },
@@ -176,30 +192,62 @@
                 }
             });
 
-            // --- 4. Disegna l'indicatore della direzione (Linea Rossa) ---
+            // --- 3. Disegna gli indicatori Azimuth e Dip Pole ---
             if (isValidDirezione) {
                 
-                // Angolo in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
+                // --- Azimuth (Linea e Marcatore grigio) ---
+                
+                // Angolo Azimuth in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
                 const directionAngleRad = toRadians(direzione - 90); 
                 
-                // Punto 1: Inizio della linea (spostato dal centro nella direzione opposta)
-                // Usiamo -distanceToCenter per andare indietro rispetto alla direzione
+                // Punto 1: Inizio della linea Azimuth (opposto alla direzione)
                 const end1X = center.x + (-distanceToCenter) * Math.cos(directionAngleRad);
                 const end1Y = center.y + (-distanceToCenter) * Math.sin(directionAngleRad);
                 
-                // Punto 2: Fine della linea (spostato dal centro nella direzione indicata)
+                // Punto 2: Fine della linea Azimuth (PUNTA AZIMUTH)
                 const end2X = center.x + distanceToCenter * Math.cos(directionAngleRad);
                 const end2Y = center.y + distanceToCenter * Math.sin(directionAngleRad);
 
+                // Disegna il segmento Azimuth (Rosso)
                 ctx.beginPath();
                 ctx.moveTo(end1X, end1Y); 
                 ctx.lineTo(end2X, end2Y); 
-                ctx.strokeStyle = '#dc2626'; // Rosso vivo
+                ctx.strokeStyle = '#dc2626'; 
                 ctx.lineWidth = 4;
                 ctx.stroke();
                 ctx.closePath();
                 
-                // Il punto centrale è stato rimosso come richiesto.
+                // Disegna il cerchietto grigio chiaro sulla punta Azimuth (end2)
+                ctx.beginPath();
+                ctx.arc(end2X, end2Y, 5, 0, 2 * Math.PI); 
+                ctx.fillStyle = '#9ca3af'; 
+                ctx.fill();
+                ctx.closePath();
+                
+                // --- Dip Pole (Freccia Rossa) ---
+                
+                // Calcoliamo il nuovo angolo ruotato di 90 gradi in senso orario
+                const rotatedAngleRad = directionAngleRad + toRadians(90); 
+                
+                // Calcoliamo le coordinate del punto Dip Pole (stessa distanza dal centro dell'Azimuth)
+                const dipPoleX = center.x + distanceToCenter * Math.cos(rotatedAngleRad);
+                const dipPoleY = center.y + distanceToCenter * Math.sin(rotatedAngleRad);
+
+                // A. Disegna la freccia dal centro al Dip Pole
+                ctx.beginPath();
+                ctx.moveTo(center.x, center.y); 
+                ctx.lineTo(dipPoleX, dipPoleY); 
+                ctx.strokeStyle = '#ef4444'; // Rosso più chiaro per la freccia
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                ctx.closePath();
+                
+                // B. Disegna la punta della freccia (dipoleX, dipPoleY è la punta)
+                ctx.fillStyle = '#ef4444';
+                // L'angolo per la punta della freccia è lo stesso del vettore (ruotato di 90)
+                drawArrowhead(ctx, dipPoleX, dipPoleY, rotatedAngleRad, arrowHeadSize); 
+                
+                // *** PUNTO ROSSO RIMOSSO QUI ***
             }
         }
 
