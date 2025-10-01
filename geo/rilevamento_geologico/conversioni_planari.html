@@ -15,7 +15,6 @@
         #compassCanvas {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             background-color: #ffffff;
-            /* Ho rimosso il border-radius qui, ma il div circostante lo manterrà */
             border: 1px solid #e5e7eb;
         }
     </style>
@@ -25,8 +24,29 @@
     <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg text-center">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Cerchio della Bussola</h1>
         
-        <!-- Canvas per il disegno (ho aumentato leggermente la dimensione del canvas
-             e del div per garantire spazio, anche se il raggio è la chiave) -->
+        <!-- CAMPI DI INPUT PER MISURE GEOLOGICHE -->
+        <div class="mb-8 flex flex-col md:flex-row justify-center gap-6">
+            <!-- Direzione (Azimuth) -->
+            <div class="flex flex-col items-start w-full md:w-auto">
+                <label for="direzione" class="text-sm font-medium text-gray-700 mb-1">Direzione (Azimuth) [°]</label>
+                <!-- Modificato in type="text" per forzare il formato a 3 cifre, inclusi zeri iniziali -->
+                <input type="text" id="direzione" value="000" maxlength="3"
+                       class="w-full md:w-40 p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                <!-- Div statica per il messaggio di errore (visibilità: hidden se ok) -->
+                <div id="direzioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                    Formato: 3 cifre (es. 090)
+                </div>
+            </div>
+
+            <!-- Inclinazione (Dip) -->
+            <div class="flex flex-col items-start w-full md:w-auto">
+                <label for="inclinazione" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Dip) [°]</label>
+                <input type="number" id="inclinazione" value="0" min="-90" max="90" step="1" 
+                       class="w-full md:w-40 p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+            </div>
+        </div>
+
+        <!-- Canvas per il disegno -->
         <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
 
         <p class="mt-6 text-gray-600">Punti cardinali (solo lettera) e tacche intermedie (con gradi) disegnati sul cerchio.</p>
@@ -38,6 +58,26 @@
             return degrees * (Math.PI / 180);
         }
 
+        // Funzione per validare il campo Direzione (DEVE essere esattamente 3 cifre)
+        function validateDirezione(value, updateUI = true) {
+            const errorDiv = document.getElementById('direzioneError');
+            // Regex: deve iniziare (^) e finire ($) con esattamente {3} cifre (\d)
+            const regex = /^\d{3}$/; 
+            const isValid = regex.test(value);
+
+            if (updateUI) {
+                if (isValid) {
+                    errorDiv.style.visibility = 'hidden';
+                    errorDiv.textContent = '';
+                } else {
+                    errorDiv.style.visibility = 'visible';
+                    errorDiv.textContent = 'Formato: 3 cifre (es. 090)';
+                }
+            }
+
+            return isValid;
+        }
+
         function drawCompass() {
             const canvas = document.getElementById('compassCanvas');
             if (!canvas.getContext) {
@@ -46,17 +86,36 @@
             }
             const ctx = canvas.getContext('2d');
 
+            // --- LETTURA DEI VALORI DI INPUT ---
+            const direzioneInput = document.getElementById('direzione');
+            const isValidDirezione = validateDirezione(direzioneInput.value, false);
+
+            let direzione = 0;
+            if (isValidDirezione) {
+                 // Converte la stringa a 3 cifre in numero
+                 direzione = parseInt(direzioneInput.value, 10);
+            } else {
+                 // Se l'input non è valido, usiamo 0
+                 direzione = 0;
+            }
+            
+            const inclinazione = parseFloat(document.getElementById('inclinazione').value) || 0;
+
             // Impostazioni del canvas
             const width = canvas.width;
             const height = canvas.height;
             const center = { x: width / 2, y: height / 2 };
-            
-            // Raggio del cerchio (lo mantengo a 0.75 del semi-width per lasciare spazio al testo)
+            // Raggio del cerchio esterno.
             const radius = (width / 2) * 0.75; 
-            const textClearance = (width / 2) * 0.05; // Spazio di sicurezza tra i numeri e il bordo del canvas
-            
-            // Definisco un raggio esterno massimo per il testo, ben all'interno del canvas
+            const textClearance = (width / 2) * 0.05;
             const maxTextRadius = (width / 2) - textClearance; 
+            
+            // Lunghezza desiderata della linea di direzione (75% del DIAMETRO)
+            const diameter = radius * 2;
+            const lineLength = diameter * 0.75; // Linea lunga 75% di 2 * Raggio
+            
+            // Distanza dal centro (metà della lunghezza totale)
+            const distanceToCenter = lineLength / 2;
 
             // Pulisce il canvas
             ctx.clearRect(0, 0, width, height);
@@ -69,34 +128,24 @@
             ctx.stroke();
             ctx.closePath();
 
-            // --- 2. Definisce le tacche da disegnare ---
-            // Gradi (orientamento standard: 0° Nord, crescente in senso orario)
+            // --- 2. Definisce e disegna le tacche e le etichette (omesso per brevità, stessa logica precedente) ---
             const markers = [
-                // Punti Cardinali (SOLO LETTERA)
                 { degree: 0, textLabel: 'N', color: '#ef4444', length: 15, size: '22px' },
                 { degree: 90, textLabel: 'E', color: '#2563eb', length: 15, size: '22px' },
                 { degree: 180, textLabel: 'S', color: '#22c55e', length: 15, size: '22px' },
                 { degree: 270, textLabel: 'W', color: '#f59e0b', length: 15, size: '22px' },
-                
-                // Tacche intermedie (CON GRADI)
                 { degree: 45, textLabel: '45°', color: '#9ca3af', length: 8, size: '18px' },
                 { degree: 135, textLabel: '135°', color: '#9ca3af', length: 8, size: '18px' },
                 { degree: 225, textLabel: '225°', color: '#9ca3af', length: 8, size: '18px' },
                 { degree: 315, textLabel: '315°', color: '#9ca3af', length: 8, size: '18px' },
             ];
 
-            // --- 3. Disegna le tacche e le etichette ---
             markers.forEach(marker => {
-                // Calcolo dell'angolo in radianti (0 a Est, cresce in senso antiorario)
-                // Usiamo (degree - 90) per allineare 0° al Nord (Y negativa) e crescere in senso orario.
                 const adjustedDegrees = marker.degree - 90; 
                 const angleRad = toRadians(adjustedDegrees);
                 
-                // Calcola le coordinate per l'inizio (sul cerchio)
                 const startX = center.x + radius * Math.cos(angleRad);
                 const startY = center.y + radius * Math.sin(angleRad);
-
-                // Calcola le coordinate per la fine della tacca (all'interno del cerchio)
                 const endRadius = radius - marker.length;
                 const endX = center.x + endRadius * Math.cos(angleRad);
                 const endY = center.y + endRadius * Math.sin(angleRad);
@@ -112,8 +161,6 @@
 
                 // Disegna l'etichetta 
                 if (marker.textLabel) {
-                    // Imposto la distanza per le etichette per assicurare che non vengano tagliate.
-                    // Cerco il raggio più grande possibile che sia <= maxTextRadius
                     const desiredRadius = radius + 30; 
                     const textRadius = Math.min(desiredRadius, maxTextRadius);
 
@@ -128,12 +175,72 @@
                     ctx.fillText(marker.textLabel, textX, textY);
                 }
             });
+
+            // --- 4. Disegna l'indicatore della direzione (Linea Rossa) ---
+            if (isValidDirezione) {
+                
+                // Angolo in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
+                const directionAngleRad = toRadians(direzione - 90); 
+                
+                // Punto 1: Inizio della linea (spostato dal centro nella direzione opposta)
+                // Usiamo -distanceToCenter per andare indietro rispetto alla direzione
+                const end1X = center.x + (-distanceToCenter) * Math.cos(directionAngleRad);
+                const end1Y = center.y + (-distanceToCenter) * Math.sin(directionAngleRad);
+                
+                // Punto 2: Fine della linea (spostato dal centro nella direzione indicata)
+                const end2X = center.x + distanceToCenter * Math.cos(directionAngleRad);
+                const end2Y = center.y + distanceToCenter * Math.sin(directionAngleRad);
+
+                ctx.beginPath();
+                ctx.moveTo(end1X, end1Y); 
+                ctx.lineTo(end2X, end2Y); 
+                ctx.strokeStyle = '#dc2626'; // Rosso vivo
+                ctx.lineWidth = 4;
+                ctx.stroke();
+                ctx.closePath();
+                
+                // Il punto centrale è stato rimosso come richiesto.
+            }
         }
 
-        // Avvia il disegno quando la pagina è completamente caricata
-        window.onload = drawCompass;
+        // --- GESTIONE DEGLI INPUT ---
+        function setupEventListeners() {
+            const direzioneInput = document.getElementById('direzione');
+            const inclinazioneInput = document.getElementById('inclinazione');
+
+            // 1. Validazione Direzione in tempo reale
+            direzioneInput.addEventListener('input', function() {
+                // Permette solo cifre e tronca a 3 caratteri
+                let value = this.value.replace(/\D/g, ''); 
+                this.value = value.substring(0, 3); 
+                
+                const isValid = validateDirezione(this.value);
+                
+                // Ridisegna solo se l'input è valido 
+                if (isValid) {
+                    drawCompass();
+                }
+            });
+            
+            direzioneInput.addEventListener('change', function() {
+                // Forziamo la validazione finale al cambio 
+                validateDirezione(this.value);
+                drawCompass();
+            });
+
+            // 2. Event listener per Inclinazione
+            inclinazioneInput.addEventListener('input', drawCompass);
+            inclinazioneInput.addEventListener('change', drawCompass);
+        }
+
+        // Avvia il disegno e configura gli eventi quando la pagina è completamente caricata
+        window.onload = function() {
+            // Imposta il valore iniziale "000" per rispettare il formato
+            document.getElementById('direzione').value = '000'; 
+            drawCompass();
+            setupEventListeners();
+        };
     </script>
 
 </body>
 </html>
-
