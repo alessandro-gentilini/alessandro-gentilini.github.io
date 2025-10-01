@@ -20,47 +20,69 @@
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
 
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl text-center">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-xl text-center">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Misure Geologiche Interattive</h1>
         
-        <!-- CAMPI DI INPUT PER MISURE GEOLOGICHE -->
-        <div class="mb-8 flex flex-col md:flex-row justify-center gap-4">
+        <!-- LAYOUT CAMPI DI INPUT (2 righe) -->
+        <div class="mb-8 w-full max-w-md mx-auto">
             
-            <!-- Strike (Direzione del Piano) -->
-            <div class="flex flex-col items-start w-full md:w-40">
-                <label for="strike" class="text-sm font-medium text-gray-700 mb-1">Strike (Direzione Piano) [°]</label>
-                <input type="text" id="strike" value="090" maxlength="3"
-                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-yellow-50 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                <div id="strikeError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
-                    Formato: 3 cifre (es. 090)
+            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo Strike / Dip</p>
+            
+            <!-- RIGA 1: Strike e Inclinazione -->
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                
+                <!-- Strike (Direzione del Piano) -->
+                <div class="flex flex-col items-start">
+                    <label for="strike" class="text-sm font-medium text-gray-700 mb-1">Strike (Piano) [°]</label>
+                    <input type="text" id="strike" value="090" maxlength="3"
+                           class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-yellow-50 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
+                    <div id="strikeError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                        Formato: 3 cifre (000-359)
+                    </div>
+                </div>
+
+                <!-- Inclinazione (Dip Angle) - RIGA 1 -->
+                <div class="flex flex-col items-start">
+                    <label for="inclinazioneRiga1" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Angolo) [°]</label>
+                    <input type="number" id="inclinazioneRiga1" value="45" min="0" max="90" step="1" 
+                           class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                    <div class="mt-1 h-5"></div>
                 </div>
             </div>
 
-            <!-- Dip Direction (Direzione di Immersione) -->
-            <div class="flex flex-col items-start w-full md:w-40">
-                <label for="dipDirezione" class="text-sm font-medium text-gray-700 mb-1">Dip Direction (Freccia Rossa) [°]</label>
-                <input type="text" id="dipDirezione" value="180" maxlength="3"
-                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-red-50 focus:ring-red-500 focus:border-red-500 transition-colors">
-                <div id="dipDirezioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
-                    Formato: 3 cifre (es. 180)
-                </div>
-            </div>
+            <!-- Divisore -->
+            <hr class="border-gray-300 my-4">
 
-            <!-- Inclinazione (Dip Angle) -->
-            <div class="flex flex-col items-start w-full md:w-40">
-                <label for="inclinazione" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Dip Angle) [°]</label>
-                <input type="number" id="inclinazione" value="45" min="0" max="90" step="1" 
-                       class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+            <p class="text-sm font-semibold text-gray-500 mb-2">Metodo Dip Direction / Dip Angle</p>
+
+            <!-- RIGA 2: Dip Direction e Inclinazione -->
+            <div class="grid grid-cols-2 gap-4">
+                
+                <!-- Dip Direction (Direzione di Immersione) -->
+                <div class="flex flex-col items-start">
+                    <label for="dipDirezione" class="text-sm font-medium text-gray-700 mb-1">Dip Direction (Freccia) [°]</label>
+                    <input type="text" id="dipDirezione" value="180" maxlength="3"
+                           class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg bg-red-50 focus:ring-red-500 focus:border-red-500 transition-colors">
+                    <div id="dipDirezioneError" class="mt-1 text-sm text-red-600 h-5" style="visibility: hidden;">
+                        Formato: 3 cifre (000-359)
+                    </div>
+                </div>
+
+                <!-- Inclinazione (Dip Angle) - RIGA 2 (ORA EDITABILE) -->
+                <div class="flex flex-col items-start">
+                    <label for="inclinazioneRiga2" class="text-sm font-medium text-gray-700 mb-1">Inclinazione (Angolo) [°]</label>
+                    <input type="number" id="inclinazioneRiga2" value="45" min="0" max="90" step="1" 
+                           class="w-full p-2 border border-gray-300 rounded-lg text-center font-mono text-lg focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                    <div class="mt-1 h-5"></div>
+                </div>
             </div>
         </div>
 
         <!-- Canvas per il disegno -->
         <canvas id="compassCanvas" width="450" height="450" class="rounded-full mx-auto"></canvas>
 
-        <p class="mt-6 text-gray-600">
-            La linea gialla è lo **Strike** e la freccia rossa è il **Dip Direction**.
-            <br>
-            Questi due valori sono automaticamente collegati da una relazione di $90^\circ$.
+        <p class="mt-6 text-sm text-gray-600">
+            La linea gialla è lo **Strike** e la freccia rossa è il **Dip Direction**. La loro relazione di $90^\circ$ viene gestita automaticamente.
         </p>
     </div>
 
@@ -139,6 +161,27 @@
 
             drawCompass();
         }
+        
+        /**
+         * Sincronizza il valore di Inclinazione tra i due campi e ridisegna.
+         * @param {string} sourceId - ID del campo che ha innescato la modifica.
+         */
+        function syncInclinazione(sourceId) {
+            const incl1 = document.getElementById('inclinazioneRiga1');
+            const incl2 = document.getElementById('inclinazioneRiga2');
+            
+            let value = (sourceId === 'inclinazioneRiga1') ? incl1.value : incl2.value;
+            
+            // Sincronizza l'altro campo
+            if (sourceId === 'inclinazioneRiga1') {
+                incl2.value = value;
+            } else {
+                incl1.value = value;
+            }
+
+            drawCompass();
+        }
+
 
         function drawCompass() {
             const canvas = document.getElementById('compassCanvas');
@@ -148,7 +191,8 @@
             // --- LETTURA E VALIDAZIONE DEI VALORI ---
             const strikeInput = document.getElementById('strike');
             const dipDirezioneInput = document.getElementById('dipDirezione');
-            const inclinazioneInput = document.getElementById('inclinazione');
+            // Leggiamo il valore di Inclinazione dal primo campo (è sincronizzato)
+            const inclinazioneInput = document.getElementById('inclinazioneRiga1'); 
 
             // Valori numerici (usiamo 0 se l'input non è valido)
             let strike = 0;
@@ -236,10 +280,11 @@
             });
 
             // --- 3. Disegna STRIKE e DIP DIRECTION ---
-            if (validateDirection(strikeInput.value, 'strikeError', false)) {
+            // Usiamo la validazione di Dip Direction perché è il valore che determina la freccia
+            if (validateDirection(dipDirezioneInput.value, 'dipDirezioneError', false)) {
                 
                 // --- A. Strike (Linea Gialla) ---
-                // Angolo Strike in radianti (0° N, crescente in senso orario, offset di -90 per coordinate cartesiane)
+                // Angolo Strike in radianti
                 const strikeAngleRad = toRadians(strike - 90); 
                 
                 // Punto 1: Inizio della linea Strike (opposto)
@@ -306,43 +351,36 @@
         function setupEventListeners() {
             const strikeInput = document.getElementById('strike');
             const dipDirezioneInput = document.getElementById('dipDirezione');
-            const inclinazioneInput = document.getElementById('inclinazione');
+            const inclinazioneInput1 = document.getElementById('inclinazioneRiga1');
+            const inclinazioneInput2 = document.getElementById('inclinazioneRiga2');
+
+            // Funzione helper per gestire l'input e la validazione/aggiornamento della Direzione
+            const handleDirectionInput = (inputElement, errorId, updateFunction) => {
+                const listener = function() {
+                    let value = this.value.replace(/\D/g, ''); 
+                    this.value = value.substring(0, 3); 
+                    
+                    if (validateDirection(this.value, errorId, true)) {
+                        updateFunction(parseInt(this.value, 10));
+                    }
+                };
+
+                inputElement.addEventListener('input', listener);
+                inputElement.addEventListener('change', listener);
+            };
 
             // 1. Modifica dello Strike -> Aggiorna Dip Direction
-            strikeInput.addEventListener('input', function() {
-                let value = this.value.replace(/\D/g, ''); 
-                this.value = value.substring(0, 3); 
-                
-                if (validateDirection(this.value, 'strikeError', true)) {
-                    updateDipDirection(parseInt(this.value, 10));
-                }
-            });
-
-            strikeInput.addEventListener('change', function() {
-                if (validateDirection(this.value, 'strikeError', true)) {
-                    updateDipDirection(parseInt(this.value, 10));
-                }
-            });
+            handleDirectionInput(strikeInput, 'strikeError', updateDipDirection);
 
             // 2. Modifica del Dip Direction -> Aggiorna Strike
-            dipDirezioneInput.addEventListener('input', function() {
-                let value = this.value.replace(/\D/g, ''); 
-                this.value = value.substring(0, 3); 
-                
-                if (validateDirection(this.value, 'dipDirezioneError', true)) {
-                    updateStrike(parseInt(this.value, 10));
-                }
-            });
+            handleDirectionInput(dipDirezioneInput, 'dipDirezioneError', updateStrike);
 
-            dipDirezioneInput.addEventListener('change', function() {
-                 if (validateDirection(this.value, 'dipDirezioneError', true)) {
-                    updateStrike(parseInt(this.value, 10));
-                }
-            });
+            // 3. Modifica dell'Inclinazione (Dip Angle) - Sincronizzazione e ridisegno
+            inclinazioneInput1.addEventListener('input', () => syncInclinazione('inclinazioneRiga1'));
+            inclinazioneInput1.addEventListener('change', () => syncInclinazione('inclinazioneRiga1'));
 
-            // 3. Modifica dell'Inclinazione (Dip Angle) -> Solo ridisegna (è indipendente)
-            inclinazioneInput.addEventListener('input', drawCompass);
-            inclinazioneInput.addEventListener('change', drawCompass);
+            inclinazioneInput2.addEventListener('input', () => syncInclinazione('inclinazioneRiga2'));
+            inclinazioneInput2.addEventListener('change', () => syncInclinazione('inclinazioneRiga2'));
         }
 
         // Avvia il disegno e configura gli eventi
