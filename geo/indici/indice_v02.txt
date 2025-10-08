@@ -8,3 +8,48 @@ Secolari, variazioni: 95
 Vento solare: 95
 Solare, vento: 95
 Paleomagnetismo: 95
+Stratigrafia, definizione (Strat&Sedim): 179
+Sedimentologia, definizione (Strat&Sedim): 179
+Strutture sedimentarie, definizione (Strat&Sedim): 179
+Processi (Strat&Sedim): 179
+Ambiente deposizionale (Strat&Sedim): 179
+Processo (Strat&Sedim): 179
+Osservazione, definizione (Strat&Sedim): 180
+Interpretazione, definizione (Strat&Sedim): 180
+Erosione (Strat&Sedim): 182
+Trasporto (Strat&Sedim): 182
+Sedimentazione (Strat&Sedim): 182
+Diagenesi (Strat&Sedim): 182
+Litifcazione (Strat&Sedim): 182
+Compattazione (Strat&Sedim): 182
+Costipamento (Strat&Sedim): 182
+Cementazione (Strat&Sedim): 182
+Ghiaietto (Strat&Sedim): 182
+Limo (Strat&Sedim): 182
+Silt (Strat&Sedim): 182
+Gravel (Strat&Sedim): 182
+Sand (Strat&Sedim): 182
+Sabbia (Strat&Sedim): 182
+Clay (Strat&Sedim): 182
+Argilla (Strat&Sedim): 182
+Mud (Strat&Sedim): 183
+Fango (Strat&Sedim): 183
+Bed load (Strat&Sedim): 183
+Carico di fondo (Strat&Sedim): 183
+Suspended load (Strat&Sedim): 183
+Carico sospeso (Strat&Sedim): 183
+Rotolamento (Strat&Sedim): 183
+Saltazione (Strat&Sedim): 183
+Barre (Strat&Sedim): 183
+Laminare, flusso (Strat&Sedim): 184
+Turbolento, flusso (Strat&Sedim): 184
+Downstream (Strat&Sedim): 184 
+Sotto corrente (Strat&Sedim): 184
+Sopra corrente (Strat&Sedim): 184
+Hjülstrom, diagramma di (Strat&Sedim): 184
+Suspension (Strat&Sedim): 184
+Bedload (Strat&Sedim): 184
+Deposition (Strat&Sedim): 184
+Soglia critica di trascinamento (Strat&Sedim): 184
+Pression critica di trascinamento (Strat&Sedim): 184
+Soglia di rimozione (Strat&Sedim): 184

@@ -45,4 +45,4 @@ Suoli: 82
 Dicchi: 82
 Intrusioni concordanti: 82
 Concordanti, intrusioni: 82
-Inacssanti, rocce: 82
+Incassanti, rocce: 82
