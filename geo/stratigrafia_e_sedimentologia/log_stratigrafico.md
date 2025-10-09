@@ -112,7 +112,20 @@ INSERIRE FIG 5 con i due log ThU e TkU
 ## Strutture sedimentarie
 
 
+# Esempi 
 
+![I segni gialli evidenziano gli strati amalgamati.](grand_canyon-annotata.png)
+
+INSERIRE FIG log grand canyon
+
+![I segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.](due_litologie-annotata.png)
+
+INSERIRE FIG log due litologie
+
+![I segni gialli nella parte bassa della figura evidenziano come la roccia di colore giallo sia più sporgente rispetto a quella grigia; la roccia più sporgente è quella meno erosa e quindi è tipicamente la più grossolana.
+s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s1 < s2 < s3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.](ThU-annotata.png)
+
+![Questo è un esempio dove lo sketch è più indicato rispetto al log stratigrafico. Si osservano strati che vanno assottigliandosi (evidenziati dai segni gialli) e da questo si deduce che non si tratta di una stratificazione piano parallela.](cliff_of_moher-annotata.png)
 
 
 
