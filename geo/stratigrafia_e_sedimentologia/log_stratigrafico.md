@@ -69,7 +69,7 @@ Argilla: trattini alti e bassi
  Ghiaia: pallini e puntini
 </pre>
 
-INSERIRE FIG 1 con i simboli suddetti
+![Simboli per la litologia.](log_fig_1.png)
 
 I tre contatti che conosciamo sono: erosivo, netto e graduale.  
 Questi contatti si rappresentano con tre simboli:
