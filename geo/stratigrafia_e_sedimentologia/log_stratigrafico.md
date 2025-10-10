@@ -92,7 +92,7 @@ FU e CU si usano solamente alla scala dell'affioramento, non si usano per affior
 
 Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 40 cm di pelite in contatto erosivo con 60 cm di sabbia grossa; la sabbia grossa ha un contatto graduale con mezzo metro di argilla che è poi in contatto erosivo con 25 cm di ghiaia; la ghiaia è in contatto netto con 25 cm di argilla.
 
-INSERIRE FIG 3 con esempio di log alla scala dell'affioramento.
+![Log alla scala dell'affioramento.](log_fig_3.png)
 
 ## Log per affioramento visto da lontano
 
@@ -102,7 +102,7 @@ Il log per l'affioramento visto da lontano segue le stesse regole di quello alla
 
 Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla; in questi ultimi 7 m di argilla si osservano strati di arenaria<sup>2</sub>.
 
-INSERIRE FIG 4 con esempio di log visto da lontano, linee aperte
+![Log per affioramento visto da lontano.](log_fig_4.png)
 
 Nei log degli affioramenti visti da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto<sup>3</sup>.  
 Thinning e thickening si riferiscono ai materiali più grossolani, quindi per esempio alle arenarie della figura seguente.
