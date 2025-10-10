@@ -104,7 +104,8 @@ Il log nella figura seguente corrisponde a questa descrizione testuale dal basso
 
 ![Log per affioramento visto da lontano.](log_fig_4.png)
 
-Negli ultimi 7 m di argilla si osservano strati di arenaria che sono evidenziati nelle annotazioni `C` e `D` della seguente figura; notare che `C` e `D` corrispondono a due linee "aperte" a differenza per esempio dello strato di arenaria in cui `A` è collegato ("chiuso") con `B`; le linee aperte si usano per rappresentare strati di spessore inferiore al minimo risolvibile.<sup>2</sub>
+Negli ultimi 7 m di argilla si osservano strati di arenaria che sono evidenziati nelle annotazioni `C` e `D` della seguente figura; notare che `C` e `D` corrispondono a due linee "aperte" a differenza per esempio dello strato di arenaria in cui `A` è collegato ("chiuso") con `B`; le linee aperte si usano per rappresentare strati di spessore inferiore al minimo risolvibile.<sup>2</sup>
+Quindi nella figura seguente `C` e `D` sono linee aperte e rappresentano strati visibili in lontananza ma non rappresentabili alla scala del disegno.
 
 ![`C` e `D` sono linee aperte e rappresentano strati visibili in lontananza ma non rappresentabili alla scala del disegno.](log_fig_4-annotata.png)
 
@@ -144,17 +145,25 @@ Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica,
 
 
 # Esempi 
+Nella figura seguente i segni gialli evidenziano gli strati amalgamati.
 
 ![I segni gialli evidenziano gli strati amalgamati.](grand_canyon-annotata.png)
 
 INSERIRE FIG log grand canyon
 
+Nella figura seguente i segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.
+
 ![I segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.](due_litologie-annotata.png)
 
 INSERIRE FIG log due litologie
 
+Nella figura seguente, i segni gialli nella parte bassa della figura evidenziano come la roccia di colore giallo sia più sporgente rispetto a quella grigia; la roccia più sporgente è quella meno erosa e quindi è tipicamente la più grossolana.
+s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s1 < s2 < s3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.
+
 ![I segni gialli nella parte bassa della figura evidenziano come la roccia di colore giallo sia più sporgente rispetto a quella grigia; la roccia più sporgente è quella meno erosa e quindi è tipicamente la più grossolana.
 s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s1 < s2 < s3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.](ThU-annotata.png)
+
+La figura seguente mostra un esempio in cui lo sketch è più indicato rispetto al log stratigrafico. Si osservano strati che vanno assottigliandosi (evidenziati dai segni gialli) e da questo si deduce che non si tratta di una stratificazione piano parallela.
 
 ![Questo è un esempio dove lo sketch è più indicato rispetto al log stratigrafico. Si osservano strati che vanno assottigliandosi (evidenziati dai segni gialli) e da questo si deduce che non si tratta di una stratificazione piano parallela.](cliff_of_moher-annotata.png)
 
@@ -171,7 +180,7 @@ s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore
 
 Note  
 --
-<sup>1</sup>La classificazione delle sabbie in cinque classi è usabile quando si è in grado di misurare con accuratezza la granulometria tramite strumenti da laboratorio; in campo tipicamente non si riescono a usare cinque classi ottenendo un ampio consenso: per esempio quasi sicuramente due persone diverse daranno due classificazioni granulometriche diverse alla stessa sabbia osservandola ad occhio nudo. Esistono tecniche che verranno spiegate durante le esercitazioni in escursione. L'uso invece delle due classi "fine" e "grossolana" troverà consenso oiltre al 90%.
+<sup>1</sup>La classificazione delle sabbie in cinque classi è usabile quando si è in grado di misurare con accuratezza la granulometria tramite strumenti da laboratorio; in campo tipicamente non si riescono a usare cinque classi ottenendo un ampio consenso: per esempio quasi sicuramente due persone diverse daranno due classificazioni granulometriche diverse alla stessa sabbia osservandola ad occhio nudo. Esistono tecniche che verranno spiegate durante le esercitazioni in escursione. L'uso invece delle due classi "fine" e "grossolana" troverà consenso oltre al 90%.
 
 <sup>2</sup>Per spessore minimo risolvibile si intende lo spessore rappresentabile nel disegno del log. Per esempio se si usa un pennarello che traccia un segno di 3 mm allora non si potranno rappresentare spessori che in scala sono inferiori a 3 mm. Se la scala è 1 cm = 10 m (cioè 1 cm sul disegno corrisponde a 10 m nella realtà) allora non si potranno rappresentare spessori inferiori a 3 m (questi 3 m si ottengono risolvendo la proporzione 1 cm : 10 m = 0.3 cm : x, dove i primi due termini sono quelli della scala e il terzo termine è lo spessore del segno del pennarello).
 
