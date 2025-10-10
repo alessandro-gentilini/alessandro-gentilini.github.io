@@ -9,7 +9,7 @@ Il primo metodo è il log stratigrafico, il secondo metodo è lo schizzo schemat
 
 Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento visto in campagna, il log disegnato dagli anglosassoni (vedi figura 5.1 In Nichols) è diverso da quello degli italiani.
 
-Noi consideriamo due tipi di log: il primo è il log detto _alla scala dell’affioramento_, il secondo è per gli affioramenti lontani.
+Noi consideriamo due tipi di log: il primo è il log detto _alla scala dell'affioramento_, il secondo è per gli affioramenti lontani.
 Il primo si usa per gli affioramenti che vediamo direttamente e che misuriamo direttamente con il metro (estensione tipica un paio di metri, per esempio del "Livello Bonarelli" alla Gola del Bottaccione, Gubbio); il secondo si usa per affioramenti estesi che vediamo da lontano (estensione tipica delle decine o anche centinaia di metri, esempio del Grand Canyon, Arizona).  
 Durante l'esame sarà importante riconoscere se l'affioramento di cui si deve disegnare il log è a scala vicina o lontana perché i due log saranno disegnati seguendo due metodi in parte diversi.
 
@@ -21,8 +21,8 @@ Usare tutto lo sviluppo verticale della pagina del quaderno di campagna per dise
 ## Spessore degli strati
 
 Disegnare al bordo sinistro della pagina un asse verticale.  
-Mettere almeno tre tacche: quella all’estremo inferiore, quella a metà e quella dell’estremo superiore. Sono utili anche le tacche intermedie che delimitano i quarti.  
-Indicare a sinistra della tacca il valore numerico corrispondente e l’unità di misura (per esempio per un affioramento esteso in verticale un paio di metri indicare `0 m` per la tacca inferiore, `2 m` per la tacca superiore e `1 m` per la tacca centrale).  
+Mettere almeno tre tacche: quella all'estremo inferiore, quella a metà e quella dell'estremo superiore. Sono utili anche le tacche intermedie che delimitano i quarti.  
+Indicare a sinistra della tacca il valore numerico corrispondente e l'unità di misura (per esempio per un affioramento esteso in verticale un paio di metri indicare `0 m` per la tacca inferiore, `2 m` per la tacca superiore e `1 m` per la tacca centrale).  
 Il disegno deve essere fatto in scala quindi è preferibile avere un quaderno a quadretti.
 
 ## Granulometria degli strati
@@ -100,11 +100,15 @@ Il log per l'affioramento visto da lontano segue le stesse regole di quello alla
 
 ## Esempio di log per affioramenti visti da lontano
 
-Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla; in questi ultimi 7 m di argilla si osservano strati di arenaria<sup>2</sub>.
+Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla.
 
 ![Log per affioramento visto da lontano.](log_fig_4.png)
 
-Nei log degli affioramenti visti da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto<sup>3</sup>.  
+Negli ultimi 7 m di argilla si osservano strati di arenaria che sono evidenziati nelle annotazioni `C` e `D` della seguente figura; notare che `C` e `D` corrispondono a due linee "aperte" a differenza per esempio dello strato di arenaria in cui `A` è collegato ("chiuso") con `B`; le linee aperte si usano per rappresentare strati di spessore inferiore al minimo risolvibile.<sup>2</sub>
+
+![`C` e `D` sono linee aperte e rappresentano strati visibili in lontananza ma non rappresentabili alla scala del disegno.](log_fig_4-annotata.png)
+
+Nei log degli affioramenti visti da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto.<sup>3</sup>  
 Thinning e thickening si riferiscono ai materiali più grossolani, quindi per esempio alle arenarie della figura seguente.
 
 ![Log _thinning up_ e _thickening up_.](log_fig_5.png)
