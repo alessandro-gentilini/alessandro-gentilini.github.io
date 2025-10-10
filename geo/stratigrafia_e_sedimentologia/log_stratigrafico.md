@@ -143,6 +143,8 @@ Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica,
 
 ![Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica.](log_fig_8.png)
 
+# Sketch
+
 
 # Esempi 
 Nella figura seguente i segni gialli evidenziano gli strati amalgamati.
