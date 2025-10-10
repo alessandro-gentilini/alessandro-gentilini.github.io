@@ -107,7 +107,7 @@ Il log nella figura seguente corrisponde a questa descrizione testuale dal basso
 Nei log degli affioramenti visti da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto<sup>3</sup>.  
 Thinning e thickening si riferiscono ai materiali più grossolani, quindi per esempio alle arenarie della figura seguente.
 
-INSERIRE FIG 5 con i due log ThU e TkU
+![Log _thinning up_ e _thickening up_.](log_fig_5.png)
 
 ## Strutture sedimentarie
 
