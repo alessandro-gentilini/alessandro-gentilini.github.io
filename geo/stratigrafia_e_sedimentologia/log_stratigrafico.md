@@ -111,6 +111,33 @@ Thinning e thickening si riferiscono ai materiali più grossolani, quindi per es
 
 ## Strutture sedimentarie
 
+Per le principali strutture sedimentarie si usano i simboli della figura seguente.
+
+* Stratificazione/laminazione piano parallela  
+* Stratificazione incrociata concava  
+* Stratificazione incrociata tabulare  
+* Stratificazione incrociata cuneiforme  
+* Stratificazione concava convessa ad _hummocky_ (abbreviata con HCS _Hummocky Cross Stratification_)  
+* Ripple da onda  
+* Fossile _incertae sedis_<sup>4</sup>
+
+
+![Simboli per le strutture sedimentarie.](log_fig_6.png)
+
+Nel caso si sia in grado di determinare la specie o il genere del fossile si può usare un simbolo più evocativo.
+
+Altri simboli si usano per:
+
+* bioturbazione
+* foglie
+* presenza di radici
+
+![Simboli per bioturbazione, foglie, presenza di radici.](log_fig_7.png)
+
+Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica, come visibile nella figura seguente.
+
+![Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica.](log_fig_8.png)
+
 
 # Esempi 
 
@@ -145,3 +172,6 @@ Note
 <sup>2</sup>Per spessore minimo risolvibile si intende lo spessore rappresentabile nel disegno del log. Per esempio se si usa un pennarello che traccia un segno di 3 mm allora non si potranno rappresentare spessori che in scala sono inferiori a 3 mm. Se la scala è 1 cm = 10 m (cioè 1 cm sul disegno corrisponde a 10 m nella realtà) allora non si potranno rappresentare spessori inferiori a 3 m (questi 3 m si ottengono risolvendo la proporzione 1 cm : 10 m = 0.3 cm : x, dove i primi due termini sono quelli della scala e il terzo termine è lo spessore del segno del pennarello).
 
 <sup>3</sup>Non c'è un corrispettivo italiano per questi termini a meno di non usare l'intera frase "spessore che va crescendo verso l'alto", eccetera.
+
+<sup>4</sup>_Incertae sedis_ è una espressione latina che significa letteralmente "di incerta sede" e si usa quando non si è in grado di determinare la specie o il genere di un fossile.  
+Si pronuncia "incerte sedis".
