@@ -80,7 +80,7 @@ Questi contatti si rappresentano con tre simboli:
 Graduale: linea curva che raccorda le due granulometrie
 </pre>
 
-INSERIRE FIG 2 con i tre contatti
+![Simboli per i contatti](log_fig_2.png)
 
 Se la granulometria diminuisce dal basso verso l'alto si dice in italiano che la gradazione è diretta o positiva ma si usa poi di  consuetudine il termine inglese _fining upward_ abbreviato in FU.
 
