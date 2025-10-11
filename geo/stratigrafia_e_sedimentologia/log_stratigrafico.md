@@ -7,7 +7,7 @@ Il primo metodo è il log stratigrafico, il secondo metodo è lo schizzo schemat
 
 # Log stratigrafico
 
-Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento visto in campagna, il log disegnato dagli anglosassoni (vedi figura 5.1 In Nichols) è diverso da quello degli italiani.
+Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento osservato in campagna, il log disegnato dagli anglosassoni (vedi figura 5.1 In Nichols) è diverso da quello degli italiani.
 
 Noi consideriamo due tipi di log: il primo è il log detto _alla scala dell'affioramento_, il secondo è per gli affioramenti lontani.
 Il primo si usa per gli affioramenti che vediamo direttamente e che misuriamo direttamente con il metro (estensione tipica un paio di metri, per esempio del "Livello Bonarelli" alla Gola del Bottaccione, Gubbio); il secondo si usa per affioramenti estesi che vediamo da lontano (estensione tipica delle decine o anche centinaia di metri, esempio del Grand Canyon, Arizona).  
@@ -96,15 +96,15 @@ Il log nella figura seguente corrisponde a questa descrizione testuale dal basso
 
 Notare nella figura precedente che in corrispondenza del contatto graduale si è inserito il simbolo di silt (vedi tra 1 m e 1.2 m) tra la sabbia grossa sottostante e l'argilla sovrastante.
 
-## Log per affioramento visto da lontano
+## Log per affioramento osservato da lontano
 
-Il log per l'affioramento visto da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
+Il log per l'affioramento osservato da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
 
 ## Esempio di log per affioramenti visti da lontano
 
 Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla.
 
-![Log per affioramento visto da lontano.](log_fig_4.png)
+![Log per affioramento osservato da lontano.](log_fig_4.png)
 
 Negli ultimi 7 m di argilla si osservano strati di arenaria che sono evidenziati nelle annotazioni `C` e `D` della seguente figura; notare che `C` e `D` corrispondono a due linee "aperte" a differenza per esempio dello strato di arenaria in cui `A` è collegato ("chiuso") con `B`; le linee aperte si usano per rappresentare strati di spessore inferiore al minimo risolvibile.<sup>2</sup>
 Quindi nella figura seguente `C` e `D` sono linee aperte e rappresentano strati visibili in lontananza ma non rappresentabili alla scala del disegno.
