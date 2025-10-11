@@ -94,6 +94,8 @@ Il log nella figura seguente corrisponde a questa descrizione testuale dal basso
 
 ![Log alla scala dell'affioramento.](log_fig_3.png)
 
+Notare nella figura precedente che in corrispondenza del contatto graduale si è inserito il simbolo di silt (vedi tra 1 m e 1.2 m) tra la sabbia grossa sottostante e l'argilla sovrastante.
+
 ## Log per affioramento visto da lontano
 
 Il log per l'affioramento visto da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali.
