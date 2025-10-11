@@ -55,7 +55,7 @@ Pertanto la scala orizzontale riporterà quattro tacche, la più fine è l'argil
 
 <pre>
 A     S<sub>f</sub>     S<sub>g</sub>     G
-|-----|------|------|
+|-----|-----|------|
 </pre>
 
 Nel disegno si parte dal basso, mai dall'alto.
