@@ -7,9 +7,7 @@ Il primo metodo è il log stratigrafico, il secondo metodo è lo schizzo schemat
 
 # Log stratigrafico
 
-Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento osservato in campagna, il log disegnato dagli anglosassoni (vedi figura 5.1 In Nichols riprodotta nella figura qui sotto) è diverso da quello degli italiani.
-
-![Figura 5.1 in Nichols.](Slide2.JPG)
+Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento osservato in campagna, il log disegnato dagli anglosassoni (vedi più avanti negli Esempi un confronto) è diverso da quello degli italiani.
 
 Noi consideriamo due tipi di log: il primo è il log detto _alla scala dell'affioramento_, il secondo è per gli affioramenti lontani.
 Il primo si usa per gli affioramenti che vediamo direttamente e che misuriamo direttamente con il metro (estensione tipica un paio di metri, per esempio del "Livello Bonarelli" alla Gola del Bottaccione, Gubbio); il secondo si usa per affioramenti estesi che vediamo da lontano (estensione tipica delle decine o anche centinaia di metri, esempio del Grand Canyon, Arizona).  
@@ -157,7 +155,7 @@ Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica,
 
 La figura seguente mostra altri simboli usabili per la litologia: calcari, dolomie (non confonderle con la dolomite che è il minerale), carbone e torba, paleosuoli.
 
-![](log_fig_9.png)
+![Alcune litologie.](log_fig_9.png)
 
 # Sketch
 
@@ -170,6 +168,21 @@ Per esempio si nota come gli strati non abbiano continuità laterale (vanno asso
 
 # Esempi 
 
+## Confronto con un log stratigrafico anglosassone
+
+La figura 5.1 in Nichols è riprodotta qui sotto, notare che:
+
+* La scala granulometrica è la terza colonna.
+* La scala granulometrica non contiene le litologie (come invece nello stile italiano) ma invece contiene le strutture sedimentarie.
+* Le litologie sono riportate invece nella seconda colonna che non è la scala granulometrica.
+* Poco sotto ai 4 m inizia uno strato di circa 30 cm di carbone.
+
+![Figura 5.1 in Nichols.](Slide2.JPG)
+
+La legenda è riportata nella figura seguente (5.2 in Nichols).
+
+![Figura 5.2 in Nichols.](Slide3.JPG)
+
 ## Grand Canyon
 Il Grand Canyon in Arizona e l'affioramento con la A maiuscola; qui la continuità stratigrafica è osservabile per km perché l'ambiente è sub-desertico e la vegetazione non copre troppo gli affioramenti.
 
@@ -181,7 +194,7 @@ I segni gialli evidenziano gli strati amalgamati di arenaria.
 
 I quattro strati indicati con 1, 2, 3, 4 in giallo sono poi rappresentati nel log stratigrafico seguente (in cui si omettono le scale).
 
-![](log_grand_canyon.png)
+![Un log semplificato di una parte del Grand Canyon.](log_grand_canyon.png)
 
 ## Due litologie
 
@@ -196,7 +209,7 @@ Quindi nella figura seguente i segni gialli con scritto "peliti" evidenziano la 
 
 I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.
 
-![](log_due_litologie.png)
+![Un log semplificato per l'affioramento a due litologie.](log_due_litologie.png)
 
 ## Thickening up
 
