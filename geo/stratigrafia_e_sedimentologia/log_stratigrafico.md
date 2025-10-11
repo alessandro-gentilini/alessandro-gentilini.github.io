@@ -86,7 +86,7 @@ Se la granulometria diminuisce dal basso verso l'alto si dice in italiano che la
 
 Se la granulometria aumenta dal basso verso l'alto si dice in italiano che la gradazione è inversa o negativa ma si usa poi di  consuetudine il termine inglese _coarsening upward_ abbreviato in CU.
 
-FU e CU si usano solamente alla scala dell'affioramento, non si usano per affioramenti visti in lontananza.
+FU e CU si usano solamente alla scala dell'affioramento, non si usano per affioramenti osservati in lontananza.
 
 ## Esempio di log alla scala dell'affioramento
 
@@ -98,9 +98,9 @@ Notare nella figura precedente che in corrispondenza del contatto graduale si è
 
 ## Log per affioramento osservato da lontano
 
-Il log per l'affioramento osservato da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
+Il log per l'affioramento osservato da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei **contatti che non devono mai essere rappresentati come graduali** (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
 
-## Esempio di log per affioramenti visti da lontano
+## Esempio di log per affioramenti osservati da lontano
 
 Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla.
 
@@ -111,7 +111,7 @@ Quindi nella figura seguente `C` e `D` sono linee aperte e rappresentano strati 
 
 ![`C` e `D` sono linee aperte e rappresentano strati visibili in lontananza ma non rappresentabili alla scala del disegno.](log_fig_4-annotata.png)
 
-Nei log degli affioramenti visti da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto.<sup>3</sup>  
+Nei log degli affioramenti osservati da lontano si usano le espressioni inglesi _thinning up_ (abbreviato con ThU) quando la spessore del materiale più grossolano va diminuendo dal basso verso l'alto e _thickening up_ (abbreviato con TkU) quando lo spessore va crescendo dal basso verso l'alto.<sup>3</sup>  
 Thinning e thickening si riferiscono ai materiali più grossolani, quindi per esempio alle arenarie della figura seguente.
 
 ![Log _thinning up_ e _thickening up_.](log_fig_5.png)
@@ -144,6 +144,10 @@ Altri simboli si usano per:
 Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica, come visibile nella figura seguente.
 
 ![Le strutture sedimentarie si affiancano alla destra della colonna stratigrafica.](log_fig_8.png)
+
+La figura seguente mostra altri simboli usabili per la litologia: calcari, dolomie (non confonderle con la dolomite che è il minerale), carbone e torba, paleosuoli.
+
+![](log_fig_9.png)
 
 # Sketch
 
