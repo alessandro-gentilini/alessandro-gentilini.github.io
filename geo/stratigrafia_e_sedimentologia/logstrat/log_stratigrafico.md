@@ -1,6 +1,6 @@
 # Rappresentazione grafica degli strati
 
-Stratigrafia e sedimentologia - Prof. Alessandro Amorosi - Lezione del 9 ottobre 2025.
+Stratigrafia e sedimentologia - Prof. Alessandro Amorosi - Lezione del 9 ottobre 2025. Appunti di Alessandro Gentilini.
 
 Ci sono due metodi di rappresentare graficamente gli strati di un affioramento.
 Il primo metodo è il log stratigrafico, il secondo metodo è lo schizzo schematico (_sketch_).
