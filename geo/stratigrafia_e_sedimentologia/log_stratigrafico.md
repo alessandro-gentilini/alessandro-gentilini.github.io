@@ -98,7 +98,7 @@ Notare nella figura precedente che in corrispondenza del contatto graduale si è
 
 ## Log per affioramento visto da lontano
 
-Il log per l'affioramento visto da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali.
+Il log per l'affioramento visto da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei contatti che non devono mai essere rappresentati come graduali (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
 
 ## Esempio di log per affioramenti visti da lontano
 
@@ -171,13 +171,42 @@ La figura seguente mostra un esempio in cui lo sketch è più indicato rispetto 
 
 ![Questo è un esempio dove lo sketch è più indicato rispetto al log stratigrafico. Si osservano strati che vanno assottigliandosi (evidenziati dai segni gialli) e da questo si deduce che non si tratta di una stratificazione piano parallela.](cliff_of_moher-annotata.png)
 
+# Riassunto della procedura per disegnare il log stratigrafico
+
+1) Individuare il log più adatto: log alla scala dell'affioramento oppure log per affioramento osservato da lontano?
+
+2) Se si è sull'affioramento: misurare l'altezza complessiva dell'affioramento da disegnare.  
+Se invece si osserva l'affioramento da lontano l'altezza va stimata.
+
+3) Disegnare l'asse verticale con la scala degli spessori degli strati, indicare l'opportuna unità di misura (metri, centimetri, eccetera).  
+Disegnare almeno tre tacche: in fondo, a metà, in alto (è il fondo scala misurato o stimato al punto precedente).
+
+4) Disegnare nella parte alta del log l'asse orizzontale della granulometria e segnare le quattro tacche: Argilla, Sabbia Fine, Sabbia Grossa, Ghiaia.
+
+5) Individuare sull'affioramento lo strato più in basso ed iniziare a disegnarlo in scala partendo dalla parte più bassa del log.  
+**NOTA BENE:** disegnare partendo sempre dal basso.
+
+6) Disegnare la litologia del primo strato.
+
+7) Individuare il contatto tra primo e secondo strato e disegnarlo opportunamente.  
+**NOTA BENE:** nel log per affioramento lontano non disegnare mai contatti graduali.
+
+8) Aggiungere alla destra dello strato eventuali strutture sedimentare e/o altre annotazioni.
+
+9) Ripetere per tutti gli altri strati.
+
+10) **NOTA BENE:** fare attenzione al punto di partenza ed al punto di arrivo dei contatti graduali, devono essere in corrispondenza della corretta tacca dell'asse delle granulometrie.
+
+11) **NOTA BENE:** nel log per affioramento da lontano disegnare con un segmento orizzontale gli strati osservati ma troppo sottili per essere disegnati con uno spessore.
 
 
 
 
 
 
-
+Bibliografia  
+--
+Gary Nichols, Sedimentology and Stratigraphy, Second Edition. 2009, Chichester, UK, Wiley-Blackwell.
 
 
 
