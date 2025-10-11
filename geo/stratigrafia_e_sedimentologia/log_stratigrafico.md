@@ -9,6 +9,8 @@ Il primo metodo è il log stratigrafico, il secondo metodo è lo schizzo schemat
 
 Il log stratigrafico è una rappresentazione grafica e codificata. Non esiste una codifica universale e, per esempio, a parità di affioramento osservato in campagna, il log disegnato dagli anglosassoni (vedi figura 5.1 In Nichols) è diverso da quello degli italiani.
 
+![](Slide2.JPG)
+
 Noi consideriamo due tipi di log: il primo è il log detto _alla scala dell'affioramento_, il secondo è per gli affioramenti lontani.
 Il primo si usa per gli affioramenti che vediamo direttamente e che misuriamo direttamente con il metro (estensione tipica un paio di metri, per esempio del "Livello Bonarelli" alla Gola del Bottaccione, Gubbio); il secondo si usa per affioramenti estesi che vediamo da lontano (estensione tipica delle decine o anche centinaia di metri, esempio del Grand Canyon, Arizona).  
 Durante l'esame sarà importante riconoscere se l'affioramento di cui si deve disegnare il log è a scala vicina o lontana perché i due log saranno disegnati seguendo due metodi in parte diversi.
