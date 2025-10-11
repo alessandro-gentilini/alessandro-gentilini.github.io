@@ -102,6 +102,14 @@ Notare nella figura precedente che in corrispondenza del contatto graduale si è
 
 Il log per l'affioramento osservato da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei **contatti che non devono mai essere rappresentati come graduali** (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
 
+Nell'osservazione da lontano considerare sempre le differenze di erosione:
+
+* sporge il materiale più grossolano che si erode meno mentre
+* rientra il materiale più fine che si erode di più.
+
+Poi, spesso le arenarie danno versanti sub-verticali mentre le peliti versanti meno inclinati e più dolci.  
+Ed ancora, la vegetazione ricopre i versanti più dolci ma non quelli più inclinati quindi la presenza di vegetazione può suggerire peliti ma non è una regola fissa.
+
 ## Esempio di log per affioramenti osservati da lontano
 
 Il log nella figura seguente corrisponde a questa descrizione testuale dal basso verso l'alto: 7 m di argilla, 9 m di tre strati amalgamati di arenaria, 3.5 m di argilla, 3.5 m di arenaria, 7 m di argilla.
@@ -153,12 +161,19 @@ La figura seguente mostra altri simboli usabili per la litologia: calcari, dolom
 
 # Sketch
 
+Nella figura seguente (5.4 in Nichols) è mostrato il secondo modo di rappresentare un affioramento di rocce sedimentarie: lo _sketch di affioramento_. Si tratta di un disegno semplificato (non una riproduzione artistica!) di come appare l'affioramento; va prediletto l'aspetto geometrico relativo alle superfici e alle superfici erosive.  
+Per esempio si nota come gli strati non abbiano continuità laterale (vanno assottigliandosi, vedere per esempio l'arenaria che contiene "crevasse splay" che si assottiglia verso SW); il segno giallo evidenzia una superficie in cui gli strati a SW sono stati "tagliati" da quello che è etichettato come "Channel" che quindi, tagliando gli strati, ha una età successiva agli strati stessi (o, detto in altre parole, è più giovane degli strati).
+
+È utile arricchire lo sketch accompagnandolo per esempio con log stratigrafici, qui sarebbe utile disegnare quello indicato dal segno rosso 1 e quello 2. Se si disegnasse solamente 1 (o solamente 2) questo non spiegherebbe completamente l'affioramento.
+
+![Figura 5.4 in Nichols.](Slide5-annotata.JPG)
 
 # Esempi 
 
 ## Grand Canyon
+Il Grand Canyon in Arizona e l'affioramento con la A maiuscola; qui la continuità stratigrafica è osservabile per km perché l'ambiente è sub-desertico e la vegetazione non copre troppo gli affioramenti.
 
-Nella figura seguente, il Grand Canyon in Arizona, si osserva la parte rossiccia e la parte grigia.
+Nella figura seguente, , si osserva la parte rossiccia e la parte grigia.
 La parte rossiccia dà luogo a pareti sub-verticali mentre la grigia a paretei meno inclinate, se ne deduce che la parte rossa potrebbe essere una arenaria mentre la grigia una pelite.
 I segni gialli evidenziano gli strati amalgamati di arenaria.
 
@@ -170,9 +185,16 @@ I quattro strati indicati con 1, 2, 3, 4 in giallo sono poi rappresentati nel lo
 
 ## Due litologie
 
-Nella figura seguente i segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.
+Quante litologie sono presenti nella figura seguente?
+
+A prima vista una sola, quella grigia... ma su cosa poggia la vegetazione?  
+La vegetazione ha bisogno di acqua per vivere e le peliti essendo impermeabili possono trattenere acqua... ecco quindi che la vegetazione può indicare che c'è una pelite sottostante.
+
+Quindi nella figura seguente i segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.
 
 ![I segni gialli con scritto "peliti" evidenziano la litologia pelitica (roccia di colore rossiccio) diversa da quella più grossolana di colore grigio. I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.](due_litologie-annotata.png)
+
+I numeri 1 e 2 sono riportati anche nel log stratigrafico della figura seguente.
 
 ![](log_due_litologie.png)
 
@@ -182,7 +204,7 @@ Nella figura seguente, i segni gialli nella parte bassa della figura evidenziano
 s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s1 < s2 < s3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.
 
 ![I segni gialli nella parte bassa della figura evidenziano come la roccia di colore giallo sia più sporgente rispetto a quella grigia; la roccia più sporgente è quella meno erosa e quindi è tipicamente la più grossolana.
-s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s1 < s2 < s3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.](ThU-annotata.png)
+s1, s2, s3 indicano gli spessori di tre strati della roccia grossolana di colore giallo, si ha $s_1 \lt s_2 \lt s_3$ e quindi si può descrivere questo affioramento come _thickening up_ abbreviato con ThU.](ThU-annotata.png)
 
 ## Cliffs of Moher
 
@@ -225,7 +247,8 @@ Disegnare almeno tre tacche: in fondo, a metà, in alto (è il fondo scala misur
 
 Bibliografia  
 --
-Gary Nichols, Sedimentology and Stratigraphy, Second Edition. 2009, Chichester, UK, Wiley-Blackwell.
+Gary Nichols, Sedimentology and Stratigraphy, Second Edition. 2009, Chichester, UK, Wiley-Blackwell.  
+Le figure usate si trovano al link [https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=4994&itemId=1405135921](https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=4994&itemId=1405135921).
 
 
 
