@@ -32,14 +32,14 @@ L'inclinazione 90° corrisponde ad una linea verticale.
 Nel caso di superfici poco inclinate (inclinazione < 30°÷35°) si usa il metodo _trend_/_plunge_ mentre per superfici molto inclinate (inclinazione > 30°÷35°) si usa il metodo _pitch_/_plunge_.
 
 **_Pitch_** di una linea su una superficie: è l'angolo misurato sulla superficie tra la direzione della superficie e la linea.  
-Va da 0° a 180°.
+Va da 0° a 180° e si misura in senso orario.
 
 # Proiezioni di linee e superfici sul reticolo stereografico
 
 Nel rilevamento geologico e nella geologia strutturale si predilige la proiezione equi-areale perché preservando l'area si possono confrontare direttamente le densità delle proiezioni tra parti diverse del reticolo.  
 La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di linee per metro quadro (vedi [Fossen p.448]).
 
-# Proiezioni di linee sul reticolo stereografico
+# Proiezioni di linee 
 1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare con un punto il Nord sul cerchio primitivo e infine marcare con un punto il centro del cerchio primitivo.
 2) Sovrapporre il trasparente al reticolo ed allineare il Nord.
 3) Se necessario convertire la linea nel formato direzione/inclinazione.
@@ -55,6 +55,12 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, ricalcare l'intera ciclografica corrispondente che rappresenta la superficie in oggetto.
 7) Per disegnare il polo: partendo dalla ciclografica suddetta, e muovendosi sul diametro E-O verso il centro del reticolo, contare 90° e, lì arrivati, disegnare il punto che rappresenta il polo della superficie in oggetto.
+
+# Proiezione di linee che giacciono su una superficie
+0) È necessario conoscere il _pitch_ della linea.
+1) Disegnare la proiezione della superficie seguendo il metodo precedentemente illustrato.
+2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
+3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
 # Come leggere le informazioni sul reticolo stereografico
 
@@ -73,7 +79,7 @@ Come trovare l'immersione della superficie?
 Tracciare la perpendicolare alla ciclografica passante per il centro del cerchio primitivo, la sua intersezione con il cerchio primitivo dà l'immersione della superficie.
 
 Come trovare la direzione della superficie?
-La direzione è indicata dall'intersezione della ciclografica con il cerchio primitivo.
+La direzione è indicata dall'intersezione della ciclografica con il cerchio primitivo, considerare l'intersezione più vicina al Nord.
 
 Come trovare l'inclinazione della superficie?  
 Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
