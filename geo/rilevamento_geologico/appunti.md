@@ -10,4 +10,7 @@ La direzione va da 0° a 360° e quindi si ha che 0° equivale a Nord, 90° a Es
 L'inclinazione 0° rappresenta una superficie orizzontale; l'inclinazione positiva è quella che si ha andando sotto all'orizzonte.  
 L'inclinazione va da 0° a 90° che corrisponde ad una superficie verticale. 
 
-**Immersione (_dip direction_)** di una superficie:
+**Immersione (_dip direction_)** di una superficie: è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dalla proiezione sul piano orizzontale di una linea di massima pendenza che giace sulla superficie da orientare.  
+Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
+La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua liquida sotto l'azione della forza di gravità.  
+La regola della mano destra dice di appoggiare il palmo della mano destra alla superficie da orientare e rendere il pollice parallelo alla direzione, in tal modo l'indice sarà parallelo alla immersione.
