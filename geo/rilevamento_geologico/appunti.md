@@ -39,6 +39,36 @@ Va da 0° a 180°.
 Nel rilevamento geologico e nella geologia strutturale si predilige la proiezione equi-areale perché preservando l'area si possono confrontare direttamente le densità delle proiezioni tra parti diverse del reticolo.  
 La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di linee per metro quadro (vedi [Fossen p.448]).
 
+# Proiezioni di linee sul reticolo stereografico
+1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare il Nord sul cerchio primitivo.
+2) Sovrapporre il trasparente al reticolo ed allineare il Nord.
+3) Se necessario convertire la linea nel formato direzione/inclinazione.
+4) Marcare sul cerchio primitivo del trasparente un punto in corrispondenza della direzione della linea.
+5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
+6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
+
+# Proiezione di superfici
+1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare il Nord sul cerchio primitivo.
+2) Sovrapporre il trasparente al reticolo ed allineare il Nord.
+3) Se necessario convertire la superficie nel formato immersione/inclinazione.
+4) Marcare sul cerchio primitivo del trasparente un punto in corrispondenza dell'immersione della superficie.
+5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
+6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, ricalcare l'intera ciclografica corrispondente che rappresenta la superficie in oggetto.
+
+# Come leggere le informazioni sul reticolo stereografico
+
+## Un punto sul reticolo corrisponde ad una linea
+
+Come trovare la direzione della linea?  
+Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
+
+Come trovare l'inclinazione della linea?  
+Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della linea.  
+Indicata con $d$ la distanza radiale tra il cerchio primitivo ed il punto (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
+
+## Una ciclografica sul reticolo corrisponde ad una superficie
+
+
 # Bibliografia
 
 [Fossen] Haakon Fossen, Geologia strutturale, Bologna 2020, Zanichelli.
