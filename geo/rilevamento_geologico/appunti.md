@@ -1,4 +1,4 @@
-Orientazione di superfici
+# Orientazione di superfici
 
 La superficie è modellata con un piano, o, in altre parole, è assimilata ad un piano.
 
@@ -14,3 +14,5 @@ L'inclinazione va da 0° a 90° che corrisponde ad una superficie verticale.
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
 La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua liquida sotto l'azione della forza di gravità.  
 La regola della mano destra dice di appoggiare il palmo della mano destra alla superficie da orientare e rendere il pollice parallelo alla direzione, in tal modo l'indice sarà parallelo alla immersione.
+
+# Orientazione di linee
