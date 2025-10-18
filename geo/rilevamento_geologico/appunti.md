@@ -40,7 +40,7 @@ Nel rilevamento geologico e nella geologia strutturale si predilige la proiezion
 La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di linee per metro quadro (vedi [Fossen p.448]).
 
 # Proiezioni di linee sul reticolo stereografico
-1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare il Nord sul cerchio primitivo.
+1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare con un punto il Nord sul cerchio primitivo e infine marcare con un punto il centro del cerchio primitivo.
 2) Sovrapporre il trasparente al reticolo ed allineare il Nord.
 3) Se necessario convertire la linea nel formato direzione/inclinazione.
 4) Marcare sul cerchio primitivo del trasparente un punto in corrispondenza della direzione della linea.
@@ -48,12 +48,13 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
 # Proiezione di superfici
-1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare il Nord sul cerchio primitivo.
+1) Sovrapporre il trasparente al reticolo, ricalcare sul trasparente il cerchio primitivo (con un compasso), poi marcare con un punto il Nord sul cerchio primitivo e infine marcare con un punto il centro del cerchio primitivo.
 2) Sovrapporre il trasparente al reticolo ed allineare il Nord.
 3) Se necessario convertire la superficie nel formato immersione/inclinazione.
 4) Marcare sul cerchio primitivo del trasparente un punto in corrispondenza dell'immersione della superficie.
 5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, ricalcare l'intera ciclografica corrispondente che rappresenta la superficie in oggetto.
+7) Per disegnare il polo: partendo dalla ciclografica suddetta, e muovendosi sul diametro E-O verso il centro del reticolo, contare 90° e, lì arrivati, disegnare il punto che rappresenta il polo della superficie in oggetto.
 
 # Come leggere le informazioni sul reticolo stereografico
 
@@ -67,6 +68,18 @@ Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della li
 Indicata con $d$ la distanza radiale tra il cerchio primitivo ed il punto (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
 
 ## Una ciclografica sul reticolo corrisponde ad una superficie
+
+Come trovare l'immersione della superficie?  
+Tracciare la perpendicolare alla ciclografica passante per il centro del cerchio primitivo, la sua intersezione con il cerchio primitivo dà l'immersione della superficie.
+
+Come trovare la direzione della superficie?
+La direzione è indicata dall'intersezione della ciclografica con il cerchio primitivo.
+
+Come trovare l'inclinazione della superficie?  
+Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
+Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
+
+
 
 
 # Bibliografia
