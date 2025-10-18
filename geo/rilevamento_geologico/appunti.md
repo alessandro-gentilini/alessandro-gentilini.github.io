@@ -7,8 +7,9 @@ La direzione 0° coincide con il Nord; la direzione positiva è quella del senso
 La direzione va da 0° a 360° e quindi si ha che 0° equivale a Nord, 90° a Est, 180° a Sud e 270° a Ovest.
 
 **Inclinazione (_dip_)** di una superficie: è l'angolo, misurato in un piano verticale, tra il piano orizzontale e la superficie da orientare.  
-L'inclinazione 0° rappresenta una superficie orizzontale; l'inclinazione positiva è quella che si ha andando sotto all'orizzonte.  
-L'inclinazione va da 0° a 90° che corrisponde ad una superficie verticale. 
+L'inclinazione va da 0° a 90°.  
+L'inclinazione 0° rappresenta una superficie orizzontale.  
+L'inclinazione 90° corrisponde ad una superficie verticale. 
 
 **Immersione (_dip direction_)** di una superficie: è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dalla proiezione sul piano orizzontale di una linea di massima pendenza che giace sulla superficie da orientare.  
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
@@ -16,3 +17,21 @@ La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua 
 La regola della mano destra dice di appoggiare il palmo della mano destra alla superficie da orientare e rendere il pollice parallelo alla direzione, in tal modo l'indice sarà parallelo alla immersione.
 
 # Orientazione di linee
+
+**Direzione (_trend_)** di una linea: è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dal piano verticale che contiene la linea.  
+La direzione 0° coincide con il Nord; la direzione positiva è quella del senso orario.  
+La direzione va da 0° a 360° e quindi si ha che 0° equivale a Nord, 90° a Est, 180° a Sud e 270° a Ovest.
+
+**Inclinazione (_plunge_)** di una linea: è l'angolo, misurato in un piano verticale, tra la linea e la sua proiezione sul piano orizzontale.
+L'inclinazione va da 0° a 90°.  
+L'inclinazione 0° rappresenta una linea che giace sul piano orizzontale.  
+L'inclinazione 90° corrisponde ad una linea verticale.
+
+# Proiezioni di linee e superfici sul reticolo stereografico
+
+Nel rilevamento geologico e nella geologia strutturale si predilige la proiezione equi-areale perché preservando l'area si possono confrontare direttamente le densità delle proiezioni tra parti diverse del reticolo.  
+La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di linee per metro quadro (vedi [Fossen p.448]).
+
+# Bibliografia
+
+[Fossen] Haakon Fossen, Geologia strutturale, Bologna 2020, Zanichelli.
