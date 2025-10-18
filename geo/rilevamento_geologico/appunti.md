@@ -27,6 +27,13 @@ L'inclinazione va da 0° a 90°.
 L'inclinazione 0° rappresenta una linea che giace sul piano orizzontale.  
 L'inclinazione 90° corrisponde ad una linea verticale.
 
+# Orientazione di linee giacenti su una superficie
+
+Nel caso di superfici poco inclinate (inclinazione < 30°÷35°) si usa il metodo _trend_/_plunge_ mentre per superfici molto inclinate (inclinazione > 30°÷35°) si usa il metodo _pitch_/_plunge_.
+
+**_Pitch_** di una linea su una superficie: è l'angolo misurato sulla superficie tra la direzione della superficie e la linea.  
+Va da 0° a 180°.
+
 # Proiezioni di linee e superfici sul reticolo stereografico
 
 Nel rilevamento geologico e nella geologia strutturale si predilige la proiezione equi-areale perché preservando l'area si possono confrontare direttamente le densità delle proiezioni tra parti diverse del reticolo.  
