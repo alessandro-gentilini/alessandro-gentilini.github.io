@@ -12,14 +12,26 @@
 
 ![](channel_head.png)
 
-Intuitivamente se guardo la figura 4D qui sopra quello che vedo è che per alte pendenze locali serve un'area contribuente minore per avere una regione incanalata, mentre se la pendenza è minore allora serve una area contribuente maggiore per avere una regione incanalata; questo a me sembra abbastanza intuitivo.
-
 Dal [pdf9] si hanno queste definizioni:
 
 _unchanneled regions of the landscape_: topografia non incanalata (versanti, piane alluvionali ecc) 
 
 _channeled regions of the landscape_: i canali incisi (reticolo idrografico).
 
+Intuitivamente se guardo la figura 4D qui sopra quello che vedo è che per alte pendenze locali serve un'area contribuente minore per avere una regione incanalata, mentre se la pendenza è minore allora serve una area contribuente maggiore per avere una regione incanalata; questo a me sembra abbastanza intuitivo.
+
 # Bibliografia
 
+Anderson, S. P. Breaking it Down: Mechanical Processes in the Weathering Engine. _Elements_ **15**, 247–252 (2019).
+
+Eppes, M. & Keanini, R. Mechanical weathering and rock erosion by climate‐dependent subcritical cracking. _Reviews of Geophysics_ **55**, 470–508 (2017).
+
+Montgomery, D. R. & Dietrich, W. E. Channel Initiation and the Problem of Landscape Scale. _Science_ **255**, 826–830 (1992).
+
+Wohl, E. The challenges of channel heads. _Earth-Science Reviews_ **185**, 649–664 (2018).
+
 [pdf9] 9 – I Processi Fluviali (Parte 2)
+
+
+
+
