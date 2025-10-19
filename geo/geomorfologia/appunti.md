@@ -2,4 +2,24 @@
 
 “Mechanical weathering breaks rock, a process commonly understood to occur when applied stress (force per unit area) exceeds material strength (the stress at which failurebreakage—occurs). If you hit a rock with a hammer and with sufficient force, the rock breaks or shatters. This is critical cracking, a process in which fractures grow so rapidly that the result is catastrophic failure. But consider a fractured outcrop or cliff. No hammer blows have been applied, yet pervasive fractures are present, often with closer spacing near the cliff top. This implies that these fractures form preferentially near the surface. In weathering, the less familiar process of subcritical cracking is important (Eppes and Keanini 2017). In subcritical cracking, rock fractures propagate slowly at low, subcritical stresses. Crack extension rates of m·s−1 to nm·s−1 or lower are considered slow (Lawn 1993) and can occur at applied stresses that are much lower than the critical values at which catastrophic crack growth occurs (Fig. 2). In materials with preexisting flaws, subcritical cracking may occur because the effects of external applied stresses are amplified at the tips of cracks—precisely the location where bonds must be broken. Microscopic cracks, or microcracks, are found in all rocks (Anders et al. 2014). Microcracks are long (on the order of 100 μm or less) relative to their apertures, and are present within grains, between grains, and at grain boundaries. Given the ubiquity of microcracks, rock mechanics focuses more on crack propagation than on crack initiation.” ([Anderson, 2019, p. 248](zotero://select/library/items/9TIGFG3C)) ([pdf](zotero://open-pdf/library/items/PA4YM88G?page=2))
 
+# Testate di canalizzazione
+
 “A channel head is the upstream-most point of concentrated water flow and sediment transport between definable banks with a longitudinally continuous channel downstream. A channel head can be a relatively diffuse feature, the identification of which is subjective, or a very discrete and prominent break in the surface associated with a headcut.” ([Wohl, 2018, p. 649](zotero://select/library/items/X23B7Q4R)) ([pdf](zotero://open-pdf/library/items/L9VRNPY3?page=1))
+
+# Fascia di canalizzazione
+
+“In these field areas, data from channel heads define a threshold between channeled and unchanneled regions of the landscape. Threshold-based channel” ([Montgomery and Dietrich, 1992, p. 4](zotero://select/library/items/UPAQXWR2)) ([pdf](zotero://open-pdf/library/items/LWI8PKPG?page=4)), vedi figura seguente:
+
+![](channel_head.png)
+
+Intuitivamente se guardo la figura 4D qui sopra quello che vedo è che per alte pendenze locali serve un'area contribuente minore per avere una regione incanalata, mentre se la pendenza è minore allora serve una area contribuente maggiore per avere una regione incanalata; questo a me sembra abbastanza intuitivo.
+
+Dal [pdf9] si hanno queste definizioni:
+
+_unchanneled regions of the landscape_: topografia non incanalata (versanti, piane alluvionali ecc) 
+
+_channeled regions of the landscape_: i canali incisi (reticolo idrografico).
+
+# Bibliografia
+
+[pdf9] 9 – I Processi Fluviali (Parte 2)
