@@ -1,3 +1,13 @@
+# Stagioni
+
+||Solstizio di giugno|Equinozio di settembre|Solstizio di dicembre|Equinozio di marzo|
+|-|-|-|-|-|
+|Raggi ortogonali|Al Tropico del Cancro, lat=23.5N|All'equatore|Al tropico del Capricorno, lat=23.5S|All'equatore|
+|Il sole è sempre sopra orizzonte|Lat>66.5N|in nessun luogo|Lat>66.5S|in nessun luogo|
+|Il giorno dura più della notte|Lat N|in nessun luogo|Lat S|in nessun luogo|
+|Il giorno dura come la notte|Solo all'equatore|Ovunque|Solo all'equatore|ovunque|
+|La notte dura più del giorno|Lat S|in nessun luogo|Lat N|in nessun luogo|
+|Il sole è sempre sotto orizzonte|Lat>66.5S|in nessun luogo|Lat>66.5N|in nessun luogo|
 # Libri utili
 
 https://www.sciencedirect.com/referencework/9780080885223/treatise-on-geomorphology si ricavano informazioni dagli abstract
