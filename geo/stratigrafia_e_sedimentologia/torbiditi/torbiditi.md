@@ -12,3 +12,11 @@ Sopra a 3 inizia una altra sequenza di Bouma.](torbidite_1-annotata.png)
 Nella figura seguente si osserva lo strato Contessa a Gubbio (compreso tra le due linee spezzate di colore rosso).
 
 ![Tra le due spezzate di colore rosso sta lo Strato Contessa a Gubbio.](strato_contessa_gubbio-annotata.png)
+
+Nella figura seguente si osserva una torbidite inclinata di quasi 90°, tra le linee 1 e 2 (in colore rosso) si osserva il letto arenaceo della sequenza di Bouma, tra le linee 2 e 3 (in colore giallo) si osserva la parte a granulometria più fine della sequenza.
+
+![La torbidite in foto è inclinata di quasi 90°, tra le linee 1 e 2 si osserva il letto arenaceo della sequenza di Bouma, tra le linee 2 e 3 si osserva la parte a granulometria più fine della sequenza. ](torbidite_inclinata-annotata.png)
+
+Se la torbidite non fosse stata soggetta alle forze che l'hanno inclinata, avrebbe potuto apparire come nella figura seguente; linee hanno andamento orizzontale e rappresentano la condizione di sedimentazione originale.
+
+![Come sarebbe apparsa la torbidite se non fosse stata soggetta alle forze che l'hanno inclinata.](torbidite_inclinata-annotata-ruotata.png)
