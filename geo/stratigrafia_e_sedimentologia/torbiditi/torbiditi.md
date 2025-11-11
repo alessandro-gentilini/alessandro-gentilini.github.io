@@ -23,3 +23,12 @@ Se la torbidite non fosse stata soggetta alle forze che l'hanno inclinata, avreb
 Nella figura seguente si osserva una torbidite alla scala dell'affioramento; compreso tra le linee spezzate B1 e T1 si osserva il letto arenaceo che costituisce la base della sequenza di Bouma. La parte di foto compresa tra le linee spezzate B1 e B2 mostra il fondo del blocco arenaceo in cui tipicamente si osservano le strutture sedimentarie di controimpronta.
 
 ![Torbidite alla scala dell'affioramento; compreso tra le linee spezzate B1 e T1 si osserva il letto arenaceo che costituisce la base della sequenza di Bouma. La parte di foto compresa tra le linee spezzate B1 e B2 mostra il fondo del blocco arenaceo in cui tipicamente si osservano le strutture sedimentarie di controimpronta.](torbidite_alla_scala_affioramento_1-annotata.png)
+
+Nella figura seguente si osservano alcuni _flute cast_ in cui si è indicato con la lettera B il bulbo e con la lettera A le due ali della struttura. Il verso della paleocorrente è da B ad A.  
+Notare che il bulbo è in rilievo rispetto alla parte circostante: nel _flute cast_ più in basso si sono indicate con N due parti che sono più lontane dal punto di ripresa rispetto al bulbo B che è più vicino al punto di ripresa, detto in altri termini B è in rilievo rispetto ad N.
+
+![Si osservano alcuni _flute cast_ in cui si è indicato con la lettera B il bulbo e con la lettera A le due ali della struttura. Il verso della paleocorrente è da B ad A. Notare che il bulbo è in rilievo rispetto alla parte circostante: nel _flute cast_ più in basso si sono indicate con N due parti che sono più lontane dal punto di ripresa rispetto al bulbo B che è più vicino al punto di ripresa, detto in altri termini B è in rilievo rispetto ad N.](flute_cast_1-annotata.png)
+
+Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 NON sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.
+
+![Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 NON sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.](flute_cast_1-annotata_2.png)
