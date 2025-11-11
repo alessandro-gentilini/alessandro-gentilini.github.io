@@ -29,6 +29,6 @@ Notare che il bulbo è in rilievo rispetto alla parte circostante: nel _flute ca
 
 ![Si osservano alcuni _flute cast_ in cui si è indicato con la lettera B il bulbo e con la lettera A le due ali della struttura. Il verso della paleocorrente è da B ad A. Notare che il bulbo è in rilievo rispetto alla parte circostante: nel _flute cast_ più in basso si sono indicate con N due parti che sono più lontane dal punto di ripresa rispetto al bulbo B che è più vicino al punto di ripresa, detto in altri termini B è in rilievo rispetto ad N.](flute_cast_1-annotata.png)
 
-Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 NON sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.
+Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 **NON** sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.
 
-![Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 NON sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.](flute_cast_1-annotata_2.png)
+![Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 **NON** sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.](flute_cast_1-annotata_2.png)
