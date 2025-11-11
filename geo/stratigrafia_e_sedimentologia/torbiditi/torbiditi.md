@@ -7,6 +7,10 @@ Sopra a 3 inizia una altra sequenza di Bouma.
 
 ![Tra 1 e 2 si osserva il letto arenaceo della sequenza di Bouma, tra 2 e 3 la parte della sequenza a granulometria più fine. Sopra a 3 inizia una altra sequenza di Bouma.](torbidite_1-annotata.png)
 
+Nella figura seguente si alternano peliti torbiditiche a marne epipelagiche. Ma quali sono le prime? Quali le seconde?
+
+![Si alternano peliti torbiditiche a marne epipelagiche. Ma quali sono le prime? Quali le seconde?](torbidite_4-annotata.png)
+
 
 Nella figura seguente si osserva lo strato Contessa a Gubbio (compreso tra le due linee spezzate di colore rosso).
 
