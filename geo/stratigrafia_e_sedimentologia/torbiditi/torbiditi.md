@@ -1,3 +1,5 @@
+# Torbiditi 
+
 Nella figura seguente i segni rossi individuano lo "strato Contessa".
 
 ![Strato Contessa evidenziato dalle due linee di colore rosso (Valle del Santerno).](strato_contessa_santerno-annotata.png)
@@ -11,14 +13,26 @@ Nella figura seguente si alternano peliti torbiditiche a marne epipelagiche. Ma 
 
 ![Si alternano peliti torbiditiche a marne epipelagiche. Ma quali sono le prime? Quali le seconde?](torbidite_4-annotata.png)
 
+Nella figura seguente Verghereto? Che cosa c'è di pertinente?
+
+![Verghereto?](ignota_1.png)
+
+Nella figura seguente si osserva uno _slump_ all'interno del rettangolo di colore rosso.
+
+![Uno _slump_ si osserva all'interno del rettangolo di colore rosso.](slump-annotata.png)
+
 
 Nella figura seguente si osserva lo strato Contessa a Gubbio (compreso tra le due linee spezzate di colore rosso).
 
 ![Tra le due spezzate di colore rosso sta lo Strato Contessa a Gubbio.](strato_contessa_gubbio-annotata.png)
 
+Nella figura seguente la base areneacea di una torbidite con dimensioni metriche è compresa tra le linee spezzate rosse 1 e 2, usare la casa in costruzione come scala.
+
+![Tra le spezzate rosse 1 e 2 si osserva la base arenacea di una torbidite di dimensioni metriche (vedere la casa in costruzione come scala).](base_torbidite_metrica-annotata.png)
+
 Nella figura seguente si osserva una torbidite inclinata di quasi 90°, tra le linee 1 e 2 (in colore rosso) si osserva il letto arenaceo della sequenza di Bouma, tra le linee 2 e 3 (in colore giallo) si osserva la parte a granulometria più fine della sequenza.
 
-![La torbidite in foto è inclinata di quasi 90°, tra le linee 1 e 2 si osserva il letto arenaceo della sequenza di Bouma, tra le linee 2 e 3 si osserva la parte a granulometria più fine della sequenza. ](torbidite_inclinata-annotata.png)
+![La torbidite in foto è inclinata di quasi 90°, tra le linee 1 e 2 si osserva il letto arenaceo della sequenza di Bouma, tra le linee 2 e 3 si osserva la parte a granulometria più fine della sequenza.](torbidite_inclinata-annotata.png)
 
 Se la torbidite non fosse stata soggetta alle forze che l'hanno inclinata, avrebbe potuto apparire come nella figura seguente; linee hanno andamento orizzontale e rappresentano la condizione di sedimentazione originale.
 
@@ -36,3 +50,5 @@ Notare che il bulbo è in rilievo rispetto alla parte circostante: nel _flute ca
 Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 **NON** sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.
 
 ![Prestare attenzione che nella figura seguente le due linee di colore verde che divergono da 1 a 2 **NON** sono le ali del _flute cast_ perché manca il bulbo in rilievo in corrispondenza di 1.](flute_cast_1-annotata_2.png)
+
+![Nella figura sono annotati i _flute cast_ che stanno sul fondo della base di una torbidite. B indica il bulbo e le A indicano le ali del _flute cast_. Il piano che contiene questi _flute cast_ era in origine orizzontale e rivolto verso il basso.](turbidite_for_lazy_people-annotata.png)
