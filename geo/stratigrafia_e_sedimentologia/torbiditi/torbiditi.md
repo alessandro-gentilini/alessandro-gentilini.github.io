@@ -91,3 +91,37 @@ I _chevron cast_ sono stati tracciati da un elemento che sfiorava appena la supe
 La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992, descrive i _chevron cast_, vedi figura seguente.
 
 ![La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992.](chevron_cast-ricci_lucchi_sedimentografia.png)
+
+## Cosa c'è di pertinente in questa?
+
+![Cosa c'è di pertinente in questa?](ignota_2.png)
+
+## Cosa c'è di pertinente in questa?
+
+![Cosa c'è di pertinente in questa?](ignota_3.png)
+
+## Convoluzioni 1
+
+![](convoluzioni_1-annotata.png)
+
+## Forse convoluzioni?
+
+![](forse_convoluzioni.png)
+
+## Laminazione piano parallela
+
+Tra le linee spezzate rosse 1 e 2 si osserva l'apertura di una laminazione piano parallela. Subito sopra si ha un sottilissimo intervallo $b$ della sequenza di Bouma e poi l'intervallo $c$ (ma dove sono $b$ e $c$)?
+
+![](apertura_su_laminazione_piano_parallela-annotata.png)
+
+## Strutture da fuga d'acqua
+
+All'interno dei rettangoli rossi si osservano strutture convolute dovute a fughe d'acqua.
+
+![](fuga_acqua-annotata.png)
+
+## Forse strutture da fuga d'acqua?
+
+![](forse_fughe_acqua.png)
+
+
