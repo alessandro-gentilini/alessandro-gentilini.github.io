@@ -81,3 +81,13 @@ Nella figura seguente (_turbidite for lazy people_ che non si devono sforzare pe
 Altri _flute cast_, il bulbo è indicato dalla lettera B, le ali dalla lettere A. Il verso della paleocorrente era da B ad A.
 
 ![Altri _flute cast_, il bulbo è indicato dalla lettera B, le ali dalla lettere A. Il verso della paleocorrente era da B ad A.](flute_cast_2-annotata.png)
+
+## _Chevron cast_ o del solletico
+
+I _chevron cast_ sono stati tracciati da un elemento che sfiorava appena la superficie. La paleocorrente fluiva verso il vertice delle V annotate in rosso.
+
+![I _chevron cast_ sono stati tracciati da un elemento che sfiorava appena la superficie. La paleocorrente fluiva verso il vertice delle V annotate in rosso.](chevron_cast-annotata.png)
+
+La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992, descrive i _chevron cast_, vedi figura seguente.
+
+![La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992.](chevron_cast-ricci_lucchi_sedimentografia.png)
