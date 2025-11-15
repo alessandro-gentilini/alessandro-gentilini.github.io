@@ -92,9 +92,17 @@ La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992,
 
 ![La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992.](chevron_cast-ricci_lucchi_sedimentografia.png)
 
-## Cosa c'è di pertinente in questa?
+## _Groove cast_ (solchi da trascinamento)
 
-![Cosa c'è di pertinente in questa?](ignota_2.png)
+Sopra la linea rossa si vede un _groove cast_ (in italiano: solco di trascinamento); indicala la direzione della paleocorrente ma non il verso.
+
+![Sopra la linea rossa si vede un _groove cast_ (in italiano: solco di trascinamento); indicala la direzione della paleocorrente ma non il verso.](groove_cast-annotata.png)
+
+
+Nella figura seguente si ha la descrizione del solco di trascinamento.  
+Se la struttura fosse poco in rilievo allora piuttosto che solco si chiamerebbe stria (vedi tavola 103 p.137 in Ricci Lucchi, Sedimentografia).
+
+![Descrizione del solco di trascinamento. Se la struttura fosse poco in rilievo allora piuttosto che solco si chiamerebbe stria (vedi tavola 103 p.137 in Ricci Lucchi, Sedimentografia).](groove_cast-ricci_lucchi_sedimentografia.png)
 
 ## Cosa c'è di pertinente in questa?
 
