@@ -110,13 +110,15 @@ I _groove cast_ possono essere anche non paralleli perché la paleocorrente può
 
 ![I _groove cast_ possono essere anche non paralleli perché la paleocorrente può variare la propria direzione di qualche grado (valori tipici tra 5° e 10°). Le linee rosse e verdi indicano due direzioni diverse della paleocorrente.](groove_cast_non_paralleli-annotata.png)
 
-## Convoluzioni 1
+## Convoluzioni
 
 ![](convoluzioni_1-annotata.png)
 
-## Forse convoluzioni?
+## Lamina ondulata
 
-![](forse_convoluzioni.png)
+Tra le due linee rosse si osserva una laminazione ondulata che è compatibile con l'intervallo $b$ della sequenza di Bouma.
+
+![Tra le due linee rosse si osserva una laminazione ondulata che è compatibile con l'intervallo $b$ della sequenza di Bouma.](lamina_ondulata-annotata.png)
 
 ## Laminazione piano parallela
 
