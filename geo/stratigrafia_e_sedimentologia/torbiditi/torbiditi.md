@@ -94,7 +94,7 @@ La Tavola 101 nel libro Sedimentografia di Ricci Lucchi, seconda edizione, 1992,
 
 ## _Groove cast_ (solchi da trascinamento)
 
-Sopra la linea rossa si vede un _groove cast_ (in italiano: solco di trascinamento); indicala la direzione della paleocorrente ma non il verso.
+Sopra la linea rossa, e ad essa parallela si vede un _groove cast_ (in italiano: solco di trascinamento); il _groove cast_ indica la la direzione della paleocorrente ma non il verso. In questo caso la direzione è parallela alla linea rossa.
 
 ![Sopra la linea rossa si vede un _groove cast_ (in italiano: solco di trascinamento); indicala la direzione della paleocorrente ma non il verso.](groove_cast-annotata.png)
 
@@ -104,9 +104,11 @@ Se la struttura fosse poco in rilievo allora piuttosto che solco si chiamerebbe 
 
 ![Descrizione del solco di trascinamento. Se la struttura fosse poco in rilievo allora piuttosto che solco si chiamerebbe stria (vedi tavola 103 p.137 in Ricci Lucchi, Sedimentografia).](groove_cast-ricci_lucchi_sedimentografia.png)
 
-## Cosa c'è di pertinente in questa?
+## _Groove cast_ non paralleli
 
-![Cosa c'è di pertinente in questa?](ignota_3.png)
+I _groove cast_ possono essere anche non paralleli perché la paleocorrente può variare la propria direzione di qualche grado (valori tipici tra 5° e 10°). Le linee rosse e verdi indicano due direzioni diverse della paleocorrente.
+
+![I _groove cast_ possono essere anche non paralleli perché la paleocorrente può variare la propria direzione di qualche grado (valori tipici tra 5° e 10°). Le linee rosse e verdi indicano due direzioni diverse della paleocorrente.](groove_cast_non_paralleli-annotata.png)
 
 ## Convoluzioni 1
 
