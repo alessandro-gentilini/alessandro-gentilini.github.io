@@ -114,7 +114,7 @@ I _groove cast_ possono essere anche non paralleli perché la paleocorrente può
 
 ![](convoluzioni_1-annotata.png)
 
-## Lamina ondulata
+## Laminazione ondulata
 
 Tra le due linee rosse si osserva una laminazione ondulata che è compatibile con l'intervallo $b$ della sequenza di Bouma.
 
