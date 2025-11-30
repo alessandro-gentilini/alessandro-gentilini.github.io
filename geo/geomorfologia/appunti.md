@@ -8,6 +8,19 @@
 |Il giorno dura come la notte|Solo all'equatore|Ovunque|Solo all'equatore|ovunque|
 |La notte dura più del giorno|Lat S|in nessun luogo|Lat N|in nessun luogo|
 |Il sole è sempre sotto orizzonte|Lat>66.5S|in nessun luogo|Lat>66.5N|in nessun luogo|
+
+# Erosione e sollevamento
+
+Vedi script [erosione_e_sollevamento.py](erosione_e_sollevamento.py): un cilindro di densità $\rho_C$, raggio $r$ ed altezza $a+b$ galleggia in un liquido di densità $\rho_L$. Una parte alta $a$ è immersa, la restante parte alta $b$ è emersa.
+
+Il principio di Archimede dice che il cilindro è in equilibrio perché il suo peso è bilanciato dal peso del volume di liquido spostato; questo equilibrio è espresso dalla equazione $b=a\frac{\rho_L-\rho_C}{\rho_C}$.
+
+Nella parte emersa del cilindro si pratica un foro coassiale di diametro $\gamma$ e profondità $\gamma$; $\gamma\lt 2r$; questo foro simula l'erosione. Il cilindro raggiunge un nuovo equilibrio risultando immerso per una parte alta $\alpha$ ed emerso per una parte alta $\beta$.  
+L'altezza complessiva del cilindro non cambia quindi vale l'equazione $a+b=\alpha+\beta$.
+
+Il nuovo equilibrio è espresso dall'equazione $\rho_C\left(\alpha r^2+\beta r^2-\frac{\gamma^3}{4}\right)=\alpha r^2 \rho_L$ (il peso della massa emersa è uguale al peso del liquido spostato dalla massa immersa); mettendo a sistema le tre equazioni suddette e risolvendo per $\alpha$, $\beta$ e $b$, si ottiene che $\beta=b+\frac{\gamma^3}{4r^2}\frac{\rho_C}{\rho_L}$; quindi nel nuovo equilibrio la parte emersa è superiore a quella emersa prima dell'erosione.
+
+
 # Libri utili
 
 https://www.sciencedirect.com/referencework/9780080885223/treatise-on-geomorphology si ricavano informazioni dagli abstract
