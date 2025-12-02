@@ -3,7 +3,11 @@ import subprocess
 import sys
 import natsort
 
-folder_path = sys.argv[1]
+if len(sys.argv) < 2:
+    print("Usage: python rilega.py <nome_cartella_senza_punto_slash_davanti_senza_slash_finale>")
+    sys.exit(1)
+
+folder_path = sys.argv[1].rstrip('/')
 
 # Get a sorted list of all PDF files in the folder
 pdf_files = natsort.natsorted([f for f in os.listdir(folder_path) if f.endswith('.pdf')])
