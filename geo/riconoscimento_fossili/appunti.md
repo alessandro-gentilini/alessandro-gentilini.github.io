@@ -45,6 +45,8 @@ _Nomen protectum_ = Nel caso di sinonimia se il nome più antico è oscuro e in 
 
 # Periodi
 
+Scaricare pdf della carta cronostratigrafica internazione configurandola in vari modi: [https://stratigraphy.org/chart](https://stratigraphy.org/chart).
+
 ## Da sapere a memoria - Eoni  
 Precambriano - Fanerozoico
 
