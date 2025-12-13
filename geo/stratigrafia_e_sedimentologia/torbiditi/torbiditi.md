@@ -4,6 +4,10 @@
 
 Nella figura seguente i segni rossi individuano lo "strato Contessa".
 
+    Lo strato Contessa è la coppia arenaria e pelite ma da lontano si vede solamente l'arenaria.  
+    -- 
+    Amorosi, escursione 21 novembre 2025.
+
 ![Strato Contessa evidenziato dalle due linee di colore rosso (Valle del Santerno).](strato_contessa_santerno-annotata.png)
 
 ## Sequenza di Bouma
@@ -135,5 +139,12 @@ All'interno dei rettangoli rossi si osservano strutture convolute dovute a fughe
 ## Forse strutture da fuga d'acqua?
 
 ![](forse_fughe_acqua.png)
+
+## Osservazioni sulle paleocorrenti (non fatta a lezione)
+
+    Dalla disposizione della stratificazione si può dedurre la direzione media delle correnti che l'hanno formata o paleocorrenti. Da tali informazioni e da altre di vario genere è possibile ricostruire i paleoclimi, che possono essere correlati con le antiche posizioni delle placche tettoniche rispetto ai poli.
+
+Tratto da 
+[Gioacchino Lena e Gaetano Osso, "L'interazione geomorfologica tra spiagge e dune".](https://www.isprambiente.gov.it/files/dune/l-interazione-geomorfologica-lena-osso.pdf)
 
 
