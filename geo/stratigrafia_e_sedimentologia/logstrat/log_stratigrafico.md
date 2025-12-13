@@ -164,7 +164,33 @@ Per esempio si nota come gli strati non abbiano continuità laterale (vanno asso
 
 È utile arricchire lo sketch accompagnandolo per esempio con log stratigrafici, qui sarebbe utile disegnare quello indicato dal segno rosso 1 e quello 2. Se si disegnasse solamente 1 (o solamente 2) questo non spiegherebbe completamente l'affioramento.
 
+Un caso tipico in cui lo sketch aggiunge informazioni rispetto al log è quando si vogliono rappresentare le geometrie degli strati, per esempio strati lenticolari si apprezzano nello sketch ma non nel log stratigrafico.
+
 ![Figura 5.4 in Nichols.](Slide5-annotata.JPG)
+
+# Linee guida per disegnare uno sketch
+
+Alcune linee guida per disegnare uno sketch, illustrate dal professor Amorosi il 28 novembre 2025 durante l'escursione a Sasso Marconi (BO).
+
+0) La prima indicazione è sempre quella di analizzare accuratamente il paesaggio/affioramento prima di disegnarlo; magari scrivere una lista delle cose che si vogliono rappresentare nello sketch. In altri termini: pensare bene prima di disegnare, non iniziare a disegnare seguendo le forme del paesaggio/affioramento senza averle prima interpretate.
+
+1) Tipicamente tracciare lo sketch con l'orizzonte parallelo al lato lungo della pagina.
+
+2) Prima di disegnare, individuare nel paesaggio/affioramento la parte centrale e gli estremi che si vogliono rappresentare in scala sul quaderno, osservare anche quanto sta al primo quarto e al terzo quarto.
+
+3) Disegnare la linea che divide il cielo dalla terra (per esempio il profilo di una montagna).
+
+4) Disegnare l'estremo sinistro e destro del paesaggio/affioramento, poi la parte centrale; osservare attentamente il primo quatro e il terzo quarto e disegnarli.
+
+5) Disegnare qualche eventuale punto di riferimento artificiale (una campanile, un traliccio, una strada) per aiutare nell'orientamento.
+
+6) Disegnare con un bordo leggero tutti gli affioramenti.
+
+7) Disegnare con appropriata simbologia le litologie.
+
+8) Tipicamente non è un disegno naturalistico, quindi non disegnare boschi, cespugli, alberi.
+
+
 
 # Esempi 
 
