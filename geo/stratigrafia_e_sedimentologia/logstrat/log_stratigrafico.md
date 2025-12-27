@@ -96,6 +96,22 @@ Il log nella figura seguente corrisponde a questa descrizione testuale dal basso
 
 Notare nella figura precedente che in corrispondenza del contatto graduale si è inserito il simbolo di silt (vedi tra 1 m e 1.2 m) tra la sabbia grossa sottostante e l'argilla sovrastante.
 
+## Log "aperto" o "log chiuso"?
+
+Quanto segue non è stato detto a lezione ma ad un esame orale.  
+La parte di base del log, così come la parte superiore, può essere contraddistinta dalla presenza (log "chiuso") o dall'assenza (log "aperto") di un segmento orizzontale che individui la base, o rispettivamente, il tetto.
+
+|Log "aperto"|Log "chiuso"|
+|-|-|
+|![Log "aperto".](./log_aperto.png)|![Log "chiuso"](./log_chiuso.png)|
+|Notare l'assenza di linea orizzontale alla base delle peliti e al tetto della ghiaia.|Notare la presenza di linea orizzontale alla base delle peliti e al tetto della ghiaia.|
+
+Se per esempio si disegna il log basandosi su una foto in cui non è chiaramente presente il termine alla base o al tetto (vedi figura seguente) allora è meglio disegnare un log "aperto"; altrimenti "chiuso".
+
+![Tavola 22, "Stratificazione: gerarchia e ciclicità (2)", pagina 45 di Ricci Lucchi, "Sedimentografia", Bologna, 1992, Zanichelli.](./tavola_22.png)
+
+
+
 ## Log per affioramento osservato da lontano
 
 Il log per l'affioramento osservato da lontano segue le stesse regole di quello alla scala dell'affioramento con l'importante eccezione dei **contatti che non devono mai essere rappresentati come graduali** (perché difficilmente apprezzabili come tali nell'osservazione da lontano).
@@ -259,12 +275,12 @@ La figura seguente mostra un esempio in cui lo sketch è più indicato rispetto 
 Se invece si osserva l'affioramento da lontano l'altezza va stimata.
 
 3) Disegnare l'asse verticale con la scala degli spessori degli strati, indicare l'opportuna unità di misura (metri, centimetri, eccetera).  
-Disegnare almeno tre tacche: in fondo, a metà, in alto (è il fondo scala misurato o stimato al punto precedente).
+Disegnare almeno tre tacche: in fondo (tipicamente scrivere qui la cifra zero), a metà, in alto (è il fondo scala misurato o stimato al punto precedente).
 
 4) Disegnare nella parte alta del log l'asse orizzontale della granulometria e segnare le quattro tacche: Argilla, Sabbia Fine, Sabbia Grossa, Ghiaia.
 
 5) Individuare sull'affioramento lo strato più in basso ed iniziare a disegnarlo in scala partendo dalla parte più bassa del log.  
-**NOTA BENE:** disegnare partendo sempre dal basso.
+**NOTA BENE:** disegnare partendo sempre dal basso.  
 
 6) Disegnare la litologia del primo strato.
 
