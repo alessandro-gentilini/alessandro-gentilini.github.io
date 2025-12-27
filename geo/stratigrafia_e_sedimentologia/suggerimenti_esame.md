@@ -85,7 +85,7 @@ Il minimo che è necessario sapere bene:
 * Ripple da onda  
 * Bioturbazioni
 
-L'esempio di interpretazione a cui avevo accennato: ammettiamo che abbiate correttamente riconosciuto la presenza di una stratificazione incrociata concava, ammettiamo anche che abbiate stimato correttamente uno spessore superiore al metro, a questo punto l'interpretazione potrebbe essere la risposta a questa domanda: è una struttura sub-aerea (duna) oppure sub-acquea (sand wave)?
+L'esempio di interpretazione a cui avevo accennato: ammettiamo che abbiate correttamente riconosciuto la presenza di una stratificazione incrociata tabulare, ammettiamo anche che abbiate stimato correttamente uno spessore superiore al metro, a questo punto l'interpretazione potrebbe essere la risposta a questa domanda: è una struttura sub-aerea (duna) oppure sub-acquea (sand wave)?
 
 ### Facies e ambienti
 
