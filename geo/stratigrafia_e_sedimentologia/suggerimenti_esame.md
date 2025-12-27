@@ -21,6 +21,10 @@ Bologna, 1992, Zanichelli.
 
 ![Il libro da cui sono tratte le fotografie oggetto dell'esame di Stratigrafia e Sedimentologia.](sedimentografia.png)
 
+Un suggerimento sulla consultazione del libro: se state cercando una precisa struttura sedimentaria, non limitatevi all'indice analitico ma consultate anche il "Glossario": più che un glossario vero e proprio si tratta di un vocabolario di termini dall'Inglese all'Italiano; se conoscete il nome in inglese della struttura sedimentaria allora cercatela nel glossario per trovarne l'equivalente in italiano, a questo punto cercate la voce in italiano nell'indice analitico.
+
+Il libro si trova in inglese a questo link su [archive.org](https://web.archive.org/web/20250622080636/https://www.columbia.edu/dlc/cup/ricci/index.html).
+
 In poche parole l'esame orale è un dialogo che si compone di tre parti:
 
 1) discussione sulla fotografia
@@ -43,7 +47,7 @@ Se non capite a che scala sia la foto, potete chiederlo ma sforzatevi di arrivar
 
 Per esempio a me ha chiesto questa foto qui sotto che non riporta elementi utili per la scala, però mi ha detto che era una quindicina di metri.
 
-![Tavola 22, "Stratificazione: gerarchia e ciclicità (2)", pagina 45.](tavola_22.png)
+![Tavola 22, "Stratificazione: gerarchia e ciclicità (2)", pagina 45 di Ricci Lucchi, "Sedimentografia", Bologna, 1992, Zanichelli.](tavola_22.png)
 
 Il prof può chiedere anche foto che non rappresentano un affioramento, per esempio una "carota" (Tavola 68, "Gradazione normale o diretta", pagina 99) oppure una profilo sismico (Tavola 13, "Canali erosivi in sedimenti attuali e recenti", la sola foto a pagina 33); in questi casi in genere dà qualche spiegazione preliminare, non spaventatevi perché vi guiderà.
 
@@ -55,21 +59,54 @@ Prima di tutto si deve fare la descrizione di quello che si vede e solo successi
 
 La descrizione ha l'obiettivo di essere oggettiva mentre l'interpretazione è per definizione soggettiva, più avanti farò un esempio.
 
-Per la descrizione
+Per la descrizione si può partire dalla cosiddetta "litologia", la domanda "quante litologie ci sono?" significa "quante sono le rocce diverse mostrate nella fotografia?".  
+Spesso una indicazione diagnostica è il colore, oppure, nel caso tipico della maggior parte delle foto del libro, il tono di grigio: questo significa che a toni di grigio diversi (più chiari o più scuri) sono associate rocce diverse. Non è garantito che rocce diverse appaiano con toni di grigio diversi ma è un buon punto di partenza.  
+Tipicamente poi, in questo contesto, per litologia si intende la granulometria della roccia e non la composizione o il tipo di roccia; il risultato che si vuole ottenere è quindi individuare peliti (roccie dovute alla diagenesi di fanghi), arenarie (rocce dovute alla diagenesi di sabbie) o conglomerati (rocce dovute alla diagenesi di ghiaia).
 
-Per esempio 
+Da qui in poi inizia a prevalere la parte interpretativa su quella descrittiva.
 
+### Strutture sedimentarie
 
+Il passo successivo è riconoscere e descrivere le eventuali strutture sedimentarie presenti.
 
-1) Prima descrizione litologie, poi descrizione strutture sedimentarie, poi tipicamente disegno del log stratigrafico, poi riconoscimento di facies e interpretazione facies/ambienti. Poi tipicamente domanda collegata di stratigrafia sequenziale.
+Il minimo che è necessario sapere bene:
 
-2) Non studiarlo a memoria
+* Stratificazione/laminazione piano parallela  
+* Stratificazione incrociata concava  
+* Stratificazione incrociata tabulare  
+* Stratificazione incrociata cuneiforme  
+* Stratificazione concava convessa ad _hummocky_ (abbreviata con HCS _Hummocky Cross Stratification_)  
+* Ripple da onda  
+* Bioturbazioni
 
-3) Non dire subito l'interpretazione anche se la si sa gia.
+L'esempio di interpretazione a cui avevo accennato: ammettiamo che abbiate correttamente riconosciuto la presenza di una stratificazione incrociata concava, ammettiamo anche che abbiate stimato correttamente uno spessore superiore al metro, a questo punto l'interpretazione potrebbe essere la risposta a questa domanda: è una struttura sub-aerea (duna) oppure sub-acquea (sand wave)?
 
-indice, usare il glossario
+### Facies e ambienti
+
+Progredendo verso l'interpretazione si arriva al riconoscimento di facies e ambienti di deposizione.
+
+Qui il prof potrà iniziare ad intavolare un dialogo con voi in cui non è detto che ci sia la risposta giusta e quella sbagliata; il prof potrà guidarvi nella discussione e nell'interpretazione: cercate di immedesimarvi in un suo giovane collega meno esperto piuttosto che in un allievo che sta sostenendo un esame.  
+Quello che il prof si aspetta da voi è un ragionamento logico basato sulle vostre conoscenze e non un risposta preconfezionata scelta fra una lista di cose imparate a memoria.
+
 
 ## Disegno del log stratigrafico
 
 Vedi [la lezione sul log stratigrafico](./logstrat/log_stratigrafico.md).
 
+## Domanda sulla stratigrafia sequenziale
+
+La domanda sulla stratigrafia sequenziale può collegarsi al log che avete appena disegnato, per esempio nel log potrebbe esserci una tendenza _shallowing up_ oppure _deepening up_ che andrà poi discussa in termini di stratigrafia sequenziale.
+
+Oppure la domanda potrebbe essere non collegata alla foto e al log.
+
+## Conclusioni
+
+1) Non studiate a memoria il libro
+
+2) Tenete sempre a mente la differenza tra descrizione (oggettiva) e interpretazione (soggettiva).
+
+3) A domande abbastanza aperte imponetevi di ragionare per passi logici e collegati fra loro piuttosto che cercare una risposta come se fosse un quiz.  
+La domanda "quali sono i limiti granulometrici della sabbia?" (la cui risposta corretta è "tra un sedicesimo di millimetro e due millimetri") è una domanda tipo quiz a cui dovete saper rispondere e che sopratutto ammette una sola risposta corretta... ma a domande più aperte o "vaghe" dovete rispondere ragionando sulla base delle vostre conoscenze sia di Stratigrafia e Sedimentologia che anche degli esami del primo anno (sopratutto Geologia e Geografia e Paleontologia).  
+Non scoraggiatevi! Molto spesso queste domande aperte sono ampiamente alla vostra portata... se non lo sono forse il prof sta già valutando se darvi la lode!
+
+In bocca al lupo!
