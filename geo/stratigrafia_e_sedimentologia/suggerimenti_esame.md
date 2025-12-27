@@ -1,3 +1,9 @@
+---
+title: "Suggerimenti per esame di Stratigrafia e Sedimentologia"
+date: 2025-12-27
+author: "Alessandro Gentilini"
+---
+
 # Suggerimenti per esame di Stratigrafia e Sedimentologia con il professor Alessandro Amorosi (a.a. 2025/26)
 
     L'esame prevede una prova pratica di riconoscimento di strutture
