@@ -47,7 +47,7 @@ Io vi consiglio di seguire questi passi:
 
 Siccome poi dovrete disegnare il log stratigrafico in scala, per prima cosa tentate di capire se si tratta della foto di un affioramento visto da vicino oppure da lontano.
 
-Per farsi una idea delle dimensioni, si può per esempio vedere se c'è della vegetazione (un cespuglio potrebbe avere una altezza attorno al metro, un albero attorno ai tre-quatro metri) oppure un oggetto di dimensioni note (tipicamente il martello da geologo che è lungo una trentina di cm).
+Per farsi una idea delle dimensioni, si può per esempio vedere se c'è della vegetazione (un cespuglio potrebbe avere una altezza attorno al metro, un albero attorno ai tre-quattro metri) oppure un oggetto di dimensioni note (tipicamente il martello da geologo che è lungo una trentina di cm).
 
 Se non capite a che scala sia la foto, potete chiederlo ma sforzatevi di arrivarci da soli con un ragionamento logico.
 
