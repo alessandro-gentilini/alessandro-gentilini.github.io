@@ -4,6 +4,45 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
+# Ripasso di chimica (NdA)
+
+Numeri di pagina riferiti al libro: 
+Valitutti et al., "Chimica concetti e modelli - Terza edizione", Bologna, 2023, Zanichelli.
+
+## Tavola periodica
+
+p.222  
+La **tavola periodica** è una tabella, le righe sono dette **periodi**, le colonne sono dette **gruppi**.
+
+## Raggio atomico
+
+p.228  
+**DA FARE**
+
+## Elettronegatività
+
+p.233  
+L'**elettronegatività di un elemento** è la tendenza di un atomo ad attrarre a sé gli elettroni coinvolti in un legame.  
+Dipende dalla struttura elettronica dell'elemento in questione e dalla struttura dell'elemento a cui si lega.  
+Esistono varie scale di misura, a numeri grandi corrispondono elettronegatività grandi; una scala tipica è quella dovuta a Pauling 1932.  
+Secondo Pauling Fl (gruppo VII) ha la maggior elettronegatività.  
+Nella tavola periodica cresce lungo un periodo da sx a dx (**MOTIVARE CON RAGGIO**).  
+Nella tavola periodica diminuisce scendendo lungo un gruppo (**MOTIVARE CON RAGGIO**).
+
+## Valenza 
+
+p.222  
+**Elettroni di valenza** sono gli elettroni più esterni di un elemento, determinano la periodicità di alcune proprietà degli elementi.  
+p.223  
+**Guscio (strato) di valenza** è il sottolivello più esterno.  
+p.327  
+La **valenza di un atomo** corrisponde al numero di legami che esso è in grado di formare. Nella moderna nomenclatura, al posto della valenza, si preferisce usare il numero di ossidazione.
+
+## Numero di ossidazione (n.o.)
+
+p.327  
+In una molecola (o in uno ione poliatomico), il **numero di ossidazione** di ogni atomo coinvolto, è la carica che l'atomo assumerebbe se gli elettroni di legame fossero assegnati all'atomo più elettronegativo.
+
 # "Hateful eight"
 
 O - Ossigeno  
