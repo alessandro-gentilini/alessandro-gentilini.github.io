@@ -43,6 +43,19 @@ La **valenza di un atomo** corrisponde al numero di legami che esso è in grado 
 p.327  
 In una molecola (o in uno ione poliatomico), il **numero di ossidazione** di ogni atomo coinvolto, è la carica che l'atomo assumerebbe se gli elettroni di legame fossero assegnati all'atomo più elettronegativo.
 
+p.328  
+Tabella con regole:  
+
+Procedimento: tipicamente si imposta l'equazione  
+$q=\Sigma no_i \cdot n_i$  
+$no_i$ n.o. dell'elemento $i$-esimo della formula  
+$n_i$ numero di atomi dell'elemento $i$-esimo presenti nella formula  
+$q$ carica totale della formula: 0 se composto neutro, altrimenti la carica dello ione  
+
+Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e altri elementi hanno più di un n.o., in questo ultimo caso si consulta la tavola periodica e si scelgono i n.o. che soddisfano l'equazione. Se c'è più di un set di n.o. che soddisfano l'equazione allora non so come fare :-).
+
+
+
 # "Hateful eight"
 
 O - Ossigeno  
