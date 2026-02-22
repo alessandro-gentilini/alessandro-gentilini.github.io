@@ -9,6 +9,17 @@ date: "14 settembre 2025"
 Numeri di pagina riferiti al libro: 
 Valitutti et al., "Chimica concetti e modelli - Terza edizione", Bologna, 2023, Zanichelli.
 
+## Ioni
+
+Gli ioni negatitivi (anioni) sono tipicamente più grandi degli ioni positivi (cationi) perché essendo negativi hanno più elettroni e quindi occupano un volume maggiore.
+
+<pre>
+In ordine alfabetico:
+In alto:  Anodo  + attira ioni negativi che si chiamano quindi anioni
+In basso: Catodo - attira ioni positivi che si chiamano quindi cationi
+</pre>
+
+
 ## Tavola periodica
 
 p.222  
@@ -54,6 +65,37 @@ $q$ carica totale della formula: 0 se composto neutro, altrimenti la carica dell
 
 Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e altri elementi hanno più di un n.o., in questo ultimo caso si consulta la tavola periodica e si scelgono i n.o. che soddisfano l'equazione. Se c'è più di un set di n.o. che soddisfano l'equazione allora non so come fare :-).
 
+# Riassunto pdf 3
+
+Ipotesi di ioni come sfere rigide.  
+
+Lo ione positivo (catione) è più piccolo dello ione negativo (anione).  
+
+Il numero di coordinazione è il numero di anioni che circonda un catione.  
+
+Il poliedro di coordinazione descrive la disposizione geometrica degli atomi che si coordinano.
+
+Le coordinazioni regolari sono sei:  
+* n.c.=2 coordinazione lineare (anione-catione-anione su una linea)
+* n.c.=3 coordinazione triangolare (anioni ai vertici di un triangolo, quindi un piano, il catione è al centro del triangolo)
+* n.c.=4 coordinazione tetraedrica (anioni ai vertici di un tetraedro, catione al centro del tetraedro)
+* n.c.=6 coordinazione ottaedrica (anioni ai vertici di un ottaedro, catione al centro del tetraedro)
+* n.c.=8 coordinazione cubica (anioni ai vertici di un cubo, catione al centro del cubo)
+*n.c.=12 coordinazione dodecaedrica (tre anioni sotto al catione, sei anioni a "salvagente" attorno al catione, tre anioni sopra al catione)
+
+Intuitivamente al crescere del numero di coordinazione cresce il diametro del catione; questo perché "il vuoto disponibile fra gli anioni va crescendo" (immaginare per esempio il vuoto che cresce da triangolare a ottaedrica; nel caso triangolare il vuoto è quello al centro di tre circonferenze nello stesso piano e mutuamente tangenti; nel caso ottaedrico il vuoto è quello al centro di quattro circonferenze nello stesso piano e mutuamente tangenti).
+
+Il tipo di coordinazione dipende dal rapporto tra raggio cationico e raggio anionico, tale rapporto va da 0.155 ad 1.  
+Rapporto < 0.155 dà coordinazione lineare,  
+0.155 < rapporto < 0.225 dà coordinazione triangolare,  
+0.225 < rapporto < 0.414 dà coordinazione tetraedrica,  
+0.414 < rapporto < 0.732 dà coordinazione ottaedrica,  
+0.732 < rapporto < 1 dà coordinazione cubica,  
+rapporto = 1 dà coordinazione dodecaedrica.
+
+I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
+
+La coordinazione dodecaedrica (n.c.=12) è tipica dei metalli nativi perché composti dalla stessa specie atomica.
 
 
 # "Hateful eight"
