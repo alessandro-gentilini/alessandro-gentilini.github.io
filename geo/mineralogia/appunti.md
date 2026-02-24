@@ -4,6 +4,8 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
+Aggiornati al 24 febbraio 2026.
+
 # Ripasso di chimica (NdA)
 
 Numeri di pagina riferiti al libro: 
@@ -100,7 +102,8 @@ rapporto = 1 dà coordinazione dodecaedrica.
 
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
-I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.
+I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.  
+NOTA BENE: il raggio ionico dipende dal numero di coordinazione.
 
 ## Seconda regola di Pauling
 
@@ -128,10 +131,21 @@ Quando tutti i legami hanno ovunque la stessa forza la struttura si dice **isode
 ### Strutture anisodesmiche
 
 Esempio: $CaCO_{3}$ (Carbonato di calcio)  
-Dalla tavola periodica sappiamo che Ca ha numero di ossidazione +2 quindi sarà presente come catione $Ca^{2+}$, quindi per la neutralità del composto si ha che l'altro ione deve essere $(CO_{3})^{2-}$ (NdA qui però bisogna sapere a priori che il composto si deve dividere in due parti: Ca e $CO_{3}$).  
-Dalla tavola periodica sappiamo che 
+Dalla tavola periodica sappiamo che Ca ha numero di ossidazione +2 quindi sarà presente come catione $Ca^{2+}$, quindi per la neutralità del composto si ha che l'altro ione deve essere $(CO_{3})^{2-}$ (NdA qui però bisogna sapere a priori che il composto si deve dividere in due parti: Ca e $CO_{3}$).
 
- Sappiamo che 
+Per quanto riguarda $(CO_{3})^{2-}$, dalle regole dei numeri di ossidazione (o, in alternativa, dalla tavola periodica) sappiamo che O ha n.o.=-2; sempre dalla tavola, per C abbiamo questi possibili n.o.: -4, +2, +4, impostiamo quindi l'equazione $q=\Sigma no_i \cdot n_i=no_{C}\cdot 1+no_{O}\cdot 3$ che diventa  
+$-2=no_{C}\cdot 1+(-2)\cdot 3$  
+$-2=no_{C}-6$  
+$6-2=no_{C}$  
+$no_{C}=4$  
+e quindi dobbiamo considerare lo ione $C^{4+}$.
+
+Riassumiamo quindi gli ioni che dobbiamo considerare ed i loro raggi ionici (presi da p.30/54 pdf 3):  
+|ione|raggio|
+|-|-|
+|$Ca^{2+}$|
+|$O^{2-}$|
+|$C^{4+}$|
 
 
 
