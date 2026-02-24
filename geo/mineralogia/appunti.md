@@ -65,7 +65,7 @@ $q$ carica totale della formula: 0 se composto neutro, altrimenti la carica dell
 
 Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e altri elementi hanno più di un n.o., in questo ultimo caso si consulta la tavola periodica e si scelgono i n.o. che soddisfano l'equazione. Se c'è più di un set di n.o. che soddisfano l'equazione allora non so come fare :-).
 
-# Riassunto pdf 3
+# Riassunto pdf 3 - Cristallochimica
 
 Ipotesi di ioni come sfere rigide.  
 
@@ -100,17 +100,39 @@ rapporto = 1 dà coordinazione dodecaedrica.
 
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
+I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.
+
 ## Seconda regola di Pauling
 
+La definizione della seconda regola di Pauling ([K p.72]) è:  
 In una struttura cristallina stabile  
 la forza totale dei legami di valenza che raggiungono un anione  
 da tutti i cationi circostanti  
-è uguale alla carica dell'anione.[K p.72]
+è uguale alla carica dell'anione.
 
 La forza di un legame elettrostatico è detta **valenza elettrostatica** (in simbolo v.e.) ed è il rapporto tra la carica dello ione ed il suo numero di coordinazione.
 
 Una altra definizione, secondo me, è che la v.e. di uno ione coordinante è la sua carica divisa per il numero di ioni primi vicini ad esso coordinati.  
 Detto in altri termini, la v.e. di uno ione coordinante è la sua carica divisa per il suo numero di coordinazione.
+
+Le strutture dei minerali possono essere raggruppate sulla base del tipo di forza di legame presente: si hanno strutture **isodesmiche**, **anisodesmiche** e **mesodesmiche**.
+
+### Strutture isodesmiche
+
+Esempio: NaCl (Cloruro di sodio)  
+$Na^{+}$ ha numero di coordinazione 6 (coordinazione ottaedrica) e coordina sei ioni $Cl^{-}$.  
+La v.e. di $Na^{+}$ è 1/6 perché la sua carica è 1 e gli ioni coordinati sono 6; allo stesso modo la v.e. di $Cl^{-}$ è 1/6 perché la sua carica è 1 e gli ioni da lui coordinati sono 6.
+
+Quando tutti i legami hanno ovunque la stessa forza la struttura si dice **isodesmica**, è questo il caso di NaCl.
+
+### Strutture anisodesmiche
+
+Esempio: $CaCO_{3}$ (Carbonato di calcio)  
+Dalla tavola periodica sappiamo che Ca ha numero di ossidazione +2 quindi sarà presente come catione $Ca^{2+}$, quindi per la neutralità del composto si ha che l'altro ione deve essere $(CO_{3})^{2-}$ (NdA qui però bisogna sapere a priori che il composto si deve dividere in due parti: Ca e $CO_{3}$).  
+Dalla tavola periodica sappiamo che 
+
+ Sappiamo che 
+
 
 
 # "Hateful eight"
