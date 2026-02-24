@@ -81,7 +81,7 @@ Le coordinazioni regolari sono sei:
 * n.c.=4 coordinazione tetraedrica (anioni ai vertici di un tetraedro, catione al centro del tetraedro)
 * n.c.=6 coordinazione ottaedrica (anioni ai vertici di un ottaedro, catione al centro del tetraedro)
 * n.c.=8 coordinazione cubica (anioni ai vertici di un cubo, catione al centro del cubo)
-*n.c.=12 coordinazione dodecaedrica (tre anioni sotto al catione, sei anioni a "salvagente" attorno al catione, tre anioni sopra al catione)
+* n.c.=12 coordinazione dodecaedrica (tre anioni sotto al catione, sei anioni a "salvagente" attorno al catione, tre anioni sopra al catione)
 
 Intuitivamente al crescere del numero di coordinazione cresce il diametro del catione; questo perché "il vuoto disponibile fra gli anioni va crescendo" (immaginare per esempio il vuoto che cresce da triangolare a ottaedrica; nel caso triangolare il vuoto è quello al centro di tre circonferenze nello stesso piano e mutuamente tangenti; nel caso ottaedrico il vuoto è quello al centro di quattro circonferenze nello stesso piano e mutuamente tangenti).
 
@@ -95,7 +95,7 @@ rapporto = 1 dà coordinazione dodecaedrica.
 
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
-La coordinazione dodecaedrica (n.c.=12) è tipica dei metalli nativi perché composti dalla stessa specie atomica.
+## Seconda legge di Pauling
 
 
 # "Hateful eight"
