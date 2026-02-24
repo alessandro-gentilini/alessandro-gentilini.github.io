@@ -69,9 +69,12 @@ Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e alt
 
 Ipotesi di ioni come sfere rigide.  
 
+Non ci sono solamente gli ioni degli elementi puri (come per esempio $Ca^{+}$ oppure $Cl^{-}$) ma ci sono anche ioni composti da più atomi come per esempio lo ione carbonato $(CO_{3})^{2-}$.
+
 Lo ione positivo (catione) è più piccolo dello ione negativo (anione).  
 
 Il numero di coordinazione è il numero di anioni che circonda un catione.  
+[K p.72] usa i termini **ione coordinante** per indicare lo ione soggetto e **ioni primi vicini** per indicare gli ioni a lui legati.  
 
 Il poliedro di coordinazione descrive la disposizione geometrica degli atomi che si coordinano.
 
@@ -85,6 +88,8 @@ Le coordinazioni regolari sono sei:
 
 Intuitivamente al crescere del numero di coordinazione cresce il diametro del catione; questo perché "il vuoto disponibile fra gli anioni va crescendo" (immaginare per esempio il vuoto che cresce da triangolare a ottaedrica; nel caso triangolare il vuoto è quello al centro di tre circonferenze nello stesso piano e mutuamente tangenti; nel caso ottaedrico il vuoto è quello al centro di quattro circonferenze nello stesso piano e mutuamente tangenti).
 
+## Prima regola di Pauling
+
 Il tipo di coordinazione dipende dal rapporto tra raggio cationico e raggio anionico, tale rapporto va da 0.155 ad 1.  
 Rapporto < 0.155 dà coordinazione lineare,  
 0.155 < rapporto < 0.225 dà coordinazione triangolare,  
@@ -95,7 +100,17 @@ rapporto = 1 dà coordinazione dodecaedrica.
 
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
-## Seconda legge di Pauling
+## Seconda regola di Pauling
+
+In una struttura cristallina stabile  
+la forza totale dei legami di valenza che raggiungono un anione  
+da tutti i cationi circostanti  
+è uguale alla carica dell'anione.[K p.72]
+
+La forza di un legame elettrostatico è detta **valenza elettrostatica** (in simbolo v.e.) ed è il rapporto tra la carica dello ione ed il suo numero di coordinazione.
+
+Una altra definizione, secondo me, è che la v.e. di uno ione coordinante è la sua carica divisa per il numero di ioni primi vicini ad esso coordinati.  
+Detto in altri termini, la v.e. di uno ione coordinante è la sua carica divisa per il suo numero di coordinazione.
 
 
 # "Hateful eight"
@@ -414,6 +429,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 [Hoffmann] Frank Hoffmann, Introduction to Crystallography, Cham, 2020, Springer.
 
 [K&P] Cornelis Klein & Anthony R. Philpotts, Mineralogia e petrografia, Bologna, 2018, Zanichelli.
+
+[K] Cornelis Klein, Mineralogia, Bologna, 2004, Zanichelli.
 
 [Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
