@@ -150,7 +150,28 @@ Riassumiamo quindi gli ioni che dobbiamo considerare ed i loro raggi ionici (pre
 Già qui i conti non tornano: per il catione carbonio e l'anione ossigeno abbiamo 0.30/1.14 = 0.263 che corrisponde a tetraedrica invece nella realtà è triangolare; ho seguito i suggerimenti di Google Gemini che dice di prendere convenzionalmente i raggi per la coordinazione 6 (poi ci sarebbe anche da verificare se si devono usare i raggi tabulati da Shannon oppure quelli tabulati da qualcun altro).  
 Comunque sia, assumiamo di sapere a priori che il catione $C^{4+}$ coordini tre anioni $O^{2-}$, quindi la v.e. per il catione Carbonio è +4/3 (la sua carica divisa per il numero di primi vicini), quindi ogni legame porta la carica +4/3 sull'anione Ossigeno; quindi su ogni anione ossigeno resta questa carica residua: -2+4/3 (somma algebrica della carica dell'anione, che è -2, e della carica portata dal legame, che è 4/3) = -6/3+4/3 = -2/3; quindi su ogni anione coordinato con il carbonio resta una carica residua di -2/3.
 
-Il catione Calcio 
+Quali elementi (o insieme di elementi) coordinerà il catione Calcio?  
+Non so quale sia il ragionamento per rispondere alla domanda.
+Il pdf a p.35/54 dice che il catione Calcio si coordina con l'ossigeno.  
+Quanti ossigeni coordina il catione Calcio?  
+Se è consentito usare la tabella che si trova a p.30/54 pdf 3 allora si sa che il calcio coordina 6 oppure 8 ossigeni; come scegliere tra 6 e 8?  
+Non so quale sia il ragionamento per rispondere alla domanda, il pdf dice che il catione Calcio coordina 6 anioni Ossigeno. Quindi la v.e. del catione Calcio è +2/6=+1/3, quindi ogni legame porta la carica +1/3 sull'anione ossigeno e quindi per bilanciare il residuo -2/3 presenti negli anioni ossigeno è necessario che ogni ossigeno sia legato a due cationi Calcio.
+
+Quindi la calcite (e perché non l'aragonite?) ha ottaedri con al centro il catione calcio e ai vertici gli anioni ossigeno e triangoli con al centro il catione carbonio e ai vertici gli anioni ossigeno.
+In conclusione uno stesso ossigeno è al vertice del triangolo e contemporaneamente ai vertici di due ottaedri; detto in altri termini, un ossigeno del triangolo $CO_{3}^{2-}$ è anche condiviso da due ottaedri centrati sul catione Calcio.
+
+Quando i legami non hanno ovunque la stessa forza la struttura si dice **anisodesmica**.
+
+### Strutture mesodesmiche
+
+La struttura fondamentale dei silicati è composta da silicio e ossigeno.  
+Dalla tavola periodica, l'ossigeno a n.o. -2 mentre il silicio ha -4,+2,+4; quale sarà il n.o. del silicio? Escludiamo -4 perché deve essere positivo; può quindi essere +2 e dare SiO oppure essere +4 e dare $SiO_{2}$.  
+
+Dal pdf 3, p.32/54 sappiamo che il catione $Si^{4+}$ coordina quattro anioni ossigeno $O^{2-}$, quindi la carica del tetraedro è $+4-2\cdot 4=+4-8=-4$ e quindi lo ione si scrive $SiO_4^{4-}$.
+
+Il catione $Si^{4+}$ ha v.e. = +4/4=+1, quindi ogni legame porta +1 agli anioni ossigeno, ogni anione ossigeno ha carica -2 e quindi ogni anione ossigeno ha una carica residua di +1-2=-1. Se però l'anione ossigeno si lega ad un altro catione silicio allora riceve un altro +1 di carica e raggiunge la neutralità, in questo caso si ha quindi un ossigeno condiviso da due tetraedri, questo ossigeno è detto **ossigeno ponte** e questa possibilità di condivisione (oppure, detto in altri termini, di collegamento fra i tetraedri) è alla base della grande varietà dei silicati.  
+Questo collegamento fra tetraedri viene definito **mesodesmico**.
+
 
 
 
