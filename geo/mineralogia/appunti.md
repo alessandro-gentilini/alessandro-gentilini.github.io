@@ -147,7 +147,10 @@ Riassumiamo quindi gli ioni che dobbiamo considerare ed i loro raggi ionici (pre
 |$O^{2-}$|1.24|
 |$C^{4+}$|0.30|
 
-Già qui i conti non tornano: per il catione carbonio e l'anione ossigeno abbiamo 0.30/1.14 = 0.263 che corrisponde a tetraedrica invece nella realtà è triangolare.
+Già qui i conti non tornano: per il catione carbonio e l'anione ossigeno abbiamo 0.30/1.14 = 0.263 che corrisponde a tetraedrica invece nella realtà è triangolare; ho seguito i suggerimenti di Google Gemini che dice di prendere convenzionalmente i raggi per la coordinazione 6 (poi ci sarebbe anche da verificare se si devono usare i raggi tabulati da Shannon oppure quelli tabulati da qualcun altro).  
+Comunque sia, assumiamo di sapere a priori che il catione $C^{4+}$ coordini tre anioni $O^{2-}$, quindi la v.e. per il catione Carbonio è +4/3 (la sua carica divisa per il numero di primi vicini), quindi ogni legame porta la carica +4/3 sull'anione Ossigeno; quindi su ogni anione ossigeno resta questa carica residua: -2+4/3 (somma algebrica della carica dell'anione, che è -2, e della carica portata dal legame, che è 4/3) = -6/3+4/3 = -2/3; quindi su ogni anione coordinato con il carbonio resta una carica residua di -2/3.
+
+Il catione Calcio 
 
 
 
