@@ -94,16 +94,16 @@ Intuitivamente al crescere del numero di coordinazione cresce il diametro del ca
 
 Il tipo di coordinazione dipende dal rapporto tra raggio cationico e raggio anionico, tale rapporto va da 0.155 ad 1.  
 Rapporto < 0.155 dà coordinazione lineare,  
-0.155 < rapporto < 0.225 dà coordinazione triangolare,  
-0.225 < rapporto < 0.414 dà coordinazione tetraedrica,  
-0.414 < rapporto < 0.732 dà coordinazione ottaedrica,  
-0.732 < rapporto < 1 dà coordinazione cubica,  
+0.155 < rapporto < 0.225 dà coordinazione triangolare (3),  
+0.225 < rapporto < 0.414 dà coordinazione tetraedrica (4),  
+0.414 < rapporto < 0.732 dà coordinazione ottaedrica (6),  
+0.732 < rapporto < 1 dà coordinazione cubica (8),  
 rapporto = 1 dà coordinazione dodecaedrica.
 
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
 I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.  
-NOTA BENE: il raggio ionico dipende dal numero di coordinazione.
+NOTA BENE: il raggio ionico dipende dal numero di coordinazione, quindi da un punto di vista strettamente logico non posso usare i raggi ionici (che dipendono dal numero di coordinazione) per prevedere il numero di coordinazione perché questo è un ragionamento circolare. Gemini suggerisce di fare i calcoli prendendo i raggi relativi alla coordinazione 6 ma anche facendo così i conti non tornano, vedi più sotto l'esempio del carbonato di calcio.
 
 ## Seconda regola di Pauling
 
@@ -140,12 +140,14 @@ $6-2=no_{C}$
 $no_{C}=4$  
 e quindi dobbiamo considerare lo ione $C^{4+}$.
 
-Riassumiamo quindi gli ioni che dobbiamo considerare ed i loro raggi ionici (presi da p.30/54 pdf 3):  
-|ione|raggio|
+Riassumiamo quindi gli ioni che dobbiamo considerare ed i loro raggi ionici (presi da [K&P p.60 tabella 4.4]):  
+|ione|raggio (coordinazione 6), Å|
 |-|-|
-|$Ca^{2+}$|
-|$O^{2-}$|
-|$C^{4+}$|
+|$Ca^{2+}$|1.14|
+|$O^{2-}$|1.24|
+|$C^{4+}$|0.30|
+
+Già qui i conti non tornano: per il catione carbonio e l'anione ossigeno abbiamo 0.30/1.14 = 0.263 che corrisponde a tetraedrica invece nella realtà è triangolare.
 
 
 
