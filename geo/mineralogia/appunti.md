@@ -303,6 +303,22 @@ I 14 reticoli di Bravais sono suddivisi nei **sei sistemi cristallini**:
 
 NdA: ogni sistema cristallino ha uno o più tipi di celle primitive?
 
+## Assi cristallografici
+
+Gli **assi cristallografici** costituiscono un sistema di riferimento.  
+In 2D occorrono tre parametri per definire gli assi cristallografici:  
+$a$ unità sul primo asse,  
+$b$ unità sul secondo asse,  
+$\gamma$ angolo fra i due assi
+
+In 3D occorrono sei parametri per definire gli assi cristallografici:  
+$a$ unità sul primo asse,  
+$b$ unità sul secondo asse,  
+$c$ unità sul terzo asse,  
+$\gamma$ angolo tra $a$ e $b$,  
+$\alpha$ angolo tra $b$ e $c$,  
+$\beta$ angolo tra $a$ e $c$
+
 # simmetrie micro vs simmetrie macro
 
 # pdf lab 3 Cristallografia morfologica: le forme dei cristalli
