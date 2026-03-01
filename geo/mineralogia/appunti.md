@@ -215,8 +215,43 @@ Asse|Formula per calcolare angolo di rotazione|Angolo di rotazione in gradi
 Unario|360/1|360
 Binario|360/2|180
 Ternario|360/3|120
-Quaternatio|360/4|90
+Quaternario|360/4|90
 Senario|360/6|60
+
+## Dimostrazione delle sole rotazioni consentite
+
+Intuitivamente sono consentite solo quelle rotazioni associate a poligoni che danno una tassellazione senza buchi del piano. I poligoni che hanno questa proprietà sono:
+
+poligono|asse|
+-|-
+intero piano|unario
+rettangolo|binario
+triangolo equilatero|ternario
+quadrato|quaternario
+esagono|senario
+
+Per la dimostrazione:  
+* considerare un punto $A$,  
+* generare un secondo punto per traslazione orizzontale $B$, sia $\overline{AB}=t$ (a parole: la lunghezza del segmento $AB$ è $t$, $B$ sta a destra di $A$ e non c'è perdita di generalità);  
+* considerare un terzo punto $C$ che sta sopra al segmento $AB$ e a destra di $B$, l'angolo $A\hat{B}C$ sia $\alpha$, la lunghezza del segmento $BC$ sia $t$, ovvero $\overline{BC}=t$;  
+* considerare un quarto punto $D$ sopra $AB$ ed a sinistra di $A$, l'angolo $B\hat{A}D$ sia $\alpha$.
+* sia il punto $B'$ l'intersezione della perpendicolare al segmento $CD$ passante per $B$;
+* $\overline{CD}$ è la lunghezza del segmento $CD$ e deve essere un multiplo intero di $t$, in formule $\overline{CD}=m\cdot t$ con $m$ che deve essere quindi intero positivo; quindi deve valere:
+* $\overline{CD}=t+2\cdot\overline{B'C}=m\cdot t$ (equazione 1)
+* a questo punto esprimere $\overline{B'C}$ in funzione di $\alpha$ e trovare in valori di $\alpha$ che garantiscono che $m$ sia intero positivo.
+* $B\hat{C}B'=\gamma$
+* $\cos{\gamma}=\frac{\overline{B'C}}{t}$
+* $\overline{B'C}=t\cos{\gamma}$ (equazione 2)
+* $B'\hat{B}C=\beta$
+* $B\hat{B'}C=90$
+* La somma degli angoli del triangolo $BB'C$ deve essere 180:  $180=90+\beta+\gamma$
+* e per costruzione vale anche $90+\beta=\alpha$
+* combinando le ultime due si ha quindi $180=\alpha+\gamma$
+* $\gamma=180-\alpha$
+* e a questo punto si esprime (equazione 2) in funzione solamente di $t$ e di $\alpha$
+* poi si usa (equazione 2) per ottenere (equazione 1) in funzione deelle sole $m, t, \alpha$
+* da (equazione 1) si semplifica $t$ (e quindi il risultato vale per ogni traslazione non nulla) e si resta con una relazione con solo $m$ ed $\alpha$ da cui si possono ricavare gli $\alpha$ che danno $m$ intero positivo (ricordando che $-1\le\cos \alpha\le1$).
+
 
 # simmetrie micro vs simmetrie macro
 
