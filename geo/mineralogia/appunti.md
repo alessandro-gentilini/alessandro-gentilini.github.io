@@ -4,7 +4,8 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 24 febbraio 2026.
+Aggiornati al 1 marzo 2026.
+
 
 # Ripasso di chimica (NdA)
 
