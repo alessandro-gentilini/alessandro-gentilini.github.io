@@ -323,7 +323,7 @@ Gli **assi cristallografici** definiscono i sistemi cristallini.
 
 ## Elicogira
 
-L'**elicogira** (aka **_screw axis_** aka **asse a vite**) è un operatore di simmetria che combina l'operazione di traslazione con quella di rotazione.  
+L'**elicogira** (aka **_screw axis_** aka **asse a vite**) è un operatore di simmetria che combina l'operazione di traslazione con quella di rotazione, la traslazione è lungo l'asse di rotazione (vedi [3CD]).  
 Esistono molte elicogire.
 
 # Voce "Cristallo" in Enciclopedia delle scienze fisiche
@@ -337,7 +337,7 @@ in una struttura dotata di simmetria di traslazione.
 
 Tutti i punti del cristallo  
 sono riconducibili ai punti equivalenti  
-di una struttura di base, detta cella elementare,  
+di una struttura di base, detta **cella elementare**,  
 mediante una traslazione descritta da un vettore che è multiplo,
 secondo numeri interi,
 di tre altri vettori che definiscono la cella medesima.
@@ -357,6 +357,43 @@ in condizioni opportune di pressione e temperatura,
 avere transizioni da un dato stato cristallino  
 ad un altro stato cristallino,  
 di simmetria diversa.
+
+## 1. Cenni storici e introduttivi
+
+Osservazione zero: da lungo tempo è noto che  
+sostanze solide,  
+che si trovano nei minerali,  
+o che vengono prodotte artificialmente  
+raffreddando materiali liquidi  
+oppure facendo condensare soluzioni soprasature,  
+assumono forme geometriche ben precise, e,  
+quando vengono spezzate,  
+si separano in parti che conservano le stesse proprietà geometriche.
+
+**Legge della costanza dell'angolo diedro (Stenone 1669)**  
+Osservazione 1: gli angoli tra le facce di un dato cristallo hanno valori fissi Osservazione 2: che non cambiano al variare delle dimensioni del cristallo medesimo.  
+I valori degli angoli tra le facce sono caratteristici di ogni tipo di sostanza.
+
+**Legge della razionalità degli indici (Häuy 1784)**  
+Osservazione 3: gli **indici dei piani** sono numeri razionali (NdA: qui con piani si intendono i piani su cui giacciono le facce dei cristalli).  
+Gli indici dei piani sono i segmenti da essi intercettati sugli assi, misurati rispetto a quelli di una faccia fondamentale.
+
+Nell'Ottocento si crea un modello matematico dei cristalli: alle unità strutturali si sostituisono i punti puramente geometrici ottenuti dai vertici delle celle contigue; questi punti costituiscono un **reticolo cristallino**.  
+Per via puramente matematica si arriva a dimostrare che solamente 14 celle elementari sono compatibili con la legge di razionalità degli indici (Bravais 1848), vennero quindi definiti i 14 reticoli cristallini e i **7 sistemi cristallografici**.
+
+Alla fine dell'Ottocento tutte le possibili simmetrie cristalline erano classificate ed erano conosciuti tutti i **230 gruppi spaziali**.  
+Molti di questi gruppi erano puramente ipotetici e non erano noti minerali ad essi appartenenti.
+
+Con la tecnica della **diffrazione dei raggi X ad opera dei cristalli** (Bragg 1913) si possono ottenere informazioni sulle strutture cristalline (posizione degli atomi nel reticolo, distanza fra gli atomi, eccetera).
+
+## 2. Definizione dei cristalli e confronto con altri stati di aggregazione della materia
+
+**Stato cristallino**: se composto di piccoli monocristalli diversamente orientati si chiama **policristallo**.  
+
+**Stato amorfo**: si ottiene quando la solidificazione del fuso avviene senza rispettare l'equilibrio termodinamico.  
+Lo sostanze amorfe sono più comuni di quelle cristalline perché è raro che il processo di solidificazione avvenga in modo da consentire agli atomi di disporsi nelle posizioni termodinamicamente più favorevoli (e.g. in una miniera di carbone è raro trovare cristalli di grafite ed è ancora più raro trovare cristalli di diamante).  
+Tuttavia lo stato cristallino è lo stato naturale delle sostanze perché l'energia associata alla disposizione regolare degli atomi ha il valore minimo.
+
 
 # simmetrie micro vs simmetrie macro
 
