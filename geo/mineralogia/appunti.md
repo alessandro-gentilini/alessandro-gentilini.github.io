@@ -196,10 +196,10 @@ Il reticolo piano che stiamo considerando è un oggetto bidimensionale (abbrevia
 
 |operatore|operazione|note|
 |-|-|-|
-|Traslazione|ripetizione (secondo due direzioni non parallele)||
-|Asse|rotazione (normale al piano)|l'asse è in 3D, è ortogonale al reticolo piano 2d in oggetto, l'asse è rappresentato nel 2D del reticolo piano da un punto; questo punto è l'intersezione dell'asse con il piano che contiene in reticolo piano in oggetto|
-|Piano|riflessione|il piano è in 3D, direi che è ortogonale al al piano che contiene il reticolo piano in oggetto; il piano è rappresentato nel 2D del reticolo piano da una linea, questa linea è l'intersezione del piano con il piano che contiene il reticolo piano in oggetto|
-|Slittopiano|traslazione più riflessione|slittopiano aka _glide plane_, aka piano di scivolamento. La traslazione deve essere parallela al piano (vedi [3CD])|
+|**Traslazione**|**ripetizione** (secondo due direzioni non parallele)||
+|**Asse**|**rotazione** (normale al piano)|l'asse è in 3D, è ortogonale al reticolo piano 2d in oggetto, l'asse è rappresentato nel 2D del reticolo piano da un punto; questo punto è l'intersezione dell'asse con il piano che contiene in reticolo piano in oggetto|
+|**Piano**|**riflessione**|il piano è in 3D, direi che è ortogonale al al piano che contiene il reticolo piano in oggetto; il piano è rappresentato nel 2D del reticolo piano da una linea, questa linea è l'intersezione del piano con il piano che contiene il reticolo piano in oggetto|
+|**Slittopiano**|**traslazione più riflessione**|slittopiano aka _glide plane_, aka piano di scivolamento. La traslazione deve essere parallela al piano (vedi [3CD])|
 
 NdA: da un punto di vista funzionale, gli operatori hanno questi parametri:
 
@@ -212,17 +212,17 @@ NdA: da un punto di vista funzionale, gli operatori hanno questi parametri:
 
 Asse|Formula per calcolare angolo di rotazione|Angolo di rotazione in gradi
 -|-|-
-Unario|360/1|360
-Binario|360/2|180
-Ternario|360/3|120
-Quaternario|360/4|90
-Senario|360/6|60
+**Unario**|360/1|360
+**Binario**|360/2|180
+**Ternario**|360/3|120
+**Quaternario**|360/4|90
+**Senario**|360/6|60
 
 ## Dimostrazione delle sole rotazioni consentite
 
 Intuitivamente sono consentite solo quelle rotazioni associate a poligoni che danno una tassellazione senza buchi del piano. I poligoni che hanno questa proprietà sono:
 
-poligono|asse|
+poligono|ordine dell'asse di rotazione|
 -|-
 intero piano|unario
 rettangolo|binario
@@ -252,6 +252,55 @@ Per la dimostrazione:
 * poi si usa (equazione 2) per ottenere (equazione 1) in funzione deelle sole $m, t, \alpha$
 * da (equazione 1) si semplifica $t$ (e quindi il risultato vale per ogni traslazione non nulla) e si resta con una relazione con solo $m$ ed $\alpha$ da cui si possono ricavare gli $\alpha$ che danno $m$ intero positivo (ricordando che $-1\le\cos \alpha\le1$).
 
+## Quasicristalli
+
+I **quasicristalli** sono strutture ordinate ma non periodiche con assi di rotazione di ordine 5.
+
+## Reticoli piani
+Per rispettare le regole di simmetria, in 2D si hanno solo 5 **reticoli piani** possibili: 
+1) maglia obliqua
+2) maglia quadrata
+3) maglia rettangolare
+4) maglia esagonale
+5) maglia rettangolare centrata e maglia a diamante
+
+## Reticolo più motivo uguale struttura
+
+## Reticoli di Bravais
+Per rispettare le regole di simmetria, in 3D si hanno solo 14 reticoli possibili che sono chiamati **reticoli di Bravais**
+
+I reticoli di Bravais sono suddivisi in:
+* **primitivi** P
+* **centrati** I
+* **centrati su una coppia di facce** F
+* **centrati su tutte le facce** C
+* **romboedrici** R
+
+Che cosa sono queste suddivisioni? Sono forse i **tipi di celle elementari** possibili?
+
+## Cella elementare
+NdA: può avere uno dei seguenti **tipi**?
+
+* **primitivi** P
+* **centrati** I
+* **centrati su una coppia di facce** F
+* **centrati su tutte le facce** C
+* **romboedrici** R
+
+**nodo** punto nello spazio attorno al quale si ripetono atomi oppure **gruppi di atomi** oppure **unità strutturali** più complesse.
+
+La cella elementare di tipo P ha un solo **nodo**, quelle degli altri tipi hanno più di un nodo.
+
+## Sistemi cristallini
+I 14 reticoli di Bravais sono suddivisi nei **sei sistemi cristallini**:
+1) **triclino**
+2) **monoclino**
+3) **ortorombico**
+4) **tetragonale**
+5) **esagonale** (e **trigonale**)
+6) **cubico**
+
+NdA: ogni sistema cristallino ha uno o più tipi di celle primitive?
 
 # simmetrie micro vs simmetrie macro
 
