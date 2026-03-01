@@ -190,6 +190,34 @@ Questo collegamento fra tetraedri viene definito **mesodesmico**.
 La traslazione 1D di un motivo crea un **filare**.  
 La traslazione 2D di un motivo crea un **reticolo piano** (aka **maglia** aka **net**).
 
+## Elementi di simmetria in un reticolo piano
+
+Il reticolo piano che stiamo considerando è un oggetto bidimensionale (abbreviato con 2D) immerso in un ambiente tridimensionale (abbreviato con 3D).
+
+|operatore|operazione|note|
+|-|-|-|
+|Traslazione|ripetizione (secondo due direzioni non parallele)||
+|Asse|rotazione (normale al piano)|l'asse è in 3D, è ortogonale al reticolo piano 2d in oggetto, l'asse è rappresentato nel 2D del reticolo piano da un punto; questo punto è l'intersezione dell'asse con il piano che contiene in reticolo piano in oggetto|
+|Piano|riflessione|il piano è in 3D, direi che è ortogonale al al piano che contiene il reticolo piano in oggetto; il piano è rappresentato nel 2D del reticolo piano da una linea, questa linea è l'intersezione del piano con il piano che contiene il reticolo piano in oggetto|
+|Slittopiano|traslazione più riflessione|slittopiano aka _glide plane_, aka piano di scivolamento. La traslazione deve essere parallela al piano|
+
+NdA: da un punto di vista funzionale, gli operatori hanno questi parametri:
+
+|operatore|operazione|parametri|
+|-|-|-|
+|Traslazione|ripetizione|Vettore di traslazione 2D (due numeri che indicano le traslazioni secondo le due direzioni individuate dai versori non paralleli), angolo fra i due versori|
+|Asse|rotazione (normale al piano)|Punto nel piano attorno al quale fare la rotazione, angolo di rotazione (limitato a unario, binario, ternario, quaternario, senario)|
+|Piano|riflessione|linea nel piano rispetto alla quale fare la riflessione ("specchio")
+|Slittopiano|traslazione più riflessione|linea nel piano rispetto alla quale fare la riflessione, quantità della traslazione parallela alla linea (un numero)|
+
+Asse|Formula per calcolare angolo di rotazione|Angolo di rotazione in gradi
+-|-|-
+Unario|360/1|360
+Binario|360/2|180
+Ternario|360/3|120
+Quaternatio|360/4|90
+Senario|360/6|60
+
 # simmetrie micro vs simmetrie macro
 
 # pdf lab 3 Cristallografia morfologica: le forme dei cristalli
