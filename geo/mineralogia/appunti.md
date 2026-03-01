@@ -199,7 +199,7 @@ Il reticolo piano che stiamo considerando è un oggetto bidimensionale (abbrevia
 |Traslazione|ripetizione (secondo due direzioni non parallele)||
 |Asse|rotazione (normale al piano)|l'asse è in 3D, è ortogonale al reticolo piano 2d in oggetto, l'asse è rappresentato nel 2D del reticolo piano da un punto; questo punto è l'intersezione dell'asse con il piano che contiene in reticolo piano in oggetto|
 |Piano|riflessione|il piano è in 3D, direi che è ortogonale al al piano che contiene il reticolo piano in oggetto; il piano è rappresentato nel 2D del reticolo piano da una linea, questa linea è l'intersezione del piano con il piano che contiene il reticolo piano in oggetto|
-|Slittopiano|traslazione più riflessione|slittopiano aka _glide plane_, aka piano di scivolamento. La traslazione deve essere parallela al piano|
+|Slittopiano|traslazione più riflessione|slittopiano aka _glide plane_, aka piano di scivolamento. La traslazione deve essere parallela al piano (vedi [3CD])|
 
 NdA: da un punto di vista funzionale, gli operatori hanno questi parametri:
 
