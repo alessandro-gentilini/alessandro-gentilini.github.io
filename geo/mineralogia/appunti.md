@@ -172,6 +172,26 @@ Dal pdf 3, p.32/54 sappiamo che il catione $Si^{4+}$ coordina quattro anioni oss
 Il catione $Si^{4+}$ ha v.e. = +4/4=+1, quindi ogni legame porta +1 agli anioni ossigeno, ogni anione ossigeno ha carica -2 e quindi ogni anione ossigeno ha una carica residua di +1-2=-1. Se però l'anione ossigeno si lega ad un altro catione silicio allora riceve un altro +1 di carica e raggiunge la neutralità, in questo caso si ha quindi un ossigeno condiviso da due tetraedri, questo ossigeno è detto **ossigeno ponte** e questa possibilità di condivisione (oppure, detto in altri termini, di collegamento fra i tetraedri) è alla base della grande varietà dei silicati.  
 Questo collegamento fra tetraedri viene definito **mesodesmico**.
 
+### Terza regola di Pauling
+
+### Quarta regola di Pauling
+
+### Quinta regola di Pauling
+
+# pdf 4 Elementi di cristallografia
+
+**Reticolo**: disposizione regolare periodica ordinata infinita di punti discreti nello spazio.
+
+**Cristallografia strutturale**: descrive il reticolo cristallino.
+
+**Cristallografia morfologica**: descrive la forma dei cristalli.
+
+**Traslazione**: è un opearatore di simmetria; l'operazione compiuta è la **ripetizione**.  
+La traslazione 1D di un motivo crea un **filare**.  
+La traslazione 2D di un motivo crea un **reticolo piano** (aka **maglia** aka **net**).
+
+# simmetrie micro vs simmetrie macro
+
 # pdf lab 3 Cristallografia morfologica: le forme dei cristalli
 
 Pagina 19/99, cosa significa che i tre spiedini nella scatola a parallelepipedo sono assi binari (2)?  
