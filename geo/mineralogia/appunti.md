@@ -306,6 +306,7 @@ NdA: ogni sistema cristallino ha uno o più tipi di celle primitive?
 ## Assi cristallografici
 
 Gli **assi cristallografici** costituiscono un sistema di riferimento.  
+
 In 2D occorrono tre parametri per definire gli assi cristallografici:  
 $a$ unità sul primo asse,  
 $b$ unità sul secondo asse,  
@@ -325,6 +326,16 @@ Gli **assi cristallografici** definiscono i sistemi cristallini.
 
 L'**elicogira** (aka **_screw axis_** aka **asse a vite**) è un operatore di simmetria che combina l'operazione di traslazione con quella di rotazione, la traslazione è lungo l'asse di rotazione (vedi [3CD]).  
 Esistono molte elicogire.
+
+## Gruppi spaziali
+
+Operatori di simmetria osservabili a scala macroscopica:
+centro, asse, piano, asse di roto-inversione.
+
+Operatori di simmetria osservabili esclusivamente a scala atomica:
+traslazione, slittopiano, elicogira.
+
+Combinando gli operatori di simmetria osservabili a scala macroscopica con quelli osservabili esclusivamente a scala atomica si ottengono i **230 gruppi spaziali** che rappresentano tutte e sole le modalità di disporre atomi o gruppi di atomi nello spazio.
 
 # Voce "Cristallo" in Enciclopedia delle scienze fisiche
 
