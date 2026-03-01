@@ -288,7 +288,7 @@ NdA: può avere uno dei seguenti **tipi**?
 * **centrati su tutte le facce** C
 * **romboedrici** R
 
-**nodo** punto nello spazio attorno al quale si ripetono atomi oppure **gruppi di atomi** oppure **unità strutturali** più complesse.
+**nodo** punto nello spazio attorno al quale si ripetono atomi oppure ioni oppure **gruppi di atomi** (esempio $(CO_{3})^{-2}$, $(SiO_{4})^{4-}$) oppure **unità strutturali** più complesse.
 
 La cella elementare di tipo P ha un solo **nodo**, quelle degli altri tipi hanno più di un nodo.
 
@@ -318,6 +318,45 @@ $c$ unità sul terzo asse,
 $\gamma$ angolo tra $a$ e $b$,  
 $\alpha$ angolo tra $b$ e $c$,  
 $\beta$ angolo tra $a$ e $c$
+
+Gli **assi cristallografici** definiscono i sistemi cristallini.
+
+## Elicogira
+
+L'**elicogira** (aka **_screw axis_** aka **asse a vite**) è un operatore di simmetria che combina l'operazione di traslazione con quella di rotazione.  
+Esistono molte elicogire.
+
+# Voce "Cristallo" in Enciclopedia delle scienze fisiche
+
+Definizione di **cristallo**:  
+
+stato solido della materia  
+caratterizzato dal fatto che i costituenti elementari (atomi, ioni, gruppi di atomi)  
+occupano posizioni di equilibrio  
+in una struttura dotata di simmetria di traslazione.
+
+Tutti i punti del cristallo  
+sono riconducibili ai punti equivalenti  
+di una struttura di base, detta cella elementare,  
+mediante una traslazione descritta da un vettore che è multiplo,
+secondo numeri interi,
+di tre altri vettori che definiscono la cella medesima.
+
+Sono possibili soltanto  
+14 celle elementari,  
+32 simmetrie semplici di rotazione (con un punto fisso) e  
+230 simmetrie spaziali.
+
+Tutte le sostanze,  
+a temperature sufficientemente basse,  
+in condizioni di equilibrio termodinamico,  
+assumono lo stato cristallino.
+
+È possibile per una stessa sostanza,  
+in condizioni opportune di pressione e temperatura,  
+avere transizioni da un dato stato cristallino  
+ad un altro stato cristallino,  
+di simmetria diversa.
 
 # simmetrie micro vs simmetrie macro
 
