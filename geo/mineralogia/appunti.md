@@ -446,7 +446,30 @@ Stenone nel 1669: Tutti i cristalli di una certa specie cristallina, nelle stess
 
 ## Angoli interfacciali
 
-Con il goniometro a contatto si misura l'**angolo interfacciale** che è l'angolo tra le normali alle due facce. L'angolo interfacciale sommato all'angolo diedro dà 180 gradi.
+Con il goniometro a contatto si misura l'**angolo interfacciale** che è l'angolo tra le normali alle due facce. L'angolo interfacciale sommato all'angolo diedro dà 180 gradi.  
+Attenzione che l'angolo interfacciale si misura appoggiando il goniometro a due facce e ad uno spigolo, non si appoggia su un vertice e su due facce!
+
+## Simmetrie in un cristallo
+
+Operatore|Operazione|Simbolo|Note
+-|-|-|-
+Asse|Rotazione|1,2,3,4,6|La mano destra resta destra
+Piano|Riflessione|p (piano) oppure m (mirror)|La mano destra diventa sinistra (coppie enantiomorfe)
+Centro|Inversione|c (centro) oppure i (inversione)|La mano destra diventa sinistra (coppie enantiomorfe)
+Asse + centro (aka giroide)|Roto-inversione|$\overline{1}$,$\overline{2}$,$\overline{3}$,$\overline{4}$,$\overline{6}$
+
+
+Operatore|Operazione|Descrizione matematica/geometrica
+-|-|-
+Asse|Rotazione|Matrici di rotazione in 2D e 3D (un asse 2d o 3D e un angolo)
+Piano|Riflessione|In 3D, per trasformare il punto $P$, tramite riflessione rispetto al piano $\Pi$, nel punto $P'$: mandare la perpendicolare da $P$ a $\Pi$, la perpendicolare interseca $\Pi$ in $Q$, dall'altra parte del piano individuare il punto $P'$ che si trova sulla perpendicolare e che dista lungo la perpendicolare $\overline{PQ}$.
+Centro|Inversione|Il generico punto $P=(x,y,z)$ si trasforma in $P'$, per inversione rispetto a $(0,0,0)$, $P'=(-x,-y,-z)$
+Asse + centro (aka giroide)|Roto-inversione|Prima ruota, poi inverte (NdA: il centro di inversione deve stare sull'asse di rotazione)
+
+### Assi polari e bipolari
+
+L'asse che unisce i due vertici di un ottaedro (quelli che non stanno sulla base) è un asse bipolare perché i due vertici sono equivalenti; invece l'asse che passa per uno dei vertici di un tetraedro è detto polare perché l'altro estremo è il punto centrale della base del tetraedro che è ovviamente non equivalente al vertice.
+
 
 # "Hateful eight"
 
