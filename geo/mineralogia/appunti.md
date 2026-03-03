@@ -179,7 +179,7 @@ Questo collegamento fra tetraedri viene definito **mesodesmico**.
 
 ### Quinta regola di Pauling
 
-# pdf 4 Elementi di cristallografia
+# pdf 4 - Elementi di cristallografia
 
 **Reticolo**: disposizione regolare periodica ordinata infinita di punti discreti nello spazio.
 
@@ -305,7 +305,7 @@ NdA: ogni sistema cristallino ha uno o più tipi di celle primitive?
 
 ## Assi cristallografici
 
-Gli **assi cristallografici** costituiscono un sistema di riferimento.  
+Gli **assi cristallografici** costituiscono un **sistema di riferimento**.  
 
 In 2D occorrono tre parametri per definire gli assi cristallografici:  
 $a$ unità sul primo asse,  
@@ -336,6 +336,31 @@ Operatori di simmetria osservabili esclusivamente a scala atomica:
 traslazione, slittopiano, elicogira.
 
 Combinando gli operatori di simmetria osservabili a scala macroscopica con quelli osservabili esclusivamente a scala atomica si ottengono i **230 gruppi spaziali** che rappresentano tutte e sole le modalità di disporre atomi o gruppi di atomi nello spazio.
+
+## Indici di Miller
+
+Un **piano reticolare** è un piano che contiene alcuni punti di un reticolo.
+
+Il piano interseca gli assi cristallografici in tre intercette (l'intercetta è sempre un multiplo intero dell'unità di base), queste danno gli **indici di Weiss** che non sono più usati; si usano invece gli **indici di Miller** che si ottengono prendendo il reciproco degli indici di Weiss e moltiplicandoli per il minimo comune multiplo dei tre indicid di Weiss.
+
+Se un piano reticolare è parallelo ad uno degli assi cristallografici allora il suo indice di Weiss per quell'asse si assume pari a infinito e quindi il corrispondente indice di Miller è zero.
+
+Dalla formulazione degli indici di Miller discende che piani paralleli hanno gli stessi indici di Miller.
+
+## Densità reticolare
+
+Consideriamo il reticolo rettangolare primitivo nel piano ($a\neq b$ e $\gamma=90$), all'aumentare della differenza tra i due indici di Miller di un certo piano, quel piano conterrà sempre meno nodi (a parità di area) e quindi la **densità reticolare** diminuisce.
+
+**Legge di Haüy**:  le facce in un cristallo hanno intercette piccole e razionali con gli assi cristallografici.
+
+**Legge di Bravais**: in un cristallo le facce più frequenti sono quelle parallele si piani che hanno la massima densità reticolare.
+
+## Ancora sugli indici di Miller
+Siccome per la legge di Haüy gli indici di Miller sono tipicamente interi piccoli allora un piano si indica con un numero a tre cifre posto tra parentesi tonde (NdA: direi che nel caso in cui un indice di miller sia >9 allora ci vorranno le virgole per separare i tre indici).
+
+Nel caso di intercetta negativa, si pone un trattino sulla corrispondente cifra.
+
+
 
 # Voce "Cristallo" in Enciclopedia delle scienze fisiche
 
@@ -382,10 +407,12 @@ quando vengono spezzate,
 si separano in parti che conservano le stesse proprietà geometriche.
 
 **Legge della costanza dell'angolo diedro (Stenone 1669)**  
-Osservazione 1: gli angoli tra le facce di un dato cristallo hanno valori fissi Osservazione 2: che non cambiano al variare delle dimensioni del cristallo medesimo.  
+L'angolo diedro fra due facce va misurato su un piano ortogonale alle due facce, l'angolo diedro è quello all'interno del cristallo.  
+Osservazione 1: gli angoli tra le facce di un dato cristallo (di una certa specie cristallina) hanno valori fissi  
+Osservazione 2: valori che non cambiano al variare delle dimensioni del cristallo medesimo.  
 I valori degli angoli tra le facce sono caratteristici di ogni tipo di sostanza.
 
-**Legge della razionalità degli indici (Häuy 1784)**  
+**Legge della razionalità degli indici (Haüy 1784)**  
 Osservazione 3: gli **indici dei piani** sono numeri razionali (NdA: qui con piani si intendono i piani su cui giacciono le facce dei cristalli).  
 Gli indici dei piani sono i segmenti da essi intercettati sugli assi, misurati rispetto a quelli di una faccia fondamentale.
 
@@ -405,7 +432,6 @@ Con la tecnica della **diffrazione dei raggi X ad opera dei cristalli** (Bragg 1
 Lo sostanze amorfe sono più comuni di quelle cristalline perché è raro che il processo di solidificazione avvenga in modo da consentire agli atomi di disporsi nelle posizioni termodinamicamente più favorevoli (e.g. in una miniera di carbone è raro trovare cristalli di grafite ed è ancora più raro trovare cristalli di diamante).  
 Tuttavia lo stato cristallino è lo stato naturale delle sostanze perché l'energia associata alla disposizione regolare degli atomi ha il valore minimo.
 
-
 # simmetrie micro vs simmetrie macro
 
 # pdf lab 3 Cristallografia morfologica: le forme dei cristalli
@@ -413,6 +439,14 @@ Tuttavia lo stato cristallino è lo stato naturale delle sostanze perché l'ener
 Pagina 19/99, cosa significa che i tre spiedini nella scatola a parallelepipedo sono assi binari (2)?  
 Assumo che le sei facce della scatola non abbiano nessun segno identificativo, quindi la faccia davanti è identica a quella dietro, la faccia a destra è identica a quella a sinistra, la faccia sopra è identica a quella sotto.  
 Se ora ruoto di 360/(2) la scatola attorno ad uno dei tre assi quello che ottengo, stante l'assunzione, è indistinguibile dalla condizione da cui sono partito. È questo il significato della simmetria dell'asse.
+
+## Legge della costanza degli angoli diedri
+
+Stenone nel 1669: Tutti i cristalli di una certa specie cristallina, nelle stesse condizioni di pressione e temperatura, presentano sempre lo stesso angolo diedro tra facce corrispondenti. Questo vale per qualunque dimensione del cristallo.
+
+## Angoli interfacciali
+
+Con il goniometro a contatto si misura l'**angolo interfacciale** che è l'angolo tra le normali alle due facce. L'angolo interfacciale sommato all'angolo diedro dà 180 gradi.
 
 # "Hateful eight"
 
