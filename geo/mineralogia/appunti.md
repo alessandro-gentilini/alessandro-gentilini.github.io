@@ -453,10 +453,10 @@ Attenzione che l'angolo interfacciale si misura appoggiando il goniometro a due 
 
 Operatore|Operazione|Simbolo|Note
 -|-|-|-
-Asse|Rotazione|1,2,3,4,6|La mano destra resta destra
-Piano|Riflessione|p (piano) oppure m (mirror)|La mano destra diventa sinistra (coppie enantiomorfe)
+Asse|Rotazione|1,2,3,4,6|È operazione **congruente**, e.g. la mano destra resta destra
+Piano|Riflessione|p (piano) oppure m (mirror)|La mano destra diventa sinistra (**coppie enantiomorfe**)
 Centro|Inversione|c (centro) oppure i (inversione)|La mano destra diventa sinistra (coppie enantiomorfe)
-Asse + centro (aka giroide)|Roto-inversione|$\overline{1}$,$\overline{2}$,$\overline{3}$,$\overline{4}$,$\overline{6}$
+Asse + centro (aka **giroide**)|Roto-inversione|$\overline{1}$,$\overline{2}$,$\overline{3}$,$\overline{4}$,$\overline{6}$
 
 
 Operatore|Operazione|Descrizione matematica/geometrica
@@ -468,7 +468,7 @@ Asse + centro (aka giroide)|Roto-inversione|Prima ruota, poi inverte (NdA: il ce
 
 ### Assi polari e bipolari
 
-L'asse che unisce i due vertici di un ottaedro (quelli che non stanno sulla base) è un asse bipolare perché i due vertici sono equivalenti; invece l'asse che passa per uno dei vertici di un tetraedro è detto polare perché l'altro estremo è il punto centrale della base del tetraedro che è ovviamente non equivalente al vertice.
+L'asse che unisce i due vertici di un ottaedro (quelli che non stanno sulla base) è un asse **bipolare** perché i due vertici sono equivalenti; invece l'asse che passa per uno dei vertici di un tetraedro è detto **polare** perché l'altro estremo è il punto centrale della base del tetraedro che è ovviamente non equivalente al vertice.
 
 
 # "Hateful eight"
