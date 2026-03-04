@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 1 marzo 2026.
+Aggiornati al 3 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -104,7 +104,9 @@ rapporto = 1 dà coordinazione dodecaedrica.
 I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervalli si calcolano applicando le formule dei triangoli ai vari casi di circonferenze (o sfere) impaccate nei vari modi descritti dai poliedri regolari.
 
 I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.  
-NOTA BENE: il raggio ionico dipende dal numero di coordinazione, quindi da un punto di vista strettamente logico non posso usare i raggi ionici (che dipendono dal numero di coordinazione) per prevedere il numero di coordinazione perché questo è un ragionamento circolare. Gemini suggerisce di fare i calcoli prendendo i raggi relativi alla coordinazione 6 ma anche facendo così i conti non tornano, vedi più sotto l'esempio del carbonato di calcio.
+NOTA BENE: il raggio ionico dipende dal numero di coordinazione, quindi da un punto di vista strettamente logico non posso usare i raggi ionici (che dipendono dal numero di coordinazione) per prevedere il numero di coordinazione perché questo è un ragionamento circolare. Gemini suggerisce di fare i calcoli prendendo i raggi relativi alla coordinazione 6 ma anche facendo così i conti non tornano, vedi più sotto l'esempio del carbonato di calcio.  
+Nel libro "Inorganic Chemistry" di Miessler et al. c'è l'esempio visibile nella figura seguente che evita ogni ragionamento circolare suggerendo di provare i rapporti con tutti i raggi a disposizione e poi fare una valutazione critica dei risultati.
+![cp95 (https://chemistry.stackexchange.com/users/150713/cp95), Pauling's first rule and circular reasoning?, URL (version: 2026-03-03): https://chemistry.stackexchange.com/q/195145](Miessler-2014.png)
 
 ## Seconda regola di Pauling
 
@@ -308,19 +310,29 @@ NdA: ogni sistema cristallino ha uno o più tipi di celle primitive?
 Gli **assi cristallografici** costituiscono un **sistema di riferimento**.  
 
 In 2D occorrono tre parametri per definire gli assi cristallografici:  
-$a$ unità sul primo asse,  
-$b$ unità sul secondo asse,  
+**a** unità sul primo asse,  
+**b** unità sul secondo asse,  
 $\gamma$ angolo fra i due assi
 
 In 3D occorrono sei parametri per definire gli assi cristallografici:  
-$a$ unità sul primo asse,  
-$b$ unità sul secondo asse,  
-$c$ unità sul terzo asse,  
+**a** unità sul primo asse,  
+**b** unità sul secondo asse,  
+**c** unità sul terzo asse,  
 $\gamma$ angolo tra $a$ e $b$,  
 $\alpha$ angolo tra $b$ e $c$,  
 $\beta$ angolo tra $a$ e $c$
 
-Gli **assi cristallografici** definiscono i sistemi cristallini.
+Gli assi cristallografici definiscono i **sistemi cristallini**..
+
+Quanto segue viene dal pdf 3 di laboratorio.
+
+Le giaciture delle facce del cristallo si esprimono con le intercette che hanno sugli assi cristallografici.
+
+I tre assi si intersecano nel centro geometrico del cristallo.
+
+La direzione di $a$ è positiva verso l'osservatore, la direzione positiva di $b$ è alla destra dell'osservatore, la direzione positiva di $c$ è verso l'alto.
+
+$\alpha$, $\beta$ e $\gamma$ non necessariamente sono 90 gradi.
 
 ## Elicogira
 
@@ -469,6 +481,10 @@ Asse + centro (aka giroide)|Roto-inversione|Prima ruota, poi inverte (NdA: il ce
 ### Assi polari e bipolari
 
 L'asse che unisce i due vertici di un ottaedro (quelli che non stanno sulla base) è un asse **bipolare** perché i due vertici sono equivalenti; invece l'asse che passa per uno dei vertici di un tetraedro è detto **polare** perché l'altro estremo è il punto centrale della base del tetraedro che è ovviamente non equivalente al vertice.
+
+## Assi cristallografici
+
+Invece di scrivere qui le cose del pdf 3 lab, le ho aggiunte nella sezione precedente relativa al pdf 4 di teoria.
 
 
 # "Hateful eight"
