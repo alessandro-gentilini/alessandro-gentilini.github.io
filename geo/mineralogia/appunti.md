@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 3 marzo 2026.
+Aggiornati al 4 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -327,17 +327,50 @@ $\gamma$ angolo tra $a$ e $b$,
 $\alpha$ angolo tra $b$ e $c$,  
 $\beta$ angolo tra $a$ e $c$
 
-Gli assi cristallografici definiscono i **sistemi cristallini**..
+Gli assi cristallografici definiscono i **sistemi cristallini**.
 
 Quanto segue viene dal pdf 3 di laboratorio.
 
 Le giaciture delle facce del cristallo si esprimono con le intercette che hanno sugli assi cristallografici.
 
-I tre assi si intersecano nel centro geometrico del cristallo.
+I tre assi si intersecano nel centro geometrico del cristallo, le intercette si misurano da questo centro.
 
 La direzione di $a$ è positiva verso l'osservatore, la direzione positiva di $b$ è alla destra dell'osservatore, la direzione positiva di $c$ è verso l'alto.
 
 $\alpha$, $\beta$ e $\gamma$ non necessariamente sono 90 gradi.
+
+**Croce assiale** è per me sinonimo di sistema di riferimento, esiste una **croce a tre assi** (in cui gli assi $a$ e $b$ formano un piano e l'asse $c$ non giace in quel piano) ed una **croce a quattro assi** (in cui gli assi $a_1$, $a_2$, $a_3$ stanno sullo stesso piano mentre l'asse $c$ non giace in quel piano).
+
+I sistemi cristallini sono 7 e sono raggruppati nei tre gruppi:
+
+Nel **gruppo monometrico** si ha $a=b=c$.  
+Mono- significa che c'è una sola unità comune ai tre assi.
+
+Nel **gruppo dimetrico** si ha $a=b\neq c$ (per la croce a tre assi) e $a_1=a_2=a_3\neq c$ (per la croce a quattro assi).  
+Di- significa che una unità è comune a due assi e l'unità del terzo asse è diversa.
+
+Nel **gruppo trimetrico** si ha $a \neq b \neq c$.  
+Tri- significa che ogni asse ha la propria unità diversa da quella degli altri due assi.
+
+Il gruppo monometrico contiene il **sistema cubico** per cui vale $a=b=c$ e $\alpha=\beta=\gamma=90$.
+Il sistema cubico è esemplificato (nel senso della forma del solido che più si avvicina al reticolo di Bravais, vedi Mottana fig. 12.7) da un cubo.
+Gli elementi di simmetria presenti nel sistema cubico sono:  
+il centro di inversione,  
+3 assi quaternari (uniscono i centri di facce opposte),  
+4 assi ternari (sono le diagonali interne al cubo che passano per i vertici e per il centro),  
+6 assi binari (uniscono i punti medi degli spigoli e passano per il centro)
+3 piani interni, paralleli alle facce opposte
+6 piani che uniscono spigoli opposti e passano per il centro
+
+Il gruppo dimetrico contiene il **sistema esagonale**, il **sistema trigonale** e il **sistema tetragonale**.
+
+Nel **sistema esagonale** e nel **sistema trigonale** vale $a_1=a_2=a_3\neq c$ e $\alpha=\beta=\gamma=120$ e $\delta=90$. I due sistemi sono distinti perché il sistema esagonale ha un asse senario mentre il sistema trigonale ha un asse ternario (vedi Mottana fig. 12.7).
+
+Gli assi devono essere tutti coincidenti in un punto
+
+![](Mottana-fig-12-7.png)
+
+![](Mottana-fig-12-7-continua.png)
 
 ## Elicogira
 
