@@ -105,6 +105,11 @@ I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervall
 
 I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.  
 NOTA BENE: il raggio ionico dipende dal numero di coordinazione, quindi da un punto di vista strettamente logico non posso usare i raggi ionici (che dipendono dal numero di coordinazione) per prevedere il numero di coordinazione perché questo è un ragionamento circolare. Gemini suggerisce di fare i calcoli prendendo i raggi relativi alla coordinazione 6 ma anche facendo così i conti non tornano, vedi più sotto l'esempio del carbonato di calcio.  
+Probabilmente Gemini ha suggerito 6 per via di
+
+   “It would seem that students can be encouraged to use Shannon-Prewitt crystal radii with “average” coordination number of 6 for radius ratio calculations.” ([Nathan, 1985, p. 218](zotero://select/library/items/G226IDX7)) ([pdf](zotero://open-pdf/library/items/8PS5ZVZH?page=4))
+
+
 Nel libro "Inorganic Chemistry" di Miessler et al. c'è l'esempio visibile nella figura seguente che evita ogni ragionamento circolare suggerendo di provare i rapporti con tutti i raggi a disposizione e poi fare una valutazione critica dei risultati.
 ![cp95 (https://chemistry.stackexchange.com/users/150713/cp95), Pauling's first rule and circular reasoning?, URL (version: 2026-03-03): https://chemistry.stackexchange.com/q/195145](Miessler-2014.png)
 
