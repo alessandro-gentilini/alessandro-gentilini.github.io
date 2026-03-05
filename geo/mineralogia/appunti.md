@@ -339,9 +339,9 @@ La direzione di $a$ è positiva verso l'osservatore, la direzione positiva di $b
 
 $\alpha$, $\beta$ e $\gamma$ non necessariamente sono 90 gradi.
 
-**Croce assiale** è per me sinonimo di sistema di riferimento, esiste una **croce a tre assi** (in cui gli assi $a$ e $b$ formano un piano e l'asse $c$ non giace in quel piano) ed una **croce a quattro assi** (in cui gli assi $a_1$, $a_2$, $a_3$ stanno sullo stesso piano mentre l'asse $c$ non giace in quel piano).
+**Croce assiale** è per me sinonimo di sistema di riferimento, esiste una **croce a tre assi** (in cui gli assi $a$ e $b$ formano il piano orizzontale e l'asse $c$ non giace in quel piano) ed una **croce a quattro assi** (in cui gli assi $a_1$, $a_2$, $a_3$ stanno sullo stesso piano orizzontale mentre l'asse $c$ non giace in quel piano, gli angoli fra $a_1$, $a_2$, $a_3$ sono $\alpha$, $\beta$, $\gamma$ mentre l'angolo tra $c$ e il piano orizzontale è $\delta$).
 
-I sistemi cristallini sono 7 e sono raggruppati nei tre gruppi:
+I sistemi cristallini sono 7 e sono raggruppati nei tre gruppi (da quello con maggiori simmetrie a quello con minori simmetrie):
 
 Nel **gruppo monometrico** si ha $a=b=c$.  
 Mono- significa che c'è una sola unità comune ai tre assi.
@@ -352,8 +352,20 @@ Di- significa che una unità è comune a due assi e l'unità del terzo asse è d
 Nel **gruppo trimetrico** si ha $a \neq b \neq c$.  
 Tri- significa che ogni asse ha la propria unità diversa da quella degli altri due assi.
 
+Gruppo|Sistema|Note
+-|-|-
+Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simmetria
+Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario
+"|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario
+"|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$
+Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90
+"|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due
+"|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria
+
+L'etimologia viene da Hoffmann, "Introduction to Crystallography", Cham, 2020, Springer.
+
 Il gruppo monometrico contiene il **sistema cubico** per cui vale $a=b=c$ e $\alpha=\beta=\gamma=90$.
-Il sistema cubico è esemplificato (nel senso della forma del solido che più si avvicina al reticolo di Bravais, vedi Mottana fig. 12.7) da un cubo.
+Il sistema cubico è esemplificato da un cubo (esemplificato: nel senso della forma del solido che più si avvicina al reticolo di Bravais, vedi Mottana fig. 12.7).
 Gli elementi di simmetria presenti nel sistema cubico sono:  
 il centro di inversione,  
 3 assi quaternari (uniscono i centri di facce opposte),  
