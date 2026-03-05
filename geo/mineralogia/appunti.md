@@ -325,7 +325,7 @@ In 3D occorrono sei parametri per definire gli assi cristallografici:
 **c** unità sul terzo asse,  
 $\gamma$ angolo tra $a$ e $b$,  
 $\alpha$ angolo tra $b$ e $c$,  
-$\beta$ angolo tra $a$ e $c$
+$\beta$ angolo tra $a$ e $c$ (pro memoria: la lettera greca dell'angolo è quella che manca rispetto alle due lettere latine, e.g. l'angolo tra $a$ e $b$ è la lettera greca c, che è quella che completa la terna abc, ovvero $\gamma$).
 
 Gli assi cristallografici definiscono i **sistemi cristallini**.
 
