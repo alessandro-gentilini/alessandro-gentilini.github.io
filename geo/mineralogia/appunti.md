@@ -558,6 +558,15 @@ La faccia fondamentale è (111) (questo perché $a'=a$, $b'=b$, $c'=c$).
 
 Dalla definizione degli indici discende che facce parallele hanno gli stessi indici di Miller.
 
+## Indici di Miller nei sistemi trigonali e esagonali
+
+L'uso di un sistema di riferimento con assi ortogonali implica indici non razionali nel caso di un prisma a base esagonale.
+
+Si usa quindi un sistema con tre assi a 120 gradi, gli assi possono uscire dagli spigoli dell'esagono oppure dal centro dei lati dell'esagono.
+
+La faccia si indica con quattro numeri $(hk\overline{i}l)$, vale sempre $h+k+i=0$ (intuitivamente)
+
+
 
 # "Hateful eight"
 
