@@ -546,6 +546,18 @@ Asse di ordine pari (rotazione), piano (riflessione) e centro (inversione) coesi
 
 Se un asse di ordine 2 è perpendicolare ad un asse di ordine n allora sono presenti anche altri n-1 assi binari, oppure, detto in altri termini, in tutto sono presenti n assi binari.
 
+## Legge di Haüy ed indici di Miller
+
+Enunciazione della legge di Haüy: dato un cristallo, si scelgano tre assi non complanari e paralleli agli spigoli, i tre assi si intersechino in un punto, si scelga poi una faccia che intercetti i tre assi alle tre distanze $a$, $b$ e $c$ dall'intersezione suddetta.  
+Si consideri poi una seconda faccia che intercetti i tre assi alle distanze $a'$, $b'$, $c'$ allora si ha  
+$\frac{a}{a'}:\frac{b}{b'}:\frac{c}{c'}=h:k:l$  
+e i tre numeri $h$, $k$, $l$ sono numeri interi, razionali e tipicamente piccoli, incluso lo zero.  
+I tre numeri $h$, $k$, $l$ sono detti **indici di Miller**.
+
+La faccia fondamentale è (111) (questo perché $a'=a$, $b'=b$, $c'=c$).
+
+Dalla definizione degli indici discende che facce parallele hanno gli stessi indici di Miller.
+
 
 # "Hateful eight"
 
