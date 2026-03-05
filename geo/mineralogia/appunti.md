@@ -587,6 +587,16 @@ tutte le forme del sistema **cubico**
 
 **Combinazione** di forme (p.235 in Mottana): un cristallo ha sempre un volume finito e quindi le forme aperte devono combinarsi fra loro oppure combinarsi con forme chiuse per rispettare questo vincolo. Per esempio una piramide viene chiusa (alla apertura basale) da un pedione mentre una prisma viene chiuso (alle due aperture basali) da un pinacoide.
 
+## Attribuzione della classe cristallina
+
+La gerarchia che ho inteso è: **gruppo $\rightarrow$ sistema $\rightarrow$ classe**.  
+I gruppi sono 3 (monometrico, dimetrico, trimetrico), i sistemi sono 7 (cubico, esagonale, trigonale, tetragonale, ortorombico, monoclino, triclino), complessivamente i sistemi sono suddivisi in 32 classi.
+
+Dato un sistema, la sua **classe oloedrica** è la classe che ha la massima combinazione di elementi di simmetria; ad essa è associata la **forma generale** che è la forma con il maggior numero di facce (p.234 Mottana).  
+Il suddetto sistema ha poi altre classi dette **classi meroedriche** che hanno minor combinazioni di elementi di simmetria, alle classi meroedriche sono associate le **facce speciali** (p.234 Mottana).
+
+Per esempio nel sistema cubico la classe oloedrica si chiama **esacisottaedrica** e la sua forma generale è per l'appunto l'**esacissottaedro** che ha 48 facce, mentre la sua forma più speciale possibile è il **cubo** (Fig. 12.11 a p.234 in Mottana).
+
 # "Hateful eight"
 
 O - Ossigeno  
