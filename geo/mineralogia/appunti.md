@@ -587,7 +587,7 @@ tutte le forme del sistema **cubico**
 
 **Combinazione** di forme (p.235 in Mottana): un cristallo ha sempre un volume finito e quindi le forme aperte devono combinarsi fra loro oppure combinarsi con forme chiuse per rispettare questo vincolo. Per esempio una piramide viene chiusa (alla apertura basale) da un pedione mentre una prisma viene chiuso (alle due aperture basali) da un pinacoide.
 
-## Attribuzione della classe cristallina
+## Classi cristalline
 
 La gerarchia che ho inteso è: **gruppo $\rightarrow$ sistema $\rightarrow$ classe**.  
 I gruppi sono 3 (monometrico, dimetrico, trimetrico), i sistemi sono 7 (cubico, esagonale, trigonale, tetragonale, ortorombico, monoclino, triclino), complessivamente i sistemi sono suddivisi in 32 classi.
@@ -596,6 +596,18 @@ Dato un sistema, la sua **classe oloedrica** è la classe che ha la massima comb
 Il suddetto sistema ha poi altre classi dette **classi meroedriche** che hanno minor combinazioni di elementi di simmetria, alle classi meroedriche sono associate le **facce speciali** (p.234 Mottana).
 
 Per esempio nel sistema cubico la classe oloedrica si chiama **esacisottaedrica** e la sua forma generale è per l'appunto l'**esacissottaedro** che ha 48 facce, mentre la sua forma più speciale possibile è il **cubo** (Fig. 12.11 a p.234 in Mottana).
+
+## Attribuzione della classe cristallina
+
+Dato un cristallo, per attribuire una classe cristallina si segue questo schema:
+
+1) ricercare gli elementi di simmetria
+
+2) determinare la croce assiale e l'orientamento
+
+3) determinare le caratteristiche della croce assiale ($\alpha, \beta, \gamma, a, b, c$).
+
+4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$)
 
 # "Hateful eight"
 
@@ -915,6 +927,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 [K&P] Cornelis Klein & Anthony R. Philpotts, Mineralogia e petrografia, Bologna, 2018, Zanichelli.
 
 [K] Cornelis Klein, Mineralogia, Bologna, 2004, Zanichelli.
+
+[Mottana] Annibale Mottana, "Fondamenti di mineralogia geologica", Bologna, 1988, Zanichelli.
 
 [Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
