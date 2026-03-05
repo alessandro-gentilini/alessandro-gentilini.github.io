@@ -542,6 +542,10 @@ Invece di scrivere qui le cose del pdf 3 lab, le ho aggiunte nella sezione prece
 
 ## Regole di coesistenza
 
+Asse di ordine pari (rotazione), piano (riflessione) e centro (inversione) coesistono ed in particolare il centro è il punto di intersezione tra l'asse e il piano.
+
+Se un asse di ordine 2 è perpendicolare ad un asse di ordine n allora sono presenti anche altri n-1 assi binari, oppure, detto in altri termini, in tutto sono presenti n assi binari.
+
 
 # "Hateful eight"
 
