@@ -607,7 +607,7 @@ Dato un cristallo, per attribuire una classe cristallina si segue questo schema:
 
 3) determinare le caratteristiche della croce assiale ($\alpha, \beta, \gamma, a, b, c$).
 
-4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$)
+4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche
 
 # "Hateful eight"
 
