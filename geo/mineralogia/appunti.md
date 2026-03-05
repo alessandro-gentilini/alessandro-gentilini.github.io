@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 4 marzo 2026.
+Aggiornati al 5 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -566,7 +566,26 @@ Si usa quindi un sistema con tre assi a 120 gradi, gli assi possono uscire dagli
 
 La faccia si indica con quattro numeri $(hk\overline{i}l)$, vale sempre $h+k+i=0$ (intuitivamente)
 
+## Forme cristalline
+Data una faccia di riferimento (hkl) l'insieme delle facce ad essa equivalenti (secondo le simmetrie presenti) è detto **forma semplice** ed è indicato da {hkl}; notare quindi che la singola faccia è espressa con gli indici fra parentesi tonde mentre la forma semplice è espressa dagli indici fra parentesi graffe. Per esempio la forma semplice cubo è indicata da {100} ed è composta da $(100), (010), (001), (\overline{1}00), (0\overline{1}0), (00\overline{1})$ (vedi p.12 in Mottana et al. "Minerali e rocce", 2002, Milano, Mondadori).
 
+La forma semplice può essere **positiva**/**negativa** quando la faccia di riferimento taglia il semiasse positivo/negativo di $c$.
+
+Può essere **aperta**/**chiusa** quando non racchiude/racchiude lo spazio.
+
+Esempi di forme aperte:  
+**pedione**: una singola faccia (dal greco "pianura")  
+**pinacoide**: due facce (dal greco "a forma di tavola")  
+**doma**: due facce non parallele  
+**prismi**  
+**piramidi**
+
+Esempi di forme chiuse:  
+**bipiramidi**  
+**tetraedro**  
+tutte le forme del sistema **cubico**
+
+**Combinazione** di forme (p.235 in Mottana): un cristallo ha sempre un volume finito e quindi le forme aperte devono combinarsi fra loro oppure combinarsi con forme chiuse per rispettare questo vincolo. Per esempio una piramide viene chiusa (alla apertura basale) da un pedione mentre una prisma viene chiuso (alle due aperture basali) da un pinacoide.
 
 # "Hateful eight"
 
