@@ -352,14 +352,14 @@ Di- significa che una unità è comune a due assi e l'unità del terzo asse è d
 Nel **gruppo trimetrico** si ha $a \neq b \neq c$.  
 Tri- significa che ogni asse ha la propria unità diversa da quella degli altri due assi.
 
-Gruppo|Sistema|Note
--|-|-
-Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simmetria
-Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario
-"|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario
-"|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$
-Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90
-"|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due
+Gruppo|Sistema|Note|Solido rappresentativo (Fig 5.25 in [KP]) e mie deduzioni basata sulle relazioni tra $a,b,c,\alpha,\beta,\gamma$
+-|-|-|-
+Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simmetria|Cubo
+Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario|Prisma retto a base esagonale
+"|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario|Prisma retto a base triangolare
+"|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$|Prisma retto a base quadrata
+Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Parallelepipedo
+"|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due|Prisma obliquo a base rettangolare
 "|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria
 
 L'etimologia viene da Hoffmann, "Introduction to Crystallography", Cham, 2020, Springer.
@@ -378,7 +378,7 @@ Il gruppo dimetrico contiene il **sistema esagonale**, il **sistema trigonale** 
 
 Nel **sistema esagonale** e nel **sistema trigonale** vale $a_1=a_2=a_3\neq c$ e $\alpha=\beta=\gamma=120$ e $\delta=90$. I due sistemi sono distinti perché il sistema esagonale ha un asse senario mentre il sistema trigonale ha un asse ternario (vedi Mottana fig. 12.7).
 
-Gli assi devono essere tutti coincidenti in un punto
+Gli assi di simmetria (binari, ternari, quaternari, senari) devono essere tutti coincidenti in un punto.
 
 ![](Mottana-fig-12-7.png)
 
