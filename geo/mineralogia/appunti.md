@@ -378,11 +378,15 @@ Il gruppo dimetrico contiene il **sistema esagonale**, il **sistema trigonale** 
 
 Nel **sistema esagonale** e nel **sistema trigonale** vale $a_1=a_2=a_3\neq c$ e $\alpha=\beta=\gamma=120$ e $\delta=90$. I due sistemi sono distinti perché il sistema esagonale ha un asse senario mentre il sistema trigonale ha un asse ternario (vedi Mottana fig. 12.7).
 
-Gli assi di simmetria (binari, ternari, quaternari, senari) devono essere tutti coincidenti in un punto.
-
 ![](Mottana-fig-12-7.png)
 
 ![](Mottana-fig-12-7-continua.png)
+
+Dalla tabella 12.10 in Mottana, dalla rappresentazione della classe 31
+
+![](Mottana-tab-12-10.png)
+
+si deduce che gli assi di simmetria (binari, ternari, quaternari, senari) devono essere tutti coincidenti in un punto.
 
 ## Elicogira
 
@@ -535,6 +539,8 @@ L'asse che unisce i due vertici di un ottaedro (quelli che non stanno sulla base
 ## Assi cristallografici
 
 Invece di scrivere qui le cose del pdf 3 lab, le ho aggiunte nella sezione precedente relativa al pdf 4 di teoria.
+
+## Regole di coesistenza
 
 
 # "Hateful eight"
