@@ -607,11 +607,36 @@ Dato un cristallo, per attribuire una classe cristallina si segue questo schema:
 
 3) determinare le caratteristiche della croce assiale ($\alpha, \beta, \gamma, a, b, c$).
 
-4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche (p.90 pdf lab 3).
+4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (vedi oltre l'algoritmo per attribuzione del sistema); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche (p.90 pdf lab 3).
 
 5) simbolo della faccia di riferimento di ogni forma cristallina ed elenco del simbolo e del nome di ogni forma semplice.
 
 6) proiezione stereografica
+
+## Algoritmo per attribuzione del sistema
+Il seguente algoritmo per l'attribuzione del sistema è valido solamente per le classi oloedriche.
+
+<pre>
+C'è un asse senario?
+Sì: il sistema è **esagonale**.
+No: c'è almeno un asse ternario?
+    Sì: quanti sono gli assi ternari?
+        uno solo: il sistema è **trigonale**.
+        quattro: il sistema è **cubico**.
+    No: c'è almeno un asse quaternario?
+        Sì: quanti sono gli assi quaternari?
+            uno solo: il sistema è **tetragonale**.
+            tre: il sistema è **cubico**.
+        No: ci sono tre assi binari ortogonali?
+            Sì: il sistema è **ortorombico**.
+            No: c'è un asse binario ed un piano perpendicolare?
+                Sì: il sistema è **monoclino**.
+                No: c'è il solo centro di inversione e il sistema è **triclino**.
+</pre>
+
+
+
+## Classi oloedriche e forme generali
 
 Gruppo|Sistema|Note|Nome classe oloedrica|Forma generale
 -|-|-|-|-
@@ -627,10 +652,13 @@ Le forme generali vengono dalle tabella da 12.4 a 12.10 in Mottana.
 
 ## Alcuni esempi di attribuzione della classe cristallina
 <div style="background-color: yellow; padding: 10px;">
-   <strong>Da fare</strong> 
+   <strong>DA FARE</strong> 
 </div>
 
 ## Alcuni esempi di proiezioni stereografiche
+<div style="background-color: yellow; padding: 10px;">
+   <strong>DA FARE</strong> 
+</div>
 
 # "Hateful eight"
 
