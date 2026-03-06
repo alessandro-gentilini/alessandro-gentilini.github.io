@@ -607,7 +607,11 @@ Dato un cristallo, per attribuire una classe cristallina si segue questo schema:
 
 3) determinare le caratteristiche della croce assiale ($\alpha, \beta, \gamma, a, b, c$).
 
-4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche
+4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche (p.90 pdf lab 3).
+
+5) simbolo della faccia di riferimento di ogni forma cristallina ed elenco del simbolo e del nome di ogni forma semplice.
+
+6) proiezione stereografica
 
 Gruppo|Sistema|Note|Nome classe oloedrica|Forma generale
 -|-|-|-|-
@@ -618,6 +622,15 @@ Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90,
 Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Bipiramidale ortorombica|![](./bipiramide_ortorombica.png)
 "|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due|Prismatica|![](./prismatica.png)
 "|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria|Pinacoidale|![](./pinacoidale.png)
+
+Le forme generali vengono dalle tabella da 12.4 a 12.10 in Mottana.
+
+## Alcuni esempi di attribuzione della classe cristallina
+<div style="background-color: yellow; padding: 10px;">
+   <strong>Da fare</strong> 
+</div>
+
+## Alcuni esempi di proiezioni stereografiche
 
 # "Hateful eight"
 
