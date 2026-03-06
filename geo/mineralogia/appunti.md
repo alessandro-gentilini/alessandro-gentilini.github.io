@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 5 marzo 2026.
+Aggiornati al 6 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -608,6 +608,16 @@ Dato un cristallo, per attribuire una classe cristallina si segue questo schema:
 3) determinare le caratteristiche della croce assiale ($\alpha, \beta, \gamma, a, b, c$).
 
 4) il gruppo si determina osservando $a, b, c$ (è monometrico se $a=b=c$, dimetrico se $a=b\neq c$, trimetrico se $a\neq b \neq c$); il sistema si determina in base agli assi di simmetria (); una volta determinato il sistema resta automaticamente determinata anche la classe perché trattiamo le sole classi oloedriche
+
+Gruppo|Sistema|Note|Nome classe oloedrica|Forma generale
+-|-|-|-|-
+Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simmetria|Esacissottaedrica|![](./esacisottaedrica.png)
+Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario|Bipiramidale (diesagonale)|![](bipiramidale_diesagonale.png)
+"|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario|Scalenoedrica ditrigonale|![](./scalenoedrica_ditrigonale.png)
+"|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$|Bipiramidale (ditetragonale)|![](./bipiramidale_ditetragonale.png)
+Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Bipiramidale ortorombica|![](./bipiramide_ortorombica.png)
+"|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due|Prismatica|![](./prismatica.png)
+"|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria|Pinacoidale|![](./pinacoidale.png)
 
 # "Hateful eight"
 
