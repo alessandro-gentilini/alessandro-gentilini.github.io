@@ -181,10 +181,15 @@ Il catione $Si^{4+}$ ha v.e. = +4/4=+1, quindi ogni legame porta +1 agli anioni 
 Questo collegamento fra tetraedri viene definito **mesodesmico**.
 
 ### Terza regola di Pauling
+La condivisione di spigoli tra i poliedri di combinazione rende le strutture dei cristalli meno stabili.  
+La condivisione di facce tra i poliedri di combinazione rende le strutture dei cristalli instabili.  
+La causa della crescente instabilità è l'avvicinarsi sempre più dei cationi centrali al condividere prima degli spigoli e poi delle facce, questa vicinanza di cationi dà repulsione non compensata e quindi instabilità; la causa è accentuata da cationi ad alta valenza e con basso numero di coordinazione (il basso numero di coordinazione dà meno anioni vicini e quindi minor effetto schermo dato da questi anioni).
 
 ### Quarta regola di Pauling
+Come conseguenza della terza regola si ha che cationi con alta carica e basso numero di coordinazione tendono a non condividere elementi del poliedro (eccetto i vertici).
 
 ### Quinta regola di Pauling
+La quinta regola è un principio di parsimonia: le strutture cristalline tendono ad avere un numero limitato di siti cationici e anionici distinti.
 
 # pdf 4 - Elementi di cristallografia
 
