@@ -522,7 +522,7 @@ Operatore|Operazione|Simbolo|Note
 Asse|Rotazione|1,2,3,4,6|È operazione **congruente**, e.g. la mano destra resta destra
 Piano|Riflessione|p (piano) oppure m (mirror)|La mano destra diventa sinistra (**coppie enantiomorfe**)
 Centro|Inversione|c (centro) oppure i (inversione)|La mano destra diventa sinistra (coppie enantiomorfe)
-Asse + centro (aka **giroide**)|Roto-inversione|$\overline{1}$,$\overline{2}$,$\overline{3}$,$\overline{4}$,$\overline{6}$
+Asse + centro (aka **giroide**)|Roto-inversione|$\overline{1},\overline{2},\overline{3},\overline{4},\overline{6}$
 
 
 Operatore|Operazione|Descrizione matematica/geometrica
