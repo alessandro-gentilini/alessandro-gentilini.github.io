@@ -1,0 +1,49 @@
+indice iniziale,nome,gruppo,sottogruppo,formula,riconoscimento,big ten
+1,quarzo,silicati,silice,1,1,1
+2,ortoclasio,silicati,feldspati,1,1,1
+3,albite,silicati,feldspati,1,0,1
+4,anortite,silicati,feldspati,1,0,1
+5,muscovite,silicati,miche,1,1,1
+6,biotite,silicati,miche,1,1,1
+7,orneblenda,silicati,anfiboli,1,1,1
+8,augite,silicati,pirosseno,1,1,1
+9,forsterite,silicati,olivine,1,1,1
+10,fayalite,silicati,olivine,1,1,1
+11,calcite,carbonato,,1,1,1
+12,dolomite,carbonato,,1,1,1
+13,plagioclasi,silicati,?,1,0,0
+14,berillo,silicati,?,0,1,0
+15,serpentino,silicati,?,0,0,0
+16,caolinite,silicati,?,0,0,0
+17,talco,silicati,?,0,0,0
+18,microclino,silicati,?,0,1,0
+19,granati,silicati,?,0,1,0
+20,cianite,silicati,?,0,1,0
+21,leucite,silicati,?,0,1,0
+22,tormalina,silicati,?,0,1,0
+23,ematite,ossidi,,1,1,0
+24,limonite,ossidi,,0,1,0
+25,magnetite,ossidi,,1,1,0
+26,corindone,ossidi,,1,1,0
+27,cromite,ossidi,,1,0,0
+28,malachite,carbonato,,0,1,0
+29,azzurrite,carbonato,,0,1,0
+30,siderite,carbonato,,1,1,0
+31,rodocrosite,carbonato,,1,1,0
+32,gesso,solfati,,1,1,0
+33,barite,solfati,,1,1,0
+34,apatite,fosfati,,1,1,0
+35,pirite,solfuri,,1,1,0
+36,galena,solfuri,,1,1,0
+37,cinabro,solfuri,,1,1,0
+38,blenda,solfuri,,1,1,0
+39,calcopirite,solfuri,,1,1,0
+40,antimonite,solfuri,,1,1,0
+41,salgemma,alogenuri,,1,1,0
+42,fluorite,alogenuri,,1,1,0
+43,rame,elementi nativi,,1,1,0
+44,oro,elementi nativi,,1,1,0
+45,zolfo,elementi nativi,,1,1,0
+46,grafite,elementi nativi,,1,1,0
+47,platino,elementi nativi,,1,1,0
+48,mercurio,elementi nativi,,1,1,0
