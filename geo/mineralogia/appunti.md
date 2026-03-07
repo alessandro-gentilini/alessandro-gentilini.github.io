@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 6 marzo 2026.
+Aggiornati al 7 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -300,7 +300,7 @@ NdA: può avere uno dei seguenti **tipi**?
 * **centrati su tutte le facce** C
 * **romboedrici** R
 
-**nodo** punto nello spazio attorno al quale si ripetono atomi oppure ioni oppure **gruppi di atomi** (esempio $(CO_{3})^{-2}$, $(SiO_{4})^{4-}$) oppure **unità strutturali** più complesse.
+**nodo** punto nello spazio attorno al quale si ripetono atomi oppure ioni oppure **gruppi di atomi** (esempio il **gruppo anionico** $(CO_{3})^{-2}$, il **gruppo anionico** $(SiO_{4})^{4-}$) oppure **unità strutturali** più complesse.
 
 La cella elementare di tipo P ha un solo **nodo**, quelle degli altri tipi hanno più di un nodo.
 
@@ -970,6 +970,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **diagnostico**: che serve alla determinazione di un minerale.
 
 **_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
+
+**gruppo anionico**: pdf lab #2 p.3/47
 
 **illuminazione ortoscopica**: aka pol
 
