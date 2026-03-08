@@ -68,6 +68,9 @@ $q$ carica totale della formula: 0 se composto neutro, altrimenti la carica dell
 
 Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e altri elementi hanno più di un n.o., in questo ultimo caso si consulta la tavola periodica e si scelgono i n.o. che soddisfano l'equazione. Se c'è più di un set di n.o. che soddisfano l'equazione allora non so come fare :-).
 
+
+
+
 # Riassunto pdf 3 - Cristallochimica
 
 Ipotesi di ioni come sfere rigide.  
@@ -190,6 +193,64 @@ Come conseguenza della terza regola si ha che cationi con alta carica e basso nu
 
 ### Quinta regola di Pauling
 La quinta regola è un principio di parsimonia: le strutture cristalline tendono ad avere un numero limitato di siti cationici e anionici distinti.
+
+# pdf lab #2 La classificazione dei minerali, Le formule dei minerali, Alcuni diagrammi classificativi
+
+## Calcolare la formula di un minerale
+
+Esempio delle olivine p.31/47.
+
+Le olivine sono una soluzione solida $(Fe,Mg)_{2}SiO_{4}$ che ha come due estremi la **Forsterite** $Mg_{2}SiO_{4}$ e la **Fayalite** $Fe_{2}SiO_{4}$.
+
+A seguito di una analisi chimica, viene data la composizione in **percentuale in peso dell'ossido** misurata per un certo minerale e si deve determinare se è compatibile con una olivina.  
+La strategia è determinare quante moli di ossigeno sono presenti nel campione di minerale e quante moli dei singoli cationi di interesse; dopo di che si fa la proporzione tra il numero di moli di ossigeno presenti nel campione e lo stesso numero della formula (4 in questo caso perché nella formula dell'olivina ci sono 4 ossigeni); con questa proporzione si ottengono poi il numero di moli dei singoli cationi e li si confronta con la formula.
+
+Per ogni ossido del risultato dell'analisi fare queste operazioni:
+
+$POX$: percentuale in peso dell'ossido: si esprime in grammi su 100 grammi.  
+Per esempio $SiO_{2}$ 39.90 significa che su 100 grammi di minerale sono presenti 39.90 grammi di $SiO_{2}$.
+
+$MW$: per ogni ossido si indica il peso molecolare espresso in g/mol; si ottiene dalla tavola periodica.  
+Per esempio il peso molecolare di $SiO_{2}$ è $28.09+2\cdot16=28.09+32=60.09$ g/mol dove 28.09 è la massa atomica del silicio e 16 è quella dell'ossigeno (prese dalla tavola periodica).
+
+$nOX$: numero di moli di ossido, $nOX=\frac{POX}{MW}$.  
+Continuando con l'esempio $POX=39.90$ g e $MW=60.09$ g/mol dà $nOX=39.90/60.09=0.664$ mol.
+
+$nCAT$: numero di moli del catione presente nell'ossido, $nCAT=pedice\_catione \cdot nOX$.  
+Nell'esempio $nCAT=1\cdot0.664=0.664$ mol
+
+$nO$: numero di moli dell'ossigeno presente nell'ossido, $nO=pedice\_ossigeno \cdot nOX$  
+Nell'esempio $nO=2\cdot0.664=1.328$
+
+Sommare quindi $nO$ di tutti gli ossidi presenti, si ottiene $TO$ che è il numero totale di moli di ossigeno presenti nel campione.  
+Nell'esempio numerico del pdf si ha $TO=2.666$
+
+A questo punto, per ogni catione si risolve la proporzione:
+
+$nCAT : x = TO : 4$
+
+dove $x$ è il numero di moli del catione in oggetto riscalato sulla formula.  
+Nella proporzione 4 è il numero di ossigeni nella formula.  
+La proporzione si spiega così: so che nel campione analizzato ci sono $nCAT$ moli di catione essendoci $TO$ moli di ossigeno, quante sarebbero le x moli di catione se ci fossero i 4 ossigeni della formula?
+
+Si ottengono quindi delle $x$ che devono poi essere confrontate con i pedici degli elementi della formula.  
+Nell'esempio numerico presente nel pdf, risolvendo per $x$ per tutti i cationi si ottiene:  
+Ossido|x (mol)|arrotondato
+-|-|-
+$SiO_{2}$|0.996|1
+$FeO$|0.297|0.3
+$MnO$|0.009|0
+$MgO$|1.690|1.7
+$CaO$|0.008|0
+
+Quindi si ha una olivina con formula $(Mg_{1.7}Fe_{0.3})SiO_{4}$.
+
+In un diagramma a due componenti (quindi un singolo asse), detta $L$ la lunghezza in mm dell'asse sul foglio di carta, si ha che il campione oggetto di analisi è rappresentato da un punto che ha la distanza $\frac{1.7}{2}\cdot L=0.85\cdot L$ dall'estremo dell'asse marcato Fayalite (olivina tutto ferro); è un punto quindi più vicino a Forsterite (olivina tutto magnesio) e più lontano dalla Fayalite.
+
+
+
+
+
 
 # pdf 4 - Elementi di cristallografia
 
