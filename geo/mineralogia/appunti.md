@@ -193,7 +193,10 @@ La causa della crescente instabilità è l'avvicinarsi sempre più dei cationi c
 Come conseguenza della terza regola si ha che cationi con alta carica e basso numero di coordinazione tendono a non condividere elementi del poliedro (eccetto i vertici).
 
 ### Quinta regola di Pauling
-La quinta regola è un principio di parsimonia: le strutture cristalline tendono ad avere un numero limitato di siti cationici e anionici distinti.
+La quinta regola è un principio di parsimonia: le strutture cristalline tendono ad avere un numero limitato di siti cationici e anionici distinti, quindi per ottenere composizioni complesse (come per esempio quelle degli anfiboli) devono essere possibili molte sostituzioni cationiche o anioniche cioè i siti devono poter ospitare molte specie diverse di cationi ed anioni.  
+Nell'esempio degli anfiboli si hanno quattro siti cationici (un ottaedrico, un tetraedrico ed altri due siti) ed un sito anionico che possono ospitare sostituzioni; in questi siti si distribuiscono nove cationi ed un anione.
+
+
 
 # pdf lab #2 La classificazione dei minerali, Le formule dei minerali, Alcuni diagrammi classificativi
 
