@@ -16,10 +16,11 @@ Valitutti et al., "Chimica concetti e modelli - Terza edizione", Bologna, 2023, 
 
 Gli ioni negatitivi (anioni) sono tipicamente più grandi degli ioni positivi (cationi) perché essendo negativi hanno più elettroni e quindi occupano un volume maggiore.
 
+Visualizzare una batteria stilo/torcia da 1.5V appoggiata su un piano:
 <pre>
 In ordine alfabetico:
-In alto:  Anodo  + attira ioni negativi che si chiamano quindi anioni
-In basso: Catodo - attira ioni positivi che si chiamano quindi cationi
+In alto:  Anodo  polo + attira ioni negativi che si chiamano quindi anioni
+In basso: Catodo polo - attira ioni positivi che si chiamano quindi cationi
 </pre>
 
 
