@@ -194,7 +194,7 @@ Come conseguenza della terza regola si ha che cationi con alta carica e basso nu
 
 ### Quinta regola di Pauling
 La quinta regola è un principio di parsimonia: le strutture cristalline tendono ad avere un numero limitato di siti cationici e anionici distinti, quindi per ottenere composizioni complesse (come per esempio quelle degli anfiboli) devono essere possibili molte sostituzioni cationiche o anioniche cioè i siti devono poter ospitare molte specie diverse di cationi ed anioni.  
-Nell'esempio degli anfiboli si hanno quattro siti cationici (un ottaedrico, un tetraedrico ed altri due siti) ed un sito anionico che possono ospitare sostituzioni; in questi siti si distribuiscono nove cationi ed un anione.
+Nell'esempio degli anfiboli si hanno quattro siti cationici (un ottaedrico, un tetraedrico ed altri due siti) ed un sito anionico che possono ospitare sostituzioni; in questi siti si distribuiscono nove cationi ed un anione ($OH^{-}$).
 
 
 
@@ -729,6 +729,39 @@ Le forme generali vengono dalle tabella da 12.4 a 12.10 in Mottana.
 <div style="background-color: yellow; padding: 10px;">
    <strong>DA FARE</strong> 
 </div>
+
+# pdf #5 Soluzioni solide
+
+Alla possibilità che in una struttura cristallina un determinato sito ospiti cationi/anioni di specie chimiche diverse sono attribuite varie denominazioni:  
+**sostituzione atomica** è il termine usato in [KP],  
+**sostituzione ionica** è il termine più corretto,  
+**soluzione solida** è il termine più usato in letteratura mineralogica,  
+**vicarianza** è il termine tipico della letteratura geochimica.
+
+**Termini puri** aka **termini estremi**: sono minerali che contengono  una sola delle 2 o più specie atomiche possibili.  
+L'insieme dei minerali compresi tra i termini puri è detta **serie** aka **soluzione solida**.  
+La **soluzione solida completa** è quella che contiene tutte le proporzioni possibili tra le differenti specie atomiche; la **soluzione solida parziale** invece non contiene tutte le proporzioni possibili, l'intervallo di proporzioni dove non sono presenti elementi della serie è detto **lacuna di miscibilità** aka **lacuna di composizione**.
+
+Nell'esempio della **serie delle olivine** si ha che l'olivina $(Mg,Fe)_{2}SiO_{4}$ ha un sito tetraedrico sempre occupato dal catione silicio ed un sito ottaedrico che può essere occupato dal catione $Mg^{2+}$ oppure dal catione $Fe^{2+}$. La proporzione $Mg^{2+}/Fe^{2+}$ varia con continuità tra i due termini estremi.
+
+I fattori che controllano le sostituzioni atomiche sono:
+
+1) raggi ionici
+2) carica elettrica
+3) temperatura
+4) disponibilità di specie atomiche
+
+## Raggi ionici
+
+Sia $\Delta=R_1-R_2$ la differenza tra i raggi ionici di due cationi $1$ e $2$, si calcoli poi la percentuale rispetto ad uno dei due cationi (non ho capito come scegliere questo denominatore), una regola indicativa dice che se la percentuale è < 15% allora si può formare una soluzione solida completa, se la percentuale è tra 15% e 30% allora si può formare una soluzione solida parziale/limitata mentre se è maggiore del 30% la soluzione solida non si può avere.
+
+## Carica elettrica
+
+La sostituzione anionica/cationica deve mantenere la neutralità elettrica della struttura cristallina, quindi se i cationi/anioni oggetto della sostituzione hanno la stessa carica la sostituzione può avvenire; se invece le cariche sono diverse allora le sostituzioni potranno avvenire solamente se sono **sostituzioni accoppiate**, se cioè ad un catione $A^{+n}$ si sostituisce un catione $C^{+m}$ ($n\neq m$) allora dovrà esserci simultaneamente anche la sostituzione del catione $B^{+p}$ con il catione $D^{+q}$ valendo la relazione fra le cariche $n+p=m+q$.  
+Esempi di sostituzioni accoppiate si hanno nei **plagioclasi** (**albite** e **anortite**) e nei **pirosseni** (**diopside** e **giadeite**).  
+Le sostituzioni accoppiate non garantiscono che la soluzione sia completa, perché possono intervenire i vincoli sulle dimensioni a indurre soluzioni parziali.
+
+Esempio specifico dei plagioclasi
 
 # "Hateful eight"
 
