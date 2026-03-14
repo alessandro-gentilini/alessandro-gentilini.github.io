@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 8 marzo 2026.
+Aggiornati al 14 marzo 2026.
 
 
 # Ripasso di chimica (NdA)
@@ -762,6 +762,19 @@ Esempi di sostituzioni accoppiate si hanno nei **plagioclasi** (**albite** e **a
 Le sostituzioni accoppiate non garantiscono che la soluzione sia completa, perché possono intervenire i vincoli sulle dimensioni a indurre soluzioni parziali.
 
 Esempio specifico dei plagioclasi
+
+# Lab #4 - Diagrammi di cristallizzazione
+
+## Diagrammi di fase con due componenti
+
+I diagrammi sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
+
+### Due componenti completamente miscibili allo stato fuso e immiscibili allo stato solido, con punto eutettico
+[Link all'esempio del sistema Diopside (pirosseno) - Anortite (plagioclasio)](./diagrammi_di_fase_binari/Perkins_et_Brady-dian_animation.pdf)
+
+
+
+
 
 # "Hateful eight"
 
