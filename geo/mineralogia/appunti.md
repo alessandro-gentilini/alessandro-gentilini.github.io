@@ -7,7 +7,8 @@ date: "14 settembre 2025"
 Aggiornati al 14 marzo 2026.
 
 # Riconoscimento minerali
-Tavole in Marshak?
+Tavole in Marshak?  
+Capitolo 14 in Klein?
 
 
 # Ripasso di chimica (NdA)
