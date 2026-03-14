@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulazione Sistema Eutettico Di-An</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background: #f0f0f0; }
+        canvas { background: white; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .controls { margin: 20px; padding: 15px; background: #fff; border-radius: 8px; }
+        .info { margin-top: 10px; font-size: 0.9em; color: #444; }
+    </style>
+</head>
+<body>
+
+    <h2>Cristallizzazione Sistema Diopside - Anortite</h2>
+    
+    <div class="controls">
+        <label>Composizione iniziale (% Anortite): </label>
+        <input type="range" id="compSlider" min="0" max="100" value="70">
+        <span id="compVal">70</span>%
+        <button onclick="startSimulation()">Avvia Raffreddamento</button>
+    </div>
+
+    <canvas id="diagramCanvas" width="600" height="400"></canvas>
+
+    <div class="info">
+        <p id="statusText">Stato: In attesa...</p>
+        <p><i>Nota: Le curve di liquidus sono approssimate a segmenti lineari.</i></p>
+    </div>
+
+<script>
+const canvas = document.getElementById('diagramCanvas');
+const ctx = canvas.getContext('2d');
+const compSlider = document.getElementById('compSlider');
+const compVal = document.getElementById('compVal');
+const statusText = document.getElementById('statusText');
+
+// Parametri Sistema (Approssimati)
+const T_Di = 1391; // Punto fusione Diopside
+const T_An = 1553; // Punto fusione Anortite
+const T_Eut = 1274; // Temperatura Eutettica
+const X_Eut = 0.42; // Composizione Eutettica (42% An)
+
+// Coordinate Canvas
+const margin = 50;
+const width = canvas.width - 2 * margin;
+const height = canvas.height - 2 * margin;
+
+// Variabili di stato
+let currentT = 1650;
+let currentX = 0.7;
+let initialX = 0.7;
+let latentHeat = 0;
+let isRunning = false;
+let animationId;
+
+compSlider.oninput = () => {
+    compVal.innerText = compSlider.value;
+    drawDiagram();
+    drawPoint(1650, compSlider.value / 100);
+};
+
+function mapX(x) { return margin + x * width; }
+function mapT(t) { return canvas.height - margin - ((t - 1100) / (1650 - 1100)) * height; }
+
+function drawDiagram() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Assi
+    ctx.beginPath();
+    ctx.strokeStyle = '#000';
+    ctx.moveTo(margin, margin);
+    ctx.lineTo(margin, canvas.height - margin);
+    ctx.lineTo(canvas.width - margin, canvas.height - margin);
+    ctx.stroke();
+
+    // Etichette Assi
+    ctx.fillStyle = '#000';
+    ctx.fillText("Diopside (0%)", margin - 20, canvas.height - margin + 20);
+    ctx.fillText("Anortite (100%)", canvas.width - margin - 40, canvas.height - margin + 20);
+    ctx.fillText("Temp (°C)", 5, margin);
+
+    // Curve Liquidus (Segmenti)
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue';
+    ctx.setLineDash([5, 5]);
+    // Da Di a Eutettico
+    ctx.moveTo(mapX(0), mapT(T_Di));
+    ctx.lineTo(mapX(X_Eut), mapT(T_Eut));
+    // Da An a Eutettico
+    ctx.lineTo(mapX(1), mapT(T_An));
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Linea Solidus (Isoterma Eutettica)
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.moveTo(mapX(0), mapT(T_Eut));
+    ctx.lineTo(mapX(1), mapT(T_Eut));
+    ctx.stroke();
+    ctx.fillText("T Eutettica (1274°C)", mapX(1) + 5, mapT(T_Eut));
+}
+
+function drawPoint(t, x) {
+    ctx.beginPath();
+    ctx.arc(mapX(x), mapT(t), 5, 0, Math.PI * 2);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+    ctx.fillText(`T: ${Math.round(t)}°C, X_liq: ${Math.round(x*100)}%`, mapX(x) + 10, mapT(t) - 10);
+}
+
+function update() {
+    if (!isRunning) return;
+
+    let targetLiquidusT;
+    // Calcolo T di liquidus per la composizione attuale
+    if (initialX < X_Eut) {
+        targetLiquidusT = T_Di - (T_Di - T_Eut) * (initialX / X_Eut);
+    } else {
+        targetLiquidusT = T_An - (T_An - T_Eut) * ((1 - initialX) / (1 - X_Eut));
+    }
+
+    // LOGICA DI RAFFREDDAMENTO
+    if (currentT > targetLiquidusT) {
+        // Fase 1: Raffreddamento Liquido
+        currentT -= 1.5;
+        statusText.innerText = "Stato: Raffreddamento Liquido";
+    } 
+    else if (currentT > T_Eut) {
+        // Fase 2: Cristallizzazione primaria e spostamento su Liquidus
+        currentT -= 1.0;
+        // Calcolo nuova composizione liquido x = f(T) lungo la retta
+        if (initialX < X_Eut) {
+            currentX = (currentT - T_Di) * X_Eut / (T_Eut - T_Di);
+        } else {
+            currentX = 1 - (currentT - T_An) * (1 - X_Eut) / (T_Eut - T_An);
+        }
+        statusText.innerText = "Stato: Cristallizzazione Primaria (il liquido cambia composizione)";
+    } 
+    else if (currentT <= T_Eut && latentHeat < 100) {
+        // Fase 3: PUNTO EUTETTICO (Sosta Termica)
+        currentT = T_Eut; 
+        currentX = X_Eut;
+        latentHeat += 0.5; // Simula la rimozione del calore latente
+        statusText.innerText = `Stato: Reazione Eutettica Isoterma (Solidificazione... ${Math.round(latentHeat)}%)`;
+    } 
+    else {
+        // Fase 4: Raffreddamento Solido
+        currentT -= 1.5;
+        currentX = initialX; // Il solido ha la composizione globale
+        statusText.innerText = "Stato: Raffreddamento Miscela Solida";
+        if (currentT < 1120) isRunning = false;
+    }
+
+    drawDiagram();
+    drawPoint(currentT, currentX);
+    animationId = requestAnimationFrame(update);
+}
+
+function startSimulation() {
+    cancelAnimationFrame(animationId);
+    currentT = 1630;
+    initialX = compSlider.value / 100;
+    currentX = initialX;
+    latentHeat = 0;
+    isRunning = true;
+    update();
+}
+
+// Inizializzazione
+drawDiagram();
+drawPoint(1650, 0.7);
+</script>
+</body>
+</html>

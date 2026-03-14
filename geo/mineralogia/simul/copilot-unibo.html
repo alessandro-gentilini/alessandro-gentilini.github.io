@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animazione eutettico binario (HTML5 + JS puro)</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #111827;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #22d3ee;
+    --accent2: #f59e0b;
+    --grid: #1f2937;
+    --ok: #10b981;
+    --warn: #ef4444;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+    background: radial-gradient(1200px 600px at 10% -10%, #111827 0%, var(--bg) 60%);
+    color: var(--text);
+  }
+  header {
+    padding: 16px 20px 8px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: .3px;
+  }
+  p.sub {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .wrap {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 16px;
+    padding: 0 16px 16px;
+  }
+  @media (max-width: 1000px) {
+    .wrap { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: linear-gradient(180deg, #0b1220, #0b1220f2 60%, #0b1220);
+    border: 1px solid #0b2244;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #0b224430 inset, 0 12px 30px #0006;
+    overflow: hidden;
+  }
+  .card h2 {
+    margin: 0;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #0b2244;
+    background: linear-gradient(180deg, #0d1628, #0a1120);
+  }
+  .controls {
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    gap: 10px;
+    align-items: center;
+  }
+  .row label {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .row input[type="number"], .row input[type="range"], .row select {
+    width: 100%;
+    background: #0b1220;
+    color: var(--text);
+    border: 1px solid #0b2244;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    outline: none;
+  }
+  .row input[type="range"] {
+    height: 28px;
+    padding: 0;
+  }
+  .btns {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #0b2244;
+    background: linear-gradient(180deg, #0a1120, #0b1220);
+  }
+  button {
+    appearance: none;
+    background: linear-gradient(180deg, #0ea5e9, #22d3ee);
+    color: #04223a;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    box-shadow: 0 6px 16px #22d3ee40, 0 0 0 1px #0b2244 inset;
+    cursor: pointer;
+  }
+  button.secondary {
+    background: linear-gradient(180deg, #334155, #1f2937);
+    color: #e5e7eb;
+  }
+  button.warn {
+    background: linear-gradient(180deg, #ef4444, #f59e0b);
+    color: #fff;
+  }
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 12px;
+  }
+  .canvas-wrap {
+    padding: 10px;
+  }
+  canvas {
+    width: 100%;
+    height: auto;
+    background: #0b0f1a;
+    border-radius: 10px;
+    display: block;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 6px 12px 12px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .dot { display: inline-flex; align-items: center; gap: 6px; }
+  .sw {
+    width: 12px; height: 12px; border-radius: 2px;
+    display: inline-block;
+    border: 1px solid #0b2244;
+  }
+  .statline {
+    padding: 10px 12px 12px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .statline b { color: var(--text); }
+  .tick {
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Simulatore eutettico binario (liquidus lineare) — fusione / cristallizzazione</h1>
+    <p class="sub">
+      Diagramma isobarico (x–T) con traiettoria del sistema, evoluzione della composizione del liquido, tie-line e arresto eutettico isoterma visibile anche su T(t).
+      Parametri totalmente modificabili. Nessuna libreria esterna.
+    </p>
+  </header>
+
+  <div class="wrap">
+    <!-- Pannello controlli -->
+    <div class="card">
+      <h2>Parametri</h2>
+      <div class="controls">
+        <div class="row">
+          <label>Direzione</label>
+          <select id="direction">
+            <option value="cooling">Cristallizzazione (raffreddamento)</option>
+            <option value="heating">Fusione (riscaldamento)</option>
+          </select>
+        </div>
+        <div class="row">
+          <label>Composizione totale x<sub>0</sub> (0–1)</label>
+          <input id="x0" type="number" min="0" max="1" step="0.001" value="0.35" />
+        </div>
+        <div class="row">
+          <label>Composizione eutettica x<sub>E</sub> (0–1)</label>
+          <input id="xe" type="number" min="0" max="1" step="0.001" value="0.45" />
+        </div>
+        <div class="row">
+          <label>T<sub>m,A</sub> (°C, puro A a x=0)</label>
+          <input id="TmA" type="number" step="1" value="1500" />
+        </div>
+        <div class="row">
+          <label>T<sub>E</sub> (°C, eutettico)</label>
+          <input id="Te" type="number" step="1" value="1200" />
+        </div>
+        <div class="row">
+          <label>T<sub>m,B</sub> (°C, puro B a x=1)</label>
+          <input id="TmB" type="number" step="1" value="1450" />
+        </div>
+        <div class="row">
+          <label>Velocità |dT/dt| (°C/s)</label>
+          <input id="rate" type="number" min="0.01" step="0.01" value="10" />
+        </div>
+        <div class="row">
+          <label>Fattore arresto eutettico k (s per frazione liquido)</label>
+          <input id="kHold" type="number" min="0" step="0.1" value="5" />
+        </div>
+        <div class="row">
+          <label>Velocità animazione (x)</label>
+          <input id="speed" type="range" min="0.1" max="8" step="0.1" value="1" />
+        </div>
+        <div class="row">
+          <label>Preset (dimostrativo Di–An)</label>
+          <button id="preset" class="secondary">Carica preset</button>
+        </div>
+      </div>
+      <div class="btns">
+        <button id="playPause">▶︎ Avvia</button>
+        <button id="step" class="secondary">Step</button>
+        <button id="reset" class="warn">Reset</button>
+      </div>
+      <div class="statline" id="stats"></div>
+    </div>
+
+    <!-- Pannello grafici -->
+    <div class="card">
+      <h2>Grafici</h2>
+      <div class="panels">
+        <div class="canvas-wrap">
+          <canvas id="phaseCanvas" width="900" height="520"></canvas>
+          <div class="legend">
+            <span class="dot"><span class="sw" style="background:#60a5fa"></span> Liquidus (lineare)</span>
+            <span class="dot"><span class="sw" style="background:#14b8a6"></span> Isoterma eutettica (T<sub>E</sub>)</span>
+            <span class="dot"><span class="sw" style="background:#f43f5e"></span> Stato del sistema</span>
+            <span class="dot"><span class="sw" style="background:#f59e0b"></span> Composizione del liquido</span>
+            <span class="dot"><span class="sw" style="background:#a3e635"></span> Tie-line (L–S)</span>
+            <span class="dot"><span class="sw" style="background:#c084fc"></span> x<sub>0</sub> (composizione totale)</span>
+          </div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="coolingCanvas" width="900" height="320"></canvas>
+          <div class="legend">
+            <span class="dot"><span class="sw" style="background:#22d3ee"></span> T(t)</span>
+            <span class="dot"><span class="sw" style="background:#f59e0b"></span> Plateau (arresto eutettico)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/*
+  Simulatore eutettico binario con liquidus lineari e arresto isoterma all'eutettico.
+  - Nessuna libreria esterna
+  - Canvas per (x, T) e per T(t)
+  - Entrambe le direzioni: raffreddamento (cristallizzazione) / riscaldamento (fusione)
+*/
+
+// --- Utilità numeriche/aiuto ---
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const fmt = (x, d=2) => Number.isFinite(x) ? x.toFixed(d) : '—';
+
+// --- Elementi UI ---
+const el = id => document.getElementById(id);
+const directionEl = el('direction');
+const x0El = el('x0');
+const xeEl = el('xe');
+const TmAEl = el('TmA');
+const TeEl  = el('Te');
+const TmBEl = el('TmB');
+const rateEl = el('rate');
+const kHoldEl = el('kHold');
+const speedEl = el('speed');
+const presetBtn = el('preset');
+const playPauseBtn = el('playPause');
+const stepBtn = el('step');
+const resetBtn = el('reset');
+const statsEl = el('stats');
+
+const phaseCanvas = el('phaseCanvas');
+const pc = phaseCanvas.getContext('2d');
+const coolCanvas  = el('coolingCanvas');
+const cc = coolCanvas.getContext('2d');
+
+// --- Stato simulazione ---
+let state = {
+  running: false,
+  t: 0,               // tempo simulazione (s)
+  T: 0,               // temperatura attuale
+  phase: 'liquid',    // liquid | two-phase | eutectic-hold | solid
+  holdClock: 0,       // tempo trascorso nel plateau
+  holdDur: 0,         // durata totale plateau
+  history: [],        // punti (t, T) per grafico
+  // per plotting dinamico
+  T_min_axis: null,
+  T_max_axis: null,
+  t_max_axis: 40
+};
+
+// Mappatura del diagramma di fase (x in [0,1], T in [Tmin,Tmax]) su canvas
+const PD = {
+  left: 70, right: 20, top: 20, bottom: 60
+};
+function phasePlotRect() {
+  return {
+    x: PD.left,
+    y: PD.top,
+    w: phaseCanvas.width - PD.left - PD.right,
+    h: phaseCanvas.height - PD.top - PD.bottom
+  };
+}
+function mapXT(x) {
+  const r = phasePlotRect();
+  const X = r.x + x * r.w;
+  // T crescente verso l'alto: invertiamo per canvas
+  const {Tmin, Tmax} = currentTRange();
+  const Y = r.y + (1 - (state.T - Tmin) / (Tmax - Tmin)) * r.h; // placeholder, non usata
+  return [X, Y];
+}
+function currentTRange() {
+  const TmA = +TmAEl.value, TmB = +TmBEl.value, Te = +TeEl.value;
+  const Tmax = Math.max(TmA, TmB) + 0.06 * Math.max(TmA, TmB);
+  const Tmin = Te - 0.15 * (Tmax - Te);
+  return {Tmin, Tmax};
+}
+function toCanvasX(x) {
+  const r = phasePlotRect();
+  return r.x + x * r.w;
+}
+function toCanvasYfromT(T) {
+  const r = phasePlotRect();
+  const {Tmin, Tmax} = currentTRange();
+  const v = clamp((T - Tmin) / (Tmax - Tmin), 0, 1);
+  return r.y + (1 - v) * r.h;
+}
+
+// --- Liquidus lineari e ausiliari ---
+function params() {
+  const dir = directionEl.value;
+  let x0 = +x0El.value;
+  const xe = +xeEl.value;
+  const TmA = +TmAEl.value, TmB = +TmBEl.value, Te = +TeEl.value;
+  const rate = Math.max(0.0001, +rateEl.value);
+  const kHold = Math.max(0, +kHoldEl.value);
+  const speed = +speedEl.value;
+
+  x0 = clamp(x0, 0, 1);
+  return { dir, x0, xe, TmA, TmB, Te, rate, kHold, speed };
+}
+function liquidusLines() {
+  const {xe, TmA, TmB, Te} = params();
+  // T = mL * x + bL  (sinistra: tra x in [0, xe])
+  const mL = (Te - TmA) / (xe - 0);
+  const bL = TmA;
+  // T = mR * x + bR  (destra: tra x in [xe, 1])
+  const mR = (TmB - Te) / (1 - xe);
+  const bR = Te - mR * xe;
+  return { mL, bL, mR, bR };
+}
+function T_liquidus_at_x(x) {
+  const {xe} = params();
+  const {mL, bL, mR, bR} = liquidusLines();
+  if (x < xe) return mL * x + bL;
+  if (x > xe) return mR * x + bR;
+  return +TeEl.value;
+}
+function xL_at_T(T, side) {
+  // side: 'left' o 'right'
+  const {mL, bL, mR, bR} = liquidusLines();
+  if (side === 'left') return (T - bL) / mL;
+  return (T - bR) / mR;
+}
+function enterSide(x0, xe) {
+  if (x0 < xe) return 'left';
+  if (x0 > xe) return 'right';
+  return 'eutectic';
+}
+
+// --- Inizializzazione simulazione ---
+function resetSim() {
+  const {dir, x0, xe} = params();
+  state.running = false;
+  playPauseBtn.textContent = '▶︎ Avvia';
+  state.t = 0;
+  state.history = [];
+  state.holdClock = 0;
+  state.holdDur = 0;
+
+  if (dir === 'cooling') {
+    // Partiamo caldi: 10% sopra la liquidus alla composizione x0
+    const Tli = T_liquidus_at_x(x0);
+    state.T = Tli + 0.10 * Math.max(50, Math.abs(Tli));
+  } else {
+    // Riscaldamento: partiamo freddi, 10% sotto Te
+    const Te = +TeEl.value;
+    const span = Math.max(50, Math.abs(Te));
+    state.T = Te - 0.10 * span;
+  }
+
+  // Fissa range T per grafici T(t) iniziale
+  const {Tmin, Tmax} = currentTRange();
+  state.T_min_axis = Tmin;
+  state.T_max_axis = Tmax;
+
+  updateStats();
+  drawAll(true);
+}
+function startStop() {
+  state.running = !state.running;
+  playPauseBtn.textContent = state.running ? '⏸ Pausa' : '▶︎ Avvia';
+}
+function stepOnce() {
+  simStep(1 / 30); // passo fisso ~1/30 s simulati
+  drawAll();
+}
+
+// --- Logica di evoluzione temporale ---
+function simStep(dtReal) {
+  const {dir, x0, xe, rate, kHold, speed} = params();
+  const side = enterSide(x0, xe);
+  if (side === 'eutectic') {
+    // composizione identica all'eutettico
+    // in raffreddamento: tutto liquido fino a Te, poi arresto e solidificazione completa
+    // in riscaldamento: tutto solido fino a Te, poi arresto e fusione completa
+  }
+
+  const dt = dtReal * speed; // accelera/scala il tempo simulato
+  const sign = (dir === 'cooling') ? -1 : +1; // -1 => T decresce, +1 => T cresce
+  const dTmove = sign * rate * dt;
+
+  // Determina liquidus alla composizione totale
+  const T_enter = T_liquidus_at_x(x0);
+
+  // Stati:
+  // cooling: Liquid (T > T_enter) → Two-phase (Te < T ≤ T_enter) → Eutectic-hold (T=Te) → Solid (T < Te)
+  // heating: Solid (T < Te) → Eutectic-hold (T=Te) → Two-phase (Te < T < T_enter) → Liquid (T ≥ T_enter)
+  const Te = +TeEl.value;
+
+  function preEutecticLiquidFractionAtTeMinus() {
+    if (side === 'left') {
+      return (xe === 0) ? 0 : (x0 / xe);
+    } else if (side === 'right') {
+      return (xe === 1) ? 0 : ((1 - x0) / (1 - xe));
+    } else {
+      // x0 == xe: poco prima di Te, f_L = 1
+      return 1;
+    }
+  }
+
+  // Avanza la simulazione
+  if (dir === 'cooling') {
+    if (state.phase === 'liquid') {
+      state.T += dTmove;
+      if (state.T <= T_enter + 1e-9) {
+        state.phase = (state.T <= Te + 1e-9) ? 'eutectic-hold' : 'two-phase';
+        // Se direttamente a/basso di Te
+        if (state.phase === 'eutectic-hold') {
+          state.T = Te;
+          state.holdClock = 0;
+          state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
+        }
+      }
+    } else if (state.phase === 'two-phase') {
+      state.T += dTmove;
+      if (state.T <= Te + 1e-9) {
+        state.phase = 'eutectic-hold';
+        state.T = Te;
+        state.holdClock = 0;
+        state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
+      }
+    } else if (state.phase === 'eutectic-hold') {
+      // T costante: T=Te per durata proporzionale alla frazione di liquido residuo
+      state.holdClock += dt;
+      state.T = Te;
+      if (state.holdClock >= state.holdDur || state.holdDur <= 1e-9) {
+        state.phase = 'solid';
+        // dopo l'arresto, può proseguire raffreddamento
+        state.T += dTmove;
+      }
+    } else if (state.phase === 'solid') {
+      state.T += dTmove; // facoltativo: continua a scendere
+    } else {
+      // init: determina fase coerente
+      if (state.T > T_enter) state.phase = 'liquid';
+      else if (state.T > Te) state.phase = 'two-phase';
+      else if (Math.abs(state.T - Te) < 1e-9) state.phase = 'eutectic-hold';
+      else state.phase = 'solid';
+    }
+  } else { // heating
+    if (state.phase === 'solid') {
+      state.T += dTmove;
+      if (state.T >= Te - 1e-9) {
+        state.phase = 'eutectic-hold';
+        state.T = Te;
+        // In riscaldamento, l'arresto isoterma fonde progressivamente fino alla frazione liquida
+        // necessaria a lasciare il regime a due fasi: usiamo la stessa stima simmetrica
+        state.holdClock = 0;
+        state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
+      }
+    } else if (state.phase === 'eutectic-hold') {
+      state.holdClock += dt;
+      state.T = Te;
+      if (state.holdClock >= state.holdDur || state.holdDur <= 1e-9) {
+        // si entra nella regione a due fasi sopra Te
+        state.phase = 'two-phase';
+        state.T += dTmove;
+      }
+    } else if (state.phase === 'two-phase') {
+      state.T += dTmove;
+      if (state.T >= T_enter - 1e-9) {
+        state.phase = 'liquid';
+        state.T = Math.max(state.T, T_enter);
+      }
+    } else if (state.phase === 'liquid') {
+      state.T += dTmove; // può continuare a salire
+    } else {
+      if (state.T < Te) state.phase = 'solid';
+      else if (state.T === Te) state.phase = 'eutectic-hold';
+      else if (state.T < T_enter) state.phase = 'two-phase';
+      else state.phase = 'liquid';
+    }
+  }
+
+  // Avanza tempo, registra storia
+  state.t += dt;
+  state.history.push([state.t, state.T]);
+
+  // Aggiorna assi T(t) se necessario
+  state.t_max_axis = Math.max(state.t_max_axis, state.t * 1.1);
+  state.T_min_axis = Math.min(state.T_min_axis, state.T - 20);
+  state.T_max_axis = Math.max(state.T_max_axis, state.T + 20);
+
+  updateStats();
+}
+
+// --- Disegno diagramma di fase (x, T) ---
+function drawAxesPhase() {
+  pc.save();
+  pc.clearRect(0, 0, phaseCanvas.width, phaseCanvas.height);
+
+  // area plot
+  const r = phasePlotRect();
+  pc.fillStyle = '#050816';
+  pc.fillRect(r.x, r.y, r.w, r.h);
+
+  // griglia
+  pc.strokeStyle = '#0f1c33';
+  pc.lineWidth = 1;
+  pc.beginPath();
+  for (let i=0; i<=10; i++) {
+    const xx = r.x + (i/10) * r.w;
+    pc.moveTo(xx, r.y);
+    pc.lineTo(xx, r.y + r.h);
+  }
+  const {Tmin, Tmax} = currentTRange();
+  const nTy = 8;
+  for (let i=0; i<=nTy; i++) {
+    const y = r.y + (i/nTy) * r.h;
+    pc.moveTo(r.x, y);
+    pc.lineTo(r.x + r.w, y);
+  }
+  pc.stroke();
+
+  // assi e tick
+  pc.strokeStyle = '#1f375f';
+  pc.lineWidth = 2;
+  pc.strokeRect(r.x, r.y, r.w, r.h);
+
+  pc.fillStyle = '#9ca3af';
+  pc.font = '12px system-ui';
+  // ticks x
+  for (let i=0; i<=10; i++) {
+    const x = i/10;
+    const X = r.x + x * r.w;
+    pc.beginPath();
+    pc.moveTo(X, r.y + r.h);
+    pc.lineTo(X, r.y + r.h + 6);
+    pc.strokeStyle = '#224';
+    pc.stroke();
+    pc.fillText(x.toFixed(1), X - 6, r.y + r.h + 20);
+  }
+  // ticks T
+  const nTicks = 8;
+  for (let i=0; i<=nTicks; i++) {
+    const frac = i / nTicks;
+    const Ttick = lerp(Tmax, Tmin, frac);
+    const Y = r.y + frac * r.h;
+    pc.beginPath();
+    pc.moveTo(r.x - 6, Y);
+    pc.lineTo(r.x, Y);
+    pc.strokeStyle = '#224';
+    pc.stroke();
+    pc.fillText(Math.round(Ttick)+'°C', r.x - 54, Y + 4);
+  }
+
+  // etichette
+  pc.fillStyle = '#e5e7eb';
+  pc.font = 'bold 14px system-ui';
+  pc.fillText('Composizione x (A→B)', r.x + r.w/2 - 70, r.y + r.h + 44);
+  pc.save();
+  pc.translate(r.x - 62, r.y + r.h/2);
+  pc.rotate(-Math.PI/2);
+  pc.fillText('Temperatura (°C)', -58, 0);
+  pc.restore();
+
+  pc.restore();
+}
+
+function drawPhaseDiagram() {
+  const {xe, TmA, TmB, Te} = params();
+  const r = phasePlotRect();
+  // Liquidus sinistro
+  pc.strokeStyle = '#60a5fa';
+  pc.lineWidth = 3;
+  pc.beginPath();
+  pc.moveTo(toCanvasX(0), toCanvasYfromT(TmA));
+  pc.lineTo(toCanvasX(xe), toCanvasYfromT(Te));
+  pc.stroke();
+
+  // Liquidus destro
+  pc.beginPath();
+  pc.moveTo(toCanvasX(xe), toCanvasYfromT(Te));
+  pc.lineTo(toCanvasX(1), toCanvasYfromT(TmB));
+  pc.stroke();
+
+  // Isoterma eutettica
+  pc.strokeStyle = '#14b8a6';
+  pc.setLineDash([6,4]);
+  pc.lineWidth = 2;
+  pc.beginPath();
+  pc.moveTo(toCanvasX(0), toCanvasYfromT(Te));
+  pc.lineTo(toCanvasX(1), toCanvasYfromT(Te));
+  pc.stroke();
+  pc.setLineDash([]);
+
+  // Punto eutettico
+  pc.fillStyle = '#14b8a6';
+  pc.beginPath();
+  pc.arc(toCanvasX(xe), toCanvasYfromT(Te), 4, 0, 2*Math.PI);
+  pc.fill();
+}
+
+function drawSystemState() {
+  const {x0, xe, Te} = params();
+  const side = enterSide(x0, xe);
+
+  // Linea verticale a x0
+  pc.strokeStyle = '#c084fc';
+  pc.lineWidth = 2;
+  pc.setLineDash([3,3]);
+  pc.beginPath();
+  pc.moveTo(toCanvasX(x0), toCanvasYfromT(currentTRange().Tmin));
+  pc.lineTo(toCanvasX(x0), toCanvasYfromT(currentTRange().Tmax));
+  pc.stroke();
+  pc.setLineDash([]);
+
+  // Stato dipendente da fase
+  if (state.phase === 'liquid' || state.phase === 'solid') {
+    // Punto stato (x0, T)
+    pc.fillStyle = (state.phase === 'liquid') ? '#f43f5e' : '#10b981';
+    pc.beginPath();
+    pc.arc(toCanvasX(x0), toCanvasYfromT(state.T), 5, 0, 2*Math.PI);
+    pc.fill();
+  } else if (state.phase === 'two-phase') {
+    // Stato: tie-line L–S alla T corrente
+    const yT = toCanvasYfromT(state.T);
+    let xS, xL;
+    if (side === 'left') {
+      xS = 0;
+      xL = xL_at_T(state.T, 'left');
+    } else if (side === 'right') {
+      xS = 1;
+      xL = xL_at_T(state.T, 'right');
+    } else {
+      // x0 == xe, in two-phase sopra Te: il liquido segue il liquidus sinistro o destro indistintamente,
+      // scegliamo quello con T inferiore (qui identico) → usiamo xe per fissare
+      xS = (x0 < 0.5) ? 0 : 1;
+      xL = xe;
+    }
+    xL = clamp(xL, 0, 1);
+
+    // Tie-line
+    pc.strokeStyle = '#a3e635';
+    pc.lineWidth = 2.5;
+    pc.beginPath();
+    pc.moveTo(toCanvasX(xS), yT);
+    pc.lineTo(toCanvasX(xL), yT);
+    pc.stroke();
+
+    // Marker liquido
+    pc.fillStyle = '#f59e0b';
+    pc.beginPath();
+    pc.arc(toCanvasX(xL), yT, 5, 0, 2*Math.PI);
+    pc.fill();
+
+    // Marker stato complessivo (x0, T)
+    pc.fillStyle = '#f43f5e';
+    pc.beginPath();
+    pc.arc(toCanvasX(x0), yT, 4, 0, 2*Math.PI);
+    pc.fill();
+  } else if (state.phase === 'eutectic-hold') {
+    // Punti a T=Te: evidenzia plateau e composizione del liquido all'eutettico (xe)
+    const yT = toCanvasYfromT(Te);
+    // Pulsazione per evidenziare la sosta
+    const pulse = 0.5 + 0.5 * Math.sin(Date.now()/250);
+    const rad = 5 + 3*pulse;
+
+    // Tie-line completa (0–1) alla T=Te
+    pc.strokeStyle = '#f59e0b';
+    pc.lineWidth = 3;
+    pc.beginPath();
+    pc.moveTo(toCanvasX(0), yT);
+    pc.lineTo(toCanvasX(1), yT);
+    pc.stroke();
+
+    // Marker liquido all'eutettico
+    pc.fillStyle = '#f59e0b';
+    pc.beginPath();
+    pc.arc(toCanvasX(xe), yT, rad, 0, 2*Math.PI);
+    pc.fill();
+
+    // Marker stato complessivo
+    pc.fillStyle = '#f43f5e';
+    pc.beginPath();
+    pc.arc(toCanvasX(x0), yT, 5, 0, 2*Math.PI);
+    pc.fill();
+  }
+}
+
+// --- Disegno curva T(t) ---
+function drawCoolingCurve() {
+  const pad = {left: 60, right: 20, top: 20, bottom: 40};
+  const W = coolCanvas.width, H = coolCanvas.height;
+  cc.clearRect(0, 0, W, H);
+
+  // area
+  cc.fillStyle = '#050816';
+  cc.fillRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
+
+  // assi
+  cc.strokeStyle = '#1f375f';
+  cc.lineWidth = 2;
+  cc.strokeRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
+
+  // scale
+  const tmax = Math.max(state.t_max_axis, state.t);
+  const tmin = 0;
+  const Tmax = Math.max(state.T_max_axis, currentTRange().Tmax);
+  const Tmin = Math.min(state.T_min_axis, currentTRange().Tmin);
+  const toX = t => pad.left + (t - tmin) / (tmax - tmin) * (W - pad.left - pad.right);
+  const toY = T => {
+    const f = (T - Tmin) / (Tmax - Tmin);
+    return pad.top + (1 - f) * (H - pad.top - pad.bottom);
+  };
+
+  // griglia
+  cc.strokeStyle = '#0f1c33';
+  cc.lineWidth = 1;
+  cc.beginPath();
+  const nX = 10, nY = 6;
+  for (let i=0; i<=nX; i++) {
+    const x = pad.left + i/nX * (W - pad.left - pad.right);
+    cc.moveTo(x, pad.top);
+    cc.lineTo(x, H - pad.bottom);
+  }
+  for (let i=0; i<=nY; i++) {
+    const y = pad.top + i/nY * (H - pad.top - pad.bottom);
+    cc.moveTo(pad.left, y);
+    cc.lineTo(W - pad.right, y);
+  }
+  cc.stroke();
+
+  // ticks & labels
+  cc.fillStyle = '#9ca3af';
+  cc.font = '12px system-ui';
+  for (let i=0; i<=nX; i++) {
+    const tt = lerp(tmin, tmax, i/nX);
+    const X = toX(tt);
+    cc.beginPath();
+    cc.moveTo(X, H - pad.bottom);
+    cc.lineTo(X, H - pad.bottom + 6);
+    cc.strokeStyle = '#224';
+    cc.stroke();
+    cc.fillText(fmt(tt,1)+' s', X - 16, H - pad.bottom + 18);
+  }
+  for (let i=0; i<=nY; i++) {
+    const TT = lerp(Tmax, Tmin, i/nY);
+    const Y = toY(TT);
+    cc.beginPath();
+    cc.moveTo(pad.left - 6, Y);
+    cc.lineTo(pad.left, Y);
+    cc.strokeStyle = '#224';
+    cc.stroke();
+    cc.fillText(Math.round(TT)+'°C', pad.left - 54, Y + 4);
+  }
+
+  // curve T(t)
+  if (state.history.length >= 2) {
+    cc.strokeStyle = '#22d3ee';
+    cc.lineWidth = 2.5;
+    cc.beginPath();
+    cc.moveTo(toX(state.history[0][0]), toY(state.history[0][1]));
+    for (let i=1; i<state.history.length; i++) {
+      const [t, T] = state.history[i];
+      cc.lineTo(toX(t), toY(T));
+    }
+    cc.stroke();
+  }
+
+  // evidenzia plateau (arresto eutettico)
+  if (state.phase === 'eutectic-hold' || state.holdClock > 0) {
+    // stimiamo ultimo intervallo a T=Te se presente
+    const Te = +TeEl.value;
+    // Cerca negli ultimi punti una sequenza piatta a T=Te (tolleranza)
+    const tol = 1e-6;
+    let end = state.history.length - 1;
+    let start = end;
+    while (start > 0 && Math.abs(state.history[start][1] - Te) < 1e-6) start--;
+    // start+1 .. end sono nel plateau (se esistono)
+    if (end > start + 1) {
+      cc.strokeStyle = '#f59e0b';
+      cc.lineWidth = 4;
+      cc.beginPath();
+      cc.moveTo(toX(state.history[start+1][0]), toY(Te));
+      cc.lineTo(toX(state.history[end][0]), toY(Te));
+      cc.stroke();
+    }
+  }
+
+  // marker attuale
+  cc.fillStyle = '#e11d48';
+  const Xc = toX(state.t), Yc = toY(state.T);
+  cc.beginPath();
+  cc.arc(Xc, Yc, 4, 0, 2*Math.PI);
+  cc.fill();
+
+  // labels
+  cc.fillStyle = '#e5e7eb';
+  cc.font = 'bold 14px system-ui';
+  cc.fillText('Tempo (s)', pad.left + (W - pad.left - pad.right)/2 - 34, H - 10);
+  cc.save();
+  cc.translate(14, pad.top + (H - pad.top - pad.bottom)/2);
+  cc.rotate(-Math.PI/2);
+  cc.fillText('Temperatura (°C)', -60, 0);
+  cc.restore();
+}
+
+// --- Statistiche / stato testuale ---
+function updateStats() {
+  const {dir, x0, xe, Te} = params();
+  const side = enterSide(x0, xe);
+  const Tli = T_liquidus_at_x(x0);
+  let phaseDesc = '';
+  if (state.phase === 'liquid') phaseDesc = 'Liquido';
+  else if (state.phase === 'two-phase') phaseDesc = (side === 'left' ? 'Liquido + Solido A (primario)' : (side === 'right' ? 'Liquido + Solido B (primario)' : 'Liquido + Solido (due fasi)'));
+  else if (state.phase === 'eutectic-hold') phaseDesc = 'Arresto eutettico (isoterma)';
+  else if (state.phase === 'solid') phaseDesc = 'Solido';
+  else phaseDesc = state.phase;
+
+  // frazioni in due-fasi
+  let fL = null, fS = null, xL = null, xS = null;
+  if (state.phase === 'two-phase') {
+    if (side === 'left') {
+      xS = 0; xL = xL_at_T(state.T, 'left');
+      fL = clamp(x0 / xL, 0, 1); fS = 1 - fL;
+    } else if (side === 'right') {
+      xS = 1; xL = xL_at_T(state.T, 'right');
+      fL = clamp((1 - x0) / (1 - xL), 0, 1); fS = 1 - fL;
+    } else { // x0 == xe
+      xS = (x0 < 0.5) ? 0 : 1;
+      xL = xe;
+      fL = 1; fS = 0;
+    }
+  }
+  // durante l'arresto eutettico, stimiamo la frazione liquida residua lineare nel tempo dell'arresto
+  if (state.phase === 'eutectic-hold') {
+    const fL0 = (side === 'left') ? (x0/xe) : ((side === 'right') ? ((1 - x0)/(1 - xe)) : 1);
+    const r = (state.holdDur <= 1e-9) ? 0 : clamp(1 - state.holdClock/state.holdDur, 0, 1);
+    fL = clamp(fL0 * r, 0, 1);
+    fS = 1 - fL;
+    xL = xe; xS = (side === 'left' ? 0 : (side === 'right' ? 1 : (x0 < 0.5 ? 0 : 1)));
+  }
+
+  statsEl.innerHTML = `
+    <div><b>Direzione:</b> ${dir === 'cooling' ? 'Cristallizzazione (raffreddamento)' : 'Fusione (riscaldamento)'}
+    &nbsp; | &nbsp; <b>Fase:</b> ${phaseDesc}</div>
+    <div><b>t</b> = ${fmt(state.t,2)} s &nbsp; | &nbsp; <b>T</b> = ${fmt(state.T,1)} °C
+    &nbsp; | &nbsp; <b>T<sub>liq</sub>(x<sub>0</sub>)</b> ≈ ${fmt(Tli,1)} °C &nbsp; | &nbsp; <b>T<sub>E</sub></b> = ${Te} °C</div>
+    <div><b>x<sub>0</sub></b> = ${fmt(x0,3)} &nbsp; | &nbsp; <b>x<sub>E</sub></b> = ${fmt(xe,3)}
+    ${fL!==null ? `&nbsp; | &nbsp; <b>f<sub>L</sub></b> ≈ ${fmt(100*fL,1)}% &nbsp; <b>f<sub>S</sub></b> ≈ ${fmt(100*fS,1)}%` : '' }
+    ${xL!==null ? `&nbsp; | &nbsp; <b>x<sub>L</sub></b> ≈ ${fmt(xL,3)} &nbsp; <b>x<sub>S</sub></b> ≈ ${fmt(xS,3)}` : '' }
+    ${state.phase==='eutectic-hold' ? `&nbsp; | &nbsp; <b>arresto:</b> ${fmt(state.holdClock,2)} / ${fmt(state.holdDur,2)} s` : '' }
+    </div>
+  `;
+}
+
+// --- Disegni principali ---
+function drawAll(force=false) {
+  drawAxesPhase();
+  drawPhaseDiagram();
+  drawSystemState();
+  drawCoolingCurve();
+}
+
+// --- Loop animazione ---
+let lastTS = null;
+function tick(ts) {
+  if (lastTS === null) lastTS = ts;
+  const dt = Math.min(0.05, (ts - lastTS) / 1000); // limita dt per stabilità
+  lastTS = ts;
+
+  if (state.running) {
+    simStep(dt);
+  }
+  drawAll();
+  requestAnimationFrame(tick);
+}
+
+// --- Eventi UI ---
+playPauseBtn.addEventListener('click', startStop);
+stepBtn.addEventListener('click', stepOnce);
+resetBtn.addEventListener('click', resetSim);
+
+[presetBtn].forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Preset dimostrativo "tipo Diopside–Anortite" (valori NON rigorosi; solo per demo)
+    x0El.value = 0.35;
+    xeEl.value = 0.44;
+    TmAEl.value = 1505;
+    TeEl.value  = 1250;
+    TmBEl.value = 1430;
+    rateEl.value = 10;
+    kHoldEl.value = 6;
+    directionEl.value = 'cooling';
+    resetSim();
+  });
+});
+
+// Aggiorna e reset su cambio parametri principali
+[directionEl, x0El, xeEl, TmAEl, TeEl, TmBEl, rateEl, kHoldEl].forEach(inp => {
+  inp.addEventListener('change', resetSim);
+});
+speedEl.addEventListener('input', () => {
+  // solo aggiorna velocità in tempo reale
+});
+
+// Avvio
+resetSim();
+requestAnimationFrame(tick);
+</script>
+</body>
+</html>
