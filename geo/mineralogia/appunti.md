@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 14 marzo 2026.
+Aggiornati al 15 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -742,7 +742,7 @@ Alla possibilità che in una struttura cristallina un determinato sito ospiti ca
 **soluzione solida** è il termine più usato in letteratura mineralogica,  
 **vicarianza** è il termine tipico della letteratura geochimica.
 
-**Termini puri** aka **termini estremi**: sono minerali che contengono  una sola delle 2 o più specie atomiche possibili.  
+**Termini puri** aka **termini estremi** aka **end members**: sono minerali che contengono  una sola delle 2 o più specie atomiche possibili.  
 L'insieme dei minerali compresi tra i termini puri è detta **serie** aka **soluzione solida**.  
 La **soluzione solida completa** è quella che contiene tutte le proporzioni possibili tra le differenti specie atomiche; la **soluzione solida parziale** invece non contiene tutte le proporzioni possibili, l'intervallo di proporzioni dove non sono presenti elementi della serie è detto **lacuna di miscibilità** aka **lacuna di composizione**.
 
@@ -765,7 +765,11 @@ La sostituzione anionica/cationica deve mantenere la neutralità elettrica della
 Esempi di sostituzioni accoppiate si hanno nei **plagioclasi** (**albite** e **anortite**) e nei **pirosseni** (**diopside** e **giadeite**).  
 Le sostituzioni accoppiate non garantiscono che la soluzione sia completa, perché possono intervenire i vincoli sulle dimensioni a indurre soluzioni parziali.
 
-Esempio specifico dei plagioclasi
+Osservazione sulle formule: nella serie delle Olivine, in cui il catione $Fe^{2+}$ può sostituirsi in maniera semplice (cioè non accoppiata) con il catione $Mg^{2+}$, la formula è $(Mg,Fe)_{2}SiO_{4}$ e si compone di una parte variabile $(Mg,Fe)_{2}$ e di una parte fissa $SiO_{4}$ comune a tutti i membri della soluzione solida.  
+
+Invece nel caso di sostituzione accoppiata la formula non ha la parte fissa, nel caso dei Plagioclasi che hanno i due termini puri Albite e Anortite si ha $Na\ AlSi_{3}O_{8}$ e $Ca\ Al_{2}Si_{2}O_{8}$ e si nota come i pedici di $Al$ e di $Si$ siano diversi per i due termini puri.
+
+Esempio specifico dei plagioclasi p22/32
 
 # Lab #4 - Diagrammi di cristallizzazione
 
