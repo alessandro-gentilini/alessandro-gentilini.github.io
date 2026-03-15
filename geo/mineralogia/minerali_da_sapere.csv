@@ -21,7 +21,7 @@ indice iniziale,nome,gruppo,sottogruppo,formula,riconoscimento,big ten,serve il 
 20,cianite,silicati,?,0,1,0,,cianite,,
 21,leucite,silicati,?,0,1,0,,leucite,,
 22,tormalina,silicati,?,0,1,0,,tormalina,,
-23,ematite,ossidi,,1,1,0,1,ematite,Sangue 2 e 3,
+23,ematite,ossidi,,1,1,0,1,ematite,Sangue 2 e 3,rosso (polvere!)
 24,limonite,ossidi,,0,1,0,,limonite,,
 25,magnetite,ossidi,,1,1,0,1,magnetite,Uno in più del sangue,
 26,corindone,ossidi,,1,1,0,1,corindone,Sangue di alluminio,
@@ -29,7 +29,7 @@ indice iniziale,nome,gruppo,sottogruppo,formula,riconoscimento,big ten,serve il 
 28,malachite,carbonato,,0,1,0,,malachite,,verde
 29,azzurrite,carbonato,,0,1,0,,azzurrite,,azzurro
 30,siderite,carbonato,,1,1,0,1,siderite,Carbonato di ferro,
-31,rodocrosite,carbonato,,1,1,0,1,rodocrosite,Carbonato del rosa Manganese,
+31,rodocrosite,carbonato,,1,1,0,1,rodocrosite,Carbonato del rosa Manganese,rosa
 32,gesso,solfati,,1,1,0,1,gesso,,
 33,barite,solfati,,1,1,0,1,barite,,
 34,apatite,fosfati,,1,1,0,1,apatite,,
