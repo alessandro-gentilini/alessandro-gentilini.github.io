@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=1900, initial-scale=1" />
-<title>Animazione Eutettico Binario (1900×1000 – FIX)</title>
+<title>Animazione Eutettico Binario — Layout fisso 1900×1000</title>
 <style>
   :root{
     --bg:#0f1116; --panel:#141822; --ink:#e8ecf1; --muted:#9aa4b2;
@@ -11,45 +11,69 @@
     --grid:#21273a; --warn:#f1c40f;
   }
   *{box-sizing:border-box}
-  html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); overflow:hidden; font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-  /* Contenitore fisso 1900x1000 */
+  html,body{
+    margin:0; padding:0; background:var(--bg); color:var(--ink);
+    overflow:hidden; font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  /* === FRAME FISSO 1900x1000 === */
   #frame{
-    width:1900px; height:1000px; margin:0 auto; background:var(--bg); overflow:hidden;
-    display:grid; grid-template-rows: auto 1fr; gap:8px; padding:6px 6px 0 6px;
+    width:1900px; height:1000px; margin:0 auto; padding:6px;
+    display:grid; grid-template-rows: 100px 890px; gap:10px;
   }
+
+  /* === HEADER 100px === */
   header{
-    display:grid; grid-template-columns: 1fr auto; gap:8px; align-items:center;
-    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px 8px;
+    height:100px;
+    display:grid; grid-template-columns: 1fr 260px; gap:10px; align-items:center;
+    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:8px;
   }
-  .controls{ display:flex; align-items:center; gap:10px 12px; flex-wrap:wrap; }
+  .controls{ display:flex; align-items:flex-start; gap:10px 12px; flex-wrap:wrap; overflow:hidden; }
   .ctrl{ display:grid; gap:2px; align-items:center; }
-  .ctrl label{ font-size:12px; color:var(--muted); line-height:1; }
+  .ctrl label{ font-size:12px; color:var(--muted); line-height:1; white-space:nowrap; }
   .ctrl input[type="number"], .ctrl input[type="range"]{
     background:#0d111a; color:var(--ink); border:1px solid var(--grid);
-    padding:3px 6px; border-radius:6px; width:84px; font-size:12px; height:24px;
+    padding:3px 6px; border-radius:6px; width:86px; font-size:12px; height:24px;
   }
   .ctrl input[type="range"]{ width:140px; height:20px; }
   .mini{ font-size:12px; color:#cfd6e0; }
-  .buttons{ display:flex; gap:8px; }
-  button{ background:var(--accent); color:#081018; border:none; padding:6px 10px; border-radius:7px; font-weight:600; cursor:pointer; font-size:13px; height:28px; }
+
+  .buttons{ display:flex; gap:8px; justify-content:flex-end; }
+  button{
+    background:var(--accent); color:#081018; border:none; padding:6px 10px; border-radius:7px;
+    font-weight:600; cursor:pointer; font-size:13px; height:28px;
+  }
   button.secondary{ background:#2d3446; color:var(--ink); }
   button:disabled{ opacity:.6; cursor:not-allowed; }
 
+  /* === MAIN 890px === */
   #main{
-    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:8px; width:100%; height:100%;
+    height:890px; display:grid; grid-template-columns: 1120px 760px; gap:20px;
   }
   .panel{
-    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px; display:grid; gap:6px;
+    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px; overflow:hidden;
+    display:flex; flex-direction:column;
   }
-  .left{ display:grid; grid-template-rows: 1fr 0.75fr; gap:8px; }
-  .right{ display:grid; grid-template-rows: 1fr 1fr 1fr; gap:8px; }
-  .panel h3{ margin:0; font-size:13px; font-weight:600; color:var(--muted); }
-  .legend{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--muted); margin:-2px 2px 2px; }
+  .panel h3{ margin:0 0 4px 0; font-size:13px; font-weight:600; color:var(--muted); line-height:1.1; }
+  .legend{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--muted); margin:0 2px 4px; }
   .key{ display:inline-flex; align-items:center; gap:6px; }
   .sw{ width:12px; height:10px; border-radius:2px; display:inline-block; }
 
+  /* Colonna sinistra: 560px + 300px (con 10px di gap) */
+  .left{ display:grid; grid-template-rows: 560px 10px 300px; }
+  .spacer{ height:10px; }
+
+  /* Colonna destra: 3 pannelli da 280px separati da 10px */
+  .right{ display:grid; grid-template-rows: 280px 10px 280px 10px 280px; }
+
+  /* Canvas ingabbiati: riempiono lo spazio rimanente sotto titolo/legenda */
+  .canvas-wrap{ flex:1 1 auto; min-height:0; }
   canvas{ width:100%; height:100%; display:block; background:#0b0f17; border-radius:6px; }
-  footer{ position:absolute; bottom:4px; right:10px; font-size:11px; color:var(--muted); pointer-events:none; }
+
+  footer{
+    position:absolute; bottom:6px; right:12px; font-size:11px; color:var(--muted);
+    pointer-events:none;
+  }
 </style>
 </head>
 <body>
@@ -102,8 +126,9 @@
   </header>
 
   <div id="main">
+    <!-- COLONNA SINISTRA -->
     <div class="left">
-      <div class="panel">
+      <div class="panel" id="phasePanel">
         <h3>Diagramma di fase (isobaro) — binario eutettico</h3>
         <div class="legend">
           <span class="key"><span class="sw" style="background:var(--accent)"></span>Liquidus</span>
@@ -112,37 +137,43 @@
           <span class="key"><span class="sw" style="background:var(--liquid)"></span>Fuso</span>
           <span class="key"><span class="sw" style="background:var(--warn)"></span>Percorso / Tieline</span>
         </div>
-        <canvas id="phaseCanvas"></canvas>
+        <div class="canvas-wrap"><canvas id="phaseCanvas"></canvas></div>
       </div>
-      <div class="panel">
+      <div class="spacer"></div>
+      <div class="panel" id="microPanel">
         <h3>Microstruttura (tessellazione: fuso + cristalli A/B)</h3>
-        <canvas id="microCanvas"></canvas>
+        <div class="canvas-wrap"><canvas id="microCanvas"></canvas></div>
       </div>
     </div>
+
+    <!-- COLONNA DESTRA -->
     <div class="right">
       <div class="panel">
         <h3>Temperatura vs tempo</h3>
-        <canvas id="tempCanvas"></canvas>
+        <div class="canvas-wrap"><canvas id="tempCanvas"></canvas></div>
       </div>
+      <div class="spacer"></div>
       <div class="panel">
         <h3>Composizione vs tempo (x_B)</h3>
-        <canvas id="compCanvas"></canvas>
+        <div class="canvas-wrap"><canvas id="compCanvas"></canvas></div>
       </div>
+      <div class="spacer"></div>
       <div class="panel">
         <h3>Frazioni di fase vs tempo</h3>
-        <canvas id="fracCanvas"></canvas>
+        <div class="canvas-wrap"><canvas id="fracCanvas"></canvas></div>
       </div>
     </div>
   </div>
 </div>
 
-<footer>Dimensionamento fisso 1900×1000. Parametri di default illustrativi.</footer>
+<footer>Layout fisso 1900×1000: niente scroll, nessun taglio. Parametri di default illustrativi.</footer>
 
 <script>
 (function(){
   // ---------- Utility ----------
   const clamp = (v,min,max)=>Math.max(min,Math.min(max,v));
   const lerp = (a,b,t)=>a+(b-a)*t;
+
   function setCanvasSizeToCSS(canvas){
     const rect = canvas.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
@@ -152,28 +183,29 @@
     ctx.setTransform(dpr,0,0,dpr,0,0);
     return ctx;
   }
+
   function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}){
-    // ✅ FIX: default values con "="
-    const {margin={l:46,b:34,r:8,t:8}, gridColor='#1f2434', textColor='#9aa4b2'} = options;
-    const {width,height} = rect;
-    const x0=margin.l, x1=width-margin.r;
-    const y0=height-margin.b, y1=margin.t;
+    // default options — FIX con "="
+    const { margin={l:46,b:34,r:8,t:8}, gridColor='#1f2434', textColor='#9aa4b2' } = options;
+    const { width, height } = rect;
+    const x0 = margin.l, x1 = width - margin.r;
+    const y0 = height - margin.b, y1 = margin.t;
 
     // grid
     ctx.save();
-    ctx.strokeStyle=gridColor; ctx.lineWidth=1;
+    ctx.strokeStyle = gridColor; ctx.lineWidth = 1;
     ctx.beginPath();
-    const xticks=6, yticks=6;
+    const xticks = 6, yticks = 6;
     for(let i=0;i<=xticks;i++){ const tx=x0+(x1-x0)*i/xticks; ctx.moveTo(tx,y0); ctx.lineTo(tx,y1); }
     for(let j=0;j<=yticks;j++){ const ty=y0-(y0-y1)*j/yticks; ctx.moveTo(x0,ty); ctx.lineTo(x1,ty); }
     ctx.stroke();
 
     // axes
-    ctx.strokeStyle='#2a2f45'; ctx.lineWidth=1.3;
+    ctx.strokeStyle = '#2a2f45'; ctx.lineWidth = 1.3;
     ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y0); ctx.moveTo(x0,y0); ctx.lineTo(x0,y1); ctx.stroke();
 
-    // ticks text
-    ctx.fillStyle=textColor; ctx.font='11px system-ui, sans-serif';
+    // ticks
+    ctx.fillStyle = textColor; ctx.font = '11px system-ui, sans-serif';
     ctx.textAlign='center'; ctx.textBaseline='top';
     for(let i=0;i<=xticks;i++){
       const tx=x0+(x1-x0)*i/xticks; const xv=lerp(xMin,xMax,i/xticks);
@@ -192,10 +224,11 @@
     ctx.save(); ctx.translate(12,(y0+y1)/2); ctx.rotate(-Math.PI/2);
     ctx.fillText(yLabel, 0, 0); ctx.restore(); ctx.restore();
 
-    const xScale=v=>x0+(v-xMin)/(xMax-xMin)*(x1-x0);
-    const yScale=v=>y0-(v-yMin)/(yMax-yMin)*(y0-y1);
+    const xScale = v => x0 + (v-xMin)/(xMax-xMin)*(x1-x0);
+    const yScale = v => y0 - (v-yMin)/(yMax-yMin)*(y0-y1);
     return {x0,y0,x1,y1,xScale,yScale};
   }
+
   function drawLine(ctx, xs, ys, xScale, yScale, color, width){
     ctx.save();
     ctx.strokeStyle=color; ctx.lineWidth=width||2; ctx.beginPath();
@@ -208,6 +241,7 @@
     }
     ctx.stroke(); ctx.restore();
   }
+
   function circle(ctx,x,y,r,color){ ctx.save(); ctx.fillStyle=color; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); ctx.restore(); }
   function css(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
 
@@ -222,13 +256,13 @@
   };
   function gid(id){ return document.getElementById(id); }
 
-  // ---------- Stato ----------
+  // ---------- STATO ----------
   const state = {
     running:false, paused:false, stage:'liquid',
     t:0, dtMax:1/30, T:1550,
     x0:0.30, xE:0.40, TE:1270, TA:1550, TB:1390,
     Tmin:1100, Tmax:1600, coolRate:3.0, kEut:0.25,
-    fL:1, fA:0, fB:0, xL:0.30, T_liq_x0:null, branch:'left', stoppedByBounds:false,
+    fL:1, fA:0, fB:0, xL:0.30, T_liq_x0:null, branch:'left',
     micro:{ grid:[], cols:0, rows:0, cellSize:8 },
     series:{ t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] }
   };
@@ -249,7 +283,7 @@
   function resetSimulation(){
     readParams();
     state.t=0; state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
-    state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0; state.stage='liquid'; state.stoppedByBounds=false;
+    state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0; state.stage='liquid';
     const Tliq0 = liquidusTempAtX(state.x0);
     const Tstart = Math.min(state.Tmax-5, Math.max(Tliq0+40, state.Tmin+20));
     state.T=Tstart; state.T_liq_x0=Tliq0;
@@ -257,7 +291,7 @@
     initMicroGrid(); repaintAll();
   }
 
-  // ---------- Modello lineare ----------
+  // ---------- Modello (liquidus lineari) ----------
   function liquidusTempAtX(x){
     x = clamp(x,0,1);
     if(x<=state.xE){ const t=x/state.xE; return lerp(state.TA,state.TE,t); }
@@ -282,9 +316,9 @@
     const targetA = Math.round(state.fA*n);
     const targetB = Math.round(state.fB*n);
     const grid = state.micro.grid;
-    // conta veloci
+    // conteggio veloce
     let cA=0,cB=0;
-    for(let i=0;i<n;i++){ if(grid[i]===1) cA++; else if(grid[i]===2) cB++; }
+    for(let i=0;i<n;i++){ const v=grid[i]; if(v===1) cA++; else if(v===2) cB++; }
     const step = Math.max(1, Math.floor(n*0.008)); // ~0.8% per frame
     // A
     if(cA<targetA){
@@ -321,12 +355,13 @@
     s.xA.push(0); s.xB.push(1);
     s.fL.push(state.fL); s.fA.push(state.fA); s.fB.push(state.fB);
   }
+
   function stepSimulation(dtReal){
     if(!state.running || state.paused || state.stage==='stopped') return;
     const dt = Math.min(state.dtMax, dtReal);
     state.t += dt;
 
-    // Stop automatico fuori limiti
+    // stop limiti asse verticale
     if(state.T <= state.Tmin || state.T >= state.Tmax){
       state.running=false; state.stage='stopped';
       controlButtons(); return;
@@ -378,8 +413,8 @@
 
   function drawPhase(){
     const ctx=setCanvasSizeToCSS(dom.phaseCanvas);
-    const w=dom.phaseCanvas.clientWidth, h=dom.phaseCanvas.clientHeight;
-    const ax = drawAxes(ctx,{width:w,height:h}, 0,1, state.Tmin,state.Tmax, 'x_B','T [°C]');
+    const rect=dom.phaseCanvas.getBoundingClientRect();
+    const ax = drawAxes(ctx,{width:rect.width,height:rect.height}, 0,1, state.Tmin,state.Tmax, 'x_B','T [°C]');
     const {xScale,yScale} = ax;
     // Liquidus
     ctx.lineWidth=2; ctx.strokeStyle=css('--accent'); ctx.beginPath();
@@ -407,7 +442,8 @@
 
   function drawMicro(){
     const ctx=setCanvasSizeToCSS(dom.microCanvas);
-    const r=dom.microCanvas.getBoundingClientRect(); const cols=state.micro.cols, rows=state.micro.rows, s=state.micro.cellSize;
+    const r=dom.microCanvas.getBoundingClientRect();
+    const cols=state.micro.cols, rows=state.micro.rows, s=state.micro.cellSize;
     ctx.fillStyle='#0b0f17'; ctx.fillRect(0,0,r.width,r.height);
     const cA=css('--solidA'), cB=css('--solidB'), cL=css('--liquid');
     for(let rr=0; rr<rows; rr++){
@@ -417,14 +453,14 @@
         ctx.fillRect(cc*s, rr*s, s-0.4, s-0.4);
       }
     }
-    ctx.strokeStyle='#1d2232'; ctx.lineWidth=1.6; ctx.strokeRect(0.5,0.5,r.width-1,r.height-1);
+    ctx.strokeStyle='#1d2232'; ctx.lineWidth=1.4; ctx.strokeRect(0.5,0.5,r.width-1,r.height-1);
   }
 
   function drawTemp(){
     const ctx=setCanvasSizeToCSS(dom.tempCanvas);
-    const w=dom.tempCanvas.clientWidth, h=dom.tempCanvas.clientHeight;
+    const rect=dom.tempCanvas.getBoundingClientRect();
     const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
-    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, state.Tmin,state.Tmax, 'Tempo [s]','T [°C]');
+    const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, state.Tmin,state.Tmax, 'Tempo [s]','T [°C]');
     drawLine(ctx, s.t, s.T, ax.xScale, ax.yScale, css('--accent2'), 2);
     ctx.setLineDash([4,4]); ctx.strokeStyle='#6b7280';
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.TE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.TE)); ctx.stroke(); ctx.setLineDash([]);
@@ -432,9 +468,9 @@
 
   function drawComp(){
     const ctx=setCanvasSizeToCSS(dom.compCanvas);
-    const w=dom.compCanvas.clientWidth, h=dom.compCanvas.clientHeight;
+    const rect=dom.compCanvas.getBoundingClientRect();
     const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
-    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, 0,1, 'Tempo [s]','x_B');
+    const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, 0,1, 'Tempo [s]','x_B');
     drawLine(ctx, s.t, s.xL, ax.xScale, ax.yScale, css('--liquid'), 2);
     ctx.setLineDash([4,4]); ctx.strokeStyle=css('--solidA');
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(0)); ctx.stroke();
@@ -448,9 +484,9 @@
 
   function drawFrac(){
     const ctx=setCanvasSizeToCSS(dom.fracCanvas);
-    const w=dom.fracCanvas.clientWidth, h=dom.fracCanvas.clientHeight;
+    const rect=dom.fracCanvas.getBoundingClientRect();
     const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
-    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, 0,1, 'Tempo [s]','Frazione');
+    const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, 0,1, 'Tempo [s]','Frazione');
     drawLine(ctx, s.t, s.fL, ax.xScale, ax.yScale, css('--liquid'), 2);
     drawLine(ctx, s.t, s.fA, ax.xScale, ax.yScale, css('--solidA'), 2);
     drawLine(ctx, s.t, s.fB, ax.xScale, ax.yScale, css('--solidB'), 2);
@@ -465,13 +501,12 @@
     requestAnimationFrame(animate);
   }
 
-  // ---------- UI helpers ----------
+  // ---------- UI ----------
   function controlButtons(){
     dom.pauseBtn.disabled = !state.running || state.stage==='stopped';
     dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
   }
 
-  // ---------- Eventi ----------
   dom.x0.addEventListener('input', ()=>{ dom.x0val.textContent = Number(dom.x0.value).toFixed(2); });
   dom.startBtn.addEventListener('click', ()=>{
     if(!state.running || state.stage==='stopped'){ resetSimulation(); }
@@ -487,6 +522,9 @@
   // ---------- Init ----------
   resetSimulation();
   requestAnimationFrame(animate);
+
+  // Ridisegna i canvas in caso di zoom o DPI change
+  window.addEventListener('resize', repaintAll);
 })();
 </script>
 </body>
