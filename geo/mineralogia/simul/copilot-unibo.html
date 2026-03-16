@@ -3,11 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=1900, initial-scale=1" />
-<title>Animazione Eutettico Binario — Layout fisso 1900×1000</title>
+<title>Animazione Eutettico Binario — Layout fisso 1900×1000 (tempo fisso + colori)</title>
 <style>
   :root{
     --bg:#0f1116; --panel:#141822; --ink:#e8ecf1; --muted:#9aa4b2;
-    --accent:#4bb3fd; --accent2:#ff7a59; --solidA:#6fcf97; --solidB:#56ccf2; --liquid:#c77dff;
+    --accent:#4bb3fd; --accent2:#ff7a59;
+    /* ✅ Colori richiesti: A=nero, B=bianco, L=blu */
+    --solidA:#000000;  /* Nero */
+    --solidB:#ffffff;  /* Bianco */
+    --liquid:#1e6fff;  /* Blu */
     --grid:#21273a; --warn:#f1c40f;
   }
   *{box-sizing:border-box}
@@ -66,7 +70,7 @@
   /* Colonna destra: 3 pannelli da 280px separati da 10px */
   .right{ display:grid; grid-template-rows: 280px 10px 280px 10px 280px; }
 
-  /* Canvas ingabbiati: riempiono lo spazio rimanente sotto titolo/legenda */
+  /* Canvas: riempiono lo spazio utile sotto titolo/legenda */
   .canvas-wrap{ flex:1 1 auto; min-height:0; }
   canvas{ width:100%; height:100%; display:block; background:#0b0f17; border-radius:6px; }
 
@@ -132,9 +136,9 @@
         <h3>Diagramma di fase (isobaro) — binario eutettico</h3>
         <div class="legend">
           <span class="key"><span class="sw" style="background:var(--accent)"></span>Liquidus</span>
-          <span class="key"><span class="sw" style="background:var(--solidA)"></span>Solido A</span>
-          <span class="key"><span class="sw" style="background:var(--solidB)"></span>Solido B</span>
-          <span class="key"><span class="sw" style="background:var(--liquid)"></span>Fuso</span>
+          <span class="key"><span class="sw" style="background:var(--solidA)"></span>Solido A (nero)</span>
+          <span class="key"><span class="sw" style="background:var(--solidB)"></span>Solido B (bianco)</span>
+          <span class="key"><span class="sw" style="background:var(--liquid)"></span>Fuso (blu)</span>
           <span class="key"><span class="sw" style="background:var(--warn)"></span>Percorso / Tieline</span>
         </div>
         <div class="canvas-wrap"><canvas id="phaseCanvas"></canvas></div>
@@ -166,7 +170,7 @@
   </div>
 </div>
 
-<footer>Layout fisso 1900×1000: niente scroll, nessun taglio. Parametri di default illustrativi.</footer>
+<footer>Layout fisso 1900×1000. Tempo asse X fisso pre-calcolato. A=nero, B=bianco, L=blu.</footer>
 
 <script>
 (function(){
@@ -185,7 +189,6 @@
   }
 
   function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}){
-    // default options — FIX con "="
     const { margin={l:46,b:34,r:8,t:8}, gridColor='#1f2434', textColor='#9aa4b2' } = options;
     const { width, height } = rect;
     const x0 = margin.l, x1 = width - margin.r;
@@ -264,9 +267,11 @@
     Tmin:1100, Tmax:1600, coolRate:3.0, kEut:0.25,
     fL:1, fA:0, fB:0, xL:0.30, T_liq_x0:null, branch:'left',
     micro:{ grid:[], cols:0, rows:0, cellSize:8 },
-    series:{ t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] }
+    series:{ t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] },
+    tTotal: 60  // verrà ricalcolato al reset
   };
 
+  // ---------- Parametri / reset ----------
   function readParams(){
     state.x0 = Number(dom.x0.value);
     state.xE = clamp(Number(dom.xE.value), 0.05, 0.95);
@@ -282,13 +287,37 @@
 
   function resetSimulation(){
     readParams();
-    state.t=0; state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
+    state.t=0;
+    state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
     state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0; state.stage='liquid';
+
     const Tliq0 = liquidusTempAtX(state.x0);
     const Tstart = Math.min(state.Tmax-5, Math.max(Tliq0+40, state.Tmin+20));
-    state.T=Tstart; state.T_liq_x0=Tliq0;
+    state.T = Tstart; state.T_liq_x0 = Tliq0;
     state.branch = (state.x0 < state.xE) ? 'left' : (state.x0 > state.xE ? 'right' : 'eutectic');
-    initMicroGrid(); repaintAll();
+
+    // ✅ Calcolo del tempo totale (scala tempo fissa)
+    // 1) tempo in liquido fino alla liquidus (o TE se x0==xE)
+    const T_liq_entry = (state.branch==='eutectic') ? state.TE : Tliq0;
+    const t_liq = Math.max(0, (Tstart - T_liq_entry) / state.coolRate);
+
+    // 2) tempo in primario fino a TE (zero se x0==xE)
+    const t_primary = (state.branch==='eutectic') ? 0 : Math.max(0, (T_liq_entry - state.TE) / state.coolRate);
+
+    // 3) tempo eutettico plateau: fL(TE)/kEut
+    let fL_at_TE = 0;
+    if (state.x0 < state.xE) fL_at_TE = clamp(state.x0 / state.xE, 0, 1);
+    else if (state.x0 > state.xE) fL_at_TE = clamp((1 - state.x0) / (1 - state.xE), 0, 1);
+    else fL_at_TE = 1;
+    const t_eut = fL_at_TE / state.kEut;
+
+    // 4) tempo tutto solido fino a Tmin
+    const t_solid = Math.max(0, (state.TE - state.Tmin) / state.coolRate);
+
+    state.tTotal = t_liq + t_primary + t_eut + t_solid;
+
+    initMicroGrid();
+    repaintAll();
   }
 
   // ---------- Modello (liquidus lineari) ----------
@@ -308,7 +337,7 @@
     const rows = Math.floor(r.height / cell);
     state.micro.cols = cols; state.micro.rows = rows; state.micro.cellSize = cell;
     const n = cols*rows;
-    state.micro.grid = new Uint8Array(n); // 0=L,1=A,2=B
+    state.micro.grid = new Uint8Array(n); // 0=L (blu), 1=A (nero), 2=B (bianco)
     state.micro.grid.fill(0);
   }
   function updateMicroTowardsTargets(){
@@ -320,7 +349,7 @@
     let cA=0,cB=0;
     for(let i=0;i<n;i++){ const v=grid[i]; if(v===1) cA++; else if(v===2) cB++; }
     const step = Math.max(1, Math.floor(n*0.008)); // ~0.8% per frame
-    // A
+    // A (nero)
     if(cA<targetA){
       let need=Math.min(step, targetA-cA);
       for(let tries=0; tries<need*6 && need>0; tries++){
@@ -332,7 +361,7 @@
         const i=(Math.random()*n)|0; if(grid[i]===1){ grid[i]=0; need--; }
       }
     }
-    // B
+    // B (bianco)
     if(cB<targetB){
       let need=Math.min(step, targetB-cB);
       for(let tries=0; tries<need*6 && need>0; tries++){
@@ -349,7 +378,7 @@
   // ---------- Simulazione ----------
   function pushSeries(){
     const s=state.series;
-    if(s.t.length>2800){ s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift(); }
+    if(s.t.length>3000){ s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift(); }
     s.t.push(state.t); s.T.push(state.T);
     s.xL.push(state.fL>0 ? state.xL : NaN);
     s.xA.push(0); s.xB.push(1);
@@ -456,10 +485,11 @@
     ctx.strokeStyle='#1d2232'; ctx.lineWidth=1.4; ctx.strokeRect(0.5,0.5,r.width-1,r.height-1);
   }
 
+  // ✅ Grafici con asse tempo fisso [0, tTotal]
   function drawTemp(){
     const ctx=setCanvasSizeToCSS(dom.tempCanvas);
     const rect=dom.tempCanvas.getBoundingClientRect();
-    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const s=state.series; const tMax=state.tTotal;
     const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, state.Tmin,state.Tmax, 'Tempo [s]','T [°C]');
     drawLine(ctx, s.t, s.T, ax.xScale, ax.yScale, css('--accent2'), 2);
     ctx.setLineDash([4,4]); ctx.strokeStyle='#6b7280';
@@ -469,13 +499,15 @@
   function drawComp(){
     const ctx=setCanvasSizeToCSS(dom.compCanvas);
     const rect=dom.compCanvas.getBoundingClientRect();
-    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const s=state.series; const tMax=state.tTotal;
     const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, 0,1, 'Tempo [s]','x_B');
-    drawLine(ctx, s.t, s.xL, ax.xScale, ax.yScale, css('--liquid'), 2);
-    ctx.setLineDash([4,4]); ctx.strokeStyle=css('--solidA');
-    ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(0)); ctx.stroke();
+    drawLine(ctx, s.t, s.xL, ax.xScale, ax.yScale, css('--liquid'), 2); // fuso (blu)
+    // Riferimenti A=0 (nero) e B=1 (bianco)
+    ctx.setLineDash([4,4]);
+    ctx.strokeStyle=css('--solidA'); ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(0)); ctx.stroke();
     ctx.strokeStyle=css('--solidB'); ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(1)); ctx.lineTo(ax.xScale(tMax), ax.yScale(1)); ctx.stroke();
     ctx.setLineDash([]);
+    // Linee ausiliarie x_E e x0
     ctx.setLineDash([2,4]); ctx.strokeStyle='#8b94a7';
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.xE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.xE)); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.x0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.x0)); ctx.stroke();
@@ -485,11 +517,11 @@
   function drawFrac(){
     const ctx=setCanvasSizeToCSS(dom.fracCanvas);
     const rect=dom.fracCanvas.getBoundingClientRect();
-    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const s=state.series; const tMax=state.tTotal;
     const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, 0,1, 'Tempo [s]','Frazione');
-    drawLine(ctx, s.t, s.fL, ax.xScale, ax.yScale, css('--liquid'), 2);
-    drawLine(ctx, s.t, s.fA, ax.xScale, ax.yScale, css('--solidA'), 2);
-    drawLine(ctx, s.t, s.fB, ax.xScale, ax.yScale, css('--solidB'), 2);
+    drawLine(ctx, s.t, s.fL, ax.xScale, ax.yScale, css('--liquid'), 2); // liquido blu
+    drawLine(ctx, s.t, s.fA, ax.xScale, ax.yScale, css('--solidA'), 2); // solido A nero
+    drawLine(ctx, s.t, s.fB, ax.xScale, ax.yScale, css('--solidB'), 2); // solido B bianco
   }
 
   // ---------- Loop ----------
