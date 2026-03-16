@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=1900, initial-scale=1" />
-<title>Animazione Eutettico Binario (1900×1000)</title>
+<title>Animazione Eutettico Binario (1900×1000 – FIX)</title>
 <style>
   :root{
     --bg:#0f1116; --panel:#141822; --ink:#e8ecf1; --muted:#9aa4b2;
@@ -153,7 +153,8 @@
     return ctx;
   }
   function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}){
-    const {margin={l:46,b:34,r:8,t:8}, gridColor:'#1f2434', textColor:'#9aa4b2'} = options;
+    // ✅ FIX: default values con "="
+    const {margin={l:46,b:34,r:8,t:8}, gridColor='#1f2434', textColor='#9aa4b2'} = options;
     const {width,height} = rect;
     const x0=margin.l, x1=width-margin.r;
     const y0=height-margin.b, y1=margin.t;
@@ -212,14 +213,14 @@
 
   // ---------- DOM ----------
   const dom = {
-    x0: x('x0'), x0val: x('x0val'),
-    TE:x('TE'), TA:x('TA'), TB:x('TB'), xE:x('xE'),
-    Tmin:x('Tmin'), Tmax:x('Tmax'), cooling:x('cooling'), keu:x('keu'),
-    startBtn:x('startBtn'), pauseBtn:x('pauseBtn'), resetBtn:x('resetBtn'),
-    phaseCanvas:x('phaseCanvas'), microCanvas:x('microCanvas'),
-    tempCanvas:x('tempCanvas'), compCanvas:x('compCanvas'), fracCanvas:x('fracCanvas')
+    x0: gid('x0'), x0val: gid('x0val'),
+    TE:gid('TE'), TA:gid('TA'), TB:gid('TB'), xE:gid('xE'),
+    Tmin:gid('Tmin'), Tmax:gid('Tmax'), cooling:gid('cooling'), keu:gid('keu'),
+    startBtn:gid('startBtn'), pauseBtn:gid('pauseBtn'), resetBtn:gid('resetBtn'),
+    phaseCanvas:gid('phaseCanvas'), microCanvas:gid('microCanvas'),
+    tempCanvas:gid('tempCanvas'), compCanvas:gid('compCanvas'), fracCanvas:gid('fracCanvas')
   };
-  function x(id){ return document.getElementById(id); }
+  function gid(id){ return document.getElementById(id); }
 
   // ---------- Stato ----------
   const state = {
@@ -268,7 +269,6 @@
   // ---------- Microstruttura ----------
   function initMicroGrid(){
     const r = dom.microCanvas.getBoundingClientRect();
-    // Celle più piccole ma comunque fluide
     const cell = Math.max(5, Math.floor(Math.min(r.width/95, r.height/65)));
     const cols = Math.floor(r.width / cell);
     const rows = Math.floor(r.height / cell);
@@ -286,7 +286,7 @@
     let cA=0,cB=0;
     for(let i=0;i<n;i++){ if(grid[i]===1) cA++; else if(grid[i]===2) cB++; }
     const step = Math.max(1, Math.floor(n*0.008)); // ~0.8% per frame
-    // aggiungi A
+    // A
     if(cA<targetA){
       let need=Math.min(step, targetA-cA);
       for(let tries=0; tries<need*6 && need>0; tries++){
@@ -298,7 +298,7 @@
         const i=(Math.random()*n)|0; if(grid[i]===1){ grid[i]=0; need--; }
       }
     }
-    // aggiungi B
+    // B
     if(cB<targetB){
       let need=Math.min(step, targetB-cB);
       for(let tries=0; tries<need*6 && need>0; tries++){
@@ -329,7 +329,7 @@
     // Stop automatico fuori limiti
     if(state.T <= state.Tmin || state.T >= state.Tmax){
       state.running=false; state.stage='stopped';
-      dom.startBtn.disabled=false; dom.pauseBtn.disabled=true; return;
+      controlButtons(); return;
     }
 
     if(state.stage==='liquid'){
@@ -465,17 +465,23 @@
     requestAnimationFrame(animate);
   }
 
+  // ---------- UI helpers ----------
+  function controlButtons(){
+    dom.pauseBtn.disabled = !state.running || state.stage==='stopped';
+    dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
+  }
+
   // ---------- Eventi ----------
   dom.x0.addEventListener('input', ()=>{ dom.x0val.textContent = Number(dom.x0.value).toFixed(2); });
   dom.startBtn.addEventListener('click', ()=>{
     if(!state.running || state.stage==='stopped'){ resetSimulation(); }
-    state.running=true; state.paused=false; dom.pauseBtn.disabled=false;
+    state.running=true; state.paused=false; controlButtons();
   });
   dom.pauseBtn.addEventListener('click', ()=>{
-    state.paused=!state.paused; dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
+    state.paused=!state.paused; controlButtons();
   });
   dom.resetBtn.addEventListener('click', ()=>{
-    state.running=false; state.paused=false; dom.pauseBtn.disabled=true; dom.pauseBtn.textContent='Pausa'; resetSimulation();
+    state.running=false; state.paused=false; state.stage='liquid'; controlButtons(); resetSimulation();
   });
 
   // ---------- Init ----------
