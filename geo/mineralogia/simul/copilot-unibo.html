@@ -3,1094 +3,723 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Simulatore eutettico binario — HTML5 + JS puro</title>
+<title>Animazione Eutettico Binario (HTML5)</title>
 <style>
   :root {
-    --bg: #0f172a;
-    --panel: #111827;
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --accent: #22d3ee;
-    --accent2: #f59e0b;
-    --grid: #1f2937;
-    --ok: #10b981;
-    --warn: #ef4444;
+    --bg: #0f1116;
+    --panel: #141822;
+    --ink: #e8ecf1;
+    --muted: #9aa4b2;
+    --accent: #4bb3fd;
+    --accent2: #ff7a59;
+    --good: #2ecc71;
+    --warn: #f1c40f;
+    --bad: #e74c3c;
+    --solidA: #6fcf97; /* solido A (component A) */
+    --solidB: #56ccf2; /* solido B (component B) */
+    --liquid: #c77dff; /* fuso */
+    --grid: #21273a;
   }
   * { box-sizing: border-box; }
-  html, body {
-    height: 100%;
-  }
-  body {
-    margin: 0;
-    overflow: hidden; /* niente scroll della pagina */
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans';
-    background: radial-gradient(1200px 600px at 10% -10%, #111827 0%, var(--bg) 60%);
-    color: var(--text);
-  }
+  html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; background: var(--bg); color: var(--ink); font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  #app { display: grid; grid-template-rows: auto 1fr; width: 100vw; height: 100vh; }
   header {
-    padding: 10px 16px 6px;
-  }
-  h1 {
-    font-size: 18px;
-    margin: 0 0 4px;
-    font-weight: 800;
-    letter-spacing: .2px;
-  }
-  p.sub {
-    margin: 0 0 6px;
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .wrap {
     display: grid;
-    grid-template-columns: 420px 1fr; /* pannello sinistro + area grafici */
-    gap: 12px;
-    padding: 0 12px 12px;
-    height: calc(100vh - 64px); /* adatta dopo il header (circa 64px) */
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 10px 14px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--grid);
   }
-  .card {
-    background: linear-gradient(180deg, #0b1220, #0b1220f2 60%, #0b1220);
-    border: 1px solid #0b2244;
-    border-radius: 10px;
-    box-shadow: 0 0 0 1px #0b224430 inset, 0 12px 28px #0006;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .card h2 {
-    margin: 0;
-    padding: 10px 12px;
-    font-size: 14px;
-    font-weight: 800;
-    border-bottom: 1px solid #0b2244;
-    background: linear-gradient(180deg, #0d1628, #0a1120);
-  }
-
-  /* Pannello controlli (sinistra) */
   .controls {
-    display: grid;
-    gap: 6px;
-    padding: 10px;
-    overflow: auto; /* se i controlli eccedono l'altezza, scrolla SOLO qui */
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px;
   }
-  .row {
-    display: grid;
-    grid-template-columns: 1fr 110px;
-    gap: 8px;
-    align-items: center;
+  .controls .ctrl {
+    display: grid; gap: 2px; align-items: center;
   }
-  .row label {
-    font-size: 12px;
-    color: var(--muted);
+  .ctrl label { font-size: 12px; color: var(--muted); }
+  .ctrl input[type="number"], .ctrl input[type="range"] {
+    background: #0d111a; color: var(--ink); border: 1px solid var(--grid);
+    padding: 4px 6px; border-radius: 6px; width: 90px;
   }
-  .row input[type="number"], .row input[type="range"], .row select, .row input[type="text"] {
-    width: 100%;
-    background: #0b1220;
-    color: var(--text);
-    border: 1px solid #0b2244;
-    border-radius: 7px;
-    padding: 6px 8px;
-    font-size: 12px;
-    outline: none;
-  }
-  .row input[type="range"] { height: 24px; padding: 0; }
-  .btns {
-    display: flex;
-    gap: 8px;
-    padding: 8px 10px;
-    border-top: 1px solid #0b2244;
-    background: linear-gradient(180deg, #0a1120, #0b1220);
-  }
+  .ctrl input[type="range"] { width: 160px; }
+  .buttons { display: flex; align-items: center; gap: 10px; }
   button {
-    appearance: none;
-    background: linear-gradient(180deg, #0ea5e9, #22d3ee);
-    color: #04223a;
-    border: none;
-    border-radius: 9px;
-    padding: 8px 10px;
-    font-weight: 800;
-    letter-spacing: .2px;
-    box-shadow: 0 6px 14px #22d3ee3a, 0 0 0 1px #0b2244 inset;
-    cursor: pointer;
-    font-size: 12px;
+    background: var(--accent); color: #081018;
+    border: none; padding: 8px 12px; border-radius: 8px;
+    font-weight: 600; cursor: pointer;
   }
-  button.secondary {
-    background: linear-gradient(180deg, #334155, #1f2937);
-    color: #e5e7eb;
-  }
-  button.warn {
-    background: linear-gradient(180deg, #ef4444, #f59e0b);
-    color: #fff;
-  }
-  .statline {
-    padding: 6px 10px 10px;
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .statline b { color: var(--text); }
-
-  /* Pannello grafici (destra): griglia 2×2 per 4 canvas */
-  .panels {
-    padding: 8px;
+  button.secondary { background: #2d3446; color: var(--ink); }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  #main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 10px;
-    flex: 1 1 auto;
-    min-height: 0; /* necessario per flexbox */
+    padding: 10px;
   }
-  .plot {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+  .panel {
+    background: var(--panel); border: 1px solid var(--grid); border-radius: 10px; padding: 8px; display: grid; gap: 8px;
   }
-  .plot .title {
-    font-size: 12px;
-    color: var(--muted);
-    padding: 2px 2px 4px 2px;
-  }
-  .plot .canvas-wrap {
-    flex: 1 1 auto;
-    min-height: 0;
-    background: #0b0f1a;
-    border-radius: 8px;
-    border: 1px solid #0b2244;
-    position: relative;
-    overflow: hidden;
-  }
-  canvas {
-    width: 100%;
-    height: 100%; /* si adatta alla cella */
-    display: block;
-  }
+  .panel h3 { margin: 0; font-size: 14px; font-weight: 600; color: var(--muted); }
+  .left { display: grid; grid-template-rows: 1fr 0.8fr; gap: 10px; }
+  .right { display: grid; grid-template-rows: 1fr 1fr 1fr; gap: 10px; }
+  canvas { width: 100%; height: 100%; display: block; background: #0b0f17; border-radius: 8px; }
   .legend {
-    position: absolute;
-    bottom: 6px; left: 8px;
-    display: flex; flex-wrap: wrap; gap: 10px;
-    color: var(--muted);
-    font-size: 11px;
-    background: #0b0f1acc;
-    padding: 4px 6px; border-radius: 6px; border: 1px solid #0b2244;
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin: -2px 4px 4px;
   }
-  .sw {
-    width: 10px; height: 10px; border-radius: 2px;
-    display: inline-block; border: 1px solid #0b2244; margin-right: 4px;
-  }
-  .note {
-    color: var(--muted);
-    font-size: 11px;
-    padding: 2px 8px 8px;
+  .key { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 14px; height: 10px; border-radius: 2px; display: inline-block; }
+  footer {
+    position: absolute; bottom: 6px; right: 10px; font-size: 11px; color: var(--muted);
+    pointer-events: none;
   }
 </style>
 </head>
 <body>
+<div id="app">
   <header>
-    <h1>Simulatore eutettico binario (liquidus lineare) — fusione / cristallizzazione</h1>
-    <p class="sub">Diagramma isobarico (x–T), T(t), frazioni di fase e composizione del liquido nel tempo. Arresto eutettico isoterma visibile. Nessuna libreria esterna.</p>
-  </header>
-
-  <div class="wrap">
-    <!-- Pannello controlli -->
-    <div class="card">
-      <h2>Parametri</h2>
-      <div class="controls">
-        <div class="row">
-          <label>Direzione</label>
-          <select id="direction">
-            <option value="cooling">Cristallizzazione (raffreddamento)</option>
-            <option value="heating">Fusione (riscaldamento)</option>
-          </select>
-        </div>
-        <div class="row">
-          <label>Composizione totale x<sub>0</sub> (0–1)</label>
-          <input id="x0" type="number" min="0" max="1" step="0.001" value="0.35" />
-        </div>
-        <div class="row">
-          <label>Composizione eutettica x<sub>E</sub> (0–1)</label>
-          <input id="xe" type="number" min="0" max="1" step="0.001" value="0.44" />
-        </div>
-        <div class="row">
-          <label>T<sub>m,A</sub> (°C, x=0)</label>
-          <input id="TmA" type="number" step="1" value="1505" />
-        </div>
-        <div class="row">
-          <label>T<sub>E</sub> (°C)</label>
-          <input id="Te" type="number" step="1" value="1250" />
-        </div>
-        <div class="row">
-          <label>T<sub>m,B</sub> (°C, x=1)</label>
-          <input id="TmB" type="number" step="1" value="1430" />
-        </div>
-        <div class="row">
-          <label>Velocità |dT/dt| (°C/s)</label>
-          <input id="rate" type="number" min="0.01" step="0.01" value="10" />
-        </div>
-        <div class="row">
-          <label>k arresto eutettico (s per f<sub>L</sub>)</label>
-          <input id="kHold" type="number" min="0" step="0.1" value="6" />
-        </div>
-        <div class="row">
-          <label>Velocità animazione (x)</label>
-          <input id="speed" type="range" min="0.1" max="8" step="0.1" value="1" />
-        </div>
-
-        <div class="row">
-          <label>Nome A (x=0)</label>
-          <input id="nameA" type="text" value="Diopside" />
-        </div>
-        <div class="row">
-          <label>Nome B (x=1)</label>
-          <input id="nameB" type="text" value="Anortite" />
-        </div>
-
-        <div class="row">
-          <label>Preset "tipo Di–An"</label>
-          <button id="preset" class="secondary">Carica preset</button>
-        </div>
+    <div class="controls">
+      <div class="ctrl">
+        <label for="x0">x₀ (frazione B)</label>
+        <input type="range" id="x0" min="0" max="1" step="0.01" value="0.30">
+        <span id="x0val">0.30</span>
       </div>
-
-      <div class="btns">
-        <button id="playPause">▶︎ Avvia</button>
-        <button id="step" class="secondary">Step</button>
-        <button id="reset" class="warn">Reset</button>
+      <div class="ctrl">
+        <label for="TE">T_E [°C]</label>
+        <input type="number" id="TE" value="1270" step="1">
       </div>
-      <div class="statline" id="stats"></div>
+      <div class="ctrl">
+        <label for="TA">T_A @ x=0 [°C]</label>
+        <input type="number" id="TA" value="1550" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="TB">T_B @ x=1 [°C]</label>
+        <input type="number" id="TB" value="1390" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="xE">x_E</label>
+        <input type="number" id="xE" value="0.40" step="0.01" min="0.05" max="0.95">
+      </div>
+      <div class="ctrl">
+        <label for="Tmin">T_min [°C]</label>
+        <input type="number" id="Tmin" value="1100" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="Tmax">T_max [°C]</label>
+        <input type="number" id="Tmax" value="1600" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="cooling">Raffreddamento [K/s]</label>
+        <input type="number" id="cooling" value="3" step="0.1" min="0.1">
+      </div>
+      <div class="ctrl">
+        <label for="keu">k_eutettico [1/s]</label>
+        <input type="number" id="keu" value="0.25" step="0.05" min="0.05">
+      </div>
     </div>
-
-    <!-- Pannello grafici: 2×2 -->
-    <div class="card">
-      <h2>Grafici</h2>
-      <div class="panels">
-        <!-- 1) Diagramma di fase (x-T) -->
-        <div class="plot">
-          <div class="title">Diagramma isobarico (x–T): liquidus lineare, tie-line, stato</div>
-          <div class="canvas-wrap">
-            <canvas id="phaseCanvas"></canvas>
-            <div class="legend">
-              <span><span class="sw" style="background:#60a5fa"></span> Liquidus</span>
-              <span><span class="sw" style="background:#14b8a6"></span> Isoterma T<sub>E</sub></span>
-              <span><span class="sw" style="background:#f43f5e"></span> Stato</span>
-              <span><span class="sw" style="background:#f59e0b"></span> x<sub>L</sub> (liquido)</span>
-              <span><span class="sw" style="background:#a3e635"></span> Tie-line</span>
-              <span><span class="sw" style="background:#c084fc"></span> x<sub>0</sub></span>
-            </div>
-          </div>
+    <div class="buttons">
+      <button id="startBtn">Avvia</button>
+      <button id="pauseBtn" class="secondary" disabled>Pausa</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+  </header>
+  <div id="main">
+    <div class="left">
+      <div class="panel">
+        <h3>Diagramma di fase (isobaro) — binario con eutettico</h3>
+        <div class="legend">
+          <span class="key"><span class="sw" style="background:var(--accent)"></span>Liquidus</span>
+          <span class="key"><span class="sw" style="background:var(--solidA)"></span>Solido A (x=0)</span>
+          <span class="key"><span class="sw" style="background:var(--solidB)"></span>Solido B (x=1)</span>
+          <span class="key"><span class="sw" style="background:var(--liquid)"></span>Fuso</span>
+          <span class="key"><span class="sw" style="background:var(--warn)"></span>Percorso / Tieline</span>
         </div>
-
-        <!-- 2) Curva T(t) -->
-        <div class="plot">
-          <div class="title">Temperatura nel tempo T(t) — plateau a T<sub>E</sub> durante l'arresto eutettico</div>
-          <div class="canvas-wrap">
-            <canvas id="coolingCanvas"></canvas>
-            <div class="legend">
-              <span><span class="sw" style="background:#22d3ee"></span> T(t)</span>
-              <span><span class="sw" style="background:#f59e0b"></span> Plateau (T<sub>E</sub>)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3) Frazioni fuso/solido nel tempo -->
-        <div class="plot">
-          <div class="title">Frazioni di fase nel tempo: fuso e solido</div>
-          <div class="canvas-wrap">
-            <canvas id="fracCanvas"></canvas>
-            <div class="legend">
-              <span><span class="sw" style="background:#f59e0b"></span> fuso (%)</span>
-              <span><span class="sw" style="background:#10b981"></span> solido (%)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4) Composizione del fuso nel tempo -->
-        <div class="plot">
-          <div class="title">Composizione del fuso nel tempo (percentuali A/B)</div>
-          <div class="canvas-wrap">
-            <canvas id="compCanvas"></canvas>
-            <div class="legend" id="compLegend">
-              <span><span class="sw" style="background:#4ade80"></span> %A (x=0)</span>
-              <span><span class="sw" style="background:#fb7185"></span> %B (x=1)</span>
-            </div>
-          </div>
-          <div class="note">Quando non è presente liquido, la composizione del fuso è non definita (gap nella curva).</div>
-        </div>
+        <canvas id="phaseCanvas"></canvas>
+      </div>
+      <div class="panel">
+        <h3>Microstruttura (tessellazione: fuso + cristalli A / B)</h3>
+        <canvas id="microCanvas"></canvas>
+      </div>
+    </div>
+    <div class="right">
+      <div class="panel">
+        <h3>Temperatura vs tempo</h3>
+        <canvas id="tempCanvas"></canvas>
+      </div>
+      <div class="panel">
+        <h3>Composizione vs tempo (x_B)</h3>
+        <canvas id="compCanvas"></canvas>
+      </div>
+      <div class="panel">
+        <h3>Frazioni di fase vs tempo</h3>
+        <canvas id="fracCanvas"></canvas>
       </div>
     </div>
   </div>
+</div>
+<footer>Nota: parametri di default solo illustrativi. Modificali per altri sistemi.</footer>
 
 <script>
-/*
-  Simulatore eutettico binario con liquidus lineari e arresto eutettico isoterma.
-  Novità:
-  - Stop automatico quando T esce dai limiti verticali del diagramma di fase fissati al reset
-  - Grafici addizionali: frazioni fuso/solido nel tempo, composizione del fuso nel tempo
-  - Layout in un'unica schermata 1920×1080 (niente scroll della pagina)
-*/
+(function(){
+  // ---------- Utility ----------
+  const clamp = (v,min,max)=>Math.max(min,Math.min(max,v));
+  const lerp = (a,b,t)=>a+(b-a)*t;
+  function setCanvasSizeToCSS(canvas){
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.max(2, Math.floor(rect.width * dpr));
+    canvas.height = Math.max(2, Math.floor(rect.height * dpr));
+    const ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return ctx;
+  }
+  function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}) {
+    const {margin= {l:50,b:40,r:10,t:10}, gridColor='#1f2434', textColor='#9aa4b2'} = options;
+    const {width, height} = rect;
+    const x0 = margin.l, x1 = width - margin.r;
+    const y0 = height - margin.b, y1 = margin.t;
+    // background grid
+    ctx.save();
+    ctx.strokeStyle = gridColor;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    // x ticks
+    const xticks = 6;
+    for (let i=0;i<=xticks;i++){
+      const tx = x0 + (x1-x0)*i/xticks;
+      ctx.moveTo(tx,y0); ctx.lineTo(tx,y1);
+    }
+    // y ticks
+    const yticks = 6;
+    for (let j=0;j<=yticks;j++){
+      const ty = y0 - (y0-y1)*j/yticks;
+      ctx.moveTo(x0,ty); ctx.lineTo(x1,ty);
+    }
+    ctx.stroke();
+    // axis labels + ticks text
+    ctx.fillStyle = textColor;
+    ctx.font = '12px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    for (let i=0;i<=xticks;i++){
+      const tx = x0 + (x1-x0)*i/xticks;
+      const xv = lerp(xMin,xMax,i/xticks);
+      ctx.fillText((Math.round(xv*100)/100).toString(), tx, y0+4);
+    }
+    ctx.save();
+    ctx.textAlign='right'; ctx.textBaseline='middle';
+    for (let j=0;j<=yticks;j++){
+      const ty = y0 - (y0-y1)*j/yticks;
+      const yv = lerp(yMin,yMax,j/yticks);
+      ctx.fillText(Math.round(yv).toString(), x0-6, ty);
+    }
+    ctx.restore();
+    // axis lines
+    ctx.strokeStyle = '#2a2f45';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x0,y0); ctx.lineTo(x1,y0);
+    ctx.moveTo(x0,y0); ctx.lineTo(x0,y1);
+    ctx.stroke();
+    // labels
+    ctx.fillStyle = '#e8ecf1';
+    ctx.font = '13px system-ui, sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.fillText(xLabel, (x0+x1)/2, height-20);
+    ctx.save();
+    ctx.translate(14, (y0+y1)/2);
+    ctx.rotate(-Math.PI/2);
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.fillText(yLabel, 0, 0);
+    ctx.restore();
+    ctx.restore();
 
-// --- Helpers ---
-const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
-const lerp = (a, b, t) => a + (b - a) * t;
-const fmt = (x, d=2) => Number.isFinite(x) ? x.toFixed(d) : '—';
-const el = id => document.getElementById(id);
+    // Return transform funcs
+    const xScale = v => x0 + (v - xMin) / (xMax - xMin) * (x1 - x0);
+    const yScale = v => y0 - (v - yMin) / (yMax - yMin) * (y0 - y1);
+    return {x0,y0,x1,y1,xScale,yScale};
+  }
 
-// --- UI elements ---
-const directionEl = el('direction');
-const x0El = el('x0');
-const xeEl = el('xe');
-const TmAEl = el('TmA');
-const TeEl  = el('Te');
-const TmBEl = el('TmB');
-const rateEl = el('rate');
-const kHoldEl = el('kHold');
-const speedEl = el('speed');
-const nameAEl = el('nameA');
-const nameBEl = el('nameB');
+  // ---------- DOM & State ----------
+  const dom = {
+    x0: document.getElementById('x0'),
+    x0val: document.getElementById('x0val'),
+    TE: document.getElementById('TE'),
+    TA: document.getElementById('TA'),
+    TB: document.getElementById('TB'),
+    xE: document.getElementById('xE'),
+    Tmin: document.getElementById('Tmin'),
+    Tmax: document.getElementById('Tmax'),
+    cooling: document.getElementById('cooling'),
+    keu: document.getElementById('keu'),
+    startBtn: document.getElementById('startBtn'),
+    pauseBtn: document.getElementById('pauseBtn'),
+    resetBtn: document.getElementById('resetBtn'),
+    phaseCanvas: document.getElementById('phaseCanvas'),
+    microCanvas: document.getElementById('microCanvas'),
+    tempCanvas: document.getElementById('tempCanvas'),
+    compCanvas: document.getElementById('compCanvas'),
+    fracCanvas: document.getElementById('fracCanvas'),
+  };
 
-const presetBtn = el('preset');
-const playPauseBtn = el('playPause');
-const stepBtn = el('step');
-const resetBtn = el('reset');
-const statsEl = el('stats');
+  const state = {
+    running: false,
+    paused: false,
+    t: 0,                 // tempo simulazione [s]
+    dtMax: 1/30,          // dt max per stabilità numerica
+    T: 1550,              // temperatura corrente [°C]
+    stage: 'liquid',      // 'liquid' | 'primary' | 'eutectic' | 'solid' | 'stopped'
+    // sistema
+    x0: 0.30,             // composizione bulk (frazione B)
+    xE: 0.40,
+    TE: 1270,
+    TA: 1550,
+    TB: 1390,
+    Tmin: 1100,
+    Tmax: 1600,
+    coolRate: 3.0,        // [K/s]
+    kEut: 0.25,           // [1/s] tasso di solidificazione eutettica
+    // Fractions
+    fL: 1.0,
+    fA: 0.0,
+    fB: 0.0,
+    // Composizioni di fase (x_B)
+    xL: 0.30,
+    xS_A: 0.0, // composizione del solido A
+    xS_B: 1.0, // composizione del solido B
+    // Per microstruttura
+    micro: {
+      grid: [], cols: 0, rows: 0, // 0=liquid,1=A,2=B
+    },
+    // Serie temporali per grafici
+    series: {
+      t: [], T: [], xL: [], xA: [], xB: [], fL: [], fA: [], fB: []
+    },
+    // ausilio per path nel diagramma
+    branch: 'left',       // left (A primario) o right (B primario)
+    T_liq_x0: null,       // temperatura liquidus alla composizione x0
+    stoppedByBounds: false
+  };
 
-const phaseCanvas = el('phaseCanvas');
-const coolingCanvas = el('coolingCanvas');
-const fracCanvas = el('fracCanvas');
-const compCanvas = el('compCanvas');
+  function readParams(){
+    state.x0 = Number(dom.x0.value);
+    state.xE = clamp(Number(dom.xE.value), 0.05, 0.95);
+    state.TE = Number(dom.TE.value);
+    state.TA = Number(dom.TA.value);
+    state.TB = Number(dom.TB.value);
+    state.Tmin = Number(dom.Tmin.value);
+    state.Tmax = Number(dom.Tmax.value);
+    state.coolRate = Math.max(0.01, Number(dom.cooling.value));
+    state.kEut = Math.max(0.01, Number(dom.keu.value));
+    dom.x0val.textContent = state.x0.toFixed(2);
+  }
 
-const pc = phaseCanvas.getContext('2d');
-const cc = coolingCanvas.getContext('2d');
-const fc = fracCanvas.getContext('2d');
-const kc = compCanvas.getContext('2d'); // composition canvas
+  function resetSimulation(){
+    readParams();
+    state.t = 0;
+    state.series = { t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] };
+    state.fL = 1; state.fA = 0; state.fB = 0;
+    state.xL = state.x0;
+    state.stage = 'liquid';
+    state.stoppedByBounds = false;
 
-// --- Stato simulazione ---
-let state = {
-  running: false,
-  t: 0,
-  T: 0,
-  phase: 'liquid', // liquid | two-phase | eutectic-hold | solid
-  holdClock: 0,
-  holdDur: 0,
-  trace: [],       // [{t,T,fL,fS,xL}] — xL = composizione del liquido, NaN se assente
-  t_max_axis: 40,
-  T_min_axis: null, // per T(t)
-  T_max_axis: null,
-  PD_Tmin_fixed: null, // limiti fissi del diagramma di fase (per stop)
-  PD_Tmax_fixed: null
-};
+    // Imposta T iniziale leggermente sopra liquidus(x0) o Tmax-10 se necessario
+    const Tliq0 = liquidusTempAtX(state.x0);
+    const Tstart = Math.min(state.Tmax - 5, Math.max(Tliq0 + 40, state.Tmin + 20));
+    state.T = Tstart;
+    state.T_liq_x0 = Tliq0;
+    state.branch = (state.x0 < state.xE) ? 'left' : (state.x0 > state.xE ? 'right' : 'eutectic');
 
-// --- Layout / resizing: riempi 2x2 mantenendo tutto in viewport ---
-function resizeCanvases() {
-  // Ogni canvas riempie la cella: settiamo le dimensioni interne alla size CSS per nitidezza
-  [phaseCanvas, coolingCanvas, fracCanvas, compCanvas].forEach(cv => {
-    const rect = cv.getBoundingClientRect();
-    const pr = window.devicePixelRatio || 1;
-    cv.width  = Math.max(400, Math.floor(rect.width * pr));
-    cv.height = Math.max(200, Math.floor(rect.height * pr));
-    const ctx = cv.getContext('2d');
-    ctx.setTransform(pr, 0, 0, pr, 0, 0); // scala logica per 1:1 con CSS pixel
+    // Microstruttura reset
+    initMicroGrid();
+    repaintAll();
+  }
+
+  // ---------- Modello termodinamico (lineare) ----------
+  function liquidusTempAtX(x){
+    // Liquidus approssimata da segmenti di retta
+    // per x in [0,xE]: linea (0,TA) -> (xE,TE)
+    // per x in [xE,1]: (xE,TE) -> (1,TB)
+    x = clamp(x, 0, 1);
+    if (x <= state.xE) {
+      const t = x / state.xE;
+      return lerp(state.TA, state.TE, t);
+    } else {
+      const t = (x - state.xE) / (1 - state.xE);
+      return lerp(state.TE, state.TB, t);
+    }
+  }
+  function liquidusXAtT_left(T){
+    // inversa lato sinistro: x = xE * (TA - T)/(TA - TE)
+    const x = state.xE * (state.TA - T) / (state.TA - state.TE);
+    return clamp(x, 0, state.xE);
+  }
+  function liquidusXAtT_right(T){
+    // inversa lato destro: x = 1 - (1 - xE)*(TB - T)/(TB - TE)
+    const x = 1 - (1 - state.xE) * (state.TB - T) / (state.TB - state.TE);
+    return clamp(x, state.xE, 1);
+  }
+
+  // ---------- Microstruttura ----------
+  function initMicroGrid(){
+    const cvs = dom.microCanvas.getBoundingClientRect();
+    const W = Math.max(300, Math.floor(cvs.width));
+    const H = Math.max(250, Math.floor(cvs.height));
+    // scegli dimensione celle per avere ~ ~60-120k celle max per prestazioni
+    const cellSize = Math.max(5, Math.floor(Math.min(W/90, H/60)));
+    const cols = Math.floor(W / cellSize);
+    const rows = Math.floor(H / cellSize);
+    state.micro.cols = cols; state.micro.rows = rows;
+    state.micro.cellSize = cellSize;
+    const n = cols*rows;
+    state.micro.grid = new Uint8Array(n);
+    state.micro.grid.fill(0); // tutto liquido
+  }
+  function updateMicroTowardsTargets(){
+    // Porta la tessellazione verso i target fasi coerenti con fA,fB,fL
+    const n = state.micro.cols * state.micro.rows;
+    const targetA = Math.round(state.fA * n);
+    const targetB = Math.round(state.fB * n);
+    const targetL = n - targetA - targetB;
+
+    const grid = state.micro.grid;
+    // conta attuali
+    let countA=0, countB=0, countL=0;
+    for (let i=0;i<n;i++){
+      const v = grid[i];
+      if (v===1) countA++; else if (v===2) countB++; else countL++;
+    }
+    // helper: convert i casuali
+    function indicesOf(val, maxPick){
+      const idxs=[];
+      for (let i=0;i<n && idxs.length<maxPick;i++){
+        if (grid[i]===val) idxs.push(i);
+      }
+      return idxs;
+    }
+    // Per performance, facciamo piccoli passi per frame
+    const step = Math.max(1, Math.floor(n*0.01)); // ~1% per frame
+    // Se serve più A:
+    if (countA < targetA) {
+      // prendi da liquido
+      let need = Math.min(step, targetA - countA);
+      for (let tries=0; tries<need*5 && need>0; tries++){
+        const i = Math.floor(Math.random()*n);
+        if (grid[i]===0){ grid[i]=1; need--; }
+      }
+    } else if (countA > targetA) {
+      // restituisci a liquido per correggere (arrotondamenti)
+      let need = Math.min(step, countA - targetA);
+      for (let tries=0; tries<need*5 && need>0; tries++){
+        const i = Math.floor(Math.random()*n);
+        if (grid[i]===1){ grid[i]=0; need--; }
+      }
+    }
+    if (countB < targetB) {
+      let need = Math.min(step, targetB - countB);
+      for (let tries=0; tries<need*5 && need>0; tries++){
+        const i = Math.floor(Math.random()*n);
+        if (grid[i]===0){ grid[i]=2; need--; }
+      }
+    } else if (countB > targetB) {
+      let need = Math.min(step, countB - targetB);
+      for (let tries=0; tries<need*5 && need>0; tries++){
+        const i = Math.floor(Math.random()*n);
+        if (grid[i]===2){ grid[i]=0; need--; }
+      }
+    }
+    // L si sistema da solo come residuo
+  }
+
+  // ---------- Simulazione ----------
+  let lastTS = 0;
+  function stepSimulation(dtReal){
+    if (!state.running || state.paused || state.stage==='stopped') return;
+
+    const dt = Math.min(state.dtMax, dtReal); // secondi
+    state.t += dt;
+
+    // Stop se esce dai bounds
+    if (state.T <= state.Tmin || state.T >= state.Tmax) {
+      state.running = false; state.stage='stopped'; state.stoppedByBounds = true;
+      dom.startBtn.disabled = false;
+      dom.pauseBtn.disabled = true;
+      return;
+    }
+
+    // Stati e cinetica semplificata
+    if (state.stage === 'liquid') {
+      // raffreddamento
+      state.T -= state.coolRate * dt;
+      state.fL = 1; state.fA=0; state.fB=0;
+      state.xL = state.x0;
+
+      if (state.T <= state.T_liq_x0 || state.branch==='eutectic') {
+        // entra nella regione L + (A o B) oppure direttamente in eutettico se x0==xE
+        if (state.x0 < state.xE) state.stage = 'primary';
+        else if (state.x0 > state.xE) state.stage = 'primary';
+        else state.stage = 'eutectic';
+      }
+    }
+    else if (state.stage === 'primary') {
+      // ancora raffreddamento fino a TE
+      state.T -= state.coolRate * dt;
+      // calcola xL(T) e frazioni con lever rule
+      if (state.x0 < state.xE) {
+        // A primario (xS=0)
+        state.xL = liquidusXAtT_left(Math.max(state.T, state.TE));
+        // fA = (xL - x0)/xL ; fL = x0/xL
+        // clamp per sicurezza
+        state.fA = clamp((state.xL - state.x0) / Math.max(1e-6, state.xL), 0, 1);
+        state.fL = clamp(1 - state.fA, 0, 1);
+        state.fB = 0;
+      } else {
+        // B primario (xS=1)
+        state.xL = liquidusXAtT_right(Math.max(state.T, state.TE));
+        // fB = (x0 - xL)/(1 - xL) ; fL = (1 - x0)/(1 - xL)
+        state.fB = clamp((state.x0 - state.xL) / Math.max(1e-6, (1 - state.xL)), 0, 1);
+        state.fL = clamp(1 - state.fB, 0, 1);
+        state.fA = 0;
+      }
+      if (state.T <= state.TE + 1e-6) {
+        // passa alla trasformazione eutettica a T costante
+        state.T = state.TE;
+        state.stage = 'eutectic';
+      }
+    }
+    else if (state.stage === 'eutectic') {
+      // Plateau isoterma a T_E: il liquido residuo solidifica con proporzioni fissate (x_E : 1-x_E)
+      state.T = state.TE;
+      if (state.fL > 0) {
+        const dL = Math.min(state.fL, state.kEut * dt); // quanto liquido solidifica in questo step
+        state.fL -= dL;
+        // porzioni a A e B dal liquido eutettico xE
+        state.fA += dL * (1 - state.xE);
+        state.fB += dL * (state.xE);
+        // xL resta = xE durante il plateau (se c'è ancora liquido)
+        state.xL = state.fL > 0 ? state.xE : state.xL;
+      } else {
+        // tutto solido: riprende il raffreddamento
+        state.stage = 'solid';
+      }
+    }
+    else if (state.stage === 'solid') {
+      // tutto solido: prosegue il raffreddamento libero
+      state.fL = 0; // fA + fB = 1
+      state.T -= state.coolRate * dt;
+    }
+
+    // Serie per grafici
+    pushSeries();
+
+    // Microstruttura: adegua gradualmente al target
+    updateMicroTowardsTargets();
+  }
+
+  function pushSeries(){
+    const s = state.series;
+    // limitiamo numero di punti per prestazioni
+    if (s.t.length>3000){ // decima
+      s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift();
+    }
+    s.t.push(state.t);
+    s.T.push(state.T);
+    s.xL.push(state.fL>0 ? state.xL : NaN); // NaN dopo solidificazione completa
+    s.xA.push(0); // composizione del solido A (immiscibile) = 0
+    s.xB.push(1); // composizione del solido B (immiscibile) = 1
+    s.fL.push(state.fL);
+    s.fA.push(state.fA);
+    s.fB.push(state.fB);
+  }
+
+  // ---------- Rendering ----------
+  function repaintAll(){
+    drawPhaseDiagram();
+    drawMicro();
+    drawTempChart();
+    drawCompChart();
+    drawFracChart();
+  }
+
+  function drawPhaseDiagram(){
+    const ctx = setCanvasSizeToCSS(dom.phaseCanvas);
+    const w = dom.phaseCanvas.clientWidth, h = dom.phaseCanvas.clientHeight;
+    const {xScale, yScale, x0, x1, y0, y1} = drawAxes(ctx, {width:w, height:h}, 0, 1, state.Tmin, state.Tmax, 'Composizione x_B', 'Temperatura [°C]');
+    // Disegna le due linee liquidus
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    ctx.beginPath();
+    // sinistra: (0,TA)->(xE,TE)
+    ctx.moveTo(xScale(0), yScale(state.TA));
+    ctx.lineTo(xScale(state.xE), yScale(state.TE));
+    // destra: (xE,TE)->(1,TB)
+    ctx.lineTo(xScale(1), yScale(state.TB));
+    ctx.stroke();
+
+    // punti chiave
+    ctx.fillStyle = '#ffffff';
+    // eutettico
+    circle(ctx, xScale(state.xE), yScale(state.TE), 3, '#ffd166');
+
+    // Verticale sulla composizione bulk x0
+    ctx.strokeStyle = '#3a3f55';
+    ctx.setLineDash([6,4]);
+    ctx.beginPath();
+    ctx.moveTo(xScale(state.x0), yScale(state.Tmin));
+    ctx.lineTo(xScale(state.x0), yScale(state.Tmax));
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Punto stato / traiettoria
+    // quando liquido: (x0,T), quando biphasico: evidenzia tie-line tra xS e xL
+    ctx.lineWidth = 2;
+    const warn = getComputedStyle(document.documentElement).getPropertyValue('--warn');
+    if (state.stage==='primary' || state.stage==='eutectic'){
+      // tie-line a T corrente
+      const Tnow = state.T;
+      let xS = (state.x0 < state.xE) ? 0 : 1;
+      const xL = (state.stage==='eutectic' && state.fL>0) ? state.xE : state.xL;
+      ctx.strokeStyle = warn;
+      ctx.beginPath();
+      ctx.moveTo(xScale(xS), yScale(Tnow));
+      ctx.lineTo(xScale(xL), yScale(Tnow));
+      ctx.stroke();
+      // marcatori
+      circle(ctx, xScale(xS), yScale(Tnow), 3, '#ffffff');
+      circle(ctx, xScale(xL), yScale(Tnow), 3, '#ffffff');
+    }
+    // punto del bulk (utile per vedere verticale)
+    circle(ctx, xScale(state.x0), yScale(state.T), 4, warn);
+  }
+
+  function circle(ctx,x,y,r, color){
+    ctx.save();
+    ctx.fillStyle=color; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
+    ctx.restore();
+  }
+
+  function drawMicro(){
+    const ctx = setCanvasSizeToCSS(dom.microCanvas);
+    const {width, height} = dom.microCanvas.getBoundingClientRect();
+    const cols = state.micro.cols, rows = state.micro.rows, s = state.micro.cellSize;
+    // Fondo
+    ctx.fillStyle = '#0b0f17'; ctx.fillRect(0,0,width,height);
+    // Disegna celle
+    const cA = getCSS('--solidA'), cB = getCSS('--solidB'), cL = getCSS('--liquid');
+    for (let r=0;r<rows;r++){
+      for (let c=0;c<cols;c++){
+        const idx = r*cols + c;
+        const v = state.micro.grid[idx];
+        if (v===0) ctx.fillStyle = cL;
+        else if (v===1) ctx.fillStyle = cA;
+        else ctx.fillStyle = cB;
+        ctx.fillRect(c*s, r*s, s-0.5, s-0.5);
+      }
+    }
+    // cornice
+    ctx.strokeStyle = '#1d2232'; ctx.lineWidth = 2;
+    ctx.strokeRect(0.5,0.5,width-1,height-1);
+  }
+
+  function drawTempChart(){
+    const ctx = setCanvasSizeToCSS(dom.tempCanvas);
+    const w = dom.tempCanvas.clientWidth, h = dom.tempCanvas.clientHeight;
+    const s = state.series;
+    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
+    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, state.Tmin, state.Tmax, 'Tempo [s]', 'T [°C]');
+    const {xScale,yScale} = axes;
+    // T(t)
+    drawLine(ctx, s.t, s.T, xScale, yScale, getCSS('--accent2'), 2);
+    // Linea T_E
+    ctx.setLineDash([4,4]); ctx.strokeStyle = '#6b7280';
+    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.TE)); ctx.lineTo(xScale(tMax), yScale(state.TE)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  function drawCompChart(){
+    const ctx = setCanvasSizeToCSS(dom.compCanvas);
+    const w = dom.compCanvas.clientWidth, h = dom.compCanvas.clientHeight;
+    const s = state.series;
+    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
+    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, 0, 1, 'Tempo [s]', 'Composizione x_B');
+    const {xScale,yScale} = axes;
+    // xL(t)
+    drawLine(ctx, s.t, s.xL, xScale, yScale, getCSS('--liquid'), 2);
+    // x_A (0) e x_B (1) come riferimenti
+    ctx.setLineDash([4,4]); ctx.strokeStyle = getCSS('--solidA');
+    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(0)); ctx.lineTo(xScale(tMax), yScale(0)); ctx.stroke();
+    ctx.strokeStyle = getCSS('--solidB'); ctx.beginPath();
+    ctx.moveTo(xScale(0), yScale(1)); ctx.lineTo(xScale(tMax), yScale(1)); ctx.stroke();
+    ctx.setLineDash([]);
+    // x_E e x0 come riferimenti verticali nel tempo (linee orizzontali)
+    ctx.setLineDash([2,4]); ctx.strokeStyle = '#8b94a7';
+    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.xE)); ctx.lineTo(xScale(tMax), yScale(state.xE)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.x0)); ctx.lineTo(xScale(tMax), yScale(state.x0)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  function drawFracChart(){
+    const ctx = setCanvasSizeToCSS(dom.fracCanvas);
+    const w = dom.fracCanvas.clientWidth, h = dom.fracCanvas.clientHeight;
+    const s = state.series;
+    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
+    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, 0, 1, 'Tempo [s]', 'Frazione di fase');
+    const {xScale,yScale} = axes;
+    drawLine(ctx, s.t, s.fL, xScale, yScale, getCSS('--liquid'), 2); // liquido
+    drawLine(ctx, s.t, s.fA, xScale, yScale, getCSS('--solidA'), 2); // A
+    drawLine(ctx, s.t, s.fB, xScale, yScale, getCSS('--solidB'), 2); // B
+  }
+
+  function drawLine(ctx, xs, ys, xScale, yScale, color, width){
+    ctx.save();
+    ctx.strokeStyle = color; ctx.lineWidth = width||2; ctx.beginPath();
+    let started = false;
+    for (let i=0;i<xs.length;i++){
+      const y = ys[i];
+      if (!isFinite(y)) { started=false; continue; }
+      const x = xs[i];
+      const px = xScale(x), py = yScale(y);
+      if (!started) { ctx.moveTo(px, py); started=true; }
+      else { ctx.lineTo(px, py); }
+    }
+    ctx.stroke();
+    ctx.restore();
+  }
+  function getCSS(varname){ return getComputedStyle(document.documentElement).getPropertyValue(varname).trim(); }
+
+  // ---------- Loop ----------
+  function animate(ts){
+    if (!lastTS) lastTS = ts;
+    const dt = Math.min(0.05, (ts - lastTS) / 1000);
+    lastTS = ts;
+
+    stepSimulation(dt);
+    repaintAll();
+
+    requestAnimationFrame(animate);
+  }
+
+  // ---------- Eventi ----------
+  dom.x0.addEventListener('input', ()=>{ dom.x0val.textContent = Number(dom.x0.value).toFixed(2); });
+  dom.startBtn.addEventListener('click', ()=>{
+    if (!state.running || state.stage==='stopped') { resetSimulation(); }
+    state.running = true; state.paused = false;
+    dom.pauseBtn.disabled = false;
   });
-  drawAll(true);
-}
-window.addEventListener('resize', () => {
-  // La griglia è fluida; ridisegniamo con i nuovi bounding box
-  resizeCanvases();
-});
-
-// --- Parametri e liquidus ---
-function params() {
-  const dir = directionEl.value;
-  let x0 = +x0El.value;
-  const xe = +xeEl.value;
-  const TmA = +TmAEl.value, TmB = +TmBEl.value, Te = +TeEl.value;
-  const rate = Math.max(0.0001, +rateEl.value);
-  const kHold = Math.max(0, +kHoldEl.value);
-  const speed = +speedEl.value;
-  const nameA = nameAEl.value.trim() || 'A';
-  const nameB = nameBEl.value.trim() || 'B';
-
-  x0 = clamp(x0, 0, 1);
-  return { dir, x0, xe, TmA, TmB, Te, rate, kHold, speed, nameA, nameB };
-}
-function liquidusLines() {
-  const {xe, TmA, TmB, Te} = params();
-  const mL = (Te - TmA) / (xe - 0);
-  const bL = TmA;
-  const mR = (TmB - Te) / (1 - xe);
-  const bR = Te - mR * xe;
-  return { mL, bL, mR, bR };
-}
-function T_liquidus_at_x(x) {
-  const {xe} = params();
-  const {mL, bL, mR, bR} = liquidusLines();
-  if (x < xe) return mL * x + bL;
-  if (x > xe) return mR * x + bR;
-  return +TeEl.value;
-}
-function xL_at_T(T, side) {
-  const {mL, bL, mR, bR} = liquidusLines();
-  if (side === 'left') return (T - bL) / mL;
-  return (T - bR) / mR;
-}
-function enterSide(x0, xe) {
-  if (x0 < xe) return 'left';
-  if (x0 > xe) return 'right';
-  return 'eutectic';
-}
-
-// --- Assi fissi del diagramma di fase (per stop automatico) ---
-function computePhaseAxesFixed() {
-  const {TmA, TmB, Te} = params();
-  const Tmax = Math.max(TmA, TmB) + 0.06 * Math.max(TmA, TmB);
-  const Tmin = Te - 0.15 * (Tmax - Te);
-  return {Tmin, Tmax};
-}
-
-// --- Mapping per diagramma di fase (usa assi fissi) ---
-const PD = { left: 60, right: 18, top: 16, bottom: 46 };
-function phaseRect() {
-  return {
-    x: PD.left,
-    y: PD.top,
-    w: phaseCanvas.getBoundingClientRect().width - PD.left - PD.right,
-    h: phaseCanvas.getBoundingClientRect().height - PD.top - PD.bottom
-  };
-}
-function toCanvasX(x) {
-  const r = phaseRect();
-  return r.x + x * r.w;
-}
-function toCanvasYfromT(T) {
-  const r = phaseRect();
-  const Tmin = state.PD_Tmin_fixed;
-  const Tmax = state.PD_Tmax_fixed;
-  const v = clamp((T - Tmin) / (Tmax - Tmin), 0, 1);
-  return r.y + (1 - v) * r.h;
-}
-
-// --- Reset simulazione ---
-function resetSim() {
-  const {dir, x0} = params();
-  state.running = false;
-  playPauseBtn.textContent = '▶︎ Avvia';
-  state.t = 0;
-  state.trace = [];
-  state.holdClock = 0;
-  state.holdDur = 0;
-
-  // Fissa una volta per tutte gli assi del diagramma di fase
-  const {Tmin, Tmax} = computePhaseAxesFixed();
-  state.PD_Tmin_fixed = Tmin;
-  state.PD_Tmax_fixed = Tmax;
-
-  // Temperatura iniziale
-  if (dir === 'cooling') {
-    const Tli = T_liquidus_at_x(x0);
-    state.T = Tli + 0.10 * Math.max(50, Math.abs(Tli));
-    state.phase = 'liquid';
-  } else {
-    const Te = +TeEl.value;
-    const span = Math.max(50, Math.abs(Te));
-    state.T = Te - 0.10 * span;
-    state.phase = (state.T < Te) ? 'solid' : (state.T === Te ? 'eutectic-hold' : 'two-phase');
-  }
-
-  // Range iniziali per grafico T(t)
-  state.T_min_axis = state.PD_Tmin_fixed;
-  state.T_max_axis = state.PD_Tmax_fixed;
-  state.t_max_axis = 40;
-
-  resizeCanvases();
-  updateStats();
-  drawAll(true);
-}
-
-function startStop() {
-  state.running = !state.running;
-  playPauseBtn.textContent = state.running ? '⏸ Pausa' : '▶︎ Avvia';
-}
-function stepOnce() {
-  simStep(1/30);
-  drawAll();
-}
-
-// --- Calcolo frazioni e composizione del liquido ---
-function fractionsAndLiquidX(T, phase, side, x0, xe, holdClock, holdDur, dir) {
-  let fL, fS, xL;
-
-  if (phase === 'liquid') {
-    fL = 1; fS = 0; xL = x0;
-  } else if (phase === 'solid') {
-    fL = 0; fS = 1; xL = NaN; // niente liquido
-  } else if (phase === 'two-phase') {
-    if (side === 'left') {
-      xL = xL_at_T(T, 'left');
-      fL = clamp(x0 / xL, 0, 1);
-    } else if (side === 'right') {
-      xL = xL_at_T(T, 'right');
-      fL = clamp((1 - x0) / (1 - xL), 0, 1);
-    } else {
-      // x0=xe (sopra Te): segue il liquidus; prendiamo xL=xe per continuità
-      xL = xe; fL = 1;
-    }
-    fS = 1 - fL;
-  } else if (phase === 'eutectic-hold') {
-    // Alla T=Te, la composizione del liquido è fissa a xe
-    xL = xe;
-    const fL0 = (side === 'left') ? (x0/xe) : ((side === 'right') ? ((1 - x0)/(1 - xe)) : 1);
-    const r = (holdDur <= 1e-9) ? 0 : clamp(holdClock/holdDur, 0, 1);
-
-    if (dir === 'cooling') {
-      // diminuisce da fL0 a 0
-      fL = fL0 * (1 - r);
-    } else {
-      // riscaldamento: aumenta da 0 a fL0
-      fL = fL0 * r;
-    }
-    fL = clamp(fL, 0, 1);
-    fS = 1 - fL;
-  } else {
-    fL = NaN; fS = NaN; xL = NaN;
-  }
-  return {fL, fS, xL};
-}
-
-// --- Evoluzione temporale ---
-function simStep(dtReal) {
-  const {dir, x0, xe, rate, kHold, speed} = params();
-  const side = enterSide(x0, xe);
-  const Te = +TeEl.value;
-  const T_enter = T_liquidus_at_x(x0);
-
-  const dt = dtReal * speed;
-  const sign = (dir === 'cooling') ? -1 : +1;
-  const dTmove = sign * rate * dt;
-
-  function preEutecticLiquidFractionAtTeMinus() {
-    if (side === 'left') {
-      return (xe === 0) ? 0 : (x0 / xe);
-    } else if (side === 'right') {
-      return (xe === 1) ? 0 : ((1 - x0) / (1 - xe));
-    } else {
-      return 1;
-    }
-  }
-
-  // Aggiorna T e fase
-  if (dir === 'cooling') {
-    if (state.phase === 'liquid') {
-      state.T += dTmove;
-      if (state.T <= T_enter + 1e-9) {
-        state.phase = (state.T <= Te + 1e-9) ? 'eutectic-hold' : 'two-phase';
-        if (state.phase === 'eutectic-hold') {
-          state.T = Te;
-          state.holdClock = 0;
-          state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
-        }
-      }
-    } else if (state.phase === 'two-phase') {
-      state.T += dTmove;
-      if (state.T <= Te + 1e-9) {
-        state.phase = 'eutectic-hold';
-        state.T = Te;
-        state.holdClock = 0;
-        state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
-      }
-    } else if (state.phase === 'eutectic-hold') {
-      state.holdClock += dt;
-      state.T = Te;
-      if (state.holdClock >= state.holdDur || state.holdDur <= 1e-9) {
-        state.phase = 'solid';
-        state.T += dTmove; // prosegue eventualmente
-      }
-    } else if (state.phase === 'solid') {
-      state.T += dTmove;
-    } else {
-      // allineamento fase iniziale
-      if (state.T > T_enter) state.phase = 'liquid';
-      else if (state.T > Te) state.phase = 'two-phase';
-      else if (Math.abs(state.T - Te) < 1e-9) state.phase = 'eutectic-hold';
-      else state.phase = 'solid';
-    }
-  } else { // heating
-    if (state.phase === 'solid') {
-      state.T += dTmove;
-      if (state.T >= Te - 1e-9) {
-        state.phase = 'eutectic-hold';
-        state.T = Te;
-        state.holdClock = 0;
-        state.holdDur = kHold * clamp(preEutecticLiquidFractionAtTeMinus(), 0, 1);
-      }
-    } else if (state.phase === 'eutectic-hold') {
-      state.holdClock += dt;
-      state.T = Te;
-      if (state.holdClock >= state.holdDur || state.holdDur <= 1e-9) {
-        state.phase = 'two-phase';
-        state.T += dTmove;
-      }
-    } else if (state.phase === 'two-phase') {
-      state.T += dTmove;
-      if (state.T >= T_enter - 1e-9) {
-        state.phase = 'liquid';
-        state.T = Math.max(state.T, T_enter);
-      }
-    } else if (state.phase === 'liquid') {
-      state.T += dTmove;
-    } else {
-      if (state.T < Te) state.phase = 'solid';
-      else if (state.T === Te) state.phase = 'eutectic-hold';
-      else if (state.T < T_enter) state.phase = 'two-phase';
-      else state.phase = 'liquid';
-    }
-  }
-
-  // STOP automatico se esce dai limiti fissi del diagramma di fase
-  if (state.T < state.PD_Tmin_fixed - 1e-9 || state.T > state.PD_Tmax_fixed + 1e-9) {
-    state.running = false;
-    playPauseBtn.textContent = '▶︎ Avvia';
-  }
-
-  // Avanza tempo e registra traccia
-  state.t += dt;
-
-  const {fL, fS, xL} = fractionsAndLiquidX(
-    state.T, state.phase, side, x0, xe, state.holdClock, state.holdDur, dir
-  );
-  state.trace.push({t: state.t, T: state.T, fL, fS, xL});
-
-  // Aggiorna assi T(t)
-  state.t_max_axis = Math.max(state.t_max_axis, state.t * 1.1);
-  state.T_min_axis = Math.min(state.T_min_axis, state.T - 20);
-  state.T_max_axis = Math.max(state.T_max_axis, state.T + 20);
-
-  updateStats();
-}
-
-// --- Disegno diagramma di fase ---
-function drawAxesPhase() {
-  const W = phaseCanvas.width, H = phaseCanvas.height;
-  pc.clearRect(0, 0, W, H);
-
-  // area
-  const r = phaseRect();
-  pc.fillStyle = '#050816';
-  pc.fillRect(r.x, r.y, r.w, r.h);
-
-  // griglia
-  pc.strokeStyle = '#0f1c33';
-  pc.lineWidth = 1;
-  pc.beginPath();
-  for (let i=0; i<=10; i++) {
-    const xx = r.x + (i/10) * r.w;
-    pc.moveTo(xx, r.y); pc.lineTo(xx, r.y + r.h);
-  }
-  for (let i=0; i<=8; i++) {
-    const y = r.y + (i/8) * r.h;
-    pc.moveTo(r.x, y); pc.lineTo(r.x + r.w, y);
-  }
-  pc.stroke();
-
-  // assi
-  pc.strokeStyle = '#1f375f'; pc.lineWidth = 2;
-  pc.strokeRect(r.x, r.y, r.w, r.h);
-
-  // ticks x
-  pc.fillStyle = '#9ca3af'; pc.font = '12px system-ui';
-  for (let i=0; i<=10; i++) {
-    const x = i/10, X = r.x + x * r.w;
-    pc.beginPath(); pc.moveTo(X, r.y + r.h); pc.lineTo(X, r.y + r.h + 5);
-    pc.strokeStyle = '#224'; pc.stroke();
-    pc.fillText(x.toFixed(1), X - 8, r.y + r.h + 18);
-  }
-
-  // ticks T (usano limiti fissi)
-  const Tmin = state.PD_Tmin_fixed, Tmax = state.PD_Tmax_fixed;
-  for (let i=0; i<=8; i++) {
-    const frac = i/8;
-    const Ttick = lerp(Tmax, Tmin, frac);
-    const Y = r.y + frac * r.h;
-    pc.beginPath(); pc.moveTo(r.x - 5, Y); pc.lineTo(r.x, Y);
-    pc.strokeStyle = '#224'; pc.stroke();
-    pc.fillText(Math.round(Ttick)+'°C', r.x - 54, Y + 4);
-  }
-
-  // etichette
-  pc.fillStyle = '#e5e7eb'; pc.font = 'bold 13px system-ui';
-  pc.fillText('Composizione x (A→B)', r.x + r.w/2 - 70, r.y + r.h + 36);
-  pc.save(); pc.translate(r.x - 56, r.y + r.h/2); pc.rotate(-Math.PI/2);
-  pc.fillText('Temperatura (°C)', -56, 0); pc.restore();
-}
-function drawPhaseDiagram() {
-  const {xe, TmA, TmB, Te} = params();
-  // Liquidus
-  pc.strokeStyle = '#60a5fa'; pc.lineWidth = 3;
-  pc.beginPath();
-  pc.moveTo(toCanvasX(0), toCanvasYfromT(TmA));
-  pc.lineTo(toCanvasX(xe), toCanvasYfromT(Te)); pc.stroke();
-
-  pc.beginPath();
-  pc.moveTo(toCanvasX(xe), toCanvasYfromT(Te));
-  pc.lineTo(toCanvasX(1), toCanvasYfromT(TmB)); pc.stroke();
-
-  // Isoterma Te
-  pc.strokeStyle = '#14b8a6'; pc.setLineDash([6,4]); pc.lineWidth = 2;
-  pc.beginPath();
-  pc.moveTo(toCanvasX(0), toCanvasYfromT(Te));
-  pc.lineTo(toCanvasX(1), toCanvasYfromT(Te));
-  pc.stroke(); pc.setLineDash([]);
-
-  // Punto eutettico
-  pc.fillStyle = '#14b8a6';
-  pc.beginPath(); pc.arc(toCanvasX(xe), toCanvasYfromT(Te), 4, 0, 2*Math.PI); pc.fill();
-}
-function drawSystemState() {
-  const {x0, xe, Te} = params();
-  const side = enterSide(x0, xe);
-
-  // Linea x0
-  pc.strokeStyle = '#c084fc'; pc.lineWidth = 2; pc.setLineDash([3,3]);
-  pc.beginPath();
-  pc.moveTo(toCanvasX(x0), toCanvasYfromT(state.PD_Tmin_fixed));
-  pc.lineTo(toCanvasX(x0), toCanvasYfromT(state.PD_Tmax_fixed));
-  pc.stroke(); pc.setLineDash([]);
-
-  if (state.phase === 'liquid' || state.phase === 'solid') {
-    pc.fillStyle = (state.phase === 'liquid') ? '#f43f5e' : '#10b981';
-    pc.beginPath(); pc.arc(toCanvasX(x0), toCanvasYfromT(state.T), 5, 0, 2*Math.PI); pc.fill();
-  } else if (state.phase === 'two-phase') {
-    const yT = toCanvasYfromT(state.T);
-    let xS, xL;
-    if (side === 'left') { xS = 0; xL = xL_at_T(state.T, 'left'); }
-    else if (side === 'right') { xS = 1; xL = xL_at_T(state.T, 'right'); }
-    else { xS = (x0 < 0.5) ? 0 : 1; xL = xe; }
-    xL = clamp(xL, 0, 1);
-
-    // tie-line
-    pc.strokeStyle = '#a3e635'; pc.lineWidth = 2.5;
-    pc.beginPath(); pc.moveTo(toCanvasX(xS), yT); pc.lineTo(toCanvasX(xL), yT); pc.stroke();
-
-    // marker liquido
-    pc.fillStyle = '#f59e0b'; pc.beginPath(); pc.arc(toCanvasX(xL), yT, 5, 0, 2*Math.PI); pc.fill();
-
-    // stato complessivo
-    pc.fillStyle = '#f43f5e'; pc.beginPath(); pc.arc(toCanvasX(x0), yT, 4, 0, 2*Math.PI); pc.fill();
-  } else if (state.phase === 'eutectic-hold') {
-    const yT = toCanvasYfromT(Te);
-    const pulse = 0.5 + 0.5 * Math.sin(Date.now()/250);
-    const rad = 5 + 3*pulse;
-
-    // tie-line completa a Te
-    pc.strokeStyle = '#f59e0b'; pc.lineWidth = 3;
-    pc.beginPath(); pc.moveTo(toCanvasX(0), yT); pc.lineTo(toCanvasX(1), yT); pc.stroke();
-
-    // marker liquido a xe
-    pc.fillStyle = '#f59e0b'; pc.beginPath(); pc.arc(toCanvasX(xe), yT, rad, 0, 2*Math.PI); pc.fill();
-
-    // stato complessivo
-    pc.fillStyle = '#f43f5e'; pc.beginPath(); pc.arc(toCanvasX(x0), yT, 5, 0, 2*Math.PI); pc.fill();
-  }
-}
-
-// --- Curva T(t) ---
-function drawCoolingCurve() {
-  const W = coolingCanvas.width, H = coolingCanvas.height;
-  const pad = {left: 56, right: 18, top: 16, bottom: 32};
-  cc.clearRect(0, 0, W, H);
-
-  // area
-  cc.fillStyle = '#050816';
-  cc.fillRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-
-  // assi
-  cc.strokeStyle = '#1f375f'; cc.lineWidth = 2;
-  cc.strokeRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-
-  // scale
-  const tmax = Math.max(state.t_max_axis, state.t || 10);
-  const tmin = 0;
-  const Tmax = Math.max(state.T_max_axis, state.PD_Tmax_fixed);
-  const Tmin = Math.min(state.T_min_axis, state.PD_Tmin_fixed);
-
-  const toX = t => pad.left + (t - tmin) / (tmax - tmin) * (W - pad.left - pad.right);
-  const toY = T => {
-    const f = (T - Tmin) / (Tmax - Tmin);
-    return pad.top + (1 - f) * (H - pad.top - pad.bottom);
-  };
-
-  // griglia
-  cc.strokeStyle = '#0f1c33'; cc.lineWidth = 1; cc.beginPath();
-  const nX=10, nY=6;
-  for (let i=0;i<=nX;i++) { const x = pad.left + i/nX*(W-pad.left-pad.right); cc.moveTo(x,pad.top); cc.lineTo(x,H-pad.bottom); }
-  for (let i=0;i<=nY;i++) { const y = pad.top + i/nY*(H-pad.top-pad.bottom); cc.moveTo(pad.left,y); cc.lineTo(W-pad.right,y); }
-  cc.stroke();
-
-  // ticks
-  cc.fillStyle = '#9ca3af'; cc.font = '12px system-ui';
-  for (let i=0;i<=nX;i++) {
-    const tt = lerp(tmin,tmax,i/nX), X = toX(tt);
-    cc.beginPath(); cc.moveTo(X,H-pad.bottom); cc.lineTo(X,H-pad.bottom+5); cc.strokeStyle='#224'; cc.stroke();
-    cc.fillText(fmt(tt,1)+' s', X-16, H-pad.bottom+18);
-  }
-  for (let i=0;i<=nY;i++) {
-    const TT = lerp(Tmax,Tmin,i/nY), Y = toY(TT);
-    cc.beginPath(); cc.moveTo(pad.left-5,Y); cc.lineTo(pad.left,Y); cc.strokeStyle='#224'; cc.stroke();
-    cc.fillText(Math.round(TT)+'°C', pad.left-48, Y+4);
-  }
-
-  // curva T(t)
-  const tr = state.trace;
-  if (tr.length >= 2) {
-    cc.strokeStyle='#22d3ee'; cc.lineWidth=2.2; cc.beginPath();
-    cc.moveTo(toX(tr[0].t), toY(tr[0].T));
-    for (let i=1;i<tr.length;i++) cc.lineTo(toX(tr[i].t), toY(tr[i].T));
-    cc.stroke();
-  }
-
-  // plateau Te
-  const Te = +TeEl.value;
-  // evidenzia gli ultimi punti piatti a Te
-  let end = state.trace.length - 1, start = end;
-  while (start > 0 && Math.abs(state.trace[start]?.T - Te) < 1e-6) start--;
-  if (end > start + 1) {
-    cc.strokeStyle = '#f59e0b'; cc.lineWidth = 4; cc.beginPath();
-    cc.moveTo(toX(state.trace[start+1].t), toY(Te));
-    cc.lineTo(toX(state.trace[end].t), toY(Te));
-    cc.stroke();
-  }
-
-  // cursore
-  const Xc = toX(state.t), Yc = toY(state.T);
-  cc.fillStyle = '#e11d48'; cc.beginPath(); cc.arc(Xc, Yc, 3.5, 0, 2*Math.PI); cc.fill();
-
-  // labels
-  cc.fillStyle = '#e5e7eb'; cc.font = 'bold 13px system-ui';
-  cc.fillText('Tempo (s)', pad.left + (W-pad.left-pad.right)/2 - 32, H - 8);
-  cc.save(); cc.translate(14, pad.top + (H - pad.top - pad.bottom)/2); cc.rotate(-Math.PI/2);
-  cc.fillText('Temperatura (°C)', -56, 0); cc.restore();
-}
-
-// --- Frazioni fuso/solido nel tempo ---
-function drawFracCurve() {
-  const W = fracCanvas.width, H = fracCanvas.height;
-  const pad = {left: 56, right: 18, top: 16, bottom: 32};
-  fc.clearRect(0,0,W,H);
-  fc.fillStyle = '#050816';
-  fc.fillRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-  fc.strokeStyle = '#1f375f'; fc.lineWidth = 2;
-  fc.strokeRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-
-  const tmin = 0, tmax = Math.max(state.t_max_axis, state.t || 10);
-  const ymin = 0, ymax = 100;
-
-  const toX = t => pad.left + (t - tmin)/(tmax - tmin)*(W - pad.left - pad.right);
-  const toY = p => pad.top + (1 - (p - ymin)/(ymax - ymin))*(H - pad.top - pad.bottom);
-
-  // griglia
-  fc.strokeStyle = '#0f1c33'; fc.lineWidth=1; fc.beginPath();
-  const nX=10,nY=5;
-  for (let i=0;i<=nX;i++){ const x=pad.left+i/nX*(W-pad.left-pad.right); fc.moveTo(x,pad.top); fc.lineTo(x,H-pad.bottom); }
-  for (let i=0;i<=nY;i){ const y=pad.top+i/nY*(H-pad.top-pad.bottom); fc.moveTo(pad.left,y); fc.lineTo(W-pad.right,y); }
-  fc.stroke();
-
-  // ticks
-  fc.fillStyle = '#9ca3af'; fc.font='12px system-ui';
-  for (let i=0;i<=nX;i++){ const tt=lerp(tmin,tmax,i/nX), X=toX(tt);
-    fc.beginPath(); fc.moveTo(X,H-pad.bottom); fc.lineTo(X,H-pad.bottom+5); fc.strokeStyle='#224'; fc.stroke();
-    fc.fillText(fmt(tt,1), X-12, H-pad.bottom+18);
-  }
-  for (let i=0;i<=nY;i++){ const pp=lerp(ymax,ymin,i/nY), Y=toY(pp);
-    fc.beginPath(); fc.moveTo(pad.left-5,Y); fc.lineTo(pad.left,Y); fc.strokeStyle='#224'; fc.stroke();
-    fc.fillText(Math.round(pp)+'%', pad.left-36, Y+4);
-  }
-
-  const tr = state.trace;
-  // fuso (%)
-  fc.strokeStyle = '#f59e0b'; fc.lineWidth=2.2; fc.beginPath();
-  let started=false;
-  for (let i=0;i<tr.length;i++){
-    const t=tr[i].t, fL=tr[i].fL;
-    if (!Number.isFinite(fL)) { started=false; continue; }
-    const X=toX(t), Y=toY(100*fL);
-    if (!started){ fc.moveTo(X,Y); started=true; } else { fc.lineTo(X,Y); }
-  }
-  fc.stroke();
-
-  // solido (%)
-  fc.strokeStyle = '#10b981'; fc.lineWidth=2.2; fc.beginPath();
-  started=false;
-  for (let i=0;i<tr.length;i++){
-    const t=tr[i].t, fS=tr[i].fS;
-    if (!Number.isFinite(fS)) { started=false; continue; }
-    const X=toX(t), Y=toY(100*fS);
-    if (!started){ fc.moveTo(X,Y); started=true; } else { fc.lineTo(X,Y); }
-  }
-  fc.stroke();
-
-  // labels
-  fc.fillStyle = '#e5e7eb'; fc.font='bold 13px system-ui';
-  fc.fillText('Tempo (s)', pad.left + (W-pad.left-pad.right)/2 - 32, H - 8);
-  fc.save(); fc.translate(14, pad.top + (H - pad.top - pad.bottom)/2); fc.rotate(-Math.PI/2);
-  fc.fillText('Percentuale (%)', -56, 0); fc.restore();
-}
-
-// --- Composizione del fuso nel tempo ---
-function drawCompCurve() {
-  const {nameA, nameB} = params();
-  // aggiorna legenda con nomi
-  const compLegend = document.getElementById('compLegend');
-  if (compLegend) compLegend.innerHTML = `
-    <span><span class="sw" style="background:#4ade80"></span> %${nameA} (x=0)</span>
-    <span><span class="sw" style="background:#fb7185"></span> %${nameB} (x=1)</span>
-  `;
-
-  const W = compCanvas.width, H = compCanvas.height;
-  const pad = {left: 56, right: 18, top: 16, bottom: 32};
-  kc.clearRect(0,0,W,H);
-  kc.fillStyle = '#050816';
-  kc.fillRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-  kc.strokeStyle = '#1f375f'; kc.lineWidth = 2;
-  kc.strokeRect(pad.left, pad.top, W - pad.left - pad.right, H - pad.top - pad.bottom);
-
-  const tmin=0, tmax=Math.max(state.t_max_axis, state.t || 10);
-  const ymin=0, ymax=100;
-  const toX = t => pad.left + (t - tmin)/(tmax - tmin)*(W - pad.left - pad.right);
-  const toY = p => pad.top + (1 - (p - ymin)/(ymax - ymin))*(H - pad.top - pad.bottom);
-
-  // griglia
-  kc.strokeStyle='#0f1c33'; kc.lineWidth=1; kc.beginPath();
-  const nX=10,nY=5;
-  for (let i=0;i<=nX;i++){ const x=pad.left+i/nX*(W-pad.left-pad.right); kc.moveTo(x,pad.top); kc.lineTo(x,H-pad.bottom); }
-  for (let i=0;i<=nY;i++){ const y=pad.top+i/nY*(H-pad.top-pad.bottom); kc.moveTo(pad.left,y); kc.lineTo(W-pad.right,y); }
-  kc.stroke();
-
-  // ticks
-  kc.fillStyle='#9ca3af'; kc.font='12px system-ui';
-  for (let i=0;i<=nX;i++){ const tt=lerp(tmin,tmax,i/nX), X=toX(tt);
-    kc.beginPath(); kc.moveTo(X,H-pad.bottom); kc.lineTo(X,H-pad.bottom+5); kc.strokeStyle='#224'; kc.stroke();
-    kc.fillText(fmt(tt,1), X-12, H-pad.bottom+18);
-  }
-  for (let i=0;i<=nY;i++){ const pp=lerp(ymax,ymin,i/nY), Y=toY(pp);
-    kc.beginPath(); kc.moveTo(pad.left-5,Y); kc.lineTo(pad.left,Y); kc.strokeStyle='#224'; kc.stroke();
-    kc.fillText(Math.round(pp)+'%', pad.left-36, Y+4);
-  }
-
-  // %B = 100*xL ; %A = 100*(1-xL). Se xL è NaN (niente liquido), si lasciano gap.
-  const tr = state.trace;
-
-  // %A
-  kc.strokeStyle = '#4ade80'; kc.lineWidth=2.2; kc.beginPath();
-  let started=false;
-  for (let i=0;i<tr.length;i++){
-    const t=tr[i].t, xL=tr[i].xL;
-    if (!Number.isFinite(xL)) { started=false; continue; }
-    const XA=toX(t), YA=toY(100*(1 - xL));
-    if (!started){ kc.moveTo(XA,YA); started=true; } else { kc.lineTo(XA,YA); }
-  }
-  kc.stroke();
-
-  // %B
-  kc.strokeStyle = '#fb7185'; kc.lineWidth=2.2; kc.beginPath();
-  started=false;
-  for (let i=0;i<tr.length;i++){
-    const t=tr[i].t, xL=tr[i].xL;
-    if (!Number.isFinite(xL)) { started=false; continue; }
-    const XB=toX(t), YB=toY(100*(xL));
-    if (!started){ kc.moveTo(XB,YB); started=true; } else { kc.lineTo(XB,YB); }
-  }
-  kc.stroke();
-
-  // labels
-  kc.fillStyle='#e5e7eb'; kc.font='bold 13px system-ui';
-  kc.fillText('Tempo (s)', pad.left + (W-pad.left-pad.right)/2 - 32, H - 8);
-  kc.save(); kc.translate(14, pad.top + (H - pad.top - pad.bottom)/2); kc.rotate(-Math.PI/2);
-  kc.fillText('Percentuale nel liquido (%)', -80, 0); kc.restore();
-}
-
-// --- Statistiche ---
-function updateStats() {
-  const {dir, x0, xe, Te, nameA, nameB} = params();
-  const side = enterSide(x0, xe);
-  const Tli = T_liquidus_at_x(x0);
-
-  let phaseDesc = '';
-  if (state.phase === 'liquid') phaseDesc = 'Liquido';
-  else if (state.phase === 'two-phase') phaseDesc = (side === 'left' ? `Liquido + Solido ${nameA} (primario)` :
-                         (side === 'right' ? `Liquido + Solido ${nameB} (primario)` : 'Liquido + Solido'));
-  else if (state.phase === 'eutectic-hold') phaseDesc = 'Arresto eutettico (isoterma)';
-  else if (state.phase === 'solid') phaseDesc = 'Solido';
-  else phaseDesc = state.phase;
-
-  // estrai ultimo fL, fS, xL
-  const last = state.trace[state.trace.length - 1] || {};
-  const fL = last?.fL, fS = last?.fS, xL = last?.xL;
-
-  statsEl.innerHTML = `
-    <div><b>Direzione:</b> ${dir === 'cooling' ? 'Cristallizzazione (raffreddamento)' : 'Fusione (riscaldamento)'}
-    &nbsp; | &nbsp; <b>Fase:</b> ${phaseDesc}</div>
-    <div><b>t</b> = ${fmt(state.t,2)} s &nbsp; | &nbsp; <b>T</b> = ${fmt(state.T,1)} °C
-    &nbsp; | &nbsp; <b>T<sub>liq</sub>(x<sub>0</sub>)</b> ≈ ${fmt(Tli,1)} °C
-    &nbsp; | &nbsp; <b>T<sub>E</sub></b> = ${Te} °C</div>
-    <div><b>x<sub>0</sub></b> = ${fmt(x0,3)} &nbsp; | &nbsp; <b>x<sub>E</sub></b> = ${fmt(xe,3)}
-    ${Number.isFinite(fL) ? `&nbsp; | &nbsp; <b>f<sub>L</sub></b> ≈ ${fmt(100*fL,1)}% &nbsp; <b>f<sub>S</sub></b> ≈ ${fmt(100*fS,1)}%` : ''}
-    ${Number.isFinite(xL) ? `&nbsp; | &nbsp; <b>x<sub>L</sub></b> ≈ ${fmt(xL,3)} &nbsp; (<b>%${nameB}</b>≈${fmt(100*xL,1)}%, <b>%${nameA}</b>≈${fmt(100*(1-xL),1)}%)` : ''}
-    ${state.phase==='eutectic-hold' ? `&nbsp; | &nbsp; <b>arresto:</b> ${fmt(state.holdClock,2)} / ${fmt(state.holdDur,2)} s` : '' }
-    </div>
-    <div style="color:${(state.T<state.PD_Tmin_fixed || state.T>state.PD_Tmax_fixed)?'#fca5a5':'#9ca3af'}">
-      Limiti diagramma di fase: [${Math.round(state.PD_Tmin_fixed)}; ${Math.round(state.PD_Tmax_fixed)}] °C
-      ${(!state.running && (state.T<state.PD_Tmin_fixed || state.T>state.PD_Tmax_fixed)) ? ' — Animazione in pausa (T fuori range).' : ''}
-    </div>
-  `;
-}
-
-// --- Disegno principali ---
-function drawAll() {
-  drawAxesPhase();
-  drawPhaseDiagram();
-  drawSystemState();
-  drawCoolingCurve();
-  drawFracCurve();
-  drawCompCurve();
-}
-
-// --- Loop animazione ---
-let lastTS = null;
-function tick(ts) {
-  if (lastTS === null) lastTS = ts;
-  const dt = Math.min(0.05, (ts - lastTS) / 1000);
-  lastTS = ts;
-
-  if (state.running) simStep(dt);
-  drawAll();
-  requestAnimationFrame(tick);
-}
-
-// --- Eventi UI ---
-playPauseBtn.addEventListener('click', startStop);
-stepBtn.addEventListener('click', stepOnce);
-resetBtn.addEventListener('click', resetSim);
-
-presetBtn.addEventListener('click', () => {
-  // Preset dimostrativo (non rigoroso)
-  x0El.value = 0.35;
-  xeEl.value = 0.44;
-  TmAEl.value = 1505;
-  TeEl.value  = 1250;
-  TmBEl.value = 1430;
-  rateEl.value = 10;
-  kHoldEl.value = 6;
-  directionEl.value = 'cooling';
-  nameAEl.value = 'Diopside';
-  nameBEl.value = 'Anortite';
-  resetSim();
-});
-
-// Reimposta su cambio parametri principali
-[
-  directionEl,x0El,xeEl,TmAEl,TeEl,TmBEl,rateEl,kHoldEl,nameAEl,nameBEl
-].forEach(inp => inp.addEventListener('change', resetSim));
-
-// Avvio
-resetSim();
-requestAnimationFrame(tick);
+  dom.pauseBtn.addEventListener('click', ()=>{
+    state.paused = !state.paused;
+    dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
+  });
+  dom.resetBtn.addEventListener('click', ()=>{
+    state.running = false; state.paused = false; dom.pauseBtn.disabled = true; dom.pauseBtn.textContent = 'Pausa';
+    resetSimulation();
+  });
+  window.addEventListener('resize', ()=>{ repaintAll(); });
+
+  // ---------- Init ----------
+  resetSimulation();
+  requestAnimationFrame(animate);
+})();
 </script>
 </body>
 </html>
