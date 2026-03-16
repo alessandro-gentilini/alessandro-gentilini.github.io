@@ -3,124 +3,69 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=1900, initial-scale=1" />
-<title>Animazione Eutettico Binario — Layout fisso 1900×1000 (tempo fisso + colori)</title>
+<title>Eutettico Binario — 1900×1000 (tempo fisso, margini ±10%, colori A/B/L)</title>
 <style>
   :root{
     --bg:#0f1116; --panel:#141822; --ink:#e8ecf1; --muted:#9aa4b2;
     --accent:#4bb3fd; --accent2:#ff7a59;
-    /* ✅ Colori richiesti: A=nero, B=bianco, L=blu */
-    --solidA:#000000;  /* Nero */
-    --solidB:#ffffff;  /* Bianco */
-    --liquid:#1e6fff;  /* Blu */
+    /* Colori fasi come richiesto */
+    --solidA:#000000;  /* Nero (A) */
+    --solidB:#ffffff;  /* Bianco (B) */
+    --liquid:#1e6fff;  /* Blu (L) */
     --grid:#21273a; --warn:#f1c40f;
   }
   *{box-sizing:border-box}
-  html,body{
-    margin:0; padding:0; background:var(--bg); color:var(--ink);
-    overflow:hidden; font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  }
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); overflow:hidden; font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
 
   /* === FRAME FISSO 1900x1000 === */
-  #frame{
-    width:1900px; height:1000px; margin:0 auto; padding:6px;
-    display:grid; grid-template-rows: 100px 890px; gap:10px;
-  }
+  #frame{ width:1900px; height:1000px; margin:0 auto; padding:6px; display:grid; grid-template-rows: 100px 890px; gap:10px; }
 
   /* === HEADER 100px === */
   header{
-    height:100px;
-    display:grid; grid-template-columns: 1fr 260px; gap:10px; align-items:center;
+    height:100px; display:grid; grid-template-columns: 1fr 260px; gap:10px; align-items:center;
     background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:8px;
   }
   .controls{ display:flex; align-items:flex-start; gap:10px 12px; flex-wrap:wrap; overflow:hidden; }
   .ctrl{ display:grid; gap:2px; align-items:center; }
   .ctrl label{ font-size:12px; color:var(--muted); line-height:1; white-space:nowrap; }
   .ctrl input[type="number"], .ctrl input[type="range"]{
-    background:#0d111a; color:var(--ink); border:1px solid var(--grid);
-    padding:3px 6px; border-radius:6px; width:86px; font-size:12px; height:24px;
+    background:#0d111a; color:var(--ink); border:1px solid var(--grid); padding:3px 6px; border-radius:6px; width:86px; font-size:12px; height:24px;
   }
   .ctrl input[type="range"]{ width:140px; height:20px; }
   .mini{ font-size:12px; color:#cfd6e0; }
-
   .buttons{ display:flex; gap:8px; justify-content:flex-end; }
-  button{
-    background:var(--accent); color:#081018; border:none; padding:6px 10px; border-radius:7px;
-    font-weight:600; cursor:pointer; font-size:13px; height:28px;
-  }
+  button{ background:var(--accent); color:#081018; border:none; padding:6px 10px; border-radius:7px; font-weight:600; cursor:pointer; font-size:13px; height:28px; }
   button.secondary{ background:#2d3446; color:var(--ink); }
   button:disabled{ opacity:.6; cursor:not-allowed; }
 
   /* === MAIN 890px === */
-  #main{
-    height:890px; display:grid; grid-template-columns: 1120px 760px; gap:20px;
-  }
-  .panel{
-    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px; overflow:hidden;
-    display:flex; flex-direction:column;
-  }
+  #main{ height:890px; display:grid; grid-template-columns: 1120px 760px; gap:20px; }
+  .panel{ background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px; overflow:hidden; display:flex; flex-direction:column; }
   .panel h3{ margin:0 0 4px 0; font-size:13px; font-weight:600; color:var(--muted); line-height:1.1; }
   .legend{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--muted); margin:0 2px 4px; }
   .key{ display:inline-flex; align-items:center; gap:6px; }
   .sw{ width:12px; height:10px; border-radius:2px; display:inline-block; }
-
-  /* Colonna sinistra: 560px + 300px (con 10px di gap) */
   .left{ display:grid; grid-template-rows: 560px 10px 300px; }
-  .spacer{ height:10px; }
-
-  /* Colonna destra: 3 pannelli da 280px separati da 10px */
   .right{ display:grid; grid-template-rows: 280px 10px 280px 10px 280px; }
-
-  /* Canvas: riempiono lo spazio utile sotto titolo/legenda */
+  .spacer{ height:10px; }
   .canvas-wrap{ flex:1 1 auto; min-height:0; }
   canvas{ width:100%; height:100%; display:block; background:#0b0f17; border-radius:6px; }
-
-  footer{
-    position:absolute; bottom:6px; right:12px; font-size:11px; color:var(--muted);
-    pointer-events:none;
-  }
+  footer{ position:absolute; bottom:6px; right:12px; font-size:11px; color:var(--muted); pointer-events:none; }
 </style>
 </head>
 <body>
 <div id="frame">
   <header>
     <div class="controls">
-      <div class="ctrl">
-        <label for="x0">x₀ (frazione B)</label>
-        <input type="range" id="x0" min="0" max="1" step="0.01" value="0.30">
-        <span id="x0val" class="mini">0.30</span>
-      </div>
-      <div class="ctrl">
-        <label for="TE">T_E [°C]</label>
-        <input type="number" id="TE" value="1270" step="1">
-      </div>
-      <div class="ctrl">
-        <label for="TA">T_A @ x=0 [°C]</label>
-        <input type="number" id="TA" value="1550" step="1">
-      </div>
-      <div class="ctrl">
-        <label for="TB">T_B @ x=1 [°C]</label>
-        <input type="number" id="TB" value="1390" step="1">
-      </div>
-      <div class="ctrl">
-        <label for="xE">x_E</label>
-        <input type="number" id="xE" value="0.40" step="0.01" min="0.05" max="0.95">
-      </div>
-      <div class="ctrl">
-        <label for="Tmin">T_min [°C]</label>
-        <input type="number" id="Tmin" value="1100" step="1">
-      </div>
-      <div class="ctrl">
-        <label for="Tmax">T_max [°C]</label>
-        <input type="number" id="Tmax" value="1600" step="1">
-      </div>
-      <div class="ctrl">
-        <label for="cooling">Raffredd. [K/s]</label>
-        <input type="number" id="cooling" value="3" step="0.1" min="0.1">
-      </div>
-      <div class="ctrl">
-        <label for="keu">k_eutettico [1/s]</label>
-        <input type="number" id="keu" value="0.25" step="0.05" min="0.05">
-      </div>
+      <div class="ctrl"><label for="x0">x₀ (frazione B)</label><input type="range" id="x0" min="0" max="1" step="0.01" value="0.30"><span id="x0val" class="mini">0.30</span></div>
+      <div class="ctrl"><label for="TE">T_E [°C]</label><input type="number" id="TE" value="1270" step="1"></div>
+      <div class="ctrl"><label for="TA">T_A @ x=0 [°C]</label><input type="number" id="TA" value="1550" step="1"></div>
+      <div class="ctrl"><label for="TB">T_B @ x=1 [°C]</label><input type="number" id="TB" value="1390" step="1"></div>
+      <div class="ctrl"><label for="xE">x_E</label><input type="number" id="xE" value="0.40" step="0.01" min="0.05" max="0.95"></div>
+      <div class="ctrl"><label for="Tmin">T_min [°C]</label><input type="number" id="Tmin" value="1100" step="1"></div>
+      <div class="ctrl"><label for="Tmax">T_max [°C]</label><input type="number" id="Tmax" value="1600" step="1"></div>
+      <div class="ctrl"><label for="cooling">Raffredd. [K/s]</label><input type="number" id="cooling" value="3" step="0.1" min="0.1"></div>
+      <div class="ctrl"><label for="keu">k_eutettico [1/s]</label><input type="number" id="keu" value="0.25" step="0.05" min="0.05"></div>
     </div>
     <div class="buttons">
       <button id="startBtn">Avvia</button>
@@ -130,9 +75,9 @@
   </header>
 
   <div id="main">
-    <!-- COLONNA SINISTRA -->
+    <!-- Sinistra -->
     <div class="left">
-      <div class="panel" id="phasePanel">
+      <div class="panel">
         <h3>Diagramma di fase (isobaro) — binario eutettico</h3>
         <div class="legend">
           <span class="key"><span class="sw" style="background:var(--accent)"></span>Liquidus</span>
@@ -144,13 +89,12 @@
         <div class="canvas-wrap"><canvas id="phaseCanvas"></canvas></div>
       </div>
       <div class="spacer"></div>
-      <div class="panel" id="microPanel">
+      <div class="panel">
         <h3>Microstruttura (tessellazione: fuso + cristalli A/B)</h3>
         <div class="canvas-wrap"><canvas id="microCanvas"></canvas></div>
       </div>
     </div>
-
-    <!-- COLONNA DESTRA -->
+    <!-- Destra -->
     <div class="right">
       <div class="panel">
         <h3>Temperatura vs tempo</h3>
@@ -170,14 +114,13 @@
   </div>
 </div>
 
-<footer>Layout fisso 1900×1000. Tempo asse X fisso pre-calcolato. A=nero, B=bianco, L=blu.</footer>
+<footer>Asse tempo fisso; partenza a +10% sopra liquidus(x₀); stop a −10% sotto solidus (=T_E). A=nero, B=bianco, L=blu.</footer>
 
 <script>
 (function(){
   // ---------- Utility ----------
   const clamp = (v,min,max)=>Math.max(min,Math.min(max,v));
   const lerp = (a,b,t)=>a+(b-a)*t;
-
   function setCanvasSizeToCSS(canvas){
     const rect = canvas.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
@@ -187,7 +130,6 @@
     ctx.setTransform(dpr,0,0,dpr,0,0);
     return ctx;
   }
-
   function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}){
     const { margin={l:46,b:34,r:8,t:8}, gridColor='#1f2434', textColor='#9aa4b2' } = options;
     const { width, height } = rect;
@@ -231,27 +173,22 @@
     const yScale = v => y0 - (v-yMin)/(yMax-yMin)*(y0-y1);
     return {x0,y0,x1,y1,xScale,yScale};
   }
-
   function drawLine(ctx, xs, ys, xScale, yScale, color, width){
-    ctx.save();
-    ctx.strokeStyle=color; ctx.lineWidth=width||2; ctx.beginPath();
+    ctx.save(); ctx.strokeStyle=color; ctx.lineWidth=width||2; ctx.beginPath();
     let started=false;
     for(let i=0;i<xs.length;i++){
-      const y=ys[i];
-      if(!isFinite(y)){ started=false; continue; }
+      const y=ys[i]; if(!isFinite(y)){ started=false; continue; }
       const x=xs[i]; const px=xScale(x), py=yScale(y);
       if(!started){ ctx.moveTo(px,py); started=true; } else { ctx.lineTo(px,py); }
     }
     ctx.stroke(); ctx.restore();
   }
-
   function circle(ctx,x,y,r,color){ ctx.save(); ctx.fillStyle=color; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); ctx.restore(); }
   function css(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
 
   // ---------- DOM ----------
   const dom = {
-    x0: gid('x0'), x0val: gid('x0val'),
-    TE:gid('TE'), TA:gid('TA'), TB:gid('TB'), xE:gid('xE'),
+    x0: gid('x0'), x0val: gid('x0val'), TE:gid('TE'), TA:gid('TA'), TB:gid('TB'), xE:gid('xE'),
     Tmin:gid('Tmin'), Tmax:gid('Tmax'), cooling:gid('cooling'), keu:gid('keu'),
     startBtn:gid('startBtn'), pauseBtn:gid('pauseBtn'), resetBtn:gid('resetBtn'),
     phaseCanvas:gid('phaseCanvas'), microCanvas:gid('microCanvas'),
@@ -268,7 +205,9 @@
     fL:1, fA:0, fB:0, xL:0.30, T_liq_x0:null, branch:'left',
     micro:{ grid:[], cols:0, rows:0, cellSize:8 },
     series:{ t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] },
-    tTotal: 60  // verrà ricalcolato al reset
+    tTotal: 60,   // fisso per asse X, calcolato al reset
+    Tstart: 0,    // T di partenza (10% sopra liquidus)
+    Tstop: 0      // T di stop (10% sotto solidus)
   };
 
   // ---------- Parametri / reset ----------
@@ -287,32 +226,41 @@
 
   function resetSimulation(){
     readParams();
-    state.t=0;
-    state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
+    state.t=0; state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
     state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0; state.stage='liquid';
 
     const Tliq0 = liquidusTempAtX(state.x0);
-    const Tstart = Math.min(state.Tmax-5, Math.max(Tliq0+40, state.Tmin+20));
-    state.T = Tstart; state.T_liq_x0 = Tliq0;
+    // ΔT per “±10%” dell’asse verticale
+    const dT10 = 0.10 * (state.Tmax - state.Tmin);
+
+    // ✅ Partenza a 10% sopra la liquidus(x0), clamp a Tmax-1
+    state.Tstart = Math.min(state.Tmax - 1, Tliq0 + dT10);
+    // ✅ Stop a 10% sotto solidus (qui solidus = T_E), clamp a Tmin+1
+    const Tsolidus = solidusTempAtX(state.x0); // nel nostro modello = TE
+    state.Tstop = Math.max(state.Tmin + 1, Tsolidus - dT10);
+
+    // Inizializza T
+    state.T = state.Tstart;
+    state.T_liq_x0 = Tliq0;
     state.branch = (state.x0 < state.xE) ? 'left' : (state.x0 > state.xE ? 'right' : 'eutectic');
 
-    // ✅ Calcolo del tempo totale (scala tempo fissa)
-    // 1) tempo in liquido fino alla liquidus (o TE se x0==xE)
+    // ---- Asse tempo fisso: calcolo tTotal ----
+    // 1) tempo liquido fino a (liquidus o TE se x0==xE)
     const T_liq_entry = (state.branch==='eutectic') ? state.TE : Tliq0;
-    const t_liq = Math.max(0, (Tstart - T_liq_entry) / state.coolRate);
+    const t_liq = Math.max(0, (state.Tstart - T_liq_entry) / state.coolRate);
 
-    // 2) tempo in primario fino a TE (zero se x0==xE)
+    // 2) tempo primario fino a TE
     const t_primary = (state.branch==='eutectic') ? 0 : Math.max(0, (T_liq_entry - state.TE) / state.coolRate);
 
-    // 3) tempo eutettico plateau: fL(TE)/kEut
+    // 3) tempo eutettico plateau
     let fL_at_TE = 0;
     if (state.x0 < state.xE) fL_at_TE = clamp(state.x0 / state.xE, 0, 1);
     else if (state.x0 > state.xE) fL_at_TE = clamp((1 - state.x0) / (1 - state.xE), 0, 1);
     else fL_at_TE = 1;
     const t_eut = fL_at_TE / state.kEut;
 
-    // 4) tempo tutto solido fino a Tmin
-    const t_solid = Math.max(0, (state.TE - state.Tmin) / state.coolRate);
+    // 4) tempo tutto solido fino a Tstop (non fino a Tmin)
+    const t_solid = Math.max(0, (state.TE - state.Tstop) / state.coolRate);
 
     state.tTotal = t_liq + t_primary + t_eut + t_solid;
 
@@ -320,12 +268,15 @@
     repaintAll();
   }
 
-  // ---------- Modello (liquidus lineari) ----------
+  // ---------- Modello (liquidus lineari + solidus) ----------
   function liquidusTempAtX(x){
     x = clamp(x,0,1);
     if(x<=state.xE){ const t=x/state.xE; return lerp(state.TA,state.TE,t); }
     const t=(x-state.xE)/(1-state.xE); return lerp(state.TE,state.TB,t);
   }
+  // Per il semplice eutettico (senza soluzione solida), solidus = TE ovunque
+  function solidusTempAtX(_x){ return state.TE; }
+
   function liquidusXAtT_left(T){ return clamp( state.xE*(state.TA-T)/(state.TA-state.TE), 0, state.xE ); }
   function liquidusXAtT_right(T){ return clamp( 1 - (1-state.xE)*(state.TB-T)/(state.TB-state.TE), state.xE, 1 ); }
 
@@ -378,10 +329,10 @@
   // ---------- Simulazione ----------
   function pushSeries(){
     const s=state.series;
-    if(s.t.length>3000){ s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift(); }
+    // ❌ NIENTE più shift/decimazione: conserviamo tutta la storia
     s.t.push(state.t); s.T.push(state.T);
-    s.xL.push(state.fL>0 ? state.xL : NaN);
-    s.xA.push(0); s.xB.push(1);
+    s.xL.push(state.fL>0 ? state.xL : NaN); // fuso: NaN dopo completa solidificazione
+    s.xA.push(0); s.xB.push(1);             // riferimenti composizione solidi
     s.fL.push(state.fL); s.fA.push(state.fA); s.fB.push(state.fB);
   }
 
@@ -390,10 +341,9 @@
     const dt = Math.min(state.dtMax, dtReal);
     state.t += dt;
 
-    // stop limiti asse verticale
+    // Stop per uscita dai limiti asse T (requisito originale)
     if(state.T <= state.Tmin || state.T >= state.Tmax){
-      state.running=false; state.stage='stopped';
-      controlButtons(); return;
+      state.running=false; state.stage='stopped'; controlButtons(); return;
     }
 
     if(state.stage==='liquid'){
@@ -417,7 +367,7 @@
       if(state.T <= state.TE + 1e-6){ state.T=state.TE; state.stage='eutectic'; }
     }
     else if(state.stage==='eutectic'){
-      state.T = state.TE;
+      state.T = state.TE; // plateau isoterma
       if(state.fL>0){
         const dL = Math.min(state.fL, state.kEut*dt);
         state.fL -= dL;
@@ -431,6 +381,10 @@
     else if(state.stage==='solid'){
       state.fL=0;
       state.T -= state.coolRate*dt;
+      // ✅ Stop a 10% sotto la solidus (Tstop)
+      if(state.T <= state.Tstop){
+        state.running=false; state.stage='stopped'; controlButtons(); // fine simulazione
+      }
     }
 
     pushSeries();
@@ -445,18 +399,22 @@
     const rect=dom.phaseCanvas.getBoundingClientRect();
     const ax = drawAxes(ctx,{width:rect.width,height:rect.height}, 0,1, state.Tmin,state.Tmax, 'x_B','T [°C]');
     const {xScale,yScale} = ax;
-    // Liquidus
+
+    // Liquidus (segmenti di retta)
     ctx.lineWidth=2; ctx.strokeStyle=css('--accent'); ctx.beginPath();
     ctx.moveTo(xScale(0), yScale(state.TA));
     ctx.lineTo(xScale(state.xE), yScale(state.TE));
     ctx.lineTo(xScale(1), yScale(state.TB));
     ctx.stroke();
-    // Eutettico
+
+    // Eutettico / solidus
     circle(ctx, xScale(state.xE), yScale(state.TE), 3, '#ffd166');
+
     // Verticale x0
     ctx.strokeStyle='#3a3f55'; ctx.setLineDash([6,4]); ctx.beginPath();
     ctx.moveTo(xScale(state.x0), yScale(state.Tmin)); ctx.lineTo(xScale(state.x0), yScale(state.Tmax)); ctx.stroke(); ctx.setLineDash([]);
-    // Tieline e stato
+
+    // Tieline + Stato
     const warn = css('--warn');
     if(state.stage==='primary' || state.stage==='eutectic'){
       const Tnow=state.T;
@@ -485,13 +443,14 @@
     ctx.strokeStyle='#1d2232'; ctx.lineWidth=1.4; ctx.strokeRect(0.5,0.5,r.width-1,r.height-1);
   }
 
-  // ✅ Grafici con asse tempo fisso [0, tTotal]
+  // --- Grafici con asse tempo fisso [0, tTotal] ---
   function drawTemp(){
     const ctx=setCanvasSizeToCSS(dom.tempCanvas);
     const rect=dom.tempCanvas.getBoundingClientRect();
     const s=state.series; const tMax=state.tTotal;
     const ax=drawAxes(ctx,{width:rect.width,height:rect.height}, 0,tMax, state.Tmin,state.Tmax, 'Tempo [s]','T [°C]');
     drawLine(ctx, s.t, s.T, ax.xScale, ax.yScale, css('--accent2'), 2);
+    // Linea TE
     ctx.setLineDash([4,4]); ctx.strokeStyle='#6b7280';
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.TE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.TE)); ctx.stroke(); ctx.setLineDash([]);
   }
@@ -507,7 +466,7 @@
     ctx.strokeStyle=css('--solidA'); ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(0)); ctx.stroke();
     ctx.strokeStyle=css('--solidB'); ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(1)); ctx.lineTo(ax.xScale(tMax), ax.yScale(1)); ctx.stroke();
     ctx.setLineDash([]);
-    // Linee ausiliarie x_E e x0
+    // x_E e x0
     ctx.setLineDash([2,4]); ctx.strokeStyle='#8b94a7';
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.xE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.xE)); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.x0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.x0)); ctx.stroke();
@@ -538,15 +497,12 @@
     dom.pauseBtn.disabled = !state.running || state.stage==='stopped';
     dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
   }
-
   dom.x0.addEventListener('input', ()=>{ dom.x0val.textContent = Number(dom.x0.value).toFixed(2); });
   dom.startBtn.addEventListener('click', ()=>{
     if(!state.running || state.stage==='stopped'){ resetSimulation(); }
     state.running=true; state.paused=false; controlButtons();
   });
-  dom.pauseBtn.addEventListener('click', ()=>{
-    state.paused=!state.paused; controlButtons();
-  });
+  dom.pauseBtn.addEventListener('click', ()=>{ state.paused=!state.paused; controlButtons(); });
   dom.resetBtn.addEventListener('click', ()=>{
     state.running=false; state.paused=false; state.stage='liquid'; controlButtons(); resetSimulation();
   });
@@ -554,8 +510,6 @@
   // ---------- Init ----------
   resetSimulation();
   requestAnimationFrame(animate);
-
-  // Ridisegna i canvas in caso di zoom o DPI change
   window.addEventListener('resize', repaintAll);
 })();
 </script>
