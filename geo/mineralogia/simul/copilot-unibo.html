@@ -2,87 +2,64 @@
 <html lang="it">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Animazione Eutettico Binario (HTML5)</title>
+<meta name="viewport" content="width=1900, initial-scale=1" />
+<title>Animazione Eutettico Binario (1900×1000)</title>
 <style>
-  :root {
-    --bg: #0f1116;
-    --panel: #141822;
-    --ink: #e8ecf1;
-    --muted: #9aa4b2;
-    --accent: #4bb3fd;
-    --accent2: #ff7a59;
-    --good: #2ecc71;
-    --warn: #f1c40f;
-    --bad: #e74c3c;
-    --solidA: #6fcf97; /* solido A (component A) */
-    --solidB: #56ccf2; /* solido B (component B) */
-    --liquid: #c77dff; /* fuso */
-    --grid: #21273a;
+  :root{
+    --bg:#0f1116; --panel:#141822; --ink:#e8ecf1; --muted:#9aa4b2;
+    --accent:#4bb3fd; --accent2:#ff7a59; --solidA:#6fcf97; --solidB:#56ccf2; --liquid:#c77dff;
+    --grid:#21273a; --warn:#f1c40f;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; background: var(--bg); color: var(--ink); font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-  #app { display: grid; grid-template-rows: auto 1fr; width: 100vw; height: 100vh; }
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-    padding: 10px 14px;
-    background: var(--panel);
-    border-bottom: 1px solid var(--grid);
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); overflow:hidden; font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  /* Contenitore fisso 1900x1000 */
+  #frame{
+    width:1900px; height:1000px; margin:0 auto; background:var(--bg); overflow:hidden;
+    display:grid; grid-template-rows: auto 1fr; gap:8px; padding:6px 6px 0 6px;
   }
-  .controls {
-    display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px;
+  header{
+    display:grid; grid-template-columns: 1fr auto; gap:8px; align-items:center;
+    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px 8px;
   }
-  .controls .ctrl {
-    display: grid; gap: 2px; align-items: center;
+  .controls{ display:flex; align-items:center; gap:10px 12px; flex-wrap:wrap; }
+  .ctrl{ display:grid; gap:2px; align-items:center; }
+  .ctrl label{ font-size:12px; color:var(--muted); line-height:1; }
+  .ctrl input[type="number"], .ctrl input[type="range"]{
+    background:#0d111a; color:var(--ink); border:1px solid var(--grid);
+    padding:3px 6px; border-radius:6px; width:84px; font-size:12px; height:24px;
   }
-  .ctrl label { font-size: 12px; color: var(--muted); }
-  .ctrl input[type="number"], .ctrl input[type="range"] {
-    background: #0d111a; color: var(--ink); border: 1px solid var(--grid);
-    padding: 4px 6px; border-radius: 6px; width: 90px;
+  .ctrl input[type="range"]{ width:140px; height:20px; }
+  .mini{ font-size:12px; color:#cfd6e0; }
+  .buttons{ display:flex; gap:8px; }
+  button{ background:var(--accent); color:#081018; border:none; padding:6px 10px; border-radius:7px; font-weight:600; cursor:pointer; font-size:13px; height:28px; }
+  button.secondary{ background:#2d3446; color:var(--ink); }
+  button:disabled{ opacity:.6; cursor:not-allowed; }
+
+  #main{
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:8px; width:100%; height:100%;
   }
-  .ctrl input[type="range"] { width: 160px; }
-  .buttons { display: flex; align-items: center; gap: 10px; }
-  button {
-    background: var(--accent); color: #081018;
-    border: none; padding: 8px 12px; border-radius: 8px;
-    font-weight: 600; cursor: pointer;
+  .panel{
+    background:var(--panel); border:1px solid var(--grid); border-radius:8px; padding:6px; display:grid; gap:6px;
   }
-  button.secondary { background: #2d3446; color: var(--ink); }
-  button:disabled { opacity: 0.6; cursor: not-allowed; }
-  #main {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 10px;
-    padding: 10px;
-  }
-  .panel {
-    background: var(--panel); border: 1px solid var(--grid); border-radius: 10px; padding: 8px; display: grid; gap: 8px;
-  }
-  .panel h3 { margin: 0; font-size: 14px; font-weight: 600; color: var(--muted); }
-  .left { display: grid; grid-template-rows: 1fr 0.8fr; gap: 10px; }
-  .right { display: grid; grid-template-rows: 1fr 1fr 1fr; gap: 10px; }
-  canvas { width: 100%; height: 100%; display: block; background: #0b0f17; border-radius: 8px; }
-  .legend {
-    display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin: -2px 4px 4px;
-  }
-  .key { display: inline-flex; align-items: center; gap: 6px; }
-  .sw { width: 14px; height: 10px; border-radius: 2px; display: inline-block; }
-  footer {
-    position: absolute; bottom: 6px; right: 10px; font-size: 11px; color: var(--muted);
-    pointer-events: none;
-  }
+  .left{ display:grid; grid-template-rows: 1fr 0.75fr; gap:8px; }
+  .right{ display:grid; grid-template-rows: 1fr 1fr 1fr; gap:8px; }
+  .panel h3{ margin:0; font-size:13px; font-weight:600; color:var(--muted); }
+  .legend{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--muted); margin:-2px 2px 2px; }
+  .key{ display:inline-flex; align-items:center; gap:6px; }
+  .sw{ width:12px; height:10px; border-radius:2px; display:inline-block; }
+
+  canvas{ width:100%; height:100%; display:block; background:#0b0f17; border-radius:6px; }
+  footer{ position:absolute; bottom:4px; right:10px; font-size:11px; color:var(--muted); pointer-events:none; }
 </style>
 </head>
 <body>
-<div id="app">
+<div id="frame">
   <header>
     <div class="controls">
       <div class="ctrl">
         <label for="x0">x₀ (frazione B)</label>
         <input type="range" id="x0" min="0" max="1" step="0.01" value="0.30">
-        <span id="x0val">0.30</span>
+        <span id="x0val" class="mini">0.30</span>
       </div>
       <div class="ctrl">
         <label for="TE">T_E [°C]</label>
@@ -109,7 +86,7 @@
         <input type="number" id="Tmax" value="1600" step="1">
       </div>
       <div class="ctrl">
-        <label for="cooling">Raffreddamento [K/s]</label>
+        <label for="cooling">Raffredd. [K/s]</label>
         <input type="number" id="cooling" value="3" step="0.1" min="0.1">
       </div>
       <div class="ctrl">
@@ -123,21 +100,22 @@
       <button id="resetBtn" class="secondary">Reset</button>
     </div>
   </header>
+
   <div id="main">
     <div class="left">
       <div class="panel">
-        <h3>Diagramma di fase (isobaro) — binario con eutettico</h3>
+        <h3>Diagramma di fase (isobaro) — binario eutettico</h3>
         <div class="legend">
           <span class="key"><span class="sw" style="background:var(--accent)"></span>Liquidus</span>
-          <span class="key"><span class="sw" style="background:var(--solidA)"></span>Solido A (x=0)</span>
-          <span class="key"><span class="sw" style="background:var(--solidB)"></span>Solido B (x=1)</span>
+          <span class="key"><span class="sw" style="background:var(--solidA)"></span>Solido A</span>
+          <span class="key"><span class="sw" style="background:var(--solidB)"></span>Solido B</span>
           <span class="key"><span class="sw" style="background:var(--liquid)"></span>Fuso</span>
           <span class="key"><span class="sw" style="background:var(--warn)"></span>Percorso / Tieline</span>
         </div>
         <canvas id="phaseCanvas"></canvas>
       </div>
       <div class="panel">
-        <h3>Microstruttura (tessellazione: fuso + cristalli A / B)</h3>
+        <h3>Microstruttura (tessellazione: fuso + cristalli A/B)</h3>
         <canvas id="microCanvas"></canvas>
       </div>
     </div>
@@ -157,7 +135,8 @@
     </div>
   </div>
 </div>
-<footer>Nota: parametri di default solo illustrativi. Modificali per altri sistemi.</footer>
+
+<footer>Dimensionamento fisso 1900×1000. Parametri di default illustrativi.</footer>
 
 <script>
 (function(){
@@ -167,138 +146,90 @@
   function setCanvasSizeToCSS(canvas){
     const rect = canvas.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = Math.max(2, Math.floor(rect.width * dpr));
+    canvas.width  = Math.max(2, Math.floor(rect.width  * dpr));
     canvas.height = Math.max(2, Math.floor(rect.height * dpr));
     const ctx = canvas.getContext('2d');
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
     return ctx;
   }
-  function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}) {
-    const {margin= {l:50,b:40,r:10,t:10}, gridColor='#1f2434', textColor='#9aa4b2'} = options;
-    const {width, height} = rect;
-    const x0 = margin.l, x1 = width - margin.r;
-    const y0 = height - margin.b, y1 = margin.t;
-    // background grid
-    ctx.save();
-    ctx.strokeStyle = gridColor;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    // x ticks
-    const xticks = 6;
-    for (let i=0;i<=xticks;i++){
-      const tx = x0 + (x1-x0)*i/xticks;
-      ctx.moveTo(tx,y0); ctx.lineTo(tx,y1);
-    }
-    // y ticks
-    const yticks = 6;
-    for (let j=0;j<=yticks;j++){
-      const ty = y0 - (y0-y1)*j/yticks;
-      ctx.moveTo(x0,ty); ctx.lineTo(x1,ty);
-    }
-    ctx.stroke();
-    // axis labels + ticks text
-    ctx.fillStyle = textColor;
-    ctx.font = '12px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-    for (let i=0;i<=xticks;i++){
-      const tx = x0 + (x1-x0)*i/xticks;
-      const xv = lerp(xMin,xMax,i/xticks);
-      ctx.fillText((Math.round(xv*100)/100).toString(), tx, y0+4);
-    }
-    ctx.save();
-    ctx.textAlign='right'; ctx.textBaseline='middle';
-    for (let j=0;j<=yticks;j++){
-      const ty = y0 - (y0-y1)*j/yticks;
-      const yv = lerp(yMin,yMax,j/yticks);
-      ctx.fillText(Math.round(yv).toString(), x0-6, ty);
-    }
-    ctx.restore();
-    // axis lines
-    ctx.strokeStyle = '#2a2f45';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(x0,y0); ctx.lineTo(x1,y0);
-    ctx.moveTo(x0,y0); ctx.lineTo(x0,y1);
-    ctx.stroke();
-    // labels
-    ctx.fillStyle = '#e8ecf1';
-    ctx.font = '13px system-ui, sans-serif';
-    ctx.textAlign='center'; ctx.textBaseline='top';
-    ctx.fillText(xLabel, (x0+x1)/2, height-20);
-    ctx.save();
-    ctx.translate(14, (y0+y1)/2);
-    ctx.rotate(-Math.PI/2);
-    ctx.textAlign='center'; ctx.textBaseline='top';
-    ctx.fillText(yLabel, 0, 0);
-    ctx.restore();
-    ctx.restore();
+  function drawAxes(ctx, rect, xMin, xMax, yMin, yMax, xLabel, yLabel, options={}){
+    const {margin={l:46,b:34,r:8,t:8}, gridColor:'#1f2434', textColor:'#9aa4b2'} = options;
+    const {width,height} = rect;
+    const x0=margin.l, x1=width-margin.r;
+    const y0=height-margin.b, y1=margin.t;
 
-    // Return transform funcs
-    const xScale = v => x0 + (v - xMin) / (xMax - xMin) * (x1 - x0);
-    const yScale = v => y0 - (v - yMin) / (yMax - yMin) * (y0 - y1);
+    // grid
+    ctx.save();
+    ctx.strokeStyle=gridColor; ctx.lineWidth=1;
+    ctx.beginPath();
+    const xticks=6, yticks=6;
+    for(let i=0;i<=xticks;i++){ const tx=x0+(x1-x0)*i/xticks; ctx.moveTo(tx,y0); ctx.lineTo(tx,y1); }
+    for(let j=0;j<=yticks;j++){ const ty=y0-(y0-y1)*j/yticks; ctx.moveTo(x0,ty); ctx.lineTo(x1,ty); }
+    ctx.stroke();
+
+    // axes
+    ctx.strokeStyle='#2a2f45'; ctx.lineWidth=1.3;
+    ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y0); ctx.moveTo(x0,y0); ctx.lineTo(x0,y1); ctx.stroke();
+
+    // ticks text
+    ctx.fillStyle=textColor; ctx.font='11px system-ui, sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    for(let i=0;i<=xticks;i++){
+      const tx=x0+(x1-x0)*i/xticks; const xv=lerp(xMin,xMax,i/xticks);
+      ctx.fillText((Math.round(xv*100)/100).toString(), tx, y0+3);
+    }
+    ctx.textAlign='right'; ctx.textBaseline='middle';
+    for(let j=0;j<=yticks;j++){
+      const ty=y0-(y0-y1)*j/yticks; const yv=lerp(yMin,yMax,j/yticks);
+      ctx.fillText(Math.round(yv).toString(), x0-5, ty);
+    }
+
+    // labels
+    ctx.fillStyle='#e8ecf1'; ctx.font='12px system-ui, sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.fillText(xLabel, (x0+x1)/2, height-18);
+    ctx.save(); ctx.translate(12,(y0+y1)/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText(yLabel, 0, 0); ctx.restore(); ctx.restore();
+
+    const xScale=v=>x0+(v-xMin)/(xMax-xMin)*(x1-x0);
+    const yScale=v=>y0-(v-yMin)/(yMax-yMin)*(y0-y1);
     return {x0,y0,x1,y1,xScale,yScale};
   }
+  function drawLine(ctx, xs, ys, xScale, yScale, color, width){
+    ctx.save();
+    ctx.strokeStyle=color; ctx.lineWidth=width||2; ctx.beginPath();
+    let started=false;
+    for(let i=0;i<xs.length;i++){
+      const y=ys[i];
+      if(!isFinite(y)){ started=false; continue; }
+      const x=xs[i]; const px=xScale(x), py=yScale(y);
+      if(!started){ ctx.moveTo(px,py); started=true; } else { ctx.lineTo(px,py); }
+    }
+    ctx.stroke(); ctx.restore();
+  }
+  function circle(ctx,x,y,r,color){ ctx.save(); ctx.fillStyle=color; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); ctx.restore(); }
+  function css(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
 
-  // ---------- DOM & State ----------
+  // ---------- DOM ----------
   const dom = {
-    x0: document.getElementById('x0'),
-    x0val: document.getElementById('x0val'),
-    TE: document.getElementById('TE'),
-    TA: document.getElementById('TA'),
-    TB: document.getElementById('TB'),
-    xE: document.getElementById('xE'),
-    Tmin: document.getElementById('Tmin'),
-    Tmax: document.getElementById('Tmax'),
-    cooling: document.getElementById('cooling'),
-    keu: document.getElementById('keu'),
-    startBtn: document.getElementById('startBtn'),
-    pauseBtn: document.getElementById('pauseBtn'),
-    resetBtn: document.getElementById('resetBtn'),
-    phaseCanvas: document.getElementById('phaseCanvas'),
-    microCanvas: document.getElementById('microCanvas'),
-    tempCanvas: document.getElementById('tempCanvas'),
-    compCanvas: document.getElementById('compCanvas'),
-    fracCanvas: document.getElementById('fracCanvas'),
+    x0: x('x0'), x0val: x('x0val'),
+    TE:x('TE'), TA:x('TA'), TB:x('TB'), xE:x('xE'),
+    Tmin:x('Tmin'), Tmax:x('Tmax'), cooling:x('cooling'), keu:x('keu'),
+    startBtn:x('startBtn'), pauseBtn:x('pauseBtn'), resetBtn:x('resetBtn'),
+    phaseCanvas:x('phaseCanvas'), microCanvas:x('microCanvas'),
+    tempCanvas:x('tempCanvas'), compCanvas:x('compCanvas'), fracCanvas:x('fracCanvas')
   };
+  function x(id){ return document.getElementById(id); }
 
+  // ---------- Stato ----------
   const state = {
-    running: false,
-    paused: false,
-    t: 0,                 // tempo simulazione [s]
-    dtMax: 1/30,          // dt max per stabilità numerica
-    T: 1550,              // temperatura corrente [°C]
-    stage: 'liquid',      // 'liquid' | 'primary' | 'eutectic' | 'solid' | 'stopped'
-    // sistema
-    x0: 0.30,             // composizione bulk (frazione B)
-    xE: 0.40,
-    TE: 1270,
-    TA: 1550,
-    TB: 1390,
-    Tmin: 1100,
-    Tmax: 1600,
-    coolRate: 3.0,        // [K/s]
-    kEut: 0.25,           // [1/s] tasso di solidificazione eutettica
-    // Fractions
-    fL: 1.0,
-    fA: 0.0,
-    fB: 0.0,
-    // Composizioni di fase (x_B)
-    xL: 0.30,
-    xS_A: 0.0, // composizione del solido A
-    xS_B: 1.0, // composizione del solido B
-    // Per microstruttura
-    micro: {
-      grid: [], cols: 0, rows: 0, // 0=liquid,1=A,2=B
-    },
-    // Serie temporali per grafici
-    series: {
-      t: [], T: [], xL: [], xA: [], xB: [], fL: [], fA: [], fB: []
-    },
-    // ausilio per path nel diagramma
-    branch: 'left',       // left (A primario) o right (B primario)
-    T_liq_x0: null,       // temperatura liquidus alla composizione x0
-    stoppedByBounds: false
+    running:false, paused:false, stage:'liquid',
+    t:0, dtMax:1/30, T:1550,
+    x0:0.30, xE:0.40, TE:1270, TA:1550, TB:1390,
+    Tmin:1100, Tmax:1600, coolRate:3.0, kEut:0.25,
+    fL:1, fA:0, fB:0, xL:0.30, T_liq_x0:null, branch:'left', stoppedByBounds:false,
+    micro:{ grid:[], cols:0, rows:0, cellSize:8 },
+    series:{ t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] }
   };
 
   function readParams(){
@@ -316,405 +247,236 @@
 
   function resetSimulation(){
     readParams();
-    state.t = 0;
-    state.series = { t:[], T:[], xL:[], xA:[], xB:[], fL:[], fA:[], fB:[] };
-    state.fL = 1; state.fA = 0; state.fB = 0;
-    state.xL = state.x0;
-    state.stage = 'liquid';
-    state.stoppedByBounds = false;
-
-    // Imposta T iniziale leggermente sopra liquidus(x0) o Tmax-10 se necessario
+    state.t=0; state.series={ t:[],T:[],xL:[],xA:[],xB:[],fL:[],fA:[],fB:[] };
+    state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0; state.stage='liquid'; state.stoppedByBounds=false;
     const Tliq0 = liquidusTempAtX(state.x0);
-    const Tstart = Math.min(state.Tmax - 5, Math.max(Tliq0 + 40, state.Tmin + 20));
-    state.T = Tstart;
-    state.T_liq_x0 = Tliq0;
+    const Tstart = Math.min(state.Tmax-5, Math.max(Tliq0+40, state.Tmin+20));
+    state.T=Tstart; state.T_liq_x0=Tliq0;
     state.branch = (state.x0 < state.xE) ? 'left' : (state.x0 > state.xE ? 'right' : 'eutectic');
-
-    // Microstruttura reset
-    initMicroGrid();
-    repaintAll();
+    initMicroGrid(); repaintAll();
   }
 
-  // ---------- Modello termodinamico (lineare) ----------
+  // ---------- Modello lineare ----------
   function liquidusTempAtX(x){
-    // Liquidus approssimata da segmenti di retta
-    // per x in [0,xE]: linea (0,TA) -> (xE,TE)
-    // per x in [xE,1]: (xE,TE) -> (1,TB)
-    x = clamp(x, 0, 1);
-    if (x <= state.xE) {
-      const t = x / state.xE;
-      return lerp(state.TA, state.TE, t);
-    } else {
-      const t = (x - state.xE) / (1 - state.xE);
-      return lerp(state.TE, state.TB, t);
-    }
+    x = clamp(x,0,1);
+    if(x<=state.xE){ const t=x/state.xE; return lerp(state.TA,state.TE,t); }
+    const t=(x-state.xE)/(1-state.xE); return lerp(state.TE,state.TB,t);
   }
-  function liquidusXAtT_left(T){
-    // inversa lato sinistro: x = xE * (TA - T)/(TA - TE)
-    const x = state.xE * (state.TA - T) / (state.TA - state.TE);
-    return clamp(x, 0, state.xE);
-  }
-  function liquidusXAtT_right(T){
-    // inversa lato destro: x = 1 - (1 - xE)*(TB - T)/(TB - TE)
-    const x = 1 - (1 - state.xE) * (state.TB - T) / (state.TB - state.TE);
-    return clamp(x, state.xE, 1);
-  }
+  function liquidusXAtT_left(T){ return clamp( state.xE*(state.TA-T)/(state.TA-state.TE), 0, state.xE ); }
+  function liquidusXAtT_right(T){ return clamp( 1 - (1-state.xE)*(state.TB-T)/(state.TB-state.TE), state.xE, 1 ); }
 
   // ---------- Microstruttura ----------
   function initMicroGrid(){
-    const cvs = dom.microCanvas.getBoundingClientRect();
-    const W = Math.max(300, Math.floor(cvs.width));
-    const H = Math.max(250, Math.floor(cvs.height));
-    // scegli dimensione celle per avere ~ ~60-120k celle max per prestazioni
-    const cellSize = Math.max(5, Math.floor(Math.min(W/90, H/60)));
-    const cols = Math.floor(W / cellSize);
-    const rows = Math.floor(H / cellSize);
-    state.micro.cols = cols; state.micro.rows = rows;
-    state.micro.cellSize = cellSize;
+    const r = dom.microCanvas.getBoundingClientRect();
+    // Celle più piccole ma comunque fluide
+    const cell = Math.max(5, Math.floor(Math.min(r.width/95, r.height/65)));
+    const cols = Math.floor(r.width / cell);
+    const rows = Math.floor(r.height / cell);
+    state.micro.cols = cols; state.micro.rows = rows; state.micro.cellSize = cell;
     const n = cols*rows;
-    state.micro.grid = new Uint8Array(n);
-    state.micro.grid.fill(0); // tutto liquido
+    state.micro.grid = new Uint8Array(n); // 0=L,1=A,2=B
+    state.micro.grid.fill(0);
   }
   function updateMicroTowardsTargets(){
-    // Porta la tessellazione verso i target fasi coerenti con fA,fB,fL
-    const n = state.micro.cols * state.micro.rows;
-    const targetA = Math.round(state.fA * n);
-    const targetB = Math.round(state.fB * n);
-    const targetL = n - targetA - targetB;
-
+    const n = state.micro.cols*state.micro.rows;
+    const targetA = Math.round(state.fA*n);
+    const targetB = Math.round(state.fB*n);
     const grid = state.micro.grid;
-    // conta attuali
-    let countA=0, countB=0, countL=0;
-    for (let i=0;i<n;i++){
-      const v = grid[i];
-      if (v===1) countA++; else if (v===2) countB++; else countL++;
-    }
-    // helper: convert i casuali
-    function indicesOf(val, maxPick){
-      const idxs=[];
-      for (let i=0;i<n && idxs.length<maxPick;i++){
-        if (grid[i]===val) idxs.push(i);
+    // conta veloci
+    let cA=0,cB=0;
+    for(let i=0;i<n;i++){ if(grid[i]===1) cA++; else if(grid[i]===2) cB++; }
+    const step = Math.max(1, Math.floor(n*0.008)); // ~0.8% per frame
+    // aggiungi A
+    if(cA<targetA){
+      let need=Math.min(step, targetA-cA);
+      for(let tries=0; tries<need*6 && need>0; tries++){
+        const i=(Math.random()*n)|0; if(grid[i]===0){ grid[i]=1; need--; }
       }
-      return idxs;
-    }
-    // Per performance, facciamo piccoli passi per frame
-    const step = Math.max(1, Math.floor(n*0.01)); // ~1% per frame
-    // Se serve più A:
-    if (countA < targetA) {
-      // prendi da liquido
-      let need = Math.min(step, targetA - countA);
-      for (let tries=0; tries<need*5 && need>0; tries++){
-        const i = Math.floor(Math.random()*n);
-        if (grid[i]===0){ grid[i]=1; need--; }
-      }
-    } else if (countA > targetA) {
-      // restituisci a liquido per correggere (arrotondamenti)
-      let need = Math.min(step, countA - targetA);
-      for (let tries=0; tries<need*5 && need>0; tries++){
-        const i = Math.floor(Math.random()*n);
-        if (grid[i]===1){ grid[i]=0; need--; }
+    } else if(cA>targetA){
+      let need=Math.min(step, cA-targetA);
+      for(let tries=0; tries<need*6 && need>0; tries++){
+        const i=(Math.random()*n)|0; if(grid[i]===1){ grid[i]=0; need--; }
       }
     }
-    if (countB < targetB) {
-      let need = Math.min(step, targetB - countB);
-      for (let tries=0; tries<need*5 && need>0; tries++){
-        const i = Math.floor(Math.random()*n);
-        if (grid[i]===0){ grid[i]=2; need--; }
+    // aggiungi B
+    if(cB<targetB){
+      let need=Math.min(step, targetB-cB);
+      for(let tries=0; tries<need*6 && need>0; tries++){
+        const i=(Math.random()*n)|0; if(grid[i]===0){ grid[i]=2; need--; }
       }
-    } else if (countB > targetB) {
-      let need = Math.min(step, countB - targetB);
-      for (let tries=0; tries<need*5 && need>0; tries++){
-        const i = Math.floor(Math.random()*n);
-        if (grid[i]===2){ grid[i]=0; need--; }
+    } else if(cB>targetB){
+      let need=Math.min(step, cB-targetB);
+      for(let tries=0; tries<need*6 && need>0; tries++){
+        const i=(Math.random()*n)|0; if(grid[i]===2){ grid[i]=0; need--; }
       }
     }
-    // L si sistema da solo come residuo
   }
 
   // ---------- Simulazione ----------
-  let lastTS = 0;
+  function pushSeries(){
+    const s=state.series;
+    if(s.t.length>2800){ s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift(); }
+    s.t.push(state.t); s.T.push(state.T);
+    s.xL.push(state.fL>0 ? state.xL : NaN);
+    s.xA.push(0); s.xB.push(1);
+    s.fL.push(state.fL); s.fA.push(state.fA); s.fB.push(state.fB);
+  }
   function stepSimulation(dtReal){
-    if (!state.running || state.paused || state.stage==='stopped') return;
-
-    const dt = Math.min(state.dtMax, dtReal); // secondi
+    if(!state.running || state.paused || state.stage==='stopped') return;
+    const dt = Math.min(state.dtMax, dtReal);
     state.t += dt;
 
-    // Stop se esce dai bounds
-    if (state.T <= state.Tmin || state.T >= state.Tmax) {
-      state.running = false; state.stage='stopped'; state.stoppedByBounds = true;
-      dom.startBtn.disabled = false;
-      dom.pauseBtn.disabled = true;
-      return;
+    // Stop automatico fuori limiti
+    if(state.T <= state.Tmin || state.T >= state.Tmax){
+      state.running=false; state.stage='stopped';
+      dom.startBtn.disabled=false; dom.pauseBtn.disabled=true; return;
     }
 
-    // Stati e cinetica semplificata
-    if (state.stage === 'liquid') {
-      // raffreddamento
-      state.T -= state.coolRate * dt;
-      state.fL = 1; state.fA=0; state.fB=0;
-      state.xL = state.x0;
-
-      if (state.T <= state.T_liq_x0 || state.branch==='eutectic') {
-        // entra nella regione L + (A o B) oppure direttamente in eutettico se x0==xE
-        if (state.x0 < state.xE) state.stage = 'primary';
-        else if (state.x0 > state.xE) state.stage = 'primary';
-        else state.stage = 'eutectic';
+    if(state.stage==='liquid'){
+      state.T -= state.coolRate*dt;
+      state.fL=1; state.fA=0; state.fB=0; state.xL=state.x0;
+      if(state.T <= state.T_liq_x0 || state.branch==='eutectic'){
+        if(state.x0===state.xE) state.stage='eutectic'; else state.stage='primary';
       }
     }
-    else if (state.stage === 'primary') {
-      // ancora raffreddamento fino a TE
-      state.T -= state.coolRate * dt;
-      // calcola xL(T) e frazioni con lever rule
-      if (state.x0 < state.xE) {
-        // A primario (xS=0)
+    else if(state.stage==='primary'){
+      state.T -= state.coolRate*dt;
+      if(state.x0<state.xE){
         state.xL = liquidusXAtT_left(Math.max(state.T, state.TE));
-        // fA = (xL - x0)/xL ; fL = x0/xL
-        // clamp per sicurezza
-        state.fA = clamp((state.xL - state.x0) / Math.max(1e-6, state.xL), 0, 1);
-        state.fL = clamp(1 - state.fA, 0, 1);
-        state.fB = 0;
+        state.fA = clamp((state.xL - state.x0)/Math.max(1e-6, state.xL), 0, 1);
+        state.fL = 1 - state.fA; state.fB = 0;
       } else {
-        // B primario (xS=1)
         state.xL = liquidusXAtT_right(Math.max(state.T, state.TE));
-        // fB = (x0 - xL)/(1 - xL) ; fL = (1 - x0)/(1 - xL)
-        state.fB = clamp((state.x0 - state.xL) / Math.max(1e-6, (1 - state.xL)), 0, 1);
-        state.fL = clamp(1 - state.fB, 0, 1);
-        state.fA = 0;
+        state.fB = clamp((state.x0 - state.xL)/Math.max(1e-6, 1-state.xL), 0, 1);
+        state.fL = 1 - state.fB; state.fA = 0;
       }
-      if (state.T <= state.TE + 1e-6) {
-        // passa alla trasformazione eutettica a T costante
-        state.T = state.TE;
-        state.stage = 'eutectic';
-      }
+      if(state.T <= state.TE + 1e-6){ state.T=state.TE; state.stage='eutectic'; }
     }
-    else if (state.stage === 'eutectic') {
-      // Plateau isoterma a T_E: il liquido residuo solidifica con proporzioni fissate (x_E : 1-x_E)
+    else if(state.stage==='eutectic'){
       state.T = state.TE;
-      if (state.fL > 0) {
-        const dL = Math.min(state.fL, state.kEut * dt); // quanto liquido solidifica in questo step
+      if(state.fL>0){
+        const dL = Math.min(state.fL, state.kEut*dt);
         state.fL -= dL;
-        // porzioni a A e B dal liquido eutettico xE
         state.fA += dL * (1 - state.xE);
         state.fB += dL * (state.xE);
-        // xL resta = xE durante il plateau (se c'è ancora liquido)
-        state.xL = state.fL > 0 ? state.xE : state.xL;
+        if(state.fL>0) state.xL = state.xE;
       } else {
-        // tutto solido: riprende il raffreddamento
-        state.stage = 'solid';
+        state.stage='solid';
       }
     }
-    else if (state.stage === 'solid') {
-      // tutto solido: prosegue il raffreddamento libero
-      state.fL = 0; // fA + fB = 1
-      state.T -= state.coolRate * dt;
+    else if(state.stage==='solid'){
+      state.fL=0;
+      state.T -= state.coolRate*dt;
     }
 
-    // Serie per grafici
     pushSeries();
-
-    // Microstruttura: adegua gradualmente al target
     updateMicroTowardsTargets();
   }
 
-  function pushSeries(){
-    const s = state.series;
-    // limitiamo numero di punti per prestazioni
-    if (s.t.length>3000){ // decima
-      s.t.shift(); s.T.shift(); s.xL.shift(); s.xA.shift(); s.xB.shift(); s.fL.shift(); s.fA.shift(); s.fB.shift();
-    }
-    s.t.push(state.t);
-    s.T.push(state.T);
-    s.xL.push(state.fL>0 ? state.xL : NaN); // NaN dopo solidificazione completa
-    s.xA.push(0); // composizione del solido A (immiscibile) = 0
-    s.xB.push(1); // composizione del solido B (immiscibile) = 1
-    s.fL.push(state.fL);
-    s.fA.push(state.fA);
-    s.fB.push(state.fB);
-  }
-
   // ---------- Rendering ----------
-  function repaintAll(){
-    drawPhaseDiagram();
-    drawMicro();
-    drawTempChart();
-    drawCompChart();
-    drawFracChart();
-  }
+  function repaintAll(){ drawPhase(); drawMicro(); drawTemp(); drawComp(); drawFrac(); }
 
-  function drawPhaseDiagram(){
-    const ctx = setCanvasSizeToCSS(dom.phaseCanvas);
-    const w = dom.phaseCanvas.clientWidth, h = dom.phaseCanvas.clientHeight;
-    const {xScale, yScale, x0, x1, y0, y1} = drawAxes(ctx, {width:w, height:h}, 0, 1, state.Tmin, state.Tmax, 'Composizione x_B', 'Temperatura [°C]');
-    // Disegna le due linee liquidus
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent');
-    ctx.beginPath();
-    // sinistra: (0,TA)->(xE,TE)
+  function drawPhase(){
+    const ctx=setCanvasSizeToCSS(dom.phaseCanvas);
+    const w=dom.phaseCanvas.clientWidth, h=dom.phaseCanvas.clientHeight;
+    const ax = drawAxes(ctx,{width:w,height:h}, 0,1, state.Tmin,state.Tmax, 'x_B','T [°C]');
+    const {xScale,yScale} = ax;
+    // Liquidus
+    ctx.lineWidth=2; ctx.strokeStyle=css('--accent'); ctx.beginPath();
     ctx.moveTo(xScale(0), yScale(state.TA));
     ctx.lineTo(xScale(state.xE), yScale(state.TE));
-    // destra: (xE,TE)->(1,TB)
     ctx.lineTo(xScale(1), yScale(state.TB));
     ctx.stroke();
-
-    // punti chiave
-    ctx.fillStyle = '#ffffff';
-    // eutettico
+    // Eutettico
     circle(ctx, xScale(state.xE), yScale(state.TE), 3, '#ffd166');
-
-    // Verticale sulla composizione bulk x0
-    ctx.strokeStyle = '#3a3f55';
-    ctx.setLineDash([6,4]);
-    ctx.beginPath();
-    ctx.moveTo(xScale(state.x0), yScale(state.Tmin));
-    ctx.lineTo(xScale(state.x0), yScale(state.Tmax));
-    ctx.stroke();
-    ctx.setLineDash([]);
-
-    // Punto stato / traiettoria
-    // quando liquido: (x0,T), quando biphasico: evidenzia tie-line tra xS e xL
-    ctx.lineWidth = 2;
-    const warn = getComputedStyle(document.documentElement).getPropertyValue('--warn');
-    if (state.stage==='primary' || state.stage==='eutectic'){
-      // tie-line a T corrente
-      const Tnow = state.T;
-      let xS = (state.x0 < state.xE) ? 0 : 1;
+    // Verticale x0
+    ctx.strokeStyle='#3a3f55'; ctx.setLineDash([6,4]); ctx.beginPath();
+    ctx.moveTo(xScale(state.x0), yScale(state.Tmin)); ctx.lineTo(xScale(state.x0), yScale(state.Tmax)); ctx.stroke(); ctx.setLineDash([]);
+    // Tieline e stato
+    const warn = css('--warn');
+    if(state.stage==='primary' || state.stage==='eutectic'){
+      const Tnow=state.T;
+      const xS = (state.x0<state.xE) ? 0 : 1;
       const xL = (state.stage==='eutectic' && state.fL>0) ? state.xE : state.xL;
-      ctx.strokeStyle = warn;
-      ctx.beginPath();
-      ctx.moveTo(xScale(xS), yScale(Tnow));
-      ctx.lineTo(xScale(xL), yScale(Tnow));
-      ctx.stroke();
-      // marcatori
-      circle(ctx, xScale(xS), yScale(Tnow), 3, '#ffffff');
-      circle(ctx, xScale(xL), yScale(Tnow), 3, '#ffffff');
+      ctx.strokeStyle=warn; ctx.lineWidth=2; ctx.beginPath();
+      ctx.moveTo(xScale(xS), yScale(Tnow)); ctx.lineTo(xScale(xL), yScale(Tnow)); ctx.stroke();
+      circle(ctx,xScale(xS),yScale(Tnow),3,'#ffffff'); circle(ctx,xScale(xL),yScale(Tnow),3,'#ffffff');
     }
-    // punto del bulk (utile per vedere verticale)
     circle(ctx, xScale(state.x0), yScale(state.T), 4, warn);
   }
 
-  function circle(ctx,x,y,r, color){
-    ctx.save();
-    ctx.fillStyle=color; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
-    ctx.restore();
-  }
-
   function drawMicro(){
-    const ctx = setCanvasSizeToCSS(dom.microCanvas);
-    const {width, height} = dom.microCanvas.getBoundingClientRect();
-    const cols = state.micro.cols, rows = state.micro.rows, s = state.micro.cellSize;
-    // Fondo
-    ctx.fillStyle = '#0b0f17'; ctx.fillRect(0,0,width,height);
-    // Disegna celle
-    const cA = getCSS('--solidA'), cB = getCSS('--solidB'), cL = getCSS('--liquid');
-    for (let r=0;r<rows;r++){
-      for (let c=0;c<cols;c++){
-        const idx = r*cols + c;
-        const v = state.micro.grid[idx];
-        if (v===0) ctx.fillStyle = cL;
-        else if (v===1) ctx.fillStyle = cA;
-        else ctx.fillStyle = cB;
-        ctx.fillRect(c*s, r*s, s-0.5, s-0.5);
+    const ctx=setCanvasSizeToCSS(dom.microCanvas);
+    const r=dom.microCanvas.getBoundingClientRect(); const cols=state.micro.cols, rows=state.micro.rows, s=state.micro.cellSize;
+    ctx.fillStyle='#0b0f17'; ctx.fillRect(0,0,r.width,r.height);
+    const cA=css('--solidA'), cB=css('--solidB'), cL=css('--liquid');
+    for(let rr=0; rr<rows; rr++){
+      for(let cc=0; cc<cols; cc++){
+        const idx=rr*cols+cc; const v=state.micro.grid[idx];
+        ctx.fillStyle = (v===0)?cL:(v===1?cA:cB);
+        ctx.fillRect(cc*s, rr*s, s-0.4, s-0.4);
       }
     }
-    // cornice
-    ctx.strokeStyle = '#1d2232'; ctx.lineWidth = 2;
-    ctx.strokeRect(0.5,0.5,width-1,height-1);
+    ctx.strokeStyle='#1d2232'; ctx.lineWidth=1.6; ctx.strokeRect(0.5,0.5,r.width-1,r.height-1);
   }
 
-  function drawTempChart(){
-    const ctx = setCanvasSizeToCSS(dom.tempCanvas);
-    const w = dom.tempCanvas.clientWidth, h = dom.tempCanvas.clientHeight;
-    const s = state.series;
-    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
-    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, state.Tmin, state.Tmax, 'Tempo [s]', 'T [°C]');
-    const {xScale,yScale} = axes;
-    // T(t)
-    drawLine(ctx, s.t, s.T, xScale, yScale, getCSS('--accent2'), 2);
-    // Linea T_E
-    ctx.setLineDash([4,4]); ctx.strokeStyle = '#6b7280';
-    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.TE)); ctx.lineTo(xScale(tMax), yScale(state.TE)); ctx.stroke();
+  function drawTemp(){
+    const ctx=setCanvasSizeToCSS(dom.tempCanvas);
+    const w=dom.tempCanvas.clientWidth, h=dom.tempCanvas.clientHeight;
+    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, state.Tmin,state.Tmax, 'Tempo [s]','T [°C]');
+    drawLine(ctx, s.t, s.T, ax.xScale, ax.yScale, css('--accent2'), 2);
+    ctx.setLineDash([4,4]); ctx.strokeStyle='#6b7280';
+    ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.TE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.TE)); ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  function drawComp(){
+    const ctx=setCanvasSizeToCSS(dom.compCanvas);
+    const w=dom.compCanvas.clientWidth, h=dom.compCanvas.clientHeight;
+    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, 0,1, 'Tempo [s]','x_B');
+    drawLine(ctx, s.t, s.xL, ax.xScale, ax.yScale, css('--liquid'), 2);
+    ctx.setLineDash([4,4]); ctx.strokeStyle=css('--solidA');
+    ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(0)); ctx.stroke();
+    ctx.strokeStyle=css('--solidB'); ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(1)); ctx.lineTo(ax.xScale(tMax), ax.yScale(1)); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.setLineDash([2,4]); ctx.strokeStyle='#8b94a7';
+    ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.xE)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.xE)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ax.xScale(0), ax.yScale(state.x0)); ctx.lineTo(ax.xScale(tMax), ax.yScale(state.x0)); ctx.stroke();
     ctx.setLineDash([]);
   }
 
-  function drawCompChart(){
-    const ctx = setCanvasSizeToCSS(dom.compCanvas);
-    const w = dom.compCanvas.clientWidth, h = dom.compCanvas.clientHeight;
-    const s = state.series;
-    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
-    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, 0, 1, 'Tempo [s]', 'Composizione x_B');
-    const {xScale,yScale} = axes;
-    // xL(t)
-    drawLine(ctx, s.t, s.xL, xScale, yScale, getCSS('--liquid'), 2);
-    // x_A (0) e x_B (1) come riferimenti
-    ctx.setLineDash([4,4]); ctx.strokeStyle = getCSS('--solidA');
-    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(0)); ctx.lineTo(xScale(tMax), yScale(0)); ctx.stroke();
-    ctx.strokeStyle = getCSS('--solidB'); ctx.beginPath();
-    ctx.moveTo(xScale(0), yScale(1)); ctx.lineTo(xScale(tMax), yScale(1)); ctx.stroke();
-    ctx.setLineDash([]);
-    // x_E e x0 come riferimenti verticali nel tempo (linee orizzontali)
-    ctx.setLineDash([2,4]); ctx.strokeStyle = '#8b94a7';
-    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.xE)); ctx.lineTo(xScale(tMax), yScale(state.xE)); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(xScale(0), yScale(state.x0)); ctx.lineTo(xScale(tMax), yScale(state.x0)); ctx.stroke();
-    ctx.setLineDash([]);
+  function drawFrac(){
+    const ctx=setCanvasSizeToCSS(dom.fracCanvas);
+    const w=dom.fracCanvas.clientWidth, h=dom.fracCanvas.clientHeight;
+    const s=state.series; const tMax=Math.max(10, s.t.length? s.t[s.t.length-1]:10);
+    const ax=drawAxes(ctx,{width:w,height:h}, 0,tMax, 0,1, 'Tempo [s]','Frazione');
+    drawLine(ctx, s.t, s.fL, ax.xScale, ax.yScale, css('--liquid'), 2);
+    drawLine(ctx, s.t, s.fA, ax.xScale, ax.yScale, css('--solidA'), 2);
+    drawLine(ctx, s.t, s.fB, ax.xScale, ax.yScale, css('--solidB'), 2);
   }
-
-  function drawFracChart(){
-    const ctx = setCanvasSizeToCSS(dom.fracCanvas);
-    const w = dom.fracCanvas.clientWidth, h = dom.fracCanvas.clientHeight;
-    const s = state.series;
-    const tMax = Math.max(10, s.t.length ? s.t[s.t.length-1] : 10);
-    const axes = drawAxes(ctx, {width:w,height:h}, 0, tMax, 0, 1, 'Tempo [s]', 'Frazione di fase');
-    const {xScale,yScale} = axes;
-    drawLine(ctx, s.t, s.fL, xScale, yScale, getCSS('--liquid'), 2); // liquido
-    drawLine(ctx, s.t, s.fA, xScale, yScale, getCSS('--solidA'), 2); // A
-    drawLine(ctx, s.t, s.fB, xScale, yScale, getCSS('--solidB'), 2); // B
-  }
-
-  function drawLine(ctx, xs, ys, xScale, yScale, color, width){
-    ctx.save();
-    ctx.strokeStyle = color; ctx.lineWidth = width||2; ctx.beginPath();
-    let started = false;
-    for (let i=0;i<xs.length;i++){
-      const y = ys[i];
-      if (!isFinite(y)) { started=false; continue; }
-      const x = xs[i];
-      const px = xScale(x), py = yScale(y);
-      if (!started) { ctx.moveTo(px, py); started=true; }
-      else { ctx.lineTo(px, py); }
-    }
-    ctx.stroke();
-    ctx.restore();
-  }
-  function getCSS(varname){ return getComputedStyle(document.documentElement).getPropertyValue(varname).trim(); }
 
   // ---------- Loop ----------
+  let lastTS=0;
   function animate(ts){
-    if (!lastTS) lastTS = ts;
-    const dt = Math.min(0.05, (ts - lastTS) / 1000);
-    lastTS = ts;
-
-    stepSimulation(dt);
-    repaintAll();
-
+    if(!lastTS) lastTS=ts;
+    const dt=Math.min(0.05, (ts-lastTS)/1000); lastTS=ts;
+    stepSimulation(dt); repaintAll();
     requestAnimationFrame(animate);
   }
 
   // ---------- Eventi ----------
   dom.x0.addEventListener('input', ()=>{ dom.x0val.textContent = Number(dom.x0.value).toFixed(2); });
   dom.startBtn.addEventListener('click', ()=>{
-    if (!state.running || state.stage==='stopped') { resetSimulation(); }
-    state.running = true; state.paused = false;
-    dom.pauseBtn.disabled = false;
+    if(!state.running || state.stage==='stopped'){ resetSimulation(); }
+    state.running=true; state.paused=false; dom.pauseBtn.disabled=false;
   });
   dom.pauseBtn.addEventListener('click', ()=>{
-    state.paused = !state.paused;
-    dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
+    state.paused=!state.paused; dom.pauseBtn.textContent = state.paused ? 'Riprendi' : 'Pausa';
   });
   dom.resetBtn.addEventListener('click', ()=>{
-    state.running = false; state.paused = false; dom.pauseBtn.disabled = true; dom.pauseBtn.textContent = 'Pausa';
-    resetSimulation();
+    state.running=false; state.paused=false; dom.pauseBtn.disabled=true; dom.pauseBtn.textContent='Pausa'; resetSimulation();
   });
-  window.addEventListener('resize', ()=>{ repaintAll(); });
 
   // ---------- Init ----------
   resetSimulation();
