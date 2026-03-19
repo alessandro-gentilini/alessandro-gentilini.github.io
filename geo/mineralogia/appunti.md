@@ -803,8 +803,8 @@ In dipendenza del valore della temperatura il punto che rappresenta il sistema n
 4) alla temperatura del solidus che è anche nota come temperatura del punto eutettico
 5) a temperatura inferiore a quella del punto eutettico
 
-Regione|$F$|$V$|Composizione liquido
--|-|-|-
+Regione|$F$|$V$
+-|-|-
 $T > T_{L}$|1 (solo liquido, A e B non sono separate)|2 (bivariante)
 $T=T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
 $T_{E} < T < T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
@@ -814,9 +814,34 @@ $T<T_{E}$|2 (solo solido con A e B separate)|1 (univariante)
 Note:  
 <sup>a</sup>Se la composizione iniziale è a sinistra della composizione dell'eutettico allora c'è liquido+A, altrimenti c'è liquido+B.
 
+#### Sequenza di cristallizzazione (raffreddamento aka sottrazione di calore)
 
-La composizione del fuso a temperatura superiore a quella della curva del liquidus è data dalla coordinata orizzontale del punto alla quale si trova il sistema.  
-La composizione del fuso su un grafico si legge sulla scala orizzontale oppure si calcola facendo il rapporto tra la distanza orizzontale tra il punto
+Regione|Composizione liquido
+-|-
+$T > T_{L}$|Quella iniziale (A e B completamente miscelati)
+$T=T_{L}$|Quella data dalla x del punto sul liquidus
+$T_{E} < T < T_{L}$|Quella data dalla x del punto sul liquidus
+$T=T_{E}$|Quella data dalla x del punto eutettico
+$T<T_{E}$|Non esiste liquido
+
+Regione|Composizione solido
+-|-
+$T > T_{L}$|Non esiste solido
+$T=T_{L}$|A puro aut B puro<sup>a</sup>
+$T_{E} < T < T_{L}$|A puro aut B puro<sup>a</sup>
+$T=T_{E}$|Non potendo diminuire la temperatura nè variare la composizione del liquido si ha il passaggio dal solo A puro (aut B puro)<sup>a</sup> e liquido alla composizione eutettica, al solido di A e B separati nelle proporzioni del liquido iniziale
+$T<T_{E}$|Quella iniziale (A e B completamente separati)
+
+Note:  
+<sup>a</sup>Se la composizione iniziale è a sinistra della composizione dell'eutettico allora c'è A puro, altrimenti c'è B puro.
+
+Regione|Proporzione fuso/solido
+-|-
+$T > T_{L}$|Tutto fuso
+$T=T_{L}$|Regola della leva
+$T_{E} < T < T_{L}$|Regola della leva
+$T=T_{E}$|Regola della leva
+$T<T_{E}$|Tutto solido
 
 Il sistema diopside/anortite è un modello di fusione e cristallizazione del basalto:
 
