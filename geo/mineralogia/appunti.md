@@ -805,9 +805,9 @@ In dipendenza del valore della temperatura il punto che rappresenta il sistema n
 
 Regione|$F$|$V$|Composizione liquido
 -|-|-|-
-$T\gt T_{L}$|1 (solo liquido, A e B non sono separate)|2 (bivariante)
+$T > T_{L}$|1 (solo liquido, A e B non sono separate)|2 (bivariante)
 $T=T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
-$T_{E}\lt T\lt T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
+$T_{E} < T < T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
 $T=T_{E}$|3 (liquido+A+B, A e B sono separate)|0 (invariante)
 $T<T_{E}$|2 (solo solido con A e B separate)|1 (univariante)
 
@@ -876,7 +876,7 @@ Come esempio la sezione basale (001) della biotite non mostra pleocroismo mentre
 Si prende il ritardo del quarzo che è 270nm, lo si divide per la lunghezza d'onda convenzionale del blu, che è 475nm ed è nel riquadro grigio in basso a destra, e si ottiene 0.568 che è la risposta alla domanda iniziale.
 [Ottica, p.56].  
 
-* Cosa significa "Sezione ⊥ asse ottico; nessuna direzione di vibrazione privilegiata. Granulo sempre estinto!"? [Ottica, p.64]  
+* Cosa significa "Sezione perpendicolare asse ottico; nessuna direzione di vibrazione privilegiata. Granulo sempre estinto!"? [Ottica, p.64]  
 Significa che se il granulo è stato tagliato dando una lamina piana (sezione s.s. o anche sezione sottile) perpendicolare all'asse ottico allora non si avrà mai birifrangenza, questo perché "la luce che attraversa un cristallo di calcite o più in generale un cristallo dei sistemi trigonale, tetragonale o esagonale, **in una direzione non parallela all'asse di simmetria verticale**, si scinde in due onde che si propagano all'interno del cristallo con diverse velocità. [Peccerillo p.2]  
 Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è ortogonale all'asse ottico e quindi la luce è parallela all'asse ottico e quindi non si ha birifrangenza; qui direi che asse ottico ha lo stesso significato di asse di simmetria verticale (vedi anche [Ottica, p.69] dove si dice "sezione normale all’asse ottico (normale all’asse cristallografico c).").
 
@@ -962,7 +962,7 @@ Viene detto rilievo perché il granulo a rilievo positivo sembra essere sopraele
 [Schmidt Fig 4.26, p.76] spiega che la causa del rilievo è la riflessione totale perché quando c'è riflessione totale non c'è rifrazione e quindi l'assenza di raggi rifratti è percepita come nero e questo nero è proprio quanto si osserva.(NdA: però nella figura 4.26 il nero di osserverebbe guardando dall'alto verso il basso lungo una direzione che giace sulla pagina del libro ma nella sezione sottile se il nero è il "confine" tra due minerali diversi allora la direezione di osservazione è ortogonale alla pagina del libro e quindi a quel punto non è più vero che si vede il nero. Mi sa che mi limiterò a dire che il rilievo è causato dalla riflessione totale il cui angolo dipende dall'indice di rifrazione del minerale).
 
 ### A cosa serve?
-Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi diversi e seguendo poi un metodo dicotomico che arriva a collocare $n_m$ in un intervallo $n_{o1}\lt n_m \lt n_{o2}$.  
+Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi diversi e seguendo poi un metodo dicotomico che arriva a collocare $n_m$ in un intervallo $n_{o1} < n_m < n_{o2}$.  
 [Nesse p.33] scrive che in generale non è possibile stimare accuratamente l'indice di rifrazione di un minerale in sezione sottile ma che si può stimare se è più alto o più basso del mezzo solido in cui è contenuto ("it is generally not possible to determine índices of refraction of minerals accurately in thin section, but  it is possible to make estimates or to establish limits.").
 
 ## Linea di Becke
@@ -1001,16 +1001,16 @@ Se in pol un minerale cambia colore mentre si ruota il piatto allora è un miner
 Seguono le definizioni in [Peccerillo p.2-3], vedi anche [3CD p.87].
 
 Nei **minerali isotropi**, per ogni direzione di incidenza della luce sul minerale si ha il fenomeno della **monorifrazione** che consiste nell'avere un solo raggio rifratto, chiamato **raggio ordinario**, che segue la legge di Snell.  
-Il raggio ordinario è indicato con la lettera O oppure ω (omega).  
+Il raggio ordinario è indicato con la lettera O oppure $\omega$ (omega).  
 L'indice di rifrazione associato al raggio ordinario, indicato con $n_O$ o in alternativa con $n_{\omega}$, è costante, o, detto in altri termini, non dipende dalla direzione del raggio incidente. Dalla costanza di $n_O$ discende la costanza della velocità del raggio ordinario.
 
 Nei **minerali anisotropi uniassici** esiste una sola direzione di incidenza della luce per la quale si ha il fenomeno della monorifrazione; tale direzione è detta **asse ottico**.  
 La luce che incide sul minerale lungo una direzione parallela all'asse ottico darà luogo ad un unico raggio rifratto che è il sudetto raggio ordinario e che gode delle proprietà suddette.  
 Tutte le direzioni di incidenza che non sono parallele all'asse ottico danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, il primo chiamato ordinario, che ha le proprietà suddette, il secondo chiamato **straordinario** e che non segue la legge di Snell.  
-Il raggio straordinario è indicato con la lettera E oppure ε (epsilon).  
+Il raggio straordinario è indicato con la lettera E oppure $\varepsilon$ (epsilon).  
 L'indice di rifrazione associato al raggio straordinario non è costante ma dipende dalla direzione di incidenza; il suo valore varia dall'estremo $n_O$, valore assunto quando il raggio incidente è parallelo all'asse ottico, all'estremo $n_E$, valore assunto quando il raggio incidente è ortogonale all'asse ottico. In alternativa, $n_E$ può essere indicato con $n_{\epsilon}$.  
-I minerali per cui $n_E-n_O\gt0$ sono detti **otticamente positivi** (e.g. quarzo).  
-I minerali per cui $n_E-n_O\lt0$ sono detti **otticamente negativi** (e.g. calcite).  
+I minerali per cui $n_E-n_O > 0$ sono detti **otticamente positivi** (e.g. quarzo).  
+I minerali per cui $n_E-n_O < 0$ sono detti **otticamente negativi** (e.g. calcite).  
 
 Nei **minerale anisotropi biassici** esistono solo due direzioni di incidenza della luce per le quali apparentemente non si ha il fenomeno della birifrazione; tali direzioni sono dette **assi ottici**.  
 Si è scritto apparentemente perché la luce che incide sul minerale lungo una direzione parallela ad uno dei due assi ottici darà luogo a due raggi rifratti che hanno il medesimo indice di rifrazione.  
