@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 15 marzo 2026.
+Aggiornati al 19 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -779,6 +779,45 @@ I diagrammi sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagr
 
 ### Due componenti completamente miscibili allo stato fuso e immiscibili allo stato solido, con punto eutettico
 
+Il sistema è chiuso.
+
+Simbolo|Definizione
+-|-
+$V$|Varianza (o numero dei gradi di libertà del sistema)
+$C$|Numero di componenti
+$F$|Numero delle fasi
+
+Il sistema ha due componenti, quindi $C=2$.
+
+Per un sistema isobarico (cioè a pressione costante) la regola delle fasi dice che  
+$V=C+1-F$  
+$V=2+1-F$  
+$V=3-F$.
+
+I due componenti sono perfettamente miscibili sopra il liquidus.  
+
+In dipendenza del valore della temperatura il punto che rappresenta il sistema nel grafico può trovarsi:  
+1) a temperatura superiore a quella del liquidus
+2) alla temperatura del liquidus
+3) a temperatura inferiore al liquidus ma superiore al solidus
+4) alla temperatura del solidus che è anche nota come temperatura del punto eutettico
+5) a temperatura inferiore a quella del punto eutettico
+
+Regione|$F$|$V$|Composizione liquido
+-|-|-|-
+$T\gt T_{L}$|1 (solo liquido, A e B non sono separate)|2 (bivariante)
+$T=T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
+$T_{E}\lt T\lt T_{L}$|2 (liquido+A oppure liquido+B)<sup>a</sup>|1 (univariante)
+$T=T_{E}$|3 (liquido+A+B, A e B sono separate)|0 (invariante)
+$T<T_{E}$|2 (solo solido con A e B separate)|1 (univariante)
+
+Note:  
+<sup>a</sup>Se la composizione iniziale è a sinistra della composizione dell'eutettico allora c'è liquido+A, altrimenti c'è liquido+B.
+
+
+La composizione del fuso a temperatura superiore a quella della curva del liquidus è data dalla coordinata orizzontale del punto alla quale si trova il sistema.  
+La composizione del fuso su un grafico si legge sulla scala orizzontale oppure si calcola facendo il rapporto tra la distanza orizzontale tra il punto
+
 Il sistema diopside/anortite è un modello di fusione e cristallizazione del basalto:
 
 > This diopside-anorthite system is a simple model of melting and crystallization of basalt.
@@ -787,6 +826,7 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 
 [Link all'esempio del sistema Diopside (pirosseno) - Anortite (plagioclasio)](./diagrammi_di_fase_binari/Perkins_et_Brady-dian_animation.pdf)
 
+### Due componenti completamente miscibili allo stato fuso e completamente miscibili allo stato solido
 
 
 
