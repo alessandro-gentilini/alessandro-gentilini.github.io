@@ -878,10 +878,28 @@ I tectosilicati possono essere suddivisi in:
 * zeoliti
 
 ## Minerali della silice
-I minerali della silice hanno la formula $SiO_{2}$ che è molto semplice ma dà strutture cristalline complesse e molti polimorfi.
+I minerali della silice hanno la formula $SiO_{2}$ che è molto semplice ma dà strutture cristalline complesse e molti polimorfi. La struttura ha "eliche" di tetraedri.
 
-Il minerale della silice più comune è il Quarzo che si presenta in polimorfi di alta temperatura (che hanno i nomi di Tridimite e Cristobalite), di alta pressione (che hanno i nomi di Coesite e Stishovite) mentre, il Quarzo a pressione e temperatura ambiente è noto come Quarzo-$\alpha$.  
-Questi polimorfi appartengono a sistemi cristallini diversi 
+Il minerale della silice più comune è il **quarzo** che si presenta in polimorfi di alta temperatura (che hanno i nomi di **tridimite** e **cristobalite**), di alta pressione (che hanno i nomi di **coesite** e **stishovite**) mentre, il quarzo a pressione e temperatura ambiente è noto come **quarzo-$\alpha$**.  
+Questi polimorfi appartengono a sistemi cristallini diversi, nella stishovite tipica di altissime pressioni il silicio è in coordinazione ottaedrica con l'ossigeno, ovvero ogni silicio è legato a sei ossigeni.
+
+I cristalli di quarzo trigonale si osservano in esemplari "destri" e "sinistri", inoltre godono della proprietà piezoelettrica: queste due osservazioni indicano che nella struttura cristallina manca il centro di simmetria.
+
+Il quarzo trigonale non ha il centro di simmetria, e questa caratteristica è indicata dalla proprietà del quarzo trigonale di essere piezoelettrico ovvero di deformarsi se sottoposto ad un campo elettrico e di caricarsi elettricamente se deformato.
+
+Altre varietà di silice sono:
+* l'**opale**, che è composto da sferule di silice amorfa; nell'opale nobile le sferule hanno dimensioni omogenee e sono impaccate in strati che creano un reticolo di diffrazione che dà origine a giochi di colore che redono l'opale nobiale molto apprezzato come gemma.
+* il **calcedonio** e l'**agata**, usate come pietre ornamentali.
+
+Il quarzo è un minerale fondamentale nella composizione delle rocce ignee (granito), nelle rocce metamorfiche (quarzite) e nelle rocce sedimentarie (arenarie, sabbie).  
+La silice è il componente fondamentale dello scheletro dei **radiolari**, organismi marini che forniscono la silice che compone la roccia **diaspro**.
+
+I minerali della silice hanno molti usi industriali: come abrasivi (data la grande stabilità e durezza), come materia prima nell'industria ceramica e del vetro.  
+I dispositivi elettronici sono basati sui semiconduttori di cui il silicio è il più comune e il silicio si ricava dal quarzo. Sempre in elettronica i cristalli di quarzo, in virtù della loro proprietà piezoelettrica, sono il componente fondamentale per costruire circuiti oscillanti che generano cioè segnali periodici necessari al funzionamento dei circuiti digitali.
+
+La prolungata esposizione alla silice può dare la **silicosi** che è una malattia professionale dell'apparato respiratorio.
+
+
 
 ## Feldspati
 
