@@ -1030,6 +1030,8 @@ Inoltre la giadeite forma la giada che è una gemma preziosa.
 #### Usi
 Lo spodumene è un pirosseno raro da cui si può estrarre litio.
 
+La **sillimanite** è un pirossenoide importante nelle rocce metamorfiche e fa parte del sistema polimorfo **sillimanite-cianite-andalusite**.
+
 ### Inosilicati a catena doppia: gli anfiboli
 Per la formula considerare la catena doppia in cui si uniscono sei tetraedri che danno luogo un anello esagonale (il gruppo è $Z_{4}O_{11}$) riempito dallo ione poliatomico $(OH)^{-}$.
 
@@ -1045,8 +1047,45 @@ Il **glaucofane** è un anfibolo che indica ambiente di alta pressione.
 
 Alcuni anfiboli hanno abito fibroso che è molto pericoloso per la salute (amianto).
 
-La **sillimanite** è un anfibolo importante nelle rocce metamorfiche e fa parte del sistema polimorfo **sillimanite-cianite-andalusite**.
+## Nesosilicati
 
+I **nesosilicati** sono chiamati anche **ortosilicati**, sono poco numerosi ma importanti dal punto vi vista geologico.  
+
+Neso- significa isola e questo perché questi silicati hanno una struttura in cui i tetraedri $(SiO_{4})^{4-}$ non sono collegati fra loro ma sono collegati ad altri poliedri.
+
+Nei neosilicati annoveriamo:
+* le olivine
+* i granati
+* il sistema polimorfo cianite-sillimanite-andalusite
+* gli zirconi
+
+### Olivine
+Le **olivine** hanno la formula generale $(Mg,Fe)_{2}SiO_{4}$ e costituiscono una soluzione solida completa la cui cristallizzazione è descritta dal "diagramma a due componenti perfettamente miscibili allo stato liquido e perfettamente miscibili allo stato solido".  
+Gli end members delle olivine sono la **forsterite** $Mg_{2}SiO_{4}$ e la **fayalite** $Fe_{2}SiO_{4}$.
+
+La struttura è costituita dai tetraedri $(SiO_{4})^{4-}$ che condividono gli ossigeni con degli ottaedri in cui sono centrati il magnesio o il ferro.
+
+Le olivine sono costituenti fondamentali delle rocce basiche, ignee effusive (**basalto**), ignee intrusive (**gabbro**), di rocce del mantello (**peridotiti**). Il loro nome è dovuto al tipico colore verde oliva che possiedono.
+
+Le olivine hanno anche valore come gemme.
+
+### Granati
+Anche i **granati** hanno la struttura di tetraedri $(SiO_{4})^{4-}$ legati a ottaedri.  
+I granati costituiscono due soluzioni solide.  
+I granati sono costituenti importanti delle rocce metamorfiche (**filladi**, **micascisti**, **granuliti**, **eclogiti**).
+
+I granati hanno anche valore come gemme.
+
+### Il sistema polimorfo $Al_{2}SiO_{5}$
+Il sistema polimorfo $Al_{2}SiO_{5}$ si compone della sillimanite che è un inosilicato e della cianite e andalusite che sono nesosilicati.  
+Sono importanti nelle rocce metamorfiche.
+
+### Zirconi
+Gli **zirconi** hanno la struttura di tetraedri $(SiO_{4})^{4-}$ legati a poliedri irregolari in cui sono centrati atomi di **zirconio**.  
+Gli zirconi sono molto importanti per la datazione radiometrica di rocce ignee molto antiche.
+Due proprietà che sono utili per la datazione: gli zirconi sono estremamente resistenti ai processi di alterazione e possono "sopravvivere" a più di un ciclo orogenico; inoltre contengono piccole quantità di elementi radioattivi come torio, piombo e uranio usati per la datazione.
+
+Gli zirconi hanno anche valore come gemme.
 
 # "Hateful eight"
 
