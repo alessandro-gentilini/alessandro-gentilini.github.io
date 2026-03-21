@@ -942,13 +942,13 @@ A questo punto per raggiungere la richiesta neutralità elettrica dobbiamo aggiu
 
 Partiamo dal più grande, $K^{+}$, e aggiungiamolo allo ione poliatomico 1, otteniamo così:  
 $KAlSi_{3}O_{8}$ che è chiamato **K-feldspato** (abbreviato con **KF**)[KP p.158].  
-Il K-feldspato ha i tre polimorfi **microclino** (bassa temperatura), **ortoclasio** (abbreviato con Or, media temperatura) e **sanidino** (alta temperatura). Si tratta di polimorfismo del tipo ordine-disordine.
+Il K-feldspato ha i tre polimorfi **microclino** (bassa temperatura), **ortoclasio** (abbreviato con **Or**, media temperatura) e **sanidino** (alta temperatura). Si tratta di polimorfismo del tipo ordine-disordine.
 
 Se invece aggiungiamo il sodio, $Na^{+}$, otteniamo:  
-$NaAlSi_{3}O_{8}$ che è chiamata **albite** (abbreviato con Ab).
+$NaAlSi_{3}O_{8}$ che è chiamata **albite** (abbreviato con **Ab**).
 
 Aggiungiamo ora il calcio, $Ca^{2+}$ allo ione poliatomico 2, otteniamo:  
-$CaAl_{2}Si_{2}O_{8}$ che è chiamata **anortite** (abbreviato con An).
+$CaAl_{2}Si_{2}O_{8}$ che è chiamata **anortite** (abbreviato con **An**).
 
 Così facendo abbiamo ottenuto tre minerali che compongono il **sistema ternario Ortoclasio-Albite-Anortite**:
 
@@ -994,15 +994,58 @@ Una zeolite tipica è la **cabasite**.
 
 # pdf #11 - RFM - Inosilicati e nesolicati
 
-## Inosilicati a catena singola: i pirosseni
+## Inosilicati a catena singola e doppia
 
-Per contare gli ossigeni nelle strutture degli inosilicati a catena singola tipiche dei pirosseni si possono usare dei triangoli (che sono la proiezione del tetraedro nello spazio bidimensionale di un foglio di carta o dello schermo del computer) che hanno quattro pallini, tre sui vertici ed uno all'interno del triangolo.  
+Per contare gli ossigeni nelle strutture degli inosilicati a catena singola e doppia si possono usare dei triangoli (che sono la proiezione del tetraedro nello spazio bidimensionale di un foglio di carta o dello schermo del computer) che hanno quattro pallini, tre sui vertici ed uno all'interno del triangolo.  
 Le catene sono strutture periodiche e quindi se conto gli ossigeni che stanno all'inizio del periodo (indicato nel grafico qui sotto come RU=repeating unit) non devo contare quelli che stanno alla fine del periodo, per questo motivo qui sotto ho disegnato in rosso solamente gli ossigeni da contare.  
-$Z$ sta per un catione come per esempio $Si^{4+}$ oppure $Al^{3+}$, $O$ sta per l'ossigeno.
+$Z$ sta per un catione come per esempio $Si^{4+}$ oppure $Al^{3+}$, $O$ sta per l'ossigeno.  
 Il pedice si $Z$ si ottiene contando i triangoli blu entro la RU.  
-Il pedici di $O$ si ottiene contando i pallini rossi entro la RU.
+Il pedice di $O$ si ottiene contando i pallini rossi entro la RU.
 
-![Metodo per contare gli ossigeni nelle strutture degli inosilicati a catena singola tipiche dei pirosseni.](./inosilicati_a_catena_singola_pirosseni.png)
+Nella figura qui sotto si vede il metodo per contare gli ossigeni nelle strutture degli inosilicati a catena doppia ($Z_{4}O_{11}$) e a catena singola (tutte le altre formule).
+
+![Metodo per contare gli ossigeni nelle strutture degli inosilicati a catena doppia ($Z_{4}O_{11}$) e a catena singola (tutte le altre formule).](./inosilicati_a_catena_singola_e_doppia.png)
+
+### Inosilicati a catena singola: i pirosseni
+
+La formula di base è $XY[Z_{2}O_{6}]$.
+
+A differenza dei feldspati, nei pirosseni sono assenti $Ca$ e $K$ ed iniziano ad essere presenti cationi metallici come il ferro ($Fe^{2+}$, $Fe^{3+}$), il magnesio ($Mg^{2+}$), il manganese ($Mn^{2+}$) che sono rappresentati nella formula generale da $X$ e da $Y$.
+
+Inoltre le catene sono variamente impilate dando luogo a siti che ospitano altri cationi.
+
+I pirosseni formano due serie, quella degli **ortopirosseni** (abbreviata con **opx**) che appartiene al sistema ortorombico e quella dei **clinopirosseni** (abbreviata con **cpx**) che appartiene al sistema monoclino.
+
+Nella cristallizzazione dei pirosseni, che si descrive con il "diagramma di fase a due componenti con miscibilità parziale e solvus", si osservano le lamelle di essoluzione (vedi le _exsolution
+lamellae_ nello [specifico diagramma di Perkins & Brady](diagrammi_di_fase_binari/Perkins_et_Brady-aborsub.v2.pdf)).
+
+#### Geologia
+Il nome pirosseno significa straniero (-seno da -xeno) al fuoco (piro-) (vedi [Vocabolario Treccani](https://www.treccani.it/vocabolario/pirosseno/)) perché un tempo li si pensava come componenti rari delle rocce ignee; invece i pirosseni sono i costituenti fondamentali delle rocce ignee intrusive (gabbri) ed effusive (basalti).
+
+I pirosseni sono i costituenti fondamentali delle rocce ultramafiche che compongono il mantello.
+
+La giadeite è un pirosseno che indica metamorfismo di altissima pressione.  
+Inoltre la giadeite forma la giada che è una gemma preziosa.
+
+#### Usi
+Lo spodumene è un pirosseno raro da cui si può estrarre litio.
+
+### Inosilicati a catena doppia: gli anfiboli
+Per la formula considerare la catena doppia in cui si uniscono sei tetraedri che danno luogo un anello esagonale (il gruppo è $Z_{4}O_{11}$) riempito dallo ione poliatomico $(OH)^{-}$.
+
+La catena doppia è l'elemento di base usato per creare la struttura più complessa tipica degli anfiboli composta da una coppia di catene doppie che formano una "trave a I" (in inglese _I beam_) e che dà luogo ad altri cinque siti con varie coordinazioni. Si ha quindi elevata complessità strutturale ed ampia variabilità chimica, a questa elevata variabilità allude forse il nome anfibolo che significa ambiguo (vedi [Enciclopedia Treccani](https://www.treccani.it/enciclopedia/anfibolo_(Enciclopedia-Italiana)/)).
+
+Le I beams spiegano le tracce dei piani di sfaldatura che si osservano nelle sezioni sottili degli anfiboli.
+
+#### Geologia
+Gli anfiboli sono costituenti importanti di rocce effusive ed intrusive.  
+Sono costituenti fondamentali di rocce metamorfiche note come **anfiboliti**.
+
+Il **glaucofane** è un anfibolo che indica ambiente di alta pressione.
+
+Alcuni anfiboli hanno abito fibroso che è molto pericoloso per la salute (amianto).
+
+La **sillimanite** è un anfibolo importante nelle rocce metamorfiche e fa parte del sistema polimorfo **sillimanite-cianite-andalusite**.
 
 
 # "Hateful eight"
