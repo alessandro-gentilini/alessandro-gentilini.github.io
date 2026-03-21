@@ -872,9 +872,12 @@ Il nome tectosilicato ha il prefisso tecto- che è greco e richiama il concetto 
 
 La connessione è quella per cui ogni ossigeno, detto "ossigeno ponte", è condiviso tra due tetraedri; quindi ogni ossigeno è in legame con due cationi $Si^{4+}$.
 
+Nella serie di Bowen cristallizzano alle temperature più basse.
+
 I tectosilicati possono essere suddivisi in:
 * minerali della silice
 * feldspati
+* feldspatoidi
 * zeoliti
 
 ## Minerali della silice
@@ -891,9 +894,11 @@ Altre varietà di silice sono:
 * l'**opale**, che è composto da sferule di silice amorfa; nell'opale nobile le sferule hanno dimensioni omogenee e sono impaccate in strati che creano un reticolo di diffrazione che dà origine a giochi di colore che redono l'opale nobiale molto apprezzato come gemma.
 * il **calcedonio** e l'**agata**, usate come pietre ornamentali.
 
-Il quarzo è un minerale fondamentale nella composizione delle rocce ignee (granito), nelle rocce metamorfiche (quarzite) e nelle rocce sedimentarie (arenarie, sabbie).  
+### Geologia
+Il quarzo è un minerale fondamentale nella composizione delle rocce ignee (**granito**), nelle rocce metamorfiche (**filladi**, **quarzite**) e nelle rocce sedimentarie (arenarie, sabbie).  
 La silice è il componente fondamentale dello scheletro dei **radiolari**, organismi marini che forniscono la silice che compone la roccia **diaspro**.
 
+### Usi
 I minerali della silice hanno molti usi industriali: come abrasivi (data la grande stabilità e durezza), come materia prima nell'industria ceramica e del vetro.  
 I dispositivi elettronici sono basati sui semiconduttori di cui il silicio è il più comune e il silicio si ricava dal quarzo. Sempre in elettronica i cristalli di quarzo, in virtù della loro proprietà piezoelettrica, sono il componente fondamentale per costruire circuiti oscillanti che generano cioè segnali periodici necessari al funzionamento dei circuiti digitali.
 
@@ -937,7 +942,7 @@ A questo punto per raggiungere la richiesta neutralità elettrica dobbiamo aggiu
 
 Partiamo dal più grande, $K^{+}$, e aggiungiamolo allo ione poliatomico 1, otteniamo così:  
 $KAlSi_{3}O_{8}$ che è chiamato **K-feldspato** (abbreviato con **KF**)[KP p.158].  
-Il K-feldspato ha i tre polimorfi **microclino** (bassa temperatura), **ortoclasio** (abbreviato con Or, media temperatura) e **sanidino** (alta temperatura).
+Il K-feldspato ha i tre polimorfi **microclino** (bassa temperatura), **ortoclasio** (abbreviato con Or, media temperatura) e **sanidino** (alta temperatura). Si tratta di polimorfismo del tipo ordine-disordine.
 
 Se invece aggiungiamo il sodio, $Na^{+}$, otteniamo:  
 $NaAlSi_{3}O_{8}$ che è chiamata **albite** (abbreviato con Ab).
@@ -959,13 +964,33 @@ alcali-F   /        \
          s.s. complete
 </pre>
 
-Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.
+Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.  
+Siccome i plagioclasi danno soluzioni solide complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti perfettamente miscibili allo stato liquido e perfettamente miscibili allo stato solido".
 
-Albite e Ortoclasio costituiscono gli end members delle soluzioni solide (complete ad alta temperatura; incomplete e quindi con lacune di miscibilità alle medie temperature) note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.
+Albite e Ortoclasio costituiscono gli end members delle soluzioni solide note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.  
+Alle alte temperature le soluzioni solide degli alcali feldspati sono complete e i cristalli mostrano sempre **zonatura**.  
+Alle medie temperature le soluzioni solide degli alcali feldspati sono incomplete e i cristalli mostrano **pertiti** diffuse.
+Siccome gli alcali feldspati danno soluzioni solide non complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti con miscibilità parziale e solvus".
 
+Nei feldspati sono importanti i geminati, l'albite dà il nome alla **"legge dell'albite"**; nei plagioclasi c'è la **geminazione polisintetica**.
 
+### Geologia
+I feldspati sono i componenti della maggior parte delle rocce ignee, sono presenti nelle rocce metamorfiche (**gneiss**) e nelle rocce sedimentarie (arenarie e sabbie).
+
+### Usi
+Industria ceramica (gres), industria del vetro.
+
+## Feldspatoidi
+Sono carenti in silice e per questo motivo definite "sottosature" in petrografia.  
+Hanno formule simili a quelle dei feldspati ma con pedici inferiori per il silicio.  
+Sono tipiche di alcune provincie vulcaniche/magmatiche.
 
 ## Zeoliti
+Le zeoliti hanno formule complesse e sono caratterizzate da una struttura cristallina attraversata da canali; questi canali sono l'equivalente dei fori di un setaccio e per questo motivo le zeoliti sono note anche come "setacci molecolari" (impieghi negli idrocarburi).  
+I canali hanno un diametro che consente di ospitare molecole di acqua e di scambiare cationi.  
+Le molecole d'acqua possono essere rimosse reversibilmente per riscaldamento.  
+I cationi ospitati nei canali possono essere scambiati con altri cationi in soluzione acquosa: una applicazione di questa peculiarità è l'addolcitore di acqua che diminuisce la durezza dell'acqua sostituendo i cationi di calcio e magnesio presenti nell'acqua dura con cationi sodio che vengono dalla zeolite.
+
 
 # "Hateful eight"
 
