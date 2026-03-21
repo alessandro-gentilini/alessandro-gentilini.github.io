@@ -992,6 +992,18 @@ Le molecole d'acqua possono essere rimosse reversibilmente per riscaldamento.
 I cationi ospitati nei canali possono essere scambiati con altri cationi in soluzione acquosa: una applicazione di questa peculiarità è l'addolcitore di acqua che diminuisce la durezza dell'acqua sostituendo i cationi di calcio e magnesio presenti nell'acqua dura con cationi sodio che vengono dalla zeolite.  
 Una zeolite tipica è la **cabasite**.
 
+# pdf #11 - RFM - Inosilicati e nesolicati
+
+## Inosilicati a catena singola: i pirosseni
+
+Per contare gli ossigeni nelle strutture degli inosilicati a catena singola tipiche dei pirosseni si possono usare dei triangoli (che sono la proiezione del tetraedro nello spazio bidimensionale di un foglio di carta o dello schermo del computer) che hanno quattro pallini, tre sui vertici ed uno all'interno del triangolo.  
+Le catene sono strutture periodiche e quindi se conto gli ossigeni che stanno all'inizio del periodo (indicato nel grafico qui sotto come RU=repeating unit) non devo contare quelli che stanno alla fine del periodo, per questo motivo qui sotto ho disegnato in rosso solamente gli ossigeni da contare.  
+$Z$ sta per un catione come per esempio $Si^{4+}$ oppure $Al^{3+}$, $O$ sta per l'ossigeno.
+Il pedice si $Z$ si ottiene contando i triangoli blu entro la RU.  
+Il pedici di $O$ si ottiene contando i pallini rossi entro la RU.
+
+![Metodo per contare gli ossigeni nelle strutture degli inosilicati a catena singola tipiche dei pirosseni.](./inosilicati_a_catena_singola_pirosseni.png)
+
 
 # "Hateful eight"
 
