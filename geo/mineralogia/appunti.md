@@ -989,7 +989,8 @@ Sono tipiche di alcune provincie vulcaniche/magmatiche.
 Le zeoliti hanno formule complesse e sono caratterizzate da una struttura cristallina attraversata da canali; questi canali sono l'equivalente dei fori di un setaccio e per questo motivo le zeoliti sono note anche come "setacci molecolari" (impieghi negli idrocarburi).  
 I canali hanno un diametro che consente di ospitare molecole di acqua e di scambiare cationi.  
 Le molecole d'acqua possono essere rimosse reversibilmente per riscaldamento.  
-I cationi ospitati nei canali possono essere scambiati con altri cationi in soluzione acquosa: una applicazione di questa peculiarità è l'addolcitore di acqua che diminuisce la durezza dell'acqua sostituendo i cationi di calcio e magnesio presenti nell'acqua dura con cationi sodio che vengono dalla zeolite.
+I cationi ospitati nei canali possono essere scambiati con altri cationi in soluzione acquosa: una applicazione di questa peculiarità è l'addolcitore di acqua che diminuisce la durezza dell'acqua sostituendo i cationi di calcio e magnesio presenti nell'acqua dura con cationi sodio che vengono dalla zeolite.  
+Una zeolite tipica è la **cabasite**.
 
 
 # "Hateful eight"
