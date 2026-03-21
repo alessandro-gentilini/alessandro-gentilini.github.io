@@ -81,9 +81,9 @@ Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e alt
 
 Ipotesi di ioni come sfere rigide.  
 
-Non ci sono solamente gli ioni degli elementi puri (come per esempio $Ca^{+}$ oppure $Cl^{-}$) ma ci sono anche ioni composti da più atomi come per esempio lo ione carbonato $(CO_{3})^{2-}$.
+Non ci sono solamente gli ioni degli elementi puri (come per esempio $Na^{+}$ oppure $Cl^{-}$) ma ci sono anche ioni composti da più atomi come per esempio lo ione carbonato $(CO_{3})^{2-}$.
 
-Lo ione positivo (catione) è più piccolo dello ione negativo (anione).  
+Lo ione positivo (catione) è più piccolo dello ione negativo (anione) perché il catione ha meno elettroni e quindi una "nuvola elettronica" più piccola.  
 
 Il numero di coordinazione è il numero di anioni che circonda un catione.  
 [K p.72] usa i termini **ione coordinante** per indicare lo ione soggetto e **ioni primi vicini** per indicare gli ioni a lui legati.  
@@ -92,8 +92,8 @@ Il poliedro di coordinazione descrive la disposizione geometrica degli atomi che
 
 Le coordinazioni regolari sono sei:  
 * n.c.=2 coordinazione lineare (anione-catione-anione su una linea)
-* n.c.=3 coordinazione triangolare (anioni ai vertici di un triangolo, quindi un piano, il catione è al centro del triangolo)
-* n.c.=4 coordinazione tetraedrica (anioni ai vertici di un tetraedro, catione al centro del tetraedro)
+* n.c.=3 coordinazione triangolare (anioni ai vertici di un triangolo, quindi su un piano in 2D, il catione è al centro del triangolo)
+* n.c.=4 coordinazione tetraedrica (anioni ai vertici di un tetraedro, quindi nello spazio 3D, catione al centro del tetraedro)
 * n.c.=6 coordinazione ottaedrica (anioni ai vertici di un ottaedro, catione al centro del tetraedro)
 * n.c.=8 coordinazione cubica (anioni ai vertici di un cubo, catione al centro del cubo)
 * n.c.=12 coordinazione dodecaedrica (tre anioni sotto al catione, sei anioni a "salvagente" attorno al catione, tre anioni sopra al catione)
@@ -114,9 +114,9 @@ I rapporti raggio cationico/anionico che sono gli estremi dei suddetti intervall
 
 I raggi ionici di alcuni ioni sono a pagina 30/54 del pdf 3.  
 NOTA BENE: il raggio ionico dipende dal numero di coordinazione, quindi da un punto di vista strettamente logico non posso usare i raggi ionici (che dipendono dal numero di coordinazione) per prevedere il numero di coordinazione perché questo è un ragionamento circolare. Gemini suggerisce di fare i calcoli prendendo i raggi relativi alla coordinazione 6 ma anche facendo così i conti non tornano, vedi più sotto l'esempio del carbonato di calcio.  
-Probabilmente Gemini ha suggerito 6 per via di
+Probabilmente Gemini ha suggerito 6 per via della seguente frase:
 
-   “It would seem that students can be encouraged to use Shannon-Prewitt crystal radii with “average” coordination number of 6 for radius ratio calculations.” ([Nathan, 1985, p. 218](zotero://select/library/items/G226IDX7)) ([pdf](zotero://open-pdf/library/items/8PS5ZVZH?page=4))
+> “It would seem that students can be encouraged to use Shannon-Prewitt crystal radii with “average” coordination number of 6 for radius ratio calculations.” ([Nathan, 1985, p. 218](zotero://select/library/items/G226IDX7)) ([pdf](zotero://open-pdf/library/items/8PS5ZVZH?page=4))
 
 
 Nel libro "Inorganic Chemistry" di Miessler et al. c'è l'esempio visibile nella figura seguente che evita ogni ragionamento circolare suggerendo di provare i rapporti con tutti i raggi a disposizione e poi fare una valutazione critica dei risultati.
@@ -150,7 +150,9 @@ Quando tutti i legami hanno ovunque la stessa forza la struttura si dice **isode
 Esempio: $CaCO_{3}$ (Carbonato di calcio)  
 Dalla tavola periodica sappiamo che Ca ha numero di ossidazione +2 quindi sarà presente come catione $Ca^{2+}$, quindi per la neutralità del composto si ha che l'altro ione deve essere $(CO_{3})^{2-}$ (NdA qui però bisogna sapere a priori che il composto si deve dividere in due parti: Ca e $CO_{3}$).
 
-Per quanto riguarda $(CO_{3})^{2-}$, dalle regole dei numeri di ossidazione (o, in alternativa, dalla tavola periodica) sappiamo che O ha n.o.=-2; sempre dalla tavola, per C abbiamo questi possibili n.o.: -4, +2, +4, impostiamo quindi l'equazione $q=\Sigma no_i \cdot n_i=no_{C}\cdot 1+no_{O}\cdot 3$ che diventa  
+Per quanto riguarda $(CO_{3})^{2-}$, dalle regole dei numeri di ossidazione (o, in alternativa, dalla tavola periodica) sappiamo che O ha n.o.=-2; sempre dalla tavola, per C abbiamo questi possibili n.o.: -4, +2, +4, impostiamo quindi l'equazione  
+$q=\Sigma no_i \cdot n_i=no_{C}\cdot 1+no_{O}\cdot 3$  
+che diventa  
 $-2=no_{C}\cdot 1+(-2)\cdot 3$  
 $-2=no_{C}-6$  
 $6-2=no_{C}$  
@@ -665,7 +667,17 @@ tutte le forme del sistema **cubico**
 ## Classi cristalline
 
 La gerarchia che ho inteso è: **gruppo $\rightarrow$ sistema $\rightarrow$ classe**.  
-I gruppi sono 3 (monometrico, dimetrico, trimetrico), i sistemi sono 7 (cubico, esagonale, trigonale, tetragonale, ortorombico, monoclino, triclino), complessivamente i sistemi sono suddivisi in 32 classi.
+I gruppi sono 3 (monometrico, dimetrico, trimetrico), i sistemi sono 7 (cubico, esagonale, trigonale, tetragonale, ortorombico, monoclino, triclino), esistono poi 32 classi suddivise nei 7 sistemi.
+
+Sistema|Numero di classi
+-|-
+Triclino|2
+Monoclino|3
+Ortorombico|3
+Tetragonale|7
+Trigonale|5
+Esagonale|7
+Cubico|5
 
 Dato un sistema, la sua **classe oloedrica** è la classe che ha la massima combinazione di elementi di simmetria; ad essa è associata la **forma generale** che è la forma con il maggior numero di facce (p.234 Mottana).  
 Il suddetto sistema ha poi altre classi dette **classi meroedriche** che hanno minor combinazioni di elementi di simmetria, alle classi meroedriche sono associate le **facce speciali** (p.234 Mottana).
