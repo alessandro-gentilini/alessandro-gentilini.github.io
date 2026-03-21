@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 19 marzo 2026.
+Aggiornati al 21 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -65,7 +65,8 @@ In una molecola (o in uno ione poliatomico), il **numero di ossidazione** di ogn
 p.328  
 Tabella con regole:  
 
-Procedimento: tipicamente si imposta l'equazione  
+Procedimento per determinare il numero di ossidazione degli atomi data la formula del composto:  
+tipicamente si imposta l'equazione  
 $q=\Sigma no_i \cdot n_i$  
 $no_i$ n.o. dell'elemento $i$-esimo della formula  
 $n_i$ numero di atomi dell'elemento $i$-esimo presenti nella formula  
