@@ -996,6 +996,8 @@ Una zeolite tipica è la **cabasite**.
 
 ## Inosilicati a catena singola e doppia
 
+Gli inosilicati derivano il nome dal greco inos- che significa "fibra", quindi una struttura in cui una dimensione prevale nettamente sulle altre due.
+
 Per contare gli ossigeni nelle strutture degli inosilicati a catena singola e doppia si possono usare dei triangoli (che sono la proiezione del tetraedro nello spazio bidimensionale di un foglio di carta o dello schermo del computer) che hanno quattro pallini, tre sui vertici ed uno all'interno del triangolo.  
 Le catene sono strutture periodiche e quindi se conto gli ossigeni che stanno all'inizio del periodo (indicato nel grafico qui sotto come RU=repeating unit) non devo contare quelli che stanno alla fine del periodo, per questo motivo qui sotto ho disegnato in rosso solamente gli ossigeni da contare.  
 $Z$ sta per un catione come per esempio $Si^{4+}$ oppure $Al^{3+}$, $O$ sta per l'ossigeno.  
