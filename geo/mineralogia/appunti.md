@@ -902,6 +902,67 @@ La prolungata esposizione alla silice può dare la **silicosi** che è una malat
 
 
 ## Feldspati
+Gli elementi chimici principali che compongono i silicati partecipano alla struttura cristallina come ioni, sono elencati qui i cationi principali in ordine di dimensione crescente:
+
+$Si^{4+}$, $Al^{3+}$, $Ca^{2+}$, $Na^{+}$, $K^{+}$.
+
+La formula generale dei silicati è
+
+$X_{m}Y_{n}(Z_{p}O_{q})W_{r}$
+
+dove:
+
+$X$ sono cationi di dimensione grande, a bassa carica, in coordinazione 8 (e.g. $K^{+}$),  
+$Y$ sono cationi di dimensioni medie, in coordinazione 6 (e.g. $Na^{+}$, $Ca^{2+}$),  
+$Z$ sono cationi di dimensioni piccole, ad alta carica, in coordinazione 4 (e.g. $Al^{3+}$, $Si^{4+}$),  
+$O$ è l'ossigeno,  
+$W$ sono altri gruppi anionici come $(OH)^{-}$ oppure anioni come $Cl^{-}$ ed $F^{-}$.
+
+Il rapporto $p:q$ dipende dalla struttura del silicato (neso-, soro-, ciclo-, ino- a catena singola, ino- a catena doppia, fillo-, tecto-).  
+I valori $m$, $n$ ed $r$ dipendono dal vincolo della neutralità elettrica.
+
+
+Nei tectosilicati il rapporto è un silicio per due ossigeni, quindi se prendiamo $SiO_{2}$ e lo "moltiplichiamo per 4" otteniamo la formula $Si_{4}O_{8}$ che mantiene lo stesso rapporto perché contiene 4 silici per 8 ossigeni e quindi $4:8=2:1$.  
+Notare che $SiO_{2}$ è elettricamente neutro e quindi anche $Si_{4}O_{8}$ è elettricamente neutro.  
+
+In $Si_{4}O_{8}$ possiamo ora immaginare di sostituire uno oppure due $Si^{4+}$ con altrettanti $Al^{3+}$.  
+Se ne sostituiamo uno otteniamo:  
+$AlSi_{3}O_{8}$  
+che però non può essere eletricamente neutro (perché $Al^{3+}$ ha una carica positiva in meno rispetto a $Si^{4+}$) e quindi va più correttamente scritto come  
+$[AlSi_{3}O_{8}]^{-}$ (ione poliatomico 1)  
+allo stesso modo e per lo stesso motivo, se ne sosituiamo due, otteniamo:  
+$[Al_{2}Si_{2}O_{8}]^{2-}$ (ione poliatomico 2)
+
+A questo punto per raggiungere la richiesta neutralità elettrica dobbiamo aggiungere alla formula dei cationi più grandi, li scegliamo fra $Ca^{2+}$, $Na^{+}$, $K^{+}$.  
+
+Partiamo dal più grande, $K^{+}$, e aggiungiamolo allo ione poliatomico 1, otteniamo così:  
+$KAlSi_{3}O_{8}$ che è chiamato **K-feldspato** (abbreviato con **KF**)[KP p.158].  
+Il K-feldspato ha i tre polimorfi **microclino** (bassa temperatura), **ortoclasio** (abbreviato con Or, media temperatura) e **sanidino** (alta temperatura).
+
+Se invece aggiungiamo il sodio, $Na^{+}$, otteniamo:  
+$NaAlSi_{3}O_{8}$ che è chiamata **albite** (abbreviato con Ab).
+
+Aggiungiamo ora il calcio, $Ca^{2+}$ allo ione poliatomico 2, otteniamo:  
+$CaAl_{2}Si_{2}O_{8}$ che è chiamata **anortite** (abbreviato con An).
+
+Così facendo abbiamo ottenuto tre minerali che compongono il **sistema ternario Ortoclasio-Albite-Anortite**:
+
+<pre>
+               Or oppure KF
+              /  \ K
+             /    \
+            /      \nessuna soluzione solida
+alcali-F   /        \
+          /          \
+      Na /____________\ Ca
+        Ab  plagio-C  An
+</pre>
+
+Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.
+
+Albite e Ortoclasio costituiscono gli end members delle soluzioni solide (complete ad alta temperatura, incomplete e quindi con lacune di miscibilità alle basse temperature) note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.
+
+
 
 ## Zeoliti
 
