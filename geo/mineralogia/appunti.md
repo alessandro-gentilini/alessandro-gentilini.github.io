@@ -956,11 +956,12 @@ alcali-F   /        \
           /          \
       Na /____________\ Ca
         Ab  plagio-C  An
+         s.s. complete
 </pre>
 
 Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.
 
-Albite e Ortoclasio costituiscono gli end members delle soluzioni solide (complete ad alta temperatura, incomplete e quindi con lacune di miscibilità alle basse temperature) note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.
+Albite e Ortoclasio costituiscono gli end members delle soluzioni solide (complete ad alta temperatura; incomplete e quindi con lacune di miscibilità alle medie temperature) note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.
 
 
 
