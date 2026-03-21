@@ -723,7 +723,7 @@ No: c'è almeno un asse ternario?
 
 
 
-## Classi oloedriche e forme generali
+## Classi oloedriche e forme generali (dalla più simmetrica alla meno simmetrica)
 
 Gruppo|Sistema|Note|Nome classe oloedrica|Forma generale
 -|-|-|-|-
@@ -866,8 +866,26 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 
 ### Due componenti completamente miscibili allo stato fuso e completamente miscibili allo stato solido
 
+# pdf #10 - RFM - Tectosilicati
 
+Il nome tectosilicato ha il prefisso tecto- che è greco e richiama il concetto di "costruire/costruzione" che per l'appunto si applica al caso in questione in cui tutti i tetraedri $(SiO_{4})^{4-}$ sono fra loro collegati, tramite i vertici, per dare strutture "a telaio" ("framework silicate" in inglese dove "framework" indica il concetto di telaio tridimensionale, come per esempio quello dell'automobile).
 
+La connessione è quella per cui ogni ossigeno, detto "ossigeno ponte", è condiviso tra due tetraedri; quindi ogni ossigeno è in legame con due cationi $Si^{4+}$.
+
+I tectosilicati possono essere suddivisi in:
+* minerali della silice
+* feldspati
+* zeoliti
+
+## Minerali della silice
+I minerali della silice hanno la formula $SiO_{2}$ che è molto semplice ma dà strutture cristalline complesse e molti polimorfi.
+
+Il minerale della silice più comune è il Quarzo che si presenta in polimorfi di alta temperatura (che hanno i nomi di Tridimite e Cristobalite), di alta pressione (che hanno i nomi di Coesite e Stishovite) mentre, il Quarzo a pressione e temperatura ambiente è noto come Quarzo-$\alpha$.  
+Questi polimorfi appartengono a sistemi cristallini diversi 
+
+## Feldspati
+
+## Zeoliti
 
 # "Hateful eight"
 
@@ -1167,6 +1185,8 @@ Senza il campione il campo deve essere uniforme bianco (massima luminosità).
 
 **xpol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore inserito.  
 Senza il campione il campo deve essere uniforme nero (minima luminosità). Se così non fosse allora ruotare il polarizzatore nero per ottenere la condizione di nero uniforme (si ha quando il polarizzatore superiore è a 90 gradi rispetto all'inferiore).  
+
+**RFM**: Rock Forming Minerals cioè i minerali che formano le rocce.
 
 # Glossario
 **determinazione**: giungere al nome di un minerale eseguendo un insieme di osservazioni.
