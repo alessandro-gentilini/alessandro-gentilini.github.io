@@ -227,10 +227,10 @@ Per esempio il peso molecolare di $SiO_{2}$ è $28.09+2\cdot16=28.09+32=60.09$ g
 $nOX$: numero di moli di ossido, $nOX=\frac{POX}{MW}$.  
 Continuando con l'esempio $POX=39.90$ g e $MW=60.09$ g/mol dà $nOX=39.90/60.09=0.664$ mol.
 
-$nCAT$: numero di moli del catione presente nell'ossido, $nCAT=pedice\_catione \cdot nOX$.  
+$nCAT$: numero di moli del catione presente nell'ossido, $nCAT=pedice_{catione} \cdot nOX$.  
 Nell'esempio $nCAT=1\cdot0.664=0.664$ mol
 
-$nO$: numero di moli dell'ossigeno presente nell'ossido, $nO=pedice\_ossigeno \cdot nOX$  
+$nO$: numero di moli dell'ossigeno presente nell'ossido, $nO=pedice_{ossigeno} \cdot nOX$  
 Nell'esempio $nO=2\cdot0.664=1.328$
 
 Sommare quindi $nO$ di tutti gli ossidi presenti, si ottiene $TO$ che è il numero totale di moli di ossigeno presenti nel campione.  
@@ -242,7 +242,7 @@ $nCAT : x = TO : 4$
 
 dove $x$ è il numero di moli del catione in oggetto riscalato sulla formula.  
 Nella proporzione 4 è il numero di ossigeni nella formula.  
-La proporzione si spiega così: so che nel campione analizzato ci sono $nCAT$ moli di catione essendoci $TO$ moli di ossigeno, quante sarebbero le x moli di catione se ci fossero i 4 ossigeni della formula?
+La proporzione si spiega così: so che nel campione analizzato ci sono $nCAT$ moli di catione essendoci $TO$ moli di ossigeno, quante sarebbero le $x$ moli di catione se ci fossero i 4 ossigeni della formula?
 
 Si ottengono quindi delle $x$ che devono poi essere confrontate con i pedici degli elementi della formula.  
 Nell'esempio numerico presente nel pdf, risolvendo per $x$ per tutti i cationi si ottiene:  
