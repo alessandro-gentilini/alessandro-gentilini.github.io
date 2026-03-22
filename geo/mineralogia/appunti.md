@@ -1146,12 +1146,51 @@ La lettera O nel nome è l'iniziale di ottaedro.
 La lettera i nel nome è l'iniziale di interstrato.
 * la molecola d'acqua **$H_{2}O$**.
 
+## TO
+**Caolinite** (di-ottaedrica): la caolinite è un **minerale argilloso**.  
+Le argille caoliniche sono le rocce industriali più importanti nell'industria ceramica per gres e porcellane.  
+Usate anche come filler nell'industria della carta e della plastica.  
+
+Nella formazione dei suoli, la caolinite è un prodotto della reazione tra K-feldspato e ambiente acido (per esempio dovuto a $CO_{2}$ dissolta in acqua che dà l'acido carbonico oppure agli acidi umici).  
+La reazione semplificata (alterazione superficiale e idrotermale) è  
+K-Feldspato + Acido in soluzione acquosa $\rightarrow$ caolinite + quarzo + potassio.
+
+**Serpentino** (tri-ottaedrico): ha vari polimorfi tra cui il **crisotilo** che è fibroso ed è una varietà di amianto pericolosa per la salute.
+
 ## TOT
-**Caolinite** (di-ottaedrica): le argille caoliniche sono le rocce industriali più importanti nell'industria ceramica per gres e porcellane.
+**Pirofillite** (di-ottaedrica)
 
-**Serpentino** (tri-ottaedrico): ha vari polimorfi tra cui il **crisotilo**.
+**Talco** (tri-ottaedrica): usato come filler nell'industria della carta, in farmaceutica e cosmetica.
 
-Mica (dal latino mica=briciola, anche mica auri=pagliuzza d'oro per i riflessi della muscovite?)
+## TOT+i anche note come Miche
+
+Mica, dal latino _mica_=briciola, anche _mica auri_=pagliuzza d'oro per i riflessi della muscovite.
+
+Una proprietà tipica delle miche è la sfaldabilità in foglietti.
+
+**Muscovite**: essendo un isolante elettrico ed un discreto conduttore di calore è usato, come foglietti, in elettronica per fissare i dispositivi elettronici ai dissipatori di calore.  
+È usato in cosmetica per dare effetto brillante/riflettente a smalti per unghie, rossetti, ombretti.  
+È usata nelle plastiche per l'industria automobilistica.
+
+**Biotite**: fra i più comuni minerali costituenti le rocce.  
+Non ha applicazioni commerciali.
+
+## TOT+O anche note come Cloriti
+**Cloriti**: materia prima per la produzione di zeoliti.
+
+## TOT+i+$H_{2}O$ anche note come Smectiti
+Le **smectiti** sono un importante gruppo di **minerali argillosi**.
+Hanno granulometria molto fine (d'altra parte il termine argilla è usato sia per indicare granulometria molto fine, a prescindere dalla composizione, sia per indicare i minerali argillosi che tipicamente sono fillosilicati) e elevata superficie specifica e queste proprietà le rendono ideali ad interazioni ambientali con assorbimento di acqua, cationi e molecole organiche.
+
+Le smectiti sono usate come **fanghi di perforazione** cioè soluzioni di acqua e smectite che servono per lubrificare e raffreddare la trivella di perforazione, portare in superfice i detriti (vedi [Assomineraria risponde:
+Le domande più frequenti sull’industria estrattiva](https://www.assorisorse.org/wp-content/uploads/2020/07/FAQ-Assomineraria-risponde-online.pdf)).  
+Le **argille smectitiche** sono anche dette **bentoniti**.
+
+## Geologia dei fillosilicati
+
+I fillosilicati sono costituenti fondamentali delle rocce ignee (graniti, tonaliti) e delle rocce metamorfiche (miche nei micascisti, serpentino nelle serpentiniti, clorite negli scisti verdi).  
+Sono fasi detritiche importanti nelle rocce sedimentarie (muscoviti nelle arenarie, sabbie)
+
 
 
 # "Hateful eight"
