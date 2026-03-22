@@ -802,7 +802,7 @@ Esempio specifico dei plagioclasi p22/32
 
 ## Diagrammi di fase con due componenti
 
-I diagrammi sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
+I diagrammi "animati" sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
 
 ### Due componenti completamente miscibili allo stato fuso e immiscibili allo stato solido, con punto eutettico
 

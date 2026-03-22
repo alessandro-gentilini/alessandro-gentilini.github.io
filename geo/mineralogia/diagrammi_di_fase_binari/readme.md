@@ -1,0 +1,1 @@
+I diagrammi "animati" sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
