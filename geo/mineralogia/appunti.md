@@ -1000,7 +1000,8 @@ alcali-F   /        \
 </pre>
 
 Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.  
-Siccome i plagioclasi danno soluzioni solide complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti perfettamente miscibili allo stato liquido e perfettamente miscibili allo stato solido".
+Siccome i plagioclasi danno soluzioni solide complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti perfettamente miscibili allo stato liquido e perfettamente miscibili allo stato solido".  
+Plagioclasio viene dal greco plagio+clasio: "che si spezza (-clasio) obliquamente (plagio-)".
 
 Albite e Ortoclasio costituiscono gli end members delle soluzioni solide note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.  
 Alle alte temperature le soluzioni solide degli alcali feldspati sono complete e i cristalli mostrano sempre **zonatura**.  
@@ -1143,7 +1144,7 @@ La lettera O nel nome è l'iniziale di ottaedro.
 La lettera i nel nome è l'iniziale di interstrato.
 * la molecola d'acqua **$H_{2}O$**.
 
-
+Mica (dal latino mica=briciola, anche mica auri=pagliuzza d'oro per i riflessi della muscovite?)
 
 
 # "Hateful eight"
