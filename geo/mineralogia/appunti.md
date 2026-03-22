@@ -1136,13 +1136,20 @@ I fillosilicati derivano il nome dal greco fillo- che significa "foglia", quindi
 Le strutture dei fillosilicati sono complesse e sono costruite combinando strutture più semplici.  
 Le strutture semplici sono quattro:  
 * lo **strato T**: si tratta di tetraedri (con catione centrale $Si^{4+} o $Al^{3+}$) ed ossigeni ai vertici. I tetraedri sono uniti nella struttura $Z_{2}O_{5}$. I tetraedri sono affiancati nelle due dimensioni per dare una struttura piana che si estende in maniera infinita.  
+Allo strato T sono associati i **cationi tetraedrici**.  
 La lettera T del nome è l'iniziale di tetraedro.
 * lo **strato O**: si tratta di ottaedri che ai vertici hanno $(OH)^{-}$ e/o $O^{2-}$ e al centro un catione. Gli ottaedri sono affiancati nelle due dimensioni e danno una struttura piana che si estende in maniera infinita.  
-Ci sono due sotto-tipi dello strato O: lo strato **di-ottaedrico** in cui un terzo dei siti ottaedrici è vacanted; lo strato **tri-ottaedrico** in cui tutti i siti ottaedrici sono occupati.  
+Ci sono due sotto-tipi dello strato O: lo strato **di-ottaedrico** in cui un terzo dei siti ottaedrici è vacante; lo strato **tri-ottaedrico** in cui tutti i siti ottaedrici sono occupati.  
+Allo strato O sono associati i cationi ottaedrici.  
 La lettera O nel nome è l'iniziale di ottaedro.
 * il **catione interstrato i**
 La lettera i nel nome è l'iniziale di interstrato.
 * la molecola d'acqua **$H_{2}O$**.
+
+## TOT
+**Caolinite** (di-ottaedrica): le argille caoliniche sono le rocce industriali più importanti nell'industria ceramica per gres e porcellane.
+
+**Serpentino** (tri-ottaedrico): ha vari polimorfi tra cui il **crisotilo**.
 
 Mica (dal latino mica=briciola, anche mica auri=pagliuzza d'oro per i riflessi della muscovite?)
 
@@ -1452,6 +1459,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 **determinazione**: giungere al nome di un minerale eseguendo un insieme di osservazioni.
 
 **diagnostico**: che serve alla determinazione di un minerale.
+
+**_filler_**: additivo, sostanza aggiunta ad un materiale per migliorarne le caratteristiche tecniche.
 
 **_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
 
