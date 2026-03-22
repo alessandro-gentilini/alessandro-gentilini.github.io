@@ -784,6 +784,20 @@ Invece nel caso di sostituzione accoppiata la formula non ha la parte fissa, nel
 
 Esempio specifico dei plagioclasi p22/32
 
+<div style="background-color: yellow; padding: 10px;">
+   <strong>DA FARE</strong> 
+</div>
+
+## vacanze
+<div style="background-color: yellow; padding: 10px;">
+   <strong>DA FARE</strong> 
+</div>
+
+# pdf polimorfismo
+<div style="background-color: yellow; padding: 10px;">
+   <strong>DA FARE</strong> 
+</div>
+
 # Lab #4 - Diagrammi di cristallizzazione
 
 ## Diagrammi di fase con due componenti
@@ -865,6 +879,10 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 [Link all'esempio del sistema Diopside (pirosseno) - Anortite (plagioclasio)](./diagrammi_di_fase_binari/Perkins_et_Brady-dian_animation.pdf)
 
 ### Due componenti completamente miscibili allo stato fuso e completamente miscibili allo stato solido
+
+### Peritettico
+
+### Solvus
 
 # pdf #10 - RFM - Tectosilicati
 
