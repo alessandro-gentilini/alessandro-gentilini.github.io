@@ -1072,6 +1072,8 @@ La **sillimanite** è un pirossenoide importante nelle rocce metamorfiche e fa p
 ### Inosilicati a catena doppia: gli anfiboli
 Per la formula considerare la catena doppia in cui si uniscono sei tetraedri che danno luogo un anello esagonale (il gruppo è $Z_{4}O_{11}$) riempito dallo ione poliatomico $(OH)^{-}$.
 
+![Anello esagonale negli anfiboli](./anello_esagonale_negli_anfiboli.png)
+
 La catena doppia è l'elemento di base usato per creare la struttura più complessa tipica degli anfiboli composta da una coppia di catene doppie che formano una "trave a I" (in inglese _I beam_) e che dà luogo ad altri cinque siti con varie coordinazioni. Si ha quindi elevata complessità strutturale ed ampia variabilità chimica, a questa elevata variabilità allude forse il nome anfibolo che significa ambiguo (vedi [Enciclopedia Treccani](https://www.treccani.it/enciclopedia/anfibolo_(Enciclopedia-Italiana)/)).
 
 Le I beams spiegano le tracce dei piani di sfaldatura che si osservano nelle sezioni sottili degli anfiboli.
@@ -1126,7 +1128,7 @@ Gli zirconi hanno anche valore come gemme.
 
 # pdf #12 - RFM - Fillosilicati
 
-I fillosilicati derivano il nome dal greco fillo- che significa "foglia", quindi si tratta di una struttura in cui due dimensione prevalgono nettamente sull'altra.
+I fillosilicati derivano il nome dal greco fillo- che significa "foglia", quindi si tratta di una struttura in cui due dimensioni prevalgono nettamente sull'altra.
 
 # "Hateful eight"
 
