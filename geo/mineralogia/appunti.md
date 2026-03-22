@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 21 marzo 2026.
+Aggiornati al 22 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -992,11 +992,11 @@ Le molecole d'acqua possono essere rimosse reversibilmente per riscaldamento.
 I cationi ospitati nei canali possono essere scambiati con altri cationi in soluzione acquosa: una applicazione di questa peculiarità è l'addolcitore di acqua che diminuisce la durezza dell'acqua sostituendo i cationi di calcio e magnesio presenti nell'acqua dura con cationi sodio che vengono dalla zeolite.  
 Una zeolite tipica è la **cabasite**.
 
-# pdf #11 - RFM - Inosilicati e nesolicati
+# pdf #11 - RFM - Inosilicati e nesosilicati
 
 ## Inosilicati a catena singola e doppia
 
-Gli inosilicati derivano il nome dal greco inos- che significa "fibra", quindi una struttura in cui una dimensione prevale nettamente sulle altre due.
+Gli inosilicati derivano il nome dal greco inos- che significa "fibra", quindi si tratta di una struttura in cui una dimensione prevale nettamente sulle altre due.
 
 Per contare gli ossigeni nelle strutture degli inosilicati a catena singola e doppia si possono usare dei triangoli (che sono la proiezione del tetraedro nello spazio bidimensionale di un foglio di carta o dello schermo del computer) che hanno quattro pallini, tre sui vertici ed uno all'interno del triangolo.  
 Le catene sono strutture periodiche e quindi se conto gli ossigeni che stanno all'inizio del periodo (indicato nel grafico qui sotto come RU=repeating unit) non devo contare quelli che stanno alla fine del periodo, per questo motivo qui sotto ho disegnato in rosso solamente gli ossigeni da contare.  
@@ -1088,6 +1088,10 @@ Gli zirconi sono molto importanti per la datazione radiometrica di rocce ignee m
 Due proprietà che sono utili per la datazione: gli zirconi sono estremamente resistenti ai processi di alterazione e possono "sopravvivere" a più di un ciclo orogenico; inoltre contengono piccole quantità di elementi radioattivi come torio, piombo e uranio usati per la datazione.
 
 Gli zirconi hanno anche valore come gemme.
+
+# pdf #12 - RFM - Fillosilicati
+
+I fillosilicati derivano il nome dal greco fillo- che significa "foglia", quindi si tratta di una struttura in cui due dimensione prevalgono nettamente sull'altra.
 
 # "Hateful eight"
 
