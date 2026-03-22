@@ -1132,6 +1132,20 @@ Gli zirconi hanno anche valore come gemme.
 
 I fillosilicati derivano il nome dal greco fillo- che significa "foglia", quindi si tratta di una struttura in cui due dimensioni prevalgono nettamente sull'altra.
 
+Le strutture dei fillosilicati sono complesse e sono costruite combinando strutture più semplici.  
+Le strutture semplici sono quattro:  
+* lo **strato T**: si tratta di tetraedri (con catione centrale $Si^{4+} o $Al^{3+}$) ed ossigeni ai vertici. I tetraedri sono uniti nella struttura $Z_{2}O_{5}$. I tetraedri sono affiancati nelle due dimensioni per dare una struttura piana che si estende in maniera infinita.  
+La lettera T del nome è l'iniziale di tetraedro.
+* lo **strato O**: si tratta di ottaedri che ai vertici hanno $(OH)^{-}$ e/o $O^{2-}$ e al centro un catione. Gli ottaedri sono affiancati nelle due dimensioni e danno una struttura piana che si estende in maniera infinita.  
+Ci sono due sotto-tipi dello strato O: lo strato **di-ottaedrico** in cui un terzo dei siti ottaedrici è vacanted; lo strato **tri-ottaedrico** in cui tutti i siti ottaedrici sono occupati.  
+La lettera O nel nome è l'iniziale di ottaedro.
+* il **catione interstrato i**
+La lettera i nel nome è l'iniziale di interstrato.
+* la molecola d'acqua **$H_{2}O$**.
+
+
+
+
 # "Hateful eight"
 
 O - Ossigeno  
