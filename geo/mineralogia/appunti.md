@@ -868,6 +868,22 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 
 # pdf #10 - RFM - Tectosilicati
 
+## Serie di Bowen
+La **serie di Bowen** descrive la sequenza di cristallizzazione dei minerali RFM a partire da un magma fuso. Serie è inteso come successione (o sequenza) di minerali che cristallizzano uno dopo l'altro al diminuire della temperatura.  
+
+Il processo di cristallizzazione si suddivide in tre fasi al diminuire della temperatura: fase magmatica (alta temperatura attorno 750), fase pegmatitica, fase idrotermale (bassa temperatura attorno 350 e presenza di fluidi a base di acqua) (vedi il [Glossario gemmologico nel sito della Rivista Italiana di Gemmologia](https://www.rivistaitalianadigemmologia.com/glossario/processo-magmatico/)).
+
+La serie di Bowen si suddivide in due serie che segugono due rami "paralleli", la prima detta **serie discontinua** in cui i minerali che si susseguono appartengono a gruppi diversi e la seconda serie detta **serie continua** in cui, nello stesso intervallo di temperatura della serie discontinua, i minerali cristallizzano in una specifica soluzione solida completa di tectosilicati detta dei **plagioclasi** (dall'anortite ad alta temperatura all'albite a bassa temperatura).
+
+Nella serie discontinua, al diminuire della temperatura, cristallizzano per primi i nesosilicati (olivine), poi gli inosilicati a catena singola (pirosseni), poi gli inosilicati a catena doppia (anfiboli), poi alcuni fillosilicati (biotite).
+
+Le due serie poi si uniscono in un ramo singolo in cui cristallizza il K-feldspato nei suoi tre polimorfi dipendenti dalle temperature (ortoclasio, microclino), altri fillosilicati come la muscovite e il quarzo.
+
+Si termina poi con la fase idrotermale dove cristallizzano le zeoliti, calcite, fluorite, solfuri.
+
+
+## Tectosilicati
+
 Il nome tectosilicato ha il prefisso tecto- che è greco e richiama il concetto di "costruire/costruzione" che per l'appunto si applica al caso in questione in cui tutti i tetraedri $(SiO_{4})^{4-}$ sono fra loro collegati, tramite i vertici, per dare strutture "a telaio" ("framework silicate" in inglese dove "framework" indica il concetto di telaio tridimensionale, come per esempio quello dell'automobile).
 
 La connessione è quella per cui ogni ossigeno, detto "ossigeno ponte", è condiviso tra due tetraedri; quindi ogni ossigeno è in legame con due cationi $Si^{4+}$.
@@ -962,6 +978,7 @@ alcali-F   /        \
       Na /____________\ Ca
         Ab  plagio-C  An
          s.s. complete
+ bassa - temperatura xtal -> alta
 </pre>
 
 Albite e anortite costituiscono gli end members delle soluzioni solide complete note come **plagioclasi** e descritte dalla formula $(Na,Ca)Al_{1-2}Si_{3-2}O_{8}$.  
