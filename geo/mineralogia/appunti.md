@@ -1078,6 +1078,8 @@ La catena doppia è l'elemento di base usato per creare la struttura più comple
 
 Le I beams spiegano le tracce dei piani di sfaldatura che si osservano nelle sezioni sottili degli anfiboli.
 
+La classificazione degli anfiboli è molto complessa, comprende un centinaio di termini. La cristallochimica di questo gruppo è forse la più complessa fra i silicati.
+
 #### Geologia
 Gli anfiboli sono costituenti importanti di rocce effusive ed intrusive.  
 Sono costituenti fondamentali di rocce metamorfiche note come **anfiboliti**.
