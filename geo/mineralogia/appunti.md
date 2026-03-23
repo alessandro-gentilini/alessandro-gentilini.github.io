@@ -810,6 +810,10 @@ Tutto quello che si trova sopra il liquidus è fuso.
 
 Tutto quello che si trova sotto il solidus è solido.
 
+Si ha **fusione congruente** quando un solido di una certa composizione fondendo produce un fuso con la stessa composizione. [KP p.202]
+
+**Solvus**: linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate. [KP glossario, solo pdf online, nel libro stampato non c'è!!!]
+
 I diagrammi "animati" sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
 
 
