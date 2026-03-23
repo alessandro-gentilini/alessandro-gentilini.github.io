@@ -802,7 +802,16 @@ Esempio specifico dei plagioclasi p22/32
 
 ## Diagrammi di fase con due componenti
 
+**Liquidus**: curva in cui un fuso con una determinata composizione è in equilibrio con una fase cristallina [K p.119].
+
+**Solidus**: curva in cui una fase cristallina con una determinata composizione è in equilibrio con il fuso [K p.119].
+
+Tutto quello che si trova sopra il liquidus è fuso.
+
+Tutto quello che si trova sotto il solidus è solido.
+
 I diagrammi "animati" sono presi da [Dexter Perkins & John Brady, 2007, Binary Phase Diagrams, consultato il 14 marzo 2026 all'indirizzo https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html](https://serc.carleton.edu/research_education/equilibria/binary_diagrams.html).
+
 
 ### Due componenti completamente miscibili allo stato fuso e immiscibili allo stato solido, con punto eutettico
 
