@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 22 marzo 2026.
+Aggiornati al 23 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -1005,7 +1005,7 @@ Plagioclasio viene dal greco plagio+clasio: "che si spezza (-clasio) obliquament
 
 Albite e Ortoclasio costituiscono gli end members delle soluzioni solide note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.  
 Alle alte temperature le soluzioni solide degli alcali feldspati sono complete e i cristalli mostrano sempre **zonatura**.  
-Alle medie temperature le soluzioni solide degli alcali feldspati sono incomplete e i cristalli mostrano **pertiti** diffuse.
+Alle medie temperature le soluzioni solide degli alcali feldspati sono parziali e i cristalli mostrano **pertiti** diffuse.
 Siccome gli alcali feldspati danno soluzioni solide non complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti con miscibilità parziale e solvus".
 
 Nei feldspati sono importanti i geminati, l'albite dà il nome alla **"legge dell'albite"**; nei plagioclasi c'è la **geminazione polisintetica**.
