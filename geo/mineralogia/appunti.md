@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 23 marzo 2026.
+Aggiornati al 24 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -896,6 +896,8 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 ### Peritettico
 
 ### Solvus
+
+**Pertite** Smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo. [KP glossario]
 
 # pdf #10 - RFM - Tectosilicati
 
