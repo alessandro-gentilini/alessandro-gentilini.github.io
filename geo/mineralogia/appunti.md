@@ -749,6 +749,14 @@ Le forme generali vengono dalle tabella da 12.4 a 12.10 in Mottana.
 
 # pdf #5 Soluzioni solide
 
+Le soluzioni solide si suddividono in:
+
+* sostituzionali
+* interstiziali
+* omissionali
+
+
+## Soluzioni solide sostituzionali
 Alla possibilità che in una struttura cristallina un determinato sito ospiti cationi/anioni di specie chimiche diverse sono attribuite varie denominazioni:  
 **sostituzione atomica** è il termine usato in [KP],  
 **sostituzione ionica** è il termine più corretto,  
@@ -761,7 +769,9 @@ La **soluzione solida completa** è quella che contiene tutte le proporzioni pos
 
 Nell'esempio della **serie delle olivine** si ha che l'olivina $(Mg,Fe)_{2}SiO_{4}$ ha un sito tetraedrico sempre occupato dal catione silicio ed un sito ottaedrico che può essere occupato dal catione $Mg^{2+}$ oppure dal catione $Fe^{2+}$. La proporzione $Mg^{2+}/Fe^{2+}$ varia con continuità tra i due termini estremi. L'olivina che ha il legame catione-$SiO_{4}$ più corto è quella che fonde a temperatura maggiore perché il legame corto è più forte del lungo e richiede più energia per essere rotto [KP p.205].
 
-Un esempio di sostituzione anionica è nelle muscoviti in cui all'anione $(OH)^{-}$ delle idrossi-muscovite si sostituisce l'anione $F^{-}$.
+Un esempio di sostituzione anionica è nelle muscoviti in cui all'anione $(OH)^{-}$ delle idrossi-muscovite si sostituisce l'anione $F^{-}$; sostituzione anioniche simili si hanno nell'**apatite** che è un minerale fondamentale nella composizione di ossa e denti e quindi di notevole importanza scientifica in paleontologia.
+
+I minerali membri delle soluzioni solide hanno proprietà fisiche diverse, per esempio nelle olivine il peso specifico cresce dalla Forsterite alla Fayalite.
 
 I fattori che controllano le sostituzioni atomiche sono:
 
@@ -786,18 +796,27 @@ Invece nel caso di sostituzione accoppiata la formula non ha la parte fissa, nel
 
 Un esempio di sostituzione accoppiata è quello dei plagioclasi, vedi q.n. IV p.72.
 
-I carbonati formano serie in sistemi cristallini diversi (rombico e trigonale).
+I **carbonati** formano serie in sistemi cristallini diversi (rombico e trigonale).
 
-L'estensione delle soluzioni solide nei granati dipende dalla temperatura e quindi i granati sono impiegabili come geo-termometri.
+L'estensione delle soluzioni solide nei **granati** dipende dalla temperatura e quindi i granati sono impiegabili come geo-termometri.
 
-<div style="background-color: yellow; padding: 10px;">
-   <strong>DA FARE</strong> 
-</div>
 
-## vacanze
-<div style="background-color: yellow; padding: 10px;">
-   <strong>DA FARE</strong> 
-</div>
+## Soluzioni solide interstiziali
+Le soluzioni solide interstiziali si hanno nel caso in cui le strutture cristalline presentano dei canali io delle cavità che possono ospitare ioni o molecole (e.g. acqua). Gli esempi di cavità sono i canali esagonali nel **berillo** o nelle **zeoliti**.
+
+## Soluzioni solide omissionali
+La soluzione solida omissionale si ha quando un catione di carica superiore sostituisce due o più cationi di carica inferiore lasciando uno o più siti vacanti.
+
+Un esempio si ha nel K feldspato $KAlSi_{3}O_{8}$ si può avere la sostituzione di due cationi $K^{+}$ con un catione $Pb^{2+}$ e il manifestarsi di un sito vacante: la dimensione di $K^{+}$ è paragonabile a quella di $Pb^{2+}$ e quindi in un sito il $K^{+}$ viene sostituito dal $Pb^{2+}$ e per mantere la neutralità elettrica un secondo sito che contiene $K^{+}$ deve diventare vacante perdendo il suo catione.
+
+## Conclusioni
+
+Le soluzioni solide sono importanti perché sono il meccanismo alla base della variabilità dei minerali.  
+Quasi tutti i silicati sono soluzioni solide almeno parziali.  
+
+NdA: in estrema sintesi: siti che possono ospitare ioni diversi senza mutare la struttura  
+
+
 
 # pdf polimorfismo
 <div style="background-color: yellow; padding: 10px;">
