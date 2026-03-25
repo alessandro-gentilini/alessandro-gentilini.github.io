@@ -1231,6 +1231,8 @@ Sono fasi detritiche importanti nelle rocce sedimentarie (muscoviti nelle arenar
 
 # pdf #13 RFM Carbonati - Altri: gesso, solfuri
 
+## Carbonati
+
 Il gruppo anionico $(CO_{3})^{2-}$ ha $C$ in coordinazione triangolare con gli $O$, quindi nello spazio questo gruppo anionico è una struttura bi-dimensionale.
 
 La struttura della **calcite** $CaCO_{3}$ ha il gruppo anionico triangolare $(CO_{3})^{2-}$ e il catione $Ca^{2+}$ in coordinazione ottaedrica (6) con gli ossigeni.  
@@ -1243,13 +1245,35 @@ La dolomite e la calcite sono importanti perché compongono le rocce **calcare**
 
 Il gesso $CaSO_{4}\cdot 2H_{2}O$ è di genesi evaporitica, formazione della Vena del Gesso in Romagna (evaporazione in bacini marini).
 
-## Applicazioni industriali
+### Applicazioni industriali
 
 Il carbonato di calcio è importante nella produzione del cemento.
 
 Il marmo, importantissimo materiale ornamentale, è calcare metamorfico.
 
 Il gesso è impiegato nell'edilizia (cartongesso, cava di Monte Tondo a Casola Valsenio (RA)).
+
+## Solfuri (in inglese _sulfides_)
+* I solfuri sono importanti perché allo zolfo si legano importanti materie prime (e.g. rame, zinco, nichel).  
+* Purtroppo si legano allo zolfo anche elementi tossici come l'arsenico che contamina le acque dolci e le rende pericolose per la salute umana.  
+* Altra fonte di inquinamento è l'**acid mine drainage** che è un processo chimico in cui solfuri in ambiente ossidante rilasciano acidi in soluzione acquosa (e.g. pirite $FeS_{2}$, ossigeno ed acqua danno acido solforico che crea problemi ambientali).
+* Lo zolfo emesso durante le eruzioni vulcaniche ($SO_{2}$) si combina con acqua per dare acido solforico che crea problemi ambientali.
+
+## Fosforo
+Il fosforo P è reattivo e non si trova in natura come elemento nativo ma si trova combinato con altri elementi per dare minerali.  
+La fonte principale di P è il minerale **apatite**.
+
+I minerali del fosforo possono essere di genesi magmatica o di genesi sedimentaria. Nella genesi sedimentaria l'attività biologica è sempre fondamentale, tipica è la genesi in ambiente marino.
+
+L'uso diffuso di fertilizzanti a base di fosforo dà luogo a sovraccarico di P nei fiumi e nei laghi con promozione e moltiplicazione della vita vegetale (e.g. alghe) che al suo decadimento consuma la maggior parte dell'ossigeno disciolto dando così moria della vita animale, questo processo è noto come **eutrofizzazione**.
+
+Le rocce fosfatiche sono fondamentali per la produzione di fertilizzanti e quindi per l'agricoltura e quindi per la produzione di cibo.  
+I principali giacimenti di rocce fosfatiche sono di origine sedimentaria marina.  
+Le rocce fosfatiche sono considerabili come risorse non rinnovabili perché una volta che il P è disperso non può essere recuperato e riciclato facilmente.  
+Le maggiori riserve mondiali si trovano in Marocco e questo ha importanti conseguenze geopolitiche.
+
+Il fosforo è fondamentale per la vita umana, sia perché insostituibile in agricoltura sia perché è un componente fondamentale delle piante e dell'essere umano (ossa, denti, ATP per immaggazinamento di energia nel corpo umano).
+
 
 
 
