@@ -922,7 +922,7 @@ Il sistema diopside/anortite è un modello di fusione e cristallizazione del bas
 
 ### Solvus
 
-**Pertite** Smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo. [KP glossario]
+**Pertite** (dalla città di Perth in Canada, vedi dizionario Zingarelli 1994) Smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo. [KP glossario]
 
 # pdf #10 - RFM - Tectosilicati
 
