@@ -1241,6 +1241,16 @@ La **dolomite** è un carbonato doppio $CaMg(CO_{3})_{2}$, calcio e magnesio non
 
 La dolomite e la calcite sono importanti perché compongono le rocce **calcare** e **dolomia** che formano le montagne (Alpi meridionali).
 
+Il gesso $CaSO_{4}\cdot 2H_{2}O$ è di genesi evaporitica, formazione della Vena del Gesso in Romagna (evaporazione in bacini marini).
+
+## Applicazioni industriali
+
+Il carbonato di calcio è importante nella produzione del cemento.
+
+Il marmo, importantissimo materiale ornamentale, è calcare metamorfico.
+
+Il gesso è impiegato nell'edilizia (cartongesso, cava di Monte Tondo a Casola Valsenio (RA)).
+
 
 
 
