@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 24 marzo 2026.
+Aggiornati al 25 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -759,7 +759,9 @@ Alla possibilità che in una struttura cristallina un determinato sito ospiti ca
 L'insieme dei minerali compresi tra i termini puri è detta **serie** aka **soluzione solida**.  
 La **soluzione solida completa** è quella che contiene tutte le proporzioni possibili tra le differenti specie atomiche; la **soluzione solida parziale** invece non contiene tutte le proporzioni possibili, l'intervallo di proporzioni dove non sono presenti elementi della serie è detto **lacuna di miscibilità** aka **lacuna di composizione**.
 
-Nell'esempio della **serie delle olivine** si ha che l'olivina $(Mg,Fe)_{2}SiO_{4}$ ha un sito tetraedrico sempre occupato dal catione silicio ed un sito ottaedrico che può essere occupato dal catione $Mg^{2+}$ oppure dal catione $Fe^{2+}$. La proporzione $Mg^{2+}/Fe^{2+}$ varia con continuità tra i due termini estremi.
+Nell'esempio della **serie delle olivine** si ha che l'olivina $(Mg,Fe)_{2}SiO_{4}$ ha un sito tetraedrico sempre occupato dal catione silicio ed un sito ottaedrico che può essere occupato dal catione $Mg^{2+}$ oppure dal catione $Fe^{2+}$. La proporzione $Mg^{2+}/Fe^{2+}$ varia con continuità tra i due termini estremi. L'olivina che ha il legame catione-$SiO_{4}$ più corto è quella che fonde a temperatura maggiore perché il legame corto è più forte del lungo e richiede più energia per essere rotto [KP p.205].
+
+Un esempio di sostituzione anionica è nelle muscoviti in cui all'anione $(OH)^{-}$ delle idrossi-muscovite si sostituisce l'anione $F^{-}$.
 
 I fattori che controllano le sostituzioni atomiche sono:
 
@@ -782,7 +784,11 @@ Osservazione sulle formule: nella serie delle Olivine, in cui il catione $Fe^{2+
 
 Invece nel caso di sostituzione accoppiata la formula non ha la parte fissa, nel caso dei Plagioclasi che hanno i due termini puri Albite e Anortite si ha $Na\ AlSi_{3}O_{8}$ e $Ca\ Al_{2}Si_{2}O_{8}$ e si nota come i pedici di $Al$ e di $Si$ siano diversi per i due termini puri.
 
-Esempio specifico dei plagioclasi p22/32
+Un esempio di sostituzione accoppiata è quello dei plagioclasi, vedi q.n. IV p.72.
+
+I carbonati formano serie in sistemi cristallini diversi (rombico e trigonale).
+
+L'estensione delle soluzioni solide nei granati dipende dalla temperatura e quindi i granati sono impiegabili come geo-termometri.
 
 <div style="background-color: yellow; padding: 10px;">
    <strong>DA FARE</strong> 
@@ -1019,7 +1025,7 @@ Siccome i plagioclasi danno soluzioni solide complete si ha che la loro cristall
 Plagioclasio viene dal greco plagio+clasio: "che si spezza (-clasio) obliquamente (plagio-)".
 
 Albite e Ortoclasio costituiscono gli end members delle soluzioni solide note come **alcali feldspati** o **feldspati alcalini** e descritte dalla formula $(K,Na)AlSi_{3}O_{8}$.  
-Alle alte temperature le soluzioni solide degli alcali feldspati sono complete e i cristalli mostrano sempre **zonatura**.  
+Alle alte temperature le soluzioni solide degli alcali feldspati sono complete e i cristalli mostrano sempre **zonatura**. La zonatura è il cambio di composizione del cristallo durante il suo accrescimento, in sezione sottile si osserva come una successione di curve "concentriche" che seguono l'andamento del bordo del cristallo.  
 Alle medie temperature le soluzioni solide degli alcali feldspati sono parziali e i cristalli mostrano **pertiti** diffuse.
 Siccome gli alcali feldspati danno soluzioni solide non complete si ha che la loro cristallizzazione/fusione è descritta dal "diagramma di fase a due componenti con miscibilità parziale e solvus".
 
