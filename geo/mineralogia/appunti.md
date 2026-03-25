@@ -818,10 +818,8 @@ NdA: in estrema sintesi: siti che possono ospitare ioni diversi senza mutare la 
 
 
 
-# pdf polimorfismo
-<div style="background-color: yellow; padding: 10px;">
-   <strong>DA FARE</strong> 
-</div>
+# pdf #06 Polimorfismo
+Vedi riassunto estremo nella omonima scheda.
 
 # Lab #4 - Diagrammi di cristallizzazione
 
