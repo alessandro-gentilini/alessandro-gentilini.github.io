@@ -18,7 +18,7 @@ Valitutti et al., "Chimica concetti e modelli - Terza edizione", Bologna, 2023, 
 
 ## Ioni
 
-Gli ioni negatitivi (anioni) sono tipicamente più grandi degli ioni positivi (cationi) perché essendo negativi hanno più elettroni e quindi occupano un volume maggiore.
+Gli ioni negativi (anioni) sono tipicamente più grandi degli ioni positivi (cationi) perché essendo negativi hanno più elettroni e quindi occupano un volume maggiore.
 
 Visualizzare una batteria stilo/torcia da 1.5V appoggiata su un piano:
 <pre>
@@ -81,7 +81,7 @@ Tipicamente alcuni elementi hanno n.o. noto (e.g. -2 per O, con eccezioni) e alt
 
 Ipotesi di ioni come sfere rigide.  
 
-Non ci sono solamente gli ioni degli elementi puri (come per esempio $Na^{+}$ oppure $Cl^{-}$) ma ci sono anche ioni composti da più atomi come per esempio lo ione carbonato $(CO_{3})^{2-}$.
+Non ci sono solamente gli ioni degli elementi puri (come per esempio $Na^{+}$ oppure $Cl^{-}$) ma ci sono anche ioni composti da più atomi come per esempio lo ione carbonato $(CO_{3})^{2-}$ (aka **gruppo anionico** $(CO_{3})^{2-}$).
 
 Lo ione positivo (catione) è più piccolo dello ione negativo (anione) perché il catione ha meno elettroni e quindi una "nuvola elettronica" più piccola.  
 
@@ -1228,6 +1228,21 @@ Le **argille smectitiche** sono anche dette **bentoniti**.
 
 I fillosilicati sono costituenti fondamentali delle rocce ignee (graniti, tonaliti) e delle rocce metamorfiche (miche nei micascisti, serpentino nelle serpentiniti, clorite negli scisti verdi).  
 Sono fasi detritiche importanti nelle rocce sedimentarie (muscoviti nelle arenarie, sabbie)
+
+# pdf #13 RFM Carbonati - Altri: gesso, solfuri
+
+Il gruppo anionico $(CO_{3})^{2-}$ ha $C$ in coordinazione triangolare con gli $O$, quindi nello spazio questo gruppo anionico è una struttura bi-dimensionale.
+
+La struttura della **calcite** $CaCO_{3}$ ha il gruppo anionico triangolare $(CO_{3})^{2-}$ e il catione $Ca^{2+}$ in coordinazione ottaedrica (6) con gli ossigeni.  
+La calcite forma soluzioni solide potendosi cambiare il catione $Ca^{2+}$ con cationi con carica uguale come $Mg^{2+}$ (**magnesite**) oppure $Mn^{2+}$ (**rodocrosite**) oppure $Fe^{2+}$ (**siderite**).  
+La calcite ha anche il polimorfo **aragonite** (alta pressione).
+
+La **dolomite** è un carbonato doppio $CaMg(CO_{3})_{2}$, calcio e magnesio non possono occupare la stessa posizione strutturale e quindi si ha che devono essere presenti due gruppi anionici $(CO_{3})^{2-}$.
+
+La dolomite e la calcite sono importanti perché compongono le rocce **calcare** e **dolomia** che formano le montagne (Alpi meridionali).
+
+
+
 
 
 
