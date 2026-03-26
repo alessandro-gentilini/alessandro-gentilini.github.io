@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 26 marzo 2026.
+Aggiornati al 26 marzo 2026!
 
 # Riconoscimento minerali
 Tavole in Marshak?  
