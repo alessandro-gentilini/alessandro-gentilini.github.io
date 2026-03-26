@@ -1454,7 +1454,7 @@ Il raggio ordinario è indicato con la lettera O oppure $\omega$ (omega).
 L'indice di rifrazione associato al raggio ordinario, indicato con $n_O$ o in alternativa con $n_{\omega}$, è costante, o, detto in altri termini, non dipende dalla direzione del raggio incidente. Dalla costanza di $n_O$ discende la costanza della velocità del raggio ordinario.
 
 Nei **minerali anisotropi uniassici** esiste una sola direzione di incidenza della luce per la quale si ha il fenomeno della monorifrazione; tale direzione è detta **asse ottico**.  
-La luce che incide sul minerale lungo una direzione parallela all'asse ottico darà luogo ad un unico raggio rifratto che è il sudetto raggio ordinario e che gode delle proprietà suddette.  
+La luce che incide sul minerale lungo una direzione parallela all'asse ottico darà luogo ad un unico raggio rifratto che è il suddetto raggio ordinario e che gode delle proprietà suddette.  
 Tutte le direzioni di incidenza che non sono parallele all'asse ottico danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, il primo chiamato ordinario, che ha le proprietà suddette, il secondo chiamato **straordinario** e che non segue la legge di Snell.  
 Il raggio straordinario è indicato con la lettera E oppure $\varepsilon$ (epsilon).  
 L'indice di rifrazione associato al raggio straordinario non è costante ma dipende dalla direzione di incidenza; il suo valore varia dall'estremo $n_O$, valore assunto quando il raggio incidente è parallelo all'asse ottico, all'estremo $n_E$, valore assunto quando il raggio incidente è ortogonale all'asse ottico. In alternativa, $n_E$ può essere indicato con $n_{\epsilon}$.  
