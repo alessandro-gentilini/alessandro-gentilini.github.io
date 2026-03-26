@@ -731,7 +731,7 @@ Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simme
 Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario|Bipiramidale (diesagonale)|![](bipiramidale_diesagonale.png)
 "|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario|Scalenoedrica ditrigonale|![](./scalenoedrica_ditrigonale.png)
 "|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$|Bipiramidale (ditetragonale)|![](./bipiramidale_ditetragonale.png)
-Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Bipiramidale ortorombica|![](./bipiramide_ortorombica.png)
+Trimetrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Bipiramidale ortorombica|![](./bipiramide_ortorombica.png)
 "|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due|Prismatica|![](./prismatica.png)
 "|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria|Pinacoidale|![](./pinacoidale.png)
 
