@@ -496,7 +496,7 @@ Consideriamo il reticolo rettangolare primitivo nel piano ($a\neq b$ e $\gamma=9
 
 **Legge di Haüy**:  le facce in un cristallo hanno intercette piccole e razionali con gli assi cristallografici.
 
-**Legge di Bravais**: in un cristallo le facce più frequenti sono quelle parallele si piani che hanno la massima densità reticolare.
+**Legge di Bravais**: in un cristallo le facce più frequenti sono quelle parallele ai piani che hanno la massima densità reticolare.
 
 ## Ancora sugli indici di Miller
 Siccome per la legge di Haüy gli indici di Miller sono tipicamente interi piccoli allora un piano si indica con un numero a tre cifre posto tra parentesi tonde (NdA: direi che nel caso in cui un indice di miller sia >9 allora ci vorranno le virgole per separare i tre indici).
