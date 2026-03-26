@@ -435,7 +435,7 @@ Monometrico|Cubico|$a=b=c$, $\alpha=\beta=\gamma=90$, possiede  la maggior simme
 Dimetrico|Esagonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse senario|Prisma retto a base esagonale
 "|Trigonale|$a_1=a_2=a_3\neq c$, $\alpha=\beta=\gamma=120$, $\delta$=90, asse ternario|Prisma retto a base triangolare
 "|Tetragonale|$a=b\neq c$, $\alpha=\beta=\gamma=90$|Prisma retto a base quadrata
-Monometrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Parallelepipedo
+Trimetrico|(Orto)Rombico (_tutto è ortogonale_)|$a\neq b\neq c$, $\alpha=\beta=\gamma=90$, tutto è ortogonale=i tre angoli sono uguali fra loro e uguali a 90|Parallelepipedo
 "|Monoclino (_una volta sghembo/obliquo_)|$a\neq b\neq c$, $\alpha=\gamma=90\neq \beta$, un solo angolo è diverso dagli altri due|Prisma obliquo a base rettangolare
 "|Triclino (_tre volte sghembo/obliquo_)|$a\neq b\neq c$, $\alpha\neq\beta\neq\gamma\neq 90$, tutti gli angoli sono diversi, possiede la minor simmetria
 
