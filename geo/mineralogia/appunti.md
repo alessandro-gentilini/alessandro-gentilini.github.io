@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "14 settembre 2025"
 ---
 
-Aggiornati al 25 marzo 2026.
+Aggiornati al 26 marzo 2026.
 
 # Riconoscimento minerali
 Tavole in Marshak?  
@@ -1466,7 +1466,7 @@ Si è scritto apparentemente perché la luce che incide sul minerale lungo una d
 Tutte le direzioni di incidenza che non sono parallele ad uno dei due assi ottici danno luogo al fenomeno della birifrazione che consiste nella scissione del raggio incidente in due raggi rifratti, entrambi questi raggi non seguono la legge di Snell e sono quindi entrambi raggi straordinari.  
 
 ### Collegamento tra le proprietà ottiche dei minerali e i sistemi cristallini
-Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico che dire che è un sinonimo di ortorombico.
+Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi [Hoffmann p.24]. [Peccerillo p.3] indica rombico come sinonimo di ortorombico.
 
 |Sistema cristallino|in inglese|Rifrangenza||
 |-|-|-|-|
