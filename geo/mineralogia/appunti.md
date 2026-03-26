@@ -1366,11 +1366,11 @@ Per "buco" intendo una regione del campione della sezione sottile dove manca la 
 4) Individuare la regione dove si sospetta che ci sia il buco.  
 È dello stesso colore della sorgente luminosa?  
 Se sì continuare, se no allora non si tratta di un buco.
-5) Ruotare di 360 gradi lo stage, il colore della regione cambia?  
+5) Ruotare di 360 gradi lo stage, il colore della regione cambia durante la rotazione?  
 Se sì non si tratta di buco; se no continuare.
 6) In xpol, il colore della regione sospetta è nero?  
 Se sì continuare, se no allora non si tratta di un buco.
-7) Ruotare di 360 gradi lo stage, il colore della regione resta nero?  
+7) Ruotare di 360 gradi lo stage, durante la rotazione il colore della regione resta nero?  
 Se sì allora è un buco, se no allora non è un buco.
 
 Cosa c'è nel buco? Aria? La resina epossidica che incolla la sezione del minerale al vetrino?
@@ -1408,7 +1408,7 @@ Se $n_m=n_o$ allora il granulo risulterebbe all'occhio indistinguibile dal mezzo
 Se invece $n_m$ è diverso da $n_o$ allora il granulo risulterà distinguibile dal mezzo.  
 Il rilievo è la differenza $n_m-n_o$ e i minerali sono detti avere rilievo positivo se la differenza è positiva e negativo altrimenti.  
 Viene detto rilievo perché il granulo a rilievo positivo sembra essere sopraelevato rispetto al mezzo; [Peccerillo p.15] scrive "può accadere che ai diversi osservatori uno stesso rilievo appaia di segno opposto"; [Nesse p.25] invece è più perentorio dicendo che il rilievo positivo appare simile a quello negativo ("positive and negative relief look alike").  
-[Schmidt Fig 4.26, p.76] spiega che la causa del rilievo è la riflessione totale perché quando c'è riflessione totale non c'è rifrazione e quindi l'assenza di raggi rifratti è percepita come nero e questo nero è proprio quanto si osserva.(NdA: però nella figura 4.26 il nero di osserverebbe guardando dall'alto verso il basso lungo una direzione che giace sulla pagina del libro ma nella sezione sottile se il nero è il "confine" tra due minerali diversi allora la direezione di osservazione è ortogonale alla pagina del libro e quindi a quel punto non è più vero che si vede il nero. Mi sa che mi limiterò a dire che il rilievo è causato dalla riflessione totale il cui angolo dipende dall'indice di rifrazione del minerale).
+[Schmidt Fig 4.26, p.76] spiega che la causa del rilievo è la riflessione totale perché quando c'è riflessione totale non c'è rifrazione e quindi l'assenza di raggi rifratti è percepita come nero e questo nero è proprio quanto si osserva. (NdA: però nella figura 4.26 il nero di osserverebbe guardando dall'alto verso il basso lungo una direzione che giace sulla pagina del libro ma nella sezione sottile se il nero è il "confine" tra due minerali diversi allora la direzione di osservazione è ortogonale alla pagina del libro e quindi a quel punto non è più vero che si vede il nero. Mi sa che mi limiterò a dire che il rilievo è causato dalla riflessione totale il cui angolo dipende dall'indice di rifrazione del minerale).
 
 ### A cosa serve?
 Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi diversi e seguendo poi un metodo dicotomico che arriva a collocare $n_m$ in un intervallo $n_{o1} < n_m < n_{o2}$.  
@@ -1554,23 +1554,7 @@ pol - Colori
 
 
 
-## Calibrazione
-LP sta per _line pair_, una LP corrisponde ad una riga nera con affiancata una riga bianca (vedi sezione 3.1.5.2 "Geometric resolving power" e in particolare la figura 3.28 in Luhmann _et al._, "Close-range photogrammetry and 3D imaging", 4th edition, Berlin, 2023, de Gruyter).  
-Quindi 10 LP/mm implica che una LP abbia spessore di 0.1 mm.
 
-|Ingrandimento|Misure|Foto|Foto misure|
-|-|-|-|-|
-|4||![]()|![]()|
-|10|Distanza: 2433  per 12 coppie nero/bianco|![](plan10.jpg)|![](plan10-misure.png)|
-|20|Distanza: 2413  per 6 coppie nero/bianco|![](plan20.jpg)|![](plan20-misure.png)|
-|40|Distanza: 3309  per 4 coppie nero/bianco|![](plan40.jpg)|![](plan40-misure.png)|
-
-|Ingrandimento|Misure|Equivalente mm|px/mm|$\times$|
-|-|-|-|-|-|
-|4|||||
-|10|Distanza: 2433  per 12 coppie nero/bianco|$12\times.1=1.2$|$2433/1.2=2028$|$\times1.98$|
-|20|Distanza: 2413  per 6 coppie nero/bianco|$6\times.1=.6$|$2413/.6=4022$|$\times2.06$|
-|40|Distanza: 3309  per 4 coppie nero/bianco|$4\times.1=.4$|$3309/.4=8273$||
 
 # Abbreviazioni
 **pol**: polarizzatore inferiore presente, compensatore disinserito, lente di Bertrand disinserita, polarizzatore superiore disinserito.  
