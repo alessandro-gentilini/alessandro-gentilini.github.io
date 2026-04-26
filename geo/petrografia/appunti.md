@@ -224,7 +224,7 @@ Si assume che il polarizzatore inferiore sia orientato N-S e che il crocifilo ab
 Allo stesso modo si ha estinzione parallela se nella posizione di estinzione il lato lungo del minerale con abito prismatico è parallelo all'asse verticale del crocifilo (e.g. apatite, sillimanite, olivina [Gasp_pdf_8 122/126]).  
 
 **Estinzione inclinata**: 
-
+Si ha estinzione inclinata se nella posizione di estinzione il lato lungo del minerale con abito prismatico forma un certo angolo con l'asse verticale del crocifilo (e.g. augite ha angolo > 40° [Gasp_pdf_8 124/126], sanidino geminato, plagioclasio geminato che presena geminazione polisintetica che segue la "legge dell'albite").  
 
 
 ## Tavole determinative
