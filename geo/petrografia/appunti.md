@@ -4,18 +4,6 @@ author: "Appunti di Alessandro Gentilini"
 date: "26 aprile 2026"
 ---
 
-# Procedura osservazioni sezioni sottili
-
-1) Osservazione a occhio nudo
-    * sono presenti minerali scuri?
-    * se sì, in che proporzione (areale)?
-
-
-
-
-
-
-
 # Ottica mineralogica
 
 * Rifrazione e legge di Snell.  
@@ -207,6 +195,10 @@ Minerali anisotropi (o birifrangenti)
 
 ## Scheda
 <pre>
+1) Osservazione a occhio nudo
+    * sono presenti minerali scuri?
+    * se sì, in che proporzione (areale)?
+
 SCHEDA OSSERVAZIONI AL MICROSCOPIO POLARIZZATORE
 
 Legenda
@@ -251,7 +243,6 @@ pol - Assorbimento
 pol - Colore
    Ruotando il piatto il colore
      Non cambia [ ] ⇒ il minerale è isotropo (oppure è tagliato parallelo a un piano che contiene asse ottico?)
-     Dicroico [ ] 
    Pleocroico [ ]
 
 pol - Colori
@@ -282,6 +273,7 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 **diagnostico**: che serve alla determinazione di un minerale.
 
+**dicroismo**: il pleocroismo nei minerali birifrangenti monoassiche è definito dicroismo.
 
 **_Grain mount_**: granuli di minerale immersi in liquido con indice di rifrazione noto. [Nesse, Appendice A].
 
