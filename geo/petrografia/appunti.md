@@ -81,7 +81,7 @@ Cosa c'è nel buco? Aria? La resina epossidica che incolla la sezione del minera
 A cosa serve individuare un buco? [Peccerillo p.13] nella stima dell'indice di rifrazione relativo tramite _linea di Becke_ suggerisce di individuare un vuoto come regione ad indice di rifrazione noto (Balsamo del Canada, resina epossidica) con cui confrontare l'indice di rifrazione del minerale adiacente al vuoto.
 
 ## Tattiche
-“However, in routine work, identifications can usually be made without complete data, and for many common minerais only selected data needs to be obtained to confirm a tentative identification.” ([Nesse, 1991, p. 114](zotero://select/library/items/YUXCIT35)) ([pdf](zotero://open-pdf/library/items/EBMYA3PT?page=127))
+“However, in routine work, identifications can usually be made without complete data, and for many common minerals only selected data needs to be obtained to confirm a tentative identification.” ([Nesse, 1991, p. 114](zotero://select/library/items/YUXCIT35)) ([pdf](zotero://open-pdf/library/items/EBMYA3PT?page=127))
 
 ## Utile riassunto?
 “In this textbook, only the basic concepts and methods of polarising microscopy will be described.” ([Okrusch and Frimmel, 2020, p. 20](zotero://select/library/items/4GDH9SN2)) ([pdf](zotero://open-pdf/library/items/MGPA822C?page=31))
@@ -216,8 +216,14 @@ Per stimare con maggiore accuratezza il colore di interferenza (e quindi la pote
 # Figure di interferenza e conoscopia
 
 # Estinzione
-Si assume che il polarizzatore inferiore sia orientato N-S.
-Estinzione parallela: l
+In xpol, si hanno quattro angoli (distanti 90 gradi) di rotazione del piatto ai quali un cristallo, colorato per gli altri angoli, appare nero (opaco); queste posizioni del piatto sono dette posizioni di **estinzione**; a 45 gradi da una di queste posizioni si ha massima trasmissione della luce.
+
+Si assume che il polarizzatore inferiore sia orientato N-S e che il crocifilo abbia l'asse verticale parallelo al N-S del polarizzatore.
+
+**Estinzione parallela**: si ha estinzione parallela se nella posizione di estinzione le direzioni di sfaldatura sono parallele all'asse verticale del crocifilo (e.g. biotite [Gasp_pdf_8 33/126]).  
+Allo stesso modo si ha estinzione parallela se nella posizione di estinzione il lato lungo del minerale con abito prismatico è parallelo all'asse verticale del crocifilo (e.g. apatite, sillimanite, olivina [Gasp_pdf_8 122/126]).  
+
+**Estinzione inclinata**: 
 
 
 
