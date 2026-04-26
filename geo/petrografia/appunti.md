@@ -11,33 +11,36 @@ Regoletta mnemonica di raggio rifratto che si avvicina/allontana dalla normale a
 
 * Riflessione totale: si ha quando angolo i dà angolo r >= 90. Per l'i che dà riflessione totale: $i=\arcsin(\frac{n_{vuoto}}{n})$ dove $n_{vuoto}$ è 1 e $n$ è l'indice di rifrazione del materiale in oggetto.
 Per esempio il diamante ha $n=2.42$ e quindi $i=\arcsin(\frac{1}{2.42})=24.41°$.
-Vedi [Ottica, p.8 ].
+Vedi [Gasp_pdf_8, p.8 ].
 
 * Birifrangenza: Treccani dizionario
 
 * Sezione basale: the section perpendicular to the [001] direction
 which is called the basal section [Schmidt p.25].
 
-* In pol: un minerale può presentare differente assorbimento della luce (o anche differente colore, [Peccerillo, p.15]) in dipendenza della rotazione, questo fenomeno si chiama _pleocroismo_; lo stesso minerale può presentare il _pleocroismo_ oppure non presentarlo in dipendenza da quale sia l'orientamento del cristallo nella sezione sottile [Ottica, p.31-32].  
+* In pol: un minerale può presentare differente assorbimento della luce (o anche differente colore, [Peccerillo, p.15]) in dipendenza della rotazione, questo fenomeno si chiama _pleocroismo_; lo stesso minerale può presentare il _pleocroismo_ oppure non presentarlo in dipendenza da quale sia l'orientamento del cristallo nella sezione sottile [Gasp_pdf_8, p.31-32].  
 Come esempio la sezione basale (001) della biotite non mostra pleocroismo mentre invece la mostra la sezione (010).
 
 * Ritardo in $\lambda$ per alcuni colori: esempio del quarzo, cosa significa "B 0.568"?
 Si prende il ritardo del quarzo che è 270nm, lo si divide per la lunghezza d'onda convenzionale del blu, che è 475nm ed è nel riquadro grigio in basso a destra, e si ottiene 0.568 che è la risposta alla domanda iniziale.
-[Ottica, p.56].  
+[Gasp_pdf_8, p.56].  
 
-* Cosa significa "Sezione perpendicolare asse ottico; nessuna direzione di vibrazione privilegiata. Granulo sempre estinto!"? [Ottica, p.64]  
+* Cosa significa "Sezione perpendicolare asse ottico; nessuna direzione di vibrazione privilegiata. Granulo sempre estinto!"? [Gasp_pdf_8, p.64]  
 Significa che se il granulo è stato tagliato dando una lamina piana (sezione s.s. o anche sezione sottile) perpendicolare all'asse ottico allora non si avrà mai birifrangenza, questo perché "la luce che attraversa un cristallo di calcite o più in generale un cristallo dei sistemi trigonale, tetragonale o esagonale, **in una direzione non parallela all'asse di simmetria verticale**, si scinde in due onde che si propagano all'interno del cristallo con diverse velocità. [Peccerillo p.2]  
-Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è ortogonale all'asse ottico e quindi la luce è parallela all'asse ottico e quindi non si ha birifrangenza; qui direi che asse ottico ha lo stesso significato di asse di simmetria verticale (vedi anche [Ottica, p.69] dove si dice "sezione normale all’asse ottico (normale all’asse cristallografico c).").
+Quindi la luce incide ortogonalmente sulla lamina piana, la lamina piana è ortogonale all'asse ottico e quindi la luce è parallela all'asse ottico e quindi non si ha birifrangenza; qui direi che asse ottico ha lo stesso significato di asse di simmetria verticale (vedi anche [Gasp_pdf_8, p.69] dove si dice "sezione normale all’asse ottico (normale all’asse cristallografico c).").
 
-* "Propagazione della luce in un cristallo di quarzo" [Ottica, p.68] viene dal libro "Optical Mineralogy" di David Shelley, 1985. Ci sono anche immagini praticamente uguali in "Manual of optical mineralogy" di David Shelley, 1975 (per esempio figura 18, p.27, vedi [copia consultabile su archive.org previo prestito (_borrow_)](https://archive.org/details/manualofopticalm0000shel/page/n5/mode/2up)).
-
-
+* "Propagazione della luce in un cristallo di quarzo" [Gasp_pdf_8, p.68] viene dal libro "Optical Mineralogy" di David Shelley, 1985. Ci sono anche immagini praticamente uguali in "Manual of optical mineralogy" di David Shelley, 1975 (per esempio figura 18, p.27, vedi [copia consultabile su archive.org previo prestito (_borrow_)](https://archive.org/details/manualofopticalm0000shel/page/n5/mode/2up)).
 
 * colore di interferenza dipende da come è orientato minerale (gli autori scrivono anche che "dipende dalla sezione") all'interno della sezione sottile?
 
 * per valutare il colore di interferenza scegliere ritardi più alti? (vedi pdf lab5a, lab5b, lab5c)
 
 * che angolo c'è tra l'asse ottico e gli assi della cella elementare del reticolo?
+
+* il polarizzatore inferiore ha un certo orientamento, mi sembra di aver capito che convenzionalmente si indichi, sul piano del piatto rotante, ovest a sinistra dell'osservatore che guarda negli oculari, est a destra dell'osservatore, nord e sud di conseguenza (i.e. nord di fronte all'osservatore, sud alle spalle dell'osservatore). Da p.20 in Peccerillo deduco che il polarizzatore inferiore è orientato N-S e questa direzione corrisponde alla linea verticale del crocifilo.
+
+* quale è l'orientamento del polarizzatore inferiore di un microscopio?  
+  Individuare un cristallo di biotite, ruotare il piatto per ottenere massimo assorbimento di luce (i.e. il cristallo deve apparire il più scuro possibile), l'orientamento del polarizzatore inferiore è quello parallelo alle tracce di sfaldatura della biotite nella suddetta posizione [Gasp_pdf_8 33/126].
 
 ## Osservazioni in pol
 
@@ -116,11 +119,11 @@ Si può stimare $n_m$ di granuli preparandone vari grain mount con mezzi liquidi
 
 ## Linea di Becke
 ### Come si osserva?
-In  pol, obiettivo a medio ingrandimento (10X), chiudendo leggermente il diaframma sul condensatore per aumentare il contrasto [Ottica p.24].
+In  pol, obiettivo a medio ingrandimento (10X), chiudendo leggermente il diaframma sul condensatore per aumentare il contrasto [Gasp_pdf_8 p.24].
 
 ### Come appare in sezione sottile?
 In sezione sottile a fuoco la linea di Becke non appare.  
-La linea di Becke, che è una linea (aka frangia [Ottica p.24]) molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
+La linea di Becke, che è una linea (aka frangia [Gasp_pdf_8 p.24]) molto chiara, appare all'interfaccia tra due mezzi diversi (due minerali o un minerale ed il collante) se si sfuoca abbassando o alzando (attenzione a non sbattere il vetrino coprioggetto contro all'obiettivo!) il piatto girevole.
 
 ### Definizioni e principi
 I frammenti di minerale sono tipicamente assottigliati ai bordi e quindi hanno grosso modo la forma di una lente; questa lente grossolana può essere convergente ($n_m>n_o$) oppure divergente ($n_m<n_o$) e la convergenza/divergenza sono la causa dell'apparire della linea di Becke.  
@@ -142,7 +145,7 @@ La "ruota dei colori" riporta i colori posizionati su una circonferena: se un mi
 
 Se in pol il colore di un minerale è nero e non cambia con la rotazione allora quel minerale è opaco ("an opaque mineral (Fe-Ti oxide) is shown which will not change its black appearance during rotation of the microscopic stage." [Schmidt p.50]).)
 
-Se in pol un minerale non cambia colore mentre si ruota il piatto allora è un minerale isotropo ("Isotropic minerals possess only one index of refraction and display only one color, no matter how the crystal is cut." [Schmidt p.50]).
+Se in pol un minerale non cambia colore mentre si ruota il piatto allora potrebbe essere un minerale isotropo ("Isotropic minerals possess only one index of refraction and display only one color, no matter how the crystal is cut." [Schmidt p.50]) oppure potrebbe essere un minerale tagliato secondo una sezione che non esibisce assorbimento della luce dipendente dalla rotazione (e.g. sezione basale di biotite [Gasp_pdf_8 32/126]).
 
 Se in pol un minerale cambia colore mentre si ruota il piatto allora è un minerale anisotropo ("Colored anisotropic minerals are pleochroic and the image taken captures just an example of the possible color and intensity as displayed four times during a 360° rotation." [Schmidt p.50]).
 
@@ -176,6 +179,47 @@ Per i nomi dei sistemi cristallini in italiano vedi [K&P p.82], in inglese vedi 
 |Ortorombico (aka rombico)|Orthorombic|Birifrangente Biassico|Anisotropo|
 |Monoclino|Monoclinic|Birifrangente Biassico|Anisotropo|
 |Triclino|Triclinic|Birifrangente Biassico|Anisotropo|
+
+# Abito
+Da [Gasp_pdf_8].
+|Forma osservata|Abito|Esempi|
+|-|-|-|
+|Rettangoli lunghi e stretti|prismatico|sillimanite, pirosseni alcalini (egirina-augite), ortopirosseni|
+|Esagoni|cubico|sodalite|
+|Forme isodiametriche|cubico|spinello, granati|
+|Rombi|cubico|olivina (basale), sillimanite (basale)|
+|Quadrilatero irregolare|prismatico tozzo|pirosseno (augite), olivina|
+
+# Colori di interferenza
+
+L'intensità di colori di interferenza dipende dall'orientamento dei cristalli nella sezione sottile, l'olivina ne mostra da bassi (ritardo di 100nm) ad alti (ritardo di 1200nm) [Gasp_pdf_8 p.61/126].
+
+|colori|ritardo/nm|esempi|
+|-|-|-|
+|Bassi|circa 200|quarzo, microclino, plagioclasi, ortoclasio
+|Medi||augite
+|Alti|circa 1200|olivina, muscovite, biotite, calcite
+
+## Stimare la potenza birifrattiva
+
+$\Delta=d\cdot \delta$  
+$\Delta$ è il ritardo (tipicamente in nm)  
+$d$ è lo spessore della sezione sottile (tipicamente in um)  
+$\delta$ è la potenza birifrattiva (numero puro), è la differenza tra indice di rifrazione raggio lento e veloce
+
+Dalla tavola di Michel-Levy si individua il colore, dal colore si legge sulla scala orizzontale (tipicamente in basso) il ritardo, la linea verticale del ritardo interseca la linea orizzontale dello spessore convenzionale della sezione sottile (30um) in un punto, la retta che passa per il suddetto punto  e l'origine è etichettata con la potenza birifrattiva (tipicamente sulla scala orizzontale alta e sulla verticale destra).
+
+### Uso del compensatore per stimare la potenza birifrattiva
+
+Per stimare con maggiore accuratezza il colore di interferenza (e quindi la potenza birifrattiva) si può usare il compensatore 550nm rosso del primo ordine.
+
+# Figure di interferenza e conoscopia
+
+# Estinzione
+Si assume che il polarizzatore inferiore sia orientato N-S.
+Estinzione parallela: l
+
+
 
 ## Tavole determinative
 Le tavole determinative in [Peccerillo p.180-184] sono suddivise in :
@@ -298,7 +342,7 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 [Nesse] William D. Nesse, Introduction to optical mineralogy, New York, 1991, Oxford University Press.
 
-[Ottica] Corso di Mineralogia 
+[Gasp_pdf_8] Corso di Mineralogia 
 Scienze Geologiche 
 A.A. 2024 / 2025 
 Lezioni introduttive al 
