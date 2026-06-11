@@ -115,13 +115,18 @@ La superficie topografica è la funzione $z=f(x,y)$ dove $z$ è la quota, $x$ è
 $s=dd-90°$
 2) Individuare l'isoipsa più vicina al punto $P$, detta isoipsa abbia quota $q$.
 3) Individuare il punto $Q$ più vicino a $P$.
-4) Disegnare la direzione del piano passante per $Q$: disegnare un segmento rettilineo che passa per $Q$ e che è ruotato di $s$ gradi in senso orario rispetto al Nord.  
+4) Disegnare in $Q$ il simbolo della giacitura (preferisco quello che ha la freccia che indica l'immersione).
+5) Disegnare la direzione (_strike_) del piano passante per $Q$: disegnare un segmento rettilineo che passa per $Q$ e che è ruotato di $s$ gradi in senso orario rispetto al Nord.  
 Scrivere vicino al segmento la quota $q$.  
-Questo segmento rettilineo è una **direttrice**, in particolare è la direttrice alla quota $q$.
-5) Adesso si devono disegnare le altre direttrici, quelle a quote $<q$ e quelle a quote $>q$.
-6) Sia $h$ l'equidistanza fra le curve di livello ed $d$ la distanza in pianta tra due direttrici adiacenti, $d$ è incognita; vale la formula $\tan\delta=h/d$ quindi $d=h/\tan\delta$. Le direttrici devono essere distanti l'una dall'altra di $d$ opportunamente messo alla scala della carta.
-
-
+Questo segmento rettilineo è una **direttrice**, in particolare è la direttrice alla quota $q$ che indico con il simbolo $D_q$.
+6) Adesso si devono disegnare le altre direttrici, quelle a quote $<q$ e quelle a quote $>q$.
+7) Sia $h$ l'equidistanza fra le curve di livello ed $d$ la distanza in pianta tra due direttrici adiacenti, $d$ è incognita; vale la formula $\tan\delta=h/d$ quindi $d=h/\tan\delta$. Le direttrici devono essere distanti l'una dall'altra di $d$ opportunamente messo alla scala della carta.
+8) Disegnare la direttrice a quota inferiore $D_{q-h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte indicata dalla freccia del simbolo di giacitura. Spiegazione: la freccia indica dove il piano immerge e quindi dove la quota diminuisce.
+9) Disegnare la direttrice a quota superiore $D_{q+h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte opposta a quella indicata dalla freccia del simbolo di giacitura.
+10) Disegnare le altre direttrici $D_{q\pm i\cdot h}$ con $i>1$.
+11) Per ogni direttrice $D_{q\pm i\cdot h}$ individuare i punti di intersezione con le corrispondenti isoipse $q\pm i\cdot h$.
+12) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
+La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
 
 
 
