@@ -1,3 +1,11 @@
+---
+title: "Rilevamento geologico - A.A. 2025-25"
+author: "Appunti di Alessandro Gentilini"
+date: "18 ottobre 2025"
+---
+
+Aggiornati all'11 giugno 2026!
+
 # Orientazione di superfici
 
 La superficie è modellata con un piano, o, in altre parole, è assimilata ad un piano.
@@ -15,6 +23,12 @@ L'inclinazione 90° corrisponde ad una superficie verticale.
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
 La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua liquida sotto l'azione della forza di gravità.  
 La regola della mano destra dice di appoggiare il palmo della mano destra alla superficie da orientare e rendere il pollice parallelo alla direzione, in tal modo l'indice sarà parallelo alla immersione.
+
+|Nome|in inglese|simbolo|
+|-|-|-|
+|Direzione|_Strike_|$s$|
+|Immersione|_Dip direction_|$dd$|
+|Inclinazione|_Dip_|$\delta$|
 
 # Orientazione di linee
 
@@ -85,9 +99,34 @@ Come trovare l'inclinazione della superficie?
 Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
 Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
 
+# Piani
+* Strati
+* Confini/limiti planari tra unità diverse (confini/limiti litostratigrafici)
+* Piani di faglia (la faglia è la frattura in due parti di un volume di roccia con conseguente moto relativo delle due parti, la superficie della frattura è assimilabile ad un piano detto _piano/specchio di faglia_)
+* Superfici assiali di pieghe (definirle)
+
+# Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica
+
+La superficie topografica è la funzione $z=f(x,y)$ dove $z$ è la quota, $x$ è la longitudine e $y$ è la latitudine (vedi [Bonciani]).
+
+È data la coordinata di un punto $P$ in cui si è misurata la giacitura di un piano espressa come immersione/inclinazione ($dd$/$\delta$); si vuole ricavare l'intersezione di questo piano con la superficie topografica e riportare in carta tale intersezione.
+
+1) Calcolare la direzione $s$ del piano: per la regola della mano destra la direzione si ottiene sottraendo 90° dall'immersione.  
+$s=dd-90°$
+2) Individuare l'isoipsa più vicina al punto $P$, detta isoipsa abbia quota $q$.
+3) Individuare il punto $Q$ più vicino a $P$.
+4) Disegnare la direzione del piano passante per $Q$: disegnare un segmento rettilineo che passa per $Q$ e che è ruotato di $s$ gradi in senso orario rispetto al Nord.  
+Scrivere vicino al segmento la quota $q$.  
+Questo segmento rettilineo è una **direttrice**, in particolare è la direttrice alla quota $q$.
+5) Adesso si devono disegnare le altre direttrici, quelle a quote $<q$ e quelle a quote $>q$.
+6) Sia $h$ l'equidistanza fra le curve di livello ed $d$ la distanza in pianta tra due direttrici adiacenti, $d$ è incognita; vale la formula $\tan\delta=h/d$ quindi $d=h/\tan\delta$. Le direttrici devono essere distanti l'una dall'altra di $d$ opportunamente messo alla scala della carta.
+
+
 
 
 
 # Bibliografia
+
+[Bonciani] Bonciani & Conti, Costruzione di profili topografici, 2022.
 
 [Fossen] Haakon Fossen, Geologia strutturale, Bologna 2020, Zanichelli.
