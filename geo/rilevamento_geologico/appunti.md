@@ -128,6 +128,31 @@ Questo segmento rettilineo è una **direttrice**, in particolare è la direttric
 12) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
 
+# Glossario da "Introduzione al corso", pdf "Lez 0_Rilevamento geologico - programma generale"
+
+**Affioramenti rocciosi**
+
+**Limiti stratigrafici**
+
+**Piani di strato**
+
+**Strutture tettoniche**
+
+**Successione stratigrafica**
+
+**Superfici tettoniche**
+
+# Glossario da "Il Rilevamento Geologico e l’approccio al terreno", pdf "Lez 1_Introduzione al Rilevamento"
+
+**Scala del panorama**
+
+**Scala dell'affioramento**
+
+**Scala del campione mesoscopico di roccia**
+
+# Difficoltà nell'individuare le superfici di stratificazione
+
+Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
 
 
 # Bibliografia
