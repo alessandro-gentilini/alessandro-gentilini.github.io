@@ -99,7 +99,7 @@ Come trovare l'inclinazione della superficie?
 Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
 Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
 
-# Piani
+# Strutture planari
 * Strati
 * Confini/limiti planari tra unità diverse (confini/limiti litostratigrafici)
 * Piani di faglia (la faglia è la frattura in due parti di un volume di roccia con conseguente moto relativo delle due parti, la superficie della frattura è assimilabile ad un piano detto _piano/specchio di faglia_)
@@ -128,7 +128,9 @@ Questo segmento rettilineo è una **direttrice**, in particolare è la direttric
 12) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
 
-# Glossario da "Introduzione al corso", pdf "Lez 0_Rilevamento geologico - programma generale"
+# Glossario
+
+## pdf "Lez 0_Rilevamento geologico - programma generale", "Introduzione al corso"
 
 **Affioramenti rocciosi**
 
@@ -142,7 +144,7 @@ La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezio
 
 **Superfici tettoniche**
 
-# Glossario da "Il Rilevamento Geologico e l’approccio al terreno", pdf "Lez 1_Introduzione al Rilevamento"
+## pdf "Lez 1_Introduzione al Rilevamento", "Il Rilevamento Geologico e l’approccio al terreno"
 
 **Scala del panorama**
 
@@ -150,9 +152,42 @@ La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezio
 
 **Scala del campione mesoscopico di roccia**
 
+**Percorsi circolari**
+
+**Percorsi lineari (traverse)**
+
+**Percorsi seguendo i contatti**
+
+## pdf "Lez 2_Limiti e strutture geologiche", "Tipologia delle strutture geologiche"
+
+**Strutture planari**
+
+**Elementi lineari**
+
+**Strutture primarie** formazione
+
+**Strutture tettoniche** deformazione
+
+Tabella dedotta dalla prefazione in Fossen.
+|Tipo di deformazione|Esempi
+|-|-|
+|Fragile _Brittle_|Faglia _Fault_|
+|Duttile _Ductile_|Piega _Folding_|
+
 # Difficoltà nell'individuare le superfici di stratificazione
 
 Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
+
+# Orientare uno sketch panoramico con la bussola Brunton
+0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio.
+1) Aprire la bussola, il coperchio va vicino al corpo.
+2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
+3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
+4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
+
+# Domande
+
+Limite vs confine vs contatto.
 
 
 # Bibliografia
