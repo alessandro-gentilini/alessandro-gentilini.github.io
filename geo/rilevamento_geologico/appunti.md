@@ -105,6 +105,8 @@ Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica 
 * Piani di faglia (la faglia è la frattura in due parti di un volume di roccia con conseguente moto relativo delle due parti, la superficie della frattura è assimilabile ad un piano detto _piano/specchio di faglia_)
 * Superfici assiali di pieghe (definirle)
 
+**N.B.**: la struttura si approssima con un piano infinito ma un modello più accurato è quello di un parallelepipedo finito.
+
 # Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica
 
 La superficie topografica è la funzione $z=f(x,y)$ dove $z$ è la quota, $x$ è la longitudine e $y$ è la latitudine (vedi [Bonciani]).
@@ -189,9 +191,17 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 
 Limite vs confine vs contatto.
 
+# Isoipse aka curve di livello
+
+Data topografia $z=f(x,y)$ densa allora si usa l'algoritmo "Marching squares" per ottenere le curve di livello (vedi Wenger 2013).
+
+Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazione (vedi pdf Conti su profili topografici).
+
 
 # Bibliografia
 
-[Bonciani] Bonciani & Conti, Costruzione di profili topografici, 2022.
+[Bonciani] BONCIANI & CONTI, Costruzione di profili topografici, 2022.
 
-[Fossen] Haakon Fossen, Geologia strutturale, Bologna 2020, Zanichelli.
+[Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
+
+[Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
