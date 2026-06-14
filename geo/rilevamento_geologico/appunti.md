@@ -130,7 +130,73 @@ Questo segmento rettilineo è una **direttrice**, in particolare è la direttric
 12) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
 
+
+
+# Sezioni speditive
+Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
+
+Con **limite** si intende la curva che rappresenta l'intersezione di un piano con la superficie topografica.
+
+Un limite in carta può appartenere ad una di queste classi
+1) verticale
+2) orizzontale
+3) reggipoggio
+4) franapoggio meno inclinata del pendio
+5) franapoggio più inclinata del pendio
+
+Per sezione speditiva:
+
+1) individuare in carta il limite di interesse, è limite tra due elementi geologici
+2) classificare il limite usando lo schema della figura seguente  
+![Relazione tra i limite in carta e topografia, p14/73 in pdf "Lez 5_Elementi di stratimetria"](giacitura_e_topografia.png), la classificazione si basa sulla forma del limite rispetto a quella delle isoipse a lui vicine.
+3) determinare quale elemento geologico sta in alto topografico (aka alle quote più alte) e quale sta in basso topografico (aka alle quote più basse) oservando le quote delle isoipse che interessano i due elementi
+4) disegnare la sezione geologica speditiva tipica di una delle cinque classi suddette. È speditiva perché le inclinazioni non sono calcolate e quindi in sezione sono solo indicative.
+5) ripetere eventualmente per un altro limite.
+
+# Metodo dei tre punti
+Da p34/73 a p39/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
+
+Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'intersezione del suddetto piano con la superficie topografica.
+
+1) Individuare l'equidistanza tra le curve di livello, sia $e$.
+2) Per ogni punto, disegnare il punto semplificato sulla isoipsa più vicina.
+3) Costruire il triangolo che unisce i tre punti.
+4) Per ogni lato del triangolo fare queste operazioni
+   * individuare l'estremo a quota massima, la quota sia $Q$
+   * l'altro estremo del lato ha la quota minima $q$
+   * calcolare il dislivello $\Delta=Q-q$
+   * calcolare il numero $n$ di curve di livello che sono presenti tra i due estremi: $n=\Delta/e-1$. Nota bene: $\Delta/e$ sarà un numero intero perché ho usato i punti semplificati.
+   * suddividere il lato in $n+1$ parti uguali disegnando sul lato gli $n$ punti equidistanti.
+5) Trovare una coppia di punti su due lati diversi che siano alla stessa quota, la linea congiungente questi due punti è la direttrice a quella quota.
+6) Verificare che altre coppie di punti diano direttrici compatibili con quella trovata al punto precedente.
+7) A questo punto si può procedere come già visto in [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-lintersezione-tra-il-piano-e-la-superficie-topografica)
+
+
+# Difficoltà nell'individuare le superfici di stratificazione
+
+Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
+
+# Orientare uno sketch panoramico con la bussola Brunton
+0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio.
+1) Aprire la bussola, il coperchio va vicino al corpo.
+2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
+3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
+4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
+
+# Domande
+
+Limite vs confine vs contatto.
+
+# Isoipse aka curve di livello
+
+Data topografia $z=f(x,y)$ densa allora si usa l'algoritmo "Marching squares" per ottenere le curve di livello (vedi Wenger 2013).
+
+Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazione (vedi pdf Conti su profili topografici).
+
 # Glossario
+
+**Direttrice** (_stratum contour_) è una curva di livello di un piano inclinato.
+In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
 ## pdf "Lez 0_Rilevamento geologico - programma generale", "Introduzione al corso"
 
@@ -176,53 +242,14 @@ Tabella dedotta dalla prefazione in Fossen.
 |Fragile _Brittle_|Faglia _Fault_|
 |Duttile _Ductile_|Piega _Folding_|
 
-# Sezioni speditive
-Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
-
-Con **limite** si intende la curva che rappresenta l'intersezione di un piano con la superficie topografica.
-
-Un limite in carta può appartenere ad una di queste classi
-1) verticale
-2) orizzontale
-3) reggipoggio
-4) franapoggio meno inclinata del pendio
-5) franapoggio più inclinata del pendio
-
-Per sezione speditiva:
-
-1) individuare in carta il limite di interesse, è limite tra due elementi geologici
-2) classificare il limite usando lo schema della figura seguente  
-![Relazione tra i limite in carta e topografia, p14/73 in pdf "Lez 5_Elementi di stratimetria"](giacitura_e_topografia.png), la classificazione si basa sulla forma del limite rispetto a quella delle isoipse a lui vicine.
-3) determinare quale elemento geologico sta in alto topografico (aka alle quote più alte) e quale sta in basso topografico (aka alle quote più basse) oservando le quote delle isoipse che interessano i due elementi
-4) disegnare la sezione geologica speditiva tipica di una delle cinque classi suddette. È speditiva perché le inclinazioni non sono calcolate e quindi in sezione sono solo indicative.
-5) ripetere eventualmente per un altro limite.
-
-# Difficoltà nell'individuare le superfici di stratificazione
-
-Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
-
-# Orientare uno sketch panoramico con la bussola Brunton
-0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio.
-1) Aprire la bussola, il coperchio va vicino al corpo.
-2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
-3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
-4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
-
-# Domande
-
-Limite vs confine vs contatto.
-
-# Isoipse aka curve di livello
-
-Data topografia $z=f(x,y)$ densa allora si usa l'algoritmo "Marching squares" per ottenere le curve di livello (vedi Wenger 2013).
-
-Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazione (vedi pdf Conti su profili topografici).
-
 
 # Bibliografia
 
 [Bonciani] BONCIANI & CONTI, Costruzione di profili topografici, 2022.
 
 [Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
+
+[Bose] Narayan BOSE & S. Mukherjee – Map interpretation for structural
+geologists. Elsevier.
 
 [Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
