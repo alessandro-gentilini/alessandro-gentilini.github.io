@@ -176,6 +176,27 @@ Tabella dedotta dalla prefazione in Fossen.
 |Fragile _Brittle_|Faglia _Fault_|
 |Duttile _Ductile_|Piega _Folding_|
 
+# Sezioni speditive
+Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
+
+Con **limite** si intende la curva che rappresenta l'intersezione di un piano con la superficie topografica.
+
+Un limite in carta può appartenere ad una di queste classi
+1) verticale
+2) orizzontale
+3) reggipoggio
+4) franapoggio meno inclinata del pendio
+5) franapoggio più inclinata del pendio
+
+Per sezione speditiva:
+
+1) individuare in carta il limite di interesse, è limite tra due elementi geologici
+2) classificare il limite usando lo schema della figura seguente  
+![Relazione tra i limite in carta e topografia, p14/73 in pdf "Lez 5_Elementi di stratimetria"](giacitura_e_topografia.png), la classificazione si basa sulla forma del limite rispetto a quella delle isoipse a lui vicine.
+3) determinare quale elemento geologico sta in alto topografico (aka alle quote più alte) e quale sta in basso topografico (aka alle quote più basse) oservando le quote delle isoipse che interessano i due elementi
+4) disegnare la sezione geologica speditiva tipica di una delle cinque classi suddette. È speditiva perché le inclinazioni non sono calcolate e quindi in sezione sono solo indicative.
+5) ripetere eventualmente per un altro limite.
+
 # Difficoltà nell'individuare le superfici di stratificazione
 
 Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
