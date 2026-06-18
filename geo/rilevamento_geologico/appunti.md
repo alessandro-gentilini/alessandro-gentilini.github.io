@@ -141,6 +141,9 @@ Qui sotto ho disegnato una sezione geologica, se considero una giacitura misurat
 Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite affiorante, non ha senso disegnare direttrici a quote superiori a quella del punto 2 perché, come prima, verso Sud non ci sono volumi di roccia a quote più alte di quella del punto 2 in cui possano entrare gli strati!
 ![Una semplice sezione per illustrare dove ha senso oppure no disegnare le direttrici.](quali_direttrici.png)
 
+Immaginare come il limite cambia aumentando oppure diminuendo l'inclinazione, immaginare l'animazione con aumento/diminuizione dell'inclinazione e conseguente spostamento del limite.
+Le due condizioni estreme sono strati orizzontali in cui il limite coincide con le isoipse e strati verticali in cui il limite è una singola linea rettilinea.
+
 
 
 # Sezioni speditive
