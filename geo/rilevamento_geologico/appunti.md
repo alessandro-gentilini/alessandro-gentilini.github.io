@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati all'11 giugno 2026!
+Aggiornati al 18 giugno 2026.
 
 # Orientazione di superfici
 
@@ -109,6 +109,10 @@ Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica 
 
 # Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica
 
+Oppure, detto in altri termini, trovare il limite affiorante (espressione usata a p.26/73 in pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria").
+
+Attenzione alla differenza che c'è tra il piano geometrico (che si estende all'infinito) ed il piano materiale rappresentato dallo strato che sarà un parallelepipedo più o meno esteso lateralmente ma comunque finito.
+
 La superficie topografica è la funzione $z=f(x,y)$ dove $z$ è la quota, $x$ è la longitudine e $y$ è la latitudine (vedi [Bonciani]).
 
 È data la coordinata di un punto $P$ in cui si è misurata la giacitura di un piano espressa come immersione/inclinazione ($dd$/$\delta$); si vuole ricavare l'intersezione di questo piano con la superficie topografica e riportare in carta tale intersezione.
@@ -123,12 +127,15 @@ Scrivere vicino al segmento la quota $q$.
 Questo segmento rettilineo è una **direttrice**, in particolare è la direttrice alla quota $q$ che indico con il simbolo $D_q$.
 6) Adesso si devono disegnare le altre direttrici, quelle a quote $<q$ e quelle a quote $>q$.
 7) Sia $h$ l'equidistanza fra le curve di livello ed $d$ la distanza in pianta tra due direttrici adiacenti, $d$ è incognita; vale la formula $\tan\delta=h/d$ quindi $d=h/\tan\delta$. Le direttrici devono essere distanti l'una dall'altra di $d$ opportunamente messo alla scala della carta.
-8) Disegnare la direttrice a quota inferiore $D_{q-h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte indicata dalla freccia del simbolo di giacitura. Spiegazione: la freccia indica dove il piano immerge e quindi dove la quota diminuisce.
-9) Disegnare la direttrice a quota superiore $D_{q+h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte opposta a quella indicata dalla freccia del simbolo di giacitura.
-10) Disegnare le altre direttrici $D_{q\pm i\cdot h}$ con $i>1$.
-11) Per ogni direttrice $D_{q\pm i\cdot h}$ individuare i punti di intersezione con le corrispondenti isoipse $q\pm i\cdot h$.
-12) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
+8) Per le direttrici a quote diverse considerare che potrebbe non aver senso disegnarle tutte; fare però attenzione a non dimenticarne qualcuna che potrebbe essere decisiva nel tracciare il limite!
+9) Disegnare la direttrice a quota inferiore $D_{q-h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte indicata dalla freccia del simbolo di giacitura. Spiegazione: la freccia indica dove il piano immerge e quindi dove la quota diminuisce.
+10) Disegnare la direttrice a quota superiore $D_{q+h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte opposta a quella indicata dalla freccia del simbolo di giacitura.
+11) Disegnare le altre direttrici $D_{q\pm i\cdot h}$ con $i>1$.
+12) Per ogni direttrice $D_{q\pm i\cdot h}$ individuare i punti di intersezione con le corrispondenti isoipse $q\pm i\cdot h$.
+13) Per aiutarsi si possono anche disegnare direttrici a quote intermedie rispetto alle isoipse presenti in carta; attenzione che però di dovranno poi disegnare le isoipse intermedie interpolando opportunamente tra quelle presenti in carta.
+14) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
+15) Occorre una buona dose di interpretazione perché collegare i punti può non essere sufficiente, sopratutto se il limite affiorante è composto da più componenti non connesse.
 
 
 
