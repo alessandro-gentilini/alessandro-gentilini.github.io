@@ -137,6 +137,10 @@ Questo segmento rettilineo è una **direttrice**, in particolare è la direttric
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
 15) Occorre una buona dose di interpretazione perché collegare i punti può non essere sufficiente, sopratutto se il limite affiorante è composto da più componenti non connesse.
 
+Qui sotto ho disegnato una sezione geologica, se considero una giacitura misurata in 1 e la devo usare per tracciare il limite affiorante, allora non ha senso disegnare direttrici a quote inferiori a quella del punto 1 anche se lo strato immerge verso Nord: non ha senso perché a Nord del punto 1, come si può ben vedere dalla sezione, non c'è volume di roccia in cui entri lo strato!  
+Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite affiorante, non ha senso disegnare direttrici a quote superiori a quella del punto 2 perché, come prima, verso Sud non ci sono volumi di roccia a quote più alte di quella del punto 2 in cui possano entrare gli strati!
+![Una semplice sezione per illustrare dove ha senso oppure no disegnare le direttrici.](quali_direttrici.png)
+
 
 
 # Sezioni speditive
