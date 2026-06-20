@@ -131,7 +131,8 @@ Questo segmento rettilineo è una **direttrice**, in particolare è la direttric
 9) Disegnare la direttrice a quota inferiore $D_{q-h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte indicata dalla freccia del simbolo di giacitura. Spiegazione: la freccia indica dove il piano immerge e quindi dove la quota diminuisce.
 10) Disegnare la direttrice a quota superiore $D_{q+h}$: disegnare una linea parallela a $D_q$, distante $d$ da $D_q$ e che sta dalla parte opposta a quella indicata dalla freccia del simbolo di giacitura.
 11) Disegnare le altre direttrici $D_{q\pm i\cdot h}$ con $i>1$.
-12) Per ogni direttrice $D_{q\pm i\cdot h}$ individuare i punti di intersezione con le corrispondenti isoipse $q\pm i\cdot h$.
+12) Per ogni direttrice $D_{q\pm i\cdot h}$ individuare i punti di intersezione con le corrispondenti isoipse $q\pm i\cdot h$.  
+Muoversi lungo la direttrice e verificare tutte le ioipse che con lei si intersecano.
 13) Per aiutarsi si possono anche disegnare direttrici a quote intermedie rispetto alle isoipse presenti in carta; attenzione che però di dovranno poi disegnare le isoipse intermedie interpolando opportunamente tra quelle presenti in carta.
 14) Unire fra di loro i suddetti punti di intersezione ottenendo una spezzata.
 La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezione tra il piano in oggetto e la superficie topografica.
@@ -180,8 +181,8 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
    * l'altro estremo del lato ha la quota minima $q$
    * calcolare il dislivello $\Delta=Q-q$
    * calcolare il numero $n$ di curve di livello che sono presenti tra i due estremi: $n=\Delta/e-1$. Nota bene: $\Delta/e$ sarà un numero intero perché ho usato i punti semplificati.
-   * suddividere il lato in $n+1$ parti uguali disegnando sul lato gli $n$ punti equidistanti.
-5) Trovare una coppia di punti su due lati diversi che siano alla stessa quota, la linea congiungente questi due punti è la direttrice a quella quota.
+   * suddividere il lato in $n+1$ parti uguali disegnando sul lato gli $n$ punti equidistanti (questo è vero perché è dato che i tre punti stanno su un piano).
+5) Trovare una coppia di punti su due lati diversi che siano alla stessa quota, la linea congiungente questi due punti è la direttrice a quella quota (questo è vero perché è dato che i tre punti stanno su un piano).
 6) Verificare che altre coppie di punti diano direttrici compatibili con quella trovata al punto precedente.
 7) A questo punto si può procedere come già visto in [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-lintersezione-tra-il-piano-e-la-superficie-topografica)
 
