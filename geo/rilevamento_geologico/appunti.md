@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 18 giugno 2026.
+Aggiornati al 20 giugno 2026.
 
 # Orientazione di superfici
 
@@ -142,7 +142,7 @@ Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite a
 ![Una semplice sezione per illustrare dove ha senso oppure no disegnare le direttrici.](quali_direttrici.png)
 
 Immaginare come il limite cambia aumentando oppure diminuendo l'inclinazione, immaginare l'animazione con aumento/diminuizione dell'inclinazione e conseguente spostamento del limite.
-Le due condizioni estreme sono strati orizzontali in cui il limite coincide con le isoipse e strati verticali in cui il limite è una singola linea rettilinea.
+Le due condizioni estreme sono strati orizzontali in cui il limite coincide con le isoipse e strati verticali in cui il limite è una singola linea rettilinea. Indicativamente se le inclinazioni sono basse allora il limite dovrebbe non discostarsi troppo dalle isoipse mentre al crescere dell'inclinazione il limite tende a raddrizzarsi restando sempre più vicino al punto in cui è data la giacitura.
 
 
 
