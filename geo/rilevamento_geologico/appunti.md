@@ -147,6 +147,25 @@ Le due condizioni estreme sono strati orizzontali in cui il limite coincide con 
 
 # Data la superficie limite determinarne la giacitura
 
+Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria").
+
+0) Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
+
+1) La superficie limite va indicata con la coppia di formazioni di cui è confine.
+
+2) La procedura da seguire:
+   * individuare una isoipsa $q_1$ che intersechi in almeno due punti la superficie limite.  
+   Se i punti di intersezione sono esattamanete due allora la retta che li congiunge è la direttrice alla quota della isoipsa $q_1$. L'angolo tra il Nord e questa direttrice corrisponde alla direzione $\delta$ dello strato.  
+   Se i punti di intersezione sono più di due allora verificare se la spezzata che li unisce sia sufficientemente rettilinea, se lo è allora si tratta della direttrice $D_1$ alla quota $q_1$.
+   * con la sola direttrice $q_1$, e senza altre informazioni aggiuntive, non è possibile determinare l'immersione che può essere $\delta\pm90^{\circ}$; occorre quindi una seconda isoipsa $q_2$ che intersechi in almeno due punti la superficie limite. Se si trova detta $q_2$ allora ripetere i passaggi visti prima per $q_1$ per ottenere la direttrice rettilinea oppure una spezzata sperabilmente abbastanza rettilinea; sia essa $D_2$.
+   * $D_1$ deve essere decentemente parallela a $D_2$.
+   * L'immersione è ortogonale a $D_1$ (e quindi in virtù del punto precedente è ortogonale anche a $D_2$) e ha il verso dalla isoipsa a quota maggiore alla isoipsa a quota minore.
+   * Si possono poi trovare anche altre isoipse che intersecano la superficie limite, dovrebbero essere tutte fra loro equidistanti alla distanza pari a quella già trovata per $q_1$ e $q_2$. Se non sono equidistanti calcolare la distanza media.  
+   Ovviamente le isoipse hanno tutte la stessa equidistanza.
+   * Per determinare l'inclinazione sia $d$ la distanza (eventualmente media) fra le direttrici adiacenti espressa in metri ($d$ è nel mondo reale e si ottiene applicando la scala alla distanza fra le direttrici misurata in carta), sia $h$ l'equidistanza fra le curve di livello espressa in metri, l'inclinazione $\alpha$ si ottiene con la formula $\alpha=\arctan\frac{h}{d}$.
+
+3) **Nota bene**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite!
+
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
