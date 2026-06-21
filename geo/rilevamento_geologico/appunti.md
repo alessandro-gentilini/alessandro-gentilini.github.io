@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 20 giugno 2026.
+Aggiornati al 21 giugno 2026.
 
 # Orientazione di superfici
 
@@ -145,7 +145,7 @@ Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite a
 Immaginare come il limite cambia aumentando oppure diminuendo l'inclinazione, immaginare l'animazione con aumento/diminuizione dell'inclinazione e conseguente spostamento del limite.
 Le due condizioni estreme sono strati orizzontali in cui il limite coincide con le isoipse e strati verticali in cui il limite è una singola linea rettilinea. Indicativamente se le inclinazioni sono basse allora il limite dovrebbe non discostarsi troppo dalle isoipse mentre al crescere dell'inclinazione il limite tende a raddrizzarsi restando sempre più vicino al punto in cui è data la giacitura.
 
-
+# Data la superficie limite determinarne la giacitura
 
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
@@ -186,8 +186,16 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
 6) Verificare che altre coppie di punti diano direttrici compatibili con quella trovata al punto precedente.
 7) A questo punto si può procedere come già visto in [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-lintersezione-tra-il-piano-e-la-superficie-topografica)
 
+# Limiti concordanti
 
-# Difficoltà nell'individuare le superfici di stratificazione
+**Concordanza (_conformity_)**, limiti concordanti: parallelismo di stratificazione fra due strati, non separati da superficie di erosione e senza interruzione di deposizione (Manzoni 1968 "Concordanza" e "Continuità").
+
+La giacitura presa per una formazione della sequenza stratigrafica è rappresentativa di tutte le formazioni della sequenza stratigrafica.
+
+In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senza avere intersezioni.
+
+
+# Difficoltà in campagna nell'individuare le superfici di stratificazione
 
 Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
 
