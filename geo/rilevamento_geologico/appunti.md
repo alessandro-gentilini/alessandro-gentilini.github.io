@@ -164,7 +164,7 @@ Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di strat
    Ovviamente le isoipse hanno tutte la stessa equidistanza.
    * Per determinare l'inclinazione sia $d$ la distanza (eventualmente media) fra le direttrici adiacenti espressa in metri ($d$ è nel mondo reale e si ottiene applicando la scala alla distanza fra le direttrici misurata in carta), sia $h$ l'equidistanza fra le curve di livello espressa in metri, l'inclinazione $\alpha$ si ottiene con la formula $\alpha=\arctan\frac{h}{d}$.
 
-3) **Nota bene**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite!
+3) **NOTA BENE**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite!
 
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
