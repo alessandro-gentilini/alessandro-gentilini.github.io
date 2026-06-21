@@ -227,7 +227,7 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 
 # Domande
 
-Limite vs confine vs contatto.
+Limite vs confine vs contatto (in Damiani contatto è sinonimo di limite come indicato nell'indice analitico).
 
 # Isoipse aka curve di livello
 
