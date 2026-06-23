@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 21 giugno 2026.
+Aggiornati al 23 giugno 2026.
 
 # Orientazione di superfici
 
@@ -151,7 +151,7 @@ Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di strat
 
 0) Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
-1) La superficie limite va indicata con la coppia di formazioni di cui è confine.
+1) La superficie limite va indicata con la coppia di formazioni/unità litologiche di cui è confine.
 
 2) La procedura da seguire:
    * individuare una isoipsa $q_1$ che intersechi in almeno due punti la superficie limite.  
@@ -165,6 +165,8 @@ Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di strat
    * Per determinare l'inclinazione sia $d$ la distanza (eventualmente media) fra le direttrici adiacenti espressa in metri ($d$ è nel mondo reale e si ottiene applicando la scala alla distanza fra le direttrici misurata in carta), sia $h$ l'equidistanza fra le curve di livello espressa in metri, l'inclinazione $\alpha$ si ottiene con la formula $\alpha=\arctan\frac{h}{d}$.
 
 3) **NOTA BENE**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite!
+
+4) In Simpson 1992, a pagina 59, trova una direttrice (indicata con 2-2) ottenuta da due punti di intersezione della superficie limite pelite/marna con l'isoipsa a quota 300; poi però le altre direttrici (alle quote 400 e 500) sono tracciate considerando **una sola intersezione** delle corrispondenti isoipse, la seconda intersezione molto probabilmente cade fuori dallo stralcio di carta riportata in figura 53A; sono tracciate (direi ovviamente se si assume che non ci siano pieghe) parallele alla direttrice a quota 300.
 
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
@@ -293,5 +295,7 @@ Tabella dedotta dalla prefazione in Fossen.
 
 [Bose] Narayan BOSE & S. Mukherjee – Map interpretation for structural
 geologists. Elsevier.
+
+[Simpson] Brian Simpson, Lettura delle carte geologiche, Palermo, 1992, Dario Flaccovio Editore.
 
 [Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
