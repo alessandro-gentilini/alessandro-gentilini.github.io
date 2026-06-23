@@ -168,6 +168,8 @@ Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di strat
 
 4) In Simpson 1992, a pagina 59, trova una direttrice (indicata con 2-2) ottenuta da due punti di intersezione della superficie limite pelite/marna con l'isoipsa a quota 300; poi però le altre direttrici (alle quote 400 e 500) sono tracciate considerando **una sola intersezione** delle corrispondenti isoipse, la seconda intersezione molto probabilmente cade fuori dallo stralcio di carta riportata in figura 53A; sono tracciate (direi ovviamente se si assume che non ci siano pieghe) parallele alla direttrice a quota 300.
 
+5) In Cremonini 1977 nelle figure 206 e 207 potrebbe essere sufficiente una sola direttrice, che dà la direzione della giacitura, e stimare poi l'immersione tramite l'andamento qualitativo del confine rispetto alle isoipse (con aspetto tipico reggipoggio, franapoggio), non saprei però come stimare l'inclinazione (forse da quanto curva il confine rispetto alle isoipse?).
+
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
@@ -290,6 +292,8 @@ Tabella dedotta dalla prefazione in Fossen.
 # Bibliografia
 
 [Bonciani] BONCIANI & CONTI, Costruzione di profili topografici, 2022.
+
+[Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
 
 [Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
 
