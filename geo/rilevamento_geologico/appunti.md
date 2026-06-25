@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 23 giugno 2026.
+Aggiornati al 25 giugno 2026.
 
 # Orientazione di superfici
 
@@ -170,6 +170,8 @@ Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di strat
 
 5) In Cremonini 1977 nelle figure 206 e 207 potrebbe essere sufficiente una sola direttrice, che dà la direzione della giacitura, e stimare poi l'immersione tramite l'andamento qualitativo del confine rispetto alle isoipse (con aspetto tipico reggipoggio, franapoggio), non saprei però come stimare l'inclinazione (forse da quanto curva il confine rispetto alle isoipse?).
 
+6) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
+
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
@@ -216,6 +218,20 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
 La giacitura presa per una formazione della sequenza stratigrafica è rappresentativa di tutte le formazioni della sequenza stratigrafica.
 
 In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senza avere intersezioni.
+
+# Pieghe
+
+Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie".  
+La figura seguente riporta i limiti senza direttrici.
+![](pieghe-senza-direttrici.png)
+
+Nella figura seguente, i segmenti marcati C sono fra di loro paralleli; anche i segmenti marcati D sono fra di loro paralleli; quindi questi segmenti rispettano il requisito di parallelismo delle direttrici.
+![](pieghe-nord-sud.png)
+
+Invece nella figura seguente i segmenti marcati B non sono fra di loro paralleli; nemmeno quelli marcati A non sono fra di loro paralleli.
+![](pieghe-est-ovest.png)
+
+Se vale l'assunzione che i due fianchi della piega sono planari allora le direttrici devono essere parallele.
 
 
 # Difficoltà in campagna nell'individuare le superfici di stratificazione
