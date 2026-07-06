@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 25 giugno 2026.
+Aggiornati al 6 luglio 2026.
 
 # Orientazione di superfici
 
@@ -147,9 +147,8 @@ Le due condizioni estreme sono strati orizzontali in cui il limite coincide con 
 
 # Data la superficie limite determinarne la giacitura
 
-Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria").
-
-0) Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
+Indicazioni tratte dalle pagine da 55/73 a 61/73 in pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria").  
+Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 1) La superficie limite va indicata con la coppia di formazioni/unità litologiche di cui è confine.
 
@@ -233,6 +232,65 @@ Invece nella figura seguente i segmenti marcati B non sono fra di loro paralleli
 
 Se vale l'assunzione che i due fianchi della piega sono planari allora le direttrici devono essere parallele.
 
+# Sezioni
+
+## Inclinazione apparente di un piano
+
+Data la giacitura di un piano che ha inclinazione $\alpha$ e la cui direzione forma un angolo $\gamma$ con la traccia di sezione (angolo che è il minore dei due), l'inclinazione apparente $\omega$ del piano riportato nella sezione è dato dalla formula
+
+$\omega=\arctan(\tan(\alpha)\sin(\gamma))$
+
+Per ricordarsi la formula:
+
+1) ricordarsi che c'è un seno
+2) ricordarsi che c'è una tangente
+3) quale è l'argomento della tangente?
+4) ricordarsi che una giacitura verticale, i.e. $\alpha=90°$, ha inclinazione apparente che resta 90° e quindi la tangente sarà quella di $\alpha$ perché la tangente di 90° è infinito e l'arcotangente di infinito è appunto 90°.
+5) resta che il seno deve essere quello di $\gamma$.
+
+Si può usare anche un nomogramma (Palmer 1919).
+
+## Proiezione di limiti
+
+Quella che segue è la procedura per il limite di struttura planare che cioè non è piegata.
+
+1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite.
+
+2) Si ha quindi la direttrice $D_q$ alla quota $q$ (per i dettagli vedi "(vedi il paragrafo [Data la superficie limite determinarne la giacitura"](#data-la-superficie-limite-determinarne-la-giacitura)).
+
+3) Sulla carta, trovare l'intersezione tra $D_q$ e la traccia di sezione, sia $P$ tale punto di intersezione.
+
+4) Sulla carta, proiettare $P$ ortogonalmente alla traccia di sezione e verso il profilo topografico (che Venturini chiama profilo morfologico) nel punto $Q$ alla quota $q$.  
+$Q$ è un punto che appartiene alla rappresentazione in sezione del limite in oggetto.  
+$Q$ non è più in carta ma è in sezione.
+
+5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico.
+
+6) Ripetere per una direttrice ad una nuova quota $q_1$, trovando così in sezione il punto $Q_1$. Collegare $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.
+
+
+
+## Proiezioni di giaciture
+
+La giacitura ha inclinazione $\alpha$.
+
+1) Sulla carta, prolungare la direzione della giacitura fino ad intersecare la traccia di sezione nel punto $P$.
+
+2) Sulla carta, Misurare l'angolo $\gamma$ tra la traccia di sezione e il suddetto prolungamento della direzione.  
+$\gamma$ ha vertice in $P$ ed è il più piccolo dei due angoli: i due sommati danno 180°.
+
+3) Calcolare l'inclinazione apparente $\omega$ tramite la formula  
+$\tan \omega=\tan(\alpha)\sin(\gamma)$  
+$\omega=\arctan(\tan(\alpha)\sin(\gamma))$
+
+4) Sulla carta, proiettare $P$ ortogonalmente alla traccia di sezione e verso il profilo topografico (che Venturini chiama profilo morfologico) nel punto $Q$ alla quota della giacitura. $Q$ non è più in carta ma è in sezione.
+
+5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico.
+
+6) Sulla sezione, da $Q$ spiccare un segmento lungo 2-3 mm (massimo 5, v. Venturini p.149) che ha angolo $\omega$ rispetto all'orizzontale;  
+il segmento deve puntare verso l'immersione della giacitura.  
+$R$ è il secondo estremo del segmento e deve stare a quota inferiore a $Q$.  
+$Q$ è detto _punto di aggancio_ della giacitura.  
 
 # Difficoltà in campagna nell'individuare le superfici di stratificazione
 
