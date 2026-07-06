@@ -212,7 +212,7 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
 
 # Limiti concordanti
 
-**Concordanza (_conformity_)**, limiti concordanti: parallelismo di stratificazione fra due strati, non separati da superficie di erosione e senza interruzione di deposizione (Manzoni 1968 "Concordanza" e "Continuità").
+**Concordanza (_conformity_)**, limiti concordanti: parallelismo di stratificazione fra due strati, non separati da superficie di erosione e senza interruzione di deposizione (Manzoni 1968 "Concordanza" e "Continuità"). Vedi anche Conti sulle sezioni geologiche!!!
 
 La giacitura presa per una formazione della sequenza stratigrafica è rappresentativa di tutte le formazioni della sequenza stratigrafica.
 
@@ -254,7 +254,7 @@ Si può usare anche un nomogramma (Palmer 1919).
 
 Quella che segue è la procedura per il limite di struttura planare che cioè non è piegata.
 
-1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite.
+1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite in almeno due punti.
 
 2) Si ha quindi la direttrice $D_q$ alla quota $q$ (per i dettagli vedi "(vedi il paragrafo [Data la superficie limite determinarne la giacitura"](#data-la-superficie-limite-determinarne-la-giacitura)).
 
@@ -266,7 +266,11 @@ $Q$ non è più in carta ma è in sezione.
 
 5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico.
 
-6) Ripetere per una direttrice ad una nuova quota $q_1$, trovando così in sezione il punto $Q_1$. Collegare $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.
+6) Ripetere per una direttrice ad una nuova quota $q_1$, trovando così in sezione il punto $Q_1$. Congiungere $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.
+
+Osservazioni:
+
+* l'isoipsa ha solamente un punto di contatto con il limite (Venturini p.159): osservare bene perché il limite potrebbe coincidere con parte di una isoipsa! Scegliere allora due punti qualunque
 
 
 
