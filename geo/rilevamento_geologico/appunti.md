@@ -234,6 +234,12 @@ Se vale l'assunzione che i due fianchi della piega sono planari allora le dirett
 
 # Sezioni
 
+## Linee guida generali
+
+I colori che si vedono in carta muovendosi lungo la traccia di sezione devono essere riportati in sezione poco sotto al profilo morfologico, vedi pdf lezioni Vignaroli (figura qui sotto) e fig.8.4 in Conti "Carte e Sezioni Geologiche".
+
+![](sezioni_da_pdf_vignaroli.png)
+
 ## Inclinazione apparente di un piano
 
 Data la giacitura di un piano che ha inclinazione $\alpha$ e la cui direzione forma un angolo $\gamma$ con la traccia di sezione (angolo che è il minore dei due), l'inclinazione apparente $\omega$ del piano riportato nella sezione è dato dalla formula
