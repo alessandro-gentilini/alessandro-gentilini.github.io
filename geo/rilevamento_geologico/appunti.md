@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 6 luglio 2026.
+Aggiornati al 8 luglio 2026.
 
 # Orientazione di superfici
 
@@ -260,7 +260,9 @@ Si può usare anche un nomogramma (Palmer 1919).
 
 Quella che segue è la procedura per il limite di struttura planare che cioè non è piegata.
 
-1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite in almeno due punti.
+1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite in almeno due punti.  
+Se invece apparentemente tutte le isoipse hanno solamente un punto di contatto con il limite (Venturini p.159) allor si deve osservare meglio perché il limite potrebbe coincidere con parte di una isoipsa!  
+Se questo è il caso, scegliere allora due punti qualunque sulla porzione di limite che coincide con una isoipsa, la cui quota sia $q$: quei due punti individuano la direttrice $D_q$ alla quota di quella isoipsa. 
 
 2) Si ha quindi la direttrice $D_q$ alla quota $q$ (per i dettagli vedi "(vedi il paragrafo [Data la superficie limite determinarne la giacitura"](#data-la-superficie-limite-determinarne-la-giacitura)).
 
@@ -272,17 +274,14 @@ $Q$ non è più in carta ma è in sezione.
 
 5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico.
 
-6) Ripetere per una direttrice ad una nuova quota $q_1$, trovando così in sezione il punto $Q_1$. Congiungere $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.
-
-Osservazioni:
-
-* l'isoipsa ha solamente un punto di contatto con il limite (Venturini p.159): osservare bene perché il limite potrebbe coincidere con parte di una isoipsa! Scegliere allora due punti qualunque
-
-
+6) Ripetere per una nuova isoipsa alla quota $q_1$ che intersechi il limite in almeno due punti, unendo i due punti si avrà la direttrice $D_{q_1}$ e di conseguenza si troverà in sezione il punto $Q_1$. Congiungere $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.  
+Se invece si è nel caso in cui le isoipse hanno un solo punto di contatto con il limite (Venturini p.159) allora individuare l'unica intersezione della isoipsa a quota $q_1$ con il limite e tracciare una retta parallela alla $D_q$ precedentemente trovata e passante per detta intersezione; questa retta è la direttrice $D_{q_1}$ e si può quindi continuare come già visto. Anche in questo caso meglio ripetere con altre isoipse.
 
 ## Proiezioni di giaciture
 
-La giacitura ha inclinazione $\alpha$.
+Qui si tratta la giacitura come la misura dell'assetto di una porzione di roccia affiorante che non è detto che sia una struttura planare; queste giaciture sono invece misure fatte su strutture non planari come per esempio i fianchi delle pieghe. Se la giacitura rappresentasse invece una struttura planare allora si applica la procedurà già vista nella sezione ["Proiezione di limiti"](#proiezione-di-limiti).
+
+La giacitura ha inclinazione $\alpha$. 
 
 1) Sulla carta, prolungare la direzione della giacitura fino ad intersecare la traccia di sezione nel punto $P$.
 
