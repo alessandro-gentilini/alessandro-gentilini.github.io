@@ -70,6 +70,9 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, ricalcare l'intera ciclografica (da Sud a Nord sul reticolo) corrispondente che rappresenta la superficie in oggetto.
 7) Per disegnare il polo: partendo dalla ciclografica suddetta, e muovendosi sul diametro E-O verso il centro del reticolo, contare 90° e, lì arrivati, disegnare il punto che rappresenta il polo della superficie in oggetto.
 
+All vertical planes will project as straight lines passing through the centre of the stereogram.
+https://geo.libretexts.org/Bookshelves/Geology/Geological_Structures_-_A_Practical_Introduction_(Waldron_and_Snyder)/01%3A_Topics/1.04%3A_Stereographic_Projection
+
 # Proiezione di linee che giacciono su una superficie
 0) È necessario conoscere il _pitch_ della linea.
 1) Disegnare la proiezione della superficie seguendo il metodo precedentemente illustrato.
