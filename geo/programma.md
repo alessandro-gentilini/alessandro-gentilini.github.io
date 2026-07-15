@@ -345,3 +345,5 @@ Per il corso di Programmazione era stato inizialmente proposto Knuth (*The Art o
 ## Conclusione
 
 Il corso, nella sua identità finale, si configura come una laurea in **Scienze Quantitative della Terra**: forte base fisico-matematica nei primi due anni, apertura interdisciplinare al secondo anno (geologia, astronomia, oceanografia), specializzazione climatico-atmosferica quantitativa al terzo anno, con un ventaglio di elettivi che permette di spaziare dal quantitativo puro (geofisica, sismologia) al più descrittivo (mineralogia, pedologia) secondo gli interessi dello studente.
+
+https://claude.ai/chat/8991d7d2-7436-4952-8d40-619bd9d506af
