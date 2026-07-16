@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 8 luglio 2026.
+Aggiornati al 16 luglio 2026.
 
 # Orientazione di superfici
 
@@ -174,6 +174,14 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 6) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
 
+## Data una faglia in carta determinare la giacitura del piano di faglia
+
+Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribassata, quindi il piano di faglia immergerà sempre nel verso dei trattini del simbolo?
+
+Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
+
+![Simboli CARG per le faglie.](simboli_carg_faglie.png)
+
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
@@ -317,7 +325,11 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 
 # Domande
 
-Limite vs confine vs contatto (in Damiani contatto è sinonimo di limite come indicato nell'indice analitico).
+* Limite vs confine vs contatto (in Damiani contatto è sinonimo di limite come indicato nell'indice analitico).
+
+* Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribassata, quindi il piano di faglia immergerà sempre nel verso dei trattini del simbolo?
+
+* Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
 
 # Isoipse aka curve di livello
 
