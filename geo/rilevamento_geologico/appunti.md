@@ -331,6 +331,11 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 
 * Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
 
+* Venturini in figura 3.48, per il sovrascorrimento $\alpha'$ disegna le direttrici a quota 700, 675, 650 (vedi in verde nello screenshot qui sotto) e le disegna verticali.
+  ![](Venturini_fig_3_48.png)
+  Come però si può vedere sia nella figura qui sopra che nella figura 3.47 seguente, le isoipse intersecano in solo punto la faglia e quindi non so proprio come possa disegnare le direttrici verticali perché per disegnarle verticali servirebbe, per ogni direttrice, un secondo piunto di intersezione con le isoipse!
+  ![](Venturini_fig_3_47_a.png)
+
 # Isoipse aka curve di livello
 
 Data topografia $z=f(x,y)$ densa allora si usa l'algoritmo "Marching squares" per ottenere le curve di livello (vedi Wenger 2013).
