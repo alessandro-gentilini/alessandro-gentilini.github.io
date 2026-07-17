@@ -174,6 +174,13 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 6) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
 
+## Regola della V, _V's rule_
+Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
+Si si collegano tutti i vertici delle V si ottiene la linea dell'impluvio.  
+Individuare una valle/impluvio possibilmente con la linea di impluvio ortogonale al limite in esame (l'ortogonalità è indicata nelle dispense ["GEOLOGIA 2 E PRINCIPI DI RILEVAMENTO GEOLOGICO - SECONDA PARTE" a cura di Gian Andrea Pini e Lorenzo Bonini, Università degli studi di Trieste](https://moodle2.units.it/pluginfile.php/396407/mod_resource/content/1/Geologia%202%20e%20Principi%20di%20Rilevamento%20-%20Seconda%20parte%20-%20Lezione%201.pdf)), si hano quindi i seguenti casi descritti in Figura 2.17 di Lisle 2004.
+![Regola della V da Lisle 2004.](regola_della_V.png)
+
+
 ## Data una faglia in carta determinare la giacitura del piano di faglia
 
 Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribassata, quindi il piano di faglia immergerà sempre nel verso dei trattini del simbolo?
@@ -396,12 +403,14 @@ Tabella dedotta dalla prefazione in Fossen.
 
 [Bonciani] BONCIANI & CONTI, Costruzione di profili topografici, 2022.
 
-[Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
-
-[Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
-
 [Bose] Narayan BOSE & S. Mukherjee – Map interpretation for structural
 geologists. Elsevier.
+
+[Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
+
+[Lisle] RICHARD J. LISLE, Geological Structures and Maps, A PRACTICAL GUIDE, Third edition, Burlington, MA 2004, Elsevier.
+
+[Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
 
 [Simpson] Brian Simpson, Lettura delle carte geologiche, Palermo, 1992, Dario Flaccovio Editore.
 
