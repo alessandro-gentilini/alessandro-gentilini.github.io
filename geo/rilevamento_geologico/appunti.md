@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 16 luglio 2026.
+Aggiornati al 17 luglio 2026.
 
 # Orientazione di superfici
 
