@@ -242,6 +242,10 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 2) I punti massima curvatura del limite sono punti di cerniera (Conti p.60)
 3) La linea che unisce tutti i punti di cerniera è la traccia del piano assiale della piega (Conti p.60)
 
+Strategia: individuare punti di massima curvatura, sono le cerniere.
+Le direttrici si fanno a destra e a sinistra, si possono unire limiti diversi,
+vedi esercizio 12-12 in Weijermars
+
 Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie" p5/29.  
 La figura seguente riporta i limiti senza direttrici.
 ![](pieghe-senza-direttrici.png)
