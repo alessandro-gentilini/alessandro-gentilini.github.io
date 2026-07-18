@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 17 luglio 2026.
+Aggiornati al 18 luglio 2026.
 
 # Orientazione di superfici
 
@@ -276,7 +276,12 @@ Si può usare anche un nomogramma (Palmer 1919).
 
 ## Proiezione di limiti
 
-Quella che segue è la procedura per il limite di struttura planare che cioè non è piegata.
+Quella che segue è la procedura per il limite di struttura planare (aka superficie stratigrafica) che cioè non è piegata; Venturini a p.147 dice
+> il metodo delle direttrici non è applicabile a quelle superfici stratigrafiche che, per loro stessa natura, assumono andamenti molto irregolari.
+
+La procedura qui sotto è illustrata da Venturini nelle figure 3.24 e 3.25 (p.148).
+
+Se si sa che la superficie stratigrafica di cui si ha il limite è planare allora anche se le sue direttrici non sono perfettamente parallele è comunque lecito interpolare i punti in sezione con una segmento rettilineo (Venturini fig 3.26).
 
 1) Sulla carta, individuare l'isoipsa alla quota $q$ che interseca il limite in almeno due punti.  
 Se invece apparentemente tutte le isoipse hanno solamente un punto di contatto con il limite (Venturini p.159) allor si deve osservare meglio perché il limite potrebbe coincidere con parte di una isoipsa!  
