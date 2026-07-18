@@ -238,7 +238,11 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 
 # Pieghe
 
-Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie".  
+1) Il limite si richiude su se stesso (pdf 5p/29)
+2) I punti massima curvatura del limite sono punti di cerniera (Conti p.60)
+3) La linea che unisce tutti i punti di cerniera è la traccia del piano assiale della piega (Conti p.60)
+
+Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie" p5/29.  
 La figura seguente riporta i limiti senza direttrici.
 ![](pieghe-senza-direttrici.png)
 
@@ -347,6 +351,12 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
   ![](Venturini_fig_3_48.png)
   Come però si può vedere sia nella figura qui sopra che nella figura 3.47 seguente, le isoipse intersecano in solo punto la faglia e quindi non so proprio come possa disegnare le direttrici verticali perché per disegnarle verticali servirebbe, per ogni direttrice, un secondo piunto di intersezione con le isoipse!
   ![](Venturini_fig_3_47_a.png)
+
+* Dove trovare le soluzioni di Lisle?
+
+* Dove trovare le soluzioni di Simpson?
+
+* Nei fogli degli esercizi svolti ci sono domande.
 
 # Isoipse aka curve di livello
 
