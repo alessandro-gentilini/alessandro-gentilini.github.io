@@ -276,6 +276,31 @@ Invece nella figura seguente i segmenti marcati B non sono fra di loro paralleli
 
 Se vale l'assunzione che i due fianchi della piega sono planari allora le direttrici devono essere parallele.
 
+# Faglie
+
+## Rigetto
+
+![Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da p.22/29 a p.29/29](esercizio_rigetto_faglia.png)
+
+Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da p.22/29 a p.29/29
+
+1) Individuare le direttrici del piano di faglia (il piano si assume ovviamente planare): trovare almeno una direttrice costruita trovando due intersezioni tra la faglia ed una isoipsa; le altre isoipse devono avere almeno una intersezione con la faglia, le altre direttrici passano per queste intersezioni e sono parallele alla prima direttrice trovata.
+
+2) Individuare le direttrici di un limite al letto della faglia: nell'esercizio suddetto è un limite dell'unità grigia a contatto occidentale con la faglia, il limite è tra unità grigia e unità bianca
+
+3) Individuare le direttrici di un limite al tetto della faglia: nell'esercizio suddetto è un limite dell'unità grigia a contatto occidentale con la faglia, il limite è tra unità grigia e unità bianca ed è il limite corrispondente a quello del letto.
+
+4) Per il rigetto lungo strike:
+   - individuare una direttrice alla stessa quota sia a letto che a tetto
+   - intersecare la direttrice di letto con la direttrice alla stessa quota della faglia ottenendo così il punto $S_L$;
+   - intersecare la direttrice di tetto con la direttrice alla stessa quota della faglia ottenendo così il punto $S_T$;
+   - il rigetto lungo strike è la distanza misurata sulla carta tra $S_L$ ed $S_T$, va poi riportata in metri usando la scala.
+
+5) Per il rigetto lungo dip:
+   - intersecare le direttrici di letto con le direttrici di faglia alle quote corrispondenti: si ottiene una sequenza di punti che teoricamente sono allineati lungo un segmento rettilineo $L$
+   - intersecare le direttrici di tetto con le direttrici di faglia alle quote corrispondenti: si ottiene una sequenza di punti che teoricamente sono allineati lungo un segmento rettilineo $T$   
+   - $L$ e $T$ teoricamente sono parallele e la loro distanza misurata in carta, e riportata in metri con la scala è il rigetto lungo dip.
+
 # Sezioni
 
 ## Linee guida generali
