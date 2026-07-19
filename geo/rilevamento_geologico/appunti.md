@@ -278,6 +278,12 @@ Le **strutture planari** della piega sono i **fianchi** e la **superficie assial
 
 ![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_2.png)
 
+Le pieghe si classificano in vari modi, Fleuty 1964 usa due caratteristiche della piega:
+1) l'inclinazione del piano assiale,
+2) l'inclinazione dell'asse della piega.
+
+![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_3.png)
+
 
  
 
