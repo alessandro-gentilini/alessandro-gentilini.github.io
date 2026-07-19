@@ -243,6 +243,36 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 
 # Pieghe
 
+## Anatomia di una piega
+
+Quanto segue l'ho prodotto come elaborazione di varie fonti.  
+
+Consideriamo un singolo strato $s_i$ inizialmente rettilineo, di spessore infinitesimo, questo strato si incurva e prende la forma di una una parabola; consideriamo poi anche altri strati sopra, $s_{i+1}$, e sotto, $s_{i-1}$, al precedente, anche loro si incurvano e diventano parabole "parallele" alla precedente.  
+
+Ho messo queste parabole in un sistema di riferimento x-orizzontale, z-verticale.  
+
+Nella parabola i due lembi si chiamano rami mentre nella piegha si chiamano **fianchi**.  
+
+Il punto di massima curvatura di ogni strato piegato si chiama **punto di cerniera**, nel caso delle parabole il punto di cerniera è il vertice.  
+
+Aggiungere adesso al sistema di riferimento l'asse y per fare una terna secondo la regola della mano destra.  
+Traslare ricopiandole le parabole dal piano $y=0$ a tutti i piani $y\gt0$; si ottiene così una struttura tridimensionale (direi che è un [cilindro parabolico](https://mathworld.wolfram.com/ParabolicCylinder.html)).
+
+Se si collegando i punti di cerniera lungo y si ottiene una linea che è detta **linea di cerniera**.
+
+La linea di cerniera può essere curva oppure rettilinea; se è rettilinea è detta **asse della piega**.
+
+Una piega con linea di cerniera rettilinea è detta **piega cilindrica**.
+
+Le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su una superficie detta **superficie assiale** della piega.
+
+Se tutte le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su un piano allora la superficie assiale è un piano che è detto **piano assiale** della piega.
+
+È quindi il piano assiale che divide la piega nei due fianchi.
+
+
+ 
+
 ## Come riconoscere piega
 * Almeno due formazioni diverse (due campiture di diverso colore/diverso soprassegno).
 * Limite che dà una curva chiusa, oppure se non si osserva in carta l'intera curva chiusa si dovrebbe quanto meno osservare una porzione di limite che è compatibile con una curva chiusa (vedi esercizio 12-12 in Weijermars 1997 oppure "ESERCIZIO 2: Pieghe, faglie, trasgressione" p.17/29 in pdf "Lez 5bis_stratimetria per pieghe e faglie").
