@@ -251,7 +251,7 @@ Consideriamo un singolo strato $s_i$ inizialmente rettilineo, di spessore infini
 
 Ho messo queste parabole in un sistema di riferimento x-orizzontale, z-verticale.  
 
-Nella parabola i due lembi si chiamano rami mentre nella piegha si chiamano **fianchi**.  
+Nella parabola i due lembi si chiamano rami mentre nella piega si chiamano **fianchi**.  
 
 Il punto di massima curvatura di ogni strato piegato si chiama **punto di cerniera**, nel caso delle parabole il punto di cerniera è il vertice.  
 
@@ -269,6 +269,10 @@ Le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su una s
 Se tutte le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su un piano allora la superficie assiale è un piano che è detto **piano assiale** della piega.
 
 È quindi il piano assiale che divide la piega nei due fianchi.
+
+La **struttura lineare** della piega è la **linea di cerniera**.
+
+Le **strutture planari** della piega sono i **fianchi** e la **superficie assiale**.
 
 ![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_1.png)
 
