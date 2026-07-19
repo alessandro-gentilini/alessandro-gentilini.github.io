@@ -172,7 +172,12 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 5) In Cremonini 1977 nelle figure 206 e 207 potrebbe essere sufficiente una sola direttrice, che dà la direzione della giacitura, e stimare poi l'immersione tramite l'andamento qualitativo del confine rispetto alle isoipse (con aspetto tipico reggipoggio, franapoggio), non saprei però come stimare l'inclinazione (forse da quanto curva il confine rispetto alle isoipse?).
 
-6) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
+6) Dovendo stimare l'immersione e l'inclinazione di un limite, come fare se nel limite in oggetto si individua una sola direttrice e con le isoipse presenti in carta non si trova una seconda direttrice (non si trovano cioè altre due intersezioni tra una isoipsa qualunque diversa da quella già usata e il limite)?  
+   - Se si riesce, interpolare una isoipsa vicina a quella già usata!
+   - Se l'entità è delimitata dal limite è planare allora le altre direttrici si trovano tracciando linee parallele a quella trovata e che intersecano le isoipse almeno in un punto (questo metodo l'ho dedotto vedendo quanto fatto nel pdf "pieghe e faglie" da p.22/29 a p.29/29).
+
+
+7) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
 
 ## Regola della V, _V's rule_
 Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
@@ -244,7 +249,8 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 * Il modello, descritto in Figura 6.11b in Conti, è quello di due ellissi concentriche come visibile nella figura qui sotto
   1) 1-2 è il fianco sinistro, 5-6 è il fianco destro, 1-5 è la parte a massima curvatura dove c'è il punto di cerniera; anche 2-6 è una parte a massima curvatura dove c'è il punto di cerniera
   2) la stessa cosa vale per 3-4 (fianco sinistro), 7-8 (fianco destro), 3-7 (cerniera superiore), 4-8 (cerniera inferiore).
-  3) le direttrici da mettere in sezione sono quelle 1-2, 3-4, 5-6, 7-8.
+  3) le direttrici da mettere in sezione sono quelle di 1-2, 3-4, 5-6, 7-8.  
+     1-2, 3-4, 5-6, 7-8 sono limiti, per ognuno occorrono almeno due direttrici.
 
 ![Rielaborazione Figura 6.11b in Conti](pieghe_Conti.png)
 
@@ -371,6 +377,8 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 * Dove trovare le soluzioni di Lisle?
 
 * Dove trovare le soluzioni di Simpson?
+
+* Dove trovare le soluzioni di Bennison?
 
 * Nei fogli degli esercizi svolti ci sono domande.
 
