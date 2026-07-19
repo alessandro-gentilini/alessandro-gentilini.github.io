@@ -245,9 +245,9 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 
 ## Anatomia di una piega
 
-Quanto segue l'ho prodotto come elaborazione di varie fonti.  
+Quanto segue l'ho prodotto come elaborazione di Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".
 
-Consideriamo un singolo strato $s_i$ inizialmente rettilineo, di spessore infinitesimo, questo strato si incurva e prende la forma di una una parabola; consideriamo poi anche altri strati sopra, $s_{i+1}$, e sotto, $s_{i-1}$, al precedente, anche loro si incurvano e diventano parabole "parallele" alla precedente.  
+Consideriamo un singolo strato $s_i$ inizialmente rettilineo, di spessore infinitesimo, questo strato si incurva e prende la forma di una una parabola (si _raccorcia_); consideriamo poi anche altri strati sopra, $s_{i+1}$, e sotto, $s_{i-1}$, al precedente, anche loro si incurvano e diventano parabole "parallele" alla precedente.  
 
 Ho messo queste parabole in un sistema di riferimento x-orizzontale, z-verticale.  
 
@@ -269,6 +269,10 @@ Le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su una s
 Se tutte le linee di cerniera dei vari strati $s_{i-1}$, $s_i$, $s_{i+1}$ stanno su un piano allora la superficie assiale è un piano che è detto **piano assiale** della piega.
 
 È quindi il piano assiale che divide la piega nei due fianchi.
+
+![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_1.png)
+
+![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_2.png)
 
 
  
