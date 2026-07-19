@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 18 luglio 2026.
+Aggiornati al 19 luglio 2026.
 
 # Orientazione di superfici
 
@@ -238,6 +238,16 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 
 # Pieghe
 
+## Come riconoscere piega
+* Almeno due formazioni diverse (due campiture di diverso colore/diverso soprassegno).
+* Limite che dà una curva chiusa, oppure se non si osserva in carta l'intera curva chiusa si dovrebbe quanto meno osservare una porzione di limite che è compatibile con una curva chiusa (vedi esercizio 12-12 in Weijermars 1997 oppure "ESERCIZIO 2: Pieghe, faglie, trasgressione" p.17/29 in pdf "Lez 5bis_stratimetria per pieghe e faglie").
+* Il modello, descritto in Figura 6.11b in Conti, è quello di due ellissi concentriche come visibile nella figura qui sotto
+  1) 1-2 è il fianco sinistro, 5-6 è il fianco destro, 1-5 è la parte a massima curvatura dove c'è il punto di cerniera; anche 2-6 è una parte a massima curvatura dove c'è il punto di cerniera
+  2) la stessa cosa vale per 3-4 (fianco sinistro), 7-8 (fianco destro), 3-7 (cerniera superiore), 4-8 (cerniera inferiore).
+  3) le direttrici da mettere in sezione sono quelle 1-2, 3-4, 5-6, 7-8.
+
+![Rielaborazione Figura 6.11b in Conti](pieghe_Conti.png)
+
 1) Il limite si richiude su se stesso (pdf 5p/29)
 2) I punti massima curvatura del limite sono punti di cerniera (Conti p.60)
 3) La linea che unisce tutti i punti di cerniera è la traccia del piano assiale della piega (Conti p.60)
@@ -245,6 +255,8 @@ In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senz
 Strategia: individuare punti di massima curvatura, sono le cerniere.
 Le direttrici si fanno a destra e a sinistra, si possono unire limiti diversi,
 vedi esercizio 12-12 in Weijermars
+
+## Attenzione a prendere le direttrici giuste!
 
 Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie" p5/29.  
 La figura seguente riporta i limiti senza direttrici.
