@@ -181,6 +181,9 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 7) E se le intersezioni limite-isoipsa forniscono un solo punto utile?  
    Attenzione che potrebbe essere che il limite in oggetto sia parte di un limite vicino di cui sono già note le direttrici. Il caso è trattato a p.175 di Venturini.
 
+8) E se il limite non interseca mai le isoipse?  
+   Attenzione che potrebbe essere parallelo alle isoipse, in tal caso si tratta di un limite di trato orizzontale.
+
 
 7) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
 
@@ -325,6 +328,9 @@ Invece nella figura seguente i segmenti marcati B non sono fra di loro paralleli
 
 Se vale l'assunzione che i due fianchi della piega sono planari allora le direttrici devono essere parallele.
 
+Il problema evidentemente è noto agli autori più attenti alla pedagogia: 
+> “A common elementary confusion is that when the intersections of topography and a bedding plane are determined, upon first sight there may appear to be ambiguity in the way they are connected. The correct of possibilities will be parallel to the respective flanks of the fold. The alternative set of misconstructed stratum contours will cut across the symmetry of the fold and be inconsistent with topography.” ([Borradaile, 2014, p. 139](zotero://select/library/items/468RG8MI)) ([pdf](zotero://open-pdf/library/items/RSXD3BYZ?page=145))
+
 # Faglie
 
 ## Rigetto
@@ -354,6 +360,23 @@ Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da 
 
 ## Linee guida generali
 
+1) disegnare il **profilo morfologico/topografico**
+
+2) riportare sul profilo i **colori** delle unità litostratigrafiche [vedi riferimento alla fonte](#colori)
+
+3) riportare i limiti che aiutano a definire i **settori** di proiezione dei dati-strato (vedi [proiezione di dati-strato](#proiezioni-di-giaciture-venturini-li-chiama-dati-strato-oppure-assetti)) e capire se le proiezioni dei dati-strato cadono o meno nei **settori equivalenti** (che se ho capito hanno la proprietà di raggruppare giaciture con assetti simili).
+Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini), **limiti discordanti** (p.175 Venturini)
+
+## Accessori
+
+* Unità di misura asse verticale, in metri.
+* Scala verticale uguale all'orizzontale, riportata graficamente.
+* Estremi A-B della sezione
+* Orientazione degli estremi della sezione
+* Eventuali punti notevoli (cima, fiume, toponimi)
+
+
+## Colori
 I colori che si vedono in carta muovendosi lungo la traccia di sezione devono essere riportati in sezione poco sotto al profilo morfologico, vedi pdf lezioni Vignaroli (figura qui sotto) e fig.8.4 in Conti "Carte e Sezioni Geologiche".
 
 ![](sezioni_da_pdf_vignaroli.png)
@@ -374,7 +397,7 @@ Per ricordarsi la formula:
 
 Si può usare anche un nomogramma (Palmer 1919).
 
-## Proiezione di limiti
+## Proiezione di limiti (Venturini li chiama _dati lineari_)
 
 Quella che segue è la procedura per il limite di struttura planare (aka superficie stratigrafica) che cioè non è piegata; Venturini a p.147 dice
 > il metodo delle direttrici non è applicabile a quelle superfici stratigrafiche che, per loro stessa natura, assumono andamenti molto irregolari.
@@ -400,7 +423,7 @@ $Q$ non è più in carta ma è in sezione.
 6) Ripetere per una nuova isoipsa alla quota $q_1$ che intersechi il limite in almeno due punti, unendo i due punti si avrà la direttrice $D_{q_1}$ e di conseguenza si troverà in sezione il punto $Q_1$. Congiungere $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.  
 Se invece si è nel caso in cui le isoipse hanno un solo punto di contatto con il limite (Venturini p.159) allora individuare l'unica intersezione della isoipsa a quota $q_1$ con il limite e tracciare una retta parallela alla $D_q$ precedentemente trovata e passante per detta intersezione; questa retta è la direttrice $D_{q_1}$ e si può quindi continuare come già visto. Anche in questo caso meglio ripetere con altre isoipse.
 
-## Proiezioni di giaciture
+## Proiezioni di giaciture (Venturini li chiama _dati-strato_ oppure _assetti_)
 
 Qui si tratta la giacitura come la misura dell'assetto di una porzione di roccia affiorante che non è detto che sia una struttura planare; queste giaciture sono invece misure fatte su strutture non planari come per esempio i fianchi delle pieghe. Se la giacitura rappresentasse invece una struttura planare allora si applica la procedurà già vista nella sezione ["Proiezione di limiti"](#proiezione-di-limiti).
 
@@ -423,6 +446,12 @@ $\omega=\arctan(\tan(\alpha)\sin(\gamma))$
 il segmento deve puntare verso l'immersione della giacitura.  
 $R$ è il secondo estremo del segmento e deve stare a quota inferiore a $Q$.  
 $Q$ è detto _punto di aggancio_ della giacitura.  
+
+### Note
+
+1) in caso di pieghe le giaciture vanno proiettate parallele al piano assiale della piega, non allo strike della giacitura (Conti; Venturini p.174; Venturini p.176 per giaciture orizzontali)
+
+1) usare anche le giaciture ragionevolmente vicine alla traccia di sezione anche se la loro proiezione cade fuori dalla traccia di sezione (fig. 3.53, p.176 Venturini)
 
 # Difficoltà in campagna nell'individuare le superfici di stratificazione
 
