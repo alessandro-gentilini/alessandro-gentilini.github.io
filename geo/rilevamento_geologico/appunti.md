@@ -367,6 +367,14 @@ Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da 
 3) riportare i limiti che aiutano a definire i **settori** di proiezione dei dati-strato (vedi [proiezione di dati-strato](#proiezioni-di-giaciture-venturini-li-chiama-dati-strato-oppure-assetti)) e capire se le proiezioni dei dati-strato cadono o meno nei **settori equivalenti** (che se ho capito hanno la proprietà di raggruppare giaciture con assetti simili).
 Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini), **limiti discordanti** (p.175 Venturini)
 
+4) proiezione degli altri limiti
+
+5) proiezioni delle giaciture
+
+6) correlazione delle giaciture (bisettrici, archi di cerchio invece per rovescei correlazione "a mano" p.180 Venturini)
+
+7) motivo deformativo aka non collegare giaciture da stessa linea di correlazione Venturini p.181
+
 ## Accessori
 
 * Unità di misura asse verticale, in metri.
@@ -452,6 +460,10 @@ $Q$ è detto _punto di aggancio_ della giacitura.
 1) in caso di pieghe le giaciture vanno proiettate parallele al piano assiale della piega, non allo strike della giacitura (Conti; Venturini p.174; Venturini p.176 per giaciture orizzontali)
 
 1) usare anche le giaciture ragionevolmente vicine alla traccia di sezione anche se la loro proiezione cade fuori dalla traccia di sezione (fig. 3.53, p.176 Venturini)
+
+1) giaciture in unità separate da limite discordante, quindi giaciture sopra e sotto al limite discordante, vanno correlate separatamente (p.180 Venturini)
+
+
 
 # Difficoltà in campagna nell'individuare le superfici di stratificazione
 
