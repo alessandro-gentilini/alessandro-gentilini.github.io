@@ -178,6 +178,9 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
    Qquesto metodo l'ho dedotto vedendo quanto fatto nel pdf "pieghe e faglie" da p.22/29 a p.29/29; è comunque anche illustrato a p.174 di Venturini che scrive (grassetto mio):  
      > si ricostruisce la direttrice 175 m e si disegnano la successiva e le precedenti direttrici parallelamente a essa, utilizzando **l'unico punto** di intersezione traccia-isoipsa.
 
+7) E se le intersezioni limite-isoipsa forniscono un solo punto utile?  
+   Attenzione che potrebbe essere che il limite in oggetto sia parte di un limite vicino di cui sono già note le direttrici. Il caso è trattato a p.175 di Venturini.
+
 
 7) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
 
