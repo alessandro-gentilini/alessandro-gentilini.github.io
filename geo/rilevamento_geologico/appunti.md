@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 19 luglio 2026.
+Aggiornati al 21 luglio 2026.
 
 # Orientazione di superfici
 
@@ -174,7 +174,9 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 6) Dovendo stimare l'immersione e l'inclinazione di un limite, come fare se nel limite in oggetto si individua una sola direttrice e con le isoipse presenti in carta non si trova una seconda direttrice (non si trovano cioè altre due intersezioni tra una isoipsa qualunque diversa da quella già usata e il limite)?  
    - Se si riesce, interpolare una isoipsa vicina a quella già usata!
-   - Se l'entità è delimitata dal limite è planare allora le altre direttrici si trovano tracciando linee parallele a quella trovata e che intersecano le isoipse almeno in un punto (questo metodo l'ho dedotto vedendo quanto fatto nel pdf "pieghe e faglie" da p.22/29 a p.29/29).
+   - Se l'entità delimitata dal limite è planare allora le altre direttrici si trovano tracciando linee parallele a quella trovata e che intersecano le isoipse almeno in un punto.  
+   Qquesto metodo l'ho dedotto vedendo quanto fatto nel pdf "pieghe e faglie" da p.22/29 a p.29/29; è comunque anche illustrato a p.174 di Venturini che scrive (grassetto mio):  
+     > si ricostruisce la direttrice 175 m e si disegnano la successiva e le precedenti direttrici parallelamente a essa, utilizzando **l'unico punto** di intersezione traccia-isoipsa.
 
 
 7) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
