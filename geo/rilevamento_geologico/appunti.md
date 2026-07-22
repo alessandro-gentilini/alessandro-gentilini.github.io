@@ -383,6 +383,8 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 * Legenda
 * Eventuali punti notevoli (cima, fiume, toponimi)
 
+![Orientazione sezione, p.140 Venturini](orientazione_sezione.svg)
+
 
 ## Colori
 I colori che si vedono in carta muovendosi lungo la traccia di sezione devono essere riportati in sezione poco sotto al profilo morfologico, vedi pdf lezioni Vignaroli (figura qui sotto) e fig.8.4 in Conti "Carte e Sezioni Geologiche".
@@ -573,3 +575,5 @@ geologists. Elsevier.
 [Simpson] Brian Simpson, Lettura delle carte geologiche, Palermo, 1992, Dario Flaccovio Editore.
 
 [Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
+
+[Venturini] Corrado Venturini, Rilevamento geologico, Bologna, 2023, Zanichelli.
