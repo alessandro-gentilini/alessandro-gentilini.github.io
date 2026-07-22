@@ -102,7 +102,7 @@ Come trovare l'inclinazione della superficie?
 Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
 Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
 
-# Strutture planari
+# Superfici geologiche planari
 * Strati
 * Confini/limiti planari tra unità diverse (confini/limiti litostratigrafici)
 * Piani di faglia (la faglia è la frattura in due parti di un volume di roccia con conseguente moto relativo delle due parti, la superficie della frattura è assimilabile ad un piano detto _piano/specchio di faglia_)
