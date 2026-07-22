@@ -392,6 +392,8 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 * Legenda
 * Eventuali punti notevoli (cima, fiume, toponimi)
 
+Se non sono indicati gli estremi della sezione Venturini p.139, Fig. 3.13 suggerisce di usare come punto iniziale, che starà nella parte sinistra della sezione, l'estremo della traccia di sezione che cade nei quadranti W (da NNW a SSW) e come punto finale, che starà nella parte destra, l'estremo che cade nei quadranti E (da NNE a SSE); per le restanti porzioni dell'angolo giro non contemplate, usare come primo estremo quello compreso tra NNW e NNE e di conseguenza come secondo estremo quello compreso tra SSW e SSE.
+
 ![Orientazione sezione, p.140 Venturini](orientazione_sezione.png)
 
 
