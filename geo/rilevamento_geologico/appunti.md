@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 21 luglio 2026.
+Aggiornati al 22 luglio 2026.
 
 # Orientazione di superfici
 
@@ -106,9 +106,9 @@ Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica 
 * Strati
 * Confini/limiti planari tra unità diverse (confini/limiti litostratigrafici)
 * Piani di faglia (la faglia è la frattura in due parti di un volume di roccia con conseguente moto relativo delle due parti, la superficie della frattura è assimilabile ad un piano detto _piano/specchio di faglia_)
-* Superfici assiali di pieghe (definirle)
+* Piani assiali di pieghe (il piano assiale di una piega contiene tutte le linee di cerniera e divide la piega nei due fianchi, nel caso di un cilindro parabolico è il piano che contiene la bisettrice di tutte le parabole).
 
-**N.B.**: la struttura si approssima con un piano infinito ma un modello più accurato è quello di un parallelepipedo finito.
+**N.B.**: la struttura si approssima con un piano infinito ma un modello più accurato è quello di un parallelepipedo (aka scatola a facce piane e parallele) finito.
 
 # Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica
 
@@ -184,8 +184,7 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 8) E se il limite non interseca mai le isoipse?  
    Attenzione che potrebbe essere parallelo alle isoipse, in tal caso si tratta di un limite di trato orizzontale.
 
-
-7) **NOTA BENE**: se si assume che la struttura sia planare allora le direttrici devono essere fra loro parallele! 
+7) **NOTA BENE**: se si assume che il limite fra unità litostratigrafiche sia planare allora le direttrici devono essere fra loro parallele! 
 
 ## Regola della V, _V's rule_
 Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
@@ -381,6 +380,7 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 * Scala verticale uguale all'orizzontale, riportata graficamente.
 * Estremi A-B della sezione
 * Orientazione degli estremi della sezione
+* Legenda
 * Eventuali punti notevoli (cima, fiume, toponimi)
 
 
@@ -407,7 +407,7 @@ Si può usare anche un nomogramma (Palmer 1919).
 
 ## Proiezione di limiti (Venturini li chiama _dati lineari_)
 
-Quella che segue è la procedura per il limite di struttura planare (aka superficie stratigrafica) che cioè non è piegata; Venturini a p.147 dice
+Quella che segue è la procedura per il limite di struttura planare (e.g. superficie stratigrafica, limite tra unità litostratigrafiche) che cioè non è piegata; Venturini a p.147 dice
 > il metodo delle direttrici non è applicabile a quelle superfici stratigrafiche che, per loro stessa natura, assumono andamenti molto irregolari.
 
 La procedura qui sotto è illustrata da Venturini nelle figure 3.24 e 3.25 (p.148).
@@ -430,6 +430,10 @@ $Q$ non è più in carta ma è in sezione.
 
 6) Ripetere per una nuova isoipsa alla quota $q_1$ che intersechi il limite in almeno due punti, unendo i due punti si avrà la direttrice $D_{q_1}$ e di conseguenza si troverà in sezione il punto $Q_1$. Congiungere $Q$ a $Q_1$, trattandosi di struttura planare potrebbero bastare questi due punti, meglio però verificare con altre isoipse.  
 Se invece si è nel caso in cui le isoipse hanno un solo punto di contatto con il limite (Venturini p.159) allora individuare l'unica intersezione della isoipsa a quota $q_1$ con il limite e tracciare una retta parallela alla $D_q$ precedentemente trovata e passante per detta intersezione; questa retta è la direttrice $D_{q_1}$ e si può quindi continuare come già visto. Anche in questo caso meglio ripetere con altre isoipse.
+
+### Note
+
+Le faglie $\alpha$ e $\alpha'$ di fig. 3.54, "sezione geologica 8" p.177 Venturini, sono in parte parallele alle isoipse e in parte no, in sezione le disegna quindi piegate: c'è una parte orizzontale ed una parte inclinata.
 
 ## Proiezioni di giaciture (Venturini li chiama _dati-strato_ oppure _assetti_)
 
