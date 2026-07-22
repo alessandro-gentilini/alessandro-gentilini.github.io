@@ -143,6 +143,7 @@ La spezzata è la soluzione al problema in oggetto, essa approssima l'intersezio
 
 Qui sotto ho disegnato una sezione geologica, se considero una giacitura misurata in 1 e la devo usare per tracciare il limite affiorante, allora non ha senso disegnare direttrici a quote inferiori a quella del punto 1 anche se lo strato immerge verso Nord: non ha senso perché a Nord del punto 1, come si può ben vedere dalla sezione, non c'è volume di roccia in cui entri lo strato!  
 Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite affiorante, non ha senso disegnare direttrici a quote superiori a quella del punto 2 perché, come prima, verso Sud non ci sono volumi di roccia a quote più alte di quella del punto 2 in cui possano entrare gli strati!
+
 ![Una semplice sezione per illustrare dove ha senso oppure no disegnare le direttrici.](quali_direttrici.png)
 
 Immaginare come il limite cambia aumentando oppure diminuendo l'inclinazione, immaginare l'animazione con aumento/diminuizione dell'inclinazione e conseguente spostamento del limite.
@@ -190,6 +191,7 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
 Si si collegano tutti i vertici delle V si ottiene la linea dell'impluvio.  
 Individuare una valle/impluvio possibilmente con la linea di impluvio ortogonale al limite in esame (l'ortogonalità è indicata nelle dispense ["GEOLOGIA 2 E PRINCIPI DI RILEVAMENTO GEOLOGICO - SECONDA PARTE" a cura di Gian Andrea Pini e Lorenzo Bonini, Università degli studi di Trieste](https://moodle2.units.it/pluginfile.php/396407/mod_resource/content/1/Geologia%202%20e%20Principi%20di%20Rilevamento%20-%20Seconda%20parte%20-%20Lezione%201.pdf)), si hano quindi i seguenti casi descritti in Figura 2.17 di Lisle 2004.
+
 ![Regola della V da Lisle 2004.](regola_della_V.png)
 
 
@@ -216,8 +218,12 @@ Un limite in carta può appartenere ad una di queste classi
 Per sezione speditiva:
 
 1) individuare in carta il limite di interesse, è limite tra due elementi geologici
-2) classificare il limite usando lo schema della figura seguente  
-![Relazione tra i limite in carta e topografia, p14/73 in pdf "Lez 5_Elementi di stratimetria"](giacitura_e_topografia.png), la classificazione si basa sulla forma del limite rispetto a quella delle isoipse a lui vicine.
+2) classificare il limite usando lo schema della figura seguente,  
+
+   ![Relazione tra i limite in carta e topografia, p14/73 in pdf "Lez 5_Elementi di stratimetria"](giacitura_e_topografia.png)
+   
+   la classificazione si basa sulla forma del limite rispetto a quella delle isoipse a lui vicine.
+
 3) determinare quale elemento geologico sta in alto topografico (aka alle quote più alte) e quale sta in basso topografico (aka alle quote più basse) oservando le quote delle isoipse che interessano i due elementi
 4) disegnare la sezione geologica speditiva tipica di una delle cinque classi suddette. È speditiva perché le inclinazioni non sono calcolate e quindi in sezione sono solo indicative.
 5) ripetere eventualmente per un altro limite.
@@ -263,7 +269,7 @@ Nella parabola i due lembi si chiamano rami mentre nella piega si chiamano **fia
 Il punto di massima curvatura di ogni strato piegato si chiama **punto di cerniera**, nel caso delle parabole il punto di cerniera è il vertice.  
 
 Aggiungere adesso al sistema di riferimento l'asse y per fare una terna secondo la regola della mano destra.  
-Traslare ricopiandole le parabole dal piano $y=0$ a tutti i piani $y\gt0$; si ottiene così una struttura tridimensionale (direi che è un [cilindro parabolico](https://mathworld.wolfram.com/ParabolicCylinder.html)).
+Traslare ricopiandole le parabole dal piano $y=0$ a tutti i piani $y>0$; si ottiene così una struttura tridimensionale (direi che è un [cilindro parabolico](https://mathworld.wolfram.com/ParabolicCylinder.html)).
 
 Se si collegando i punti di cerniera lungo y si ottiene una linea che è detta **linea di cerniera**.
 
@@ -317,13 +323,16 @@ vedi esercizio 12-12 in Weijermars
 
 Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie" p5/29.  
 La figura seguente riporta i limiti senza direttrici.
-![](pieghe-senza-direttrici.png)
+
+![Pieghe senza direttrici, da pdf dispense lezioni](pieghe-senza-direttrici.png)
 
 Nella figura seguente, i segmenti marcati C sono fra di loro paralleli; anche i segmenti marcati D sono fra di loro paralleli; quindi questi segmenti rispettano il requisito di parallelismo delle direttrici.
-![](pieghe-nord-sud.png)
+
+![Pieghe con direttrici corrette, da pdf dispense lezioni](pieghe-nord-sud.png)
 
 Invece nella figura seguente i segmenti marcati B non sono fra di loro paralleli; nemmeno quelli marcati A non sono fra di loro paralleli.
-![](pieghe-est-ovest.png)
+
+![Pieghe con direttrici errate, da pdf dispense lezioni](pieghe-est-ovest.png)
 
 Se vale l'assunzione che i due fianchi della piega sono planari allora le direttrici devono essere parallele.
 
@@ -383,13 +392,13 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 * Legenda
 * Eventuali punti notevoli (cima, fiume, toponimi)
 
-![Orientazione sezione, p.140 Venturini](orientazione_sezione.svg)
+![Orientazione sezione, p.140 Venturini](orientazione_sezione.png)
 
 
 ## Colori
 I colori che si vedono in carta muovendosi lungo la traccia di sezione devono essere riportati in sezione poco sotto al profilo morfologico, vedi pdf lezioni Vignaroli (figura qui sotto) e fig.8.4 in Conti "Carte e Sezioni Geologiche".
 
-![](sezioni_da_pdf_vignaroli.png)
+![Riportare i colori](sezioni_da_pdf_vignaroli.png)
 
 ## Inclinazione apparente di un piano
 
@@ -491,9 +500,12 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 * Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
 
 * Venturini in figura 3.48, per il sovrascorrimento $\alpha'$ disegna le direttrici a quota 700, 675, 650 (vedi in verde nello screenshot qui sotto) e le disegna verticali.
-  ![](Venturini_fig_3_48.png)
+
+  ![Venturini figura 3.48](Venturini_fig_3_48.png)
+
   Come però si può vedere sia nella figura qui sopra che nella figura 3.47 seguente, le isoipse intersecano in solo punto la faglia e quindi non so proprio come possa disegnare le direttrici verticali perché per disegnarle verticali servirebbe, per ogni direttrice, un secondo piunto di intersezione con le isoipse!
-  ![](Venturini_fig_3_47_a.png)
+
+  ![Venturini figura 3.47](Venturini_fig_3_47_a.png)
 
 * Dove trovare le soluzioni di Lisle?
 
@@ -553,7 +565,8 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 **Strutture tettoniche** deformazione
 
 Tabella dedotta dalla prefazione in Fossen.
-|Tipo di deformazione|Esempi
+
+|Tipo di deformazione|Esempi|
 |-|-|
 |Fragile _Brittle_|Faglia _Fault_|
 |Duttile _Ductile_|Piega _Folding_|
