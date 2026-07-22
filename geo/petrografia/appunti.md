@@ -4,6 +4,29 @@ author: "Appunti di Alessandro Gentilini"
 date: "26 aprile 2026"
 ---
 
+# Lezioni 
+2025
+
+* Lunedì, 29 settembre 2025
+* Lunedì, 6 ottobre 2025
+* Lunedì, 13 ottobre 2025
+* Lunedì, 20 ottobre 2025
+* Lunedì, 3 novembre 2025
+* Lunedì, 10 novembre 2025
+* Lunedì, 17 novembre 2025
+* Lunedì, 24 novembre 2025
+
+2026
+
+* Giovedì, 26 febbraio 2026
+* Lunedì, 2 marzo 2026
+* Lunedì, 9 marzo 2026
+* Lunedì, 16 marzo 2026
+* Lunedì, 13 aprile 2026
+* Martedì, 21 aprile 2026
+* Giovedì, 23 aprile 2026
+* Giovedì, 7 maggio 2026
+
 # Ottica mineralogica
 
 * Rifrazione e legge di Snell.  
