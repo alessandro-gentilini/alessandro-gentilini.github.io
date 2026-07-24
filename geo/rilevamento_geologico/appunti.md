@@ -539,6 +539,12 @@ La proiezione va indicata con tratto più pesante della correlazione perché la 
 
 1) Non si applicano se una proiezione è diritta e la sua adiacente è rovesciata o verticale.
 
+2) Si applicano a due giaciture adiacenti entrambe diritte oppure entrambe rovesciate.
+
+3) Applicare il metodo anche prima della prima proiezione e dopo l'ultima proiezione per coprire l'intera traccia di sezione.
+
+4) Provare anche a disegnare a mano libera: dapprima disegnare con squadre e goniometro e compasso le perpendicolari e le bisettrici, poi a mano libera le parallele o gli archi di cerchio.
+
 
 
 
