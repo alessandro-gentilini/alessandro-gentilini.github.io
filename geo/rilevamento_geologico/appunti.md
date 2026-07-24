@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 22 luglio 2026.
+Aggiornati al 24 luglio 2026.
 
 # Orientazione di superfici
 
@@ -472,6 +472,11 @@ il segmento deve puntare verso l'immersione della giacitura.
 $R$ è il secondo estremo del segmento e deve stare a quota inferiore a $Q$.  
 $Q$ è detto _punto di aggancio_ della giacitura.  
 
+### Caso particolare delle giaciture orizzontali
+Venturini, nella sezione geologica 1 Fig.3.39 p.159 lo proietta mandando la perpendicolare alla traccia di sezione; nella sezione geologica 2 Fig. 3.14 p.160 invece lo proietta parallelo agli "assi strutturali" senza però spiegare il perché.
+
+Il punto di aggancio sarà al centro del segmento.
+
 ### Note
 
 1) in caso di pieghe le giaciture vanno proiettate parallele al piano assiale della piega, non allo strike della giacitura (Conti; Venturini p.174; Venturini p.176 per giaciture orizzontali)
@@ -479,6 +484,17 @@ $Q$ è detto _punto di aggancio_ della giacitura.
 1) usare anche le giaciture ragionevolmente vicine alla traccia di sezione anche se la loro proiezione cade fuori dalla traccia di sezione (fig. 3.53, p.176 Venturini)
 
 1) giaciture in unità separate da limite discordante, quindi giaciture sopra e sotto al limite discordante, vanno correlate separatamente (p.180 Venturini)
+
+# Accorgimenti e consigli (Venturini p.135)
+
+## Tecnica del motivo deformativo
+Non collegare tra di loro due proiezioni di giaciture con una unica linea: è l'**errore più classico** perché è molto improbabile che si tratti dello stesso strato.  
+
+Piuttosto, trovare un insieme di linee-strato parallele da piegare in modo continuo in linee curve ancora parallele che contengano, _disposte a quote differenti_ (questo è il punto cruciale), le proiezioni delle giaciture.
+
+Questo insieme di linee è il **motivo deformativo**.
+
+![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo.png)
 
 
 
@@ -492,6 +508,15 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
 3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
 4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
+
+# Mappe a piccola scala (e.g. $1:N$, $N>50k$)
+
+1) Non è possibile usare le direttrici a quanto ho capito perché non c'è abbastanza risoluzione.
+
+2) Le direttrici su estensioni di centinaia di km non sono più parallele.
+   > “Typically, on maps drawn on a scale of 1:50,000 structure contours are seldom straight or parallel over the distances being covered.” ([Bennison et al., 2013, p. 52](zotero://select/library/items/2DP6BMEQ)) ([pdf](zotero://open-pdf/library/items/IE9HG42U?page=63))
+
+3) Inoltre su centinaia di km la topografia appare quasi piatta a quindi può essere necessaria l'esagerazione verticale.
 
 # Domande
 
