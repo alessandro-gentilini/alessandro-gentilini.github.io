@@ -375,11 +375,11 @@ Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da 
 3) riportare i limiti che aiutano a definire i **settori** di proiezione dei dati-strato (vedi [proiezione di dati-strato](#proiezioni-di-giaciture-venturini-li-chiama-dati-strato-oppure-assetti)) e capire se le proiezioni dei dati-strato cadono o meno nei **settori equivalenti** (che se ho capito hanno la proprietà di raggruppare giaciture con assetti simili).
 Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini), **limiti discordanti** (p.175 Venturini)
 
-4) proiezione degli altri limiti
+4) proiezione degli altri limiti, tipicamente delle unità litostratigrafiche
 
 5) proiezioni delle giaciture
 
-6) correlazione delle giaciture (bisettrici, archi di cerchio invece per rovescei correlazione "a mano" p.180 Venturini)
+6) correlazione delle giaciture (bisettrici, archi di cerchio invece per giaciture rovesciate correlazione "a mano" p.180 Venturini)
 
 7) motivo deformativo aka non collegare giaciture da stessa linea di correlazione Venturini p.181
 
@@ -577,6 +577,20 @@ Suddividere le proiezioni in settori/domini con strike simili, questo dovrebbe a
 ## I motivi deformativi devono essere tettonicamente plausibili, aka evitare pieghe a cipolla (4° Consiglio)
 
 ![No pieghe a cipolla, tratto da Venturini.](no_pieghe_a_cipolla.png)
+
+## I "settori equivalenti" (Venturini, p. 154)
+
+Nella sezione disegnare per primi i **piani tettonici** (aka **faglie**) e le **superfici di discordanza**; queste saranno line curve che dividono il profilo morfologico in settori.
+
+Se una giacitura in carta appartiene ad un settore ma proiettata va a finire in un settore diverso allora se ne dovrà tenere conto durante la correlazione.
+
+Con riferimento alla figura seguente:
+
+![Tratto da Venturini](settori_equivalenti.png)
+
+La giacitura $z$ è in pianta nel settore a sinistra della faglia ma la sua proiezione $z''$ va a cadere in sezione nel settore a destra della faglia: $z''$ va correlata con $x''$ ma le curve di correlazione devono arrestarsi alla faglia e non proseguire oltre la faglia.  
+La correlazione tra $x''$ e $z''$ va fatta perché se non la si facesse allora la sezione a sinistra della faglia apparirebbe monoclinalica mentre nella realtà è piegata come provano le due giaciture $x$ e $z$.  
+$z''$ va poi disegnato a tratteggio.
 
 
 
