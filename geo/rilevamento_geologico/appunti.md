@@ -521,15 +521,23 @@ La proiezione va indicata con tratto più pesante della correlazione perché la 
 
 1) Per ogni coppia di perpendicolari, disegnare la bisettrice.
 
-2) per ogni bisettrici disegnare la parallele (equispaziate 3-5mm) alla proiezione della giacitura, dette parallele sono ortogonali alla bisettrice.
+2) Per ogni bisettrici disegnare la parallele (equispaziate 3-5mm) alla proiezione della giacitura, dette parallele sono ortogonali alla bisettrice.
 
-3) Non devono esserci sfasamenti tra le suddette parallele quando toccano la bisettrice.
+3) Non devono esserci sfasamenti tra le suddette parallele quando toccano la bisettrice, attenzione che se ci sono faglie allora ci saranno sfasamenti (l'ho dedotto da quanto Venturini scrive successivamente a p. 153 in merito al metodo degli archi di cerchio).
 
 4) Le suddette parallele non necessariamente devono coincidere con le proiezioni delle giaciture.
 
 5) Eventualmente smussare i vertici che le parallele creano quando toccano la bisettrice.
 
-Corre
+# Correlazione con il metodo degli archi di cerchio
+
+1) Per ogni coppia di perpendicolari adiacenti, tracciare degli archi di cerchio, centrati nell'intersezione delle due perpendicolari e distanziati 3-4mm.
+
+2) Gli estremi di due archi che si incontrano su una perpendicolare non devono essere sfasati a meno che non ci siano faglie.
+
+# Note sui metodi di correlazione
+
+1) Non si applicano se una proiezione è diritta e la sua adiacente è rovesciata o verticale.
 
 
 
