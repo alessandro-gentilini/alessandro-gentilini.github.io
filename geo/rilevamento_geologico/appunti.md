@@ -368,7 +368,7 @@ Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da 
 
 ## Linee guida generali
 
-1) disegnare il **profilo morfologico/topografico**
+1) disegnare il **profilo morfologico/topografico** (proiettare per prime le isoipse principali che sono le più evidenti, questo per tenere eventuali errori contenuti tra due isoipse principali e quindi meno impattanti, Venturini p.144).
 
 2) riportare sul profilo i **colori** delle unità litostratigrafiche [vedi riferimento alla fonte](#colori)
 
@@ -386,10 +386,10 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 ## Accessori
 
 * Unità di misura asse verticale, in metri.
-* Scala verticale uguale all'orizzontale, riportata graficamente.
+* Scala verticale uguale all'orizzontale, riportata graficamente cioè con un segmento e con la sua dimensioni corrispondente nella realtà.
 * Estremi A-B della sezione
 * Orientazione degli estremi della sezione
-* Legenda
+* Legenda (i soprassegni/figurati vanno tenuti paralleli agli strati)
 * Eventuali punti notevoli (cima, fiume, toponimi)
 
 Se non sono indicati gli estremi della sezione Venturini p.139, Fig. 3.13 suggerisce di usare come punto iniziale, che starà nella parte sinistra della sezione, l'estremo della traccia di sezione che cade nei quadranti W (da NNW a SSW) e come punto finale, che starà nella parte destra, l'estremo che cade nei quadranti E (da NNE a SSE); per le restanti porzioni dell'angolo giro non contemplate, usare come primo estremo quello compreso tra NNW e NNE e di conseguenza come secondo estremo quello compreso tra SSW e SSE.
@@ -465,17 +465,26 @@ $\omega=\arctan(\tan(\alpha)\sin(\gamma))$
 
 4) Sulla carta, proiettare $P$ ortogonalmente alla traccia di sezione e verso il profilo topografico (che Venturini chiama profilo morfologico) nel punto $Q$ alla quota della giacitura. $Q$ non è più in carta ma è in sezione.
 
-5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico.
+5) Sulla sezione, $Q$ può essere sopra o sotto il profilo topografico (se è molto al di sopra del profilo allora valutare se non usare la proiezione, Venturini p.149).
 
 6) Sulla sezione, da $Q$ spiccare un segmento lungo 2-3 mm (massimo 5, v. Venturini p.149) che ha angolo $\omega$ rispetto all'orizzontale;  
 il segmento deve puntare verso l'immersione della giacitura.  
 $R$ è il secondo estremo del segmento e deve stare a quota inferiore a $Q$.  
 $Q$ è detto _punto di aggancio_ della giacitura.  
 
-### Caso particolare delle giaciture orizzontali
-Venturini, nella sezione geologica 1 Fig.3.39 p.159 lo proietta mandando la perpendicolare alla traccia di sezione; nella sezione geologica 2 Fig. 3.14 p.160 invece lo proietta parallelo agli "assi strutturali" senza però spiegare il perché.
+![Tratto da Venturini](proiezione_giacitura_1.png)
 
-Il punto di aggancio sarà al centro del segmento.
+![Tratto da Venturini](proiezione_giacitura_2.png)
+
+### Caso particolare delle giaciture orizzontali
+
+Si è visto per le giaciture non orrizontali che vanno proiettate lungo il loro strike per andare a intersecare la traccia di sezione.
+
+Questo non è possibile per le giaciture orizzontali che per definizione non hanno strike (Venturini a p.149 scrive che sono "mancanti di direzione").
+
+Venturini, nella sezione geologica 1 Fig.3.39 p.159 lo proietta mandando la perpendicolare alla traccia di sezione; nella sezione geologica 2 Fig. 3.14 p.160 invece lo proietta parallelo agli "assi strutturali" senza però spiegare il perché se non il ricorrere alla _logica-geologica_.
+
+Il punto di aggancio è al centro del segmento (Venturini p.149).
 
 ### Note
 
@@ -574,6 +583,10 @@ Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazi
 
 **Direttrice** (_stratum contour_) è una curva di livello di un piano inclinato.
 In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
+
+**Soprassegni** Venturini p.145
+
+**Figuràti** Conti.
 
 ## pdf "Lez 0_Rilevamento geologico - programma generale", "Introduzione al corso"
 
