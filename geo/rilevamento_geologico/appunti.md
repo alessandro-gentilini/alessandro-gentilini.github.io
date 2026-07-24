@@ -473,6 +473,7 @@ $\omega=\arctan(\tan(\alpha)\sin(\gamma))$
 il segmento deve puntare verso l'immersione della giacitura.  
 $R$ è il secondo estremo del segmento e deve stare a quota inferiore a $Q$.  
 $Q$ è detto _punto di aggancio_ della giacitura.  
+Il segmento va disegnato tratteggiato se cade in un settore non equivalente, vedi [i dettagli](#i-settori-equivalenti-venturini-p-154).
 
 ![Tratto da Venturini](proiezione_giacitura_1.png)
 
