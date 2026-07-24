@@ -488,13 +488,16 @@ Il punto di aggancio sarà al centro del segmento.
 # Accorgimenti e consigli (Venturini p.135)
 
 ## Tecnica del motivo deformativo
+
 Non collegare tra di loro due proiezioni di giaciture con una unica linea: è l'**errore più classico** perché è molto improbabile che si tratti dello stesso strato.  
 
-Piuttosto, trovare un insieme di linee-strato parallele da piegare in modo continuo in linee curve ancora parallele che contengano, _disposte a quote differenti_ (questo è il punto cruciale), le proiezioni delle giaciture.
+Piuttosto, per **correlare** le proiezioni delle giaciture, trovare un insieme di linee-strato parallele da piegare in modo continuo in linee curve ancora parallele che contengano, _disposte a quote differenti_ (questo è il punto cruciale), le proiezioni delle giaciture.
 
 Questo insieme di linee è il **motivo deformativo**.
 
 ![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo.png)
+
+![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo_2.png)
 
 
 
