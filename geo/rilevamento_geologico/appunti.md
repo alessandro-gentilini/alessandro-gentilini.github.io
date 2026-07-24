@@ -600,6 +600,10 @@ $z''$ va poi disegnato a tratteggio.
 
 ![Tratto da Venturini](selezionare_le_giaciture_da_proiettare.png)
 
+## L'estrapolazione in profondità
+
+Con i soli dati di superficie (affioramenti rilevati in campagna) la corrispondenza tra la sezione geologica e la realtà fisica diminuisce all'aumentare della profondità ed all'aumentare della deformazione tettonica.
+
 ## La finta monoclinalica
 
 ![Tratto da Venturini](finta_monoclinalica.png)
@@ -607,6 +611,25 @@ $z''$ va poi disegnato a tratteggio.
 La finta monoclinalica si può avere quando le inclinazioni di due giaciture e gli angoli rispetto alla traccia di sezione delle medesime due giaciture danno lo stesso angolo apparente di inclinazione.  
 Nella figura sopra vale cioè  
 $\tan \alpha_x \sin \gamma_x = \tan \alpha_y \sin \gamma_y$ 
+
+## Giaciture con strike paralleli alla traccia di sezione risultano orizzontali in sezione qualunque sia la loro inclinazione!
+
+Giaciture con strike paralleli alla traccia di sezione risultano orizzontali in sezione qualunque sia la loro inclinazione, questo discende dalla [formula dell'inclinazione apparente](#inclinazione-apparente-di-un-piano).
+
+## Spessore nella realtà costante che però in sezione è apparentemente variabile
+
+È sempre causato dalla [formula dell'inclinazione apparente](#inclinazione-apparente-di-un-piano).
+
+![Tratto da Venturini](spessore_reale_costante_e_apparente_variabile.png)
+
+In questo caso Venturini suggerisce di rappresentare lo spessore variabile se si tratta di analisi geologico tecnica mentre correggerlo rendendolo costante se si tratta di una analisi non applicata.
+
+## Che tipo di faglia è?
+
+![Tratto da Venturini](faglia_ambigua.png)
+
+Nella figura qui sopra dice che si devono guardare le strie... ma non penso che ci siano in carta!.
+
 
 
 
