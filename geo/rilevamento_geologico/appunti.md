@@ -491,13 +491,14 @@ Il punto di aggancio sarà al centro del segmento.
 
 Non collegare tra di loro due proiezioni di giaciture con una unica linea: è l'**errore più classico** perché è molto improbabile che si tratti dello stesso strato.  
 
-Piuttosto, per **correlare** le proiezioni delle giaciture, trovare un insieme di linee-strato parallele da piegare in modo continuo in linee curve ancora parallele che contengano, _disposte a quote differenti_ (questo è il punto cruciale), le proiezioni delle giaciture.
+Piuttosto, per **correlare** le proiezioni delle giaciture, trovare un insieme di linee-strato parallele da piegare in modo continuo in linee curve ancora parallele che contengano, _disposte a quote differenti_ (questo è il punto cruciale), le proiezioni delle giaciture.  
+Le curve fra loro parallele dovrebbero mantenere una distanza costante indicando così uno spessore degli strati tendenzialmente costante al variare dell'ascissa curvilinea (Venturini p.136 nel 4° Consiglio).
 
 Questo insieme di linee è il **motivo deformativo**.
 
-![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo.png)
+![Illustrazione della tecnica del motivo deformativo, tratto da Venturini.](tecnica_del_motivo_deformativo.png)
 
-![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo_2.png)
+![Illustrazione della tecnica del motivo deformativo, tratto da Venturini.](tecnica_del_motivo_deformativo_2.png)
 
 ## Tangenza al punto di aggancio (2° Consiglio)
 
@@ -507,7 +508,13 @@ Le curve che correlano le proiezioni di giaciture potrebbero essere parallele an
 
 Suddividere le proiezioni in settori/domini con strike simili, questo dovrebbe aiutare poi a correlare.
 
-![Suddivisione delle proiezioni di giaciture in settori/domini con strike simili](suddivisione_proiezioni_giaciture_per_strike_simili.png)
+![Suddivisione delle proiezioni di giaciture in settori/domini con strike simili, tratto da Venturini.](suddivisione_proiezioni_giaciture_per_strike_simili.png)
+
+## I motivi deformativi devono essere tettonicamente plausibili, aka evitare pieghe a cipolla (4° Consiglio)
+
+![No pieghe a cipolla, tratto da Venturini.](no_pieghe_a_cipolla.png)
+
+
 
 
 
