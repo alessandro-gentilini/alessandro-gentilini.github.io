@@ -450,7 +450,9 @@ Le faglie $\alpha$ e $\alpha'$ di fig. 3.54, "sezione geologica 8" p.177 Venturi
 
 ## Proiezioni di giaciture (Venturini li chiama _dati-strato_ oppure _assetti_)
 
-Qui si tratta la giacitura come la misura dell'assetto di una porzione di roccia affiorante che non è detto che sia una struttura planare; queste giaciture sono invece misure fatte su strutture non planari come per esempio i fianchi delle pieghe. Se la giacitura rappresentasse invece una struttura planare allora si applica la procedurà già vista nella sezione ["Proiezione di limiti"](#proiezione-di-limiti).
+Qui si tratta la giacitura come la misura dell'assetto di una porzione di roccia affiorante che non è detto che sia una struttura planare; queste giaciture sono invece misure fatte su strutture non planari come per esempio i fianchi delle pieghe.  
+Tipicamente queste giaciture vanno correlate e daranno pieghe.  
+Se la giacitura rappresentasse invece una struttura planare allora si applica la procedurà già vista nella sezione ["Proiezione di limiti"](#proiezione-di-limiti).
 
 La giacitura ha inclinazione $\alpha$. 
 
@@ -494,7 +496,46 @@ Il punto di aggancio è al centro del segmento (Venturini p.149).
 
 1) giaciture in unità separate da limite discordante, quindi giaciture sopra e sotto al limite discordante, vanno correlate separatamente (p.180 Venturini)
 
-# Accorgimenti e consigli (Venturini p.135)
+# Correlazioni di giaciture, parte comune
+
+Proiettare le giaciture come descritto [in precedenza](#proiezioni-di-giaciture-venturini-li-chiama-dati-strato-oppure-assetti)
+
+Tracciare la perpendicolari alle proiezioni, le perpendicolari sono passanti per il punto di aggancio.
+
+Se possibile considerare un gruppo di proiezioni delimitate a destra e a sinistra da strutture geologiche (e.g. faglie, superfici stratigrafiche di discordanza angolare).
+
+Nella figura seguente, indicate coin $a,b,c,d,e,f$ le proiezioni, vanno considerate a coppie per ottenere le intersezioni delle perpendicolari:  
+$a,b$  
+$b,c$  
+$c,d$  
+$d,e$  
+$e,f$
+
+![Tratto da Venturini.](perpendicolare_alle_proiezioni_di_giaciture.png)
+
+La proiezione va indicata con tratto più pesante della correlazione perché la prima è il **dato oggettivo** mentre la seconda è l'**interpretazione**.
+
+![Tratto da Venturini.](bisettrici_e_archi_di_cerchio.png)
+
+# Correlazione con il metodo delle bisettrici
+
+1) Per ogni coppia di perpendicolari, disegnare la bisettrice.
+
+2) per ogni bisettrici disegnare la parallele (equispaziate 3-5mm) alla proiezione della giacitura, dette parallele sono ortogonali alla bisettrice.
+
+3) Non devono esserci sfasamenti tra le suddette parallele quando toccano la bisettrice.
+
+4) Le suddette parallele non necessariamente devono coincidere con le proiezioni delle giaciture.
+
+5) Eventualmente smussare i vertici che le parallele creano quando toccano la bisettrice.
+
+Corre
+
+
+
+
+
+# Accorgimenti e consigli per la correlazione delle proiezioni delle giaciture (Venturini p.135)
 
 ## Tecnica del motivo deformativo (1° Consiglio)
 
