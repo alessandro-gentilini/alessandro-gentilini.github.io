@@ -487,7 +487,7 @@ Il punto di aggancio sarà al centro del segmento.
 
 # Accorgimenti e consigli (Venturini p.135)
 
-## Tecnica del motivo deformativo
+## Tecnica del motivo deformativo (1° Consiglio)
 
 Non collegare tra di loro due proiezioni di giaciture con una unica linea: è l'**errore più classico** perché è molto improbabile che si tratti dello stesso strato.  
 
@@ -498,6 +498,18 @@ Questo insieme di linee è il **motivo deformativo**.
 ![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo.png)
 
 ![Illustrazione della tecnica del motivo deformativo, da Venturini.](tecnica_del_motivo_deformativo_2.png)
+
+## Tangenza al punto di aggancio (2° Consiglio)
+
+Le curve che correlano le proiezioni di giaciture potrebbero essere parallele anche solo al punto di aggancio.
+
+## Suddividere le proiezioni in settori/domini con strike simili (3° Consiglio)
+
+Suddividere le proiezioni in settori/domini con strike simili, questo dovrebbe aiutare poi a correlare.
+
+![Suddivisione delle proiezioni di giaciture in settori/domini con strike simili](suddivisione_proiezioni_giaciture_per_strike_simili.png)
+
+
 
 
 
