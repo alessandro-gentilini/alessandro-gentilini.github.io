@@ -1,5 +1,5 @@
 ---
-title: "Rilevamento geologico - A.A. 2025-25"
+title: "Rilevamento geologico - A.A. 2025-26"
 author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
@@ -593,6 +593,20 @@ La giacitura $z$ è in pianta nel settore a sinistra della faglia ma la sua proi
 La correlazione tra $x''$ e $z''$ va fatta perché se non la si facesse allora la sezione a sinistra della faglia apparirebbe monoclinalica mentre nella realtà è piegata come provano le due giaciture $x$ e $z$.  
 $z''$ va poi disegnato a tratteggio.
 
+
+# Limiti delle sezioni geologiche
+
+## Selezionare le giaciture da proiettare
+
+![Tratto da Venturini](selezionare_le_giaciture_da_proiettare.png)
+
+## La finta monoclinalica
+
+![Tratto da Venturini](finta_monoclinalica.png)
+
+La finta monoclinalica si può avere quando le inclinazioni di due giaciture e gli angoli rispetto alla traccia di sezione delle medesime due giaciture danno lo stesso angolo apparente di inclinazione.  
+Nella figura sopra vale cioè  
+$\tan \alpha_x \sin \gamma_x = \tan \alpha_y \sin \gamma_y$ 
 
 
 
