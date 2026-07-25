@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 24 luglio 2026.
+Aggiornati al 25 luglio 2026.
 
 # Orientazione di superfici
 
@@ -17,7 +17,10 @@ La direzione va da 0° a 360° e quindi si ha che 0° equivale a Nord, 90° a Es
 **Inclinazione (_dip_)** di una superficie: è l'angolo, misurato in un piano verticale, tra il piano orizzontale e la superficie da orientare.  
 L'inclinazione va da 0° a 90°.  
 L'inclinazione 0° rappresenta una superficie orizzontale.  
-L'inclinazione 90° corrisponde ad una superficie verticale. 
+L'inclinazione 90° corrisponde ad una superficie verticale.  
+Tra i quattro angoli che si formano tra il piano orizzontale e la superficie da orientare si considera il più piccolo della coppia complementare nel sottosuolo (questo è utile sopratutto ai fini delle sezioni geologiche); vedi la figura seguente dove $AB$ è l'orizzontale, il sottosuolo è sotto ad $AB$, $CD$ è la superficie da orientare, l'angolo $1a$ è uguale all'angolo $1b$, l'angolo $2a$ è uguale all'angolo $2b$, $1a$ e $2a$ sono complementari (così come $1b$ e $2b$); ebbene, l'inclinazione è $1a$.
+
+![$AB$ è l'orizzontale, il sottosuolo è sotto ad $AB$, $CD$ è la superficie da orientare, l'angolo $1a$ è uguale all'angolo $1b$, l'angolo $2a$ è uguale all'angolo $2b$, $1a$ e $2a$ sono complementari (così come $1b$ e $2b$); ebbene, l'inclinazione è $1a$.](inclinazione.png)
 
 **Immersione (_dip direction_)** di una superficie: è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dalla proiezione sul piano orizzontale di una linea di massima pendenza che giace sulla superficie da orientare.  
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
