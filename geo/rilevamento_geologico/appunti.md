@@ -163,6 +163,18 @@ Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
 8) In corrispondenza della metà di $\alpha$ sta $L_C$
 9) Si hanno ora $L$ ed $L_C$, il piano che le contiene entrambe è il piano C ricercato e soluzione del problema in oggetto, vedi ["piano contenente due linee"](#piano-contenente-due-linee).
 
+![Bisettore passo passo](stereo_bisettore_00.png)
+
+![Bisettore passo passo](stereo_bisettore_01.png)
+
+![Bisettore passo passo](stereo_bisettore_02.png)
+
+![Bisettore passo passo](stereo_bisettore_03.png)
+
+![Bisettore passo passo](stereo_bisettore_04.png)
+
+![Bisettore passo passo](stereo_bisettore_05.png)
+
 # Come leggere le informazioni sul reticolo stereografico
 
 ## Un punto sul reticolo corrisponde ad una linea retta
