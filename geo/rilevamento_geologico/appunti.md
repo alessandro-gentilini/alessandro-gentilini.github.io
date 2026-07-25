@@ -104,6 +104,41 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 ![Conti 2019 figura 4.3c, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_c.png)
 
 
+# Come leggere le informazioni sul reticolo stereografico
+
+## Un punto sul reticolo corrisponde ad una linea retta
+
+Come trovare la direzione della linea?  
+Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto in questione, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
+
+Come trovare l'inclinazione della linea?  
+Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della linea.  
+Più il punto è vicino al centro dello stereogramma e maggiore è l'inclinazione della linea.  
+Ruotare il trasparente per portare il segmento precedentemente disegnato a coincidere con l'asse WE, la distanza tra il cerchio primitivo ed il punto in questione, misurata sull'asse WE, è l'inclinazione della linea.
+
+## Una ciclografica sul reticolo corrisponde ad una superficie planare
+
+Prima di tutto serve che sia indicato almeno il Nord sul cerchio primitivo, se ci fosse solamente il cerchio primitivo e la traccia allora direi che il problema non possa essere risolto.
+
+È data la traccia ciclografica di un piano come nella figura seguente:
+
+![Da Conti 2019, Figura 4.5a](stereo_conti_lettura_piano_a.png)
+
+Ruotare il trasparente in modo da far coincidere la traccia con un cerchio maggiore, si può scegliere un cerchio maggiore nei quadranti Est oppure nei quadranti Ovest, non c'è differenza nel risultato finale, ho verificato provando in entrambi i casi.  
+Nella figura seguente si è scelto il cerchio massimo ad Est; in questa condizione si può già leggere l'inclinazione contando i gradi che ci sono sull'asse orizzontale WE a partire da Est e finendo sul cerchio maggiore suddetto, vedi figura seguente dove l'inclinazione è 40° (se si sceglie il cerchio maggiore a Ovest allora si dovrà leggere l'inclinazione partendo da Ovest e muovendosi verso il cerchio massimo individuato).  
+Sul trasparente, marcare inoltre con un segno (nella figura qui sotto è una `x`) il punto Est sul cerchio primitivo (oppure il punto Ovest se si è scelto un cerchio maggiore ad Ovest).
+
+![Da Conti 2019, Figura 4.5b](stereo_conti_lettura_piano_b.png)
+
+Ruotare il trasparente in modo che il Nord sul trasparente torni a coincidere con il Nord sul reticolo.  
+Il segno in precedenza marcato sul cerchio primitivo indica ora, sempre sul cerchio primitivo, l'immersione del piano, vedi figura seguente in cui la giacitura nel formato immersione/inclinazione è 310/40.
+
+![Da Conti 2019, Figura 4.5c](stereo_conti_lettura_piano_c.png)
+
+Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione/inclinazione come visibile nello stralcio seguente.
+
+![Da Conti 2019, p. 25](stereo_conti_lettura_piano_output.png)
+
 # Proiezione di linee che giacciono su una superficie
 0) È necessario conoscere il _pitch_ della linea.
 1) Disegnare la proiezione della superficie seguendo il metodo precedentemente illustrato.
@@ -183,40 +218,26 @@ Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
 
 ![Bisettore passo passo](stereo_bisettore_05.png)
 
-# Come leggere le informazioni sul reticolo stereografico
+# Asse di pieghe cilindriche, diagramma $\beta$
 
-## Un punto sul reticolo corrisponde ad una linea retta
+L'intersezione di due piani tangenti ai fianchi di una piega cilindrica che ha asse B è una linea $\beta$ parallela all'asse B della piega.
 
-Come trovare la direzione della linea?  
-Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto in questione, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
+Dati più piani li si può rappresentare come tracce ciclografiche che in teoria si intersecano in un unico punto $\beta$ che rappresenta l'asse della piega.  
+È molto probabile che non ci sia una unica intersezione e quindi si dovrà stimare ad occhio la miglior intersezione che rappresenterà l'asse $\beta$.
 
-Come trovare l'inclinazione della linea?  
-Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della linea.  
-Più il punto è vicino al centro dello stereogramma e maggiore è l'inclinazione della linea.  
-Ruotare il trasparente per portare il segmento precedentemente disegnato a coincidere con l'asse WE, la distanza tra il cerchio primitivo ed il punto in questione, misurata sull'asse WE, è l'inclinazione della linea.
+![Diagramma $\beta$, Figura D.2a e D.2b](stereo_asse_pieghe_cilindriche_diagramma_beta.png)
 
-## Una ciclografica sul reticolo corrisponde ad una superficie planare
+# Asse di pieghe cilindriche, diagramma $\pi$
 
-Prima di tutto serve che sia indicato almeno il Nord sul cerchio primitivo, se ci fosse solamente il cerchio primitivo e la traccia allora direi che il problema non possa essere risolto.
+Le normali a piani tangenti ai fianchi di una piega cilindrica, avente asse B, sono in generale tutte parallele ad uno stesso piano detto piano $\pi$, nel caso ideale riportato nella figura seguente queste normali sono proprio tutte contenute nello stesso piano $\pi$.  
+Questo piano $\pi$ ha la normale, detta asse $\pi$, che è parallela all'asse B della piega.
 
-È data la traccia ciclografica di un piano come nella figura seguente:
+Le suddette normali sono linee e le si può quindi proiettare nello stereogramma, ottenendo un insieme di punti che in teoria giacciono su una traccia ciclografica.  
+È molto probabile che non giacciano perfettamente su una traccia ciclografica e quindi si dovrà stimare ad occhio la miglior traccia ciclografica che meglio le accoglie.  
+Una volta stimata la traccia ciclografica, determinarne il polo, il polo rappresenterà l'asse $\pi$ ricercato.
 
-![Da Conti 2019, Figura 4.5a](stereo_conti_lettura_piano_a.png)
+![Diagramma $\alpha$, Figura D.2c e D.2d](stereo_asse_pieghe_cilindriche_diagramma_pi.png)
 
-Ruotare il trasparente in modo da far coincidere la traccia con un cerchio maggiore, si può scegliere un cerchio maggiore nei quadranti Est oppure nei quadranti Ovest, non c'è differenza nel risultato finale, ho verificato provando in entrambi i casi.  
-Nella figura seguente si è scelto il cerchio massimo ad Est; in questa condizione si può già leggere l'inclinazione contando i gradi che ci sono sull'asse orizzontale WE a partire da Est e finendo sul cerchio maggiore suddetto, vedi figura seguente dove l'inclinazione è 40° (se si sceglie il cerchio maggiore a Ovest allora si dovrà leggere l'inclinazione partendo da Ovest e muovendosi verso il cerchio massimo individuato).  
-Sul trasparente, marcare inoltre con un segno (nella figura qui sotto è una `x`) il punto Est sul cerchio primitivo (oppure il punto Ovest se si è scelto un cerchio maggiore ad Ovest).
-
-![Da Conti 2019, Figura 4.5b](stereo_conti_lettura_piano_b.png)
-
-Ruotare il trasparente in modo che il Nord sul trasparente torni a coincidere con il Nord sul reticolo.  
-Il segno in precedenza marcato sul cerchio primitivo indica ora, sempre sul cerchio primitivo, l'immersione del piano, vedi figura seguente in cui la giacitura nel formato immersione/inclinazione è 310/40.
-
-![Da Conti 2019, Figura 4.5c](stereo_conti_lettura_piano_c.png)
-
-Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione/inclinazione come visibile nello stralcio seguente.
-
-![Da Conti 2019, p. 25](stereo_conti_lettura_piano_output.png)
 
 # Superfici geologiche planari
 * Strati
