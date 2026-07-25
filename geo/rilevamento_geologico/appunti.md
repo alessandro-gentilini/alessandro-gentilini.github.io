@@ -136,7 +136,7 @@ Trovare il piano contenente due linee date.
 
 Trovare il piano bisettore di due piani dati.
 
-![Trovare il piano bisettore di due piani, qui il bisettore dell'angolo acuto $\alpha$ fra i due piani, da Conti 2019, fig.5.8 p.41](stereo_bisettore.png)
+![Trovare il piano bisettore di due piani, qui C è il bisettore dell'angolo acuto $\alpha$ fra i due piani mentre $C'$ è il bisettore dell'angolo ottuso $\alpha'$, da Conti 2019, fig.5.8 p.41](stereo_bisettore.png)
 
 Paragrafo 5.7 "Piano bisettore tra due piani" ([Conti, 2019, p. 40](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
 
@@ -707,7 +707,7 @@ In questo caso Venturini suggerisce di rappresentare lo spessore variabile se si
 
 ![Tratto da Venturini](faglia_ambigua.png)
 
-Nella figura qui sopra dice che si devono guardare le strie... ma non penso che ci siano in carta!.
+Nella figura qui sopra dice che si devono guardare le strie... ma non penso che le strie ci siano in carta!.
 
 
 
