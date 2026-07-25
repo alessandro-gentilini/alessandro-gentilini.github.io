@@ -102,6 +102,8 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 
 # Dato il polo tracciare il corrispondente piano
 
+# Angolo tra due linee
+
 # Angolo tra due superfici
 
 Vedi pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" da p.46/87 a p.48/87
@@ -122,7 +124,13 @@ Esempi di applicazioni dell'angolo tra due superfici:
 Per le **pieghe aperte** misurare l'angolo ottuso.  
 Per le **pieghe chiuse** misurare l'angolo acuto.
 
+# Piano contenente due linee
+
+Trovare il piano contenente due linee date.
+
 # Piano bisettore di due piani
+
+Trovare il piano bisettore di due piani dati.
 
 ![Trovare il piano bisettore di due piani, da conti 2019, fig.5.8 p.41](stereo_bisettore.png)
 
@@ -140,7 +148,10 @@ Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
 3) Il punto di intersezione tra le due tracce rappresenta la linea L.
 4) La linea L è rappresentata da un punto sullo stereogramma, il ruolo di questo punto diventa ora quello di polo del piano N (ricordare che più sopra abbiamo detto che il piano N è normale ad L e quindi la retta L è il polo del piano N).
 5) Essendo L il polo del piano N, tracciare la ciclografica che rappresenta il piano N, vedi ["dato il polo tracciarne il piano"](#dato-il-polo-tracciare-il-corrispondente-piano).
-6) 
+6) Intersecare ora la traccia ciclografica del piano N con le due tracce ciclografiche dei piani A e B, si ottengono le linee $L_A$ e $L_B$ rappresentate nel diagramma della precedente figura dai due omonimi punti.
+7) Misurare l'angolo acuto $\alpha$ tra le due linee $L_A$ ed $L_B$, vedi ["angolo tra due linee"](#angolo-tra-due-linee).
+8) In corrispondenza della metà di $\alpha$ sta $L_C$
+9) Si hanno ora $L$ ed $L_C$, il piano che le contiene entrambe è il piano C ricercato e soluzione del problema in oggetto, vedi ["piano contenente due linee"](#piano-contenente-due-linee).
 
 # Come leggere le informazioni sul reticolo stereografico
 
