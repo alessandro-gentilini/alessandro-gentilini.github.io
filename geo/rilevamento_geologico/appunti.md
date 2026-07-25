@@ -25,7 +25,7 @@ Tra i quattro angoli che si formano tra il piano orizzontale e la superficie da 
 **Immersione (_dip direction_)** di una superficie: è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dalla proiezione sul piano orizzontale di una linea di massima pendenza che giace sulla superficie da orientare.  
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
 La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua liquida sotto l'azione della forza di gravità.  
-La regola della mano destra dice di appoggiare il palmo della mano destra alla superficie da orientare e rendere il pollice parallelo alla direzione, in tal modo l'indice sarà parallelo alla immersione.
+La regola della mano destra dice di appoggiare il palmo della mano destra al tetto della superficie da orientare, il dito indice (e gli altri tre) vanno nel verso in cui scende l'acqua (quindi paralleli all'immersione), il pollice fa un angolo di 90° con l'indice e sarà parallelo alla direzione.
 
 |Nome|in inglese|simbolo|
 |-|-|-|
