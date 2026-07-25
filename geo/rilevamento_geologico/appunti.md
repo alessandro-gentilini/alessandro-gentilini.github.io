@@ -99,11 +99,12 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 ## Un punto sul reticolo corrisponde ad una linea
 
 Come trovare la direzione della linea?  
-Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
+Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto in questione, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
 
 Come trovare l'inclinazione della linea?  
 Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della linea.  
-Indicata con $d$ la distanza radiale tra il cerchio primitivo ed il punto (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
+Più il punto è vicino al centro dello stereogramma e maggiore è l'inclinazione della linea.  
+Ruotare il trasparente per portare il segmento precedentemente disegnato a coincidere con l'asse WE, la distanza tra il cerchio primitivo ed il punto in questione, misurata sull'asse WE, è l'inclinazione della linea.
 
 ## Una ciclografica sul reticolo corrisponde ad una superficie
 
@@ -747,6 +748,10 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 **Strutture primarie** formazione
 
 **Strutture tettoniche** deformazione
+
+## pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali"
+
+**Circonferenza equatoriale** = **Circonferenza primitiva** = **Cerchio primitivo** p.18/87
 
 Tabella dedotta dalla prefazione in Fossen.
 
