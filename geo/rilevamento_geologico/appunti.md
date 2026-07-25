@@ -82,10 +82,16 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 4) Marcare sul cerchio primitivo del trasparente un punto in corrispondenza dell'immersione della superficie.
 5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest, ho verificato e il risultato finale non cambia scegliendo Est piuttosto che Ovest).
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, ricalcare l'intera ciclografica (da Sud a Nord sul reticolo) corrispondente che rappresenta la superficie in oggetto.
-7) Per disegnare il polo: partendo dalla ciclografica suddetta, e muovendosi sul diametro E-O verso il centro del reticolo, contare 90° e, lì arrivati, disegnare il punto che rappresenta il polo della superficie in oggetto.
+7) Per disegnare il **polo**: partendo dalla ciclografica suddetta, e muovendosi sul diametro E-O verso il centro del reticolo, contare 90° e, lì arrivati, disegnare il punto che rappresenta il polo della superficie in oggetto.
 
 La procedura qui sopra fa disegnare correttamente anche le superfici verticali, che sono segmenti rettilinei che passano per il centro dello stereogramma.  
 > All vertical planes will project as straight lines passing through the centre of the stereogram. [Geological Structures - A Practical Introduction (Waldron and Snyder)](https://geo.libretexts.org/Bookshelves/Geology/Geological_Structures_-_A_Practical_Introduction_(Waldron_and_Snyder)/01%3A_Topics/1.04%3A_Stereographic_Projection)
+
+> È importante ricordare che la traccia ciclografica che rappresenta un piano è convessa verso la direzione di immersione del piano.  
+> Il grado di convessità dipende dall’inclinazione del piano, piano poco inclinati daranno tracce ciclografiche molto convesse e prossime al cerchio primitivo.  
+> La traccia ciclografica di un **piano orizzontale** coincide con il cerchio di riferimento.  
+> Piani molto inclinati o subverticali daranno tracce ciclografiche poco convesse e passanti per la parte centrale del cerchio primitivo.  
+> **Piani verticali** verranno rappresentati con linee che passano per il centro del cerchio principale. ([Conti, 2019, p. 22](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
 
 
 # Proiezione di linee che giacciono su una superficie
@@ -751,7 +757,7 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 
 ## pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali"
 
-**Circonferenza equatoriale** = **Circonferenza primitiva** = **Cerchio primitivo** p.18/87
+**Circonferenza equatoriale** = **Circonferenza primitiva** = **Cerchio primitivo** p.18/87 = **Cerchio di riferimento** in Conti 2019 "Proiezioni stereografiche versione: 2026-05-30 , p.9/109.
 
 Tabella dedotta dalla prefazione in Fossen.
 
