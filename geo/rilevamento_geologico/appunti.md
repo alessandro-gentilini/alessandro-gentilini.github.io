@@ -134,6 +134,14 @@ Esempi di applicazioni dell'angolo tra due superfici:
 Per le **pieghe aperte** misurare l'angolo ottuso.  
 Per le **pieghe chiuse** misurare l'angolo acuto.
 
+![Figura 5.7c e 5.7d in Conti 2019](stereo_angoli_fra_due_piani.png)
+
+![Angolo fra due piani passo passo](stereo_angoli_fra_due_piani_00.png)
+
+![Angolo fra due piani passo passo](stereo_angoli_fra_due_piani_01.png)
+
+![Angolo fra due piani passo passo](stereo_angoli_fra_due_piani_02.png)
+
 # Piano contenente due linee
 
 Trovare il piano contenente due linee date.
