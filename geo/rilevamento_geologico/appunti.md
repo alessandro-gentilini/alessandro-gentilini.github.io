@@ -136,7 +136,7 @@ Trovare il piano contenente due linee date.
 
 Trovare il piano bisettore di due piani dati.
 
-![Trovare il piano bisettore di due piani, da conti 2019, fig.5.8 p.41](stereo_bisettore.png)
+![Trovare il piano bisettore di due piani, qui il bisettore dell'angolo acuto $\alpha$ fra i due piani, da Conti 2019, fig.5.8 p.41](stereo_bisettore.png)
 
 Paragrafo 5.7 "Piano bisettore tra due piani" ([Conti, 2019, p. 40](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
 
@@ -159,7 +159,7 @@ Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
 
 # Come leggere le informazioni sul reticolo stereografico
 
-## Un punto sul reticolo corrisponde ad una linea
+## Un punto sul reticolo corrisponde ad una linea retta
 
 Come trovare la direzione della linea?  
 Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto in questione, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
@@ -169,7 +169,7 @@ Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della li
 Più il punto è vicino al centro dello stereogramma e maggiore è l'inclinazione della linea.  
 Ruotare il trasparente per portare il segmento precedentemente disegnato a coincidere con l'asse WE, la distanza tra il cerchio primitivo ed il punto in questione, misurata sull'asse WE, è l'inclinazione della linea.
 
-## Una ciclografica sul reticolo corrisponde ad una superficie
+## Una ciclografica sul reticolo corrisponde ad una superficie planare
 
 Come trovare l'immersione della superficie?  
 Tracciare la perpendicolare alla ciclografica passante per il centro del cerchio primitivo, la sua intersezione con il cerchio primitivo dà l'immersione della superficie.
