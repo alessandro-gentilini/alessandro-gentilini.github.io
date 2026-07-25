@@ -28,7 +28,11 @@ Tra i quattro angoli che si formano tra il piano orizzontale e la superficie da 
 è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dalla proiezione sul piano orizzontale di una linea di massima pendenza che giace sulla superficie da orientare.  
 Seguendo la regola della mano destra si ha che l'immersione si ottiene sommando 90° alla direzione (e se necessario facendo il modulo a 360).  
 La linea di massima pendenza è la linea che seguirebbe il movimento dell'acqua liquida sotto l'azione della forza di gravità.  
-La regola della mano destra dice di appoggiare il palmo della mano destra al tetto della superficie da orientare, il dito indice (e gli altri tre) vanno nel verso in cui scende l'acqua (quindi paralleli all'immersione), il pollice fa un angolo di 90° con l'indice e sarà parallelo alla direzione.
+
+## La **regola della mano destra** 
+dice di appoggiare il palmo della mano destra al tetto della superficie da orientare, il dito indice (e gli altri tre) vanno nel verso in cui scende l'acqua (quindi paralleli all'immersione), il pollice fa un angolo di 90° con l'indice e sarà parallelo alla direzione.
+
+> “right hand rule (RHR). Using the RHR, one gives the strike direction such that the dip is to the right when looking in the direction of the strike azimuth” ([Allmendinger, 2020, p. 6](zotero://select/library/items/LPCU3Z68)) ([pdf](zotero://open-pdf/library/items/B5NZQFN3?page=20))
 
 |Nome|in inglese|simbolo|
 |-|-|-|
