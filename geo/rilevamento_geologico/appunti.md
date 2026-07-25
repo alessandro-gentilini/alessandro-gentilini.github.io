@@ -100,6 +100,8 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
 3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
+# Dato il polo tracciare il corrispondente piano
+
 # Angolo tra due superfici
 
 Vedi pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" da p.46/87 a p.48/87
@@ -121,6 +123,24 @@ Per le **pieghe aperte** misurare l'angolo ottuso.
 Per le **pieghe chiuse** misurare l'angolo acuto.
 
 # Piano bisettore di due piani
+
+![Trovare il piano bisettore di due piani, da conti 2019, fig.5.8 p.41](stereo_bisettore.png)
+
+Paragrafo 5.7 "Piano bisettore tra due piani" ([Conti, 2019, p. 40](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
+
+Siano dati i due piani A e B e se ne debba trovare il piano bisettore C del loro angolo acuto $\alpha$.
+
+Il piano bisettore C per la sua stessa definizione dovrà contenere la linea L di intersezione tra A e B ed una qualunque delle delle linee bisettrici $L_C$ dell'angolo (diedro) $\alpha$.  
+Di tutte le bisettrici possibili si sceglie una $L_C$ che giace su un piano N ortogonale ad L; il motivo di questa scelta sarà chiarito nella seguente procedura.
+
+Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
+
+1) Disegnare la traccia ciclografica del piano A.  
+2) Disegnare la traccia ciclografica del piano B.  
+3) Il punto di intersezione tra le due tracce rappresenta la linea L.
+4) La linea L è rappresentata da un punto sullo stereogramma, il ruolo di questo punto diventa ora quello di polo del piano N (ricordare che più sopra abbiamo detto che il piano N è normale ad L e quindi la retta L è il polo del piano N).
+5) Essendo L il polo del piano N, tracciare la ciclografica che rappresenta il piano N, vedi ["dato il polo tracciarne il piano"](#dato-il-polo-tracciare-il-corrispondente-piano).
+6) 
 
 # Come leggere le informazioni sul reticolo stereografico
 
