@@ -100,6 +100,28 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
 3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
+# Angolo tra due superfici
+
+Vedi pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" da p.46/87 a p.48/87
+
+Due piani che si intersecano danno luogo a due angoli complementari che cioè hanno come somma 180°; a parte il caso particolare di 90°+90° si avrà che un angolo è acuto e l'altro è ottuso.
+
+1) Occorre disegnare il polo di ciascuna superficie.
+
+2) Ruotare il trasparente per portare i due poli sullo stesso grande cerchio.
+
+3) Sulla ciclografica leggere l'angolo acuto tra i due poli, contare cioè l'angolo partendo da un polo e muovendosi sulla ciclografica per raggiungere l'altro polo.
+
+L'angolo ottuso si ottiene come $180°- angolo\ acuto$.
+
+Esempi di applicazioni dell'angolo tra due superfici:
+
+- angolo fra i due fianchi di una piega aka **angolo di apertura** di una piega; i due fianchi si modellano come superfici planari.  
+Per le **pieghe aperte** misurare l'angolo ottuso.  
+Per le **pieghe chiuse** misurare l'angolo acuto.
+
+# Piano bisettore di due piani
+
 # Come leggere le informazioni sul reticolo stereografico
 
 ## Un punto sul reticolo corrisponde ad una linea
@@ -757,7 +779,7 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 
 ## pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali"
 
-**Circonferenza equatoriale** = **Circonferenza primitiva** = **Cerchio primitivo** p.18/87 = **Cerchio di riferimento** in Conti 2019 "Proiezioni stereografiche versione: 2026-05-30 , p.9/109.
+**Circonferenza equatoriale** = **Circonferenza primitiva** = **Cerchio primitivo** p.18/87 pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali"= **Cerchio di riferimento** in Conti 2019 "Proiezioni stereografiche versione: 2026-05-30 , p.9/109.
 
 Tabella dedotta dalla prefazione in Fossen.
 
