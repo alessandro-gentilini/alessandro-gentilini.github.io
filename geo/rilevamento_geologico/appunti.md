@@ -91,7 +91,7 @@ La giacitura deve essere espressa come immersione/inclinazione, vedi stralcio qu
 La procedura qui sopra fa disegnare correttamente anche le superfici verticali, che sono segmenti rettilinei che passano per il centro dello stereogramma.  
 > All vertical planes will project as straight lines passing through the centre of the stereogram. [Geological Structures - A Practical Introduction (Waldron and Snyder)](https://geo.libretexts.org/Bookshelves/Geology/Geological_Structures_-_A_Practical_Introduction_(Waldron_and_Snyder)/01%3A_Topics/1.04%3A_Stereographic_Projection)
 
-> È importante ricordare che la traccia ciclografica che rappresenta un piano è convessa verso la direzione di immersione del piano.  
+> È importante ricordare che la traccia ciclografica che rappresenta un piano è **convessa verso la direzione di immersione** del piano.  
 > Il grado di convessità dipende dall’inclinazione del piano, piano poco inclinati daranno tracce ciclografiche molto convesse e prossime al cerchio primitivo.  
 > La traccia ciclografica di un **piano orizzontale** coincide con il cerchio di riferimento.  
 > Piani molto inclinati o subverticali daranno tracce ciclografiche poco convesse e passanti per la parte centrale del cerchio primitivo.  
@@ -177,15 +177,26 @@ Ruotare il trasparente per portare il segmento precedentemente disegnato a coinc
 
 ## Una ciclografica sul reticolo corrisponde ad una superficie planare
 
-Come trovare l'immersione della superficie?  
-Tracciare la perpendicolare alla ciclografica passante per il centro del cerchio primitivo, la sua intersezione con il cerchio primitivo dà l'immersione della superficie.
+Prima di tutto serve che sia indicato almeno il Nord sul cerchio primitivo, se ci fosse solamente il cerchio primitivo e la traccia allora direi che il problema non possa essere risolto.
 
-Come trovare la direzione della superficie?
-La direzione è indicata dall'intersezione della ciclografica con il cerchio primitivo, considerare l'intersezione più vicina al Nord.
+È data la traccia ciclografica di un piano come nella figura seguente:
 
-Come trovare l'inclinazione della superficie?  
-Più la ciclografica è vicino al cerchio primitivo e minore è l'inclinazione della superficie.  
-Indicata con $d$ la distanza radiale tra il cerchio primitivo e la ciclografica (misurata in mm sul trasparente), con $x$ l'inclinazione incognita ricercata espressa in gradi, con $R$ il raggio del cerchio primitivo (misurato sul trasparente con la stessa unità di misura usata per $d$), si ha che approssimativamente vale la proporzione $d:x=R:90$ e quindi $x=90\frac{d}{R}$
+![Da Conti 2019, Figura 4.5a](stereo_conti_lettura_piano_a.png)
+
+Ruotare il trasparente in modo da far coincidere la traccia con un cerchio maggiore, si può scegliere un cerchio maggiore nei quadranti Est oppure nei quadranti Ovest, non c'è differenza nel risultato finale, ho verificato provando in entrambi i casi.  
+Nella figura seguente si è scelto il cerchio massimo ad Est; in questa condizione si può già leggere l'inclinazione contando i gradi che ci sono sull'asse orizzontale WE a partire da Est e finendo sul cerchio maggiore suddetto, vedi figura seguente dove l'inclinazione è 40° (se si sceglie il cerchio maggiore a Ovest allora si dovrà leggere l'inclinazione partendo da Ovest e muovendosi verso il cerchio massimo individuato).  
+Sul trasparente, marcare inoltre con un segno (nella figura qui sotto è una `x`) il punto Est sul cerchio primitivo (oppure il punto Ovest se si è scelto un cerchio maggiore ad Ovest).
+
+![Da Conti 2019, Figura 4.5b](stereo_conti_lettura_piano_b.png)
+
+Ruotare il trasparente in modo che il Nord sul trasparente torni a coincidere con il Nord sul reticolo.  
+Il segno in precedenza marcato sul cerchio primitivo indica ora, sempre sul cerchio primitivo, l'immersione del piano, vedi figura seguente in cui la giacitura nel formato immersione/inclinazione è 310/40.
+
+![Da Conti 2019, Figura 4.5c](stereo_conti_lettura_piano_c.png)
+
+Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione/inclinazione come visibile nello stralcio seguente.
+
+![Da Conti 2019, p. 25](stereo_conti_lettura_piano_output.png)
 
 # Superfici geologiche planari
 * Strati
