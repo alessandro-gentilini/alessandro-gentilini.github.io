@@ -97,6 +97,12 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 > Piani molto inclinati o subverticali daranno tracce ciclografiche poco convesse e passanti per la parte centrale del cerchio primitivo.  
 > **Piani verticali** verranno rappresentati con linee che passano per il centro del cerchio principale. ([Conti, 2019, p. 22](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
 
+![Conti 2019 figura 4.3a, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_a.png)
+
+![Conti 2019 figura 4.3b, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_b.png)
+
+![Conti 2019 figura 4.3c, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_c.png)
+
 
 # Proiezione di linee che giacciono su una superficie
 0) È necessario conoscere il _pitch_ della linea.
