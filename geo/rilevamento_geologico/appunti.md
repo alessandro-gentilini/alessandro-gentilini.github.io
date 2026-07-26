@@ -288,11 +288,17 @@ Adesso resta da determinare la traccia ciclografica del piano il cui polo è A',
 
 # Faglie
 
-![](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
+![Anatomia di una faglia, tratto dal pdf "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie"](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
 
-![](stereo_faglia_normale.png)
+Nella traccia ciclografica per convenzione si indica con una freccia il verso di movimento del tetto, la freccia è posta nel punto che rappresenta la stria.
 
-![](stereo_faglia_inversa.png)
+Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia normale, ricordare che la convessità della traccia punta verso l'immersione, nella faglia normale il tetto scende lungo il letto, o, detto in altri termini, il tetto immerge lungo il piano di faglia e quindi la freccia nel diagramma stereo punta verso il cerchio primitivo perché è verso il cerchio primitivo che c'è immersione.
+
+![Faglia normale o distensiva.](stereo_faglia_normale.png)
+
+Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia inversa, ricordare che la convessità della traccia punta verso l'immersione, nella faglia inversa il tetto risale lungo il letto, o, detto in altri termini, il tetto si muove lungo il piano di faglia, nel verso opposto all'immersione e quindi la freccia nel diagramma stereo punta verso il centro del reticolo perché è il centro del reticolo che è lontano dall'immersione.
+
+![Faglia inversa o compressiva.](stereo_faglia_inversa.png)
 
 
 # Superfici geologiche planari
@@ -956,7 +962,9 @@ Tabella dedotta dalla prefazione in Fossen.
 [Bose] Narayan BOSE & S. Mukherjee – Map interpretation for structural
 geologists. Elsevier.
 
-[Conti 2019] Paolo CONTI, Proiezioni Stereografiche, 2019, versione versione: 2026-05-30.
+[Conti 2017] Paolo CONTI, Proiezioni Stereograﬁche Applicazioni ed Esercizi, 2017 [https://www.pconti.net/doc/AnalisiGeolStrutt2016/Applicazione-Stereogrammi.pdf](https://www.pconti.net/doc/AnalisiGeolStrutt2016/Applicazione-Stereogrammi.pdf)
+
+[Conti 2019] Paolo CONTI, Proiezioni Stereografiche, 2019, versione: 2026-05-30.
 [https://www.pconti.net/doc/Stereogrammi.pdf](https://www.pconti.net/doc/Stereogrammi.pdf)
 
 [Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
