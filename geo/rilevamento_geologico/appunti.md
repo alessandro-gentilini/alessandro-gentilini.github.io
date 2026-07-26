@@ -77,6 +77,10 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
+> Poli di linee poco inclinate cadranno alla periferia dello stereogramma, cioè in prossimità del cerchio di riferimento, linee molto inclinate cadranno nella parte centrale dello stereogramma.  
+> Una **linea verticale** darà un polo che coincide con il centro dello stereogramma.  
+> Una **linea orizzontale** intersecherà la sfera di proiezione non in un solo punto, ma in due punti, disposti sul cerchio di riferimento a 180° l’uno dall’altro, cioè all’estremità opposta di un diametro. ([Conti, 2019, p. 22](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
+
 ![Figura 4.2a in Conti 2019](stereo_conti_proiezione_linea_a.png)
 
 ![Figura 4.2b in Conti 2019](stereo_conti_proiezione_linea_b.png)
@@ -249,6 +253,39 @@ Una volta stimata la traccia ciclografica, determinarne il polo, il polo rappres
 ![Diagramma $\alpha$, Figura D.2c e D.2d](stereo_asse_pieghe_cilindriche_diagramma_pi.png)
 
 # Retrodeformazione
+
+Nella figura seguente si chiede di determinare l'assetto che aveva l'unità litostratigrafica A quando si è iniziata a depositare l'unità litostratigrafica B.
+
+Le giaciture 325/26 e 020/30 sono espresse come direzione/inclinazione.
+
+![Figura B.1 in Conti 2019, tratta dal capitolo "33 Example of rotation about a horizontal axis.
+Restoration of tilt of beds" in Lisle & Leyshon, 2004.](stereo_retrodeformazione_a.png)
+
+L'idea è quella di restaurare B alla orizzontalità perché si assume che B si sia deposto inizialmente come orizzontale.  
+La restaurazione di B all'orizzontalità causerà anche il restaurare A all'assetto che aveva quando B iniziò a depositarsi.  
+
+Dal punto di vista operativo l'orizzontalità di un piano è meglio gestibile considerando il polo di quel piano piuttosto che la traccia ciclografica che lo rappresenta che coinciderebbe con il cerchio primitivo.
+
+Quindi per prima cosa si disegnano i poli di A e di B come visibile nella figura seguente.
+
+![Figura B.1 in Conti 2019, tratta dal capitolo "33 Example of rotation about a horizontal axis.
+Restoration of tilt of beds" in Lisle & Leyshon, 2004](stereo_retrodeformazione_b.png)
+
+Poi qui Conti 2019 spiega che la restaurazione passa attraverso un basculamento/tilting/rotazione secondo l'asse di una ipotetica piega; è un discorso che non ho capito del tutto; inoltre le tecniche di rotazione mi sa che non sono state fatte a lezione, o, quantomeno, io non le ho trovate nei pdf delle lezioni. Quindi io adotto un metodo più "meccanico" che però illustrai in una email al prof Riccardo Asti che lo approvò.  
+Il mio metodo consiste nel riportare il polo di B sull'asse Est-Ovest ruotando il trasparente, in questo caso l'ho ruotato in antiorario e ottengo la figura seguente.
+
+![Figura mia perché nella figura di Conti 2019 viene ruotato il reticolo che è il metodo usato in Lisle & Leyshon 2004 mentre a noi hanno insegnato a ruotare il trasparente!](stereo_retrodeformazione_mio_c.png)
+
+A questo punto rendere orizzontale il polo B significa traslarlo lungo Est-Ovest fino a farlo coincidere con il centro del reticolo nel polo indicato con B' ceh rappresenta ora la linea verticale che è ortogonale alle stratificazioni B finalmente restaurate all'orizzontalità.  
+Ci si deve annotare di quanti gradi dista B dal centro del reticolo, nel caso in oggetto sono 30°; poi si deve traslare anche A degli stessi gradi e nella stessa direzione; ma, mentre B traslava lungo la retta Est-Ovest, A invece deve traslare lungo il **piccolo cerchio** (sarebbero i paralleli su un mappamondo) su cui si trova; questa traslazione di 30° porta A in A'.
+
+![Figura mia perché nella figura di Conti 2019 viene ruotato il reticolo che è il metodo usato in Lisle & Leyshon 2004 mentre a noi hanno insegnato a ruotare il trasparente!](stereo_retrodeformazione_mio_d.png)
+
+Adesso resta da determinare la traccia ciclografica del piano il cui polo è A', questa traccia è la soluzione ricercata (vedi [Dato il polo tracciare il piano](#dato-il-polo-tracciare-il-corrispondente-piano)). Con il metodo suddetto la giacitura del piano il cui polo è A' a me risulta 263/50 espressa come immersione/inclinazione che è compatibile con il 350/50 della figura seguente (B1.e et B1.f di Conti 2019); lo dico perché secondo me 350 è lo strike. Se applico la regola della mano destra al mio 263 di immersione ottengo lo strike 263-90=173; se a 173 sommo 180° ottengo 353 che è il 350 a meno di errori di disegno.
+
+![Figura B.1 in Conti 2019, tratta dal capitolo "33 Example of rotation about a horizontal axis. Restoration of tilt of beds" in Lisle & Leyshon, 2004](stereo_retrodeformazione_ef.png)
+
+
 
 # Superfici geologiche planari
 * Strati
@@ -910,6 +947,8 @@ geologists. Elsevier.
 [Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
 
 [Lisle] RICHARD J. LISLE, Geological Structures and Maps, A PRACTICAL GUIDE, Third edition, Burlington, MA 2004, Elsevier.
+
+Lisle R.J. & Leyshon P.R. (2004) - Stereographic Projection Techniques for Geologists and Civil Engineers
 
 [Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
 
