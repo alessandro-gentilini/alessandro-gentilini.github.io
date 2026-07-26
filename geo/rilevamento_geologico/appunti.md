@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 25 luglio 2026.
+Aggiornati al 26 luglio 2026.
 
 # Orientazione di superfici
 
@@ -828,9 +828,13 @@ Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazi
 **Direttrice** (_stratum contour_) è una curva di livello di un piano inclinato.
 In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
+**Figuràti** Conti.
+
 **Soprassegni** Venturini p.145
 
-**Figuràti** Conti.
+**Trasparente** (_tracing paper_) è un foglio trasparente da ricalco anche detto "carta da lucido".
+
+
 
 ## pdf "Lez 0_Rilevamento geologico - programma generale", "Introduzione al corso"
 
