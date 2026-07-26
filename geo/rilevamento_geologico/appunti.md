@@ -858,33 +858,6 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
 4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
 
-# Domande
-
-* Limite vs confine vs contatto (in Damiani contatto è sinonimo di limite come indicato nell'indice analitico).
-
-* Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribassata, quindi il piano di faglia immergerà sempre nel verso dei trattini del simbolo?
-
-* Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
-
-* Venturini in figura 3.48, per il sovrascorrimento $\alpha'$ disegna le direttrici a quota 700, 675, 650 (vedi in verde nello screenshot qui sotto) e le disegna verticali.
-
-  ![Venturini figura 3.48](Venturini_fig_3_48.png)
-
-  Come però si può vedere sia nella figura qui sopra che nella figura 3.47 seguente, le isoipse intersecano in solo punto la faglia e quindi non so proprio come possa disegnare le direttrici verticali perché per disegnarle verticali servirebbe, per ogni direttrice, un secondo piunto di intersezione con le isoipse!
-
-  ![Venturini figura 3.47](Venturini_fig_3_47_a.png)
-
-* Dove trovare le soluzioni di Lisle?
-
-* Dove trovare le soluzioni di Simpson?
-
-* Dove trovare le soluzioni di Bennison?
-
-* Nei fogli degli esercizi svolti ci sono domande.
-
-* Nella prima pagina di "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie", la freccia "strie" dovrebbe puntare al puntino rosso, o sbaglio?
-
-  ![Prima pagina del pdf sulle proiezioni stereografiche relative alle faglie.](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
 
 # Isoipse aka curve di livello
 
@@ -980,3 +953,37 @@ Lisle R.J. & Leyshon P.R. (2004) - Stereographic Projection Techniques for Geolo
 [Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
 
 [Venturini] Corrado Venturini, Rilevamento geologico, Bologna, 2023, Zanichelli.
+
+# Domande
+
+* Limite vs confine vs contatto (in Damiani contatto è sinonimo di limite come indicato nell'indice analitico).
+
+* Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribassata, quindi il piano di faglia immergerà sempre nel verso dei trattini del simbolo?
+
+* Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
+
+* Venturini in figura 3.48, per il sovrascorrimento $\alpha'$ disegna le direttrici a quota 700, 675, 650 (vedi in verde nello screenshot qui sotto) e le disegna verticali.
+
+  ![Venturini figura 3.48](Venturini_fig_3_48.png)
+
+  Come però si può vedere sia nella figura qui sopra che nella figura 3.47 seguente, le isoipse intersecano in solo punto la faglia e quindi non so proprio come possa disegnare le direttrici verticali perché per disegnarle verticali servirebbe, per ogni direttrice, un secondo piunto di intersezione con le isoipse!
+
+  ![Venturini figura 3.47](Venturini_fig_3_47_a.png)
+
+* Dove trovare le soluzioni di Lisle?
+
+* Dove trovare le soluzioni di Simpson?
+
+* Dove trovare le soluzioni di Bennison?
+
+* Nei fogli degli esercizi svolti ci sono domande.
+
+* Nella prima pagina del pdf "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie", la freccia "strie" dovrebbe puntare al puntino rosso, o sbaglio?
+
+  ![Prima pagina del pdf sulle proiezioni stereografiche relative alle faglie.](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
+
+* Perché queste mie due aggiunte alla figura di Conti 2017 sono sbagliate? Le mie etichette tetto/letto sono diverse da quelle presenti nel pdf "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie", cosa sto sbagliando?
+
+ ![Perché sono sbagliate le etichette tetto/letto?](stereo_faglia_normale_mia.png)
+
+ ![Perché sono sbagliate le etichette tetto/letto?](stereo_faglia_inversa_mia.png)
