@@ -286,6 +286,14 @@ Adesso resta da determinare la traccia ciclografica del piano il cui polo è A',
 ![Figura B.1 in Conti 2019, tratta dal capitolo "33 Example of rotation about a horizontal axis. Restoration of tilt of beds" in Lisle & Leyshon, 2004](stereo_retrodeformazione_ef.png)
 
 
+# Faglie
+
+![](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
+
+![](stereo_faglia_normale.png)
+
+![](stereo_faglia_inversa.png)
+
 
 # Superfici geologiche planari
 * Strati
@@ -352,7 +360,7 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
    Ovviamente le isoipse hanno tutte la stessa equidistanza.
    * Per determinare l'inclinazione sia $d$ la distanza (eventualmente media) fra le direttrici adiacenti espressa in metri ($d$ è nel mondo reale e si ottiene applicando la scala alla distanza fra le direttrici misurata in carta), sia $h$ l'equidistanza fra le curve di livello espressa in metri, l'inclinazione $\alpha$ si ottiene con la formula $\alpha=\arctan\frac{h}{d}$.
 
-3) **NOTA BENE**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite!
+3) **NOTA BENE**: ricercare le isoipse intersecanti anche in porzioni non connesse della superficie limite che si sta considerando!
 
 4) In Simpson 1992, a pagina 59, trova una direttrice (indicata con 2-2) ottenuta da due punti di intersezione della superficie limite pelite/marna con l'isoipsa a quota 300; poi però le altre direttrici (alle quote 400 e 500) sono tracciate considerando **una sola intersezione** delle corrispondenti isoipse, la seconda intersezione molto probabilmente cade fuori dallo stralcio di carta riportata in figura 53A; sono tracciate (direi ovviamente se si assume che non ci siano pieghe) parallele alla direttrice a quota 300.
 
@@ -368,9 +376,12 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
    Attenzione che potrebbe essere che il limite in oggetto sia parte di un limite vicino di cui sono già note le direttrici. Il caso è trattato a p.175 di Venturini.
 
 8) E se il limite non interseca mai le isoipse?  
-   Attenzione che potrebbe essere parallelo alle isoipse, in tal caso si tratta di un limite di trato orizzontale.
+   Attenzione che potrebbe essere parallelo alle isoipse ma non coincidente con le isoipse presenti in carta, in tal caso si tratta di un limite di tratto orizzontale.
 
-7) **NOTA BENE**: se si assume che il limite fra unità litostratigrafiche sia planare allora le direttrici devono essere fra loro parallele! 
+9) E se il limite interseca ogni isoipsa in un sol punto?
+   Attenzione al caso in cui il limite è rettilineo o sub-rettilineo! In tal caso si tratta di superficie verticale!!!   
+
+9) **NOTA BENE**: se si assume che il limite fra unità litostratigrafiche sia planare allora le direttrici devono essere fra loro parallele! 
 
 ## Regola della V, _V's rule_
 Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
@@ -825,13 +836,6 @@ Nella figura qui sopra dice che si devono guardare le strie... ma non penso che 
 
 Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
 
-# Orientare uno sketch panoramico con la bussola Brunton
-0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio.
-1) Aprire la bussola, il coperchio va vicino al corpo.
-2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
-3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
-4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
-
 # Mappe a piccola scala (e.g. $1:N$, $N>50k$)
 
 1) Non è possibile usare le direttrici a quanto ho capito perché non c'è abbastanza risoluzione.
@@ -840,6 +844,13 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
    > “Typically, on maps drawn on a scale of 1:50,000 structure contours are seldom straight or parallel over the distances being covered.” ([Bennison et al., 2013, p. 52](zotero://select/library/items/2DP6BMEQ)) ([pdf](zotero://open-pdf/library/items/IE9HG42U?page=63))
 
 3) Inoltre su centinaia di km la topografia appare quasi piatta a quindi può essere necessaria l'esagerazione verticale.
+
+# Orientare uno sketch panoramico con la bussola Brunton
+0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio. Il coperchio ha lo specchio.
+1) Aprire la bussola, il coperchio va vicino al corpo.
+2) Leggere il valore sulla scala graduata in corrispondenza della freccia N, questa è la direzione in cui si sta guardando, è il centro dello sketch. 
+3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
+4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
 
 # Domande
 
@@ -864,6 +875,10 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 * Dove trovare le soluzioni di Bennison?
 
 * Nei fogli degli esercizi svolti ci sono domande.
+
+* Nella prima pagina di "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie", la freccia "strie" dovrebbe puntare al puntino rosso, o sbaglio?
+
+  ![Prima pagina del pdf sulle proiezioni stereografiche relative alle faglie.](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
 
 # Isoipse aka curve di livello
 
