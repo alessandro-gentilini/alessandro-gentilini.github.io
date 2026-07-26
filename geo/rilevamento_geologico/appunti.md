@@ -34,6 +34,8 @@ dice di appoggiare il palmo della mano destra al tetto della superficie da orien
 
 > “right hand rule (RHR). Using the RHR, one gives the strike direction such that the dip is to the right when looking in the direction of the strike azimuth” ([Allmendinger, 2020, p. 6](zotero://select/library/items/LPCU3Z68)) ([pdf](zotero://open-pdf/library/items/B5NZQFN3?page=20))
 
+**ATTENZIONE!** Secondo me Venturini a p.74 dà una definizione della regola della mano destra diversa da quella data dal prof. Asti.
+
 |Nome|in inglese|simbolo|
 |-|-|-|
 |Direzione|_Strike_|$s$|
@@ -75,6 +77,12 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 5) Ruotare il trasparente per allineare il punto ad Est (oppure ad Ovest).
 6) Partendo dal punto sul cerchio primitivo, e muovendosi sul diametro E-O verso il centro del reticolo, contare tanti gradi quanti sono quelli dell'inclinazione e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
+![Figura 4.2a in Conti 2019](stereo_conti_proiezione_linea_a.png)
+
+![Figura 4.2b in Conti 2019](stereo_conti_proiezione_linea_b.png)
+
+![Figura 4.2c in Conti 2019](stereo_conti_proiezione_linea_c.png)
+
 # Proiezione di superfici
 La giacitura deve essere espressa come immersione/inclinazione, vedi stralcio qui sotto dalle dispende di Paolo Conti
 
@@ -96,6 +104,8 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 > La traccia ciclografica di un **piano orizzontale** coincide con il cerchio di riferimento.  
 > Piani molto inclinati o subverticali daranno tracce ciclografiche poco convesse e passanti per la parte centrale del cerchio primitivo.  
 > **Piani verticali** verranno rappresentati con linee che passano per il centro del cerchio principale. ([Conti, 2019, p. 22](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
+
+**NOTA BENE**: un piano orizzontale è più utilmente rappresentato dal suo polo che coinciderà con il centro del reticolo e che rappresenta una linea verticale. Vedi una applicazione in [Retrodeformazione/Restaurazione](#retrodeformazione)
 
 ![Conti 2019 figura 4.3a, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_a.png)
 
@@ -238,6 +248,7 @@ Una volta stimata la traccia ciclografica, determinarne il polo, il polo rappres
 
 ![Diagramma $\alpha$, Figura D.2c e D.2d](stereo_asse_pieghe_cilindriche_diagramma_pi.png)
 
+# Retrodeformazione
 
 # Superfici geologiche planari
 * Strati
