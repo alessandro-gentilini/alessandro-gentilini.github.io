@@ -300,6 +300,8 @@ Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia
 
 ![Faglia inversa o compressiva.](stereo_faglia_inversa.png)
 
+![Faglie normali, inverse, trascorrenti.](rappresentazione_faglie_secondo_pdf_lez_4.png)
+
 
 # Superfici geologiche planari
 * Strati
