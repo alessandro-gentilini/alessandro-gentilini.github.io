@@ -259,6 +259,12 @@ Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione
 2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
 3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
+Nella figurta seguente, tratta da Lisle & Leyshon 2004 si vede che il plunge è misurato sul diametro mentre il pitch sul grande cerchio della traccia ciclografica.  
+Non so se ho capito bene ma siccome nel mondo l'angolo di plunge è definito su un piano verticale si ha coerentemente che nel reticolo l'angolo di plunge si misura su un diametro perché i diametri del reticolo sono la proiezione di piani verticali;  
+allo stesso modo, siccome nel mondo l'angolo di pitch è definito sul piano della superficie di interesse, coerentemente nel reticolo l'angolo di pitch si misura sulla traccia ciclografica aka su un grande cerchio che è la proiezione della superficie di interesse.
+
+![Lisle & Leyshon (2004), Fig 12, p.25](lisle_leyshon_pitch_e_plunge.png)
+
 # Dato il polo tracciare il corrispondente piano
 
 # Angolo tra due linee
@@ -267,8 +273,7 @@ Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione
 
 Vedi pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" da p.46/87 a p.48/87
 
-Due piani che si intersecano danno luogo a due angoli complementari che cioè hanno come somma 180°; a parte il caso particolare di 90°+90° si avrà che un angolo è acuto e l'altro è ottuso.
-
+Due piani che si intersecano danno luogo a due angoli complementari che cioè hanno come somma 180°; a parte il caso particolare di 90°+90° si avrà che un angolo è acuto e l'altro è ottuso.  
 1) Occorre disegnare il polo di ciascuna superficie.
 
 2) Ruotare il trasparente per portare i due poli sullo stesso grande cerchio.
