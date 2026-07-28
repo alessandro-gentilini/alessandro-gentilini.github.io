@@ -165,11 +165,14 @@ La densità si misura in m<sup>-2</sup> ed indica il numero di superfici e/o di 
 > Una **linea verticale** darà un polo che coincide con il centro dello stereogramma.  
 > Una **linea orizzontale** intersecherà la sfera di proiezione non in un solo punto, ma in due punti, disposti sul cerchio di riferimento a 180° l’uno dall’altro, cioè all’estremità opposta di un diametro. ([Conti, 2019, p. 22](zotero://select/library/items/BEUCH8LZ)) ([pdf](zotero://open-pdf/library/items/THGF3XVB?page=26))
 
+Stante questa ultima osservazione, io direi che una linea è sempre proiettata in un punto tranne quando è orizzontale, nel qual caso è proiettata in due punti su un diametro.
+
 ![Figura 4.2a in Conti 2019](stereo_conti_proiezione_linea_a.png)
 
 ![Figura 4.2b in Conti 2019](stereo_conti_proiezione_linea_b.png)
 
 ![Figura 4.2c in Conti 2019](stereo_conti_proiezione_linea_c.png)
+
 
 # Proiezione di superfici
 La giacitura deve essere espressa come immersione/inclinazione, vedi stralcio qui sotto dalle dispende di Paolo Conti
@@ -200,6 +203,8 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 ![Conti 2019 figura 4.3b, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_b.png)
 
 ![Conti 2019 figura 4.3c, proiezione piano immersione/inclinazione 160/50](stereo_conti_proiezione_piano_c.png)
+
+Per finire: i punti estremi della traccia ciclografica, che corrispondono alle tacche del nord e del sud quando la traccia sul trasparente è allineata al sottostante reticolo, sono la proiezione della direzione della superficie; infatti la direzione della superficie è per definizione orizzontale (e quindi ci sono due punti sul diametro) e giacente sulla superficie di interesse (e infatti i due punti stanno sulla traccia ciclografica, anche se agli estremi).
 
 
 # Come leggere le informazioni sul reticolo stereografico
@@ -259,7 +264,19 @@ Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione
 2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
 3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
-Nella figurta seguente, tratta da Lisle & Leyshon 2004 si vede che il plunge è misurato sul diametro mentre il pitch sul grande cerchio della traccia ciclografica.  
+La procedura suddetta l'ho presa dal pdf delle lezioni come visibile nella figura seguente. A quanto capisco, se la traccia ciclografica è allineata con il sottostante grande cerchio, il seguente comando: 
+
+>Contare il valore del pitch (45°) sulla ciclografica S0, partendo dal valore di direzione (immersione-90° per la regola della mano destra) della stessa S0
+
+si traduce in contare i gradi del pitch partendo dal Nord.
+
+![Tratto dal pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" p.41/87](pitch_da_pdf_lezioni.png)
+
+Nella procedura "5.1 Proiezione di una linea noto il pitch" a p.13 in Conti 2019 invece viene assegnato al pitch anche un punto cardinale che viene poi usato per contare il pitch da un estremo piuttosto che da un altro estremo.  
+Anche nel capito "12 Precise methods for plotting lines 2. Where the line is
+known from its pitch" in Lisle & Leyshon 2004 al valore di pitch è associato un punto cardinale, però non ho approfondito la questione.
+
+Nella figura seguente, tratta da Lisle & Leyshon 2004 si vede che il plunge è misurato sul diametro mentre il pitch sul grande cerchio della traccia ciclografica.  
 Non so se ho capito bene ma siccome nel mondo l'angolo di plunge è definito su un piano verticale si ha coerentemente che nel reticolo l'angolo di plunge si misura su un diametro perché i diametri del reticolo sono la proiezione di piani verticali;  
 allo stesso modo, siccome nel mondo l'angolo di pitch è definito sul piano della superficie di interesse, coerentemente nel reticolo l'angolo di pitch si misura sulla traccia ciclografica aka su un grande cerchio che è la proiezione della superficie di interesse.
 
