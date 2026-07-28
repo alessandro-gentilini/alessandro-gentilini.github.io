@@ -300,9 +300,25 @@ allo stesso modo, siccome nel mondo l'angolo di pitch è definito sul piano dell
 
 # Dato il polo tracciare il corrispondente piano
 
+Attenzione: scritta in fretta senza ragionarci troppo:
+
+1) Se manca il nord il problema non si può risolvere.
+
+2) Ruotare il trasparente per portare il polo sull'asse Est-Ovest
+
+3) Dal polo muoversi di 90° verso il cerchio primitivo
+
+4) Ricalcare la ciclografica che è allineata con il sottostante reticolo, è il risultato ricercato.
+
 \newpage
 
 # Angolo tra due linee
+
+1) Trovare il piano che le contiene, vedi [piano contenente due linee](#piano-contenente-due-linee), altrimenti se sono "sghembe" che angolo si misura?
+
+2) Poi direi che ci sarà un acuto ed un ottuso e che sono complementari, eventualmente riportarli entrambi.
+
+![Da Conti 2019](stereo_conti_angolo_tra_due_linee.png)
 
 \newpage
 
@@ -339,6 +355,12 @@ Per le **pieghe chiuse** misurare l'angolo acuto.
 # Piano contenente due linee
 
 Trovare il piano contenente due linee date.
+
+1) Ruotare il trasparente fino a sovrapporre i due punti ad un grande cerchio del reticolo sottostante.
+
+2) Il grande cerchio è la soluzione ricercata.
+
+![Da Conti 2019](stereo_conti_piano_contenente_due_linee.png)
 
 \newpage
 
