@@ -124,6 +124,8 @@ dice di appoggiare il palmo della mano destra al tetto della superficie da orien
 |Immersione|_Dip direction_|$dd$|
 |Inclinazione|_Dip_|$\delta$|
 
+\newpage
+
 # Orientazione di linee
 
 ![Riassunto giaciture da Conti 2019](conti_riassunto_giaciture.png)
@@ -140,6 +142,8 @@ L'inclinazione 0° rappresenta una linea che giace sul piano orizzontale.
 L'inclinazione 90° corrisponde ad una linea verticale.
 Per scegliere l'angolo fra i quattro disponibili valgono le stesse considerazioni fatte per [l'inclinazione di una superficie](#inclinazione-dip-di-una-superficie).
 
+\newpage
+
 # Orientazione di linee giacenti su una superficie
 
 Nel caso di superfici poco inclinate (inclinazione < 30°÷35°) si usa il metodo _trend_/_plunge_ mentre per superfici molto inclinate (inclinazione > 30°÷35°) si usa il metodo _pitch_/_plunge_.
@@ -147,6 +151,8 @@ Nel caso di superfici poco inclinate (inclinazione < 30°÷35°) si usa il metod
 ## **_Pitch_** di una linea su una superficie:
 è l'angolo misurato sulla superficie tra la direzione della superficie e la linea.  
 Va da 0° a 180° e si misura in senso orario.
+
+\newpage
 
 # Proiezioni di linee e superfici sul reticolo stereografico
 
@@ -173,6 +179,7 @@ Stante questa ultima osservazione, io direi che una linea è sempre proiettata i
 
 ![Figura 4.2c in Conti 2019](stereo_conti_proiezione_linea_c.png)
 
+\newpage
 
 # Proiezione di superfici
 La giacitura deve essere espressa come immersione/inclinazione, vedi stralcio qui sotto dalle dispende di Paolo Conti
@@ -206,6 +213,7 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 
 Per finire: i punti estremi della traccia ciclografica, che corrispondono alle tacche del nord e del sud quando la traccia sul trasparente è allineata al sottostante reticolo, sono la proiezione della direzione della superficie; infatti la direzione della superficie è per definizione orizzontale (e quindi ci sono due punti sul diametro) e giacente sulla superficie di interesse (e infatti i due punti stanno sulla traccia ciclografica, anche se agli estremi).
 
+\newpage
 
 # Come leggere le informazioni sul reticolo stereografico
 
@@ -258,6 +266,8 @@ Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione
 
 ![Da Conti 2019, p. 25](stereo_conti_lettura_piano_output.png)
 
+\newpage
+
 # Proiezione di linee che giacciono su una superficie
 
 È data l'immersione/inclinazione della superficie ed il pitch della linea.
@@ -286,9 +296,15 @@ allo stesso modo, siccome nel mondo l'angolo di pitch è definito sul piano dell
 
 ![Lisle & Leyshon (2004), Fig 12, p.25](lisle_leyshon_pitch_e_plunge.png)
 
+\newpage
+
 # Dato il polo tracciare il corrispondente piano
 
+\newpage
+
 # Angolo tra due linee
+
+\newpage
 
 # Angolo tra due superfici
 
@@ -318,9 +334,13 @@ Per le **pieghe chiuse** misurare l'angolo acuto.
 
 ![Angolo fra due piani passo passo](stereo_angoli_fra_due_piani_02.png)
 
+\newpage
+
 # Piano contenente due linee
 
 Trovare il piano contenente due linee date.
+
+\newpage
 
 # Piano bisettore di due piani
 
@@ -359,6 +379,8 @@ Quindi per trovare C si devono trovare prima di tutto L ed $L_C$.
 
 ![Bisettore passo passo](stereo_bisettore_05.png)
 
+\newpage
+
 # Asse di pieghe cilindriche, diagramma $\beta$
 
 L'intersezione di due piani tangenti ai fianchi di una piega cilindrica che ha asse B è una linea $\beta$ parallela all'asse B della piega.
@@ -367,6 +389,8 @@ Dati più piani li si può rappresentare come tracce ciclografiche che in teoria
 È molto probabile che non ci sia una unica intersezione e quindi si dovrà stimare ad occhio la miglior intersezione che rappresenterà l'asse $\beta$.
 
 ![Diagramma $\beta$, Figura D.2a e D.2b](stereo_asse_pieghe_cilindriche_diagramma_beta.png)
+
+\newpage
 
 # Asse di pieghe cilindriche, diagramma $\pi$
 
@@ -378,6 +402,8 @@ Le suddette normali sono linee e le si può quindi proiettare nello stereogramma
 Una volta stimata la traccia ciclografica, determinarne il polo, il polo rappresenterà l'asse $\pi$ ricercato.
 
 ![Diagramma $\alpha$, Figura D.2c e D.2d](stereo_asse_pieghe_cilindriche_diagramma_pi.png)
+
+\newpage
 
 # Retrodeformazione
 
@@ -412,6 +438,7 @@ Adesso resta da determinare la traccia ciclografica del piano il cui polo è A',
 
 ![Figura B.1 in Conti 2019, tratta dal capitolo "33 Example of rotation about a horizontal axis. Restoration of tilt of beds" in Lisle & Leyshon, 2004](stereo_retrodeformazione_ef.png)
 
+\newpage
 
 # Faglie
 
@@ -428,6 +455,8 @@ Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia
 ![Faglia inversa o compressiva.](stereo_faglia_inversa.png)
 
 ![Faglie normali, inverse, trascorrenti.](rappresentazione_faglie_secondo_pdf_lez_4.png)
+
+\newpage
 
 # Faglie e stress principali
 
@@ -486,6 +515,7 @@ Negli esercizi sulle proiezioni stereografiche sono date le giaciture di due fag
 
 ![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_didascalia-fig6-62.png)
 
+\newpage
 
 # Superfici geologiche planari
 * Strati
@@ -494,6 +524,8 @@ Negli esercizi sulle proiezioni stereografiche sono date le giaciture di due fag
 * Piani assiali di pieghe (il piano assiale di una piega contiene tutte le linee di cerniera e divide la piega nei due fianchi, nel caso di un cilindro parabolico è il piano che contiene la bisettrice di tutte le parabole).
 
 **N.B.**: la struttura si approssima con un piano infinito ma un modello più accurato è quello di un parallelepipedo (aka scatola a facce piane e parallele) finito.
+
+\newpage
 
 # Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica
 
@@ -533,6 +565,8 @@ Allo stesso modo, da una giacitura presa al punto e da cui tracciare il limite a
 
 Immaginare come il limite cambia aumentando oppure diminuendo l'inclinazione, immaginare l'animazione con aumento/diminuizione dell'inclinazione e conseguente spostamento del limite.
 Le due condizioni estreme sono strati orizzontali in cui il limite coincide con le isoipse e strati verticali in cui il limite è una singola linea rettilinea. Indicativamente se le inclinazioni sono basse allora il limite dovrebbe non discostarsi troppo dalle isoipse mentre al crescere dell'inclinazione il limite tende a raddrizzarsi restando sempre più vicino al punto in cui è data la giacitura.
+
+\newpage
 
 # Data la superficie limite determinarne la giacitura
 
@@ -575,6 +609,8 @@ Nel seguito uso in maniera equivalente "isoipsa" e "curva di livello".
 
 9) **NOTA BENE**: se si assume che il limite fra unità litostratigrafiche sia planare allora le direttrici devono essere fra loro parallele! 
 
+\newpage
+
 ## Regola della V, _V's rule_
 Una valle/impluvio ha le isoipse che formano una V con il vertice verso monte.
 Si si collegano tutti i vertici delle V si ottiene la linea dell'impluvio.  
@@ -582,6 +618,7 @@ Individuare una valle/impluvio possibilmente con la linea di impluvio ortogonale
 
 ![Regola della V da Lisle 2004.](regola_della_V.png)
 
+\newpage
 
 ## Data una faglia in carta determinare la giacitura del piano di faglia
 
@@ -590,6 +627,8 @@ Caso di faglia normale o diretta: nel simbolo i trattini indicano la parte ribas
 Caso di faglia inversa: nel simbolo i triangoli indicano la parte rialzata, quindi il piano di faglia immergerà sempre nel verso opposto a quello dei triangoli?
 
 ![Simboli CARG per le faglie.](simboli_carg_faglie.png)
+
+\newpage
 
 # Sezioni speditive
 Da p14/73 a p17/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
@@ -616,6 +655,8 @@ Per sezione speditiva:
 4) disegnare la sezione geologica speditiva tipica di una delle cinque classi suddette. È speditiva perché le inclinazioni non sono calcolate e quindi in sezione sono solo indicative.
 5) ripetere eventualmente per un altro limite.
 
+\newpage
+
 # Metodo dei tre punti
 Da p34/73 a p39/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi di stratimetria".
 
@@ -634,6 +675,8 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
 6) Verificare che altre coppie di punti diano direttrici compatibili con quella trovata al punto precedente.
 7) A questo punto si può procedere come già visto in [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-lintersezione-tra-il-piano-e-la-superficie-topografica)
 
+\newpage
+
 # Limiti concordanti
 
 **Concordanza (_conformity_)**, limiti concordanti: parallelismo di stratificazione fra due strati, non separati da superficie di erosione e senza interruzione di deposizione (Manzoni 1968 "Concordanza" e "Continuità"). Vedi anche Conti sulle sezioni geologiche!!!
@@ -641,6 +684,8 @@ Dati in carta tre punti quotati che stanno su una superficie piana, ricavare l'i
 La giacitura presa per una formazione della sequenza stratigrafica è rappresentativa di tutte le formazioni della sequenza stratigrafica.
 
 In carta i limiti tra le formazioni tendono ad essere paralleli fra di loro senza avere intersezioni.
+
+\newpage
 
 # Pieghe
 
@@ -685,8 +730,7 @@ Le pieghe si classificano in vari modi, Fleuty 1964 usa due caratteristiche dell
 
 ![Tratto da Conti 2016, "Elementi di Geologia Strutturale - Applicazioni all’esplorazione petrolifera".](anatomia_piega_3.png)
 
-
- 
+\newpage
 
 ## Come riconoscere piega
 * Almeno due formazioni diverse (due campiture di diverso colore/diverso soprassegno).
@@ -707,6 +751,8 @@ Strategia: individuare punti di massima curvatura, sono le cerniere.
 Le direttrici si fanno a destra e a sinistra, si possono unire limiti diversi,
 vedi esercizio 12-12 in Weijermars
 
+\newpage
+
 ## Attenzione a prendere le direttrici giuste!
 
 Tratta dal pdf "Lez 5bis_stratimetria per pieghe e faglie" p5/29.  
@@ -726,6 +772,8 @@ Se vale l'assunzione che i due fianchi della piega sono planari allora le dirett
 
 Il problema evidentemente è noto agli autori più attenti alla pedagogia: 
 > “A common elementary confusion is that when the intersections of topography and a bedding plane are determined, upon first sight there may appear to be ambiguity in the way they are connected. The correct of possibilities will be parallel to the respective flanks of the fold. The alternative set of misconstructed stratum contours will cut across the symmetry of the fold and be inconsistent with topography.” ([Borradaile, 2014, p. 139](zotero://select/library/items/468RG8MI)) ([pdf](zotero://open-pdf/library/items/RSXD3BYZ?page=145))
+
+\newpage
 
 # Faglie
 
@@ -752,6 +800,8 @@ Metodo dedotto da quanto illustrato nell'esercizio del pdf "Pieghe e faglie" da 
    - intersecare le direttrici di tetto con le direttrici di faglia alle quote corrispondenti: si ottiene una sequenza di punti che teoricamente sono allineati lungo un segmento rettilineo $T$   
    - $L$ e $T$ teoricamente sono parallele e la loro distanza misurata in carta, e riportata in metri con la scala è il rigetto lungo dip.
 
+\newpage
+
 # Sezioni
 
 ## Linee guida generali
@@ -771,6 +821,8 @@ Limiti tipici da riportare sono **faglie** (**piani tettonici** p.175 Venturini)
 
 7) motivo deformativo aka non collegare giaciture da stessa linea di correlazione Venturini p.181
 
+\newpage
+
 ## Accessori
 
 * Unità di misura asse verticale, in metri.
@@ -784,11 +836,14 @@ Se non sono indicati gli estremi della sezione Venturini p.139, Fig. 3.13 sugger
 
 ![Orientazione sezione, p.140 Venturini](orientazione_sezione.png)
 
+\newpage
 
 ## Colori
 I colori che si vedono in carta muovendosi lungo la traccia di sezione devono essere riportati in sezione poco sotto al profilo morfologico, vedi pdf lezioni Vignaroli (figura qui sotto) e fig.8.4 in Conti "Carte e Sezioni Geologiche".
 
 ![Riportare i colori](sezioni_da_pdf_vignaroli.png)
+
+\newpage
 
 ## Inclinazione apparente di un piano
 
@@ -805,6 +860,8 @@ Per ricordarsi la formula:
 5) resta che il seno deve essere quello di $\gamma$.
 
 Si può usare anche un nomogramma (Palmer 1919).
+
+\newpage
 
 ## Proiezione di limiti (Venturini li chiama _dati lineari_)
 
@@ -835,6 +892,8 @@ Se invece si è nel caso in cui le isoipse hanno un solo punto di contatto con i
 ### Note
 
 Le faglie $\alpha$ e $\alpha'$ di fig. 3.54, "sezione geologica 8" p.177 Venturini, sono in parte parallele alle isoipse e in parte no, in sezione le disegna quindi piegate: c'è una parte orizzontale ed una parte inclinata.
+
+\newpage
 
 ## Proiezioni di giaciture (Venturini li chiama _dati-strato_ oppure _assetti_)
 
@@ -885,6 +944,8 @@ Il punto di aggancio è al centro del segmento (Venturini p.149).
 
 1) giaciture in unità separate da limite discordante, quindi giaciture sopra e sotto al limite discordante, vanno correlate separatamente (p.180 Venturini)
 
+\newpage
+
 # Correlazioni di giaciture, parte comune
 
 Proiettare le giaciture come descritto [in precedenza](#proiezioni-di-giaciture-venturini-li-chiama-dati-strato-oppure-assetti)
@@ -906,6 +967,8 @@ La proiezione va indicata con tratto più pesante della correlazione perché la 
 
 ![Tratto da Venturini.](bisettrici_e_archi_di_cerchio.png)
 
+\newpage
+
 # Correlazione con il metodo delle bisettrici
 
 1) Per ogni coppia di perpendicolari, disegnare la bisettrice.
@@ -918,11 +981,15 @@ La proiezione va indicata con tratto più pesante della correlazione perché la 
 
 5) Eventualmente smussare i vertici che le parallele creano quando toccano la bisettrice.
 
+\newpage
+
 # Correlazione con il metodo degli archi di cerchio
 
 1) Per ogni coppia di perpendicolari adiacenti, tracciare degli archi di cerchio, centrati nell'intersezione delle due perpendicolari e distanziati 3-4mm.
 
 2) Gli estremi di due archi che si incontrano su una perpendicolare non devono essere sfasati a meno che non ci siano faglie.
+
+\newpage
 
 # Note sui metodi di correlazione
 
@@ -934,9 +1001,7 @@ La proiezione va indicata con tratto più pesante della correlazione perché la 
 
 4) Provare anche a disegnare a mano libera: dapprima disegnare con squadre e goniometro e compasso le perpendicolari e le bisettrici, poi a mano libera le parallele o gli archi di cerchio.
 
-
-
-
+\newpage
 
 # Accorgimenti e consigli per la correlazione delle proiezioni delle giaciture (Venturini p.135)
 
@@ -981,6 +1046,7 @@ La giacitura $z$ è in pianta nel settore a sinistra della faglia ma la sua proi
 La correlazione tra $x''$ e $z''$ va fatta perché se non la si facesse allora la sezione a sinistra della faglia apparirebbe monoclinalica mentre nella realtà è piegata come provano le due giaciture $x$ e $z$.  
 $z''$ va poi disegnato a tratteggio.
 
+\newpage
 
 # Limiti delle sezioni geologiche
 
@@ -1018,15 +1084,13 @@ In questo caso Venturini suggerisce di rappresentare lo spessore variabile se si
 
 Nella figura qui sopra dice che si devono guardare le strie... ma non penso che le strie ci siano in carta!.
 
-
-
-
-
-
+\newpage
 
 # Difficoltà in campagna nell'individuare le superfici di stratificazione
 
 Le superfici di stratificazione possono essere suggerite da variazioni di granulometria (Vignaroli com. pers. Ovindoli).
+
+\newpage
 
 # Mappe a piccola scala (e.g. $1:N$, $N>50k$)
 
@@ -1037,6 +1101,8 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 
 3) Inoltre su centinaia di km la topografia appare quasi piatta a quindi può essere necessaria l'esagerazione verticale.
 
+\newpage
+
 # Orientare uno sketch panoramico con la bussola Brunton
 0) Il lato lungo della bussola è quello costituito dalla bussola e dal coperchio. Il coperchio ha lo specchio.
 1) Aprire la bussola, il coperchio va vicino al corpo.
@@ -1044,12 +1110,13 @@ Le superfici di stratificazione possono essere suggerite da variazioni di granul
 3) Si può aggiungere mentalmente 90° per marcare il lato destro dello sketch e sottrarre 90° per marcare il lato sinistro dello sketch; oppure si può
 4) Ruotare la bussola nel verso che incrementa i valori puntati dalla freccia N fino ad avere il lato lungo della bussola parallelo al panorama; la freccia N indica il valore da scrivere nella parte destra dello sketch, la freccia S indica il valore da scrivere nella parte sinistra dello sketch.
 
-
 # Isoipse aka curve di livello
 
 Data topografia $z=f(x,y)$ densa allora si usa l'algoritmo "Marching squares" per ottenere le curve di livello (vedi Wenger 2013).
 
 Data topografia sparsa, i.e. solo qualche punto quotato, occorre una triangolazione (vedi pdf Conti su profili topografici).
+
+\newpage
 
 # Glossario
 
@@ -1115,6 +1182,7 @@ Tabella dedotta dalla prefazione in Fossen.
 |Fragile _Brittle_|Faglia _Fault_|
 |Duttile _Ductile_|Piega _Folding_|
 
+\newpage
 
 # Bibliografia
 
@@ -1148,6 +1216,8 @@ https://www.pconti.net/doc/AnalisiGeolStrutt/Dispense-Meccheri.pdf
 [Venturini] Corrado Venturini, Rilevamento geologico, Bologna, 2023, Zanichelli.
 
 [Zanchi] Zanchi, 2022 - Fratture e faglie
+
+\newpage
 
 # Domande
 
