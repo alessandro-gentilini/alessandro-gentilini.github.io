@@ -88,6 +88,8 @@ Aggiornati al 28 luglio 2026.
 
 # Orientazione di superfici
 
+![Riassunto giaciture da Conti 2019](conti_riassunto_giaciture.png)
+
 La superficie è modellata con un piano, o, in altre parole, è assimilata ad un piano.
 
 ## **Direzione (_strike_)** di una superficie: 
@@ -123,6 +125,8 @@ dice di appoggiare il palmo della mano destra al tetto della superficie da orien
 |Inclinazione|_Dip_|$\delta$|
 
 # Orientazione di linee
+
+![Riassunto giaciture da Conti 2019](conti_riassunto_giaciture.png)
 
 ## **Direzione (_trend_)** di una linea:
 è l'angolo, misurato in un piano orizzontale, formato dalla direzione del Nord e dal piano verticale che contiene la linea.  
@@ -202,13 +206,29 @@ La procedura qui sopra fa disegnare correttamente anche le superfici verticali, 
 
 ## Un punto sul reticolo corrisponde ad una linea retta
 
-Come trovare la direzione della linea?  
-Disegnare un segmento che ha come primo estremo il centro del reticolo e come secondo estremo il punto in questione, prolungare poi il segmento da questo secondo estremo fino ad intersecare il cerchio primitivo, la suddetta intersezione indica la direzione.
+Prima di tutto serve che sia indicato almeno il Nord sul cerchio primitivo, se ci fosse solamente il cerchio primitivo e il punto allora direi che il problema non possa essere risolto.
 
-Come trovare l'inclinazione della linea?  
-Più il punto è vicino al cerchio primitivo e minore è l'inclinazione della linea.  
-Più il punto è vicino al centro dello stereogramma e maggiore è l'inclinazione della linea.  
-Ruotare il trasparente per portare il segmento precedentemente disegnato a coincidere con l'asse WE, la distanza tra il cerchio primitivo ed il punto in questione, misurata sull'asse WE, è l'inclinazione della linea.
+È dato il punto (che rappresenta una linea) come nella figura seguente:
+
+![Da Conti 2019, Figura 4.5d](stereo_conti_lettura_linea_d.png)
+
+Ruotare il trasparente in modo da portare il punto sul diametro E-W; a seconda di come si è fatta la rotazione, il punto può essere andato a finire nei quadranti Est oppure nei quadranti Ovest.  
+Ho verificato e il risultato finale è il medesimo indipendentemente dal fatto che il punto sia nei quadranti Est oppure nei quadranti Ovest.  
+
+In questo stato si può leggere il plunge della linea come distanza che c'è tra il cerchio primitivo e il punto in questione; se il punto è nei quadranti Est (rispettivamente Ovest) contare cioè l'angolo partendo dalla tacca Est (rispettivamente Ovest), muovendosi sul diametro Est-Ovest verso il centro del reticolo e fermandosi in corrispondenza del punto.  
+Marcare sul trasparente una `x` in corrispondenza della tacca Est (rispettivamente Ovest) del sottostante reticolo.
+
+Nell'esempio della figura qui sotto il punto è nei quadranti Est e il suo plunge è 20°.
+
+![Da Conti 2019, Figura 4.5e](stereo_conti_lettura_linea_e.png)
+
+Ruotare il trasparente per riportare la tacca Nord del trasparente a coincideree con la tacca Nord del reticolo. Leggere sul cerchio primitivo la direzione della linea in corrispondenza della `x` contando l'angolo partendo da Nord e muovendosi in senso orario fino a raggiungere la `x`.
+
+Nella figura qui sotto la direzione della linea è 250°.
+
+![Da Conti 2019, Figura 4.5f](stereo_conti_lettura_linea_f.png)
+
+Conti spiega anche come fare se il punto rappresenta un polo, e usa il segno `o` per marcare la tacca utile ma preferisco non descriverlo perché non mi è del tutto chiaro.
 
 ## Una ciclografica sul reticolo corrisponde ad una superficie planare
 
@@ -225,7 +245,7 @@ Sul trasparente, marcare inoltre con un segno (nella figura qui sotto è una `x`
 ![Da Conti 2019, Figura 4.5b](stereo_conti_lettura_piano_b.png)
 
 Ruotare il trasparente in modo che il Nord sul trasparente torni a coincidere con il Nord sul reticolo.  
-Il segno in precedenza marcato sul cerchio primitivo indica ora, sempre sul cerchio primitivo, l'immersione del piano, vedi figura seguente in cui la giacitura nel formato immersione/inclinazione è 310/40.
+Il segno `x` in precedenza marcato sul cerchio primitivo indica ora, sempre sul cerchio primitivo, l'immersione del piano, vedi figura seguente in cui la giacitura nel formato immersione/inclinazione è 310/40.
 
 ![Da Conti 2019, Figura 4.5c](stereo_conti_lettura_piano_c.png)
 
@@ -1015,7 +1035,7 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 
 **Soprassegni** Venturini p.145
 
-**Trasparente** (_tracing paper_) è un foglio trasparente da ricalco anche detto "carta da lucido".
+**Trasparente** (_tracing paper_, _overlay_) è un foglio trasparente da ricalco anche detto "carta da lucido".
 
 
 
