@@ -433,11 +433,11 @@ Negli esercizi sulle proiezioni stereografiche sono date le giaciture di due fag
 
 ![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_inversa.png)
 
-![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_normale.png)
+![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_normale.png)
 
-![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_trascorrente.png)
+![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_trascorrente.png)
 
-![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_didascalia-fig6-62.png)
+![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_didascalia-fig6-62.png)
 
 
 # Superfici geologiche planari
