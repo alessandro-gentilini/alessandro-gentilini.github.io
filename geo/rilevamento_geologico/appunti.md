@@ -6,6 +6,41 @@ date: "18 ottobre 2025"
 
 Aggiornati al 26 luglio 2026.
 
+## Indice
+
+- [Orientazione di superfici](#orientazione-di-superfici)
+   - [Direzione (strike) di una superficie](#direzione-strike-di-una-superficie)
+   - [Inclinazione (dip) di una superficie](#inclinazione-dip-di-una-superficie)
+   - [Immersione (dip direction) di una superficie](#immersione-dip-direction-di-una-superficie)
+   - [La regola della mano destra](#la-regola-della-mano-destra)
+- [Orientazione di linee](#orientazione-di-linee)
+   - [Direzione (trend) di una linea](#direzione-trend-di-una-linea)
+   - [Inclinazione (plunge) di una linea](#inclinazione-plunge-di-una-linea)
+- [Orientazione di linee giacenti su una superficie](#orientazione-di-linee-giacenti-su-una-superficie)
+   - [Pitch di una linea su una superficie](#pitch-di-una-linea-su-una-superficie)
+- [Proiezioni di linee e superfici sul reticolo stereografico](#proiezioni-di-linee-e-superfici-sul-reticolo-stereografico)
+- [Proiezioni di linee](#proiezioni-di-linee)
+- [Proiezione di superfici](#proiezione-di-superfici)
+- [Come leggere le informazioni sul reticolo stereografico](#come-leggere-le-informazioni-sul-reticolo-stereografico)
+   - [Un punto sul reticolo corrisponde ad una linea retta](#un-punto-sul-reticolo-corrisponde-ad-una-linea-retta)
+   - [Una ciclografica sul reticolo corrisponde ad una superficie planare](#una-ciclografica-sul-reticolo-corrisponde-ad-una-superficie-planare)
+- [Proiezione di linee che giacciono su una superficie](#proiezione-di-linee-che-giacciono-su-una-superficie)
+- [Dato il polo tracciare il corrispondente piano](#dato-il-polo-tracciare-il-corrispondente-piano)
+- [Angolo tra due linee](#angolo-tra-due-linee)
+- [Angolo tra due superfici](#angolo-tra-due-superfici)
+- [Piano contenente due linee](#piano-contenente-due-linee)
+- [Piano bisettore di due piani](#piano-bisettore-di-due-piani)
+- [Asse di pieghe cilindriche, diagramma β](#asse-di-pieghe-cilindriche-diagramma-beta)
+- [Asse di pieghe cilindriche, diagramma π](#asse-di-pieghe-cilindriche-diagramma-pi)
+- [Retrodeformazione](#retrodeformazione)
+- [Faglie](#faglie)
+- [Faglie e stress principali](#faglie-e-stress-principali)
+- [Superfici geologiche planari](#superfici-geologiche-planari)
+- [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-l-intersezione-tra-il-piano-e-la-superficie-topografica)
+- [Data la superficie limite determinarne la giacitura](#data-la-superficie-limite-determinarne-la-giacitura)
+   - [Regola della V, V's rule](#regola-della-v-vs-rule)
+
+
 # Orientazione di superfici
 
 La superficie è modellata con un piano, o, in altre parole, è assimilata ad un piano.
@@ -301,6 +336,10 @@ Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia
 ![Faglia inversa o compressiva.](stereo_faglia_inversa.png)
 
 ![Faglie normali, inverse, trascorrenti.](rappresentazione_faglie_secondo_pdf_lez_4.png)
+
+# Faglie e stress principali
+
+![](meccheri_cubetto_subito_prima_del_rigetto.png)
 
 
 # Superfici geologiche planari
@@ -948,6 +987,9 @@ geologists. Elsevier.
 
 Lisle R.J. & Leyshon P.R. (2004) - Stereographic Projection Techniques for Geologists and Civil Engineers
 
+[Meccheri] Marco Meccheri, 2015 - Analisi geologico-strutturali
+https://www.pconti.net/doc/AnalisiGeolStrutt/Dispense-Meccheri.pdf
+
 [Fossen] Haakon FOSSEN, Geologia strutturale, Bologna 2020, Zanichelli.
 
 [Simpson] Brian Simpson, Lettura delle carte geologiche, Palermo, 1992, Dario Flaccovio Editore.
@@ -955,6 +997,8 @@ Lisle R.J. & Leyshon P.R. (2004) - Stereographic Projection Techniques for Geolo
 [Wenger] Isosurfaces: geometry topology and algorithms. . 2013. 
 
 [Venturini] Corrado Venturini, Rilevamento geologico, Bologna, 2023, Zanichelli.
+
+[Zanchi] Zanchi, 2022 - Fratture e faglie
 
 # Domande
 
