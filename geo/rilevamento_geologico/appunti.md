@@ -274,6 +274,7 @@ allo stesso modo, siccome nel mondo l'angolo di pitch è definito sul piano dell
 Vedi pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" da p.46/87 a p.48/87
 
 Due piani che si intersecano danno luogo a due angoli complementari che cioè hanno come somma 180°; a parte il caso particolare di 90°+90° si avrà che un angolo è acuto e l'altro è ottuso.  
+
 1) Occorre disegnare il polo di ciascuna superficie.
 
 2) Ruotare il trasparente per portare i due poli sullo stesso grande cerchio.
