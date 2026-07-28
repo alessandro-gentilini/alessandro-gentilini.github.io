@@ -228,7 +228,7 @@ Nella figura qui sotto la direzione della linea è 250°.
 
 ![Da Conti 2019, Figura 4.5f](stereo_conti_lettura_linea_f.png)
 
-Conti spiega anche come fare se il punto rappresenta un polo, e usa il segno `o` per marcare la tacca utile ma preferisco non descriverlo perché non mi è del tutto chiaro.
+Conti spiega anche come fare se il punto rappresenta un polo, e usa il segno `o` per marcare la tacca utile ma preferisco non descriverlo perché non mi è del tutto chiaro. Preferisco usare [dato il polo tracciarne il piano](#dato-il-polo-tracciare-il-corrispondente-piano)
 
 ## Una ciclografica sul reticolo corrisponde ad una superficie planare
 
