@@ -417,7 +417,7 @@ Adesso resta da determinare la traccia ciclografica del piano il cui polo è A',
 
 ![Anatomia di una faglia, tratto dal pdf "Lez 4bis_proiezioni stereografiche con rappresentazione per faglie"](Lez_4bis_proiezioni_stereografiche_con_rappresentazione_per_faglie.png)
 
-Nella traccia ciclografica per convenzione si indica con una freccia il verso di movimento del tetto, la freccia è posta nel punto che rappresenta la stria.
+Nella traccia ciclografica per convenzione si indica con una freccia il verso di movimento del tetto, **la freccia è posta nel punto che rappresenta la stria**.
 
 Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia normale, ricordare che la convessità della traccia punta verso l'immersione, nella faglia normale il tetto scende lungo il letto, o, detto in altri termini, il tetto immerge lungo il piano di faglia e quindi la freccia nel diagramma stereo punta verso il cerchio primitivo perché è verso il cerchio primitivo che c'è immersione.
 
