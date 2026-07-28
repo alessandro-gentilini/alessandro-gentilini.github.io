@@ -259,16 +259,20 @@ Ribadisco che il risultato che si ottiene è la giacitura nel formato immersione
 ![Da Conti 2019, p. 25](stereo_conti_lettura_piano_output.png)
 
 # Proiezione di linee che giacciono su una superficie
-0) È necessario conoscere il _pitch_ della linea.
-1) Disegnare la proiezione della superficie seguendo il metodo precedentemente illustrato.
-2) Ruotare il trasparente per allineare la ciclografica in modo che i suoi estremi coincidano con il Nord e con il Sud.
-3) Partendo da Nord, e muovendosi lungo la ciclografica, contare tanti gradi quanti sono quelli del _pitch_ e, lì arrivati, disegnare il punto che rappresenta la linea in oggetto.
 
-La procedura suddetta l'ho presa dal pdf delle lezioni come visibile nella figura seguente. A quanto capisco, se la traccia ciclografica è allineata con il sottostante grande cerchio, il seguente comando: 
+È data l'immersione/inclinazione della superficie ed il pitch della linea.
 
->Contare il valore del pitch (45°) sulla ciclografica S0, partendo dal valore di direzione (immersione-90° per la regola della mano destra) della stessa S0
+1) Allineare la tacca Nord del trasparente con la tacca Nord del reticolo.
+2) Segnare sul cerchio primitivo una tacca in corrispondenza dell'angolo di immersione della superficie.
+3) Ruotare il trasparente per portare la precedente tacca coincidente con la tacca Est (rispettivamente Ovest).
+4) Contare da Est (rispettivamente Ovest) verso il centro del reticolo i gradi di inclinazione della superficie e marcare il punto corrispondente.
+5) Ricalcare il grande cerchio su cui giace il punto corrispondente.
+6) **IMPORTANTE** il sudetto punto è il punto di massima convessità della traccia ciclografica e indica l'immersione della superficie, muoversi di 90° lungo la traccia ciclografica nel verso **anti-orario** e marcare con una piccola `x` l'estremo della traccia così raggiunto: questo estremo rappresenta la **direzione** aka **strike** della superficie in oggetto e il percorso di 90° in senso anti-orario è l'applicazione operativa della regola della mano destra.
+7) Partendo dalla `x` e muovendosi lungo la traccia ciclografica (che è ancora allineata al sottostante reticolo) contare i gradi del pitch, marcare con un punto il punto raggiunto. Questo punto è la proiezione ricercata della linea in oggetto (per esempio una stria su un piano di faglia).
 
-si traduce in contare i gradi del pitch partendo dal Nord.
+Dal pdf delle lezioni visibile nella figura seguente riporto verbatim la procedura:
+
+>Contare il valore del pitch (45°) sulla ciclografica S0, partendo dal valore di direzione (immersione-90° per la regola della mano destra) della stessa S0.
 
 ![Tratto dal pdf "Lez 4_Proiezioni stereografiche", "Proiezioni stereografiche di dati strutturali" p.41/87](pitch_da_pdf_lezioni.png)
 
