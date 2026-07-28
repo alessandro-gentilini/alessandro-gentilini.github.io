@@ -1274,3 +1274,27 @@ https://www.pconti.net/doc/AnalisiGeolStrutt/Dispense-Meccheri.pdf
  ![Perché sono sbagliate le etichette tetto/letto?](stereo_faglia_normale_mia.png)
 
  ![Perché sono sbagliate le etichette tetto/letto?](stereo_faglia_inversa_mia.png)
+
+ \newpage
+
+# Una possibile strategia
+
+1) Scrivere subito nome e cognome su ogni foglio
+
+2) Se ci sono foto, prima di leggere le domande relative, farne una analisi e darne una interpretazione speditiva usando un foglio trasparente sovrapposto per eventuali annotazioni (e.g. pieghe).
+
+3) Anche per la carta geologica, sovrapporre il trasparente e annotare le principali strutture tettoniche (e.g. pieghe, faglie, limiti discordanti) identificandole con sigle che poi saranno citate nella analisi speditiva.
+
+4) Fare analisi speditiva della morfologia/topografia.
+
+5) Fare analisi speditiva della sezione geologica indicando quanto è già abbastanza chiaro da subito e quanto richiede analisi più approfondita.
+
+6) Disegnare una sezione geologica speditiva stimando a vista
+   - immersioni
+   - tipo di pieghe
+   - rigetti di faglie
+   - limiti non concordanti
+
+7) Nella sezione geologica speditiva marcare con punti interrogativi quanto resta da approfondire, spiegare brevemente ogni punto interrogativo.
+
+Così per lo meno c'è una traccia da seguire ed un minimo di risultati/elaborazione/interpretazione è scritto.
