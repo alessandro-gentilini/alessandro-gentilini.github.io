@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 26 luglio 2026.
+Aggiornati al 28 luglio 2026.
 
 ## Indice
 
@@ -39,6 +39,51 @@ Aggiornati al 26 luglio 2026.
 - [Data la giacitura di un piano trovare l'intersezione tra il piano e la superficie topografica](#data-la-giacitura-di-un-piano-trovare-l-intersezione-tra-il-piano-e-la-superficie-topografica)
 - [Data la superficie limite determinarne la giacitura](#data-la-superficie-limite-determinarne-la-giacitura)
    - [Regola della V, V's rule](#regola-della-v-vs-rule)
+- [Data una faglia in carta determinare la giacitura del piano di faglia](#data-una-faglia-in-carta-determinare-la-giacitura-del-piano-di-faglia)
+- [Sezioni speditive](#sezioni-speditive)
+- [Metodo dei tre punti](#metodo-dei-tre-punti)
+- [Limiti concordanti](#limiti-concordanti)
+- [Pieghe](#pieghe)
+   - [Anatomia di una piega](#anatomia-di-una-piega)
+   - [Come riconoscere piega](#come-riconoscere-piega)
+   - [Attenzione a prendere le direttrici giuste!](#attenzione-a-prendere-le-direttrici-giuste)
+- [Faglie](#faglie)
+   - [Rigetto](#rigetto)
+- [Sezioni](#sezioni)
+   - [Linee guida generali](#linee-guida-generali)
+   - [Accessori](#accessori)
+   - [Colori](#colori)
+   - [Inclinazione apparente di un piano](#inclinazione-apparente-di-un-piano)
+   - [Proiezione di limiti (Venturini)](#proiezione-di-limiti-venturini)
+   - [Proiezioni di giaciture (Venturini)](#proiezioni-di-giaciture-venturini)
+- [Correlazioni di giaciture, parte comune](#correlazioni-di-giaciture-parte-comune)
+- [Correlazione con il metodo delle bisettrici](#correlazione-con-il-metodo-delle-bisettrici)
+- [Correlazione con il metodo degli archi di cerchio](#correlazione-con-il-metodo-degli-archi-di-cerchio)
+- [Note sui metodi di correlazione](#note-sui-metodi-di-correlazione)
+- [Accorgimenti e consigli per la correlazione delle proiezioni delle giaciture (Venturini p.135)](#accorgimenti-e-consigli-per-la-correlazione-delle-proiezioni-delle-giaciture-venturini-p135)
+   - [Tecnica del motivo deformativo (1° Consiglio)](#tecnica-del-motivo-deformativo-1-consiglio)
+    - [Tangenza al punto di aggancio (2° Consiglio)](#tangenza-al-punto-di-aggancio-2-consiglio)
+    - [Suddividere le proiezioni in settori/domini con strike simili (3° Consiglio)](#suddividere-le-proiezioni-in-settoridomini-con-strike-simili-3-consiglio)
+    - [I motivi deformativi devono essere tettonicamente plausibili (4° Consiglio)](#i-motivi-deformativi-devono-essere-tettonicamente-plausibili-4-consiglio)
+    - [I "settori equivalenti" (Venturini, p. 154)](#i-settori-equivalenti-venturini-p-154)
+- [Limiti delle sezioni geologiche](#limiti-delle-sezioni-geologiche)
+   - [Selezionare le giaciture da proiettare](#selezionare-le-giaciture-da-proiettare)
+   - [L'estrapolazione in profondità](#lestrapolazione-in-profondit%C3%A0)
+   - [La finta monoclinalica](#la-finta-monoclinalica)
+   - [Giaciture con strike paralleli alla traccia di sezione risultano orizzontali](#giaciture-con-strike-paralleli-alla-traccia-di-sezione-risultano-orizzontali)
+   - [Spessore nella realtà costante che però in sezione è apparentemente variabile](#spessore-nella-realt%C3%A0-costante-che-per%C3%B2-in-sezione-%C3%A8-apparentemente-variabile)
+   - [Che tipo di faglia è?](#che-tipo-di-faglia-%C3%A8)
+- [Difficoltà in campagna nell'individuare le superfici di stratificazione](#difficolt%C3%A0-in-campagna-nellindividuare-le-superfici-di-stratificazione)
+- [Mappe a piccola scala (e.g. 1:N, N>50k)](#mappe-a-piccola-scala-eg-1n-n50k)
+- [Orientare uno sketch panoramico con la bussola Brunton](#orientare-uno-sketch-panoramico-con-la-bussola-brunton)
+- [Isoipse aka curve di livello](#isoipse-aka-curve-di-livello)
+- [Glossario](#glossario)
+   - [pdf "Lez 0_Rilevamento geologico - programma generale"](#pdf-lez-0_rilevamento-geologico---programma-generale)
+   - [pdf "Lez 1_Introduzione al Rilevamento"](#pdf-lez-1_introduzione-al-rilevamento)
+   - [pdf "Lez 2_Limiti e strutture geologiche"](#pdf-lez-2_limiti-e-strutture-geologiche)
+   - [pdf "Lez 4_Proiezioni stereografiche"](#pdf-lez-4_proiezioni-stereografiche)
+- [Bibliografia](#bibliografia)
+- [Domande](#domande)
 
 
 # Orientazione di superfici
@@ -339,7 +384,60 @@ Nella figura seguente la traccia ciclografica rappresenta il piano di una faglia
 
 # Faglie e stress principali
 
-![](meccheri_cubetto_subito_prima_del_rigetto.png)
+Una forza comunque orientata applicata su una superficie comunque orientata dà uno stress $\sigma$ normale alla superficie e due stress di taglio $\tau_1$ e $\tau_2$ tangenti alla superficie.
+
+Si può definire un sistema di riferimento tale per cui gli stress di taglio sono nulli, gli stress normali si chiamano allora **stress principali** e si indicano con $\sigma_1 > \sigma_2 > \sigma_3$; sono fra loro ortogonali.
+
+Si sono studiate le fratture in laboratorio, si parte da un provino di forma cubica a cui sono applicate delle forze, vedi figura seguente dove le fratture son impostate ma non c'è ancora il rigetto:
+
+![Tratto da Marco Meccheri, 2015 - Analisi geologico-strutturali](meccheri_cubetto_subito_prima_del_rigetto.png)
+
+Poi appare il rigetto delle fratture e il cubettino della figura precedente diventa in sezione lo schema più a destra nella figura seguente dove si notano:
+
+1) il "livello" nero orizzontale che è dislocato dal set di faglie
+2) Il punto A che viene dislocato nel punto A'
+3) > Le faglie sono la risposta delle rocce agli sforzi a cui sono sottoposte e, come predice
+la teoria della fratturazione di Coulomb, esse si formano con un’orientazione di circa 30°
+rispetto alla direzione di applicazione del $\sigma_1$. Verbatim da Conti - 2016 - Elementi di Geologia Strutturale
+
+![Tratto da Zanchi, 2022 - Fratture e faglie](zanchi_con_rigetto.png)
+
+Secondo la teoria di Anderson, sulla superficie della Terra uno stress principale è verticale e quindi gli altri due sono orizzontali.  
+A seconda di quale dei tre sforzi è verticale si hanno i tre tipi di faglie noti e rappresentati nella seguente figura:
+
+![Tratto da Conti - 2016 - Elementi di Geologia Strutturale](conti_stress_faglie.png)
+
+Ognuno dei tre solidi rappresentati è il provino fratturato.  
+Invece direi che nella figura seguente i solidi sono una via di mezzo tra il provino fratturato e faglie geologiche vere e proprie.
+
+![Tratto dal pdf "Lez 4tris_Orientazione stress principali"](stress_principali_nelle_tre_faglie.png)
+
+Come ausilio mnemonico io mi sono inventato questo:
+
+$\sigma_1$ è il maggiore e quindi il più "potente", quando è verticale "squizza" via la roccia e quindi dà faglia distensiva e quindi si tratta di faglia normale; $\sigma_3$ è il più "debole" e si oppone debolmente a $\sigma_1$ tendendo a contenere lo "squizzamento".  
+Per verifica/check: $\sigma_2$ è ortogonale agli altri due ed è all'intersezione dei due piani di faglia nel provino cubico.
+
+Se invece $\sigma_1$ è orizzontale ci sono i due casi rimanenti: se "comprime" e spinge in orizzontale ed è debolmente contrastato da $\sigma_3$ che è verticale allora si ha il tetto che scorre sul letto e si alza di quota rispetto al letto, è un accavallamento, è quindi una faglia compressiva e quindi è una faglia inversa.  
+Anche qui per verifica/check: $\sigma_2$ è ortogonale agli altri due ed è all'intersezione dei due piani di faglia nel provino cubico.
+
+Per esclusione resta il caso in cui $\sigma_1$ è orizzontale, $\sigma_2$ è verticale e $\sigma_3$ è orizzontale ed è faglia trascorrente.
+
+Negli esercizi sulle proiezioni stereografiche sono date le giaciture di due faglie coniugate e si devono ricavare i tre stress principali.
+
+1) si disegnano le tracce ciclografiche delle due faglie.
+2) $\sigma_2$ è il punto di intersezione delle due faglie; dovrebbe essere verticale e quindi al centro del reticolo nel caso di faglie trascorrenti
+3) $\sigma_2$ ha il ruolo di polo, si disegna la ciclografica corrispondente che rappresenta il piano $\Pi_{1,3}$ che conterrà $\sigma_1$ e $\sigma_3$
+4) l'intersezione di $\Pi_{1,3}$ con le due faglie dà due punti che danno l'angolo acuto $\alpha$ che va letto sulla traccia ciclografica $\Pi_{1,3}$
+5) Il punto che biseca $\alpha$ su $\Pi_{1,3}$ è $\sigma_1$ che biseca sempre l'angolo acuto.
+6) $\sigma_3$ starà sempre su $\Pi_{1,3}$ ma bisecherà l'angolo ottuso, inoltre per double check si ha che $\sigma_3$ deve stare a 90° da $\sigma_1$.
+
+![Tratto da Davis & Reynolds, 1996, fig 6.62](davis_reynolds_inversa.png)
+
+![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_normale.png)
+
+![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_trascorrente.png)
+
+![Tratto da Davis & Reynolds, 1996, fig 6.62(davis_reynolds_didascalia-fig6-62.png)
 
 
 # Superfici geologiche planari
@@ -913,6 +1011,8 @@ In inglese da Bose e p19/73 di pdf "Lez 5_Elementi di stratimetria", "Elementi d
 
 **Figuràti** Conti.
 
+**Sforzo** (_stress_)
+
 **Soprassegni** Venturini p.145
 
 **Trasparente** (_tracing paper_) è un foglio trasparente da ricalco anche detto "carta da lucido".
@@ -982,6 +1082,8 @@ geologists. Elsevier.
 [https://www.pconti.net/doc/Stereogrammi.pdf](https://www.pconti.net/doc/Stereogrammi.pdf)
 
 [Cremonini] Cremonini, Rilevamento Geologico, Bologna 1977, Pitagora Editrice Bologna.
+
+[Davis & Reynolds] Davis, Reynold, "Structural geology of rocks and regions", 1996.
 
 [Lisle] RICHARD J. LISLE, Geological Structures and Maps, A PRACTICAL GUIDE, Third edition, Burlington, MA 2004, Elsevier.
 
