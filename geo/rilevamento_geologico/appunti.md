@@ -1281,7 +1281,7 @@ https://www.pconti.net/doc/AnalisiGeolStrutt/Dispense-Meccheri.pdf
 
 1) Scrivere subito nome e cognome su ogni foglio
 
-2) Se ci sono foto, prima di leggere le domande relative, farne una analisi e darne una interpretazione speditiva usando un foglio trasparente sovrapposto per eventuali annotazioni (e.g. pieghe).
+2) Se ci sono foto, prima di leggere le domande relative, farne una analisi e darne una interpretazione speditiva usando un foglio trasparente sovrapposto per eventuali annotazioni (e.g. pieghe). Sopratutto stimare ad occhio quanto possibile giaciture, piani assiali, eccetera per poi confrontarli con i calcoli.
 
 3) Anche per la carta geologica, sovrapporre il trasparente e annotare le principali strutture tettoniche (e.g. pieghe, faglie, limiti discordanti) identificandole con sigle che poi saranno citate nella analisi speditiva.
 
