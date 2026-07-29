@@ -642,7 +642,11 @@ Individuare una valle/impluvio possibilmente con la linea di impluvio ortogonale
 
 ## Mnemonico per la regola della V
 
-Alla mia amica Reggy Poggi piacciono molto i dolci -> il confine che addolcisce le isoipse è a reggipoggi.
+Alla mia amica Reggy Poggi piacciono molto i dolci -> il confine che addolcisce le isoipse è a reggipoggio.
+
+Franò ha l'accento sulla o -> il confine che accentua le isoipse è quello che frana cioè quello a franapoggio meno inclinato del pendio.
+
+Chi è contrario non frana -> il confine che ha una curvatura contraria a quella delle isoipse è stabile e quindi è quello a franapoggio più inclinato del pendio.
 
 \newpage
 
