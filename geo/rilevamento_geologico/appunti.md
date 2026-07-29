@@ -4,7 +4,7 @@ author: "Appunti di Alessandro Gentilini"
 date: "18 ottobre 2025"
 ---
 
-Aggiornati al 28 luglio 2026.
+Aggiornati al 29 luglio 2026.
 
 ## Indice
 
@@ -639,6 +639,10 @@ Si si collegano tutti i vertici delle V si ottiene la linea dell'impluvio.
 Individuare una valle/impluvio possibilmente con la linea di impluvio ortogonale al limite in esame (l'ortogonalità è indicata nelle dispense ["GEOLOGIA 2 E PRINCIPI DI RILEVAMENTO GEOLOGICO - SECONDA PARTE" a cura di Gian Andrea Pini e Lorenzo Bonini, Università degli studi di Trieste](https://moodle2.units.it/pluginfile.php/396407/mod_resource/content/1/Geologia%202%20e%20Principi%20di%20Rilevamento%20-%20Seconda%20parte%20-%20Lezione%201.pdf)), si hano quindi i seguenti casi descritti in Figura 2.17 di Lisle 2004.
 
 ![Regola della V da Lisle 2004.](regola_della_V.png)
+
+## Mnemonico per la regola della V
+
+Alla mia amica Reggy Poggi piacciono molto i dolci -> il confine che addolcisce le isoipse è a reggipoggi.
 
 \newpage
 
