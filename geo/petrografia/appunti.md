@@ -250,6 +250,33 @@ Allo stesso modo si ha estinzione parallela se nella posizione di estinzione il 
 Si ha estinzione inclinata se nella posizione di estinzione il lato lungo del minerale con abito prismatico forma un certo angolo con l'asse verticale del crocifilo (e.g. augite ha angolo > 40° [Gasp_pdf_8 124/126], sanidino geminato, plagioclasio geminato che presena geminazione polisintetica che segue la "legge dell'albite").  
 
 
+# Colore campione a mano vs sezione sottile
+
+[https://claude.ai/chat/5e6fd733-df2a-4b38-a9a7-d7bf50d6441f](https://claude.ai/chat/5e6fd733-df2a-4b38-a9a7-d7bf50d6441f)
+
+Great optical mineralogy question. The key concept is the **Beer-Lambert law**: the intensity of absorption color in a mineral depends on both the concentration of light-absorbing species (chromophores) *and* the path length light travels through the material.
+
+**Why 30 μm makes such a difference**
+
+- Hand specimens are centimeters thick — often 10,000+ times thicker than a standard 30 μm thin section.
+- A mineral's color in hand specimen comes from selective absorption of certain wavelengths by chromophore ions (Fe²⁺/Fe³⁺, Ti, Mn, Cr, Cu, etc.) via crystal-field transitions or charge-transfer processes.
+- If the absorption coefficient for a given mineral is relatively weak, that absorption only becomes visible to the eye once light has traveled a long enough path through the crystal. At 30 μm, the path is simply too short for enough light to be absorbed, so the mineral looks pale or colorless under the microscope even though it's clearly colored as a hand sample.
+
+Essentially: color intensity ∝ concentration × path length. Shrinking the path length by orders of magnitude can push an otherwise "colored" mineral below the threshold of visible absorption.
+
+**Compounding factors**
+
+1. **Pleochroism and orientation** — many colored minerals are pleochroic (absorption varies with the vibration direction of light relative to the crystal lattice). A section cut parallel to a low-absorption crystallographic direction can look nearly colorless even if other orientations of the same mineral show strong color.
+2. **Low chromophore concentration** — minerals with only trace amounts of the coloring element (e.g., very low Fe content) may already be weakly colored in hand sample; thinning to 30 μm can push them to essentially undetectable.
+3. **Contrast with genuinely colorless minerals** — some minerals (quartz, calcite, most feldspars) are colorless in both hand sample and thin section because they lack chromophores altogether; that's a different phenomenon from a colored mineral becoming "washed out" by thinness.
+
+**Common textbook examples**
+- Orthopyroxene (hypersthene) can show a distinct pink-green color in hand specimen but only faint pink-green pleochroism in thin section.
+- Some biotites and amphiboles that look nearly black/dark brown in hand sample show clear pleochroic colors (yellow-brown to green-brown) at 30 μm — still colored, but far less saturated than the hand sample.
+- Certain tourmalines and garnets can appear strongly colored in hand specimen but pale or colorless in standard thin section, depending on Fe/Mn content and section orientation.
+
+This is actually one of the practical reasons petrographers pay close attention to pleochroism and use it diagnostically — the *degree* of color change with stage rotation, even when faint, is often more useful for mineral identification than the absolute color itself.
+
 ## Tavole determinative
 Le tavole determinative in [Peccerillo p.180-184] sono suddivise in :
 <pre>
