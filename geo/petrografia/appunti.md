@@ -27,6 +27,31 @@ date: "26 aprile 2026"
 * Giovedì, 23 aprile 2026
 * Giovedì, 7 maggio 2026
 
+# Domande orale (A. V. B.)
+
+Da T. F. il primo luglio 2026
+
+- cos'è una facies metamorfica?
+- cos'è una migmatite?
+- serie di Bowen
+- reazioni decarbonatazione
+- come si fa a fondere una roccia?
+- indice allumina
+- come capisco se un minerale metamorfico è cresciuto durante deformazione?
+- pseudomorfosi
+- differenza clorite e granato
+- reazioni met continue
+- peridotiti
+- che cos'è una serie magmatica?
+- rapporto blasti - foliazione
+- diagramma F-M
+- serpentinizzazione
+- diff dei magmi/evol
+- contesti met
+- met dorsali
+- geotermom
+- leucosoma
+
 # Ottica mineralogica
 
 * Rifrazione e legge di Snell.  
