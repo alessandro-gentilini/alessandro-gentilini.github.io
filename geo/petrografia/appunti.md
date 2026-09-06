@@ -410,6 +410,12 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 **torbido**=_cloudy_?
 
+# Glossario da K&P
+
+**Facies metamorfica** Comprende tutte le rocce che si sono formate in condizioni di pressione e temperatura così simili che una data composizione chimica produce la stessa associazione di minerali.
+
+**Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
+
 # Bibliografia
 [Hoffmann] Frank Hoffmann, Introduction to Crystallography, Cham, 2020, Springer.
 
