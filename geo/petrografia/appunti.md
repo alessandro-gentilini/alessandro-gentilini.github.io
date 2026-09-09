@@ -412,7 +412,21 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 # Glossario da K&P
 
+**Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.
+
+**Basalto** Roccia ignea a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.
+
 **Facies metamorfica** Comprende tutte le rocce che si sono formate in condizioni di pressione e temperatura così simili che una data composizione chimica produce la stessa associazione di minerali.
+
+**Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.
+
+**Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale.
+
+**Granito** Roccia ignea a grana da media a grossa e composta all’incirca da un terzo di quarzo e due terzi di feldspati alcalini.
+
+**Hornfels** Roccia metamorfica di contatto senza foliazione.
+
+**Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
 
