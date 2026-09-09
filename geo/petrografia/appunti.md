@@ -274,6 +274,62 @@ Allo stesso modo si ha estinzione parallela se nella posizione di estinzione il 
 **Estinzione inclinata**: 
 Si ha estinzione inclinata se nella posizione di estinzione il lato lungo del minerale con abito prismatico forma un certo angolo con l'asse verticale del crocifilo (e.g. augite ha angolo > 40° [Gasp_pdf_8 124/126], sanidino geminato, plagioclasio geminato che presena geminazione polisintetica che segue la "legge dell'albite").  
 
+# Mason sulle sezioni sottili
+
+![Figura 1.7 in Mason 1991](./ornaments_thin_section_drawings.png)
+
+Studying thin sections of metamorphic rocks
+This textbook is designed for readers who have the use of a petrological
+microscope and thin sections of metamorphic rocks. A series of case histo-
+ries are discussed, including descriptions of individual thin sections from
+metamorphic rock suites, emphasizing the features which can be recognized
+in the thin sections. Some hints on microscopic technique are included where
+appropriate, but this section makes some general comments on the use of the
+petrological microscope for metamorphic rocks. For systematic descriptions
+of the optical properties of the minerals which are found in metamorphic
+rocks, the reader is referred to the textbooks of Gribble & Hall (1985) and
+Deer eta/. (1966).
+In general, the features discussed are those displayed by transparent
+minerals, which can be identified in thin section. Opaque minerals are
+usually described as 'opaques'. The textural features are illustrated by line
+drawings, using a set of conventional ornaments (Fig. 1. 7) for common
+mineral groups, but some photomicrographs are also included. The aim of
+this is to show how the conventional drawings relate to the image actually
+seen when looking down a petrological microscope. Ideally, this topic
+should be illustrated by colour photomicrographs taken in plane polarized
+light and between crossed polars, but since it is textural features rather than
+optical properties which are usually the subject of discussion, colour photo-
+graphs have been omitted in order to keep the price of the book down. Study
+the photomicrographs in McKenzie & Guildford's 'Atlas of the rock-
+forming minerals in thin section' (1980), especially the illustrations of miner-
+als such as kyanite, diopside, wollastonite and hornblende, for excellent
+colour illustrations of the appearance of typical metamorphic minerals in
+metamorphic rocks.
+To improve your ability to identify minerals and record textures, make
+your own drawings of thin sections, showing all the minerals in the rock's
+mineral assemblage. It is useful to include quite a large number of individual
+crystals, showing their actual outlines as accurately as possible, so that the
+fabric of the metamorphic rock is displayed. Try to avoid the mistake of
+filling in the finer-grained groundmass between larger porphyroblasts with
+shading or an ornament which bears little relation to the actual shapes and
+arrangement of smaller crystals. It is usually best to draw metamorphic rocks
+as they appear in plane polarised light, even though you may have distin-
+guished some minerals between crossed polars (e.g. quartz from plagioclase
+feldspar), because features such as birefringence, or twinning, which are
+more clearly seen between crossed polars, seldom reflect the metamorphic
+processes involved in the evolution of the rock, although they may be crucial
+for mineral identification.
+Most students begin the study of metamorphic rocks when they are
+already quite experienced with igneous and sedimentary rocks. This means
+that you should be able to recognise any primary features which survive
+from the parent igneous or sedimentary rocks. In studying metamorphic
+rocks, it is important to bring from igneous petrology the practice of always
+identifying all minerals in the rock, and from sedimentary petrology careful
+attention to grain size, grain shape and other textural features. You should
+be prepared to identify minerals even when they occur as small crystals, and
+to study the relationships between crystals and the shapes of crystal bound-
+aries under high magnifications.
+
 
 # Colore campione a mano vs sezione sottile
 
@@ -436,6 +492,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 [K&P] Cornelis Klein & Anthony R. Philpotts, Mineralogia e petrografia, Bologna, 2018, Zanichelli.
 
 [K] Cornelis Klein, Mineralogia, Bologna, 2004, Zanichelli.
+
+[Mason] Roger Mason, Petrology of the metamorphic rocks, Dordrecht, 1991, Springer Netherlands
 
 [MMD] Marcello Manzoni, "Dizionario di Geologia", Bologna, 1968.
 
