@@ -476,7 +476,11 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 **Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.
 
-**Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale.
+**Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale. Da ricordare quattro poli tipici del granato (sono i granati dell'alluminio):  
+piropo, solo magnesio  
+almandino, solo ferro  
+grossularia, solo calcio  
+spessartina, solo manganese
 
 **Granito** Roccia ignea a grana da media a grossa e composta all’incirca da un terzo di quarzo e due terzi di feldspati alcalini.
 
