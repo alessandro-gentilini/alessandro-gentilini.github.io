@@ -486,7 +486,8 @@ spessartina, solo manganese
 
 **Hornfels** Roccia metamorfica di contatto senza foliazione.
 
-**Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.
+**Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
+I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femici (e.g. Giadeite).
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
 
