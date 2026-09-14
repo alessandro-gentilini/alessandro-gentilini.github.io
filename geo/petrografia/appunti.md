@@ -491,6 +491,8 @@ I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femi
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
 
+**Solvus** Linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate.
+
 # Bibliografia
 [Hoffmann] Frank Hoffmann, Introduction to Crystallography, Cham, 2020, Springer.
 
