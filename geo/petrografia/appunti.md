@@ -486,10 +486,15 @@ spessartina, solo manganese
 
 **Hornfels** Roccia metamorfica di contatto senza foliazione.
 
+**Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
+
 **Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
 I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femici (e.g. Giadeite).
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
+
+**Pertite Smescolamento** parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli sme-
+scolamenti sono visibili ad occhio nudo.
 
 **Solvus** Linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate.
 
