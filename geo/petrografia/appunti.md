@@ -472,7 +472,8 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 Il termine puro composto da potassio ha i tre polimorfi ortoclasio, microclino e sanidino.  
 Il termine puro composto da sodio è l'albite.
 
-**Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.
+**Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.  
+!!!ESEMPI!!!
 
 **Basalto** Roccia ignea a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.
 
@@ -495,6 +496,9 @@ spessartina, solo manganese
 **Hornfels** Roccia metamorfica di contatto senza foliazione.
 
 **K-feldspati** Sinonimo di alcali-feldspati.
+
+**Miche** muscovite, biotite.  
+!!!FARE MEGLIO!!!
 
 **Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
 
