@@ -466,15 +466,23 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 **torbido**=_cloudy_?
 
-# Glossario da K&P
+# Glossario da [K&P] e da Indice dei minerali in [K]
+
+**Alcali-feldspati** Feldspati composti da potassio K e sodio Na.  
+Il termine puro composto da potassio ha i tre polimorfi ortoclasio, microclino e sanidino.  
+Il termine puro composto da sodio è l'albite.
 
 **Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.
 
 **Basalto** Roccia ignea a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.
 
+**Clinopirosseno** Sottogruppo dei pirosseni con simmetria monoclina.  
+Diopside ha magnesio, hedembergite ha ferro.
+
 **Facies metamorfica** Comprende tutte le rocce che si sono formate in condizioni di pressione e temperatura così simili che una data composizione chimica produce la stessa associazione di minerali.
 
-**Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.
+**Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.  
+Comprende gli alcali-feldspati e i plagioclasi.
 
 **Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale. Da ricordare quattro poli tipici del granato (sono i granati dell'alluminio):  
 piropo, solo magnesio  
@@ -486,15 +494,19 @@ spessartina, solo manganese
 
 **Hornfels** Roccia metamorfica di contatto senza foliazione.
 
+**K-feldspati** Sinonimo di alcali-feldspati.
+
 **Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
 
 **Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
 I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femici (e.g. Giadeite).
 
+**Plagioclasio** La serie dei feldspati di Na-Ca.  
+L'albite è il plagioclasio sodico mentre l'anortite è il plagioclasio calcico.
+
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
 
-**Pertite Smescolamento** parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli sme-
-scolamenti sono visibili ad occhio nudo.
+**Pertite** smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo.
 
 **Solvus** Linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate.
 
