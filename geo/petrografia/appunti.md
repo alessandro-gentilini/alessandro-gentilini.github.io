@@ -502,6 +502,8 @@ spessartina, solo manganese
 
 **Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
 
+**Peridotite** Roccia composta soprattutto da olivina e pirosseni.
+
 **Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
 I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femici (e.g. Giadeite).
 
