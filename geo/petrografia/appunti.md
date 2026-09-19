@@ -475,7 +475,7 @@ Il termine puro composto da sodio è l'albite.
 **Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.  
 !!!ESEMPI!!!
 
-**Basalto** Roccia ignea a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.
+**Basalto** Roccia ignea vulcanica/effusiva a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.
 
 **Clinopirosseno** Sottogruppo dei pirosseni con simmetria monoclina.  
 Diopside ha magnesio, hedembergite ha ferro.
@@ -484,6 +484,9 @@ Diopside ha magnesio, hedembergite ha ferro.
 
 **Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.  
 Comprende gli alcali-feldspati e i plagioclasi.
+
+**Gabbro** Roccia ignea plutonica/intrusiva formata da pirosseno (e olivina) e plagioclasio in parti approssimativamente uguali. Il plagioclasio ha un contenuto medio di anortite maggiore di An50. Il suo equivalente vulcanico
+è il basalto.
 
 **Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale. Da ricordare quattro poli tipici del granato (sono i granati dell'alluminio):  
 piropo, solo magnesio  
