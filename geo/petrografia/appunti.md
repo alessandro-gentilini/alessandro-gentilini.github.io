@@ -481,6 +481,8 @@ Il suo equivalente plutonico è il gabbro.
 **Clinopirosseno** Sottogruppo dei pirosseni con simmetria monoclina.  
 Diopside ha magnesio, hedembergite ha ferro.
 
+**Epidoto** il gruppo dell'epidoto appartiene ai sorosilicati (tipico colore verde).
+
 **Facies metamorfica** Comprende tutte le rocce che si sono formate in condizioni di pressione e temperatura così simili che una data composizione chimica produce la stessa associazione di minerali.
 
 **Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.  
@@ -503,6 +505,8 @@ spessartina, solo manganese
 
 **Miche** muscovite, biotite.  
 !!!FARE MEGLIO!!!
+
+**Onfacite** pirosseno verde, in eclogiti.
 
 **Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
 
