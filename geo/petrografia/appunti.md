@@ -468,31 +468,38 @@ Senza il campione il campo deve essere uniforme nero (minima luminosità). Se co
 
 # Glossario da [K&P] e da Indice dei minerali in [K]
 
-**Alcali-feldspati** Feldspati composti da potassio K e sodio Na.  
+**Alcali-feldspati**, minerali. Feldspati composti da potassio K e sodio Na.  
 Il termine puro composto da potassio ha i tre polimorfi ortoclasio, microclino e sanidino.  
 Il termine puro composto da sodio è l'albite.
 
-**Anfiboli** Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.  
+**Anfiboli**, minerali. Gruppo importante di silicati costituenti le rocce, caratterizzati da una catena doppia di tetraedri estesa infinitamente. Sono minerali idrati con Ca, Mg, Fe, Na, Al e Si come costituenti principali.  
 !!!ESEMPI!!!
+
+**Augite**, minerale. È il pirosseno più comune.
 
 **Basalto** Roccia ignea vulcanica/effusiva a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.  
 Il suo equivalente plutonico è il gabbro.
 
-**Clinopirosseno** Sottogruppo dei pirosseni con simmetria monoclina.  
+**Clinopirosseno**, minerali. Sottogruppo dei pirosseni con simmetria monoclina.  
 Diopside ha magnesio, hedembergite ha ferro.
 
-**Epidoto** il gruppo dell'epidoto appartiene ai sorosilicati (tipico colore verde).
+**Eclogite (facies)** Associazione di minerali metamorfici formata a pressioni superiori di 1 GPa e caratterizzata dalla presenza di pirosseno giadeitico e granato ricco di piropo.
+
+**Eclogite** Roccia chimicamente equivalente al basalto ma contenente minerali più densi. I tipici minerali che compongono l'eclogite sono l'onfacite e il granato piropo.
+Altra definizione: roccia metamorfica di alta pressione contenente pirosseno omfacitico e granato ricco di piropo.
+
+**Epidoto**, minerali. Il gruppo dell'epidoto appartiene ai sorosilicati (tipico colore verde).
 
 **Facies metamorfica** Comprende tutte le rocce che si sono formate in condizioni di pressione e temperatura così simili che una data composizione chimica produce la stessa associazione di minerali.
 
-**Feldspati** Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.  
+**Feldspati**, minerali. Gruppo importante di tectosilicati con composizione ricca in K, Na, Ca, Al, Si.  
 Comprende gli alcali-feldspati e i plagioclasi.
 
 **Gabbro** Roccia ignea plutonica/intrusiva formata da pirosseno (e olivina) e plagioclasio in parti approssimativamente uguali. Il plagioclasio ha un contenuto medio di anortite maggiore di An50.  
 Il suo equivalente vulcanico è il basalto.
 
-**Granato** Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale. Da ricordare quattro poli tipici del granato (sono i granati dell'alluminio):  
-piropo, solo magnesio  
+**Granato**, minerale. Nesosilicato appartenente a un gruppo importante di minerali costituenti le rocce con estese soluzioni solide e ampia variabilità composizionale. Da ricordare quattro poli tipici del granato (sono i granati dell'alluminio):  
+piropo, solo magnesio (insieme all'onfacite si trova nelle eclogiti)  
 almandino, solo ferro  
 grossularia, solo calcio  
 spessartina, solo manganese
@@ -501,21 +508,23 @@ spessartina, solo manganese
 
 **Hornfels** Roccia metamorfica di contatto senza foliazione.
 
-**K-feldspati** Sinonimo di alcali-feldspati.
+**K-feldspati**, minerali. Sinonimo di alcali-feldspati.
 
-**Miche** muscovite, biotite.  
+**Miche**, minerali. Muscovite, biotite.  
 !!!FARE MEGLIO!!!
 
-**Onfacite** pirosseno verde, in eclogiti.
+**Onfacite**, minerale. Pirosseno augitico ricco in sodio, si trova in eclogiti.  
+Il greco ὄμφαξ (omphax) significa uva acerba, con allusione al tipico colore verde dell'onfacite.
 
-**Ortopirosseno** Sottogruppo dei pirosseni con simmetria ortorombica.
+**Ortopirosseno**, minerali. Sottogruppo dei pirosseni con simmetria ortorombica.
 
 **Peridotite** Roccia composta soprattutto da olivina e pirosseni.
 
-**Pirosseni** Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
+**Pirosseni**, minerali. Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
+Il pirosseno più comune è l'augite.  
 I pirosseni possono essere femici (e.g. enstatite-ferrosilite) ma anche non femici (e.g. Giadeite).
 
-**Plagioclasio** La serie dei feldspati di Na-Ca.  
+**Plagioclasio**, minerali. La serie dei feldspati di Na-Ca.  
 L'albite è il plagioclasio sodico mentre l'anortite è il plagioclasio calcico.
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
