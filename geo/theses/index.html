@@ -9,14 +9,6 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- MarkerCluster: plugin che raggruppa i segnaposto vicini in un cerchio con un numero.
-       Serve perche' molte tesi hanno le stesse coordinate (es. Bologna): senza il plugin
-       i segnaposto si sovrapporrebbero e se ne vedrebbe uno solo.
-       Se si cambia zoom o si clicca sul cerchio, il gruppo si apre. -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-
   <style>
     /* La mappa occupa tutta la finestra del browser */
     html, body, #map { height: 100%; margin: 0; }
@@ -35,14 +27,7 @@
     // 1) Crea la mappa, centrata sull'Italia (latitudine, longitudine) con zoom 6.
     var map = L.map('map').setView([43.5, 12.5], 6);
 
-    // 2) Aggiunge lo sfondo cartografico di OpenStreetMap.
-    //    L'attribuzione (il testo in basso a destra) e' richiesta dalla licenza: non toglierla.
-    // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //   maxZoom: 19,
-    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    // }).addTo(map);
-
-    // Base grigia con confini, strade principali e fiumi
+    // 2) Base grigia con confini, strade principali e fiumi
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 16,
       attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
@@ -51,15 +36,12 @@
     // Livello trasparente con i toponimi (città, regioni, ecc.)
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 16
-    }).addTo(map);    
+    }).addTo(map);
 
-    // 3) Crea il gruppo che conterra' tutti i segnaposto (con raggruppamento automatico).
-    var cluster = L.markerClusterGroup();
-
-    // 4) Per ogni tesi in THESES crea un segnaposto con il suo popup.
+    // 3) Per ogni tesi in THESES crea un segnaposto direttamente sulla mappa.
     THESES.forEach(function (t) {
 
-      // Contenuto del popup: anno in grassetto, poi il titolo, poi il luogo.
+      // Contenuto del popup: anno in grassetto, poi l'id, poi i relatori.
       // Si usa textContent (e non innerHTML) cosi' eventuali caratteri speciali
       // nei titoli (< > &) vengono mostrati come testo e non interpretati come HTML.
       var box = document.createElement('div');
@@ -73,20 +55,13 @@
       var supervisors = document.createElement('div');
       supervisors.textContent = 'Relatori: ' + (t.sup ? t.sup : 'non indicati');
 
-      //var place = document.createElement('small');
-      //place.textContent = '📍 ' + t.place;
-
       box.appendChild(year);
       box.appendChild(id);
-      //box.appendChild(place);
       box.appendChild(supervisors);
 
       // Segnaposto alle coordinate [latitudine, longitudine]; il popup si apre al click.
-      cluster.addLayer(L.marker([t.lat, t.lon]).bindPopup(box));
+      L.marker([t.lat, t.lon]).bindPopup(box).addTo(map);
     });
-
-    // 5) Aggiunge il gruppo di segnaposto alla mappa.
-    map.addLayer(cluster);
   </script>
 </body>
 </html>
