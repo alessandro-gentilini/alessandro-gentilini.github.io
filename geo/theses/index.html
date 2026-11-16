@@ -41,12 +41,16 @@
     //   maxZoom: 19,
     //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     // }).addTo(map);
-    
-    // 2) Sfondo grigio piatto con confini, strade principali, fiumi e toponimi (senza rilievi/montagne)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+
+    // Base grigia con confini, strade principali e fiumi
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 16,
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+    }).addTo(map);
+
+    // Livello trasparente con i toponimi (città, regioni, ecc.)
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 16
     }).addTo(map);    
 
     // 3) Crea il gruppo che conterra' tutti i segnaposto (con raggruppamento automatico).
