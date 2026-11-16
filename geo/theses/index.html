@@ -5,45 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tesi di Geologia 1925-1995 – Mappa</title>
 
-  <!-- Leaflet: la libreria che disegna la mappa (caricata da internet, niente da installare) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <style>
-    /* La mappa occupa tutta la finestra del browser */
     html, body, #map { height: 100%; margin: 0; }
+    .legend {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 10px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      font: 12px/1.4 sans-serif;
+      color: #333;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-top: 3px;
+    }
+    .legend-swatch {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 0.8px solid #333;
+      margin-right: 6px;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Qui Leaflet disegna la mappa -->
   <div id="map"></div>
 
-  <!-- data.js definisce la variabile THESES: l'elenco delle tesi (anno, titolo, luogo, lat, lon).
-       E' generato dallo script make_data.py a partire dal file Excel. -->
   <script src="public_data.js"></script>
 
   <script>
-    // 1) Crea la mappa, centrata sull'Italia (latitudine, longitudine) con zoom 6.
+    // 1) Crea la mappa, centrata sull'Italia con zoom 6.
     var map = L.map('map').setView([43.5, 12.5], 6);
 
-    // 2) Base grigia con confini, strade principali e fiumi
+    // 2) Base grigia Esri Light Gray Canvas + toponimi
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 16,
       attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
     }).addTo(map);
 
-    // Livello trasparente con i toponimi (città, regioni, ecc.)
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 16
     }).addTo(map);
 
-    // 3) Per ogni tesi in THESES crea un segnaposto direttamente sulla mappa.
-    THESES.forEach(function (t) {
+    // Palette colori per decennio (1920s -> 1990s)
+    var DECADE_COLORS = {
+      1920: '#3b4cc0',
+      1930: '#2b83ba',
+      1940: '#66c2a5',
+      1950: '#abdda4',
+      1960: '#fee08b',
+      1970: '#fdae61',
+      1980: '#f46d43',
+      1990: '#d53e4f'
+    };
 
-      // Contenuto del popup: anno in grassetto, poi l'id, poi i relatori.
-      // Si usa textContent (e non innerHTML) cosi' eventuali caratteri speciali
-      // nei titoli (< > &) vengono mostrati come testo e non interpretati come HTML.
+    function getDecadeColor(yearStr) {
+      var y = parseInt(yearStr, 10);
+      if (isNaN(y)) return '#888888';
+      var decade = Math.floor(y / 10) * 10;
+      return DECADE_COLORS[decade] || '#888888';
+    }
+
+    // 3) Crea un cerchio colorato per ogni tesi in THESES
+    THESES.forEach(function (t) {
       var box = document.createElement('div');
 
       var year = document.createElement('b');
@@ -59,9 +89,42 @@
       box.appendChild(id);
       box.appendChild(supervisors);
 
-      // Segnaposto alle coordinate [latitudine, longitudine]; il popup si apre al click.
-      L.marker([t.lat, t.lon]).bindPopup(box).addTo(map);
+      L.circleMarker([t.lat, t.lon], {
+        radius: 5,
+        color: '#333333',
+        weight: 0.8,
+        fillColor: getDecadeColor(t.year),
+        fillOpacity: 0.75
+      }).bindPopup(box).addTo(map);
     });
+
+    // 4) Aggiunge una legenda in basso a destra
+    var legend = L.control({ position: 'bottomright' });
+    legend.onAdd = function () {
+      var div = L.DomUtil.create('div', 'legend');
+      var title = document.createElement('b');
+      title.textContent = 'Decennio';
+      div.appendChild(title);
+
+      Object.keys(DECADE_COLORS).forEach(function (dec) {
+        var row = document.createElement('div');
+        row.className = 'legend-item';
+
+        var swatch = document.createElement('span');
+        swatch.className = 'legend-swatch';
+        swatch.style.backgroundColor = DECADE_COLORS[dec];
+
+        var label = document.createElement('span');
+        label.textContent = dec + '–' + (parseInt(dec, 10) + 9);
+
+        row.appendChild(swatch);
+        row.appendChild(label);
+        div.appendChild(row);
+      });
+
+      return div;
+    };
+    legend.addTo(map);
   </script>
 </body>
 </html>
