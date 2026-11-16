@@ -73,7 +73,7 @@
     }
 
     // 3) Crea un cerchio colorato per ogni tesi in THESES
-    THESES.forEach(function (t) {
+    THESES.slice().reverse().forEach(function (t) {
       var box = document.createElement('div');
 
       var year = document.createElement('b');
@@ -90,7 +90,7 @@
       box.appendChild(supervisors);
 
       L.circleMarker([t.lat, t.lon], {
-        radius: 5,
+        radius: 10,
         color: '#333333',
         weight: 0.8,
         fillColor: getDecadeColor(t.year),
