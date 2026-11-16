@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tesi di Geologia 1925-1995 – Mappa</title>
+
+  <!-- Leaflet: la libreria che disegna la mappa (caricata da internet, niente da installare) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- MarkerCluster: plugin che raggruppa i segnaposto vicini in un cerchio con un numero.
+       Serve perche' molte tesi hanno le stesse coordinate (es. Bologna): senza il plugin
+       i segnaposto si sovrapporrebbero e se ne vedrebbe uno solo.
+       Se si cambia zoom o si clicca sul cerchio, il gruppo si apre. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <style>
+    /* La mappa occupa tutta la finestra del browser */
+    html, body, #map { height: 100%; margin: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Qui Leaflet disegna la mappa -->
+  <div id="map"></div>
+
+  <!-- data.js definisce la variabile THESES: l'elenco delle tesi (anno, titolo, luogo, lat, lon).
+       E' generato dallo script make_data.py a partire dal file Excel. -->
+  <script src="public_data.js"></script>
+
+  <script>
+    // 1) Crea la mappa, centrata sull'Italia (latitudine, longitudine) con zoom 6.
+    var map = L.map('map').setView([43.5, 12.5], 6);
+
+    // 2) Aggiunge lo sfondo cartografico di OpenStreetMap.
+    //    L'attribuzione (il testo in basso a destra) e' richiesta dalla licenza: non toglierla.
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // 3) Crea il gruppo che conterra' tutti i segnaposto (con raggruppamento automatico).
+    var cluster = L.markerClusterGroup();
+
+    // 4) Per ogni tesi in THESES crea un segnaposto con il suo popup.
+    THESES.forEach(function (t) {
+
+      // Contenuto del popup: anno in grassetto, poi il titolo, poi il luogo.
+      // Si usa textContent (e non innerHTML) cosi' eventuali caratteri speciali
+      // nei titoli (< > &) vengono mostrati come testo e non interpretati come HTML.
+      var box = document.createElement('div');
+
+      var year = document.createElement('b');
+      year.textContent = t.year ? t.year : 'anno non indicato';
+
+      var id = document.createElement('div');
+      id.textContent = t.id;
+
+      //var place = document.createElement('small');
+      //place.textContent = '📍 ' + t.place;
+
+      box.appendChild(year);
+      box.appendChild(id);
+      //box.appendChild(place);
+
+      // Segnaposto alle coordinate [latitudine, longitudine]; il popup si apre al click.
+      cluster.addLayer(L.marker([t.lat, t.lon]).bindPopup(box));
+    });
+
+    // 5) Aggiunge il gruppo di segnaposto alla mappa.
+    map.addLayer(cluster);
+  </script>
+</body>
+</html>
