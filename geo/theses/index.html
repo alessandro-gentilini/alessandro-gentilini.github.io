@@ -54,10 +54,13 @@
       var box = document.createElement('div');
 
       var year = document.createElement('b');
-      year.textContent = 'Anno ' + (t.year ? t.year : 'anno non indicato');
+      year.textContent = 'Anno: ' + (t.year ? t.year : 'anno non indicato');
 
       var id = document.createElement('div');
-      id.textContent = t.id;
+      id.textContent = 'Identificativo tesi: ' + t.id;
+
+      var supervisors = document.createElement('div');
+      supervisors.textContent = 'Relatori: ' + (t.sup ? t.sup : 'non indicati');
 
       //var place = document.createElement('small');
       //place.textContent = '📍 ' + t.place;
@@ -65,6 +68,7 @@
       box.appendChild(year);
       box.appendChild(id);
       //box.appendChild(place);
+      box.appendChild(supervisors);
 
       // Segnaposto alle coordinate [latitudine, longitudine]; il popup si apre al click.
       cluster.addLayer(L.marker([t.lat, t.lon]).bindPopup(box));
