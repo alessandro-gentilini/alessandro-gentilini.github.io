@@ -37,10 +37,17 @@
 
     // 2) Aggiunge lo sfondo cartografico di OpenStreetMap.
     //    L'attribuzione (il testo in basso a destra) e' richiesta dalla licenza: non toglierla.
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 19,
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    // }).addTo(map);
+    
+    // 2) Sfondo grigio piatto con confini, strade principali, fiumi e toponimi (senza rilievi/montagne)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+      subdomains: 'abcd',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);    
 
     // 3) Crea il gruppo che conterra' tutti i segnaposto (con raggruppamento automatico).
     var cluster = L.markerClusterGroup();
