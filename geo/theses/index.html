@@ -8,8 +8,28 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <style>
-    html, body, #map { height: 100%; margin: 0; }
+<style>
+    html, body { height: 100%; margin: 0; }
+    body { display: flex; flex-direction: column; }
+    
+    /* Stile per la barra del titolo */
+    #header {
+      background: #ffffff;
+      padding: 12px 20px;
+      font-family: sans-serif;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    #header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    
+    /* La mappa occupa lo spazio rimanente */
+    #map { flex-grow: 1; }
+
+    /* Stili della legenda (già presenti) */
     .legend {
       background: rgba(255, 255, 255, 0.9);
       padding: 8px 10px;
@@ -34,6 +54,10 @@
   </style>
 </head>
 <body>
+
+  <header id="header">
+    <h1>Tesi di Geologia (1925–1995)</h1>
+  </header>
 
   <div id="map"></div>
 
