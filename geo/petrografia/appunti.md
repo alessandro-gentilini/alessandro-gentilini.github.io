@@ -533,6 +533,14 @@ L'albite è il plagioclasio sodico mentre l'anortite è il plagioclasio calcico.
 
 **Solvus** Linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate.
 
+# Domande
+
+Le traiettorie $p-T$, intese come curve in 2D, possono essere di qualunque tipo?
+
+In generale direi che $p$ aumenta con la profondità, la sua derivata con la profondità (gradiente) dipende (solo?) dalla densità delle rocce sovrastanti.
+In assenza di magma la temperatura aumenta con la profondità, perché? Da cosa dipende il gradiente?
+Come cambia il gradiente con il da magmatismo?
+
 # Bibliografia
 [Hoffmann] Frank Hoffmann, Introduction to Crystallography, Cham, 2020, Springer.
 
