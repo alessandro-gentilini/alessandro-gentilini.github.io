@@ -539,6 +539,8 @@ che si è formato per metamorfismo di rocce ultramafiche. [K&P]
 Roccia fatta principalmente dai minerali serpentino e magnetite. La serpentinite è un esempio di sistema ultrabasico idrato.
 [AVB lezione 23 aprile 2026].
 
+**Silicato anidro di alluminio** è un nesosilicato con formula $Al_2 Si O_5$ che ha i tre polimorfi sillimanite, andalusite e cianite.
+
 **Pertite** smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo.
 
 **Solvus** Linea in un diagramma di fase che indica la temperatura e la composizione al di sotto delle quali una soluzione solida diventa instabile e si divide in due fasi separate.
