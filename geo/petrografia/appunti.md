@@ -518,7 +518,7 @@ Il greco ὄμφαξ (omphax) significa uva acerba, con allusione al tipico colo
 
 **Ortopirosseno**, minerali. Sottogruppo dei pirosseni con simmetria ortorombica.
 
-**Peridotite** Roccia composta soprattutto da olivina e pirosseni.
+**Peridotite** Roccia composta soprattutto da olivina e pirosseni. Tipica del mantello.
 
 **Pirosseni**, minerali. Gruppo di silicati con struttura formata da catene di tetraedri estese infinitamente e ricchi di Mg, Fe, Ca, Al e Si.  
 Il pirosseno più comune è l'augite.  
