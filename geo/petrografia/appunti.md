@@ -480,6 +480,8 @@ Il termine puro composto da sodio è l'albite.
 **Basalto** Roccia ignea vulcanica/effusiva a grana fine fatta da proporzioni uguali di plagioclasio e pirosseno (od olivina). È la roccia ignea più comune e forma i fondali oceanici.  
 Il suo equivalente plutonico è il gabbro.
 
+**Biotite**, minerale. È un fillosilicato. Aka mica scura.
+
 **Clinopirosseno**, minerali. Sottogruppo dei pirosseni con simmetria monoclina.  
 Diopside ha magnesio, hedembergite ha ferro.
 
@@ -513,6 +515,9 @@ spessartina, solo manganese
 **Miche**, minerali. Muscovite, biotite.  
 !!!FARE MEGLIO!!!
 
+**Muscovite**, minerale. È un fillosilicato. Aka mica bianca.
+Il nome deriva da Muscovy che significa "vetro di Mosca".
+
 **Onfacite**, minerale. Pirosseno augitico ricco in sodio, si trova in eclogiti.  
 Il greco ὄμφαξ (omphax) significa uva acerba, con allusione al tipico colore verde dell'onfacite.
 
@@ -529,7 +534,7 @@ L'albite è il plagioclasio sodico mentre l'anortite è il plagioclasio calcico.
 
 **Serie di facies metamorfiche** Sequenze di facies metamorfiche che indicano condizioni specifiche di pressione e temperatura in terreni metamorfici regionali che subiscono metamorfismo progressivo. Sono riconosciute tre serie principali: serie di bassa pressione, alta temperatura; serie di alta pressione, alta temperatura; serie di alta pressione, bassa temperatura.
 
-**Serpentino** è un fillosilicato, ha i tre polimorfi comuni:  
+**Serpentino**, minerale. È un fillosilicato, ha i tre polimorfi comuni:  
 Antigorite, varietà lamellare. Il nome viene da valle di Antigorio, in Piemonte a nord di Domodossola.  
 Lizardite, polimorfo massivo del serpentino.  
 Crisotilo, varietà fibrosa. Il nome viene dal greco fibra (-tilo) d'oro (criso-).
@@ -539,7 +544,8 @@ che si è formato per metamorfismo di rocce ultramafiche. [K&P]
 Roccia fatta principalmente dai minerali serpentino e magnetite. La serpentinite è un esempio di sistema ultrabasico idrato.
 [AVB lezione 23 aprile 2026].
 
-**Silicato anidro di alluminio** è un nesosilicato con formula $Al_2 Si O_5$ che ha i tre polimorfi sillimanite, andalusite e cianite.
+**Silicato anidro di alluminio**, minerale. È un nesosilicato con formula $Al_2 Si O_5$ che ha i tre polimorfi sillimanite, andalusite e cianite.  
+AVB lo ha anche chiamato Allumosilicato.
 
 **Pertite** smescolamento parallelo o subparallelo di feldspato ricco di potassio (di solito microclino) e di feldspato ricco di sodio (di solito albite). Lo smescolamento è dovuto ad essoluzione. Le regioni con gli smescolamenti sono visibili ad occhio nudo.
 
