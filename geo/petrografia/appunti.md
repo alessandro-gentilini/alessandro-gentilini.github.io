@@ -482,6 +482,9 @@ Il suo equivalente plutonico è il gabbro.
 
 **Biotite**, minerale. È un fillosilicato. Aka mica scura.
 
+**Carbonati**, minerali in cui il gruppo anionico è $(CO_3)^{–2}$.  
+ESempi sono la calcite, la magnesite, la dolomite.
+
 **Clinopirosseno**, minerali. Sottogruppo dei pirosseni con simmetria monoclina.  
 Diopside ha magnesio, hedembergite ha ferro.
 
